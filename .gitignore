@@ -7,8 +7,15 @@
 /[Oo]bj/
 /[Bb]uild/
 /[Bb]uilds/
+/[Bb]in/
 /[Ll]ogs/
 /[Mm]emoryCaptures/
+
+# Paid Third Party Assets
+/[Aa]ssets/[Pp]lugins/Sirenix
+/[Aa]ssets/UMod
+/[Aa]ssets/Rewired
+/[Aa]ssets/[Tt]hirdParty/KinematicCharacterController
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta
