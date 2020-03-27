@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a0a49550c9d7b49a42585c0affb04c, type: 3}
+  m_Name: Reimu_Ground_AAAA
+  m_EditorClassIdentifier: 
+  attackName: AAAA
+  description: 
+  length: 40
+  groundAble: 1
+  airAble: 0
+  heightRestriction: 0
+  possibleGround: 0
+  modifiesInertia: 1
+  inertiaModifer: 0.8
+  carriesInertia: 1
+  carriedInertia: 1
+  chargeFrames: 04000000
+  chargeLength: 24
+  animationGround: {fileID: 0}
+  animationAir: {fileID: 0}
+  wrapMode: 0
+  jumpCancelFrames: []
+  landCancelFrames: []
+  dashCancelableFrames: []
+  floatCancelFrames: []
+  hitboxGroups:
+  - ID: 0
+    activeFramesStart: 6
+    activeFramesEnd: 9
+    hitGroupType: 0
+    hitboxes:
+    - shape: 0
+      offset: {x: 0, y: 1, z: 1.5}
+      size: {x: 2, y: 2, z: 2}
+      rotation: {x: 0, y: 0, z: 0}
+      radius: 0
+    attachToEntity: 1
+    hitInfo:
+      airOnly: 0
+      groundOnly: 0
+      continuousHit: 0
+      spaceBetweenHits: 0
+      breakArmor: 0
+      unblockable: 0
+      knockdown: 0
+      groundBounces: 0
+      groundBounceForce: 0
+      wallBounces: 1
+      wallBounceForce: 20
+      damageOnHit: 0
+      damageOnBlock: 0
+      hitKills: 1
+      attackerHitstop: 8
+      hitstop: 8
+      hitstun: 30
+      opponentResetXForce: 1
+      opponentResetYForce: 1
+      opponentForceDir: {x: 0, y: 0, z: 1}
+      opponentForceMagnitude: 30
+      causesTumble: 1
+    throwConfirm: {fileID: 0}
+  bulletGroups: []
+  events:
+  - nickname: event
+    active: 0
+    onHit: 0
+    startFrame: 6
+    endFrame: 6
+    attackEvent: {fileID: 0}
+    variables:
+      intVars: 
+      floatVars: []
+      objectVars: []
+      curveVars: []

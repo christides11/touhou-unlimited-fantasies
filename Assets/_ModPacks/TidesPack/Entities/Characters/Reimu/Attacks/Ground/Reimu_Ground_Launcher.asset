@@ -1,0 +1,262 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a0a49550c9d7b49a42585c0affb04c, type: 3}
+  m_Name: Reimu_Ground_Launcher
+  m_EditorClassIdentifier: 
+  attackName: Ground Launcher
+  description: 
+  length: 25
+  groundAble: 1
+  airAble: 0
+  heightRestriction: 0
+  possibleGround: 0
+  modifiesInertia: 1
+  inertiaModifer: 0.25
+  carriesInertia: 1
+  carriedInertia: 1
+  chargeFrames: 
+  chargeLength: 0
+  animationGround: {fileID: 0}
+  animationAir: {fileID: 0}
+  wrapMode: 8
+  jumpCancelFrames: []
+  landCancelFrames: []
+  dashCancelableFrames: []
+  floatCancelFrames: []
+  hitboxGroups:
+  - ID: 0
+    activeFramesStart: 5
+    activeFramesEnd: 12
+    hitGroupType: 0
+    hitboxes:
+    - shape: 0
+      offset: {x: 0, y: 1, z: 0}
+      size: {x: 3, y: 4, z: 4}
+      rotation: {x: 0, y: 0, z: 0}
+      radius: 0
+    attachToEntity: 1
+    hitInfo:
+      airOnly: 0
+      groundOnly: 0
+      continuousHit: 0
+      spaceBetweenHits: 2
+      breakArmor: 0
+      unblockable: 0
+      knockdown: 0
+      groundBounces: 0
+      groundBounceForce: 0
+      wallBounces: 0
+      wallBounceForce: 0
+      damageOnHit: 25
+      damageOnBlock: 0
+      hitKills: 1
+      attackerHitstop: 3
+      hitstop: 3
+      hitstun: 40
+      opponentResetXForce: 1
+      opponentResetYForce: 1
+      opponentForceDir: {x: 0, y: 1, z: 0}
+      opponentForceMagnitude: 23
+      causesTumble: 1
+    throwConfirm: {fileID: 0}
+  bulletGroups: []
+  events:
+  - nickname: Up Force
+    active: 1
+    onHit: 0
+    startFrame: 4
+    endFrame: 30
+    attackEvent: {fileID: 11400000, guid: 6d654b585335a4c4399b22cccf96ff34, type: 2}
+    variables:
+      intVars: 00000000
+      floatVars:
+      - 0
+      - 23
+      - 0
+      objectVars: []
+      curveVars:
+      - serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0.054246098
+          outSlope: 0.054246098
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.086142324
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.144115
+          outSlope: -3.144115
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.031210959
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0.19070956
+          outSlope: 0.19070956
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.052434456
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: 0.19133066
+          outSlope: 0.19133066
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.07365793
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: 0.054246098
+          outSlope: 0.054246098
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.086142324
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.144115
+          outSlope: -3.144115
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.031210959
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+  - nickname: Friction
+    active: 1
+    onHit: 0
+    startFrame: 0
+    endFrame: 2
+    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 3
+      objectVars: []
+      curveVars: []
+  - nickname: Forward Mov
+    active: 1
+    onHit: 0
+    startFrame: 0
+    endFrame: 2
+    attackEvent: {fileID: 11400000, guid: cf47f3e28f703be43b010ee8e5260bce, type: 2}
+    variables:
+      intVars: 00000000
+      floatVars:
+      - 0
+      - 0
+      - 7
+      objectVars: []
+      curveVars:
+      - serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 0
+          inSlope: 2
+          outSlope: 2
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        - serializedVersion: 3
+          time: 1
+          value: 1
+          inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+      - serializedVersion: 2
+        m_Curve:
+        - serializedVersion: 3
+          time: 0
+          value: 1
+          inSlope: -0.04564611
+          outSlope: -0.04564611
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0
+          outWeight: 0.051186018
+        - serializedVersion: 3
+          time: 1
+          value: 0
+          inSlope: -3.2751176
+          outSlope: -3.2751176
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.02996254
+          outWeight: 0
+        m_PreInfinity: 2
+        m_PostInfinity: 2
+        m_RotationOrder: 4
+  - nickname: Friction
+    active: 1
+    onHit: 0
+    startFrame: 3
+    endFrame: 40
+    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0.95
+      objectVars: []
+      curveVars: []

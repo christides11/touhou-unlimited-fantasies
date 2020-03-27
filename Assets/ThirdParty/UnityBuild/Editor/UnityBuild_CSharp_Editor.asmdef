@@ -1,0 +1,16 @@
+{
+    "name": "UnityBuild_CSharp_Editor",
+    "references": [
+        "GUID:4478f3853500786429924fe3b24fea97"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

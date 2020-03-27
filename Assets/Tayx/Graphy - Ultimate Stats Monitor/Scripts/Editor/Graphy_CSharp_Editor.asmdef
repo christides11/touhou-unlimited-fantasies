@@ -1,0 +1,16 @@
+{
+    "name": "Graphy_CSharp_Editor",
+    "references": [
+        "GUID:53a370d38ac41db47ba7da31664e5218"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": []
+}

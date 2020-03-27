@@ -1,0 +1,55 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 00b2897e60c2ccf4db0cf4c90d37df03, type: 3}
+  m_Name: DummyStats
+  m_EditorClassIdentifier: 
+  groundFriction: 1.3
+  maxWalkSpeed: 0
+  walkBaseAccel: 0
+  walkAcceleration: 0
+  walkRotationSpeed: 0
+  maxRunSpeed: 0
+  runAcceleration: 0
+  runRotationSpeed: 0
+  dashSpeed: 0
+  dashTime: 0
+  jumpsquat: 4
+  fullHopVelocity: 0
+  shortHopJumpVelocity: 0
+  airJumpVelocity: 0
+  airJumpModi: 1
+  airJumpCarriedMomentum: 0
+  airJumpHorizontalVelo: 0
+  airRotationSpeed: 0
+  airFriction: 0
+  airAcceleration: 0
+  airDeceleration: 0
+  maxAirSpeed: 0
+  gravity: 0.5
+  maxFallSpeed: 15
+  wallClingInitFrictionY: 0
+  wallClingInitFrictionXZ: 0
+  wallClingFrictionXZ: 0
+  wallClingGravity: 0
+  wallClingMaxFallSpeed: 0
+  wallJumpTime: 0
+  wallJumpYVelo: 0
+  wallJumpHVelo: 0
+  floatFriction: 0
+  maxFloatSpeed: 0
+  floatVerticalSpeed: 0
+  floatBaseAccel: 0
+  floatAcceleration: 0
+  floatRotationSpeed: 0
+  hitstunGravity: 0.3
+  hitstunFriction: 0.3
+  weight: 1

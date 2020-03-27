@@ -1,0 +1,112 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3d5886119a5c7b34d8872ab527ca3e1b, type: 3}
+  m_Name: UnityBuildSettings
+  m_EditorClassIdentifier: 
+  _basicSettings:
+    baseBuildFolder: bin
+    buildPath: $YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION
+    openFolderPostBuild: 1
+  _productParameters:
+    buildCounter: 0
+    lastGeneratedVersion: 1.0.124.4914
+    version: 0.0.1
+    autoGenerate: 0
+  _releaseTypeList:
+    releaseTypes:
+    - typeName: Standard
+      bundleIndentifier: 
+      companyName: ChrisTides
+      productName: Touhou
+      developmentBuild: 0
+      allowDebugging: 0
+      enableHeadlessMode: 0
+      customDefines: 
+      sceneList:
+        enabledScenes:
+        - fileGUID: 534d961075226b543b23613574121ba6
+        - fileGUID: 34eeeb4fdc2c48243b153e5cb2787099
+    - typeName: DevBuild
+      bundleIndentifier: 
+      companyName: ChrisTides
+      productName: Touhou
+      developmentBuild: 1
+      allowDebugging: 0
+      enableHeadlessMode: 0
+      customDefines: 
+      sceneList:
+        enabledScenes:
+        - fileGUID: 534d961075226b543b23613574121ba6
+        - fileGUID: 34eeeb4fdc2c48243b153e5cb2787099
+  _platformList:
+    platforms:
+    - enabled: 1
+      distributionList:
+        distributions: []
+      architectures:
+      - target: 5
+        name: Windows x86
+        enabled: 0
+      - target: 19
+        name: Windows x64
+        enabled: 1
+      variants: []
+      platformName: PC
+      binaryNameFormat: '{0}.exe'
+      dataDirNameFormat: '{0}_Data'
+      targetGroup: 1
+  _projectConfigurations:
+    configSet:
+      _Buckets: ffffffffffffffff030000000500000004000000ffffffff02000000
+      _HashCodes: 71a179055f1e9b04a36f0e55d7a5f34c7de9e336d9949a1400000000
+      _Next: ffffffffffffffffffffffffffffffff010000000000000000000000
+      _Count: 6
+      _Version: 6
+      _FreeList: -1
+      _FreeCount: 0
+      _Keys:
+      - Standard/PC/Windows x64
+      - Standard/PC
+      - Standard
+      - DevBuild/PC/Windows x64
+      - DevBuild/PC
+      - DevBuild
+      - 
+      _Values:
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - Standard/PC/Windows x64
+      - enabled: 1
+        childKeys:
+        - Standard/PC
+      - enabled: 1
+        childKeys: []
+      - enabled: 1
+        childKeys:
+        - DevBuild/PC/Windows x64
+      - enabled: 1
+        childKeys:
+        - DevBuild/PC
+      - enabled: 1
+        childKeys: []
+    showViewOptions: 0
+    showConfigs: 0
+    showBuildInfo: 0
+    hideDisabled: 0
+    treeView: 0
+    selectedKeyChain: 
+  _preBuildActions:
+    buildActions: []
+  _postBuildActions:
+    buildActions: []
