@@ -43,7 +43,7 @@ MonoBehaviour:
     hitGroupType: 0
     hitboxes:
     - shape: 0
-      offset: {x: 0, y: 1, z: 0}
+      offset: {x: 0, y: 2, z: 0}
       size: {x: 3, y: 4, z: 4}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
@@ -166,27 +166,28 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-  - nickname: Friction
+  - nickname: XZ Friction
     active: 1
     onHit: 0
-    startFrame: 0
-    endFrame: 2
-    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
-    variables:
-      intVars: 
-      floatVars:
-      - 3
-      objectVars: []
-      curveVars: []
-  - nickname: Friction
-    active: 1
-    onHit: 0
-    startFrame: 3
+    startFrame: 4
     endFrame: 40
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
     variables:
       intVars: 
       floatVars:
       - 0.95
+      objectVars: []
+      curveVars: []
+  - nickname: Forward
+    active: 1
+    onHit: 0
+    startFrame: 3
+    endFrame: 3
+    attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0
+      - 8
       objectVars: []
       curveVars: []

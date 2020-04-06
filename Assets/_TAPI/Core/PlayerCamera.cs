@@ -12,10 +12,12 @@ namespace TAPI.Core
 
         public Camera Cam { get { return cam; } }
 
+        private Transform lockonTarget = null;
         [SerializeField] private Camera cam;
         [SerializeField] private CinemachineBrain brain;
         [SerializeField] private CinemachineFreeLook thirdPersonLook;
-        [SerializeField] private CinemachineFreeLook lockOnLook;
+        [SerializeField] private CinemachineVirtualCamera lockOnCam;
+        [SerializeField] private CinemachineTargetGroup lockOnTargetGroup;
 
         [SerializeField] private float mouseDeadzone = 0.05f;
         [SerializeField] private float mouseXAxisSpeed = 1.0f;
@@ -78,6 +80,25 @@ namespace TAPI.Core
         {
             thirdPersonLook.LookAt = newTarget;
             thirdPersonLook.Follow = newTarget;
+            lockOnTargetGroup.m_Targets[0].target = newTarget;
+        }
+
+        public virtual void LockOn(Transform target)
+        {
+            lockonTarget = target;
+            thirdPersonLook.gameObject.SetActive(false);
+            thirdPersonLook.m_RecenterToTargetHeading.m_enabled = true;
+            lockOnTargetGroup.m_Targets[1].target = lockonTarget;
+            lockOnCam.gameObject.SetActive(true);
+        }
+
+        public virtual void UnlockOn()
+        {
+            lockonTarget = null;
+            thirdPersonLook.gameObject.SetActive(true);
+            thirdPersonLook.m_RecenterToTargetHeading.m_enabled = false;
+            lockOnTargetGroup.m_Targets[1].target = lockonTarget;
+            lockOnCam.gameObject.SetActive(false);
         }
     }
 }
