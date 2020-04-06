@@ -26,6 +26,7 @@ namespace TAPI.Core
         [Header("References")]
         [SerializeField] private ModManager modManager;
         [SerializeField] private ConsoleWindow consoleWindow;
+        [SerializeField] private MusicManager musicManager;
 
         [Header("Prefabs")]
         public GameVariables gameVars;

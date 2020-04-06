@@ -5,7 +5,7 @@ using TAPI.Sound;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace RWBYAPI.Core
+namespace TAPI.Core
 {
     public class MusicManager : MonoBehaviour
     {
