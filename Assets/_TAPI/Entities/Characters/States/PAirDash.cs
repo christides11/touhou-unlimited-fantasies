@@ -22,7 +22,7 @@ namespace TAPI.Entities.Characters.States
             translatedMovement *= ((CharacterStats)controller.definition.stats).airDashVelo;
 
             controller.ForcesManager.forceMovement = translatedMovement;
-            controller.FaceDir(translatedMovement, 100);
+            controller.RotateVisual(translatedMovement, 100);
         }
 
         public override void OnUpdate()

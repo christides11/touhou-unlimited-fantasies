@@ -27,6 +27,8 @@ namespace TAPI.Entities
 
         [SerializeField] protected EntityTeams team;
 
+        public List<int> chargeTimes = new List<int>();
+
         public virtual void CLateUpdate()
         {
             if(hitStop > 0)
@@ -64,9 +66,45 @@ namespace TAPI.Entities
 
         public bool CheckForAction()
         {
-            if (CheckForAttack())
+            if (CheckForSpecial())
             {
                 return true;
+            }
+            if (CheckForAttack())
+            {
+                chargeTimes.Clear();
+                for(int i = 0; i < currentAttack.action.chargeFrames.Count; i++)
+                {
+                    chargeTimes.Add(0);
+                }
+                return true;
+            }
+            return false;
+        }
+
+        private bool CheckForSpecial()
+        {
+            if(currentAttack == null)
+            {
+                if (controller.IsFloating)
+                {
+
+                }
+                else
+                {
+                    switch (controller.IsGrounded) {
+                        case true:
+                            if(CheckAttackNodes(ref moveset.groundSpecialStartNodes))
+                            {
+                                return true;
+                            }
+                            break;
+                    }
+                }
+            }
+            else
+            {
+
             }
             return false;
         }
@@ -107,14 +145,14 @@ namespace TAPI.Entities
             {
                 if (controller.IsGrounded)
                 {
-                    if (CheckAttackNodes(ref moveset.groundCommandNormals))
+                    if (CheckAttackNodes(ref moveset.groundAttackCommandNormals))
                     {
                         return true;
                     }
                 }
                 else
                 {
-                    if (CheckAttackNodes(ref moveset.airCommandNormals))
+                    if (CheckAttackNodes(ref moveset.airAttackCommandNormals))
                     {
                         return true;
                     }
@@ -207,11 +245,11 @@ namespace TAPI.Entities
 
         protected virtual bool CheckGroundAttackNodes()
         {
-            if(CheckAttackNodes(ref moveset.groundCommandNormals))
+            if(CheckAttackNodes(ref moveset.groundAttackCommandNormals))
             {
                 return true;
             }
-            if (CheckAttackNodes(ref moveset.groundStartNodes))
+            if (CheckAttackNodes(ref moveset.groundAttackStartNodes))
             {
                 return true;
             }
@@ -220,7 +258,7 @@ namespace TAPI.Entities
 
         protected virtual bool CheckFloatingAttackNodes()
         {
-            if(CheckAttackNodes(ref moveset.floatingStartNodes))
+            if(CheckAttackNodes(ref moveset.floatingAttackStartNodes))
             {
                 WasFloating = true;
                 return true;
@@ -230,11 +268,11 @@ namespace TAPI.Entities
 
         protected virtual bool CheckAirAttackNodes()
         {
-            if(CheckAttackNodes(ref moveset.airCommandNormals))
+            if(CheckAttackNodes(ref moveset.airAttackCommandNormals))
             {
                 return true;
             }
-            if(CheckAttackNodes(ref moveset.airStartNodes))
+            if(CheckAttackNodes(ref moveset.airAttackStartNodes))
             {
                 return true;
             }

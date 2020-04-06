@@ -25,16 +25,11 @@ namespace TAPI.Entities.Characters
 
         protected virtual void SetupDefaultStates()
         {
-            PIdle idle = new PIdle();
-            StateManager.AddState(idle, (int)EntityStates.IDLE);
-            PWalk walk = new PWalk();
-            StateManager.AddState(walk, (int)EntityStates.WALK);
-            PDash dash = new PDash();
-            StateManager.AddState(dash, (int)EntityStates.DASH);
-            PRun run = new PRun();
-            StateManager.AddState(run, (int)EntityStates.RUN);
-            PFall fall = new PFall();
-            StateManager.AddState(fall, (int)EntityStates.FALL);
+            StateManager.AddState(new PIdle(), (int)EntityStates.IDLE);
+            StateManager.AddState(new PWalk(), (int)EntityStates.WALK);
+            StateManager.AddState(new PDash(), (int)EntityStates.DASH);
+            StateManager.AddState(new PRun(), (int)EntityStates.RUN);
+            StateManager.AddState(new PFall(), (int)EntityStates.FALL);
             PJump jump = new PJump();
             StateManager.AddState(jump, (int)EntityStates.JUMP);
             PJumpSquat jumpSquat = new PJumpSquat();

@@ -102,6 +102,7 @@ namespace TAPI.Combat
             EditorGUILayout.LabelField("Description");
             string description = EditorGUILayout.TextArea(attack.description);
 
+            int stateOverride = EditorGUILayout.IntField("State Override", attack.stateOverride);
             int attackLength = EditorGUILayout.IntField("Length", attack.length);
             bool groundAble = EditorGUILayout.Toggle("Ground Able", attack.groundAble);
             bool airAble = EditorGUILayout.Toggle("Air Able", attack.airAble);
@@ -163,6 +164,7 @@ namespace TAPI.Combat
                 Undo.RecordObject(attack, "Changed General Property.");
                 attack.attackName = attackName;
                 attack.description = description;
+                attack.stateOverride = stateOverride;
                 attack.length = attackLength;
                 attack.groundAble = groundAble;
                 attack.airAble = airAble;
@@ -188,6 +190,9 @@ namespace TAPI.Combat
         bool jumpCancelFoldout;
         bool landCancelFoldout;
         bool dashCancelFoldout;
+        bool attackCancelFoldout;
+        bool bulletCancelFoldout;
+        bool specialCancelFoldout;
         private void CancelsMenu()
         {
             // Jump Cancel
@@ -229,7 +234,45 @@ namespace TAPI.Combat
             {
                 CancelWindowFoldout(ref attack.dashCancelableFrames);
             }
-
+            // Attack Cancel
+            EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
+            attackCancelFoldout = EditorGUILayout.Foldout(attackCancelFoldout, "Attack Cancel Windows");
+            if (GUILayout.Button("Add"))
+            {
+                attack.attackCancelFrames.Add(new Vector2Int());
+            }
+            EditorGUILayout.EndHorizontal();
+            GUILayout.Space(5);
+            if (attackCancelFoldout)
+            {
+                CancelWindowFoldout(ref attack.attackCancelFrames);
+            }
+            // Bullet Cancel
+            EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
+            bulletCancelFoldout = EditorGUILayout.Foldout(bulletCancelFoldout, "Bullet Cancel Windows");
+            if (GUILayout.Button("Add"))
+            {
+                attack.bulletCancelFrames.Add(new Vector2Int());
+            }
+            EditorGUILayout.EndHorizontal();
+            GUILayout.Space(5);
+            if (bulletCancelFoldout)
+            {
+                CancelWindowFoldout(ref attack.bulletCancelFrames);
+            }
+            // Special Cancel
+            EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
+            specialCancelFoldout = EditorGUILayout.Foldout(specialCancelFoldout, "Special Cancel Windows");
+            if (GUILayout.Button("Add"))
+            {
+                attack.specialCancelFrames.Add(new Vector2Int());
+            }
+            EditorGUILayout.EndHorizontal();
+            GUILayout.Space(5);
+            if (specialCancelFoldout)
+            {
+                CancelWindowFoldout(ref attack.specialCancelFrames);
+            }
         }
 
         private void CancelWindowFoldout(ref List<Vector2Int> list)

@@ -8,13 +8,16 @@ namespace TAPI.Entities.Shared
 {
     public class EntityAttack : EntityState
     {
-        int chargeTime;
 
         public override void OnStart()
         {
-            chargeTime = 0;
-            controller.ForcesManager.ApplyGravity = false;
             AttackSO currentAttack = CombatManager.CurrentAttack.action;
+            if(currentAttack.stateOverride > -1)
+            {
+                StateManager.ChangeState(currentAttack.stateOverride);
+                return;
+            }
+            controller.ForcesManager.ApplyGravity = false;
             if (currentAttack)
             {
                 if (currentAttack.modifiesInertia)
@@ -64,15 +67,16 @@ namespace TAPI.Entities.Shared
                 HandleEvents(currentAttack.events[i]);
             }
 
+            // Handle charging attacks.
             bool charging = false;
             if (InputManager.GetButton(CombatManager.CurrentAttack.executeButton[0].button).isDown)
             {
                 for (int i = 0; i < currentAttack.chargeFrames.Count; i++)
                 {
                     if (StateManager.CurrentStateFrame == currentAttack.chargeFrames[i] &&
-                        chargeTime < currentAttack.chargeLength)
+                        (CombatManager.chargeTimes[i] < currentAttack.chargeLength || currentAttack.chargeLength == -1))
                     {
-                        chargeTime++;
+                        CombatManager.chargeTimes[i] += 1;
                         charging = true;
                     }
                 }
@@ -81,7 +85,6 @@ namespace TAPI.Entities.Shared
             {
                 return;
             }
-            chargeTime = 0;
             controller.StateManager.IncrementFrame();
         }
 

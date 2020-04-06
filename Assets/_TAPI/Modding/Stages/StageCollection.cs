@@ -9,6 +9,18 @@ namespace TAPI.Core
     public class StageCollection : ScriptableObject
     {
         public string collectionName;
-        public List<ModStageReference> stages = new List<ModStageReference>();
+        public List<GamemodeStageDefinition> stages = new List<GamemodeStageDefinition>();
+    }
+
+    [System.Serializable]
+    public class GamemodeStageDefinition
+    {
+        public ModGamemodeReference gamemode;
+        public ModStageReference stage;
+
+        public override string ToString()
+        {
+            return $"{gamemode.ToString()} & {stage.ToString()}";
+        }
     }
 }

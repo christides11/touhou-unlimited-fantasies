@@ -46,6 +46,7 @@ namespace TAPI.Entities
             bool inter = gim.GetButton(controllerIndex, Action.Interact);
             bool bullet = gim.GetButton(controllerIndex, Action.Bullet);
             bool atk = gim.GetButton(controllerIndex, Action.Attack);
+            bool special = gim.GetButton(controllerIndex, Action.Special);
             bool dash = gim.GetButton(controllerIndex, Action.Dash);
             bool jmp = gim.GetButton(controllerIndex, Action.Jump);
             bool taunt = gim.GetButton(controllerIndex, Action.Taunt);
@@ -53,7 +54,7 @@ namespace TAPI.Entities
             bool spellCardTwo = gim.GetButton(controllerIndex, Action.Spell_Card_2);
             bool spellCardThr = gim.GetButton(controllerIndex, Action.Spell_Card_3);
             bool spellCardFou = gim.GetButton(controllerIndex, Action.Spell_Card_4);
-            InputRecord.Add(new InputRecordItem(lStick, rStick, floatDir, lockon, inter, bullet, atk,
+            InputRecord.Add(new InputRecordItem(lStick, rStick, floatDir, lockon, inter, bullet, atk, special,
                 dash, jmp, taunt, spellCardOne, spellCardTwo, spellCardThr, spellCardFou));
         }
 

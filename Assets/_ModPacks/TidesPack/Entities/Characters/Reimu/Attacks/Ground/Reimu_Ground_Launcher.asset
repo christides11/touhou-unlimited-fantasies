@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: Ground Launcher
   description: 
-  length: 25
+  stateOverride: -1
+  length: 22
   groundAble: 1
   airAble: 0
   heightRestriction: 0
@@ -22,9 +23,9 @@ MonoBehaviour:
   modifiesInertia: 1
   inertiaModifer: 0.25
   carriesInertia: 1
-  carriedInertia: 1
-  chargeFrames: 
-  chargeLength: 0
+  carriedInertia: 0.8
+  chargeFrames: 02000000
+  chargeLength: -1
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 8
@@ -32,10 +33,13 @@ MonoBehaviour:
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
+  attackCancelFrames: []
+  bulletCancelFrames: []
+  specialCancelFrames: []
   hitboxGroups:
   - ID: 0
-    activeFramesStart: 5
-    activeFramesEnd: 12
+    activeFramesStart: 3
+    activeFramesEnd: 6
     hitGroupType: 0
     hitboxes:
     - shape: 0
@@ -59,13 +63,13 @@ MonoBehaviour:
       damageOnHit: 25
       damageOnBlock: 0
       hitKills: 1
-      attackerHitstop: 3
-      hitstop: 3
+      attackerHitstop: 2
+      hitstop: 2
       hitstun: 40
       opponentResetXForce: 1
       opponentResetYForce: 1
       opponentForceDir: {x: 0, y: 1, z: 0}
-      opponentForceMagnitude: 23
+      opponentForceMagnitude: 25
       causesTumble: 1
     throwConfirm: {fileID: 0}
   bulletGroups: []
@@ -73,14 +77,14 @@ MonoBehaviour:
   - nickname: Up Force
     active: 1
     onHit: 0
-    startFrame: 4
-    endFrame: 30
+    startFrame: 3
+    endFrame: 15
     attackEvent: {fileID: 11400000, guid: 6d654b585335a4c4399b22cccf96ff34, type: 2}
     variables:
       intVars: 00000000
       floatVars:
       - 0
-      - 23
+      - 26
       - 0
       objectVars: []
       curveVars:
@@ -112,20 +116,29 @@ MonoBehaviour:
         - serializedVersion: 3
           time: 0
           value: 1
-          inSlope: 0.19070956
-          outSlope: 0.19070956
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
           inWeight: 0
           outWeight: 0.052434456
         - serializedVersion: 3
-          time: 1
-          value: 0
-          inSlope: 0.19133066
-          outSlope: 0.19133066
+          time: 0.8
+          value: 1
+          inSlope: 0
+          outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.07365793
+          inWeight: 0.33333334
+          outWeight: 0.32087985
+        - serializedVersion: 3
+          time: 1
+          value: 0.2
+          inSlope: -8.983157
+          outSlope: -8.983157
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.04993767
           outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2

@@ -14,7 +14,6 @@ namespace TAPI.Entities.Characters.States
             if (CombatManager.CheckForAction())
             {
                 StateManager.ChangeState((int)EntityStates.ATTACK);
-                //controller.CombatManager.Reset(false);
                 return true;
             }
 

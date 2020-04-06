@@ -15,6 +15,7 @@ namespace TAPI.Core
         Dash = 6,
         Lockon = 7,
         Taunt = 8,
-        Float = 9
+        Float = 9,
+        Special = 10
     }
 }

@@ -28,7 +28,7 @@ namespace TAPI.Modding
             Directory.CreateDirectory(modInstallPath);
             modDirectory = new ModDirectory(modInstallPath);
             inited = true;
-            Debug.Log($"ModLoader initialized. Path: {modInstallPath}");
+            gameManager.ConsoleWindow.WriteLine($"ModLoader initialized. Path: {modInstallPath}");
             UpdateModList();
         }
 
@@ -36,7 +36,7 @@ namespace TAPI.Modding
         {
             if (!inited)
             {
-                Debug.Log("ModLoader was not initialized.");
+                gameManager.ConsoleWindow.WriteLine("ModLoader was not initialized, can't update mod list.");
                 return;
             }
 
@@ -53,7 +53,6 @@ namespace TAPI.Modding
                     IModInfo modInfo = modDirectory.GetMod(mi.fileName);
                     mi.identifier = $"{modInfo.ModAuthor.ToLower()}.{modInfo.NameInfo.ModName.ToLower()}";
                     modList.Add(mi);
-                    Debug.Log($"Found {mi.identifier} from {mi.path}");
                 }
             }
 
@@ -69,12 +68,19 @@ namespace TAPI.Modding
                     IModInfo modInfo = ModDirectory.GetMod(new FileInfo(mi.path.LocalPath));
                     mi.identifier = $"{modInfo.ModAuthor.ToLower()}.{modInfo.NameInfo.ModName.ToLower()}";
                     modList.Add(mi);
-                    Debug.Log($"(command line) Found {mi.identifier} from {mi.path}");
                 }
             }
         }
 
         #region Loading
+        public virtual void LoadAllMods()
+        {
+            foreach(ModInfo mi in modList)
+            {
+                LoadMod(mi);
+            }
+        }
+
         public virtual bool LoadMod(string identifier)
         {
             if (modList.Exists(x => x.identifier == identifier))
@@ -86,22 +92,40 @@ namespace TAPI.Modding
 
         public virtual bool LoadMod(ModInfo modInfo)
         {
+            if(Mod.IsModLoaded(modInfo.path)){
+                return false;
+            }
+
             ModHost mod = Mod.Load(modInfo.path);
+
             if (mod.IsModLoaded)
             {
+                GetReferencedMods(mod);
+
                 if (mod.Assets.Exists("ModDefinition"))
                 {
                     loadedMods.Add(modInfo.identifier, mod);
                     ModDefinition modDefinition = mod.Assets.Load("ModDefinition") as ModDefinition;
                     modManager.mods.Add(modInfo.identifier, modDefinition);
-                    return true;
                 }
-                Debug.Log($"Mod {modInfo.identifier} does not have a definition.");
-                mod.UnloadMod();
-                return false;
+                gameManager.ConsoleWindow.WriteLine($"Loaded mod {modInfo.identifier}.");
+                return true;
             }
-            Debug.Log($"Failed loading mod {modInfo.identifier} from {modInfo.path}.");
+            gameManager.ConsoleWindow.WriteLine($"Failed loading mod {modInfo.identifier} from {modInfo.path}.");
             return false;
+        }
+
+        /// <summary>
+        /// When mods are loaded, any mod that they reference are loaded alongside them.
+        /// This method makes sure that these mods are added to our loaded list.
+        /// </summary>
+        /// <param name="mod"></param>
+        private void GetReferencedMods(ModHost mod)
+        {
+            foreach(IModInfo referencedMod in mod.ReferencedMods)
+            {
+
+            }
         }
         #endregion
 

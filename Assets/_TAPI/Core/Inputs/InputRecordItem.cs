@@ -14,7 +14,7 @@ namespace TAPI.Core
         }
 
         public InputRecordItem(Vector2 movement, Vector2 camera, float floatDir, bool lockon, bool interact, bool bullet,
-            bool attack, bool dash, bool jump, bool taunt, bool scOne, bool scTwo, bool scThr, bool scFour)
+            bool attack, bool special, bool dash, bool jump, bool taunt, bool scOne, bool scTwo, bool scThr, bool scFour)
         {
             inputs = new Dictionary<EntityInputs, InputRecordInput>();
             InputRecordAxis2D rMovement = new InputRecordAxis2D(movement);
@@ -34,6 +34,8 @@ namespace TAPI.Core
             inputs.Add(EntityInputs.Attack, rAttack);
             InputRecordButton rBullet = new InputRecordButton(bullet);
             inputs.Add(EntityInputs.Bullet, rBullet);
+            InputRecordButton rSpecial = new InputRecordButton(special);
+            inputs.Add(EntityInputs.Special, rSpecial);
             InputRecordButton rLockon = new InputRecordButton(lockon);
             inputs.Add(EntityInputs.Lockon, rLockon);
             InputRecordButton rTaunt = new InputRecordButton(taunt);

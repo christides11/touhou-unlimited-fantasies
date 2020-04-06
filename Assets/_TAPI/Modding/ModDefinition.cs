@@ -35,7 +35,7 @@ namespace TAPI.Modding
         /// returns null.</returns>
         public virtual EntityDefinition GetEntityDefinition(string entityName)
         {
-            return entities.FirstOrDefault(x => x.entityName == entityName);
+            return entities.FirstOrDefault(x => x.entityName.ToLower() == entityName.ToLower());
         }
 
         /// <summary>
@@ -55,7 +55,7 @@ namespace TAPI.Modding
         /// returns null.</returns>
         public virtual GameModeDefinition GetGamemodeDefinition(string gamemodeName)
         {
-            return gamemodes.FirstOrDefault(x => x.gameModeName == gamemodeName);
+            return gamemodes.FirstOrDefault(x => x.gameModeName.ToLower() == gamemodeName.ToLower());
         }
 
         /// <summary>
@@ -75,7 +75,7 @@ namespace TAPI.Modding
         /// returns null.</returns>
         public virtual StageDefinition GetStageDefinition(string stageName)
         {
-            return stages.FirstOrDefault(x => x.sceneName == stageName);
+            return stages.FirstOrDefault(x => x.stageName.ToLower() == stageName.ToLower());
         }
 
         public virtual List<StageCollection> GetStageCollections()
@@ -85,7 +85,7 @@ namespace TAPI.Modding
 
         public virtual StageCollection GetStageCollection(string stageCollection)
         {
-            return stageCollections.FirstOrDefault(x => x.collectionName == stageCollection);
+            return stageCollections.FirstOrDefault(x => x.collectionName.ToLower() == stageCollection.ToLower());
         }
 
         /// <summary>

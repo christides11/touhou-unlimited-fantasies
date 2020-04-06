@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: Dive Twirl
   description: 
+  stateOverride: -1
   length: 40
   groundAble: 0
   airAble: 1
@@ -23,6 +24,8 @@ MonoBehaviour:
   inertiaModifer: 0.75
   carriesInertia: 1
   carriedInertia: 0
+  chargeFrames: 
+  chargeLength: 0
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 2
@@ -31,6 +34,9 @@ MonoBehaviour:
   - {x: 6, y: 50}
   dashCancelableFrames: []
   floatCancelFrames: []
+  attackCancelFrames: []
+  bulletCancelFrames: []
+  specialCancelFrames: []
   hitboxGroups:
   - ID: 0
     activeFramesStart: 4

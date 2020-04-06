@@ -63,6 +63,7 @@ namespace TAPI.Modding
 
         public EntityDefinition GetEntity(ModEntityReference entity)
         {
+            entity.modIdentifier = entity.modIdentifier.ToLower();
             if (!mods.ContainsKey(entity.modIdentifier))
             {
                 return null;
@@ -96,6 +97,7 @@ namespace TAPI.Modding
 
         public StageDefinition GetStageDefinition(ModStageReference stage)
         {
+            stage.modIdentifier = stage.modIdentifier.ToLower();
             if (!mods.ContainsKey(stage.modIdentifier))
             {
                 return null;
@@ -111,8 +113,29 @@ namespace TAPI.Modding
             return s;
         }
 
+        /// <summary>
+        /// Get a list of all stages available.
+        /// </summary>
+        /// <returns>A list that can be used to get the definition of any stage.</returns>
+        public List<ModStageReference> GetStageDefinitions()
+        {
+            List<ModStageReference> stages = new List<ModStageReference>();
+
+            foreach (string mod in mods.Keys)
+            {
+                List<StageDefinition> stageDefinitions = mods[mod].GetStageDefinitions();
+                foreach (StageDefinition stageDefinition in stageDefinitions)
+                {
+                    stages.Add(new ModStageReference(mod, stageDefinition.stageName));
+                }
+            }
+
+            return stages;
+        }
+
         public StageCollection GetStageCollection(ModStageCollectionReference stageCollection)
         {
+            stageCollection.modIdentifier = stageCollection.modIdentifier.ToLower();
             if (!mods.ContainsKey(stageCollection.modIdentifier))
             {
                 return null;
@@ -153,7 +176,7 @@ namespace TAPI.Modding
                 {
                     if (mod.local)
                     {
-                        await SceneManager.LoadSceneAsync(sd.stageName, LoadSceneMode.Additive);
+                        await SceneManager.LoadSceneAsync(sd.sceneName, LoadSceneMode.Additive);
                         return true;
                     }
                     else

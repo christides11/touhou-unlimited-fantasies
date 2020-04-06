@@ -15,13 +15,17 @@ namespace TAPI.Core
         public static GameManager current;
 
         public ModManager ModManager { get { return modManager; } }
+        public ConsoleWindow ConsoleWindow { get { return consoleWindow; } }
 
         protected GameModeHandler currentGameModeHandler;
         private EntityDefinition selectedCharacter;
 
-        [SerializeField] private List<ModDefinition> internalMods = new List<ModDefinition>();
+        [SerializeField] private ModDefinition coreMod;
+        [SerializeField] private ModDefinition internalMod;
 
+        [Header("References")]
         [SerializeField] private ModManager modManager;
+        [SerializeField] private ConsoleWindow consoleWindow;
 
         [Header("Prefabs")]
         public GameVariables gameVars;
@@ -30,11 +34,9 @@ namespace TAPI.Core
         protected virtual void Awake()
         {
             current = this;
-            for(int i = 0; i < internalMods.Count; i++)
-            {
-                internalMods[i].local = true;
-                modManager.mods.Add($"christides11.tidespack", internalMods[i]);
-            }
+            coreMod.local = true;
+            modManager.mods.Add("core", coreMod);
+            modManager.mods.Add("christides11.tidespack", internalMod);
         }
 
         /// <summary>
@@ -58,12 +60,36 @@ namespace TAPI.Core
         /// Loads the gamemode and the scene provided,
         /// then starts the gamemode.
         /// </summary>
-        /// <param name="character"></param>
+        /// <param name="entity"></param>
         /// <param name="gameMode"></param>
-        /// <param name="scene"></param>
-        public virtual async void StartGameMode(EntityDefinition character, ModGamemodeReference gameMode, ModStageReference stage) { 
-            LoadGameMode(modManager.GetGamemodeDefinition(gameMode));
-            StageDefinition wantedScene = modManager.GetStageDefinition(stage);
+        /// <param name="stage"></param>
+        public virtual async void StartGameMode(ModEntityReference entity, ModGamemodeReference gamemode, ModStageReference stage,
+            ModStageCollectionReference stageCollection = null) {
+            EntityDefinition entityDefinition = modManager.GetEntity(entity);
+            GameModeDefinition gamemodeDefinition = modManager.GetGamemodeDefinition(gamemode);
+            StageDefinition stageDefinition = modManager.GetStageDefinition(stage);
+            StageCollection stageCollectionDefinition = stageCollection != null ? modManager.GetStageCollection(stageCollection)
+                : null;
+
+            // Error checking.
+            if(entityDefinition == null)
+            {
+                Debug.Log($"Can not find entity {entity.modIdentifier}/{entity.entityName}.");
+                return;
+            }
+            if(gamemodeDefinition == null)
+            {
+                Debug.Log($"Can not find gamemode {gamemode.modIdentifier}/{gamemode.gamemodeName}.");
+                return;
+            }
+            if(stageDefinition == null)
+            {
+                Debug.Log($"Can not find stage {stage.modIdentifier}/{stage.stageName}.");
+                return;
+            }
+
+            // Load everything and start gamemode.
+            SetGameMode(gamemodeDefinition);
 
             bool result = await modManager.LoadStage(stage);
             if (!result)
@@ -71,18 +97,22 @@ namespace TAPI.Core
                 Debug.Log($"Error loading stage {stage.modIdentifier}/{stage.stageName}.");
                 return;
             }
-            await SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(wantedScene.sceneName));
+            // Unloads scenes that aren't the singletons scene.
+            if (SceneManager.sceneCount > 1)
+            {
+                await SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+            }
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(stageDefinition.sceneName));
 
             currentGameModeHandler.Init(this);
-            currentGameModeHandler.StartGameMode(wantedScene, character);
+            currentGameModeHandler.StartGameMode(entityDefinition, stageDefinition);
         }
 
         /// <summary>
         /// Loads the given gamemode and sets it as the active one.
         /// </summary>
         /// <param name="gameModeDefinition"></param>
-        protected virtual void LoadGameMode(GameModeDefinition gameModeDefinition)
+        protected virtual void SetGameMode(GameModeDefinition gameModeDefinition)
         {
             if (currentGameModeHandler)
             {

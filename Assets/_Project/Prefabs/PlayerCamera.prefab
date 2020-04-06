@@ -52,7 +52,7 @@ MonoBehaviour:
   mouseDeadzone: 0.05
   mouseXAxisSpeed: 0.8
   mouseYAxisSpeed: 0.8
-  stickDeadzone: 0.2
+  stickDeadzone: 0.15
   stickAxialDeadZone: 0.18
 --- !u!1 &7870037177992123084
 GameObject:

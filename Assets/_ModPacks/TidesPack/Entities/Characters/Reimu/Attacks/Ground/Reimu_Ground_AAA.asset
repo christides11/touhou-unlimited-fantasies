@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: AAA
   description: 
+  stateOverride: -1
   length: 40
   groundAble: 1
   airAble: 0
@@ -32,6 +33,9 @@ MonoBehaviour:
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
+  attackCancelFrames: []
+  bulletCancelFrames: []
+  specialCancelFrames: []
   hitboxGroups:
   - ID: 0
     activeFramesStart: 5

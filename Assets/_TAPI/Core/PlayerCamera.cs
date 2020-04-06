@@ -24,6 +24,8 @@ namespace TAPI.Core
         [Header("Controller")]
         [SerializeField] private float stickDeadzone = 0.2f;
         [SerializeField] private float stickAxialDeadZone = 0.15f;
+        [SerializeField] private float stickXAxisSpeed = 1.0f;
+        [SerializeField] private float stickYAxisSpeed = 1.0f;
 
         public virtual void Update()
         {
@@ -63,6 +65,8 @@ namespace TAPI.Core
                     {
                         stickInput.y = 0;
                     }
+                    stickInput.x *= stickXAxisSpeed;
+                    stickInput.y *= stickYAxisSpeed;
                     break;
             }
 

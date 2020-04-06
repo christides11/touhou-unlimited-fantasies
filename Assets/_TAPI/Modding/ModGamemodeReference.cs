@@ -14,5 +14,10 @@ namespace TAPI.Modding
             this.modIdentifier = modIdentifier;
             gamemodeName = gameModeName;
         }
+
+        public override string ToString()
+        {
+            return $"{modIdentifier}/{gamemodeName}";
+        }
     }
 }

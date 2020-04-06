@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TAPI.GameMode
 {
-    public class StageModeHandler : MonoBehaviour
+    public class StageModeHandler : GameModeHandler
     {
 
     }

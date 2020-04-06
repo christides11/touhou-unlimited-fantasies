@@ -11,9 +11,10 @@ namespace TAPI.GameMode
     {
         public EntityController dummy;
 
-        public override void StartGameMode(StageDefinition scene, EntityDefinition character)
+        public override void StartGameMode(EntityDefinition character, StageDefinition scene,
+            StageCollection stageCollection = null)
         {
-            base.StartGameMode(scene, character);
+            base.StartGameMode(character, scene, stageCollection);
 
             player = simObjectManager.SpawnObject(character.entity, scene.spawnPosition, Quaternion.identity);
             playerCamera.UpdateTarget(player.transform);

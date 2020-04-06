@@ -1,5 +1,52 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9023535649722190460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
+  m_Name: Special_Teleport
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -600, y: -152}
+  ports:
+    keys:
+    - lastNode
+    - nextNode
+    values:
+    - _fieldName: lastNode
+      _node: {fileID: -9023535649722190460}
+      _typeQualifiedName: TAPI.Combat.MovesetAttackNode, TAPI_CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: nextNode
+      _node: {fileID: -9023535649722190460}
+      _typeQualifiedName: System.Collections.Generic.List`1[[TAPI.Combat.MovesetAttackNode,
+        TAPI_CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  lastNode: {fileID: 0}
+  executeButton:
+  - button: 10
+    stickDir: {x: 0, y: 0}
+    dirDeviation: 15
+  buttonSequence: []
+  action: {fileID: 11400000, guid: 1bffa13fcc36a244c81e615e7d729748, type: 2}
+  cancelWindows: []
+  nextNode: []
 --- !u!114 &-8484630490610987400
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10,10 +57,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
-  m_Name: Karate Kick
+  m_Name: Attack_Air_Karate Kick
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -200, y: 408}
+  position: {x: 8, y: -8}
   ports:
     keys:
     - lastNode
@@ -63,7 +110,7 @@ MonoBehaviour:
   m_Name: Ground_AAA
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 472, y: -472}
+  position: {x: 264, y: -472}
   ports:
     keys:
     - lastNode
@@ -128,7 +175,7 @@ MonoBehaviour:
   m_Name: Ground_AA
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 152, y: -472}
+  position: {x: 8, y: -472}
   ports:
     keys:
     - lastNode
@@ -262,16 +309,30 @@ MonoBehaviour:
   - {fileID: -3004213846102699117}
   - {fileID: -3508867930629514227}
   - {fileID: 6696736325389599499}
-  groundCommandNormals:
+  - {fileID: -9023535649722190460}
+  groundAttackCommandNormals:
   - {fileID: 3193021667813939668}
-  groundStartNodes:
+  groundAttackStartNodes:
   - {fileID: -1246202044470491312}
-  floatingStartNodes:
-  - {fileID: -1246202044470491312}
-  airCommandNormals:
-  - {fileID: -8484630490610987400}
+  airAttackCommandNormals:
   - {fileID: 8296779188355047815}
-  airStartNodes: []
+  - {fileID: -8484630490610987400}
+  airAttackStartNodes: []
+  floatingAttackCommandNormals: []
+  floatingAttackStartNodes: []
+  groundBulletCommandNormals: []
+  groundBulletStartNodes: []
+  airBulletCommandNormals: []
+  airBulletStartNodes: []
+  floatingBulletCommandNormals: []
+  floatingBulletStartNodes: []
+  groundSpecialCommandNormals: []
+  groundSpecialStartNodes:
+  - {fileID: -9023535649722190460}
+  airSpecialCommandNormals: []
+  airSpecialStartNodes: []
+  floatingSpecialCommandNormals: []
+  floatingSpecialStartNodes: []
 --- !u!114 &3193021667813939668
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -285,7 +346,7 @@ MonoBehaviour:
   m_Name: Ground Launcher
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -200, y: -872}
+  position: {x: -232, y: -728}
   ports:
     keys:
     - lastNode
@@ -317,7 +378,7 @@ MonoBehaviour:
     dirDeviation: 15
   - button: 0
     stickDir: {x: 0, y: -1}
-    dirDeviation: 0.95
+    dirDeviation: 0.8
   buttonSequence: []
   action: {fileID: 11400000, guid: 6474a2d34f51aa94f9c9556122335753, type: 2}
   cancelWindows: []
@@ -335,7 +396,7 @@ MonoBehaviour:
   m_Name: Ground_AAAA
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 762, y: -465.5}
+  position: {x: 504, y: -472}
   ports:
     keys:
     - lastNode
@@ -382,10 +443,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
-  m_Name: Air Twirl
+  m_Name: Attack_Air_Air Twirl
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -216, y: 24}
+  position: {x: -200, y: -8}
   ports:
     keys:
     - lastNode

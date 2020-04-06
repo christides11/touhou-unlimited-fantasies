@@ -192,14 +192,6 @@ namespace TAPI.Entities
             return false;
         }
 
-        public virtual void FaceDir(Vector3 m, float rotSpeed)
-        {
-            //Rotate towards our movement force.
-            transform.rotation =
-                Quaternion.Lerp(transform.rotation, Quaternion.LookRotation(m),
-                rotSpeed);
-        }
-
         #region Manual Physics Checks
         public virtual void GroundedCheck()
         {

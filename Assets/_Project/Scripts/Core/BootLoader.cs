@@ -17,6 +17,8 @@ namespace Touhou.Core
         async void Start()
         {
             modManager.Init();
+            modManager.ModLoader.LoadAllMods();
+
             if (SceneManager.GetActiveScene().name != defaultScene)
             {
                 await gameManager.LoadSceneAsync(defaultScene);

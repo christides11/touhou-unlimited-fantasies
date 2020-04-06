@@ -14,5 +14,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   collectionName: Embodiment of Scarlet Devil
   stages:
-  - modIdentifier: christides11.tidespack
-    stageName: 'Fantastic Night Parade Scroll ~ Mystic Flier '
+  - gamemode:
+      modIdentifier: core
+      gamemodeName: stage
+    stage:
+      modIdentifier: christides11.tidespack
+      stageName: 'Fantastic Night Parade Scroll ~ Mystic Flier '

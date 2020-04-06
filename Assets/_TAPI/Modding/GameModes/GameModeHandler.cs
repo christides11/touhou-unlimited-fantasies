@@ -16,6 +16,14 @@ namespace TAPI.GameMode{
         protected GameObject player;
         protected PlayerCamera playerCamera;
 
+        private StageCollection stageCollection;
+        private StageDefinition currentStage;
+
+
+        /// <summary>
+        /// Initializes the gamemode. Call this before anything.
+        /// </summary>
+        /// <param name="gameManager">The gameManager in use.</param>
         public virtual void Init(GameManager gameManager)
         {
             this.gameManager = gameManager;
@@ -24,12 +32,27 @@ namespace TAPI.GameMode{
             timeStepManager.OnUpdate += Tick;
         }
 
-        public virtual void StartGameMode(StageDefinition scene, EntityDefinition character)
+        /// <summary>
+        /// Starts the gamemode.
+        /// 
+        /// </summary>
+        /// <param name="character">The character the player selected.</param>
+        /// <param name="currentStage">The current stage we are on.</param>
+        /// <param name="stageCollection"></param>
+        public virtual void StartGameMode(EntityDefinition character, StageDefinition currentStage,
+            StageCollection stageCollection = null)
         {
-            playerCamera = Instantiate(gameManager.playerCamera.gameObject, scene.spawnPosition, Quaternion.identity)
+            this.stageCollection = stageCollection;
+            this.currentStage = currentStage;
+            playerCamera = Instantiate(gameManager.playerCamera.gameObject, currentStage.spawnPosition, Quaternion.identity)
                 .GetComponent<PlayerCamera>();
             timeStepManager.Activate();
             started = true;
+        }
+
+        public virtual void FinishGamemode()
+        {
+
         }
 
         public virtual void Update()
@@ -50,12 +73,12 @@ namespace TAPI.GameMode{
             TickLateUpdate(dt);
         }
 
-        public virtual void TickUpdate(float dt)
+        protected virtual void TickUpdate(float dt)
         {
             simObjectManager.Update(dt);
         }
 
-        public virtual void TickLateUpdate(float dt)
+        protected virtual void TickLateUpdate(float dt)
         {
             simObjectManager.LateUpdate(dt);
         }

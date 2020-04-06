@@ -137,8 +137,6 @@ namespace TAPI.Entities
                 {
                     forceMovement *= decel;
                 }
-
-                controller.FaceDir(translatedMovement, rotSpeed);
             }
         }
     }

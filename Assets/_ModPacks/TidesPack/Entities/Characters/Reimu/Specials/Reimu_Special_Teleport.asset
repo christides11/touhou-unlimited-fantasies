@@ -1,0 +1,41 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b8a0a49550c9d7b49a42585c0affb04c, type: 3}
+  m_Name: Reimu_Special_Teleport
+  m_EditorClassIdentifier: 
+  attackName: Teleport
+  description: 
+  stateOverride: 100
+  length: 0
+  groundAble: 0
+  airAble: 0
+  heightRestriction: 0
+  possibleGround: 0
+  modifiesInertia: 1
+  inertiaModifer: 0
+  carriesInertia: 0
+  carriedInertia: 1
+  chargeFrames: 
+  chargeLength: 0
+  animationGround: {fileID: 0}
+  animationAir: {fileID: 0}
+  wrapMode: 0
+  jumpCancelFrames: []
+  landCancelFrames: []
+  dashCancelableFrames: []
+  floatCancelFrames: []
+  attackCancelFrames: []
+  bulletCancelFrames: []
+  specialCancelFrames: []
+  hitboxGroups: []
+  bulletGroups: []
+  events: []

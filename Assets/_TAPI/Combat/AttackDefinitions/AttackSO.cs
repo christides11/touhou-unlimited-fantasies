@@ -10,6 +10,7 @@ namespace TAPI.Combat
         #region General
         public string attackName;
         public string description;
+        public int stateOverride = -1;
         public int length; //In frames
         public bool groundAble;
         public bool airAble;
@@ -34,6 +35,9 @@ namespace TAPI.Combat
         public List<Vector2Int> landCancelFrames = new List<Vector2Int>();
         public List<Vector2Int> dashCancelableFrames = new List<Vector2Int>();
         public List<Vector2Int> floatCancelFrames = new List<Vector2Int>();
+        public List<Vector2Int> attackCancelFrames = new List<Vector2Int>();
+        public List<Vector2Int> bulletCancelFrames = new List<Vector2Int>();
+        public List<Vector2Int> specialCancelFrames = new List<Vector2Int>();
         #endregion
 
         #region Hitboxes

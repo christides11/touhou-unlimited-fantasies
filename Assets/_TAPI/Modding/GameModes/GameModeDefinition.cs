@@ -11,6 +11,7 @@ namespace TAPI.GameMode
         [TextArea] public string gameModeDescription;
         public GameModeHandler gameModeHandler;
 
+        public bool selectable = true;
         public bool characterSelect;
     }
 }

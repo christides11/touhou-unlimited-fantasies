@@ -4,15 +4,23 @@ using UnityEngine;
 using TAPI.Core;
 using TAPI.Modding;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
+using TMPro;
 
 namespace Touhou.Menus.MainMenu
 {
     public class StageCollectionsMenu : MonoBehaviour
     {
+        [SerializeField] private CharacterSelectMenu characterSelectMenu;
         [SerializeField] private StageCollectionItem stageCollectionItem;
         [SerializeField] private GameObject contentHolder;
         [SerializeField] private GameObject collectionStageItem;
         [SerializeField] private Transform collectionStageHolder;
+
+        [Header("Collection Info")]
+        [SerializeField] private GameObject collectionInfoParent;
+        [SerializeField] private TextMeshProUGUI collectionInfoText;
+        [SerializeField] private Button collectionStartButton;
 
         private void OnDisable()
         {
@@ -45,13 +53,54 @@ namespace Touhou.Menus.MainMenu
             }
 
             int i = 1;
-            foreach(ModStageReference stage in sc.stages)
+            foreach(GamemodeStageDefinition stage in sc.stages)
             {
                 CollectionStageItem item = Instantiate(collectionStageItem.gameObject, collectionStageHolder.transform, false)
                     .GetComponent<CollectionStageItem>();
                 item.stageText.text = $"Stage {i}";
+                item.GetComponent<EventTrigger>().AddOnSubmitListeners((d) => { OnStageSelected(stage); });
                 i++;
             }
+
+            collectionInfoParent.SetActive(true);
+            collectionInfoText.text = sc.collectionName;
+            collectionStartButton.GetComponent<EventTrigger>().RemoveAllListeners();
+        }
+
+        public void OnStageSelected(GamemodeStageDefinition stage)
+        {
+            StageDefinition stageDefinition = GameManager.current.ModManager.GetStageDefinition(stage.stage);
+
+            if(stageDefinition == null)
+            {
+                GameManager.current.ConsoleWindow.WriteLine($"Stage ({stage.ToString()}) not found.");
+                return;
+            }
+
+            collectionInfoParent.SetActive(true);
+            collectionInfoText.text = stageDefinition.stageName;
+            collectionStartButton.GetComponent<EventTrigger>().RemoveAllListeners();
+            collectionStartButton.GetComponent<EventTrigger>()
+                .AddOnSubmitListeners((d) => { StageStartButton(stage.gamemode, stage.stage); });
+        }
+
+        private void StageStartButton(ModGamemodeReference gamemode, ModStageReference stage)
+        {
+            characterSelectMenu.OnCharacterSelected += (d) => { StartStage(d, gamemode, stage); };
+            characterSelectMenu.OnExit += () => { gameObject.SetActive(true); };
+            characterSelectMenu.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
+
+        private void StartStage(ModEntityReference entity, ModGamemodeReference gamemode, ModStageReference stage)
+        {
+            GameManager gm = GameManager.current;
+            gm.StartGameMode(entity, gamemode, stage);
+        }
+
+        private void StartStageCollection()
+        {
+
         }
     }
 }

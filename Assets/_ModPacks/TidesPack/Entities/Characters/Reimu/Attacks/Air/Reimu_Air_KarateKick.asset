@@ -14,6 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   attackName: Karate Kick
   description: 
+  stateOverride: -1
   length: 36
   groundAble: 0
   airAble: 1
@@ -22,7 +23,9 @@ MonoBehaviour:
   modifiesInertia: 1
   inertiaModifer: 1
   carriesInertia: 1
-  carriedInertia: 1
+  carriedInertia: 0.7
+  chargeFrames: 
+  chargeLength: 0
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
@@ -30,6 +33,9 @@ MonoBehaviour:
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
+  attackCancelFrames: []
+  bulletCancelFrames: []
+  specialCancelFrames: []
   hitboxGroups:
   - ID: 1
     activeFramesStart: 6
@@ -66,6 +72,7 @@ MonoBehaviour:
       opponentForceMagnitude: 35
       causesTumble: 0
     throwConfirm: {fileID: 0}
+  bulletGroups: []
   events:
   - nickname: Friction Gravity
     active: 1
