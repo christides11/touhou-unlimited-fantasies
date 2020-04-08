@@ -19,7 +19,6 @@ namespace TAPI.Entities
 
         [Header("Forces")]
         public Vector3 forceMovement;
-        protected Vector3 forceMovementReal;
         public Vector3 forceGravity;
         public Vector3 forceDamage;
         public Vector3 forceInertia;
