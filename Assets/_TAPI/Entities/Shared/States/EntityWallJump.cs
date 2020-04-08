@@ -11,14 +11,14 @@ namespace TAPI.Entities.Shared
         public override void OnStart()
         {
             controller.IsGrounded = false;
-            controller.ForcesManager.forceGravity.y = controller.definition.stats.wallJumpYVelo;
+            controller.PhysicsManager.forceGravity.y = controller.definition.stats.wallJumpYVelo;
 
             //Vector2 movement = controller.EntityInput.GetMovement(0).normalized;
             //Vector3 translatedMovement = controller.lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
             //translatedMovement.y = 0;
             Vector3 translatedMovement = controller.rayHit.normal.normalized * controller.definition.stats.wallJumpHVelo;
 
-            controller.ForcesManager.forceMovement = translatedMovement;
+            controller.PhysicsManager.forceMovement = translatedMovement;
         }
 
         public override void OnUpdate()
@@ -26,7 +26,7 @@ namespace TAPI.Entities.Shared
             if (!CheckInterrupt())
             {
                 EntityStats es = controller.definition.stats;
-                controller.ForcesManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
+                controller.PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
 
                 controller.StateManager.IncrementFrame();
             }

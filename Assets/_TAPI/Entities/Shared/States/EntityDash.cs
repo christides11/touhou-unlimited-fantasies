@@ -13,7 +13,7 @@ namespace TAPI.Entities.Shared
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement *= controller.definition.stats.dashSpeed;
 
-            controller.ForcesManager.forceMovement = translatedMovement;
+            controller.PhysicsManager.forceMovement = translatedMovement;
 
             controller.RotateVisual(translatedMovement, 100);
         }

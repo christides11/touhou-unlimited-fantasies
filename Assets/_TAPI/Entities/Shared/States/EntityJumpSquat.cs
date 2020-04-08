@@ -9,7 +9,7 @@ namespace TAPI.Entities.Shared
         public override void OnStart()
         {
             base.OnStart();
-            controller.ForcesManager.ApplyMovementFriction();
+            controller.PhysicsManager.ApplyMovementFriction();
             if (controller.LockedOn)
             {
                 controller.SetVisualRotation(controller.LockonForward);

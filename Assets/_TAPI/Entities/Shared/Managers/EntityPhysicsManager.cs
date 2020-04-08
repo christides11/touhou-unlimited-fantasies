@@ -25,6 +25,11 @@ namespace TAPI.Entities
         public Vector3 forceInertia;
         public Vector3 forcePushbox;
 
+        [Header("Physics")]
+        public float wallCheckDistance = 0.7f;
+        [HideInInspector] public GameObject currentWall;
+        public float ceilingCheckDistance = 1.2f;
+
         public void HandlePushForce(Collider other)
         {
             Vector3 dir = controller.pushbox.transform.position - other.transform.position;
@@ -138,6 +143,49 @@ namespace TAPI.Entities
                     forceMovement *= decel;
                 }
             }
+        }
+
+        /// <summary>
+        /// Check if we are on the ground.
+        /// </summary>
+        public virtual void GroundedCheck()
+        {
+            controller.IsGrounded = controller.cc.Motor.GroundingStatus.IsStableOnGround;
+        }
+
+        /// <summary>
+        /// Check if there is something above us.
+        /// </summary>
+        /// <returns></returns>
+        public virtual bool CeilingAbove()
+        {
+            bool hit = Physics.Raycast(transform.position + new Vector3(0, 0.1f, 0),
+                Vector2.up, ceilingCheckDistance, controller.isGroundedMask);
+            if (hit)
+            {
+                return true;
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Check if there's a wall in the movement direction we're pointing.
+        /// </summary>
+        /// <returns>The RaycastHit result.</returns>
+        public virtual RaycastHit DetectWall()
+        {
+            //Get stick direction.
+            Vector2 movement = controller.InputManager.GetMovement(0);
+            Vector3 translatedMovement = controller.lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
+            translatedMovement.y = 0;
+
+            RaycastHit rayHit = new RaycastHit();
+            if (translatedMovement.magnitude > InputConstants.movementMagnitude)
+            {
+                Physics.Raycast(transform.position + new Vector3(0, 1, 0),
+                    translatedMovement.normalized, out rayHit, wallCheckDistance, controller.isGroundedMask);
+            }
+            return rayHit;
         }
     }
 }

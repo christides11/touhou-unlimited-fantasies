@@ -12,7 +12,7 @@ namespace TAPI.Entities.Shared
             {
                 return;
             }
-            controller.ForcesManager.ApplyMovementFriction();
+            controller.PhysicsManager.ApplyMovementFriction();
             if(controller.LockedOn)
             {
                 controller.RotateVisual(controller.LockonForward, 10);

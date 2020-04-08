@@ -17,7 +17,7 @@ namespace TAPI.Entities.Shared
                 StateManager.ChangeState(currentAttack.stateOverride);
                 return;
             }
-            controller.ForcesManager.ApplyGravity = false;
+            controller.PhysicsManager.ApplyGravity = false;
             if (currentAttack)
             {
                 if (currentAttack.modifiesInertia)
@@ -100,7 +100,7 @@ namespace TAPI.Entities.Shared
                 }
             }
             ForcesManager.forceMovement = Vector3.zero;
-            controller.ForcesManager.ApplyGravity = true;
+            controller.PhysicsManager.ApplyGravity = true;
         }
 
         private void HandleBulletGroup(int index, BulletGroup bulletGroup)

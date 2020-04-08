@@ -30,12 +30,12 @@ namespace TAPI.Combat.Events
 
             if (yForce)
             {
-                controller.ForcesManager.forceGravity.y = f.y;
+                controller.PhysicsManager.forceGravity.y = f.y;
             }
             if(xzForce)
             {
                 f.y = 0;
-                controller.ForcesManager.forceMovement = f;
+                controller.PhysicsManager.forceMovement = f;
             }
         }
     }

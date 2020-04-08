@@ -42,24 +42,24 @@ namespace TAPI.Combat.Events
             {
                 if (yForce)
                 {
-                    controller.ForcesManager.forceGravity.y = tempY;
+                    controller.PhysicsManager.forceGravity.y = tempY;
                 }
                 if (xForce || zForce)
                 {
                     f.y = 0;
-                    controller.ForcesManager.forceMovement = f;
+                    controller.PhysicsManager.forceMovement = f;
                 }
             }
             else
             {
                 if (yForce)
                 {
-                    controller.ForcesManager.forceGravity.y += f.y;
+                    controller.PhysicsManager.forceGravity.y += f.y;
                 }
                 if (xForce || zForce)
                 {
                     f.y = 0;
-                    controller.ForcesManager.forceMovement += f;
+                    controller.PhysicsManager.forceMovement += f;
                 }
             }
         }

@@ -10,13 +10,13 @@ namespace TAPI.Entities.Shared
         {
             base.OnStart();
             controller.IsGrounded = false;
-            controller.ForcesManager.forceGravity.y = controller.definition.stats.airJumpVelocity;
+            controller.PhysicsManager.forceGravity.y = controller.definition.stats.airJumpVelocity;
 
             Vector2 movement = controller.InputManager.GetMovement(0);
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement *= controller.definition.stats.airJumpHorizontalVelo;
 
-            controller.ForcesManager.forceMovement = (controller.ForcesManager.forceMovement 
+            controller.PhysicsManager.forceMovement = (controller.PhysicsManager.forceMovement 
                 * controller.definition.stats.airJumpCarriedMomentum) + translatedMovement;
         }
 
@@ -25,7 +25,7 @@ namespace TAPI.Entities.Shared
             if (!CheckInterrupt())
             {
                 EntityStats es = controller.definition.stats;
-                controller.ForcesManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
+                controller.PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
             }
         }
 

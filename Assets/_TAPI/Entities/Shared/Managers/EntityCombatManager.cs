@@ -396,7 +396,7 @@ namespace TAPI.Entities
             hitStun = hitInfo.hitstun;
 
             // Convert forces the attacker-based forward direction.
-            controller.ForcesManager.ApplyGravity = false;
+            controller.PhysicsManager.ApplyGravity = false;
             Vector3 baseForce = hitInfo.opponentForceDir * hitInfo.opponentForceMagnitude;
             Vector3 forces = (forward * baseForce.z + right * baseForce.x);
             forces.y = baseForce.y;
@@ -404,9 +404,9 @@ namespace TAPI.Entities
             {
                 controller.IsGrounded = false;
             }
-            controller.ForcesManager.forceGravity.y = baseForce.y;
+            controller.PhysicsManager.forceGravity.y = baseForce.y;
             forces.y = 0;
-            controller.ForcesManager.forceMovement = forces;
+            controller.PhysicsManager.forceMovement = forces;
 
 
             if (controller.IsGrounded && hitInfo.groundBounces)

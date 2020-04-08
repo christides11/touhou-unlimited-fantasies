@@ -13,14 +13,14 @@ namespace TAPI.Entities.Characters.States
         public override void OnStart()
         {
             base.OnStart();
-            controller.ForcesManager.ApplyGravity = false;
+            controller.PhysicsManager.ApplyGravity = false;
         }
 
         public override void OnUpdate()
         {
             if (!CheckInterrupt())
             {
-                Vector3 totalMovement = controller.ForcesManager.forceMovement + controller.ForcesManager.forceGravity;
+                Vector3 totalMovement = controller.PhysicsManager.forceMovement + controller.PhysicsManager.forceGravity;
 
                 Vector2 movement = controller.InputManager.GetMovement(0);
                 Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
@@ -38,9 +38,9 @@ namespace TAPI.Entities.Characters.States
                 }
 
                 // Set movement values.
-                controller.ForcesManager.forceMovement.x = totalMovement.x;
-                controller.ForcesManager.forceMovement.z = totalMovement.z;
-                controller.ForcesManager.forceGravity.y = totalMovement.y;
+                controller.PhysicsManager.forceMovement.x = totalMovement.x;
+                controller.PhysicsManager.forceMovement.z = totalMovement.z;
+                controller.PhysicsManager.forceGravity.y = totalMovement.y;
             }
         }
 

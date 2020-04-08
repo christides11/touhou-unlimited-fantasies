@@ -15,11 +15,11 @@ namespace TAPI.Combat.Events
         {
             if (xzFriction)
             {
-                controller.ForcesManager.ApplyMovementFriction(variables.floatVars[0]);
+                controller.PhysicsManager.ApplyMovementFriction(variables.floatVars[0]);
             }
             if (yFriction)
             {
-                controller.ForcesManager.ApplyGravityFriction(variables.floatVars[0]);
+                controller.PhysicsManager.ApplyGravityFriction(variables.floatVars[0]);
             }
         }
     }

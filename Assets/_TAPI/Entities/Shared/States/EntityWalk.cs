@@ -17,12 +17,12 @@ namespace TAPI.Entities.Shared
                 Vector3 velo = (translatedMovement * controller.definition.stats.walkAcceleration)
                     + (translatedMovement.normalized * controller.definition.stats.walkBaseAccel);
 
-                controller.ForcesManager.forceMovement += velo;
+                controller.PhysicsManager.forceMovement += velo;
                 //Limit movement velocity.
-                if(controller.ForcesManager.forceMovement.magnitude > 
+                if(controller.PhysicsManager.forceMovement.magnitude > 
                     controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude)
                 {
-                    controller.ForcesManager.forceMovement = controller.ForcesManager.forceMovement.normalized
+                    controller.PhysicsManager.forceMovement = controller.PhysicsManager.forceMovement.normalized
                         * controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude;
                 }
 

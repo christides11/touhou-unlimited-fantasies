@@ -11,9 +11,9 @@ namespace TAPI.Entities.Shared
         {
             base.OnStart();
             counter = 0;
-            controller.ForcesManager.ApplyGravity = false;
-            controller.ForcesManager.forceGravity.y *= controller.definition.stats.wallClingInitFrictionY;
-            controller.ForcesManager.ApplyMovementFriction(controller.definition.stats.wallClingInitFrictionXZ);
+            controller.PhysicsManager.ApplyGravity = false;
+            controller.PhysicsManager.forceGravity.y *= controller.definition.stats.wallClingInitFrictionY;
+            controller.PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingInitFrictionXZ);
             controller.transform.position = controller.rayHit.point + (controller.rayHit.normal * 0.51f) + new Vector3(0, -1, 0);
         }
 
@@ -21,12 +21,12 @@ namespace TAPI.Entities.Shared
         {
             if (!CheckInterrupt())
             {
-                controller.ForcesManager.ApplyMovementFriction(controller.definition.stats.wallClingFrictionXZ);
+                controller.PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingFrictionXZ);
                 EntityStats es = controller.definition.stats;
-                controller.ForcesManager.forceGravity.y -= es.wallClingGravity;
-                if(controller.ForcesManager.forceGravity.y < -es.wallClingMaxFallSpeed)
+                controller.PhysicsManager.forceGravity.y -= es.wallClingGravity;
+                if(controller.PhysicsManager.forceGravity.y < -es.wallClingMaxFallSpeed)
                 {
-                    controller.ForcesManager.forceGravity.y = -es.wallClingMaxFallSpeed;
+                    controller.PhysicsManager.forceGravity.y = -es.wallClingMaxFallSpeed;
                 }
             }
         }
@@ -34,12 +34,12 @@ namespace TAPI.Entities.Shared
         int counter;
         public override bool CheckInterrupt()
         {
-            if (!controller.DetectWall().transform)
+            if (!controller.PhysicsManager.DetectWall().transform)
             {
                 counter++;
                 if (counter > 4)
                 {
-                    controller.currentWall = null;
+                    controller.PhysicsManager.currentWall = null;
                     controller.StateManager.ChangeState((int)EntityStates.FALL);
                     return true;
                 }
@@ -54,7 +54,7 @@ namespace TAPI.Entities.Shared
         public override void OnInterrupted()
         {
             counter = 0;
-            controller.ForcesManager.ApplyGravity = true;
+            controller.PhysicsManager.ApplyGravity = true;
         }
     }
 }

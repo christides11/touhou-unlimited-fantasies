@@ -11,7 +11,7 @@ namespace TAPI.Entities.Shared
         {
             base.OnStart();
             controller.IsGrounded = false;
-            controller.ForcesManager.forceGravity.y = controller.definition.stats.fullHopVelocity;
+            controller.PhysicsManager.forceGravity.y = controller.definition.stats.fullHopVelocity;
         }
 
         public override void OnUpdate()
@@ -19,7 +19,7 @@ namespace TAPI.Entities.Shared
             if (!CheckInterrupt())
             {
                 EntityStats es = controller.definition.stats;
-                controller.ForcesManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
+                controller.PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
             }
         }
 

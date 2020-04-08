@@ -16,10 +16,10 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            RaycastHit rh = controller.DetectWall();
+            RaycastHit rh = controller.PhysicsManager.DetectWall();
             if (rh.collider)
             {
-                controller.currentWall = rh.transform.gameObject;
+                controller.PhysicsManager.currentWall = rh.transform.gameObject;
                 controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
                 return true;
             }

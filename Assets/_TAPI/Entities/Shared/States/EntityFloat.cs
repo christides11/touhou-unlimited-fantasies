@@ -11,7 +11,7 @@ namespace TAPI.Entities.Shared
         public override void OnStart()
         {
             base.OnStart();
-            controller.ForcesManager.ApplyGravity = false;
+            controller.PhysicsManager.ApplyGravity = false;
             controller.IsFloating = true;
         }
 
@@ -22,12 +22,12 @@ namespace TAPI.Entities.Shared
                 return;
             }
 
-            controller.ForcesManager.forceGravity.y = controller.InputManager.GetFloatDir(0)
+            controller.PhysicsManager.forceGravity.y = controller.InputManager.GetFloatDir(0)
                 * controller.definition.stats.floatVerticalSpeed;
 
             if(controller.InputManager.GetMovement(0).magnitude <= InputConstants.movementMagnitude)
             {
-                controller.ForcesManager.ApplyMovementFriction(controller.definition.stats.floatFriction);
+                controller.PhysicsManager.ApplyMovementFriction(controller.definition.stats.floatFriction);
             }
             else
             {
@@ -43,22 +43,22 @@ namespace TAPI.Entities.Shared
             Vector3 velo = (translatedMovement * controller.definition.stats.floatAcceleration)
                 + (translatedMovement.normalized * controller.definition.stats.floatBaseAccel);
 
-            controller.ForcesManager.forceMovement += velo;
+            controller.PhysicsManager.forceMovement += velo;
             //Limit movement velocity.
-            if (controller.ForcesManager.forceMovement.magnitude > 
+            if (controller.PhysicsManager.forceMovement.magnitude > 
                 controller.definition.stats.maxFloatSpeed * translatedMovement.magnitude)
             {
-                controller.ForcesManager.forceMovement = controller.ForcesManager.forceMovement.normalized
+                controller.PhysicsManager.forceMovement = controller.PhysicsManager.forceMovement.normalized
                     * controller.definition.stats.maxFloatSpeed * translatedMovement.magnitude;
             }
 
-            controller.RotateVisual(controller.ForcesManager.forceMovement, controller.definition.stats.floatRotationSpeed);
+            controller.RotateVisual(controller.PhysicsManager.forceMovement, controller.definition.stats.floatRotationSpeed);
         }
 
         public override void OnInterrupted()
         {
             base.OnInterrupted();
-            controller.ForcesManager.ApplyGravity = true;
+            controller.PhysicsManager.ApplyGravity = true;
             controller.IsFloating = false;
         }
 

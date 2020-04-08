@@ -13,15 +13,15 @@ namespace TAPI.Entities.Characters.States
         public override void OnStart()
         {
             base.OnStart();
-            controller.ForcesManager.forceGravity.y = controller.InputManager.GetFloatDir(0)
+            controller.PhysicsManager.forceGravity.y = controller.InputManager.GetFloatDir(0)
                 * Stats.floatDodgeVelo;
 
-            controller.ForcesManager.ApplyGravity = false;
+            controller.PhysicsManager.ApplyGravity = false;
             Vector2 movement = controller.InputManager.GetMovement(0);
             Vector3 translatedMovement = Vector3.zero;
             if (movement.magnitude <= InputConstants.movementMagnitude)
             {
-                movement = controller.ForcesManager.forceGravity.y == 0 ? Vector2.zero
+                movement = controller.PhysicsManager.forceGravity.y == 0 ? Vector2.zero
                     : Vector2.up;
             }
             else
@@ -30,7 +30,7 @@ namespace TAPI.Entities.Characters.States
                 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
                 translatedMovement *= Stats.floatDodgeVelo;
             }
-            controller.ForcesManager.forceMovement = translatedMovement;
+            controller.PhysicsManager.forceMovement = translatedMovement;
         }
 
         public override void OnUpdate()
@@ -39,8 +39,8 @@ namespace TAPI.Entities.Characters.States
             {
                 if(controller.StateManager.CurrentStateFrame > Stats.floatDodgeHoldVelo)
                 {
-                    controller.ForcesManager.ApplyMovementFriction(Stats.floatDodgeFriction);
-                    controller.ForcesManager.ApplyGravityFriction(Stats.floatDodgeFriction);
+                    controller.PhysicsManager.ApplyMovementFriction(Stats.floatDodgeFriction);
+                    controller.PhysicsManager.ApplyGravityFriction(Stats.floatDodgeFriction);
                 }
 
                 controller.StateManager.IncrementFrame();
@@ -89,7 +89,7 @@ namespace TAPI.Entities.Characters.States
         public override void OnInterrupted()
         {
             base.OnInterrupted();
-            controller.ForcesManager.ApplyGravity = true;
+            controller.PhysicsManager.ApplyGravity = true;
         }
     }
 }

@@ -14,11 +14,11 @@ namespace TAPI.Entities.Shared
                 Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
                 translatedMovement *= controller.definition.stats.runAcceleration;
 
-                controller.ForcesManager.forceMovement += translatedMovement;
+                controller.PhysicsManager.forceMovement += translatedMovement;
                 //Limit movement velocity.
-                if (controller.ForcesManager.forceMovement.magnitude > controller.definition.stats.maxRunSpeed * movement.magnitude)
+                if (controller.PhysicsManager.forceMovement.magnitude > controller.definition.stats.maxRunSpeed * movement.magnitude)
                 {
-                    controller.ForcesManager.forceMovement = controller.ForcesManager.forceMovement.normalized
+                    controller.PhysicsManager.forceMovement = controller.PhysicsManager.forceMovement.normalized
                         * controller.definition.stats.maxRunSpeed * movement.magnitude;
                 }
 

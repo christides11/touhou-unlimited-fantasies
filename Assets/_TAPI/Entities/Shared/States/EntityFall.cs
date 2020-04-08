@@ -13,7 +13,7 @@ namespace TAPI.Entities.Shared
             if (!CheckInterrupt())
             {
                 EntityStats es = controller.definition.stats;
-                controller.ForcesManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
+                controller.PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
             }
         }
     }

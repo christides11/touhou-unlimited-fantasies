@@ -11,8 +11,8 @@ namespace TAPI.Entities.Characters.States
         public override void OnStart()
         {
             base.OnStart();
-            controller.ForcesManager.ApplyGravity = false;
-            controller.ForcesManager.forceGravity = Vector3.zero;
+            controller.PhysicsManager.ApplyGravity = false;
+            controller.PhysicsManager.forceGravity = Vector3.zero;
             Vector2 movement = controller.InputManager.GetMovement(0);
             if(movement.magnitude == 0)
             {
@@ -21,7 +21,7 @@ namespace TAPI.Entities.Characters.States
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement *= ((CharacterStats)controller.definition.stats).airDashVelo;
 
-            controller.ForcesManager.forceMovement = translatedMovement;
+            controller.PhysicsManager.forceMovement = translatedMovement;
             controller.RotateVisual(translatedMovement, 100);
         }
 
@@ -32,7 +32,7 @@ namespace TAPI.Entities.Characters.States
                 CharacterStats ps = ((CharacterStats)controller.definition.stats);
                 if (controller.StateManager.CurrentStateFrame > ps.airDashHoldVelo)
                 {
-                    controller.ForcesManager.ApplyMovementFriction(ps.airDashFriction);
+                    controller.PhysicsManager.ApplyMovementFriction(ps.airDashFriction);
                 }
                 controller.StateManager.IncrementFrame();
             }
@@ -40,10 +40,10 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            RaycastHit rh = controller.DetectWall();
+            RaycastHit rh = controller.PhysicsManager.DetectWall();
             if (rh.collider)
             {
-                controller.currentWall = rh.transform.gameObject;
+                controller.PhysicsManager.currentWall = rh.transform.gameObject;
                 controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
                 return true;
             }
@@ -73,7 +73,7 @@ namespace TAPI.Entities.Characters.States
         public override void OnInterrupted()
         {
             base.OnInterrupted();
-            controller.ForcesManager.ApplyGravity = true;
+            controller.PhysicsManager.ApplyGravity = true;
         }
 
         public override string GetName()

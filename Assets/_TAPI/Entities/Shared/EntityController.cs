@@ -15,7 +15,7 @@ namespace TAPI.Entities
         public EntityInput InputManager { get { return entityInput; } }
         public EntityStateManager StateManager { get { return entityStateManager; } }
         public EntityCombatManager CombatManager { get { return entityCombatManager; } }
-        public EntityPhysicsManager ForcesManager { get { return entityForcesManager; } }
+        public EntityPhysicsManager PhysicsManager { get { return entityPhysicsManager; } }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
         public GameObject LockonTarget { get; protected set; } = null;
         public bool LockedOn { get; protected set; } = false;
@@ -30,7 +30,7 @@ namespace TAPI.Entities
         [SerializeField] protected EntityInput entityInput;
         [SerializeField] protected EntityStateManager entityStateManager;
         [SerializeField] protected EntityCombatManager entityCombatManager;
-        [SerializeField] protected EntityPhysicsManager entityForcesManager;
+        [SerializeField] protected EntityPhysicsManager entityPhysicsManager;
         [SerializeField] protected EntityAnimator entityAnimator;
         public EntityDefinition definition;
         public EntityCharacterController cc;
@@ -39,13 +39,6 @@ namespace TAPI.Entities
         public Transform lookTransform;
         public Transform visualTransform;
         public TriggerDetector pushbox;
-        #endregion
-
-        #region Physics
-        [Header("Physics")]
-        public float wallCheckDistance = 0.7f;
-        [HideInInspector] public GameObject currentWall;
-        public float ceilingCheckDistance = 1.2f;
         #endregion
 
         #region Variables
@@ -80,7 +73,7 @@ namespace TAPI.Entities
             base.Awake();
             GameManager = TAPI.Core.GameManager.current;
             KinematicCharacterSystem.Settings.AutoSimulation = false;
-            pushbox.TriggerStay += ForcesManager.HandlePushForce;
+            pushbox.TriggerStay += PhysicsManager.HandlePushForce;
         }
 
         /// <summary>
@@ -92,13 +85,13 @@ namespace TAPI.Entities
             if (CombatManager.hitStop == 0)
             {
                 HandleLockon();
-                GroundedCheck();
+                PhysicsManager.GroundedCheck();
                 StateManager.Tick();
-                ForcesManager.Tick();
+                PhysicsManager.Tick();
             }
             else
             {
-                ForcesManager.SetForceDirect(Vector3.zero, Vector3.zero);
+                PhysicsManager.SetForceDirect(Vector3.zero, Vector3.zero);
             }
         }
 
@@ -339,50 +332,5 @@ namespace TAPI.Entities
             }
             return false;
         }
-
-        #region Manual Physics Checks
-        /// <summary>
-        /// Check if we are on the ground.
-        /// </summary>
-        public virtual void GroundedCheck()
-        {
-            IsGrounded = cc.Motor.GroundingStatus.IsStableOnGround;
-        }
-
-        /// <summary>
-        /// Check if there is something above us.
-        /// </summary>
-        /// <returns></returns>
-        public virtual bool CeilingAbove()
-        {
-            bool hit = Physics.Raycast(transform.position + new Vector3(0, 0.1f, 0), 
-                Vector2.up, ceilingCheckDistance, isGroundedMask);
-            if (hit)
-            {
-                return true;
-            }
-            return false;
-        }
-
-        /// <summary>
-        /// Check if there's a wall in the movement direction we're pointing.
-        /// </summary>
-        /// <returns>The RaycastHit result.</returns>
-        public virtual RaycastHit DetectWall()
-        {
-            //Get stick direction.
-            Vector2 movement = InputManager.GetMovement(0);
-            Vector3 translatedMovement = lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
-            translatedMovement.y = 0;
-
-            rayHit = new RaycastHit();
-            if (translatedMovement.magnitude > InputConstants.movementMagnitude)
-            {
-                Physics.Raycast(transform.position + new Vector3(0, 1, 0),
-                    translatedMovement.normalized, out rayHit, wallCheckDistance, isGroundedMask);
-            }
-            return rayHit;
-        }
-        #endregion
     }
 }

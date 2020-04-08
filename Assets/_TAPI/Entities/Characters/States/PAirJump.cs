@@ -25,7 +25,7 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;
             }
-            if (controller.ForcesManager.forceGravity.y <= 0)
+            if (controller.PhysicsManager.forceGravity.y <= 0)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
