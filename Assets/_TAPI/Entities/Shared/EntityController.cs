@@ -65,12 +65,16 @@ namespace TAPI.Entities
 
         [HideInInspector] public RaycastHit rayHit;
 
+        /// <summary>
+        /// Initializes the entity with the references needed.
+        /// </summary>
+        /// <param name="gameManager">The global game manager.</param>
+        /// <param name="lookTransform">The "Camera" transform that this entity uses.</param>
         public virtual void Init(GameManager gameManager, Transform lookTransform)
         {
             this.GameManager = gameManager;
             this.lookTransform = lookTransform;
         }
-
         protected override void Awake()
         {
             base.Awake();
@@ -79,6 +83,9 @@ namespace TAPI.Entities
             pushbox.TriggerStay += ForcesManager.HandlePushForce;
         }
 
+        /// <summary>
+        /// Called every simulation tick. 
+        /// </summary>
         public override void SimUpdate()
         {
             InputManager.Tick();
@@ -94,6 +101,7 @@ namespace TAPI.Entities
                 ForcesManager.SetForceDirect(Vector3.zero, Vector3.zero);
             }
         }
+
 
         public override void SimLateUpdate()
         {

@@ -9,6 +9,10 @@ namespace TAPI.Core
     {
         private List<SimObject> simObjects = new List<SimObject>();
 
+        /// <summary>
+        /// Registers an object to the simulation.
+        /// </summary>
+        /// <param name="simObject"></param>
         public void RegisterObject(SimObject simObject)
         {
             if (simObjects.Contains(simObject))
@@ -18,6 +22,13 @@ namespace TAPI.Core
             simObjects.Add(simObject);
         }
 
+        /// <summary>
+        /// Instantiate an object and registers it in the simulation.
+        /// </summary>
+        /// <param name="prefab">The object to instantiate.</param>
+        /// <param name="position">The position to instantiate at.</param>
+        /// <param name="rotation">The rotation to instantiate with.</param>
+        /// <returns></returns>
         public GameObject SpawnObject(GameObject prefab, Vector3 position, Quaternion rotation)
         {
             GameObject obj = GameObject.Instantiate(prefab, position, rotation);
@@ -25,19 +36,28 @@ namespace TAPI.Core
             return obj;
         }
 
-        public void Update(float dt)
+        /// <summary>
+        /// Calls every object's SimUpdate method that is in the simulation.
+        /// After that, it ticks the physics engine.
+        /// </summary>
+        /// <param name="deltatime">The time between this and the last frame.</param>
+        public void Update(float deltatime)
         {
             for(int i = 0; i < simObjects.Count; i++)
             {
                 simObjects[i].SimUpdate();
             }
-            KinematicCharacterSystem.PreSimulationInterpolationUpdate(dt);
-            KinematicCharacterSystem.Simulate(dt, KinematicCharacterSystem.CharacterMotors, KinematicCharacterSystem.PhysicsMovers);
-            KinematicCharacterSystem.PostSimulationInterpolationUpdate(dt);
-            Physics.Simulate(dt);
+            KinematicCharacterSystem.PreSimulationInterpolationUpdate(deltatime);
+            KinematicCharacterSystem.Simulate(deltatime, KinematicCharacterSystem.CharacterMotors, KinematicCharacterSystem.PhysicsMovers);
+            KinematicCharacterSystem.PostSimulationInterpolationUpdate(deltatime);
+            Physics.Simulate(deltatime);
         }
 
-        public void LateUpdate(float dt)
+        /// <summary>
+        /// Calls every object's SimLateUpate method that is in the simulation.
+        /// </summary>
+        /// <param name="deltatime"></param>
+        public void LateUpdate(float deltatime)
         {
             for(int i = 0; i < simObjects.Count; i++)
             {
