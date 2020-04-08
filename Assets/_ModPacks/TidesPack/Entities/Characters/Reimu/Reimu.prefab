@@ -384,7 +384,7 @@ MonoBehaviour:
   lockonFudging: 0.1
   lockonLayerMask:
     serializedVersion: 2
-    m_Bits: 2560
+    m_Bits: 512
   wasRunning: 0
   hoverMode: 0
   sideWallDistance: 0.7

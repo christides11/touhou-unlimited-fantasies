@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 2103768421288388340}
   - component: {fileID: 2103768421288388341}
   - component: {fileID: 2103768421288388338}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Dummy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -127,6 +127,7 @@ MonoBehaviour:
   entityStateManager: {fileID: 2103768421288388340}
   entityCombatManager: {fileID: 2103768421288388341}
   entityForcesManager: {fileID: 2103768421288388338}
+  entityAnimator: {fileID: 0}
   definition: {fileID: 11400000, guid: 3cc2a1b261839584abdbdf23c1f87f78, type: 2}
   cc: {fileID: 2103768421288388342}
   coll: {fileID: 2103768421288388344}
@@ -146,10 +147,11 @@ MonoBehaviour:
   groundedCheckRadius: 0.45
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   centerOffset: {x: 0, y: 0.5, z: 0}
-  lockonRadius: 0
+  lockonRadius: 20
+  lockonFudging: 0.1
   lockonLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   wasRunning: 0
   hoverMode: 0
   sideWallDistance: 0.7
@@ -206,6 +208,7 @@ MonoBehaviour:
   hitStun: 0
   hitStop: 0
   team: 2
+  chargeTimes: 
 --- !u!114 &2103768421288388338
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +240,7 @@ GameObject:
   - component: {fileID: 2103768421299372814}
   - component: {fileID: 2103768421299372815}
   - component: {fileID: 2103768421299372816}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Cylinder (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1434,7 +1437,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2103768422030931851}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Visual
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1472,7 +1475,7 @@ GameObject:
   - component: {fileID: 2103768422160335361}
   - component: {fileID: 2103768422160335362}
   - component: {fileID: 2103768422160335363}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Cylinder
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2598,7 +2601,7 @@ GameObject:
   - component: {fileID: 2103768422263544783}
   - component: {fileID: 2103768422263544784}
   - component: {fileID: 2103768422263544785}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Cylinder (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3724,7 +3727,7 @@ GameObject:
   - component: {fileID: 2103768422531231262}
   - component: {fileID: 2103768422531231263}
   - component: {fileID: 2103768422531231264}
-  m_Layer: 11
+  m_Layer: 9
   m_Name: Cylinder (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
