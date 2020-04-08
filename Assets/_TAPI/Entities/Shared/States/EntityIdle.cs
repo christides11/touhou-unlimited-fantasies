@@ -13,9 +13,9 @@ namespace TAPI.Entities.Shared
                 return;
             }
             controller.ForcesManager.ApplyMovementFriction();
-            if(controller.LockonTarget != null)
+            if(controller.LockedOn)
             {
-                controller.VisualFaceLockonTarget(10);
+                controller.RotateVisual(controller.LockonForward, 10);
             }
         }
 

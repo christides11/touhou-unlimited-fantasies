@@ -18,8 +18,8 @@ namespace TAPI.Entities
         public EntityForcesManager ForcesManager { get { return entityForcesManager; } }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
         public GameObject LockonTarget { get; protected set; } = null;
+        public bool LockedOn { get; protected set; } = false;
         public Vector3 LockonForward { get; protected set; } = Vector3.forward;
-        public bool LockonMode { get; protected set; } = false;
         public bool IsGrounded { get; set; } = false;
         public bool IsFloating { get; set; } = false;
         public int Health { get; protected set; } = 0;
@@ -101,19 +101,41 @@ namespace TAPI.Entities
 
         private void HandleLockon()
         {
-            if (InputManager.GetButton(EntityInputs.Lockon).firstPress)
+            InputRecordButton lockonButton = InputManager.GetButton(EntityInputs.Lockon);
+
+            LockedOn = false;
+            if (!lockonButton.isDown)
+            {
+                LockonTarget = null;
+                return;
+            }
+            LockedOn = true;
+
+            if (lockonButton.firstPress)
             {
                 PickLockonTarget();
                 LockonForward = LockonTarget ? (LockonTarget.transform.position - transform.position).normalized 
                     : visual.transform.forward;
             }
 
-            bool lockonDown = InputManager.GetButton(EntityInputs.Lockon).isDown;
-            LockonMode = lockonDown;
+            // No target.
+            if(LockonTarget == null)
+            {
+                return;
+            }
+
+            // Target out of range.
+            if(Vector3.Distance(transform.position, LockonTarget.transform.position) > lockonRadius)
+            {
+                LockonTarget = null;
+                return;
+            }
 
             if (LockonTarget)
             {
-                LockonForward = (LockonTarget.transform.position - transform.position).normalized;
+                Vector3 dir = (LockonTarget.transform.position - transform.position);
+                dir.y = 0;
+                LockonForward = dir.normalized;
             }
         }
 
@@ -133,19 +155,24 @@ namespace TAPI.Entities
             }
 
             // Loop through all targets and find the one that matches the angle the best.
-            ILockonable currentProcessTarget = null;
             GameObject closestTarget = null;
-            float closestAngle = -Mathf.Infinity;
+            float closestAngle = -1.1f;
             float closestDistance = Mathf.Infinity;
             foreach(Collider c in list)
             {
-                if (c.gameObject == this)
+                // Ignore self.
+                if (c.gameObject == gameObject)
                 {
                     continue;
                 }
                 // Only objects with ILockonable can be locked on to.
-                if (c.TryGetComponent(out currentProcessTarget))
+                if (c.TryGetComponent(out ILockonable lockonComponent))
                 {
+                    // The target can not be locked on to right now.
+                    if (!lockonComponent.Lockonable)
+                    {
+                        continue;
+                    }
                     Vector3 targetDistance = (c.transform.position - transform.position);
                     targetDistance.y = 0;
                     float currAngle = Vector3.Dot(referenceDirection, targetDistance.normalized);
@@ -173,8 +200,13 @@ namespace TAPI.Entities
             if(closestTarget != null)
             {
                 LockonTarget = closestTarget;
-                Debug.Log($"Picked {LockonTarget.name}.");
             }
+        }
+
+        public virtual Vector3 GetMovementVector(int frame = 0)
+        {
+            Vector2 movement = InputManager.GetMovement(frame);
+            return GetMovementVector(movement.x, movement.y);
         }
 
         public virtual Vector3 GetMovementVector(float hozSpeed, float vertSpeed)
@@ -201,11 +233,6 @@ namespace TAPI.Entities
         {
             Vector3 newDirection = Vector3.RotateTowards(visual.transform.forward, direction, speed, 0.0f);
             visual.transform.rotation = Quaternion.LookRotation(newDirection);
-        }
-
-        public virtual void VisualFaceLockonTarget(float speed)
-        {
-            RotateVisual(LockonForward, speed);
         }
 
         public virtual void SetVisualRotation(Vector3 direction)

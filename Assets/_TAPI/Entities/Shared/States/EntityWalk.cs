@@ -26,7 +26,14 @@ namespace TAPI.Entities.Shared
                         * controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude;
                 }
 
-                controller.RotateVisual(translatedMovement, controller.definition.stats.walkRotationSpeed);
+                if (controller.LockedOn)
+                {
+                    controller.RotateVisual(controller.LockonForward, controller.definition.stats.walkRotationSpeed);
+                }
+                else
+                {
+                    controller.RotateVisual(translatedMovement, controller.definition.stats.walkRotationSpeed);
+                }
             }
         }
 

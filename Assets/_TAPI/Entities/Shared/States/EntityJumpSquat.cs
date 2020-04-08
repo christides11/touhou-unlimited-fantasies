@@ -10,6 +10,14 @@ namespace TAPI.Entities.Shared
         {
             base.OnStart();
             controller.ForcesManager.ApplyMovementFriction();
+            if (controller.LockedOn)
+            {
+                controller.SetVisualRotation(controller.LockonForward);
+            }
+            else
+            {   
+                controller.SetVisualRotation(controller.GetMovementVector());
+            }
         }
 
         public override void OnUpdate()
