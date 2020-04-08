@@ -27,8 +27,9 @@ namespace TAPI.Entities
 
         [Header("Physics")]
         public float wallCheckDistance = 0.7f;
-        [HideInInspector] public GameObject currentWall;
+        public GameObject currentWall;
         public float ceilingCheckDistance = 1.2f;
+        public RaycastHit wallRayHit;
 
         public void HandlePushForce(Collider other)
         {

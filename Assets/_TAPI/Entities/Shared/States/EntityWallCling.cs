@@ -14,7 +14,8 @@ namespace TAPI.Entities.Shared
             controller.PhysicsManager.ApplyGravity = false;
             controller.PhysicsManager.forceGravity.y *= controller.definition.stats.wallClingInitFrictionY;
             controller.PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingInitFrictionXZ);
-            controller.transform.position = controller.rayHit.point + (controller.rayHit.normal * 0.51f) + new Vector3(0, -1, 0);
+            controller.transform.position = controller.PhysicsManager.wallRayHit.point 
+                + (controller.PhysicsManager.wallRayHit.normal * 0.51f) + new Vector3(0, -1, 0);
         }
 
         public override void OnUpdate()

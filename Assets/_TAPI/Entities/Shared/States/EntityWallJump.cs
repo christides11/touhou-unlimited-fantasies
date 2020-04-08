@@ -6,8 +6,6 @@ namespace TAPI.Entities.Shared
 {
     public class EntityWallJump : EntityState
     {
-        public new static string StateName { get { return "WallJump"; } }
-
         public override void OnStart()
         {
             controller.IsGrounded = false;
@@ -16,7 +14,8 @@ namespace TAPI.Entities.Shared
             //Vector2 movement = controller.EntityInput.GetMovement(0).normalized;
             //Vector3 translatedMovement = controller.lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
             //translatedMovement.y = 0;
-            Vector3 translatedMovement = controller.rayHit.normal.normalized * controller.definition.stats.wallJumpHVelo;
+            Vector3 translatedMovement = controller.PhysicsManager.wallRayHit.normal.normalized 
+                * controller.definition.stats.wallJumpHVelo;
 
             controller.PhysicsManager.forceMovement = translatedMovement;
         }

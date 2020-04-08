@@ -41,11 +41,9 @@ namespace TAPI.Entities
         public TriggerDetector pushbox;
         #endregion
 
-        #region Variables
         [Header("Variables")]
         public LayerMask isGroundedMask;
         public LayerMask attackLayerMask;
-        public float groundedCheckRadius = 0.45f;
         public Vector3 groundCheckOffset;
         public Vector3 centerOffset;
 
@@ -54,9 +52,6 @@ namespace TAPI.Entities
         public float lockonFudging = 0.1f;
         public LayerMask lockonLayerMask;
         public LayerMask visibilityLayerMask;
-        #endregion
-
-        [HideInInspector] public RaycastHit rayHit;
 
         /// <summary>
         /// Initializes the entity with the references needed.
