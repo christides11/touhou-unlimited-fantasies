@@ -23,6 +23,7 @@ namespace TAPI.Entities
         public bool IsGrounded { get; set; } = false;
         public bool IsFloating { get; set; } = false;
         public int Health { get; protected set; } = 0;
+        public bool Lockonable { get; protected set; } = true;
 
         #region References
         [Header("References")]
@@ -57,6 +58,7 @@ namespace TAPI.Entities
 
         [Header("Lock On")]
         public float lockonRadius;
+        public float lockonFudging = 0.1f;
         public LayerMask lockonLayerMask;
         #endregion
 
@@ -102,17 +104,77 @@ namespace TAPI.Entities
             if (InputManager.GetButton(EntityInputs.Lockon).firstPress)
             {
                 PickLockonTarget();
-                LockonForward = visual.transform.forward;
+                LockonForward = LockonTarget ? (LockonTarget.transform.position - transform.position).normalized 
+                    : visual.transform.forward;
             }
 
             bool lockonDown = InputManager.GetButton(EntityInputs.Lockon).isDown;
             LockonMode = lockonDown;
+
+            if (LockonTarget)
+            {
+                LockonForward = (LockonTarget.transform.position - transform.position).normalized;
+            }
         }
 
         private void PickLockonTarget()
         {
             LockonTarget = null;
-            Physics2D.OverlapCircleAll(transform.position, lockonRadius, lockonLayerMask);
+            Collider[] list = Physics.OverlapSphere(transform.position, lockonRadius, lockonLayerMask);
+
+            // The direction of the lockon defaults to the forward of the camera.
+            Vector3 referenceDirection = GetMovementVector(0, 1);
+            // If the movement stick is pointing in a direction, then our lockon should
+            // be based on that angle instead.
+            Vector2 movementDir = InputManager.GetMovement(0);
+            if (movementDir.magnitude >= InputConstants.movementMagnitude)
+            {
+                referenceDirection = GetMovementVector(movementDir.x, movementDir.y);
+            }
+
+            // Loop through all targets and find the one that matches the angle the best.
+            ILockonable currentProcessTarget = null;
+            GameObject closestTarget = null;
+            float closestAngle = -Mathf.Infinity;
+            float closestDistance = Mathf.Infinity;
+            foreach(Collider c in list)
+            {
+                if (c.gameObject == this)
+                {
+                    continue;
+                }
+                // Only objects with ILockonable can be locked on to.
+                if (c.TryGetComponent(out currentProcessTarget))
+                {
+                    Vector3 targetDistance = (c.transform.position - transform.position);
+                    targetDistance.y = 0;
+                    float currAngle = Vector3.Dot(referenceDirection, targetDistance.normalized);
+                    bool withinFudging = Mathf.Abs(currAngle - closestAngle) <= lockonFudging;
+                    // Targets have similar positions, choose the closer one.
+                    if(withinFudging)
+                    {
+                        if(targetDistance.sqrMagnitude < closestDistance)
+                        {
+                            closestTarget = c.gameObject;
+                            closestAngle = currAngle;
+                            closestDistance = targetDistance.sqrMagnitude;
+                        }
+                    }
+                    // Target is closer to the angle than the last one, this is the new target.
+                    else if (currAngle > closestAngle)
+                    {
+                        closestTarget = c.gameObject;
+                        closestAngle = currAngle;
+                        closestDistance = targetDistance.sqrMagnitude;
+                    }
+                }
+            }
+
+            if(closestTarget != null)
+            {
+                LockonTarget = closestTarget;
+                Debug.Log($"Picked {LockonTarget.name}.");
+            }
         }
 
         public virtual Vector3 GetMovementVector(float hozSpeed, float vertSpeed)
@@ -137,16 +199,16 @@ namespace TAPI.Entities
 
         public virtual void RotateVisual(Vector3 direction, float speed)
         {
-            if (LockonMode)
-            {
-                return;
-            }
-
             Vector3 newDirection = Vector3.RotateTowards(visual.transform.forward, direction, speed, 0.0f);
             visual.transform.rotation = Quaternion.LookRotation(newDirection);
         }
 
-        public virtual void RotateVisual(Vector3 direction)
+        public virtual void VisualFaceLockonTarget(float speed)
+        {
+            RotateVisual(LockonForward, speed);
+        }
+
+        public virtual void SetVisualRotation(Vector3 direction)
         {
             visual.transform.rotation = Quaternion.LookRotation(direction);
         }

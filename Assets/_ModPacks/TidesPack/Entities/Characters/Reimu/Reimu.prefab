@@ -380,10 +380,11 @@ MonoBehaviour:
   groundedCheckRadius: 0.45
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   centerOffset: {x: 0, y: 0.5, z: 0}
-  lockonRadius: 0
+  lockonRadius: 40
+  lockonFudging: 0.1
   lockonLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 2560
   wasRunning: 0
   hoverMode: 0
   sideWallDistance: 0.7
@@ -440,6 +441,7 @@ MonoBehaviour:
   hitStun: 0
   hitStop: 0
   team: 0
+  chargeTimes: 
 --- !u!114 &5820165911642462714
 MonoBehaviour:
   m_ObjectHideFlags: 0

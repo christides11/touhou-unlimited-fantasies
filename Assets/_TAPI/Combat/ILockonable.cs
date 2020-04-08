@@ -6,6 +6,6 @@ namespace TAPI.Combat
 {
     public interface ILockonable
     {
-
+        bool Lockonable { get; }
     }
 }
