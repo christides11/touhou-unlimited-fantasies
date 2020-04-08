@@ -108,6 +108,9 @@ namespace TAPI.Entities
             CombatManager.CLateUpdate();
         }
 
+        /// <summary>
+        /// Handles finding and locking on to targets.
+        /// </summary>
         private void HandleLockon()
         {
             InputRecordButton lockonButton = InputManager.GetButton(EntityInputs.Lockon);
@@ -146,6 +149,9 @@ namespace TAPI.Entities
             LockonForward = dir.normalized;
         }
 
+        /// <summary>
+        /// Picks the best lockon target based on stick direction.
+        /// </summary>
         private void PickLockonTarget()
         {
             LockonTarget = null;
@@ -215,12 +221,25 @@ namespace TAPI.Entities
             }
         }
 
+        /// <summary>
+        /// Translates the movement vector based on the look transform's
+        /// forward.
+        /// </summary>
+        /// <param name="frame">The frame we want to check the movement input for.</param>
+        /// <returns>A direction vector based on the camera's forward.</returns>
         public virtual Vector3 GetMovementVector(int frame = 0)
         {
             Vector2 movement = InputManager.GetMovement(frame);
             return GetMovementVector(movement.x, movement.y);
         }
 
+        /// <summary>
+        /// Takes a vector of the wanted movement and translate it to the look
+        /// transform's forward.
+        /// </summary>
+        /// <param name="hozSpeed"></param>
+        /// <param name="vertSpeed"></param>
+        /// <returns>A direction vector based on the camera's forward.</returns>
         public virtual Vector3 GetMovementVector(float hozSpeed, float vertSpeed)
         {
             Vector3 forward = lookTransform.forward;
@@ -235,23 +254,41 @@ namespace TAPI.Entities
             return forward * vertSpeed + right * hozSpeed;
         }
 
+        /// <summary>
+        /// Transforms the given direction into one based on the visual's forward.
+        /// </summary>
+        /// <param name="dir">The direction vector.</param>
+        /// <returns>A direction vector based on the visual's forward.</returns>
         public virtual Vector3 GetVisualBasedDirection(Vector3 dir)
         {
             Vector3 vector = visualTransform.TransformDirection(dir);
             return vector;
         }
 
+        /// <summary>
+        /// Rotate the visual towards the given direction based on the speed given.
+        /// </summary>
+        /// <param name="direction">The direction to rotate towards.</param>
+        /// <param name="speed">The speed of the rotation.</param>
         public virtual void RotateVisual(Vector3 direction, float speed)
         {
             Vector3 newDirection = Vector3.RotateTowards(visual.transform.forward, direction, speed, 0.0f);
             visual.transform.rotation = Quaternion.LookRotation(newDirection);
         }
 
+        /// <summary>
+        /// Set the visual's rotation to the given direction.
+        /// </summary>
+        /// <param name="direction">The direction to set the rotation to.</param>
         public virtual void SetVisualRotation(Vector3 direction)
         {
             visual.transform.rotation = Quaternion.LookRotation(direction);
         }
 
+        /// <summary>
+        /// If the entity can currently air jump.
+        /// </summary>
+        /// <returns>True if the entity can air jump currently.</returns>
         public virtual bool CanAirJump()
         {
             if (InputManager.GetButton(EntityInputs.Jump).firstPress)
@@ -261,6 +298,10 @@ namespace TAPI.Entities
             return false;
         }
 
+        /// <summary>
+        // Tries to jump cancel if possible.
+        /// </summary>
+        /// <returns>True if the jump cancel was successful.</returns>
         public virtual bool JumpCancel()
         {
             if (InputManager.GetButton(EntityInputs.Jump).firstPress)
@@ -278,11 +319,19 @@ namespace TAPI.Entities
             return false;
         }
 
+        /// <summary>
+        /// Tries to dash if possible.
+        /// </summary>
+        /// <returns>True if the dash cancel was successful.</returns>
         public virtual bool DashCancel()
         {
             return false;
         }
 
+        /// <summary>
+        /// Tries to land cancel if possible.
+        /// </summary>
+        /// <returns>True if the land cancel was successful.</returns>
         public virtual bool LandCancel()
         {
             if (IsGrounded)
@@ -294,11 +343,18 @@ namespace TAPI.Entities
         }
 
         #region Manual Physics Checks
+        /// <summary>
+        /// Check if we are on the ground.
+        /// </summary>
         public virtual void GroundedCheck()
         {
             IsGrounded = cc.Motor.GroundingStatus.IsStableOnGround;
         }
 
+        /// <summary>
+        /// Check if there is something above us.
+        /// </summary>
+        /// <returns></returns>
         public virtual bool CeilingAbove()
         {
             bool hit = Physics.Raycast(transform.position + new Vector3(0, 0.1f, 0), 
@@ -310,6 +366,10 @@ namespace TAPI.Entities
             return false;
         }
 
+        /// <summary>
+        /// Check if there's a wall in the movement direction we're pointing.
+        /// </summary>
+        /// <returns>The RaycastHit result.</returns>
         public virtual RaycastHit DetectWall()
         {
             //Get stick direction.
