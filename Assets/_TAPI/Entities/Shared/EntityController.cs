@@ -222,8 +222,7 @@ namespace TAPI.Entities
         }
 
         /// <summary>
-        /// Translates the movement vector based on the look transform's
-        /// forward.
+        /// Translates the movement vector based on the look transform's forward.
         /// </summary>
         /// <param name="frame">The frame we want to check the movement input for.</param>
         /// <returns>A direction vector based on the camera's forward.</returns>
@@ -234,13 +233,12 @@ namespace TAPI.Entities
         }
 
         /// <summary>
-        /// Takes a vector of the wanted movement and translate it to the look
-        /// transform's forward.
+        /// Translates the given vector based on the look transform's forward.
         /// </summary>
-        /// <param name="hozSpeed"></param>
-        /// <param name="vertSpeed"></param>
+        /// <param name="horizontal">The horizontal axis of the vector.</param>
+        /// <param name="vertical">The vertical axis of the vector.</param>
         /// <returns>A direction vector based on the camera's forward.</returns>
-        public virtual Vector3 GetMovementVector(float hozSpeed, float vertSpeed)
+        public virtual Vector3 GetMovementVector(float horizontal, float vertical)
         {
             Vector3 forward = lookTransform.forward;
             Vector3 right = lookTransform.right;
@@ -251,7 +249,7 @@ namespace TAPI.Entities
             forward.Normalize();
             right.Normalize();
 
-            return forward * vertSpeed + right * hozSpeed;
+            return forward * vertical + right * horizontal;
         }
 
         /// <summary>
