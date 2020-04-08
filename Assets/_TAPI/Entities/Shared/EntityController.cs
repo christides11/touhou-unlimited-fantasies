@@ -15,7 +15,7 @@ namespace TAPI.Entities
         public EntityInput InputManager { get { return entityInput; } }
         public EntityStateManager StateManager { get { return entityStateManager; } }
         public EntityCombatManager CombatManager { get { return entityCombatManager; } }
-        public EntityForcesManager ForcesManager { get { return entityForcesManager; } }
+        public EntityPhysicsManager ForcesManager { get { return entityForcesManager; } }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
         public GameObject LockonTarget { get; protected set; } = null;
         public bool LockedOn { get; protected set; } = false;
@@ -30,7 +30,7 @@ namespace TAPI.Entities
         [SerializeField] protected EntityInput entityInput;
         [SerializeField] protected EntityStateManager entityStateManager;
         [SerializeField] protected EntityCombatManager entityCombatManager;
-        [SerializeField] protected EntityForcesManager entityForcesManager;
+        [SerializeField] protected EntityPhysicsManager entityForcesManager;
         [SerializeField] protected EntityAnimator entityAnimator;
         public EntityDefinition definition;
         public EntityCharacterController cc;

@@ -9,7 +9,7 @@ using System;
 
 namespace TAPI.Entities
 {
-    public class EntityForcesManager : MonoBehaviour
+    public class EntityPhysicsManager : MonoBehaviour
     {
         public bool ApplyGravity { get; set; } = true;
         public float GravityScale { get; set; } = 1.0f;
