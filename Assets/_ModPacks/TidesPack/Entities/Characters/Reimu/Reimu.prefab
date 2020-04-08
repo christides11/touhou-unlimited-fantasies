@@ -385,6 +385,9 @@ MonoBehaviour:
   lockonLayerMask:
     serializedVersion: 2
     m_Bits: 512
+  visibilityLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   wasRunning: 0
   hoverMode: 0
   sideWallDistance: 0.7

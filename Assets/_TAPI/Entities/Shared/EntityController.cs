@@ -60,6 +60,7 @@ namespace TAPI.Entities
         public float lockonRadius;
         public float lockonFudging = 0.1f;
         public LayerMask lockonLayerMask;
+        public LayerMask visibilityLayerMask;
         #endregion
 
         [HideInInspector] public RaycastHit rayHit;
@@ -114,8 +115,8 @@ namespace TAPI.Entities
             if (lockonButton.firstPress)
             {
                 PickLockonTarget();
-                LockonForward = LockonTarget ? (LockonTarget.transform.position - transform.position).normalized 
-                    : visual.transform.forward;
+                // No target but holding down lock on menas you lock the visuals rotation.
+                LockonForward = visual.transform.forward;
             }
 
             // No target.
@@ -131,12 +132,10 @@ namespace TAPI.Entities
                 return;
             }
 
-            if (LockonTarget)
-            {
-                Vector3 dir = (LockonTarget.transform.position - transform.position);
-                dir.y = 0;
-                LockonForward = dir.normalized;
-            }
+            // We have a target and they're in range, set our wanted forward direction.
+            Vector3 dir = (LockonTarget.transform.position - transform.position);
+            dir.y = 0;
+            LockonForward = dir.normalized;
         }
 
         private void PickLockonTarget()
@@ -174,6 +173,11 @@ namespace TAPI.Entities
                         continue;
                     }
                     Vector3 targetDistance = (c.transform.position - transform.position);
+                    // If we can't see the target, it can not be locked on to.
+                    if(!Physics.Raycast(transform.position, targetDistance.normalized, lockonRadius, visibilityLayerMask))
+                    {
+                        continue;
+                    }
                     targetDistance.y = 0;
                     float currAngle = Vector3.Dot(referenceDirection, targetDistance.normalized);
                     bool withinFudging = Mathf.Abs(currAngle - closestAngle) <= lockonFudging;
