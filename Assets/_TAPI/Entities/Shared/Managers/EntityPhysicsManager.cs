@@ -160,7 +160,7 @@ namespace TAPI.Entities
         public virtual bool CeilingAbove()
         {
             bool hit = Physics.Raycast(transform.position + new Vector3(0, 0.1f, 0),
-                Vector2.up, ceilingCheckDistance, controller.isGroundedMask);
+                Vector2.up, ceilingCheckDistance, controller.GroundedLayerMask);
             if (hit)
             {
                 return true;
@@ -183,7 +183,7 @@ namespace TAPI.Entities
             if (translatedMovement.magnitude > InputConstants.movementMagnitude)
             {
                 Physics.Raycast(transform.position + new Vector3(0, 1, 0),
-                    translatedMovement.normalized, out rayHit, wallCheckDistance, controller.isGroundedMask);
+                    translatedMovement.normalized, out rayHit, wallCheckDistance, controller.GroundedLayerMask);
             }
             return rayHit;
         }

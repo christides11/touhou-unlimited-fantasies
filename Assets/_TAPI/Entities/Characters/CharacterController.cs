@@ -66,14 +66,14 @@ namespace TAPI.Entities.Characters
             Vector3 right = Vector3.Cross(translatedMovement.normalized, Vector3.up.normalized);
             Vector3 left = -right;
 
-            if(Physics.Raycast(transform.position+centerOffset, right, out hit, sideWallDistance, isGroundedMask))
+            if(Physics.Raycast(transform.position+centerOffset, right, out hit, sideWallDistance, GroundedLayerMask))
             {
                 currentWallNormal = hit.normal;
                 wallSide = 1;
                 return true;
             }
 
-            if(Physics.Raycast(transform.position+centerOffset, left, out hit, sideWallDistance, isGroundedMask))
+            if(Physics.Raycast(transform.position+centerOffset, left, out hit, sideWallDistance, GroundedLayerMask))
             {
                 currentWallNormal = hit.normal;
                 wallSide = -1;

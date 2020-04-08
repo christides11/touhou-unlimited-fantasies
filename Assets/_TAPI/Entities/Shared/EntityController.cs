@@ -42,7 +42,7 @@ namespace TAPI.Entities
         #endregion
 
         [Header("Variables")]
-        public LayerMask isGroundedMask;
+        public LayerMask GroundedLayerMask;
         public LayerMask attackLayerMask;
         public Vector3 groundCheckOffset;
         public Vector3 centerOffset;
