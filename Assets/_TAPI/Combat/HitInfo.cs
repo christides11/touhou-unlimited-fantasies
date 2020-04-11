@@ -28,8 +28,8 @@ namespace TAPI.Combat
 
         public bool opponentResetXForce = true;
         public bool opponentResetYForce = true;
-        public HitForceType forceType;
-        public HitForceRelation forceRelation;
+        public HitForceType forceType = HitForceType.SET;
+        public HitForceRelation forceRelation = HitForceRelation.ATTACKER;
         public Vector3 opponentForceDir = Vector3.forward;
         public float opponentForceMagnitude = 1;
         public bool causesTumble;

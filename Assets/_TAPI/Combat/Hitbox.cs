@@ -24,12 +24,22 @@ namespace TAPI.Combat
         [SerializeField] protected GameObject boxVisual;
         [SerializeField] protected GameObject circleVisual;
 
+        /// <summary>
+        /// Deactivates the hitbox.
+        /// </summary>
         public virtual void Deactivate()
         {
             coll.enabled = false;
             activated = false;
         }
 
+        /// <summary>
+        /// Activate the hitbox.
+        /// </summary>
+        /// <param name="owner">The owner of this hitbox.</param>
+        /// <param name="directionOwner">The transform of the owner.</param>
+        /// <param name="hitInfo">The information used for hits.</param>
+        /// <param name="ignoreList">The hurtables to ignore.</param>
         public virtual void Activate(GameObject owner, Transform directionOwner, HitInfo hitInfo, List<IHurtable> ignoreList = null)
         {
             this.owner = owner;
@@ -40,6 +50,10 @@ namespace TAPI.Combat
             this.ignoreList = ignoreList;
         }
 
+        /// <summary>
+        /// Reactivates the hitbox, settings it's parameters back to their defaults.
+        /// </summary>
+        /// <param name="ignoreList"></param>
         public virtual void ReActivate(List<IHurtable> ignoreList = null)
         {
             this.ignoreList = ignoreList;
@@ -49,6 +63,11 @@ namespace TAPI.Combat
             hitHitboxes.Clear();
         }
 
+        /// <summary>
+        /// Initializes the hitbox as a rectangle type hitbox.
+        /// </summary>
+        /// <param name="size">The size of the hitbox.</param>
+        /// <param name="rotation">The rotation of the hitbox.</param>
         public virtual void InitRectangle(Vector3 size, Vector3 rotation)
         {
             transform.rotation = Quaternion.Euler(rotation);
@@ -67,6 +86,10 @@ namespace TAPI.Combat
             CheckHits();
         }
 
+        /// <summary>
+        /// Checks every hurtable and hitbox that we got and properly hurts/disables them.
+        /// This should be called every LateUpdate.
+        /// </summary>
         public virtual void CheckHits()
         {
             if (hitHurtables.Count > 0)
@@ -93,6 +116,11 @@ namespace TAPI.Combat
             hitHitboxes.Clear();
         }
 
+        /// <summary>
+        /// Called every tick for whatever object's are within this hitbox.
+        /// Gets all the hitboxes and checks if they should be hurt next LateUpdate.
+        /// </summary>
+        /// <param name="other">The collider in our hitbox.</param>
         protected virtual void OnTriggerStay(Collider other)
         {
             if (!activated)
