@@ -30,9 +30,14 @@ namespace TAPI.Combat
         public bool opponentResetYForce = true;
         public HitForceType forceType = HitForceType.SET;
         public HitForceRelation forceRelation = HitForceRelation.ATTACKER;
-        public Vector3 opponentForceDir = Vector3.forward;
-        public float opponentForceMagnitude = 1;
         public bool causesTumble;
+        public float opponentForceMagnitude = 1;
+        // Set ForceType.
+        public Vector3 opponentForceDir = Vector3.forward;
+        // Push/Pull ForceType.
+        public bool forceIncludeYForce = false;
+        public float opponentMaxMagnitude = 1;
+        public float opponentMinMagnitude = 1;
 
         public HitInfo()
         {
@@ -66,9 +71,13 @@ namespace TAPI.Combat
             opponentResetYForce = other.opponentResetYForce;
             forceType = other.forceType;
             forceRelation = other.forceRelation;
+            causesTumble = other.causesTumble;
+
             opponentForceDir = other.opponentForceDir;
             opponentForceMagnitude = other.opponentForceMagnitude;
-            causesTumble = other.causesTumble;
+            
+            forceIncludeYForce = other.forceIncludeYForce;
+            opponentMaxMagnitude = other.opponentMaxMagnitude;
         }
     }
 }

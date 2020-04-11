@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TAPI.Core;
 using UnityEngine;
 
 namespace TAPI.Entities.Shared
@@ -15,8 +16,12 @@ namespace TAPI.Entities.Shared
                 controller.SetVisualRotation(controller.LockonForward);
             }
             else
-            {   
-                controller.SetVisualRotation(controller.GetMovementVector());
+            {
+                Vector3 lookVector = controller.GetMovementVector();
+                if (lookVector.magnitude >= InputConstants.movementMagnitude)
+                {
+                    controller.SetVisualRotation(lookVector);
+                }
             }
         }
 

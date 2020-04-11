@@ -384,7 +384,7 @@ namespace TAPI.Entities
             return false;
         }
 
-        public virtual HurtReactions Hurt(Vector3 forward, Vector3 right, HitInfo hitInfo)
+        public virtual HurtReactions Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfo hitInfo)
         {
             if(hitInfo.groundOnly && !controller.IsGrounded
                 || hitInfo.airOnly && controller.IsGrounded)
@@ -397,18 +397,39 @@ namespace TAPI.Entities
 
             // Convert forces the attacker-based forward direction.
             controller.PhysicsManager.ApplyGravity = false;
-            Vector3 baseForce = hitInfo.opponentForceDir * hitInfo.opponentForceMagnitude;
-            Vector3 forces = (forward * baseForce.z + right * baseForce.x);
-            forces.y = baseForce.y;
-            if(forces.y > 0)
+            switch (hitInfo.forceType)
+            {
+                case HitForceType.SET:
+                    Vector3 baseForce = hitInfo.opponentForceDir * hitInfo.opponentForceMagnitude;
+                    Vector3 forces = (forward * baseForce.z + right * baseForce.x);
+                    forces.y = baseForce.y;
+                    controller.PhysicsManager.forceGravity.y = baseForce.y;
+                    forces.y = 0;
+                    controller.PhysicsManager.forceMovement = forces;
+                    break;
+                case HitForceType.PULL:
+                    Vector3 dir = transform.position - center;
+                    if (!hitInfo.forceIncludeYForce)
+                    {
+                        dir.y = 0;
+                    }
+                    Vector3 forceDir = Vector3.ClampMagnitude((dir) * hitInfo.opponentForceMagnitude, hitInfo.opponentMaxMagnitude);
+                    float yForce = forceDir.y;
+                    forceDir.y = 0;
+                    if (hitInfo.forceIncludeYForce)
+                    {
+                        controller.PhysicsManager.forceGravity.y = yForce;
+                    }
+                    controller.PhysicsManager.forceMovement = forceDir;
+                    break;
+            }
+
+            if (controller.PhysicsManager.forceGravity.y > 0)
             {
                 controller.IsGrounded = false;
             }
-            controller.PhysicsManager.forceGravity.y = baseForce.y;
-            forces.y = 0;
-            controller.PhysicsManager.forceMovement = forces;
 
-
+            // Change state to the correct one.
             if (controller.IsGrounded && hitInfo.groundBounces)
             {
                 controller.StateManager.ChangeState((int)EntityStates.GROUND_BOUNCE);

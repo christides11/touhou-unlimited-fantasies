@@ -16,7 +16,7 @@ namespace TAPI.Combat
         /// the hit's forces send this object in.</param>
         /// <param name="hitInfo">The information on the hit.</param>
         /// <returns></returns>
-        HurtReactions Hurt(Vector3 forward, Vector3 right, HitInfo hitInfo);
+        HurtReactions Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfo hitInfo);
         void Heal();
     }
 }

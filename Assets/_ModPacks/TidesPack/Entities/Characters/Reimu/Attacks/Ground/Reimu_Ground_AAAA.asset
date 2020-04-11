@@ -15,21 +15,22 @@ MonoBehaviour:
   attackName: AAAA
   description: 
   stateOverride: -1
-  length: 40
+  length: 37
   groundAble: 1
   airAble: 0
   heightRestriction: 0
   possibleGround: 0
   modifiesInertia: 1
   inertiaModifer: 0.8
-  carriesInertia: 1
+  carriesInertia: 0
   carriedInertia: 1
   chargeFrames: 04000000
   chargeLength: 24
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
-  jumpCancelFrames: []
+  jumpCancelFrames:
+  - {x: 10, y: 40}
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
@@ -63,14 +64,19 @@ MonoBehaviour:
       damageOnHit: 0
       damageOnBlock: 0
       hitKills: 1
-      attackerHitstop: 8
-      hitstop: 8
+      attackerHitstop: 6
+      hitstop: 6
       hitstun: 30
       opponentResetXForce: 1
       opponentResetYForce: 1
-      opponentForceDir: {x: 0, y: 0, z: 1}
-      opponentForceMagnitude: 30
+      forceType: 0
+      forceRelation: 0
       causesTumble: 1
+      opponentForceMagnitude: 30
+      opponentForceDir: {x: 0, y: 0, z: 1}
+      forceIncludeYForce: 0
+      opponentMaxMagnitude: 1
+      opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
   bulletGroups: []
   events:

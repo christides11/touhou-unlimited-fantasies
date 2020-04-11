@@ -437,16 +437,31 @@ namespace TAPI.Combat
             EditorGUILayout.LabelField("FORCES");
             currentGroup.hitInfo.opponentResetXForce = EditorGUILayout.Toggle("Reset X Force", currentGroup.hitInfo.opponentResetXForce);
             currentGroup.hitInfo.opponentResetYForce = EditorGUILayout.Toggle("Reset Y Force", currentGroup.hitInfo.opponentResetYForce);
+            currentGroup.hitInfo.forceRelation = (HitForceRelation)EditorGUILayout.EnumPopup("Force Relation", currentGroup.hitInfo.forceRelation);
             currentGroup.hitInfo.forceType = (HitForceType)EditorGUILayout.EnumPopup("Force Type", currentGroup.hitInfo.forceType);
-            if (currentGroup.hitInfo.forceType == HitForceType.SET)
+            switch (currentGroup.hitInfo.forceType)
             {
-                currentGroup.hitInfo.opponentForceDir = EditorGUILayout.Vector3Field("Force Direction", currentGroup.hitInfo.opponentForceDir);
-                if (GUILayout.Button("Normalize"))
-                {
-                    currentGroup.hitInfo.opponentForceDir.Normalize();
-                }
+                case HitForceType.SET:
+                    currentGroup.hitInfo.opponentForceDir = EditorGUILayout.Vector3Field("Force Direction", currentGroup.hitInfo.opponentForceDir);
+                    if (GUILayout.Button("Normalize"))
+                    {
+                        currentGroup.hitInfo.opponentForceDir.Normalize();
+                    }
+                    currentGroup.hitInfo.opponentForceMagnitude = EditorGUILayout.FloatField("Force Magnitude", currentGroup.hitInfo.opponentForceMagnitude);
+                    break;
+                case HitForceType.PUSH:
+                    currentGroup.hitInfo.forceIncludeYForce = EditorGUILayout.Toggle("Include Y Force", currentGroup.hitInfo.forceIncludeYForce);
+                    currentGroup.hitInfo.opponentForceMagnitude
+                        = EditorGUILayout.FloatField("Force Multiplier", currentGroup.hitInfo.opponentForceMagnitude);
+                    break;
+                case HitForceType.PULL:
+                    currentGroup.hitInfo.forceIncludeYForce = EditorGUILayout.Toggle("Include Y Force", currentGroup.hitInfo.forceIncludeYForce);
+                    currentGroup.hitInfo.opponentForceMagnitude 
+                        = EditorGUILayout.FloatField("Force Multiplier", currentGroup.hitInfo.opponentForceMagnitude);
+                    currentGroup.hitInfo.opponentMaxMagnitude
+                        = EditorGUILayout.FloatField("Max Magnitude", currentGroup.hitInfo.opponentMaxMagnitude);
+                    break;
             }
-            currentGroup.hitInfo.opponentForceMagnitude = EditorGUILayout.FloatField("Force Magnitude", currentGroup.hitInfo.opponentForceMagnitude);
 
             if (currentGroup.hitInfo.wallBounces)
             {

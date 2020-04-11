@@ -33,7 +33,7 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
                 return true;
             }
-            if (controller.InputManager.GetButton(EntityInputs.Dash).firstPress)
+            if (controller.InputManager.GetButton(EntityInputs.Dash, 0, true).firstPress)
             {
                 controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;

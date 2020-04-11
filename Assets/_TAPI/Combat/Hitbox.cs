@@ -99,13 +99,13 @@ namespace TAPI.Combat
                     IHurtable ih = hitHurtables[i].GetComponent<IHurtable>();
                     switch (hitInfo.forceRelation) {
                         case HitForceRelation.ATTACKER:
-                            ih.Hurt(directionOwner.forward, directionOwner.right, hitInfo);
+                            ih.Hurt(directionOwner.position, directionOwner.forward, directionOwner.right, hitInfo);
                             break;
                         case HitForceRelation.HITBOX:
-                            ih.Hurt(transform.forward, transform.right, hitInfo);
+                            ih.Hurt(transform.position, transform.forward, transform.right, hitInfo);
                             break;
                         case HitForceRelation.WORLD:
-                            ih.Hurt(Vector3.forward, Vector3.right, hitInfo);
+                            ih.Hurt(transform.position, Vector3.forward, Vector3.right, hitInfo);
                             break;
                     }
                     OnHurt?.Invoke(hitInfo);

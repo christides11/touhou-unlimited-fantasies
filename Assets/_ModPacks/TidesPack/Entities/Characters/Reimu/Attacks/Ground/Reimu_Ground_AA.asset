@@ -22,7 +22,7 @@ MonoBehaviour:
   possibleGround: 0
   modifiesInertia: 0
   inertiaModifer: 0
-  carriesInertia: 1
+  carriesInertia: 0
   carriedInertia: 1
   chargeFrames: 
   chargeLength: 0
@@ -43,8 +43,8 @@ MonoBehaviour:
     hitGroupType: 0
     hitboxes:
     - shape: 0
-      offset: {x: 0, y: 1, z: 1.5}
-      size: {x: 2.77, y: 4, z: 4}
+      offset: {x: 0, y: 1, z: 1}
+      size: {x: 3, y: 2, z: 4}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
     attachToEntity: 1
@@ -68,36 +68,39 @@ MonoBehaviour:
       hitstun: 40
       opponentResetXForce: 1
       opponentResetYForce: 1
-      forceType: 0
-      forceRelation: 0
-      opponentForceDir: {x: 0, y: 0, z: -1}
-      opponentForceMagnitude: 12
+      forceType: 2
+      forceRelation: 1
       causesTumble: 0
+      opponentForceMagnitude: -5
+      opponentForceDir: {x: 0, y: 0, z: -1}
+      forceIncludeYForce: 0
+      opponentMaxMagnitude: 12
+      opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
   bulletGroups: []
   events:
-  - nickname: Move Back
+  - nickname: Friction
     active: 1
     onHit: 0
-    startFrame: 3
-    endFrame: 7
+    startFrame: 6
+    endFrame: 30
+    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0.25
+      objectVars: []
+      curveVars: []
+  - nickname: Backwards
+    active: 1
+    onHit: 0
+    startFrame: 4
+    endFrame: 4
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
     variables:
       intVars: 
       floatVars:
       - 0
-      - -6
-      objectVars: []
-      curveVars: []
-  - nickname: Friction
-    active: 1
-    onHit: 0
-    startFrame: 7
-    endFrame: 40
-    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
-    variables:
-      intVars: 
-      floatVars:
-      - 0.1
+      - -4
       objectVars: []
       curveVars: []

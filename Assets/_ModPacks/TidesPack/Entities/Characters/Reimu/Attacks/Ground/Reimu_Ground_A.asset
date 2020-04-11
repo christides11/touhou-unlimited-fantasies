@@ -22,14 +22,15 @@ MonoBehaviour:
   possibleGround: 1
   modifiesInertia: 0
   inertiaModifer: 0
-  carriesInertia: 1
+  carriesInertia: 0
   carriedInertia: 1
   chargeFrames: 
   chargeLength: 0
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 8
-  jumpCancelFrames: []
+  jumpCancelFrames:
+  - {x: 9, y: 30}
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
@@ -39,7 +40,7 @@ MonoBehaviour:
   hitboxGroups:
   - ID: 0
     activeFramesStart: 5
-    activeFramesEnd: 12
+    activeFramesEnd: 8
     hitGroupType: 0
     hitboxes:
     - shape: 0
@@ -68,9 +69,14 @@ MonoBehaviour:
       hitstun: 40
       opponentResetXForce: 1
       opponentResetYForce: 1
-      opponentForceDir: {x: 0, y: 0, z: 1}
-      opponentForceMagnitude: 7
+      forceType: 0
+      forceRelation: 0
       causesTumble: 0
+      opponentForceMagnitude: 6
+      opponentForceDir: {x: 0, y: 0, z: 1}
+      forceIncludeYForce: 0
+      opponentMaxMagnitude: 1
+      opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
   bulletGroups: []
   events:
@@ -78,7 +84,7 @@ MonoBehaviour:
     active: 1
     onHit: 0
     startFrame: 0
-    endFrame: 6
+    endFrame: 3
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
     variables:
       intVars: 
@@ -90,91 +96,24 @@ MonoBehaviour:
     active: 1
     onHit: 0
     startFrame: 5
-    endFrame: 9
-    attackEvent: {fileID: 11400000, guid: cf47f3e28f703be43b010ee8e5260bce, type: 2}
+    endFrame: 5
+    attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
     variables:
-      intVars: 00000000
+      intVars: 
       floatVars:
       - 0
-      - 0
-      - 9
+      - 5
       objectVars: []
-      curveVars:
-      - serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1.0023346
-          inSlope: -0.030663738
-          outSlope: -0.030663738
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.0761548
-        - serializedVersion: 3
-          time: 1
-          value: 0.0023498535
-          inSlope: 1.1058649
-          outSlope: 1.1058649
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.047440708
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      - serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1.0023346
-          inSlope: -0.030663738
-          outSlope: -0.030663738
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.0761548
-        - serializedVersion: 3
-          time: 1
-          value: 0.0023498535
-          inSlope: 1.1058649
-          outSlope: 1.1058649
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.047440708
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      - serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0.028543271
-          outSlope: 0.028543271
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0.066167355
-        - serializedVersion: 3
-          time: 0.65538955
-          value: 0.43088284
-          inSlope: -2.8518245
-          outSlope: -2.8518245
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.09478478
-        - serializedVersion: 3
-          time: 1
-          value: 0.1
-          inSlope: 0.26890436
-          outSlope: 0.26890436
-          tangentMode: 0
-          weightedMode: 0
-          inWeight: 0.20325838
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
+      curveVars: []
+  - nickname: Friction
+    active: 1
+    onHit: 0
+    startFrame: 7
+    endFrame: 20
+    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0.4
+      objectVars: []
+      curveVars: []

@@ -7,6 +7,7 @@ namespace TAPI.Combat
     public enum HitForceType
     {
         SET = 0, // Force is set and based on a given forward direction
-        AWAY = 1 // Force is based on what direction the hit object is compared to the hitbox.
+        PUSH = 1, // Force pushes away from a given center. The farther from the center, the less the force.
+        PULL = 2 // Force pulls towards a given center. The farther from the center, the more the force.
     }
 }

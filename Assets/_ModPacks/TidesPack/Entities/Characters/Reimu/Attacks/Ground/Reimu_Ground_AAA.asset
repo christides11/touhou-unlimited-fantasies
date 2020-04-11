@@ -68,9 +68,14 @@ MonoBehaviour:
       hitstun: 10
       opponentResetXForce: 1
       opponentResetYForce: 1
-      opponentForceDir: {x: 0, y: 0, z: 1}
-      opponentForceMagnitude: 15
+      forceType: 0
+      forceRelation: 0
       causesTumble: 0
+      opponentForceMagnitude: 7
+      opponentForceDir: {x: 0, y: 0, z: 1}
+      forceIncludeYForce: 0
+      opponentMaxMagnitude: 1
+      opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
   - ID: 0
     activeFramesStart: 18
@@ -103,9 +108,14 @@ MonoBehaviour:
       hitstun: 30
       opponentResetXForce: 1
       opponentResetYForce: 1
-      opponentForceDir: {x: 0, y: 0, z: 1}
-      opponentForceMagnitude: 10
+      forceType: 0
+      forceRelation: 0
       causesTumble: 0
+      opponentForceMagnitude: 12
+      opponentForceDir: {x: 0, y: 0, z: 1}
+      forceIncludeYForce: 0
+      opponentMaxMagnitude: 1
+      opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
   bulletGroups: []
   events:
