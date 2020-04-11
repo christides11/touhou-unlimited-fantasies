@@ -94,10 +94,20 @@ namespace TAPI.Combat
         {
             if (hitHurtables.Count > 0)
             {
-                for(int i = 0; i < hitHurtables.Count; i++)
+                for (int i = 0; i < hitHurtables.Count; i++)
                 {
                     IHurtable ih = hitHurtables[i].GetComponent<IHurtable>();
-                    ih.Hurt(directionOwner.forward, directionOwner.right, hitInfo);
+                    switch (hitInfo.forceRelation) {
+                        case HitForceRelation.ATTACKER:
+                            ih.Hurt(directionOwner.forward, directionOwner.right, hitInfo);
+                            break;
+                        case HitForceRelation.HITBOX:
+                            ih.Hurt(transform.forward, transform.right, hitInfo);
+                            break;
+                        case HitForceRelation.WORLD:
+                            ih.Hurt(Vector3.forward, Vector3.right, hitInfo);
+                            break;
+                    }
                     OnHurt?.Invoke(hitInfo);
                     ignoreList.Add(ih);
                 }
