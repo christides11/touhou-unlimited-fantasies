@@ -446,7 +446,7 @@ namespace TAPI.Combat
                     currentGroup.hitInfo.opponentForceDir.Normalize();
                 }
             }
-            currentGroup.hitInfo.opponentForceMagnitude = EditorGUILayout.FloatField("Force Magnitude", currentGroup.hitInfo.opponentForceMagnitude);s
+            currentGroup.hitInfo.opponentForceMagnitude = EditorGUILayout.FloatField("Force Magnitude", currentGroup.hitInfo.opponentForceMagnitude);
 
             if (currentGroup.hitInfo.wallBounces)
             {
