@@ -437,12 +437,21 @@ namespace TAPI.Combat
             EditorGUILayout.LabelField("FORCES");
             currentGroup.hitInfo.opponentResetXForce = EditorGUILayout.Toggle("Reset X Force", currentGroup.hitInfo.opponentResetXForce);
             currentGroup.hitInfo.opponentResetYForce = EditorGUILayout.Toggle("Reset Y Force", currentGroup.hitInfo.opponentResetYForce);
-            currentGroup.hitInfo.opponentForceDir = EditorGUILayout.Vector3Field("Force Direction", currentGroup.hitInfo.opponentForceDir);
-            if (GUILayout.Button("Normalize"))
+            currentGroup.hitInfo.forceType = (HitForceType)EditorGUILayout.EnumPopup("Force Type", currentGroup.hitInfo.forceType);
+            if (currentGroup.hitInfo.forceType == HitForceType.SET)
             {
-                currentGroup.hitInfo.opponentForceDir.Normalize();
+                currentGroup.hitInfo.opponentForceDir = EditorGUILayout.Vector3Field("Force Direction", currentGroup.hitInfo.opponentForceDir);
+                if (GUILayout.Button("Normalize"))
+                {
+                    currentGroup.hitInfo.opponentForceDir.Normalize();
+                }
+                currentGroup.hitInfo.opponentForceMagnitude = EditorGUILayout.FloatField("Force Magnitude", currentGroup.hitInfo.opponentForceMagnitude);
             }
-            currentGroup.hitInfo.opponentForceMagnitude = EditorGUILayout.FloatField("Force Magnitude", currentGroup.hitInfo.opponentForceMagnitude);
+            else
+            {
+
+            }
+
             if (currentGroup.hitInfo.wallBounces)
             {
                 currentGroup.hitInfo.wallBounceForce = EditorGUILayout.FloatField("Wall Bounce Magnitude", currentGroup.hitInfo.wallBounceForce);

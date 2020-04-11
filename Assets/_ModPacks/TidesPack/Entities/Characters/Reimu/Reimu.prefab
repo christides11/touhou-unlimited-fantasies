@@ -359,7 +359,7 @@ MonoBehaviour:
   entityInput: {fileID: 268217326523756411}
   entityStateManager: {fileID: 5473496294964507337}
   entityCombatManager: {fileID: 359055167191230430}
-  entityForcesManager: {fileID: 5820165911642462714}
+  entityPhysicsManager: {fileID: 5820165911642462714}
   entityAnimator: {fileID: -1274951725818220127}
   definition: {fileID: 11400000, guid: db56f4faf80d8ab4c9a20f7577243ebc, type: 2}
   cc: {fileID: 6168304025253122080}
@@ -368,16 +368,12 @@ MonoBehaviour:
   lookTransform: {fileID: 0}
   visualTransform: {fileID: 524244244}
   pushbox: {fileID: 13461346698822138}
-  wallCheckDistance: 0.7
-  currentWall: {fileID: 0}
-  ceilingCheckDistance: 1.2
-  isGroundedMask:
+  GroundedLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 0
   attackLayerMask:
     serializedVersion: 2
     m_Bits: 0
-  groundedCheckRadius: 0.45
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   centerOffset: {x: 0, y: 0.5, z: 0}
   lockonRadius: 40
@@ -463,6 +459,9 @@ MonoBehaviour:
   forceDamage: {x: 0, y: 0, z: 0}
   forceInertia: {x: 0, y: 0, z: 0}
   forcePushbox: {x: 0, y: 0, z: 0}
+  wallCheckDistance: 0.7
+  currentWall: {fileID: 0}
+  ceilingCheckDistance: 1.2
 --- !u!114 &-1274951725818220127
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -126,7 +126,7 @@ MonoBehaviour:
   entityInput: {fileID: 2103768421288388339}
   entityStateManager: {fileID: 2103768421288388340}
   entityCombatManager: {fileID: 2103768421288388341}
-  entityForcesManager: {fileID: 2103768421288388338}
+  entityPhysicsManager: {fileID: 2103768421288388338}
   entityAnimator: {fileID: 0}
   definition: {fileID: 11400000, guid: 3cc2a1b261839584abdbdf23c1f87f78, type: 2}
   cc: {fileID: 2103768421288388342}
@@ -135,16 +135,12 @@ MonoBehaviour:
   lookTransform: {fileID: 2103768421664677928}
   visualTransform: {fileID: 2103768422030931851}
   pushbox: {fileID: 7085641176877330724}
-  wallCheckDistance: 0.7
-  currentWall: {fileID: 0}
-  ceilingCheckDistance: 1.2
-  isGroundedMask:
+  GroundedLayerMask:
     serializedVersion: 2
     m_Bits: 1024
   attackLayerMask:
     serializedVersion: 2
-    m_Bits: 0
-  groundedCheckRadius: 0.45
+    m_Bits: 512
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   centerOffset: {x: 0, y: 0.5, z: 0}
   lockonRadius: 20
@@ -152,6 +148,9 @@ MonoBehaviour:
   lockonLayerMask:
     serializedVersion: 2
     m_Bits: 512
+  visibilityLayerMask:
+    serializedVersion: 2
+    m_Bits: 1024
   wasRunning: 0
   hoverMode: 0
   sideWallDistance: 0.7
@@ -227,6 +226,9 @@ MonoBehaviour:
   forceDamage: {x: 0, y: 0, z: 0}
   forceInertia: {x: 0, y: 0, z: 0}
   forcePushbox: {x: 0, y: 0, z: 0}
+  wallCheckDistance: 0.7
+  currentWall: {fileID: 0}
+  ceilingCheckDistance: 1.2
 --- !u!1 &2103768421299372818
 GameObject:
   m_ObjectHideFlags: 0

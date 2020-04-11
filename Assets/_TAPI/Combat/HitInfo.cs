@@ -28,6 +28,8 @@ namespace TAPI.Combat
 
         public bool opponentResetXForce = true;
         public bool opponentResetYForce = true;
+        public HitForceType forceType;
+        public HitForceRelation forceRelation;
         public Vector3 opponentForceDir = Vector3.forward;
         public float opponentForceMagnitude = 1;
         public bool causesTumble;
@@ -62,6 +64,8 @@ namespace TAPI.Combat
 
             opponentResetXForce = other.opponentResetXForce;
             opponentResetYForce = other.opponentResetYForce;
+            forceType = other.forceType;
+            forceRelation = other.forceRelation;
             opponentForceDir = other.opponentForceDir;
             opponentForceMagnitude = other.opponentForceMagnitude;
             causesTumble = other.causesTumble;
