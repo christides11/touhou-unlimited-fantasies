@@ -44,6 +44,8 @@ namespace TAPI.Combat
         public List<HitboxGroup> hitboxGroups = new List<HitboxGroup>();
         #endregion
 
+        public List<AttackFaceLockonWindow> faceLockonTargetWindows = new List<AttackFaceLockonWindow>();
+
         public List<BulletGroup> bulletGroups = new List<BulletGroup>();
 
         public List<AttackEventDefinition> events = new List<AttackEventDefinition>();

@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TAPI.Combat;
+using TAPI.Core;
 using UnityEngine;
 
 namespace TAPI.Entities.Shared
@@ -11,6 +12,10 @@ namespace TAPI.Entities.Shared
 
         public override void OnStart()
         {
+            if (!controller.LockedOn)
+            {
+                controller.PickSoftlockTarget();
+            }
             AttackSO currentAttack = CombatManager.CurrentAttack.action;
             if(currentAttack.stateOverride > -1)
             {
@@ -35,6 +40,37 @@ namespace TAPI.Entities.Shared
             }
 
             AttackSO currentAttack = CombatManager.CurrentAttack.action;
+
+            for(int i = 0; i < currentAttack.faceLockonTargetWindows.Count; i++)
+            {
+                if(StateManager.CurrentStateFrame >= currentAttack.faceLockonTargetWindows[i].startFrame
+                    && StateManager.CurrentStateFrame <= currentAttack.faceLockonTargetWindows[i].endFrame)
+                {
+                    Vector3 mov = controller.InputManager.GetMovement(0);
+                    Vector3 forwardDir = controller.visualTransform.forward;
+                    // We're currently locked on to something.
+                    if (controller.LockedOn)
+                    {
+                        forwardDir = controller.LockonForward;
+                    }
+                    // Movement is neutral, so target the soft lockon target (if it exist).
+                    else if (mov.magnitude < InputConstants.movementMagnitude)
+                    {
+                        if (controller.LockonTarget)
+                        {
+                            forwardDir = (controller.LockonTarget.transform.position - controller.transform.position);
+                            forwardDir.y = 0;
+                            forwardDir.Normalize();
+                        }
+                    }
+                    // Movement is pointing in a direction, so face that direction.
+                    else
+                    {
+                        forwardDir = controller.GetMovementVector(mov.x, mov.y);
+                    }
+                    controller.RotateVisual(forwardDir, currentAttack.faceLockonTargetWindows[i].amount);
+                }
+            }
 
             for(int i = 0; i < currentAttack.hitboxGroups.Count; i++)
             {

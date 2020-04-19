@@ -95,6 +95,7 @@ namespace TAPI.Combat
         }
 
         bool chargeFramesDropdown;
+        bool followTargetDropdown;
         void GeneralMenu()
         {
             EditorGUI.BeginChangeCheck();
@@ -159,6 +160,37 @@ namespace TAPI.Combat
                 EditorGUI.indentLevel--;
             }
 
+            // Lockon Target Following
+            List<AttackFaceLockonWindow> followWindows = new List<AttackFaceLockonWindow>(attack.faceLockonTargetWindows);
+            EditorGUILayout.BeginHorizontal();
+            followTargetDropdown = EditorGUILayout.Foldout(followTargetDropdown, "Follow Target Windows", true);
+            if (GUILayout.Button("Add"))
+            {
+                followWindows.Add(new AttackFaceLockonWindow());
+            }
+            EditorGUILayout.EndHorizontal();
+            if (followTargetDropdown)
+            {
+                EditorGUI.indentLevel++;
+                for (int i = 0; i < followWindows.Count; i++)
+                {
+                    EditorGUILayout.BeginHorizontal();
+                    if (GUILayout.Button("X", GUILayout.Width(20)))
+                    {
+                        followWindows.RemoveAt(i);
+                        continue;
+                    }
+                    EditorGUILayout.LabelField($"{i}.");
+                    EditorGUILayout.EndHorizontal();
+                    followWindows[i].startFrame = EditorGUILayout.IntField("Start: ", followWindows[i].startFrame);
+                    followWindows[i].endFrame = EditorGUILayout.IntField("End: ", followWindows[i].endFrame);
+                    followWindows[i].amount = EditorGUILayout.FloatField("Amount: ", followWindows[i].amount);
+                    EditorGUILayout.Space();
+                }
+                EditorGUI.indentLevel--;
+            }
+
+
             if (EditorGUI.EndChangeCheck())
             {
                 Undo.RecordObject(attack, "Changed General Property.");
@@ -178,6 +210,7 @@ namespace TAPI.Combat
                 attack.carriedInertia = carriedInertia;
                 attack.chargeFrames = chargeFrames;
                 attack.chargeLength = chargeLength;
+                attack.faceLockonTargetWindows = followWindows;
                 GUI.changed = false;
             }
         }

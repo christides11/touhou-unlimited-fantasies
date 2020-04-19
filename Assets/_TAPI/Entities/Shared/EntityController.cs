@@ -48,6 +48,7 @@ namespace TAPI.Entities
         public Vector3 centerOffset;
 
         [Header("Lock On")]
+        public float softLockonRadius;
         public float lockonRadius;
         public float lockonFudging = 0.1f;
         public LayerMask lockonLayerMask;
@@ -106,7 +107,6 @@ namespace TAPI.Entities
             LockedOn = false;
             if (!lockonButton.isDown)
             {
-                LockonTarget = null;
                 return;
             }
             LockedOn = true;
@@ -135,6 +135,37 @@ namespace TAPI.Entities
             Vector3 dir = (LockonTarget.transform.position - transform.position);
             dir.y = 0;
             LockonForward = dir.normalized;
+        }
+
+        /// <summary>
+        /// Picks the best soft lockon target based on distance.
+        /// </summary>
+        public void PickSoftlockTarget()
+        {
+            if (LockedOn || InputManager.GetMovement(0).magnitude < InputConstants.movementMagnitude)
+            {
+                return;
+            }
+            LockonTarget = null;
+            Collider[] list = Physics.OverlapSphere(transform.position, softLockonRadius, lockonLayerMask);
+
+            float closestDistance = softLockonRadius;
+            foreach (Collider c in list)
+            {
+                // Ignore self.
+                if (c.gameObject == gameObject)
+                {
+                    continue;
+                }
+                // Only objects with ILockonable can be locked on to.
+                if (c.TryGetComponent(out ILockonable lockonComponent))
+                {
+                    if(Vector3.Distance(transform.position, c.transform.position) < closestDistance)
+                    {
+                        LockonTarget = c.gameObject;
+                    }
+                }
+            }
         }
 
         /// <summary>
@@ -176,7 +207,7 @@ namespace TAPI.Entities
                     }
                     Vector3 targetDistance = (c.transform.position - transform.position);
                     // If we can't see the target, it can not be locked on to.
-                    if(!Physics.Raycast(transform.position, targetDistance.normalized, lockonRadius, visibilityLayerMask))
+                    if(Physics.Raycast(transform.position, targetDistance.normalized, lockonRadius, visibilityLayerMask))
                     {
                         continue;
                     }

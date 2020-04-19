@@ -213,6 +213,9 @@ namespace TAPI.Entities
                         hbox.GetComponent<Hitbox>().InitRectangle(currentGroup.hitboxes[i].size,
                             controller.visual.transform.eulerAngles + currentGroup.hitboxes[i].rotation);
                         break;
+                    case ShapeType.Circle:
+                        hbox.GetComponent<Hitbox>().InitSphere(currentGroup.hitboxes[i].radius);
+                        break;
                 }
 
                 if (currentGroup.attachToEntity)

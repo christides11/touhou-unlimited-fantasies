@@ -376,6 +376,7 @@ MonoBehaviour:
     m_Bits: 0
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   centerOffset: {x: 0, y: 0.5, z: 0}
+  softLockonRadius: 10
   lockonRadius: 40
   lockonFudging: 0.1
   lockonLayerMask:

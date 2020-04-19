@@ -22,7 +22,7 @@ namespace TAPI.Combat
         public HitInfo hitInfo;
 
         [SerializeField] protected GameObject boxVisual;
-        [SerializeField] protected GameObject circleVisual;
+        [SerializeField] protected GameObject sphereVisual;
 
         /// <summary>
         /// Deactivates the hitbox.
@@ -79,6 +79,18 @@ namespace TAPI.Combat
 
             boxVisual.transform.localScale = size;
             boxVisual.SetActive(true);
+        }
+
+        public virtual void InitSphere(float radius)
+        {
+            SphereCollider sc = gameObject.AddComponent<SphereCollider>();
+            sc.isTrigger = true;
+            coll = sc;
+            sc.radius = radius;
+
+
+            sphereVisual.transform.localScale = Vector3.one * radius;
+            sphereVisual.SetActive(true);
         }
 
         public override void SimLateUpdate()

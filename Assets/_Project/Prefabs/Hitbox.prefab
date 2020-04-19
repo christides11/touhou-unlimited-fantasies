@@ -125,8 +125,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69713f947fc4d704d9864cd74c8469c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitHurtables: []
   hitHitboxes: []
   hitInfo:
+    airOnly: 0
+    groundOnly: 0
     continuousHit: 0
     spaceBetweenHits: 0
     breakArmor: 0
@@ -139,14 +142,21 @@ MonoBehaviour:
     damageOnHit: 0
     damageOnBlock: 0
     hitKills: 1
+    attackerHitstop: 0
     hitstop: 0
     hitstun: 0
     opponentResetXForce: 1
     opponentResetYForce: 1
-    opponentForceDir: {x: 0, y: 0, z: 1}
+    forceType: 0
+    forceRelation: 0
+    causesTumble: 0
     opponentForceMagnitude: 1
+    opponentForceDir: {x: 0, y: 0, z: 1}
+    forceIncludeYForce: 0
+    opponentMaxMagnitude: 1
+    opponentMinMagnitude: 1
   boxVisual: {fileID: 372141906028558252}
-  circleVisual: {fileID: 6216409204843601049}
+  sphereVisual: {fileID: 6216409204843601049}
 --- !u!54 &1511375867113998447
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -180,7 +190,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &922886247210615190
 Transform:
   m_ObjectHideFlags: 0

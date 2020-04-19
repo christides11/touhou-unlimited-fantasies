@@ -47,7 +47,7 @@ MonoBehaviour:
       offset: {x: 0, y: 1.25, z: 1.25}
       size: {x: 3.4, y: 1.25, z: 3.32}
       rotation: {x: 0, y: 0, z: 0}
-      radius: 0
+      radius: 5
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -78,6 +78,10 @@ MonoBehaviour:
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
+  faceLockonTargetWindows:
+  - startFrame: 0
+    endFrame: 0
+    amount: 0
   bulletGroups: []
   events:
   - nickname: start friction
@@ -102,7 +106,7 @@ MonoBehaviour:
       intVars: 
       floatVars:
       - 0
-      - 5
+      - 8
       objectVars: []
       curveVars: []
   - nickname: Friction
