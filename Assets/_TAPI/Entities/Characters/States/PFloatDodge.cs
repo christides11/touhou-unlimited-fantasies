@@ -16,7 +16,6 @@ namespace TAPI.Entities.Characters.States
             controller.PhysicsManager.forceGravity.y = controller.InputManager.GetFloatDir(0)
                 * Stats.floatDodgeVelo;
 
-            controller.PhysicsManager.ApplyGravity = false;
             Vector2 movement = controller.InputManager.GetMovement(0);
             Vector3 translatedMovement = Vector3.zero;
             if (movement.magnitude <= InputConstants.movementMagnitude)
@@ -89,7 +88,6 @@ namespace TAPI.Entities.Characters.States
         public override void OnInterrupted()
         {
             base.OnInterrupted();
-            controller.PhysicsManager.ApplyGravity = true;
         }
     }
 }

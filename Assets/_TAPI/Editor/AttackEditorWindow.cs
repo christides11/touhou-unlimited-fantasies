@@ -125,6 +125,7 @@ namespace TAPI.Combat
             {
                 wrapMode = (UnityEngine.WrapMode)EditorGUILayout.EnumPopup("Wrap Mode", attack.wrapMode);
             }
+            float gravityScale = EditorGUILayout.FloatField("Gravity Scale", attack.gravityScale);
 
             bool modifiesInertia = EditorGUILayout.Toggle("Modifies Inertia", attack.modifiesInertia);
             float inertiaModifier = attack.inertiaModifer;
@@ -211,6 +212,7 @@ namespace TAPI.Combat
                 attack.chargeFrames = chargeFrames;
                 attack.chargeLength = chargeLength;
                 attack.faceLockonTargetWindows = followWindows;
+                attack.gravityScale = gravityScale;
                 GUI.changed = false;
             }
         }

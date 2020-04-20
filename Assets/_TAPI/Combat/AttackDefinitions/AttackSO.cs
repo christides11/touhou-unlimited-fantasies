@@ -22,6 +22,7 @@ namespace TAPI.Combat
         public float carriedInertia = 1.0f;
         public List<int> chargeFrames = new List<int>();
         public int chargeLength;
+        public float gravityScale = 1.0f;
         #endregion
 
         #region Animation

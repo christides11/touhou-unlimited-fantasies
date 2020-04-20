@@ -11,7 +11,6 @@ namespace TAPI.Entities.Characters.States
         public override void OnStart()
         {
             base.OnStart();
-            controller.PhysicsManager.ApplyGravity = false;
             controller.PhysicsManager.forceGravity = Vector3.zero;
             Vector2 movement = controller.InputManager.GetMovement(0);
             if(movement.magnitude == 0)
@@ -68,12 +67,6 @@ namespace TAPI.Entities.Characters.States
                 return true;
             }
             return false;
-        }
-
-        public override void OnInterrupted()
-        {
-            base.OnInterrupted();
-            controller.PhysicsManager.ApplyGravity = true;
         }
 
         public override string GetName()

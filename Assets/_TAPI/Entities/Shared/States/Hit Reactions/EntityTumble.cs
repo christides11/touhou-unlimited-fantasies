@@ -9,7 +9,6 @@ namespace TAPI.Entities.Shared
         public override void OnStart()
         {
             base.OnStart();
-            ForcesManager.ApplyGravity = false;
         }
 
         public override void OnUpdate()
@@ -19,14 +18,14 @@ namespace TAPI.Entities.Shared
                 return;
             }
 
-            ForcesManager.ApplyMovementFriction(controller.definition.stats.hitstunFriction);
-            if (ForcesManager.forceGravity.y > 0.05f)
+            PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFriction);
+            if (PhysicsManager.forceGravity.y > 0.05f)
             {
-                ForcesManager.ApplyGravityFriction(controller.definition.stats.hitstunFriction);
+                PhysicsManager.ApplyGravityFriction(controller.definition.stats.hitstunFriction);
             }
             else
             {
-                ForcesManager.HandleGravity(controller.definition.stats.maxFallSpeed, controller.definition.stats.hitstunGravity);
+                PhysicsManager.HandleGravity(controller.definition.stats.maxFallSpeed, controller.definition.stats.hitstunGravity);
             }
         }
 
@@ -51,11 +50,6 @@ namespace TAPI.Entities.Shared
                 return true;
             }
             return false;
-        }
-
-        public override void OnInterrupted()
-        {
-            ForcesManager.ApplyGravity = true;
         }
 
         public override string GetName()

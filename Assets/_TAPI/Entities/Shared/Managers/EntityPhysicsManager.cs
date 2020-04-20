@@ -11,8 +11,7 @@ namespace TAPI.Entities
 {
     public class EntityPhysicsManager : MonoBehaviour
     {
-        public bool ApplyGravity { get; set; } = true;
-        public float GravityScale { get; set; } = 1.0f;
+        public float CurrentGravityScale { get; set; } = 1.0f;
         public float CurrentFallSpeed { get; set; } = 0;
 
         [SerializeField] protected EntityController controller;
@@ -30,21 +29,17 @@ namespace TAPI.Entities
         public float ceilingCheckDistance = 1.2f;
         public RaycastHit wallRayHit;
 
+        public virtual void Tick()
+        {
+            controller.cc.SetMovement(forceMovement+forcePushbox, forceDamage, forceGravity, forceInertia);
+            ApplyInertiaFriction();
+            forcePushbox = Vector3.zero;
+        }
+
         public void HandlePushForce(Collider other)
         {
             Vector3 dir = controller.pushbox.transform.position - other.transform.position;
             forcePushbox = dir * controller.GameManager.gameVars.pushboxForce;
-        }
-
-        public virtual void Tick()
-        {
-            if (ApplyGravity)
-            {
-                HandleGravity(controller.definition.stats.maxFallSpeed, controller.definition.stats.gravity);
-            }
-            controller.cc.SetMovement(forceMovement+forcePushbox, forceDamage, forceGravity, forceInertia);
-            ApplyInertiaFriction();
-            forcePushbox = Vector3.zero;
         }
 
         public virtual void SetForceDirect(Vector3 movement, Vector3 gravity)
@@ -57,11 +52,21 @@ namespace TAPI.Entities
             return forceMovement + forceGravity + forceDamage;
         }
 
-        public virtual void HandleGravity(float maxFallSpeed, float gravity)
+        public virtual void HandleGravity(float gravity)
+        {
+            HandleGravity(gravity, CurrentGravityScale);
+        }
+
+        public virtual void HandleGravity(float gravity, float gravityScale)
+        {
+            HandleGravity(controller.definition.stats.maxFallSpeed, gravity, gravityScale);
+        }
+
+        public virtual void HandleGravity(float maxFallSpeed, float gravity, float gravityScale)
         {
             if (forceGravity.y > -(maxFallSpeed))
             {
-                forceGravity.y -= gravity;
+                forceGravity.y -= gravity * gravityScale;
                 if (forceGravity.y < -(maxFallSpeed))
                 {
                     forceGravity.y = -maxFallSpeed;

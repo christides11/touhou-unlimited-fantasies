@@ -11,7 +11,6 @@ namespace TAPI.Entities.Shared
         public override void OnStart()
         {
             base.OnStart();
-            controller.PhysicsManager.ApplyGravity = false;
             controller.IsFloating = true;
         }
 
@@ -58,7 +57,6 @@ namespace TAPI.Entities.Shared
         public override void OnInterrupted()
         {
             base.OnInterrupted();
-            controller.PhysicsManager.ApplyGravity = true;
             controller.IsFloating = false;
         }
 

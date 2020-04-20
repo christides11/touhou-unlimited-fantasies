@@ -399,7 +399,6 @@ namespace TAPI.Entities
             hitStun = hitInfo.hitstun;
 
             // Convert forces the attacker-based forward direction.
-            controller.PhysicsManager.ApplyGravity = false;
             switch (hitInfo.forceType)
             {
                 case HitForceType.SET:

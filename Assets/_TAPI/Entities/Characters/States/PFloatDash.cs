@@ -13,7 +13,6 @@ namespace TAPI.Entities.Characters.States
         public override void OnStart()
         {
             base.OnStart();
-            controller.PhysicsManager.ApplyGravity = false;
         }
 
         public override void OnUpdate()

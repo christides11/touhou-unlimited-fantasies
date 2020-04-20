@@ -10,13 +10,8 @@ namespace TAPI.Entities.Shared
         {
             controller.IsGrounded = false;
             controller.PhysicsManager.forceGravity.y = controller.definition.stats.wallJumpYVelo;
-
-            //Vector2 movement = controller.EntityInput.GetMovement(0).normalized;
-            //Vector3 translatedMovement = controller.lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
-            //translatedMovement.y = 0;
             Vector3 translatedMovement = controller.PhysicsManager.wallRayHit.normal.normalized 
                 * controller.definition.stats.wallJumpHVelo;
-
             controller.PhysicsManager.forceMovement = translatedMovement;
         }
 
@@ -25,9 +20,9 @@ namespace TAPI.Entities.Shared
             if (!CheckInterrupt())
             {
                 EntityStats es = controller.definition.stats;
-                controller.PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
-
-                controller.StateManager.IncrementFrame();
+                PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
+                PhysicsManager.HandleGravity(es.gravity);
+                StateManager.IncrementFrame();
             }
         }
     }

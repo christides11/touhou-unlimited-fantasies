@@ -14,7 +14,7 @@ namespace TAPI.Entities.Shared
                 return;
             }
 
-            ForcesManager.ApplyMovementFriction(controller.definition.stats.hitstunFriction);
+            PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFriction);
         }
 
         public override bool CheckInterrupt()

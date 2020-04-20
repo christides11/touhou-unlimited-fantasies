@@ -11,7 +11,7 @@ namespace TAPI.Entities
         protected EntityCombatManager CombatManager { get { return controller.CombatManager; } }
         protected EntityStateManager StateManager { get { return controller.StateManager; } }
         protected EntityInput InputManager { get { return controller.InputManager; } }
-        protected EntityPhysicsManager ForcesManager { get { return controller.PhysicsManager; } }
+        protected EntityPhysicsManager PhysicsManager { get { return controller.PhysicsManager; } }
 
         public override void OnStart()
         {

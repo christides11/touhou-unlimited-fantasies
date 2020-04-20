@@ -22,12 +22,12 @@ namespace TAPI.Entities.Shared
                 StateManager.ChangeState(currentAttack.stateOverride);
                 return;
             }
-            controller.PhysicsManager.ApplyGravity = false;
+            //controller.PhysicsManager.GravityScale = currentAttack.gravityScale;
             if (currentAttack)
             {
                 if (currentAttack.modifiesInertia)
                 {
-                    ForcesManager.forceInertia *= currentAttack.inertiaModifer;
+                    PhysicsManager.forceInertia *= currentAttack.inertiaModifer;
                 }
             }
         }
@@ -131,12 +131,11 @@ namespace TAPI.Entities.Shared
             {
                 if (currentAttack.carriesInertia)
                 {
-                    ForcesManager.forceInertia += (ForcesManager.forceMovement + ForcesManager.forceGravity)
+                    PhysicsManager.forceInertia += (PhysicsManager.forceMovement + PhysicsManager.forceGravity)
                         * currentAttack.carriedInertia;
                 }
             }
-            ForcesManager.forceMovement = Vector3.zero;
-            controller.PhysicsManager.ApplyGravity = true;
+            PhysicsManager.forceMovement = Vector3.zero;
         }
 
         private void HandleBulletGroup(int index, BulletGroup bulletGroup)
