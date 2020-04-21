@@ -52,17 +52,17 @@ namespace TAPI.Entities
             return forceMovement + forceGravity + forceDamage;
         }
 
-        public virtual void HandleGravity(float gravity)
+        public virtual void HandleGravity(float gravity, float decelerationFactor = 0.97f)
         {
-            HandleGravity(gravity, CurrentGravityScale);
+            HandleGravity(gravity, CurrentGravityScale, decelerationFactor);
         }
 
-        public virtual void HandleGravity(float gravity, float gravityScale)
+        public virtual void HandleGravity(float gravity, float gravityScale, float decelerationFactor = 0.97f)
         {
-            HandleGravity(controller.definition.stats.maxFallSpeed, gravity, gravityScale);
+            HandleGravity(controller.definition.stats.maxFallSpeed, gravity, gravityScale, decelerationFactor);
         }
 
-        public virtual void HandleGravity(float maxFallSpeed, float gravity, float gravityScale)
+        public virtual void HandleGravity(float maxFallSpeed, float gravity, float gravityScale, float decelerationFactor = 0.97f)
         {
             if (forceGravity.y > -(maxFallSpeed))
             {
@@ -74,7 +74,7 @@ namespace TAPI.Entities
             }
             else if (forceGravity.y < -(maxFallSpeed))
             {
-                forceGravity.y *= 0.97f;
+                forceGravity.y *= decelerationFactor;
             }
         }
 

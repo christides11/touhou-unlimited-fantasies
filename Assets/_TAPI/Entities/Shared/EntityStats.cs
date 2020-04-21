@@ -61,7 +61,8 @@ namespace TAPI.Entities.Shared
 
         [Header("Other")]
         public float hitstunGravity; //Gravity while in hitstun.
-        public float hitstunFriction;
+        public float hitstunMaxFallSpeed;
+        public float hitstunFrictionXZ;
         public float inertiaFriction;
         public float weight = 1;
     }

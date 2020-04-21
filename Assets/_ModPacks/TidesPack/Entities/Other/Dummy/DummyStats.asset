@@ -34,7 +34,7 @@ MonoBehaviour:
   airAcceleration: 0
   airDeceleration: 0
   maxAirSpeed: 0
-  gravity: 0.5
+  gravity: 0.45
   maxFallSpeed: 15
   wallClingInitFrictionY: 0
   wallClingInitFrictionXZ: 0
@@ -50,6 +50,8 @@ MonoBehaviour:
   floatBaseAccel: 0
   floatAcceleration: 0
   floatRotationSpeed: 0
-  hitstunGravity: 0.3
-  hitstunFriction: 0.3
+  hitstunGravity: 0.07
+  hitstunMaxFallSpeed: 15
+  hitstunFrictionXZ: 0.9
+  inertiaFriction: 0
   weight: 1

@@ -18,15 +18,9 @@ namespace TAPI.Entities.Shared
                 return;
             }
 
-            PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFriction);
-            if (PhysicsManager.forceGravity.y > 0.05f)
-            {
-                PhysicsManager.ApplyGravityFriction(controller.definition.stats.hitstunFriction);
-            }
-            else
-            {
-                PhysicsManager.HandleGravity(controller.definition.stats.maxFallSpeed, controller.definition.stats.hitstunGravity);
-            }
+            PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFrictionXZ);
+            PhysicsManager.HandleGravity(controller.definition.stats.hitstunMaxFallSpeed, 
+                controller.definition.stats.hitstunGravity, 1.0f);
         }
 
         public override bool CheckInterrupt()
