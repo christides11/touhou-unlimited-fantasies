@@ -2,7 +2,10 @@
 using System.Collections.Generic;
 using TAPI.Entities;
 using TAPI.Entities.Shared;
+using UnityEditor;
+#if UNITY_EDITOR
 using UnityEngine;
+#endif
 
 namespace TAPI.Combat
 {
@@ -18,5 +21,12 @@ namespace TAPI.Combat
         {
 
         }
+
+#if UNITY_EDITOR
+        public virtual void DrawEventVariables()
+        {
+            EditorGUILayout.LabelField("Test.");
+        }
+#endif
     }
 }
