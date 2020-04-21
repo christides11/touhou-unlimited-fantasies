@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using TAPI.Entities;
 using TAPI.Entities.Shared;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace TAPI.Combat.Events
 {
@@ -23,7 +26,7 @@ namespace TAPI.Combat.Events
             }
             if (yForce)
             {
-                f.y = variables.floatVars[0];
+                f.y = variables.floatVars[2];
             }
 
             f = controller.GetVisualBasedDirection(f);
@@ -38,5 +41,26 @@ namespace TAPI.Combat.Events
                 controller.PhysicsManager.forceMovement = f;
             }
         }
+
+#if UNITY_EDITOR
+        public override void DrawEventVariables(AttackEventDefinition eventDefinition)
+        {
+            if (eventDefinition.variables.floatVars == null
+                || eventDefinition.variables.floatVars.Count != 3)
+            {
+                eventDefinition.variables.floatVars = new List<float>(3);
+                eventDefinition.variables.floatVars.Add(0);
+                eventDefinition.variables.floatVars.Add(0);
+                eventDefinition.variables.floatVars.Add(0);
+            }
+
+            eventDefinition.variables.floatVars[0] = EditorGUILayout.FloatField("X Force",
+                eventDefinition.variables.floatVars[0]);
+            eventDefinition.variables.floatVars[2] = EditorGUILayout.FloatField("Y Force",
+                eventDefinition.variables.floatVars[2]);
+            eventDefinition.variables.floatVars[1] = EditorGUILayout.FloatField("Z Force",
+                eventDefinition.variables.floatVars[1]);
+        }
+#endif
     }
 }

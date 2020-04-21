@@ -3,6 +3,10 @@ using System.Collections.Generic;
 using TAPI.Entities;
 using TAPI.Entities.Shared;
 using UnityEngine;
+using TAPI.Core;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace TAPI.Combat.Events
 {
@@ -63,5 +67,60 @@ namespace TAPI.Combat.Events
                 }
             }
         }
+
+#if UNITY_EDITOR
+        public override void DrawEventVariables(AttackEventDefinition eventDefinition)
+        {
+            if (eventDefinition.variables.floatVars == null
+                || eventDefinition.variables.floatVars.Count != 3)
+            {
+                eventDefinition.variables.floatVars = new List<float>(3);
+                eventDefinition.variables.floatVars.Add(0);
+                eventDefinition.variables.floatVars.Add(0);
+                eventDefinition.variables.floatVars.Add(0);
+            }
+            if (eventDefinition.variables.curveVars == null
+                || eventDefinition.variables.curveVars.Count != 3)
+            {
+                eventDefinition.variables.curveVars = new List<AnimationCurve>(3);
+                eventDefinition.variables.curveVars.Add(new AnimationCurve());
+                eventDefinition.variables.curveVars.Add(new AnimationCurve());
+                eventDefinition.variables.curveVars.Add(new AnimationCurve());
+            }
+            if(eventDefinition.variables.intVars == null
+                || eventDefinition.variables.intVars.Count != 1)
+            {
+                eventDefinition.variables.intVars = new List<int>(1);
+                eventDefinition.variables.intVars.Add(0);
+            }
+
+            ForceType ft = (ForceType)eventDefinition.variables.intVars[0];
+            ft = (ForceType)EditorGUILayout.EnumPopup("Force Mode", 
+                (ForceType)eventDefinition.variables.intVars[0]);
+            eventDefinition.variables.intVars[0] = (int)ft;
+
+            if (xForce)
+            {
+                eventDefinition.variables.floatVars[0] = EditorGUILayout.FloatField("X Curve Multiplier",
+                    eventDefinition.variables.floatVars[0]);
+                eventDefinition.variables.curveVars[0] = EditorGUILayout.CurveField("X Curve",
+                    eventDefinition.variables.curveVars[0]);
+            }
+            if (yForce)
+            {
+                eventDefinition.variables.floatVars[1] = EditorGUILayout.FloatField("Y Curve Multiplier",
+                    eventDefinition.variables.floatVars[1]);
+                eventDefinition.variables.curveVars[1] = EditorGUILayout.CurveField("Y Curve",
+                    eventDefinition.variables.curveVars[1]);
+            }
+            if (zForce)
+            {
+                eventDefinition.variables.floatVars[2] = EditorGUILayout.FloatField("Z Curve Multiplier",
+                    eventDefinition.variables.floatVars[2]);
+                eventDefinition.variables.curveVars[2] = EditorGUILayout.CurveField("Z Curve",
+                    eventDefinition.variables.curveVars[2]);
+            }
+        }
+#endif
     }
 }

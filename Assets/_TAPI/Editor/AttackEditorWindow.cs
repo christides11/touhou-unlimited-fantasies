@@ -608,6 +608,10 @@ namespace TAPI.Combat
         bool eventVariablesFoldout;
         private void ShowEventInfo(int eventSelected)
         {
+            if(attack.events[eventSelected] == null)
+            {
+                return;
+            }
             attack.events[eventSelected].nickname = EditorGUILayout.TextField("Name", attack.events[eventSelected].nickname);
             attack.events[eventSelected].active = EditorGUILayout.Toggle("Active", attack.events[eventSelected].active);
             attack.events[eventSelected].onHit = EditorGUILayout.Toggle("On Hit?", attack.events[eventSelected].onHit);
@@ -620,88 +624,9 @@ namespace TAPI.Combat
                 EditorGUI.indentLevel++;
                 if (attack.events[eventSelected].attackEvent)
                 {
-                    DrawEventVariables(attack.events[eventSelected]);
+                    attack.events[eventSelected].attackEvent.DrawEventVariables(attack.events[eventSelected]);
                 }
                 EditorGUI.indentLevel--;
-            }
-
-        }
-
-        private void DrawEventVariables(AttackEventDefinition currentEvent)
-        {
-            if(currentEvent.attackEvent.intVariables.Count > 0)
-            {
-                CheckList<int>(ref currentEvent.variables.intVars, currentEvent.attackEvent.intVariables.Count, 0);
-                for (int i = 0; i < currentEvent.variables.intVars.Count; i++)
-                {
-                    currentEvent.variables.intVars[i] = EditorGUILayout.IntField(currentEvent.attackEvent.intVariables[i],
-                        currentEvent.variables.intVars[i]);
-                }
-            }
-            else
-            {
-                currentEvent.variables.intVars = null;
-            }
-
-            if(currentEvent.attackEvent.floatVariables.Count > 0)
-            {
-                CheckList<float>(ref currentEvent.variables.floatVars, currentEvent.attackEvent.floatVariables.Count, 0);
-                for(int i = 0; i < currentEvent.variables.floatVars.Count; i++)
-                {
-                    currentEvent.variables.floatVars[i] = EditorGUILayout.FloatField(currentEvent.attackEvent.floatVariables[i],
-                        currentEvent.variables.floatVars[i]);
-                }
-            }
-            else
-            {
-                currentEvent.variables.floatVars = null;
-            }
-
-            if (currentEvent.attackEvent.objectVariables.Count > 0)
-            {
-                CheckList<UnityEngine.Object>(ref currentEvent.variables.objectVars, currentEvent.attackEvent.objectVariables.Count, 
-                    null);
-                for (int i = 0; i < currentEvent.variables.objectVars.Count; i++)
-                {
-                    currentEvent.variables.objectVars[i] = EditorGUILayout.ObjectField(currentEvent.attackEvent.objectVariables[i],
-                        currentEvent.variables.objectVars[i],
-                        typeof(UnityEngine.Object), false);
-                }
-            }
-            else
-            {
-                currentEvent.variables.objectVars = null;
-            }
-
-            if (currentEvent.attackEvent.curveVariables.Count > 0)
-            {
-                CheckList<AnimationCurve>(ref currentEvent.variables.curveVars, currentEvent.attackEvent.curveVariables.Count,
-                    new AnimationCurve());
-                for (int i = 0; i < currentEvent.variables.curveVars.Count; i++)
-                {
-                    currentEvent.variables.curveVars[i] = EditorGUILayout.CurveField(currentEvent.attackEvent.curveVariables[i],
-                        currentEvent.variables.curveVars[i]);
-                }
-            }
-            else
-            {
-                currentEvent.variables.curveVars = null;
-            }
-        }
-
-        private void CheckList<T>(ref List<T> l, int count, T defaultVariable)
-        {
-            if (l == null)
-            {
-                l = new List<T>();
-            }
-            while (l.Count < count)
-            {
-                l.Add(defaultVariable);
-            }
-            while (l.Count > count)
-            {
-                l.RemoveAt(l.Count-1);
             }
         }
     }

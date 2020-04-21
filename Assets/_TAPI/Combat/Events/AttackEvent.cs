@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using TAPI.Entities;
 using TAPI.Entities.Shared;
-using UnityEditor;
-#if UNITY_EDITOR
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
 #endif
 
 namespace TAPI.Combat
@@ -23,9 +23,8 @@ namespace TAPI.Combat
         }
 
 #if UNITY_EDITOR
-        public virtual void DrawEventVariables()
+        public virtual void DrawEventVariables(AttackEventDefinition eventDefinition)
         {
-            EditorGUILayout.LabelField("Test.");
         }
 #endif
     }
