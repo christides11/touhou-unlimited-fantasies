@@ -22,7 +22,6 @@ namespace TAPI.Entities.Shared
                 StateManager.ChangeState(currentAttack.stateOverride);
                 return;
             }
-            //controller.PhysicsManager.GravityScale = currentAttack.gravityScale;
             if (currentAttack)
             {
                 if (currentAttack.modifiesInertia)
@@ -129,6 +128,7 @@ namespace TAPI.Entities.Shared
             AttackSO currentAttack = CombatManager.CurrentAttack.action;
             if (currentAttack)
             {
+                PhysicsManager.CurrentGravityScale += currentAttack.gravityScaleAdded;
                 if (currentAttack.carriesInertia)
                 {
                     PhysicsManager.forceInertia += (PhysicsManager.forceMovement + PhysicsManager.forceGravity)

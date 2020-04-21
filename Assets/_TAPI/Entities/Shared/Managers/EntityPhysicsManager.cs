@@ -110,6 +110,12 @@ namespace TAPI.Entities
             forceGravity.y = ApplyFriction(forceGravity.y, friction);
         }
 
+        /// <summary>
+        /// Applies friction on the given value based on the traction given.
+        /// </summary>
+        /// <param name="value">The value to apply traction to.</param>
+        /// <param name="traction">The traction to apply.</param>
+        /// <returns>The new value with the traction applied.</returns>
         protected virtual float ApplyFriction(float value, float traction)
         {
             if (value > 0)
@@ -131,7 +137,15 @@ namespace TAPI.Entities
             return value;
         }
 
-        public virtual void ApplyMovement(float accel, float max, float decel, float rotSpeed)
+        /// <summary>
+        /// Create a force based on the parameters given and
+        /// adds it to our movement force.
+        /// </summary>
+        /// <param name="accel">How fast the entity accelerates in the movement direction.</param>
+        /// <param name="max">The max magnitude of our movement force.</param>
+        /// <param name="decel">How much the entity decelerates when moving faster than the max magnitude.
+        /// 1.0 = doesn't decelerate, 0.0 = force set to 0.</param>
+        public virtual void ApplyMovement(float accel, float max, float decel)
         {
             Vector2 movement = controller.InputManager.GetMovement(0);
             if (movement.magnitude >= InputConstants.movementMagnitude)

@@ -25,8 +25,9 @@ namespace TAPI.Entities.Shared
             if (!CheckInterrupt())
             {
                 EntityStats es = controller.definition.stats;
-                PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration, es.airRotationSpeed);
+                PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration);
                 PhysicsManager.HandleGravity(es.gravity);
+                controller.RotateVisual(controller.GetMovementVector(0), es.airRotationSpeed);
             }
         }
 
