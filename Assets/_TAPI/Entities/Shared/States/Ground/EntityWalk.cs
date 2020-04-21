@@ -6,6 +6,11 @@ namespace TAPI.Entities.Shared
 {
     public class EntityWalk : EntityState
     {
+        public override void OnStart()
+        {
+            base.OnStart();
+            controller.ResetAirActions();
+        }
         public override void OnUpdate()
         {
             if (!CheckInterrupt())

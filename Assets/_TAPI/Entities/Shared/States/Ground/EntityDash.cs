@@ -14,8 +14,8 @@ namespace TAPI.Entities.Shared
             translatedMovement *= controller.definition.stats.dashSpeed;
 
             controller.PhysicsManager.forceMovement = translatedMovement;
-
             controller.RotateVisual(translatedMovement, 100);
+            controller.ResetAirActions();
         }
 
         public override void OnUpdate()

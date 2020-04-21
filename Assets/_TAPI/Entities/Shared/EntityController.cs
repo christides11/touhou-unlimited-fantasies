@@ -358,5 +358,10 @@ namespace TAPI.Entities
             }
             return false;
         }
+
+        public virtual void ResetAirActions()
+        {
+            PhysicsManager.CurrentGravityScale = 1.0f;
+        }
     }
 }
