@@ -26,6 +26,7 @@ MonoBehaviour:
   carriedInertia: 1
   chargeFrames: 04000000
   chargeLength: 24
+  gravityScaleAdded: 0
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
@@ -78,16 +79,6 @@ MonoBehaviour:
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
+  faceLockonTargetWindows: []
   bulletGroups: []
-  events:
-  - nickname: event
-    active: 0
-    onHit: 0
-    startFrame: 6
-    endFrame: 6
-    attackEvent: {fileID: 0}
-    variables:
-      intVars: 
-      floatVars: []
-      objectVars: []
-      curveVars: []
+  events: []

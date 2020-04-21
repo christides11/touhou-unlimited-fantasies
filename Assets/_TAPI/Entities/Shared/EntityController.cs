@@ -259,6 +259,10 @@ namespace TAPI.Entities
         /// <returns>A direction vector based on the camera's forward.</returns>
         public virtual Vector3 GetMovementVector(float horizontal, float vertical)
         {
+            if(lookTransform == null)
+            {
+                return Vector3.forward;
+            }
             Vector3 forward = lookTransform.forward;
             Vector3 right = lookTransform.right;
 

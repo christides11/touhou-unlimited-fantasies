@@ -26,6 +26,7 @@ MonoBehaviour:
   carriedInertia: 0.8
   chargeFrames: 02000000
   chargeLength: -1
+  gravityScaleAdded: 0
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 8
@@ -194,6 +195,7 @@ MonoBehaviour:
       intVars: 
       floatVars:
       - 0
-      - 8
+      - 5
+      - 0
       objectVars: []
       curveVars: []
