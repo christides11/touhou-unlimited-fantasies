@@ -64,13 +64,13 @@ namespace TAPI.Entities
             }
         }
 
-        public bool CheckForAction()
+        public bool CheckForAction(bool ignoreCurrentAttack = false)
         {
-            if (CheckForSpecial())
+            if (CheckForSpecial(ignoreCurrentAttack))
             {
                 return true;
             }
-            if (CheckForAttack())
+            if (CheckForAttack(ignoreCurrentAttack))
             {
                 chargeTimes.Clear();
                 for(int i = 0; i < currentAttack.action.chargeFrames.Count; i++)
@@ -82,7 +82,7 @@ namespace TAPI.Entities
             return false;
         }
 
-        private bool CheckForSpecial()
+        private bool CheckForSpecial(bool ignoreCurrentAttack = false)
         {
             if(currentAttack == null)
             {
@@ -109,10 +109,10 @@ namespace TAPI.Entities
             return false;
         }
 
-        private bool CheckForAttack()
+        private bool CheckForAttack(bool ignoreCurrentAttack = false)
         {
             // If we're not in any attack.
-            if(currentAttack == null)
+            if(currentAttack == null || ignoreCurrentAttack)
             {
                 WasFloating = false;
                 if (controller.IsFloating)

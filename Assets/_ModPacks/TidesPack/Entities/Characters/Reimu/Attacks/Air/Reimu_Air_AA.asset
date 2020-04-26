@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8a0a49550c9d7b49a42585c0affb04c, type: 3}
-  m_Name: Reimu_Air_A
+  m_Name: Reimu_Air_AA
   m_EditorClassIdentifier: 
-  attackName: Air A
+  attackName: Air AA
   description: 
   stateOverride: -1
-  length: 40
+  length: 120
   groundAble: 0
   airAble: 1
   heightRestriction: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
     active: 1
     onHit: 0
     startFrame: 13
-    endFrame: 40
+    endFrame: 60
     attackEvent: {fileID: 11400000, guid: 497e270a3fbb60f40a1da2727a61f70d, type: 2}
     variables:
       intVars: 

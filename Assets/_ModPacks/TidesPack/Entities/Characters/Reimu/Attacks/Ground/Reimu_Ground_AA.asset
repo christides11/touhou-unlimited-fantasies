@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Ground Attack AA
   description: 
   stateOverride: -1
-  length: 30
+  length: 50
   groundAble: 1
   airAble: 0
   heightRestriction: 0
@@ -30,22 +30,25 @@ MonoBehaviour:
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
-  jumpCancelFrames: []
+  jumpCancelFrames:
+  - {x: 10, y: 100}
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
   attackCancelFrames: []
-  bulletCancelFrames: []
-  specialCancelFrames: []
+  bulletCancelFrames:
+  - {x: 10, y: 100}
+  specialCancelFrames:
+  - {x: 10, y: 100}
   hitboxGroups:
   - ID: 0
-    activeFramesStart: 5
-    activeFramesEnd: 8
+    activeFramesStart: 6
+    activeFramesEnd: 9
     hitGroupType: 0
     hitboxes:
     - shape: 0
-      offset: {x: 0, y: 1, z: 1}
-      size: {x: 3, y: 2, z: 4}
+      offset: {x: 0, y: 1, z: 1.5}
+      size: {x: 3, y: 3, z: 4}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
     attachToEntity: 1
@@ -72,10 +75,10 @@ MonoBehaviour:
       forceType: 2
       forceRelation: 1
       causesTumble: 0
-      opponentForceMagnitude: -5
+      opponentForceMagnitude: -8
       opponentForceDir: {x: 0, y: 0, z: -1}
       forceIncludeYForce: 0
-      opponentMaxMagnitude: 12
+      opponentMaxMagnitude: 16
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
   faceLockonTargetWindows:

@@ -81,19 +81,16 @@ namespace TAPI.Entities.Shared
                 HandleBulletGroup(i, currentAttack.bulletGroups[i]);
             }
 
-            if (CheckDashCancelWindows(currentAttack))
+            if (CheckDashCancelWindows(currentAttack)
+                || CheckJumpCancelWindows(currentAttack)
+                || CheckLandCancelWindows(currentAttack))
             {
                 CombatManager.Reset();
                 return;
             }
-            if (CheckJumpCancelWindows(currentAttack))
+
+            if (CheckAttackCancelWindows(currentAttack))
             {
-                CombatManager.Reset();
-                return;
-            }
-            if (CheckLandCancelWindows(currentAttack))
-            {
-                CombatManager.Reset();
                 return;
             }
 
@@ -236,6 +233,23 @@ namespace TAPI.Entities.Shared
                 {
                     if (controller.DashCancel())
                     {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        protected virtual bool CheckAttackCancelWindows(AttackSO currentAttack)
+        {
+            for (int i = 0; i < currentAttack.attackCancelFrames.Count; i++)
+            {
+                if (StateManager.CurrentStateFrame >= currentAttack.attackCancelFrames[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.attackCancelFrames[i].y)
+                {
+                    if (CombatManager.CheckForAction(true))
+                    {
+                        StateManager.ChangeState((int)EntityStates.ATTACK);
                         return true;
                     }
                 }

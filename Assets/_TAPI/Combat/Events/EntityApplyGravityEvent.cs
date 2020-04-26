@@ -26,12 +26,14 @@ namespace TAPI.Combat.Events
                 gravity = variables.curveVars[0].Evaluate(percent)
                     * variables.floatVars[0];
             }
+
             float gravityScale = controller.PhysicsManager.CurrentGravityScale;
             if (!useEntityGravityScale)
             {
                 gravityScale = variables.curveVars[1].Evaluate(percent)
                     * variables.floatVars[1];
             }
+
             float maxFallSpeed = controller.definition.stats.maxFallSpeed;
             if (!useEntityMaxFallSpeed)
             {

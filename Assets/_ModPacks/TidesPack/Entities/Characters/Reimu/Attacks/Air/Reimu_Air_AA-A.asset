@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b8a0a49550c9d7b49a42585c0affb04c, type: 3}
-  m_Name: Reimu_Air_A
+  m_Name: Reimu_Air_AA-A
   m_EditorClassIdentifier: 
-  attackName: Air A
+  attackName: Air AA*A
   description: 
   stateOverride: -1
   length: 40
@@ -39,15 +39,15 @@ MonoBehaviour:
   specialCancelFrames: []
   hitboxGroups:
   - ID: 0
-    activeFramesStart: 5
-    activeFramesEnd: 8
+    activeFramesStart: 3
+    activeFramesEnd: 10
     hitGroupType: 0
     hitboxes:
-    - shape: 0
+    - shape: 1
       offset: {x: 0, y: 1, z: 1}
-      size: {x: 2, y: 2, z: 2}
+      size: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
-      radius: 0
+      radius: 0.5
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -66,14 +66,14 @@ MonoBehaviour:
       hitKills: 1
       attackerHitstop: 4
       hitstop: 4
-      hitstun: 15
+      hitstun: 30
       opponentResetXForce: 1
       opponentResetYForce: 1
       forceType: 0
       forceRelation: 0
       causesTumble: 0
-      opponentForceMagnitude: 10
-      opponentForceDir: {x: 0, y: 1, z: 0}
+      opponentForceMagnitude: 6
+      opponentForceDir: {x: 0, y: 0.6, z: 0.4}
       forceIncludeYForce: 0
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
@@ -81,80 +81,57 @@ MonoBehaviour:
   faceLockonTargetWindows: []
   bulletGroups: []
   events:
-  - nickname: Gravity Friction
+  - nickname: Upwards Force
     active: 1
     onHit: 0
-    startFrame: 0
-    endFrame: 7
+    startFrame: 3
+    endFrame: 3
+    attackEvent: {fileID: 11400000, guid: 17d1add44f914be4b82c9dc6190d0a60, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0
+      - 0
+      - 12
+      objectVars: []
+      curveVars: []
+  - nickname: Forward Force
+    active: 1
+    onHit: 0
+    startFrame: 1
+    endFrame: 1
+    attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0
+      - 9
+      - 0
+      objectVars: []
+      curveVars: []
+  - nickname: Downward Force
+    active: 1
+    onHit: 0
+    startFrame: 12
+    endFrame: 15
+    attackEvent: {fileID: 11400000, guid: 17d1add44f914be4b82c9dc6190d0a60, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0
+      - 0
+      - -15
+      objectVars: []
+      curveVars: []
+  - nickname: Up Friction
+    active: 1
+    onHit: 0
+    startFrame: 6
+    endFrame: 11
     attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 2
+      - 0.7
       objectVars: []
       curveVars: []
-  - nickname: Gravity
-    active: 1
-    onHit: 0
-    startFrame: 13
-    endFrame: 40
-    attackEvent: {fileID: 11400000, guid: 497e270a3fbb60f40a1da2727a61f70d, type: 2}
-    variables:
-      intVars: 
-      floatVars:
-      - 0.3
-      - 0
-      - 6
-      objectVars: []
-      curveVars:
-      - serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      - serializedVersion: 2
-        m_Curve: []
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4
-      - serializedVersion: 2
-        m_Curve:
-        - serializedVersion: 3
-          time: 0
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        - serializedVersion: 3
-          time: 1
-          value: 1
-          inSlope: 0
-          outSlope: 0
-          tangentMode: 34
-          weightedMode: 0
-          inWeight: 0
-          outWeight: 0
-        m_PreInfinity: 2
-        m_PostInfinity: 2
-        m_RotationOrder: 4

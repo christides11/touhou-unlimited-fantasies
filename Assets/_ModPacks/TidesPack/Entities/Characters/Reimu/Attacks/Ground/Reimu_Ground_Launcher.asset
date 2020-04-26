@@ -30,13 +30,17 @@ MonoBehaviour:
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 8
-  jumpCancelFrames: []
+  jumpCancelFrames:
+  - {x: 7, y: 100}
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
-  attackCancelFrames: []
-  bulletCancelFrames: []
-  specialCancelFrames: []
+  attackCancelFrames:
+  - {x: 7, y: 40}
+  bulletCancelFrames:
+  - {x: 7, y: 100}
+  specialCancelFrames:
+  - {x: 7, y: 100}
   hitboxGroups:
   - ID: 0
     activeFramesStart: 3

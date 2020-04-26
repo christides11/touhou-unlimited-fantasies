@@ -4,10 +4,9 @@ using UnityEngine;
 
 namespace TAPI.Combat
 {
-    public enum HitboxGroupType
+    public enum HurtboxState
     {
-        HIT = 0,
-        GRAB = 1,
-        DETECT = 2
+        DEFAULT = 0,
+        INVINCIBLE = 1 // Can not be hit.
     }
 }

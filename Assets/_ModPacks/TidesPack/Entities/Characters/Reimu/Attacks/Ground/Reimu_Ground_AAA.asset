@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: AAA
   description: 
   stateOverride: -1
-  length: 34
+  length: 40
   groundAble: 1
   airAble: 0
   heightRestriction: 0
@@ -30,24 +30,32 @@ MonoBehaviour:
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
-  jumpCancelFrames: []
+  jumpCancelFrames:
+  - {x: 10, y: 100}
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
   attackCancelFrames: []
-  bulletCancelFrames: []
-  specialCancelFrames: []
+  bulletCancelFrames:
+  - {x: 10, y: 100}
+  specialCancelFrames:
+  - {x: 10, y: 100}
   hitboxGroups:
   - ID: 0
     activeFramesStart: 5
     activeFramesEnd: 9
     hitGroupType: 0
     hitboxes:
-    - shape: 0
+    - shape: 1
       offset: {x: 0, y: 1, z: 1}
       size: {x: 4, y: 2, z: 4}
       rotation: {x: 0, y: 0, z: 0}
-      radius: 0
+      radius: 2
+    - shape: 1
+      offset: {x: 0, y: 1, z: 2}
+      size: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      radius: 2
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -83,11 +91,16 @@ MonoBehaviour:
     activeFramesEnd: 22
     hitGroupType: 0
     hitboxes:
-    - shape: 0
+    - shape: 1
       offset: {x: 0, y: 1, z: 1}
       size: {x: 4, y: 1, z: 4}
       rotation: {x: 0, y: 0, z: 0}
-      radius: 0
+      radius: 2
+    - shape: 1
+      offset: {x: 0, y: 1, z: 1}
+      size: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0}
+      radius: 2
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -125,20 +138,20 @@ MonoBehaviour:
     active: 1
     onHit: 0
     startFrame: 5
-    endFrame: 24
+    endFrame: 30
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
     variables:
       intVars: 
       floatVars:
       - 0
-      - 5
+      - 7
       - 0
       objectVars: []
       curveVars: []
   - nickname: Friction (END)
     active: 1
     onHit: 0
-    startFrame: 24
+    startFrame: 31
     endFrame: 40
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
     variables:

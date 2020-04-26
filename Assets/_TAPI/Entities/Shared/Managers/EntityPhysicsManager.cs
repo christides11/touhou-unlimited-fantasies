@@ -52,6 +52,13 @@ namespace TAPI.Entities
             return forceMovement + forceGravity + forceDamage;
         }
 
+        public virtual void HandleGravity(float decelerationFactor = 0.97f)
+        {
+            HandleGravity(controller.definition.stats.maxFallSpeed, 
+                controller.definition.stats.gravity,
+                CurrentGravityScale, decelerationFactor);
+        }
+
         public virtual void HandleGravity(float gravity, float decelerationFactor = 0.97f)
         {
             HandleGravity(gravity, CurrentGravityScale, decelerationFactor);

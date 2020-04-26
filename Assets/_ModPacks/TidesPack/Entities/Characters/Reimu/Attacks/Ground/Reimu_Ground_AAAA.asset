@@ -20,9 +20,9 @@ MonoBehaviour:
   airAble: 0
   heightRestriction: 0
   possibleGround: 0
-  modifiesInertia: 1
-  inertiaModifer: 0.8
-  carriesInertia: 0
+  modifiesInertia: 0
+  inertiaModifer: 1
+  carriesInertia: 1
   carriedInertia: 1
   chargeFrames: 04000000
   chargeLength: 24
@@ -31,22 +31,24 @@ MonoBehaviour:
   animationAir: {fileID: 0}
   wrapMode: 0
   jumpCancelFrames:
-  - {x: 10, y: 40}
+  - {x: 13, y: 100}
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
   attackCancelFrames: []
-  bulletCancelFrames: []
-  specialCancelFrames: []
+  bulletCancelFrames:
+  - {x: 13, y: 100}
+  specialCancelFrames:
+  - {x: 13, y: 100}
   hitboxGroups:
   - ID: 0
-    activeFramesStart: 6
-    activeFramesEnd: 9
+    activeFramesStart: 7
+    activeFramesEnd: 12
     hitGroupType: 0
     hitboxes:
     - shape: 0
       offset: {x: 0, y: 1, z: 1.5}
-      size: {x: 2, y: 2, z: 2}
+      size: {x: 3, y: 2.5, z: 3.5}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
     attachToEntity: 1
@@ -67,7 +69,7 @@ MonoBehaviour:
       hitKills: 1
       attackerHitstop: 6
       hitstop: 6
-      hitstun: 30
+      hitstun: 45
       opponentResetXForce: 1
       opponentResetYForce: 1
       forceType: 0

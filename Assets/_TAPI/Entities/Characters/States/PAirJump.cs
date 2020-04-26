@@ -10,6 +10,11 @@ namespace TAPI.Entities.Characters.States
     {
         public override bool CheckInterrupt()
         {
+            if (controller.CombatManager.CheckForAction())
+            {
+                controller.StateManager.ChangeState((int)EntityStates.ATTACK);
+                return true;
+            }
             if (controller.CanAirJump())
             {
                 controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
