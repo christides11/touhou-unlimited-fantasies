@@ -124,6 +124,14 @@ MonoBehaviour:
     callback:
       m_PersistentCalls:
         m_Calls: []
+  - eventID: 0
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
+  - eventID: 9
+    callback:
+      m_PersistentCalls:
+        m_Calls: []
 --- !u!114 &6349086637352913428
 MonoBehaviour:
   m_ObjectHideFlags: 0

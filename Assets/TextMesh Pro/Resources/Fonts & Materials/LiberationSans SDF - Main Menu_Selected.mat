@@ -9,7 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: LiberationSans SDF - Main Menu_Selected
   m_Shader: {fileID: 4800000, guid: 68e6db2ebdc24f95958faec2be5558d6, type: 3}
-  m_ShaderKeywords: OUTLINE_ON
+  m_ShaderKeywords: GLOW_ON OUTLINE_ON
   m_LightmapFlags: 5
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
@@ -52,28 +52,28 @@ Material:
     - _ColorMask: 15
     - _Diffuse: 0.5
     - _DiffusePower: 1
-    - _FaceDilate: 0.3
+    - _FaceDilate: 0.2
     - _FaceShininess: 0
     - _FaceUVSpeedX: 0
     - _FaceUVSpeedY: 0
-    - _GlowInner: 0.044
-    - _GlowOffset: 1
+    - _GlowInner: 0.666
+    - _GlowOffset: -0.21
     - _GlowOuter: 1
-    - _GlowPower: 0.326
+    - _GlowPower: 0.532
     - _GradientScale: 10
     - _LightAngle: 3.1416
     - _MaskSoftnessX: 0
     - _MaskSoftnessY: 0
     - _OutlineShininess: 0
-    - _OutlineSoftness: 0.578
+    - _OutlineSoftness: 0
     - _OutlineUVSpeedX: 0
     - _OutlineUVSpeedY: 0
-    - _OutlineWidth: 0.229
+    - _OutlineWidth: 0.276
     - _PerspectiveFilter: 0.894
     - _Reflectivity: 10
-    - _ScaleRatioA: 0.69524914
-    - _ScaleRatioB: 0.23062499
-    - _ScaleRatioC: 0.42123285
+    - _ScaleRatioA: 0.9
+    - _ScaleRatioB: 0.55125
+    - _ScaleRatioC: 0.2631265
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -87,8 +87,8 @@ Material:
     - _TextureHeight: 1024
     - _TextureWidth: 1024
     - _UnderlayDilate: 1
-    - _UnderlayOffsetX: 0
-    - _UnderlayOffsetY: 0
+    - _UnderlayOffsetX: -1
+    - _UnderlayOffsetY: -1
     - _UnderlaySoftness: 0.095
     - _VertexOffsetX: 0
     - _VertexOffsetY: 0
@@ -99,11 +99,11 @@ Material:
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EnvMatrixRotation: {r: 0, g: 0, b: 0, a: 0}
     - _FaceColor: {r: 0.95, g: 0.95, b: 0.95, a: 1}
-    - _GlowColor: {r: 0.09433961, g: 0.09433961, b: 0.09433961, a: 0.9490196}
+    - _GlowColor: {r: 0.6698113, g: 0.6698113, b: 0.6698113, a: 0.16470589}
     - _MaskCoord: {r: 0, g: 0, b: 32767, a: 32767}
     - _OutlineColor: {r: 0.040611114, g: 0.040611114, b: 0.043, a: 1}
     - _ReflectFaceColor: {r: 0, g: 0, b: 0, a: 1}
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
-    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.9019608}
+    - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.29803923}

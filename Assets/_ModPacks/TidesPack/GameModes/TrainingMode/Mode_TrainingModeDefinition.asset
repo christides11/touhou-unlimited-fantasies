@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Mode_TrainingModeDefinition
   m_EditorClassIdentifier: 
   gameModeName: Training Mode
-  gameModeDescription: 
+  gameModeDescription: Practice your skills with a variety of training focused options.
   gameModeHandler: {fileID: 6343466744715108841, guid: 6827537a8e422b044bee1012e3da3e84,
     type: 3}
+  selectable: 1
   characterSelect: 1

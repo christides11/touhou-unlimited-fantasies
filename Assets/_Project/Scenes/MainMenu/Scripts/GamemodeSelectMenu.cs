@@ -7,6 +7,9 @@ using TAPI.GameMode;
 using UnityEngine.EventSystems;
 using TAPI.Entities.Shared;
 using System;
+using TAPI.Inputs;
+using TMPro;
+using UnityEngine.UI;
 
 namespace Touhou.Menus.MainMenu
 {
@@ -16,15 +19,18 @@ namespace Touhou.Menus.MainMenu
         public Transform contentHolder;
 
         [Header("Menus")]
+        public GameObject mainMenu;
         public CharacterSelectMenu characterSelectMenu;
         public StageSelectMenu stageSelectMenu;
 
+        [Header("Gamemode")]
+        public TextMeshProUGUI gamemodeName;
+        public Image gamemodeImage;
+        public TextMeshProUGUI gamemodeDescription;
+
         private void OnEnable()
         {
-            foreach(Transform t in contentHolder)
-            {
-                Destroy(t.gameObject);
-            }
+            Cleanup();
 
             GameManager gm = GameManager.current;
 
@@ -42,11 +48,48 @@ namespace Touhou.Menus.MainMenu
                 GamemodeContentItem item = Instantiate(contentItemPrefab.gameObject, contentHolder, false)
                     .GetComponent<GamemodeContentItem>();
                 item.gamemodeName.text = gamemodeDefinition.gameModeName;
-                item.GetComponent<EventTrigger>().AddOnSubmitListeners((data) => { GamemodeSelected(gamemodeReference); });
+                item.GetComponent<EventTrigger>().AddOnSelectedListeners((data) => { GamemodeSelected(gamemodeReference); });
+                item.GetComponent<EventTrigger>().AddOnSubmitListeners((data) => { GamemodeSubmitted(gamemodeReference); });
+            }
+
+            gamemodeName.text = "Gamemode Select";
+            gamemodeDescription.text = "Select a gamemode.";
+        }
+
+        private void Update()
+        {
+            if(GlobalInputManager.instance.GetButtonDown(0, TAPI.Inputs.Action.Cancel))
+            {
+                OnBack();
+            }
+        }
+
+        public void OnBack()
+        {
+            Cleanup();
+            mainMenu.SetActive(true);
+            gameObject.SetActive(false);
+        }
+
+        private void Cleanup()
+        {
+            foreach (Transform t in contentHolder)
+            {
+                Destroy(t.gameObject);
             }
         }
 
         public void GamemodeSelected(ModGamemodeReference gamemode)
+        {
+            GameModeDefinition gm = GameManager.current.ModManager.GetGamemodeDefinition(gamemode);
+            if (gm)
+            {
+                gamemodeName.text = gm.gameModeName;
+                gamemodeDescription.text = gm.gameModeDescription;
+            }
+        }
+
+        public void GamemodeSubmitted(ModGamemodeReference gamemode)
         {
             characterSelectMenu.gameObject.SetActive(true);
             characterSelectMenu.OnCharacterSelected += (entity) => { OpenStageSelect(gamemode, entity); };
