@@ -153,27 +153,35 @@ namespace TAPI.Entities.Shared
 
         private void HandleHitboxGroup(int index, HitboxGroup hitboxGroup)
         {
-            if(controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
+            if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
             {
                 CombatManager.CleanupHitboxes(index);
+                CombatManager.CleanupDetectboxes(index);
             }
 
-            if(controller.StateManager.CurrentStateFrame < hitboxGroup.activeFramesStart
+            if (controller.StateManager.CurrentStateFrame < hitboxGroup.activeFramesStart
                 || controller.StateManager.CurrentStateFrame > hitboxGroup.activeFramesEnd)
             {
                 return;
             }
 
-            CombatManager.CreateHitboxes(index);
+            switch (hitboxGroup.hitGroupType) {
+                case HitboxGroupType.HIT:
+                    CombatManager.CreateHitboxes(index);
 
-            if (hitboxGroup.hitInfo.continuousHit)
-            {
-                if ((controller.StateManager.CurrentStateFrame-hitboxGroup.activeFramesStart)%hitboxGroup.hitInfo.spaceBetweenHits
-                    == 0
-                    && CombatManager.hitStop == 0)
-                {
-                    CombatManager.ResetHitboxes(index);
-                }
+                    if (hitboxGroup.hitInfo.continuousHit)
+                    {
+                        if ((controller.StateManager.CurrentStateFrame - hitboxGroup.activeFramesStart) % hitboxGroup.hitInfo.spaceBetweenHits
+                            == 0
+                            && CombatManager.hitStop == 0)
+                        {
+                            CombatManager.ResetHitboxes(index);
+                        }
+                    }
+                    break;
+                case HitboxGroupType.DETECT:
+                    CombatManager.CreateDetectboxes(index);
+                    break;
             }
         }
 

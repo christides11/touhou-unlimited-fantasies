@@ -8,7 +8,7 @@ namespace TAPI.Core
     public class CombatVariables
     {
         public GameObject hitbox;
-
+        public GameObject detectbox;
         public float tumbleMinimumMagnitude;
     }
 }

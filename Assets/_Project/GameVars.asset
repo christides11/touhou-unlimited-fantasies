@@ -16,4 +16,6 @@ MonoBehaviour:
   pushboxForce: 1
   combat:
     hitbox: {fileID: 848079603149389866, guid: ec30b4e5185d07c46ad7fcb736b057b7, type: 3}
+    detectbox: {fileID: 848079603149389866, guid: 7a04c42a9cef2314b87da46cc35d772b,
+      type: 3}
     tumbleMinimumMagnitude: 50
