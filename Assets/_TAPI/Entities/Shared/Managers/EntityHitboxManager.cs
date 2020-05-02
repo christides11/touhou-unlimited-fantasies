@@ -45,6 +45,7 @@ namespace TAPI.Entities
         {
             CleanupAllHitboxes();
             CleanupAllDetectboxes();
+            hurtablesHit.Clear();
         }
 
         /// <summary>
@@ -142,6 +143,11 @@ namespace TAPI.Entities
                 return;
             }
             List<Hitbox> hitboxList = new List<Hitbox>(currentGroup.hitboxes.Count);
+            if (!hurtablesHit.ContainsKey(currentGroup.ID))
+            {
+                hurtablesHit.Add(currentGroup.ID, new List<IHurtable>());
+                hurtablesHit[currentGroup.ID].Add(combatManager);
+            }
 
             // Loop through all the hitboxes in the group.
             for (int i = 0; i < currentGroup.hitboxes.Count; i++)
@@ -172,14 +178,47 @@ namespace TAPI.Entities
                 {
                     hbox.transform.SetParent(controller.transform);
                 }
+                int cID = currentGroup.ID;
                 // Activate the hitbox and add it to our list.
-                hbox.GetComponent<Hitbox>().OnHurt += (HitInfo hinfo) => { combatManager.hitStop = hinfo.attackerHitstop; };
+                hbox.GetComponent<Hitbox>().OnHurt += (hurtable, hInfo) => { OnHitboxHurt(hurtable, hInfo, cID); };
                 hbox.GetComponent<Hitbox>().Activate(controller.gameObject, controller.visualTransform,
-                    currentGroup.hitInfo, new List<IHurtable>() { combatManager });
+                    currentGroup.hitInfo, hurtablesHit[currentGroup.ID]);
                 hitboxList.Add(hbox.GetComponent<Hitbox>());
             }
             // Add the hitbox group to our list.
             hitboxes.Add(group, hitboxList);
+        }
+
+        /// <summary>
+        /// Called whenever a hitbox hits a hurtbox successfully.
+        /// </summary>
+        /// <param name="hurtableHit">The hurtable that was hit.</param>
+        /// <param name="hitInfo">The hitInfo of the hitbox.</param>
+        /// <param name="hitboxID">The hitbox ID of the hitbox.</param>
+        private void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID)
+        {
+            hurtablesHit[hitboxID].Add(hurtableHit.GetComponent<IHurtable>());
+            combatManager.hitStop = hitInfo.attackerHitstop;
+            UpdateIDHitboxGroup(hitboxID);
+        }
+
+        /// <summary>
+        /// Updates the ignore/hit list of all hitboxes with the given ID.
+        /// </summary>
+        /// <param name="hitboxID">The ID to update the hitboxes for.</param>
+        private void UpdateIDHitboxGroup(int hitboxID)
+        {
+            foreach(int key in hitboxes.Keys)
+            {
+                HitboxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[key];
+                {
+                    for(int i = 0; i < hitboxes[key].Count; i++)
+                    {
+                        hitboxes[key][i].ignoreList = hurtablesHit[hitboxID];
+                    }
+
+                }
+            }
         }
 
         /// <summary>
@@ -192,8 +231,6 @@ namespace TAPI.Entities
             {
                 return;
             }
-
-
 
             // Variables.
             HitboxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[group];
@@ -219,11 +256,11 @@ namespace TAPI.Entities
                 switch (currentGroup.hitboxes[i].shape)
                 {
                     case ShapeType.Rectangle:
-                        dbox.GetComponent<DetectionBox>().InitRectangle(currentGroup.hitboxes[i].size,
+                        dbox.GetComponent<DetectionBox>().Initialize(controller.gameObject, currentGroup.hitboxes[i].size,
                             controller.visual.transform.eulerAngles + currentGroup.hitboxes[i].rotation);
                         break;
                     case ShapeType.Circle:
-                        dbox.GetComponent<DetectionBox>().InitSphere(currentGroup.hitboxes[i].radius);
+                        dbox.GetComponent<DetectionBox>().Initialize(controller.gameObject, currentGroup.hitboxes[i].radius);
                         break;
                 }
 
@@ -231,8 +268,7 @@ namespace TAPI.Entities
                 {
                     dbox.transform.SetParent(controller.transform);
                 }
-                dbox.GetComponent<DetectionBox>().Activate(controller.gameObject, controller.visualTransform,
-                    currentGroup.hitInfo, new List<IHurtable>() { combatManager });
+                dbox.GetComponent<DetectionBox>().Activate(new List<IHurtable>() { combatManager });
                 detectionboxes.Add(dbox.GetComponent<DetectionBox>());
             }
             detectboxes.Add(group, detectionboxes);

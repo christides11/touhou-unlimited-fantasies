@@ -6,12 +6,67 @@ using UnityEngine;
 
 namespace TAPI.Combat
 {
-    public class DetectionBox : Hitbox
+    public class DetectionBox : SimObject
     {
-        public delegate void DetectAction(HitInfo hitInfo);
+        public delegate void DetectAction(GameObject hurtableDetected);
         public event DetectAction OnDetect;
 
-        public bool detected = false;
+        public List<IHurtable> ignoreList = null;
+        // THe hurtables hit this frame.
+        public List<GameObject> hitHurtables = new List<GameObject>();
+
+        protected GameObject owner;
+        protected Transform directionOwner;
+        protected bool activated;
+        protected Collider coll;
+
+        [SerializeField] protected GameObject boxVisual;
+        [SerializeField] protected GameObject sphereVisual;
+
+        public void Initialize(GameObject owner, Vector3 size, Vector3 rotation)
+        {
+            this.owner = owner;
+
+            transform.rotation = Quaternion.Euler(rotation);
+            BoxCollider bc = gameObject.AddComponent<BoxCollider>();
+            bc.isTrigger = true;
+            coll = bc;
+            bc.size = size;
+            bc.enabled = false;
+            
+            boxVisual.transform.localScale = size;
+            boxVisual.SetActive(true);
+        }
+
+        public void Initialize(GameObject owner, float radius)
+        {
+            this.owner = owner;
+
+            SphereCollider sc = gameObject.AddComponent<SphereCollider>();
+            sc.isTrigger = true;
+            coll = sc;
+            sc.radius = radius;
+            sc.enabled = false;
+
+            sphereVisual.transform.localScale = Vector3.one * radius;
+            sphereVisual.SetActive(true);
+        }
+
+        public void Activate(List<IHurtable> ignoreList = null)
+        {
+            coll.enabled = true;
+            activated = true;
+            this.ignoreList = ignoreList;
+        }
+
+        /// <summary>
+        /// Deactivates the detectbox.
+        /// </summary>
+        public virtual void Deactivate()
+        {
+            coll.enabled = false;
+            activated = false;
+        }
 
         public override void SimLateUpdate()
         {
@@ -22,13 +77,16 @@ namespace TAPI.Combat
         {
             if (hitHurtables.Count > 0)
             {
-                OnDetect?.Invoke(hitInfo);
-                detected = true;
-                Deactivate();
+                for (int i = 0; i < hitHurtables.Count; i++)
+                {
+                    OnDetect?.Invoke(hitHurtables[i]);
+                    ignoreList.Add(hitHurtables[i].GetComponent<IHurtable>());
+                }
+                hitHurtables.Clear();
             }
         }
 
-        protected override void OnTriggerStay(Collider other)
+        protected virtual void OnTriggerStay(Collider other)
         {
             if (!activated)
             {

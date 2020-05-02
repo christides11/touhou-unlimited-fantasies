@@ -18,7 +18,6 @@ namespace TAPI.Entities
         [SerializeField] public MovesetAttackNode currentAttack;
         [SerializeField] protected MovesetDefinition moveset;
         public EntityHitboxManager hitboxManager;
-
         [SerializeField] public int hitStun;
         [SerializeField] public int hitStop;
 

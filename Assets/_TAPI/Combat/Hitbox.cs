@@ -8,10 +8,10 @@ namespace TAPI.Combat
 {
     public class Hitbox : SimObject
     {
-        public delegate void HurtAction(HitInfo hitInfo);
+        public delegate void HurtAction(GameObject hurtable, HitInfo hitInfo);
         public event HurtAction OnHurt;
 
-        protected List<IHurtable> ignoreList = null;
+        public List<IHurtable> ignoreList = null;
         public List<GameObject> hitHurtables = new List<GameObject>();
         public List<Hitbox> hitHitboxes = new List<Hitbox>();
 
@@ -109,6 +109,10 @@ namespace TAPI.Combat
                 for (int i = 0; i < hitHurtables.Count; i++)
                 {
                     IHurtable ih = hitHurtables[i].GetComponent<IHurtable>();
+                    if (ignoreList.Contains(ih))
+                    {
+                        continue;
+                    }
                     switch (hitInfo.forceRelation) {
                         case HitForceRelation.ATTACKER:
                             ih.Hurt(directionOwner.position, directionOwner.forward, directionOwner.right, hitInfo);
@@ -120,7 +124,7 @@ namespace TAPI.Combat
                             ih.Hurt(transform.position, Vector3.forward, Vector3.right, hitInfo);
                             break;
                     }
-                    OnHurt?.Invoke(hitInfo);
+                    OnHurt?.Invoke(hitHurtables[i], hitInfo);
                     ignoreList.Add(ih);
                 }
             }
