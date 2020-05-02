@@ -155,8 +155,8 @@ namespace TAPI.Entities.Shared
         {
             if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
             {
-                CombatManager.CleanupHitboxes(index);
-                CombatManager.CleanupDetectboxes(index);
+                CombatManager.hitboxManager.CleanupHitboxes(index);
+                CombatManager.hitboxManager.CleanupDetectboxes(index);
             }
 
             if (controller.StateManager.CurrentStateFrame < hitboxGroup.activeFramesStart
@@ -167,7 +167,7 @@ namespace TAPI.Entities.Shared
 
             switch (hitboxGroup.hitGroupType) {
                 case HitboxGroupType.HIT:
-                    CombatManager.CreateHitboxes(index);
+                    CombatManager.hitboxManager.CreateHitboxes(index);
 
                     if (hitboxGroup.hitInfo.continuousHit)
                     {
@@ -175,12 +175,12 @@ namespace TAPI.Entities.Shared
                             == 0
                             && CombatManager.hitStop == 0)
                         {
-                            CombatManager.ResetHitboxes(index);
+                            CombatManager.hitboxManager.ReactivateHitboxes(index);
                         }
                     }
                     break;
                 case HitboxGroupType.DETECT:
-                    CombatManager.CreateDetectboxes(index);
+                    CombatManager.hitboxManager.CreateDetectboxes(index);
                     break;
             }
         }

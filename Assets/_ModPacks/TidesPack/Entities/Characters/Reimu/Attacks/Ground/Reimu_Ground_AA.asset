@@ -67,8 +67,8 @@ MonoBehaviour:
       damageOnHit: 0
       damageOnBlock: 0
       hitKills: 1
-      attackerHitstop: 4
-      hitstop: 4
+      attackerHitstop: 2
+      hitstop: 2
       hitstun: 40
       opponentResetXForce: 1
       opponentResetYForce: 1
@@ -90,6 +90,9 @@ MonoBehaviour:
   - nickname: Friction
     active: 1
     onHit: 0
+    onHitHitboxID: 0
+    onDetect: 0
+    onDetectHitboxID: 0
     startFrame: 6
     endFrame: 30
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
@@ -102,6 +105,9 @@ MonoBehaviour:
   - nickname: Backwards
     active: 1
     onHit: 0
+    onHitHitboxID: 0
+    onDetect: 0
+    onDetectHitboxID: 0
     startFrame: 4
     endFrame: 4
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}

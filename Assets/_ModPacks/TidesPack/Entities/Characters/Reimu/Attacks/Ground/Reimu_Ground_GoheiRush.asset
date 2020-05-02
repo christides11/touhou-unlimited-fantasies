@@ -84,8 +84,11 @@ MonoBehaviour:
   - nickname: Movement
     active: 1
     onHit: 0
+    onHitHitboxID: 0
+    onDetect: 0
+    onDetectHitboxID: 0
     startFrame: 5
-    endFrame: 40
+    endFrame: 30
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
     variables:
       intVars: 
@@ -93,5 +96,19 @@ MonoBehaviour:
       - 0
       - 30
       - 0
+      objectVars: []
+      curveVars: []
+  - nickname: State Change
+    active: 1
+    onHit: 0
+    onHitHitboxID: 0
+    onDetect: 0
+    onDetectHitboxID: 0
+    startFrame: 10
+    endFrame: 30
+    attackEvent: {fileID: 11400000, guid: 24f5dc498e082f14592decab0e6e105a, type: 2}
+    variables:
+      intVars: 00000000
+      floatVars: []
       objectVars: []
       curveVars: []

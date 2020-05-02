@@ -14,14 +14,10 @@ namespace TAPI.Entities
         public HitInfo LastHitBy { get; protected set; }
         public EntityTeams Team { get { return team; } }
 
-        private Dictionary<int, List<Hitbox>> attackHitboxes = new Dictionary<int, List<Hitbox>>();
-        private Dictionary<int, List<DetectionBox>> detectBoxes = new Dictionary<int, List<DetectionBox>>();
-        private Dictionary<int, List<IHurtable>> usedHitboxGroups = new Dictionary<int, List<IHurtable>>();
-
         [SerializeField] protected EntityController controller;
-
-        [SerializeField] protected MovesetAttackNode currentAttack;
+        [SerializeField] public MovesetAttackNode currentAttack;
         [SerializeField] protected MovesetDefinition moveset;
+        public EntityHitboxManager hitboxManager;
 
         [SerializeField] public int hitStun;
         [SerializeField] public int hitStop;
@@ -29,6 +25,12 @@ namespace TAPI.Entities
         [SerializeField] protected EntityTeams team;
 
         public List<int> chargeTimes = new List<int>();
+
+
+        private void Awake()
+        {
+            hitboxManager = new EntityHitboxManager(this, controller);
+        }
 
         public virtual void CLateUpdate()
         {
@@ -40,13 +42,7 @@ namespace TAPI.Entities
                 hitStun--;
             }
 
-            foreach (List<Hitbox> hitboxGroup in attackHitboxes.Values)
-            {
-                for(int i = 0; i < hitboxGroup.Count; i++)
-                {
-                    hitboxGroup[i].CheckHits();
-                }
-            }
+            hitboxManager.LateUpdate();
         }
 
         public void Reset(bool resetAttack = true)
@@ -55,11 +51,7 @@ namespace TAPI.Entities
             {
                 return;
             }
-            for(int i = 0; i < currentAttack.action.hitboxGroups.Count; i++)
-            {
-                CleanupHitboxes(i);
-                CleanupDetectboxes(i);
-            }
+            hitboxManager.Cleanup();
             if (resetAttack)
             {
                 currentAttack = null;
@@ -173,136 +165,6 @@ namespace TAPI.Entities
                 }
             }
             return false;
-        }
-
-        public void ResetHitboxes(int index)
-        {
-            if (!attackHitboxes.ContainsKey(index))
-            {
-                return;
-            }
-
-            for(int i = 0; i < attackHitboxes[index].Count; i++)
-            {
-                attackHitboxes[index][i].ReActivate(new List<IHurtable>() { this });
-            }
-
-        }
-
-        public void CreateDetectboxes(int index)
-        {
-            if (detectBoxes.ContainsKey(index))
-            {
-                return;
-            }
-
-            HitboxGroup currentGroup = currentAttack.action.hitboxGroups[index];
-
-            List<DetectionBox> detectionboxes = new List<DetectionBox>(currentGroup.hitboxes.Count);
-
-            for (int i = 0; i < currentGroup.hitboxes.Count; i++)
-            {
-                HitboxDefinition currHitbox = currentGroup.hitboxes[i];
-                Vector3 pos = controller.GetVisualBasedDirection(Vector3.forward) * currHitbox.offset.z
-                    + controller.GetVisualBasedDirection(Vector3.right) * currHitbox.offset.x
-                    + controller.GetVisualBasedDirection(Vector3.up) * currHitbox.offset.y;
-                GameObject dbox = Instantiate(controller.GameManager.gameVars.combat.detectbox,
-                    controller.transform.position + pos,
-                    Quaternion.Euler(controller.transform.eulerAngles + currHitbox.rotation));
-
-                switch (currentGroup.hitboxes[i].shape)
-                {
-                    case ShapeType.Rectangle:
-                        dbox.GetComponent<DetectionBox>().InitRectangle(currentGroup.hitboxes[i].size,
-                            controller.visual.transform.eulerAngles + currentGroup.hitboxes[i].rotation);
-                        break;
-                    case ShapeType.Circle:
-                        dbox.GetComponent<DetectionBox>().InitSphere(currentGroup.hitboxes[i].radius);
-                        break;
-                }
-
-                if (currentGroup.attachToEntity)
-                {
-                    dbox.transform.SetParent(transform);
-                }
-                dbox.GetComponent<DetectionBox>().Activate(gameObject, controller.visualTransform,
-                    currentGroup.hitInfo, new List<IHurtable>() { this });
-                detectionboxes.Add(dbox.GetComponent<DetectionBox>());
-            }
-            detectBoxes.Add(index, detectionboxes);
-        }
-
-        public void CreateHitboxes(int index)
-        {
-            if (attackHitboxes.ContainsKey(index))
-            {
-                return;
-            }
-
-            HitboxGroup currentGroup = currentAttack.action.hitboxGroups[index];
-
-            List<Hitbox> hitboxes = new List<Hitbox>(currentGroup.hitboxes.Count);
-
-            for(int i = 0; i < currentGroup.hitboxes.Count; i++)
-            {
-                HitboxDefinition currHitbox = currentGroup.hitboxes[i];
-                Vector3 pos = controller.GetVisualBasedDirection(Vector3.forward) * currHitbox.offset.z
-                    + controller.GetVisualBasedDirection(Vector3.right) * currHitbox.offset.x
-                    + controller.GetVisualBasedDirection(Vector3.up) * currHitbox.offset.y;
-                GameObject hbox = Instantiate(controller.GameManager.gameVars.combat.hitbox, 
-                    controller.transform.position + pos,
-                    Quaternion.Euler(controller.transform.eulerAngles + currHitbox.rotation));
-
-                switch (currentGroup.hitboxes[i].shape) {
-                    case ShapeType.Rectangle:
-                        hbox.GetComponent<Hitbox>().InitRectangle(currentGroup.hitboxes[i].size,
-                            controller.visual.transform.eulerAngles + currentGroup.hitboxes[i].rotation);
-                        break;
-                    case ShapeType.Circle:
-                        hbox.GetComponent<Hitbox>().InitSphere(currentGroup.hitboxes[i].radius);
-                        break;
-                }
-
-                if (currentGroup.attachToEntity)
-                {
-                    hbox.transform.SetParent(transform);
-                }
-                hbox.GetComponent<Hitbox>().OnHurt += (HitInfo hinfo) => { hitStop = hinfo.attackerHitstop; };
-                hbox.GetComponent<Hitbox>().Activate(gameObject, controller.visualTransform, 
-                    currentGroup.hitInfo, new List<IHurtable>() { this });
-                hitboxes.Add(hbox.GetComponent<Hitbox>());
-            }
-
-            attackHitboxes.Add(index, hitboxes);
-        }
-
-        public virtual void CleanupHitboxes(int index)
-        {
-            if (!attackHitboxes.ContainsKey(index))
-            {
-                return;
-            }
-
-            for(int i = 0; i < attackHitboxes[index].Count; i++)
-            {
-                Destroy(attackHitboxes[index][i].gameObject);
-            }
-
-            attackHitboxes.Remove(index);
-        }
-
-        public virtual void CleanupDetectboxes(int index)
-        {
-            if (!detectBoxes.ContainsKey(index))
-            {
-                return;
-            }
-
-            for(int i = 0; i < detectBoxes[index].Count; i++)
-            {
-                Destroy(detectBoxes[index][i].gameObject);
-            }
-            detectBoxes.Remove(index);
         }
 
         protected virtual bool CheckGroundAttackNodes()

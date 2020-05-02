@@ -10,6 +10,9 @@ namespace TAPI.Combat
         public string nickname = "event";
         public bool active;
         public bool onHit;
+        public int onHitHitboxID;
+        public bool onDetect;
+        public int onDetectHitboxID;
         public uint startFrame;
         public uint endFrame;
         public AttackEvent attackEvent;
