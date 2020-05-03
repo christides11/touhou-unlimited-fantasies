@@ -59,6 +59,7 @@ namespace TAPI.Entities
             {
                 CleanupHitboxes(key);
             }
+            hitboxes.Clear();
         }
 
         /// <summary>
@@ -70,6 +71,7 @@ namespace TAPI.Entities
             {
                 CleanupDetectboxes(key);
             }
+            detectboxes.Clear();
         }
 
         /// <summary>
@@ -106,7 +108,6 @@ namespace TAPI.Entities
             {
                 GameObject.Destroy(detectboxes[group][i].gameObject);
             }
-            detectboxes.Remove(group);
         }
 
         /// <summary>

@@ -51,7 +51,14 @@ namespace TAPI.Entities.Shared
                     * controller.definition.stats.maxFloatSpeed * translatedMovement.magnitude;
             }
 
-            controller.RotateVisual(controller.PhysicsManager.forceMovement, controller.definition.stats.floatRotationSpeed);
+            if (controller.LockedOn)
+            {
+                controller.RotateVisual(controller.LockonForward, controller.definition.stats.floatRotationSpeed);
+            }
+            else
+            {
+                controller.RotateVisual(controller.PhysicsManager.forceMovement, controller.definition.stats.floatRotationSpeed);
+            }
         }
 
         public override void OnInterrupted()

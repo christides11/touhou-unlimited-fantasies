@@ -13,9 +13,11 @@ namespace TAPI.Entities.Characters.States
             base.OnStart();
             controller.PhysicsManager.forceGravity = Vector3.zero;
             Vector2 movement = controller.InputManager.GetMovement(0);
-            if(movement.magnitude == 0)
+            if(movement.magnitude < InputConstants.movementMagnitude)
             {
-                movement = Vector2.up;
+                Vector3 v = controller.lookTransform.InverseTransformDirection(controller.GetVisualBasedDirection(Vector3.forward));
+                movement.x = v.x;
+                movement.y = v.z;
             }
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement *= ((CharacterStats)controller.definition.stats).airDashVelo;

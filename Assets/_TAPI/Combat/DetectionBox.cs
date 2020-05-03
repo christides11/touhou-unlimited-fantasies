@@ -79,8 +79,13 @@ namespace TAPI.Combat
             {
                 for (int i = 0; i < hitHurtables.Count; i++)
                 {
+                    IHurtable ih = hitHurtables[i].GetComponent<IHurtable>();
+                    if (ignoreList.Contains(ih))
+                    {
+                        continue;
+                    }
+                    ignoreList.Add(ih);
                     OnDetect?.Invoke(hitHurtables[i]);
-                    ignoreList.Add(hitHurtables[i].GetComponent<IHurtable>());
                 }
                 hitHurtables.Clear();
             }
