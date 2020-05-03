@@ -104,7 +104,7 @@ namespace TAPI.Core
             }
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(stageDefinition.sceneName));
 
-            currentGameModeHandler.Init(this);
+            currentGameModeHandler.Initialize(this);
             currentGameModeHandler.StartGameMode(entityDefinition, stageDefinition);
         }
 

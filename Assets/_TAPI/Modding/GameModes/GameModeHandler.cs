@@ -13,7 +13,7 @@ namespace TAPI.GameMode{
         protected SimObjectManager simObjectManager;
         protected bool started;
 
-        protected GameObject player;
+        protected List<GameObject> playerCharacters = new List<GameObject>();
         protected PlayerCamera playerCamera;
 
         private StageCollection stageCollection;
@@ -21,10 +21,10 @@ namespace TAPI.GameMode{
 
 
         /// <summary>
-        /// Initializes the gamemode. Call this before anything.
+        /// Initializes variables.
         /// </summary>
         /// <param name="gameManager">The gameManager in use.</param>
-        public virtual void Init(GameManager gameManager)
+        public virtual void Initialize(GameManager gameManager)
         {
             this.gameManager = gameManager;
             simObjectManager = new SimObjectManager();
@@ -34,7 +34,6 @@ namespace TAPI.GameMode{
 
         /// <summary>
         /// Starts the gamemode.
-        /// 
         /// </summary>
         /// <param name="character">The character the player selected.</param>
         /// <param name="currentStage">The current stage we are on.</param>

@@ -16,9 +16,9 @@ namespace TAPI.GameMode
         {
             base.StartGameMode(character, scene, stageCollection);
 
-            player = simObjectManager.SpawnObject(character.entity, scene.spawnPosition, Quaternion.identity);
-            playerCamera.UpdateTarget(player.transform);
-            player.GetComponent<EntityController>().Init(gameManager, playerCamera.Cam.transform);
+            playerCharacters.Add(simObjectManager.SpawnObject(character.entity, scene.spawnPosition, Quaternion.identity));
+            playerCamera.UpdateTarget(playerCharacters[0].transform);
+            playerCharacters[0].GetComponent<EntityController>().Init(gameManager, playerCamera.Cam.transform);
 
             GameObject d = simObjectManager.SpawnObject(dummy.gameObject, scene.spawnPosition + new Vector3(0, 0, 5), 
                 Quaternion.identity);
