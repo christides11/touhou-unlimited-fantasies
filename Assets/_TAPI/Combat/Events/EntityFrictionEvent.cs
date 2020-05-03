@@ -14,7 +14,7 @@ namespace TAPI.Combat.Events
         public bool yFriction;
         public bool xzFriction;
 
-        public override void Evaluate(uint frame, uint endFrame, 
+        public override bool Evaluate(uint frame, uint endFrame, 
             EntityAttack attackState, EntityController controller, AttackEventVariables variables)
         {
             if (xzFriction)
@@ -25,6 +25,7 @@ namespace TAPI.Combat.Events
             {
                 controller.PhysicsManager.ApplyGravityFriction(variables.floatVars[0]);
             }
+            return false;
         }
 
 #if UNITY_EDITOR

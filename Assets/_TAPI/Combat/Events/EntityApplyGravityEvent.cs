@@ -15,7 +15,7 @@ namespace TAPI.Combat.Events
         public bool useEntityGravity;
         public bool useEntityGravityScale;
 
-        public override void Evaluate(uint frame, uint endFrame, 
+        public override bool Evaluate(uint frame, uint endFrame, 
             EntityAttack attackState, EntityController controller, AttackEventVariables variables)
         {
             float percent = (float)frame / (float)endFrame;
@@ -42,6 +42,7 @@ namespace TAPI.Combat.Events
             }
 
             controller.PhysicsManager.HandleGravity(maxFallSpeed, gravity, gravityScale);
+            return false;
         }
 
 #if UNITY_EDITOR

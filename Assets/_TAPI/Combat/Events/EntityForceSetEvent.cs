@@ -15,7 +15,7 @@ namespace TAPI.Combat.Events
         public bool xzForce;
         public bool yForce;
 
-        public override void Evaluate(uint frame, uint endFrame, EntityAttack attackState, EntityController controller,
+        public override bool Evaluate(uint frame, uint endFrame, EntityAttack attackState, EntityController controller,
     AttackEventVariables variables)
         {
             Vector3 f = Vector3.zero;
@@ -40,6 +40,7 @@ namespace TAPI.Combat.Events
                 f.y = 0;
                 controller.PhysicsManager.forceMovement = f;
             }
+            return false;
         }
 
 #if UNITY_EDITOR

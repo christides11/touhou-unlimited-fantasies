@@ -86,7 +86,7 @@ MonoBehaviour:
     onHit: 0
     onHitHitboxID: 0
     onDetect: 0
-    onDetectHitboxID: 0
+    onDetectHitboxGroup: 0
     startFrame: 5
     endFrame: 30
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
@@ -98,17 +98,18 @@ MonoBehaviour:
       - 0
       objectVars: []
       curveVars: []
-  - nickname: State Change
+  - nickname: Set Attack
     active: 1
     onHit: 0
     onHitHitboxID: 0
-    onDetect: 0
-    onDetectHitboxID: 0
+    onDetect: 1
+    onDetectHitboxGroup: 0
     startFrame: 10
     endFrame: 30
-    attackEvent: {fileID: 11400000, guid: 24f5dc498e082f14592decab0e6e105a, type: 2}
+    attackEvent: {fileID: 11400000, guid: f65f30b83c7faea448a6a10439e87ebb, type: 2}
     variables:
       intVars: 00000000
       floatVars: []
-      objectVars: []
+      objectVars:
+      - {fileID: 3193021667813939668, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
       curveVars: []

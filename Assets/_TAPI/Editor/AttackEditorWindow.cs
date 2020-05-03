@@ -615,6 +615,17 @@ namespace TAPI.Combat
             attack.events[eventSelected].nickname = EditorGUILayout.TextField("Name", attack.events[eventSelected].nickname);
             attack.events[eventSelected].active = EditorGUILayout.Toggle("Active", attack.events[eventSelected].active);
             attack.events[eventSelected].onHit = EditorGUILayout.Toggle("On Hit?", attack.events[eventSelected].onHit);
+            if (attack.events[eventSelected].onHit)
+            {
+                attack.events[eventSelected].onHitHitboxGroup = EditorGUILayout.IntField("Hitbox Group",
+                    attack.events[eventSelected].onHitHitboxGroup);
+            }
+            attack.events[eventSelected].onDetect = EditorGUILayout.Toggle("On Detect?", attack.events[eventSelected].onDetect);
+            if (attack.events[eventSelected].onDetect)
+            {
+                attack.events[eventSelected].onDetectHitboxGroup = EditorGUILayout.IntField("Detect Group", 
+                    attack.events[eventSelected].onDetectHitboxGroup);
+            }
             attack.events[eventSelected].attackEvent = (AttackEvent)EditorGUILayout.ObjectField("Event", 
                 attack.events[eventSelected].attackEvent,
                 typeof(AttackEvent), false);

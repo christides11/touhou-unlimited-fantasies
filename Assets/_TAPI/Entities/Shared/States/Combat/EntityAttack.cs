@@ -94,30 +94,38 @@ namespace TAPI.Entities.Shared
                 return;
             }
 
+            bool eventCancel = false;
             for (int i = 0; i < currentAttack.events.Count; i++)
             {
-                HandleEvents(currentAttack.events[i]);
-            }
-
-            // Handle charging attacks.
-            bool charging = false;
-            if (InputManager.GetButton(CombatManager.CurrentAttack.executeButton[0].button).isDown)
-            {
-                for (int i = 0; i < currentAttack.chargeFrames.Count; i++)
+                if (HandleEvents(currentAttack.events[i]))
                 {
-                    if (StateManager.CurrentStateFrame == currentAttack.chargeFrames[i] &&
-                        (CombatManager.chargeTimes[i] < currentAttack.chargeLength || currentAttack.chargeLength == -1))
-                    {
-                        CombatManager.chargeTimes[i] += 1;
-                        charging = true;
-                    }
+                    eventCancel = true;
+                    return;
                 }
             }
-            if (charging)
+
+            if (!eventCancel)
             {
-                return;
+                // Handle charging attacks.
+                bool charging = false;
+                if (InputManager.GetButton(CombatManager.CurrentAttack.executeButton[0].button).isDown)
+                {
+                    for (int i = 0; i < currentAttack.chargeFrames.Count; i++)
+                    {
+                        if (StateManager.CurrentStateFrame == currentAttack.chargeFrames[i] &&
+                            (CombatManager.chargeTimes[i] < currentAttack.chargeLength || currentAttack.chargeLength == -1))
+                        {
+                            CombatManager.chargeTimes[i] += 1;
+                            charging = true;
+                        }
+                    }
+                }
+                if (charging)
+                {
+                    return;
+                }
+                controller.StateManager.IncrementFrame();
             }
-            controller.StateManager.IncrementFrame();
         }
 
         public override void OnInterrupted()
@@ -151,12 +159,12 @@ namespace TAPI.Entities.Shared
             }
         }
 
-        private void HandleHitboxGroup(int index, HitboxGroup hitboxGroup)
+        private void HandleHitboxGroup(int group, HitboxGroup hitboxGroup)
         {
             if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
             {
-                CombatManager.hitboxManager.CleanupHitboxes(index);
-                CombatManager.hitboxManager.CleanupDetectboxes(index);
+                CombatManager.hitboxManager.DeactivateHitboxes(group);
+                CombatManager.hitboxManager.DeactivateDetectboxes(group);
             }
 
             if (controller.StateManager.CurrentStateFrame < hitboxGroup.activeFramesStart
@@ -167,7 +175,7 @@ namespace TAPI.Entities.Shared
 
             switch (hitboxGroup.hitGroupType) {
                 case HitboxGroupType.HIT:
-                    CombatManager.hitboxManager.CreateHitboxes(index);
+                    CombatManager.hitboxManager.CreateHitboxes(group);
 
                     if (hitboxGroup.hitInfo.continuousHit)
                     {
@@ -175,29 +183,45 @@ namespace TAPI.Entities.Shared
                             == 0
                             && CombatManager.hitStop == 0)
                         {
-                            CombatManager.hitboxManager.ReactivateHitboxes(index);
+                            CombatManager.hitboxManager.ReactivateHitboxes(group);
                         }
                     }
                     break;
                 case HitboxGroupType.DETECT:
-                    CombatManager.hitboxManager.CreateDetectboxes(index);
+                    CombatManager.hitboxManager.CreateDetectboxes(group);
                     break;
             }
         }
 
-        protected virtual void HandleEvents(AttackEventDefinition currentEvent)
+        protected virtual bool HandleEvents(AttackEventDefinition currentEvent)
         {
             if (!currentEvent.active)
             {
-                return;
+                return false;
             }
             if(StateManager.CurrentStateFrame >= currentEvent.startFrame 
                 && StateManager.CurrentStateFrame <= currentEvent.endFrame)
             {
-                currentEvent.attackEvent.Evaluate(StateManager.CurrentStateFrame-currentEvent.startFrame, currentEvent.endFrame-currentEvent.startFrame,
-                    this, controller, 
+                // If the event needs a detection to happen, check if it happened.
+                if (currentEvent.onDetect)
+                {
+                    List<IHurtable> ihList = CombatManager.hitboxManager.GetDetectedList(currentEvent.onDetectHitboxGroup);
+                    if(ihList == null)
+                    {
+                        return false;
+                    }
+                    if(ihList.Count == 0)
+                    {
+                        return false;
+                    }
+                }
+                return currentEvent.attackEvent.Evaluate(StateManager.CurrentStateFrame - currentEvent.startFrame, 
+                    currentEvent.endFrame - currentEvent.startFrame,
+                    this, 
+                    controller,
                     currentEvent.variables);
             }
+            return false;
         }
 
         protected virtual bool CheckLandCancelWindows(AttackSO currentAttack)

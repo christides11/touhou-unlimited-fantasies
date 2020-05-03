@@ -14,9 +14,13 @@ namespace TAPI.Entities
     {
         // Hitbox Group : Hitboxes
         private Dictionary<int, List<Hitbox>> hitboxes = new Dictionary<int, List<Hitbox>>();
-        private Dictionary<int, List<DetectionBox>> detectboxes = new Dictionary<int, List<DetectionBox>>();
         // Hitbox ID : IHurtables Hit
         private Dictionary<int, List<IHurtable>> hurtablesHit = new Dictionary<int, List<IHurtable>>();
+
+        // Detectbox Group : Detectboxes
+        private Dictionary<int, List<DetectionBox>> detectboxes = new Dictionary<int, List<DetectionBox>>();
+        // Detectbox Group : IHurtables Hit
+        private Dictionary<int, List<IHurtable>> detectboxesDetectedHurtables = new Dictionary<int, List<IHurtable>>();
         // Detectbox ID : IHurtables Hit
         private Dictionary<int, List<IHurtable>> hurtablesDetected = new Dictionary<int, List<IHurtable>>();
 
@@ -38,6 +42,14 @@ namespace TAPI.Entities
                     hitboxGroup[i].CheckHits();
                 }
             }
+
+            foreach(List<DetectionBox> detectboxGroup in detectboxes.Values)
+            {
+                for(int i = 0; i < detectboxGroup.Count; i++)
+                {
+                    detectboxGroup[i].CheckDetection();
+                }
+            }
         }
 
         /// <summary>
@@ -48,6 +60,8 @@ namespace TAPI.Entities
             CleanupAllHitboxes();
             CleanupAllDetectboxes();
             hurtablesHit.Clear();
+            detectboxesDetectedHurtables.Clear();
+            hurtablesDetected.Clear();
         }
 
         /// <summary>
@@ -89,8 +103,6 @@ namespace TAPI.Entities
             {
                 GameObject.Destroy(hitboxes[group][i].gameObject);
             }
-
-            hitboxes.Remove(group);
         }
 
         /// <summary>
@@ -107,6 +119,32 @@ namespace TAPI.Entities
             for (int i = 0; i < detectboxes[group].Count; i++)
             {
                 GameObject.Destroy(detectboxes[group][i].gameObject);
+            }
+        }
+
+        public virtual void DeactivateHitboxes(int group)
+        {
+            if (!hitboxes.ContainsKey(group))
+            {
+                return;
+            }
+
+            for(int i = 0; i < hitboxes[group].Count; i++)
+            {
+                hitboxes[group][i].Deactivate();
+            }
+        }
+
+        public virtual void DeactivateDetectboxes(int group)
+        {
+            if (!detectboxes.ContainsKey(group))
+            {
+                return;
+            }
+
+            for(int i = 0; i < detectboxes[group].Count; i++)
+            {
+                detectboxes[group][i].Deactivate();
             }
         }
 
@@ -239,6 +277,10 @@ namespace TAPI.Entities
             }
             List<DetectionBox> detectionboxes = new List<DetectionBox>(currentGroup.hitboxes.Count);
 
+            if (!detectboxesDetectedHurtables.ContainsKey(group))
+            {
+                detectboxesDetectedHurtables.Add(group, new List<IHurtable>());
+            }
             if (!hurtablesDetected.ContainsKey(currentGroup.ID))
             {
                 hurtablesDetected.Add(currentGroup.ID, new List<IHurtable>());
@@ -273,7 +315,7 @@ namespace TAPI.Entities
                     dbox.transform.SetParent(controller.transform);
                 }
                 int cID = currentGroup.ID;
-                dbox.GetComponent<DetectionBox>().OnDetect += (hurtableDetected) => { OnDetectboxDetect(hurtableDetected, cID);  };
+                dbox.GetComponent<DetectionBox>().OnDetect += (hurtableDetected) => { OnDetectboxDetect(hurtableDetected, cID, group);  };
                 dbox.GetComponent<DetectionBox>().Activate(hurtablesDetected[currentGroup.ID]);
                 detectionboxes.Add(dbox.GetComponent<DetectionBox>());
             }
@@ -285,8 +327,10 @@ namespace TAPI.Entities
         /// </summary>
         /// <param name="hurtableHit">The hurtable that was detected.</param>
         /// <param name="hitboxID">The ID of the detectbox.</param>
-        private void OnDetectboxDetect(GameObject hurtable, int hitboxID)
+        private void OnDetectboxDetect(GameObject hurtable, int hitboxID, int hitboxGroup)
         {
+            Debug.Log($"Detectbox. {hurtable.name}");
+            detectboxesDetectedHurtables[hitboxGroup].Add(hurtable.GetComponent<IHurtable>());
             hurtablesDetected[hitboxID].Add(hurtable.GetComponent<IHurtable>());
             UpdateIDDetectboxGroup(hitboxID);
         }
@@ -304,6 +348,15 @@ namespace TAPI.Entities
                     detectboxes[key][i].ignoreList = hurtablesDetected[hitboxID];
                 }
             }
+        }
+
+        public List<IHurtable> GetDetectedList(int group)
+        {
+            if (!detectboxesDetectedHurtables.ContainsKey(group))
+            {
+                return null;
+            }
+            return detectboxesDetectedHurtables[group];
         }
     }
 }

@@ -73,7 +73,7 @@ namespace TAPI.Combat
             CheckDetection();
         }
 
-        private void CheckDetection()
+        public void CheckDetection()
         {
             if (hitHurtables.Count > 0)
             {

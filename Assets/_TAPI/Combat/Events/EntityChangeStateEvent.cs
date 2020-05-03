@@ -11,9 +11,10 @@ namespace TAPI.Combat.Events
     [CreateAssetMenu(fileName = "EntityChangeStateEvent", menuName = "Attack Events/ChangeState")]
     public class EntityChangeStateEvent : AttackEvent
     {
-        public override void Evaluate(uint frame, uint endFrame,
+        public override bool Evaluate(uint frame, uint endFrame,
             EntityAttack attackState, EntityController controller, AttackEventVariables variables)
         {
+            return false;
         }
 
 #if UNITY_EDITOR
