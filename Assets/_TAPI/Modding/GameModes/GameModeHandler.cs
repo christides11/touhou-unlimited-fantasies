@@ -48,6 +48,16 @@ namespace TAPI.GameMode{
             playerCamera = Instantiate(gameManager.playerCamera.gameObject, currentStage.spawnPosition, Quaternion.identity)
                 .GetComponent<PlayerCamera>();
             timeStepManager.Activate();
+            ActivateGamemode();
+        }
+
+        public virtual void DeactivateGamemode()
+        {
+            gamemodeActive = false;
+        }
+
+        public virtual void ActivateGamemode()
+        {
             gamemodeActive = true;
         }
 
