@@ -124,8 +124,8 @@ namespace TAPI.Combat
                             ih.Hurt(transform.position, Vector3.forward, Vector3.right, hitInfo);
                             break;
                     }
-                    OnHurt?.Invoke(hitHurtables[i], hitInfo);
                     ignoreList.Add(ih);
+                    OnHurt?.Invoke(hitHurtables[i], hitInfo);
                 }
             }
 

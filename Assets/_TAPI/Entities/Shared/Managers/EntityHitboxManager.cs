@@ -17,6 +17,8 @@ namespace TAPI.Entities
         private Dictionary<int, List<DetectionBox>> detectboxes = new Dictionary<int, List<DetectionBox>>();
         // Hitbox ID : IHurtables Hit
         private Dictionary<int, List<IHurtable>> hurtablesHit = new Dictionary<int, List<IHurtable>>();
+        // Detectbox ID : IHurtables Hit
+        private Dictionary<int, List<IHurtable>> hurtablesDetected = new Dictionary<int, List<IHurtable>>();
 
         private EntityCombatManager combatManager;
         private EntityController controller;
@@ -120,7 +122,7 @@ namespace TAPI.Entities
 
             for (int i = 0; i < hitboxes[group].Count; i++)
             {
-                hitboxes[group][i].ReActivate(new List<IHurtable>() { combatManager });
+                hitboxes[group][i].ReActivate(hurtablesHit[combatManager.currentAttack.action.hitboxGroups[group].ID]);
             }
         }
 
@@ -210,13 +212,9 @@ namespace TAPI.Entities
         {
             foreach(int key in hitboxes.Keys)
             {
-                HitboxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[key];
+                for(int i = 0; i < hitboxes[key].Count; i++)
                 {
-                    for(int i = 0; i < hitboxes[key].Count; i++)
-                    {
-                        hitboxes[key][i].ignoreList = hurtablesHit[hitboxID];
-                    }
-
+                    hitboxes[key][i].ignoreList = hurtablesHit[hitboxID];
                 }
             }
         }
@@ -234,17 +232,22 @@ namespace TAPI.Entities
 
             // Variables.
             HitboxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[group];
-
             if(currentGroup.hitGroupType != HitboxGroupType.DETECT)
             {
                 return;
             }
-
             List<DetectionBox> detectionboxes = new List<DetectionBox>(currentGroup.hitboxes.Count);
+
+            if (!hurtablesDetected.ContainsKey(currentGroup.ID))
+            {
+                hurtablesDetected.Add(currentGroup.ID, new List<IHurtable>());
+                hurtablesDetected[currentGroup.ID].Add(combatManager);
+            }
 
             // Loop through all the hitboxes in the group.
             for (int i = 0; i < currentGroup.hitboxes.Count; i++)
             {
+                // Instantiate the hitbox with the correct position and rotation.
                 HitboxDefinition currHitbox = currentGroup.hitboxes[i];
                 Vector3 pos = controller.GetVisualBasedDirection(Vector3.forward) * currHitbox.offset.z
                     + controller.GetVisualBasedDirection(Vector3.right) * currHitbox.offset.x
@@ -268,10 +271,38 @@ namespace TAPI.Entities
                 {
                     dbox.transform.SetParent(controller.transform);
                 }
-                dbox.GetComponent<DetectionBox>().Activate(new List<IHurtable>() { combatManager });
+                int cID = currentGroup.ID;
+                dbox.GetComponent<DetectionBox>().OnDetect += (hurtableDetected) => { OnDetectboxDetect(hurtableDetected, cID);  };
+                dbox.GetComponent<DetectionBox>().Activate(hurtablesDetected[currentGroup.ID]);
                 detectionboxes.Add(dbox.GetComponent<DetectionBox>());
             }
             detectboxes.Add(group, detectionboxes);
+        }
+
+        /// <summary>
+        /// Called whenever a detectbox detects a hurtable.
+        /// </summary>
+        /// <param name="hurtableHit">The hurtable that was detected.</param>
+        /// <param name="hitboxID">The ID of the detectbox.</param>
+        private void OnDetectboxDetect(GameObject hurtable, int hitboxID)
+        {
+            hurtablesDetected[hitboxID].Add(hurtable.GetComponent<IHurtable>());
+            UpdateIDDetectboxGroup(hitboxID);
+        }
+
+        /// <summary>
+        /// Updates the ignore/detect list of all detectboxes with the same ID.
+        /// </summary>
+        /// <param name="hitboxID">The ID to update the detectboxes for.</param>
+        private void UpdateIDDetectboxGroup(int hitboxID)
+        {
+            foreach (int key in detectboxes.Keys)
+            {
+                for (int i = 0; i < detectboxes[key].Count; i++)
+                {
+                    detectboxes[key][i].ignoreList = hurtablesDetected[hitboxID];
+                }
+            }
         }
     }
 }

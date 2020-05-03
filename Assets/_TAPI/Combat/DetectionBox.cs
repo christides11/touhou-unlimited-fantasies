@@ -8,7 +8,7 @@ namespace TAPI.Combat
 {
     public class DetectionBox : SimObject
     {
-        public delegate void DetectAction(GameObject hurtableDetected);
+        public delegate void DetectAction(GameObject hurtable);
         public event DetectAction OnDetect;
 
         public List<IHurtable> ignoreList = null;
