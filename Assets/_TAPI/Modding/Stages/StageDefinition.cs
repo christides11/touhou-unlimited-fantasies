@@ -10,6 +10,6 @@ namespace TAPI.Core
         public string stageName;
         public string sceneName;
         public bool selectableForGamemodes;
-        public Vector3 spawnPosition;
+        public Vector3[] spawnPosition;
     }
 }

@@ -15,4 +15,5 @@ MonoBehaviour:
   stageName: 'Fantastic Night Parade Scroll ~ Mystic Flier '
   sceneName: EoSD_Stage1
   selectableForGamemodes: 0
-  spawnPosition: {x: 0, y: 2, z: 0}
+  spawnPosition:
+  - {x: 0, y: 2, z: 0}

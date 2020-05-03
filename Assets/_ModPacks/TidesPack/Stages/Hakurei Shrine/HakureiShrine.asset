@@ -15,4 +15,5 @@ MonoBehaviour:
   stageName: Hakurei Shrine
   sceneName: Stage_TrainingRoom
   selectableForGamemodes: 1
-  spawnPosition: {x: 0, y: 33, z: 5}
+  spawnPosition:
+  - {x: 0, y: 33, z: 5}
