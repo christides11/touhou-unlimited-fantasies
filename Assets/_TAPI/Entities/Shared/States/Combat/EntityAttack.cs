@@ -9,6 +9,10 @@ namespace TAPI.Entities.Shared
 {
     public class EntityAttack : EntityState
     {
+        public override string GetName()
+        {
+            return $"Attack ({CombatManager.CurrentAttack?.name}).";
+        }
 
         public override void OnStart()
         {
@@ -73,7 +77,7 @@ namespace TAPI.Entities.Shared
 
             for(int i = 0; i < currentAttack.hitboxGroups.Count; i++)
             {
-                HandleHitboxGroup(i, currentAttack.hitboxGroups[i]);
+                HandleBoxGroup(i, currentAttack.hitboxGroups[i]);
             }
 
             for(int i = 0; i < currentAttack.bulletGroups.Count; i++)
@@ -159,20 +163,28 @@ namespace TAPI.Entities.Shared
             }
         }
 
-        private void HandleHitboxGroup(int group, HitboxGroup hitboxGroup)
+        /// <summary>
+        /// Handles the lifetime process of hitboxes and detectboxes.
+        /// </summary>
+        /// <param name="group">The group number being processed.</param>
+        /// <param name="hitboxGroup">The group being processed.</param>
+        private void HandleBoxGroup(int group, HitboxGroup hitboxGroup)
         {
+            // If this is the end of the group's lifetime, deactivate them.
             if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
             {
                 CombatManager.hitboxManager.DeactivateHitboxes(group);
                 CombatManager.hitboxManager.DeactivateDetectboxes(group);
             }
 
+            // If we're within the lifetime of the boxes, do nothing.
             if (controller.StateManager.CurrentStateFrame < hitboxGroup.activeFramesStart
                 || controller.StateManager.CurrentStateFrame > hitboxGroup.activeFramesEnd)
             {
                 return;
             }
 
+            // Create the correct box.
             switch (hitboxGroup.hitGroupType) {
                 case HitboxGroupType.HIT:
                     CombatManager.hitboxManager.CreateHitboxes(group);
@@ -193,6 +205,11 @@ namespace TAPI.Entities.Shared
             }
         }
 
+        /// <summary>
+        /// Handles the lifetime of events.
+        /// </summary>
+        /// <param name="currentEvent">The event being processed.</param>
+        /// <returns>True if the current attack state was canceled by the event.</returns>
         protected virtual bool HandleEvents(AttackEventDefinition currentEvent)
         {
             if (!currentEvent.active)
@@ -224,6 +241,11 @@ namespace TAPI.Entities.Shared
             return false;
         }
 
+        /// <summary>
+        /// Check if we should land cancel on the current frame.
+        /// </summary>
+        /// <param name="currentAttack">The current attack's information.</param>
+        /// <returns>True if we land canceled.</returns>
         protected virtual bool CheckLandCancelWindows(AttackSO currentAttack)
         {
             for(int i = 0; i < currentAttack.landCancelFrames.Count; i++)
@@ -240,6 +262,11 @@ namespace TAPI.Entities.Shared
             return false;
         }
 
+        /// <summary>
+        /// Check if we should jump cancel on the current frame.
+        /// </summary>
+        /// <param name="currentAttack">The current attack's information.</param>
+        /// <returns>True if we jump canceled</returns>
         protected virtual bool CheckJumpCancelWindows(AttackSO currentAttack)
         {
             for(int i = 0; i < currentAttack.jumpCancelFrames.Count; i++)
@@ -256,6 +283,11 @@ namespace TAPI.Entities.Shared
             return false;
         }
 
+        /// <summary>
+        /// Check if we should dash cancel on the current frame.
+        /// </summary>
+        /// <param name="currentAttack">The current attack's information.</param>
+        /// <returns>True if we dash canceled.</returns>
         protected virtual bool CheckDashCancelWindows(AttackSO currentAttack)
         {
             for (int i = 0; i < currentAttack.landCancelFrames.Count; i++)
@@ -272,6 +304,11 @@ namespace TAPI.Entities.Shared
             return false;
         }
 
+        /// <summary>
+        /// Check if we should attack cancel on the current frame.
+        /// </summary>
+        /// <param name="currentAttack">The current attack's information.</param>
+        /// <returns>True if we attack canceled.</returns>
         protected virtual bool CheckAttackCancelWindows(AttackSO currentAttack)
         {
             for (int i = 0; i < currentAttack.attackCancelFrames.Count; i++)
@@ -287,11 +324,6 @@ namespace TAPI.Entities.Shared
                 }
             }
             return false;
-        }
-
-        public override string GetName()
-        {
-            return $"Attack ({CombatManager.CurrentAttack?.name}).";
         }
     }
 }
