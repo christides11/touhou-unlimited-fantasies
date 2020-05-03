@@ -8,10 +8,12 @@ using UnityEngine;
 namespace TAPI.GameMode{
     public class GameModeHandler : MonoBehaviour
     {
+        public bool GamemodeActive { get { return gamemodeActive; } }
+
         protected GameManager gameManager;
         protected TimeStepManager timeStepManager;
         protected SimObjectManager simObjectManager;
-        protected bool started;
+        protected bool gamemodeActive;
 
         protected List<GameObject> playerCharacters = new List<GameObject>();
         protected PlayerCamera playerCamera;
@@ -46,7 +48,7 @@ namespace TAPI.GameMode{
             playerCamera = Instantiate(gameManager.playerCamera.gameObject, currentStage.spawnPosition, Quaternion.identity)
                 .GetComponent<PlayerCamera>();
             timeStepManager.Activate();
-            started = true;
+            gamemodeActive = true;
         }
 
         public virtual void FinishGamemode()
@@ -60,7 +62,7 @@ namespace TAPI.GameMode{
 
         public virtual void FixedUpdate()
         {
-            if (started)
+            if (gamemodeActive)
             {
                 timeStepManager.ManualUpdate(Time.fixedDeltaTime);
             }
