@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Ground Attack A
   description: 
   stateOverride: -1
-  length: 40
+  length: 35
   groundAble: 1
   airAble: 0
   heightRestriction: 0
@@ -90,9 +90,9 @@ MonoBehaviour:
   - nickname: start friction
     active: 1
     onHit: 0
-    onHitHitboxID: 0
+    onHitHitboxGroup: 0
     onDetect: 0
-    onDetectHitboxID: 0
+    onDetectHitboxGroup: 0
     startFrame: 0
     endFrame: 3
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
@@ -105,9 +105,9 @@ MonoBehaviour:
   - nickname: Move Forward
     active: 1
     onHit: 0
-    onHitHitboxID: 0
+    onHitHitboxGroup: 0
     onDetect: 0
-    onDetectHitboxID: 0
+    onDetectHitboxGroup: 0
     startFrame: 3
     endFrame: 3
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
@@ -122,11 +122,11 @@ MonoBehaviour:
   - nickname: Friction
     active: 1
     onHit: 0
-    onHitHitboxID: 0
+    onHitHitboxGroup: 0
     onDetect: 0
-    onDetectHitboxID: 0
+    onDetectHitboxGroup: 0
     startFrame: 8
-    endFrame: 40
+    endFrame: 35
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
     variables:
       intVars: 

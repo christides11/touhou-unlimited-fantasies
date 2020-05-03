@@ -18,7 +18,6 @@ namespace TAPI.Core
         public ConsoleWindow ConsoleWindow { get { return consoleWindow; } }
 
         protected GameModeHandler currentGameModeHandler;
-        private EntityDefinition selectedCharacter;
 
         [SerializeField] private ModDefinition coreMod;
         [SerializeField] private ModDefinition internalMod;
@@ -62,7 +61,7 @@ namespace TAPI.Core
         /// then starts the gamemode.
         /// </summary>
         /// <param name="entity"></param>
-        /// <param name="gameMode"></param>
+        /// <param name="gamemode"></param>
         /// <param name="stage"></param>
         public virtual async void StartGameMode(ModEntityReference entity, ModGamemodeReference gamemode, ModStageReference stage,
             ModStageCollectionReference stageCollection = null) {

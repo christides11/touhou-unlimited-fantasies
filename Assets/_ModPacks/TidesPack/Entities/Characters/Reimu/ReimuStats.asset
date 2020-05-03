@@ -44,7 +44,7 @@ MonoBehaviour:
   wallJumpTime: 20
   wallJumpYVelo: 17.6
   wallJumpHVelo: 14
-  floatFriction: 0.325
+  floatFriction: 0.9
   maxFloatSpeed: 11
   floatVerticalSpeed: 11
   floatBaseAccel: 1

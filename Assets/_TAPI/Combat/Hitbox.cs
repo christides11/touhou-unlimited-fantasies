@@ -31,6 +31,8 @@ namespace TAPI.Combat
         {
             coll.enabled = false;
             activated = false;
+            boxVisual?.SetActive(false);
+            sphereVisual?.SetActive(false);
         }
 
         /// <summary>
@@ -87,7 +89,6 @@ namespace TAPI.Combat
             sc.isTrigger = true;
             coll = sc;
             sc.radius = radius;
-
 
             sphereVisual.transform.localScale = Vector3.one * radius;
             sphereVisual.SetActive(true);
