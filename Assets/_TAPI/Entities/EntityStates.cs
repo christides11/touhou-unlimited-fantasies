@@ -20,6 +20,7 @@
         TRIP = 14,
         KNOCKDOWN = 15,
         WAKEUP = 16,
-        GROUND_BOUNCE = 17
+        GROUND_BOUNCE = 17,
+        ENEMY_STEP = 18
     }
 }

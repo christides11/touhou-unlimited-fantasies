@@ -54,6 +54,14 @@ namespace TAPI.Entities
         public LayerMask lockonLayerMask;
         public LayerMask visibilityLayerMask;
 
+        [Header("Enemy Step")]
+        public LayerMask enemyStepLayerMask;
+        public float enemyStepCheckRadius;
+
+        [Header("Stuff")]
+        public int currentAirJump = 0;
+        public int currentAirDash = 0;
+
         /// <summary>
         /// Initializes the entity with the references needed.
         /// </summary>
@@ -310,11 +318,30 @@ namespace TAPI.Entities
         /// If the entity can currently air jump.
         /// </summary>
         /// <returns>True if the entity can air jump currently.</returns>
-        public virtual bool CanAirJump()
+        public virtual bool CheckAirJump()
         {
             if (InputManager.GetButton(EntityInputs.Jump).firstPress)
             {
-                return true;
+                if (currentAirJump < definition.stats.maxAirJumps)
+                {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// If the entity can currently air jump.
+        /// </summary>
+        /// <returns>True if the entity can air jump currently.</returns>
+        public virtual bool CheckAirDash()
+        {
+            if (InputManager.GetButton(EntityInputs.Dash).firstPress)
+            {
+                //if (currentAirJump < definition.stats.airdas)
+                //{
+                    return true;
+                //}
             }
             return false;
         }
@@ -336,6 +363,23 @@ namespace TAPI.Entities
                     StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 }
                 return true;
+            }
+            return false;
+        }
+
+        public virtual bool EnemyStepCancel()
+        {
+            if (InputManager.GetButton(EntityInputs.Jump, 0, true).firstPress)
+            {
+                Collider[] c = Physics.OverlapSphere(transform.position, enemyStepCheckRadius, enemyStepLayerMask);
+                for (int i = 0; i < c.Length; i++)
+                {
+                    if (c[i].gameObject != pushbox.gameObject)
+                    {
+                        StateManager.ChangeState((int)EntityStates.ENEMY_STEP);
+                        return true;
+                    }
+                }
             }
             return false;
         }
@@ -366,6 +410,8 @@ namespace TAPI.Entities
         public virtual void ResetAirActions()
         {
             PhysicsManager.CurrentGravityScale = 1.0f;
+            currentAirJump = 0;
+            currentAirDash = 0;
         }
     }
 }

@@ -9,6 +9,7 @@ namespace TAPI.Entities.Shared
         public override void OnStart()
         {
             base.OnStart();
+            controller.currentAirJump++;
             controller.IsGrounded = false;
             controller.PhysicsManager.forceGravity.y = controller.definition.stats.airJumpVelocity;
 
@@ -16,8 +17,8 @@ namespace TAPI.Entities.Shared
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement *= controller.definition.stats.airJumpHorizontalVelo;
 
-            controller.PhysicsManager.forceMovement = (controller.PhysicsManager.forceMovement 
-                * controller.definition.stats.airJumpCarriedMomentum) + translatedMovement;
+            controller.PhysicsManager.forceMovement *= controller.definition.stats.airJumpCarriedMomentum;
+            controller.PhysicsManager.forceMovement += translatedMovement;
         }
 
         public override void OnUpdate()

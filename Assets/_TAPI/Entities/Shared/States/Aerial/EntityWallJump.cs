@@ -6,6 +6,10 @@ namespace TAPI.Entities.Shared
 {
     public class EntityWallJump : EntityState
     {
+        public override string GetName()
+        {
+            return "Wall Jump";
+        }
         public override void OnStart()
         {
             controller.IsGrounded = false;

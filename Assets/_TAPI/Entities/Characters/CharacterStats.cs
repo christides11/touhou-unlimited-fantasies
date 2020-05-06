@@ -9,6 +9,7 @@ namespace TAPI.Entities.Characters
     public class CharacterStats : EntityStats
     {
         [Header("Air Dash")]
+        public int maxAirDashes = 1;
         public float airDashVelo;
         public int airDashHoldVelo; //How long to hold the init velo for.
         public int airDashLength;

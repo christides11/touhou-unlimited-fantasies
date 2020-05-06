@@ -6,6 +6,10 @@ namespace TAPI.Entities.Shared
 {
     public class EntityFall : EntityState
     {
+        public override string GetName()
+        {
+            return "Fall";
+        }
 
         public override void OnUpdate()
         {

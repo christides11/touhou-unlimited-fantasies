@@ -370,10 +370,10 @@ MonoBehaviour:
   pushbox: {fileID: 13461346698822138}
   GroundedLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   attackLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1073741824
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   centerOffset: {x: 0, y: 0.5, z: 0}
   softLockonRadius: 10
@@ -385,6 +385,10 @@ MonoBehaviour:
   visibilityLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  enemyStepLayerMask:
+    serializedVersion: 2
+    m_Bits: 2147483648
+  enemyStepCheckRadius: 2
   wasRunning: 0
   hoverMode: 0
   sideWallDistance: 0.7

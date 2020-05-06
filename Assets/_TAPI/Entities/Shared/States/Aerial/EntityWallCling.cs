@@ -7,6 +7,11 @@ namespace TAPI.Entities.Shared
 {
     public class EntityWallCling : EntityState
     {
+        public override string GetName()
+        {
+            return "Wall Cling";
+        }
+
         public override void OnStart()
         {
             base.OnStart();
@@ -23,7 +28,7 @@ namespace TAPI.Entities.Shared
             {
                 PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingFrictionXZ);
                 EntityStats es = controller.definition.stats;
-                PhysicsManager.HandleGravity(es.wallClingMaxFallSpeed, es.wallClingGravity, PhysicsManager.CurrentGravityScale);
+                PhysicsManager.HandleGravity(es.wallClingMaxFallSpeed, es.wallClingGravity, PhysicsManager.CurrentGravityScale, 0.97f);
             }
         }
 

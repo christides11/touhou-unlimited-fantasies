@@ -17,7 +17,11 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if (controller.CanAirJump())
+            if (controller.EnemyStepCancel())
+            {
+                return true;
+            }
+            if (controller.CheckAirJump())
             {
                 controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;

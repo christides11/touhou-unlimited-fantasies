@@ -7,6 +7,10 @@ namespace TAPI.Entities.Shared
 {
     public class EntityFloat : EntityState
     {
+        public override string GetName()
+        {
+            return "Float";
+        }
 
         public override void OnStart()
         {
@@ -65,11 +69,6 @@ namespace TAPI.Entities.Shared
         {
             base.OnInterrupted();
             controller.IsFloating = false;
-        }
-
-        public override string GetName()
-        {
-            return "Float";
         }
     }
 }

@@ -31,6 +31,8 @@ MonoBehaviour:
   animationAir: {fileID: 0}
   wrapMode: 0
   jumpCancelFrames: []
+  enemyStepFrames:
+  - {x: 0, y: 40}
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
@@ -84,18 +86,24 @@ MonoBehaviour:
   - nickname: Gravity Friction
     active: 1
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 0
     endFrame: 7
     attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 2
+      - 1.5
       objectVars: []
       curveVars: []
   - nickname: Gravity
     active: 1
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 13
     endFrame: 40
     attackEvent: {fileID: 11400000, guid: 497e270a3fbb60f40a1da2727a61f70d, type: 2}
@@ -158,3 +166,18 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+  - nickname: XZ Friction
+    active: 1
+    onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
+    startFrame: 0
+    endFrame: 7
+    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 5
+      objectVars: []
+      curveVars: []

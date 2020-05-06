@@ -11,6 +11,7 @@ namespace TAPI.Entities.Characters.States
         public override void OnStart()
         {
             base.OnStart();
+            controller.currentAirDash++;
             controller.PhysicsManager.forceGravity = Vector3.zero;
             Vector2 movement = controller.InputManager.GetMovement(0);
             if(movement.magnitude < InputConstants.movementMagnitude)
@@ -41,6 +42,14 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
+            if (controller.StateManager.CurrentStateFrame >= 3)
+            {
+                if (controller.CombatManager.CheckForAction())
+                {
+                    controller.StateManager.ChangeState((int)EntityStates.ATTACK);
+                    return true;
+                }
+            }
             RaycastHit rh = controller.PhysicsManager.DetectWall();
             if (rh.collider)
             {
@@ -53,7 +62,11 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;
             }
-            if (controller.CanAirJump())
+            if (controller.EnemyStepCancel())
+            {
+                return true;
+            }
+            if (controller.CheckAirJump())
             {
                 controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;

@@ -30,6 +30,7 @@ namespace TAPI.Entities.Characters
             StateManager.AddState(new PDash(), (int)EntityStates.DASH);
             StateManager.AddState(new PRun(), (int)EntityStates.RUN);
             StateManager.AddState(new PFall(), (int)EntityStates.FALL);
+            StateManager.AddState(new PEnemyStep(), (int)EntityStates.ENEMY_STEP);
             PJump jump = new PJump();
             StateManager.AddState(jump, (int)EntityStates.JUMP);
             PJumpSquat jumpSquat = new PJumpSquat();

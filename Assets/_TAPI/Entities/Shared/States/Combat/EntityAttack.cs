@@ -85,7 +85,8 @@ namespace TAPI.Entities.Shared
                 HandleBulletGroup(i, currentAttack.bulletGroups[i]);
             }
 
-            if (CheckDashCancelWindows(currentAttack)
+            if (CheckEnemyStepWindows(currentAttack) 
+                || CheckDashCancelWindows(currentAttack)
                 || CheckJumpCancelWindows(currentAttack)
                 || CheckLandCancelWindows(currentAttack))
             {
@@ -275,6 +276,27 @@ namespace TAPI.Entities.Shared
                     && StateManager.CurrentStateFrame <= currentAttack.jumpCancelFrames[i].y)
                 {
                     if (controller.JumpCancel())
+                    {
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// Check if we should jump cancel on the current frame.
+        /// </summary>
+        /// <param name="currentAttack">The current attack's information.</param>
+        /// <returns>True if we jump canceled</returns>
+        protected virtual bool CheckEnemyStepWindows(AttackSO currentAttack)
+        {
+            for (int i = 0; i < currentAttack.enemyStepFrames.Count; i++)
+            {
+                if (StateManager.CurrentStateFrame >= currentAttack.enemyStepFrames[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.enemyStepFrames[i].y)
+                {
+                    if (controller.EnemyStepCancel())
                     {
                         return true;
                     }

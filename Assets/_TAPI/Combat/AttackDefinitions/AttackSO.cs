@@ -33,6 +33,7 @@ namespace TAPI.Combat
 
         #region Cancels
         public List<Vector2Int> jumpCancelFrames = new List<Vector2Int>();
+        public List<Vector2Int> enemyStepFrames = new List<Vector2Int>();
         public List<Vector2Int> landCancelFrames = new List<Vector2Int>();
         public List<Vector2Int> dashCancelableFrames = new List<Vector2Int>();
         public List<Vector2Int> floatCancelFrames = new List<Vector2Int>();

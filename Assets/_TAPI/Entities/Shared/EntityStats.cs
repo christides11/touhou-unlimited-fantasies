@@ -25,6 +25,7 @@ namespace TAPI.Entities.Shared
         public float shortHopJumpVelocity;
 
         [Header("Air Jump")]
+        public int maxAirJumps = 1;
         public float airJumpVelocity;
         public float airJumpModi = 1.0f;
         public float airJumpCarriedMomentum;

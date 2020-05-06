@@ -27,8 +27,8 @@ MonoBehaviour:
   shortHopJumpVelocity: 10
   airJumpVelocity: 14
   airJumpModi: 0
-  airJumpCarriedMomentum: 1
-  airJumpHorizontalVelo: 8
+  airJumpCarriedMomentum: 0.2
+  airJumpHorizontalVelo: 9
   airRotationSpeed: 0.25
   airFriction: 0.8
   airAcceleration: 0.3
@@ -39,11 +39,11 @@ MonoBehaviour:
   wallClingInitFrictionY: 0.7
   wallClingInitFrictionXZ: 100
   wallClingFrictionXZ: 4
-  wallClingGravity: 0.65
+  wallClingGravity: 0.5
   wallClingMaxFallSpeed: 4
   wallJumpTime: 20
   wallJumpYVelo: 17.6
-  wallJumpHVelo: 14
+  wallJumpHVelo: 17
   floatFriction: 0.9
   maxFloatSpeed: 11
   floatVerticalSpeed: 11

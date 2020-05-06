@@ -205,13 +205,13 @@ namespace TAPI.Entities
             Vector3 translatedMovement = controller.lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
             translatedMovement.y = 0;
 
-            RaycastHit rayHit = new RaycastHit();
+            wallRayHit = new RaycastHit();
             if (translatedMovement.magnitude > InputConstants.movementMagnitude)
             {
                 Physics.Raycast(transform.position + new Vector3(0, 1, 0),
-                    translatedMovement.normalized, out rayHit, wallCheckDistance, controller.GroundedLayerMask);
+                    translatedMovement.normalized, out wallRayHit, wallCheckDistance, controller.GroundedLayerMask);
             }
-            return rayHit;
+            return wallRayHit;
         }
     }
 }
