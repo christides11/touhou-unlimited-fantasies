@@ -6,31 +6,43 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PFloat : EntityFloat
+    public class CRun : EntityRun
     {
+        public override void OnStart()
+        {
+            base.OnStart();
+            ((CharacterController)controller).wasRunning = true;
+        }
+
         public override bool CheckInterrupt()
         {
+            EntityInput ei = controller.InputManager;
             if (controller.CombatManager.CheckForAction())
             {
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if (controller.IsGrounded)
+            if (ei.GetButton(EntityInputs.Jump).firstPress)
             {
-                controller.StateManager.ChangeState((int)EntityStates.IDLE);
+                controller.StateManager.ChangeState((int)EntityStates.JUMP_SQUAT);
                 return true;
             }
-            if (controller.InputManager.GetButton(EntityInputs.Jump).firstPress)
+            if (!controller.IsGrounded)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
-            if (controller.InputManager.GetButton(EntityInputs.Dash).firstPress)
+            if (ei.GetMovement(0).magnitude <= InputConstants.movementMagnitude)
             {
-                controller.StateManager.ChangeState((int)BaseCharacterStates.FLOAT_DODGE);
+                controller.StateManager.ChangeState((int)EntityStates.IDLE);
                 return true;
             }
             return false;
+        }
+
+        public override void OnInterrupted()
+        {
+            base.OnInterrupted();
         }
     }
 }

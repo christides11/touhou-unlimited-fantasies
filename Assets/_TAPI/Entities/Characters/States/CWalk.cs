@@ -6,24 +6,8 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PIdle : EntityIdle
+    public class CWalk : EntityWalk
     {
-        public override void OnStart()
-        {
-            base.OnStart();
-            ((CharacterController)controller).wasRunning = false;
-        }
-
-        public override void OnUpdate()
-        {
-            base.OnUpdate();
-
-            if (controller.InputManager.GetButton(EntityInputs.Dash).firstPress)
-            {
-                ((CharacterController)controller).hoverMode = !((CharacterController)controller).hoverMode;
-            }
-        }
-
         public override bool CheckInterrupt()
         {
             EntityInput ei = controller.InputManager;
@@ -42,9 +26,14 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
-            if (ei.GetMovement(0).magnitude > InputConstants.movementMagnitude)
+            if (ei.GetButton(EntityInputs.Dash).firstPress)
             {
-                controller.StateManager.ChangeState((int)EntityStates.WALK);
+                controller.StateManager.ChangeState((int)EntityStates.DASH);
+                return true;
+            }
+            if (ei.GetMovement(0).magnitude <= InputConstants.movementMagnitude)
+            {
+                controller.StateManager.ChangeState((int)EntityStates.IDLE);
                 return true;
             }
             return false;

@@ -6,36 +6,28 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PDash : EntityDash
+    public class CFloat : EntityFloat
     {
-
         public override bool CheckInterrupt()
         {
-            EntityInput ei = controller.InputManager;
             if (controller.CombatManager.CheckForAction())
             {
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if (ei.GetButton(EntityInputs.Dash).firstPress
-                && controller.StateManager.CurrentStateFrame >= 3)
+            if (controller.IsGrounded)
             {
-                controller.StateManager.ChangeState((int)EntityStates.DASH);
+                controller.StateManager.ChangeState((int)EntityStates.IDLE);
                 return true;
             }
-            if (ei.GetButton(EntityInputs.Jump).firstPress)
-            {
-                controller.StateManager.ChangeState((int)EntityStates.JUMP_SQUAT);
-                return true;
-            }
-            if (!controller.IsGrounded)
+            if (controller.InputManager.GetButton(EntityInputs.Jump).firstPress)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
-            if (controller.StateManager.CurrentStateFrame >= controller.definition.stats.dashTime)
+            if (controller.InputManager.GetButton(EntityInputs.Dash).firstPress)
             {
-                controller.StateManager.ChangeState((int)EntityStates.RUN);
+                controller.StateManager.ChangeState((int)BaseCharacterStates.FLOAT_DODGE);
                 return true;
             }
             return false;

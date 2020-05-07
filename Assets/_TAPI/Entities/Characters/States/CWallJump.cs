@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PWallJump : EntityWallJump
+    public class CWallJump : EntityWallJump
     {
 
         public override bool CheckInterrupt()

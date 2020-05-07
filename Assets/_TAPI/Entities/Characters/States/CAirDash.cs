@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PAirDash : CharacterState
+    public class CAirDash : CharacterState
     {
         public override void OnStart()
         {

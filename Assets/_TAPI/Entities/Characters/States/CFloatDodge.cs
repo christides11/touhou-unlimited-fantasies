@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PFloatDodge : EntityState
+    public class CFloatDodge : EntityState
     {
         private CharacterStats Stats { get { return (CharacterStats)controller.definition.stats; } }
 

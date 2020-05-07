@@ -6,16 +6,16 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PJumpSquat : EntityJumpSquat
+    public class CWallCling : EntityWallCling
     {
         public override bool CheckInterrupt()
         {
-            if (controller.StateManager.CurrentStateFrame >= controller.definition.stats.jumpsquat)
+            if (controller.InputManager.GetButton(EntityInputs.Jump).firstPress)
             {
-                controller.StateManager.ChangeState((int)EntityStates.JUMP);
+                controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_JUMP);
                 return true;
             }
-            return false;
+            return base.CheckInterrupt();
         }
     }
 }

@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PEnemyStep : EntityState
+    public class CEnemyStep : EntityState
     {
         Vector3 inertiaBackup;
         public override void OnStart()

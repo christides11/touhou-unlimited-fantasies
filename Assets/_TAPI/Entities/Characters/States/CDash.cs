@@ -6,13 +6,8 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters.States
 {
-    public class PRun : EntityRun
+    public class CDash : EntityDash
     {
-        public override void OnStart()
-        {
-            base.OnStart();
-            ((CharacterController)controller).wasRunning = true;
-        }
 
         public override bool CheckInterrupt()
         {
@@ -20,6 +15,12 @@ namespace TAPI.Entities.Characters.States
             if (controller.CombatManager.CheckForAction())
             {
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
+                return true;
+            }
+            if (ei.GetButton(EntityInputs.Dash).firstPress
+                && controller.StateManager.CurrentStateFrame >= 3)
+            {
+                controller.StateManager.ChangeState((int)EntityStates.DASH);
                 return true;
             }
             if (ei.GetButton(EntityInputs.Jump).firstPress)
@@ -32,17 +33,12 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
-            if (ei.GetMovement(0).magnitude <= InputConstants.movementMagnitude)
+            if (controller.StateManager.CurrentStateFrame >= controller.definition.stats.dashTime)
             {
-                controller.StateManager.ChangeState((int)EntityStates.IDLE);
+                controller.StateManager.ChangeState((int)EntityStates.RUN);
                 return true;
             }
             return false;
-        }
-
-        public override void OnInterrupted()
-        {
-            base.OnInterrupted();
         }
     }
 }
