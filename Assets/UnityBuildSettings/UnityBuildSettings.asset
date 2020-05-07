@@ -23,7 +23,7 @@ MonoBehaviour:
     autoGenerate: 0
   _releaseTypeList:
     releaseTypes:
-    - typeName: Standard
+    - typeName: Default
       bundleIndentifier: 
       companyName: ChrisTides
       productName: Touhou
@@ -34,18 +34,8 @@ MonoBehaviour:
       sceneList:
         enabledScenes:
         - fileGUID: 534d961075226b543b23613574121ba6
-        - fileGUID: 34eeeb4fdc2c48243b153e5cb2787099
-    - typeName: DevBuild
-      bundleIndentifier: 
-      companyName: ChrisTides
-      productName: Touhou
-      developmentBuild: 1
-      allowDebugging: 0
-      enableHeadlessMode: 0
-      customDefines: 
-      sceneList:
-        enabledScenes:
-        - fileGUID: 534d961075226b543b23613574121ba6
+        - fileGUID: e9affd4b1ab461c42a3ca54c88810eab
+        - fileGUID: 3f09599c48299ca448a158e34b0af784
         - fileGUID: 34eeeb4fdc2c48243b153e5cb2787099
   _platformList:
     platforms:
@@ -66,40 +56,26 @@ MonoBehaviour:
       targetGroup: 1
   _projectConfigurations:
     configSet:
-      _Buckets: ffffffffffffffff030000000500000004000000ffffffff02000000
-      _HashCodes: 71a179055f1e9b04a36f0e55d7a5f34c7de9e336d9949a1400000000
-      _Next: ffffffffffffffffffffffffffffffff010000000000000000000000
-      _Count: 6
-      _Version: 6
+      _Buckets: 0100000002000000ffffffff
+      _HashCodes: 5d74602c5b38305747dd9054
+      _Next: ffffffffffffffff00000000
+      _Count: 3
+      _Version: 3
       _FreeList: -1
       _FreeCount: 0
       _Keys:
-      - Standard/PC/Windows x64
-      - Standard/PC
-      - Standard
-      - DevBuild/PC/Windows x64
-      - DevBuild/PC
-      - DevBuild
-      - 
+      - Default/PC/Windows x64
+      - Default/PC
+      - Default
       _Values:
       - enabled: 1
         childKeys: []
       - enabled: 1
         childKeys:
-        - Standard/PC/Windows x64
+        - Default/PC/Windows x64
       - enabled: 1
         childKeys:
-        - Standard/PC
-      - enabled: 1
-        childKeys: []
-      - enabled: 1
-        childKeys:
-        - DevBuild/PC/Windows x64
-      - enabled: 1
-        childKeys:
-        - DevBuild/PC
-      - enabled: 1
-        childKeys: []
+        - Default/PC
     showViewOptions: 0
     showConfigs: 0
     showBuildInfo: 0

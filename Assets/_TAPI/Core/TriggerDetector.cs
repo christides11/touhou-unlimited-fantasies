@@ -13,6 +13,10 @@ namespace TAPI
         public delegate void TriggerExitAction(Collider other);
         public event TriggerExitAction TriggerExit;
 
+        public Collider Collider { get { return coll; } }
+
+        [SerializeField] private Collider coll;
+
         public void OnTriggerEnter(Collider other)
         {
             TriggerEnter?.Invoke(other);

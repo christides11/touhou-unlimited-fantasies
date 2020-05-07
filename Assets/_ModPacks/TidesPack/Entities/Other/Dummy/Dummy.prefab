@@ -143,6 +143,7 @@ MonoBehaviour:
     m_Bits: 512
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   centerOffset: {x: 0, y: 0.5, z: 0}
+  softLockonRadius: 0
   lockonRadius: 20
   lockonFudging: 0.1
   lockonLayerMask:
@@ -151,6 +152,12 @@ MonoBehaviour:
   visibilityLayerMask:
     serializedVersion: 2
     m_Bits: 1024
+  enemyStepLayerMask:
+    serializedVersion: 2
+    m_Bits: 0
+  enemyStepCheckRadius: 0
+  currentAirJump: 0
+  currentAirDash: 0
   wasRunning: 0
   hoverMode: 0
   sideWallDistance: 0.7
@@ -5276,3 +5283,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cd901a85863da489d91dabf4993893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coll: {fileID: 9144190812465093371}

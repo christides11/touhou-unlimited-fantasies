@@ -204,6 +204,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cd901a85863da489d91dabf4993893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  coll: {fileID: 5790042689169332272}
 --- !u!65 &5790042689169332272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -340,9 +341,9 @@ MonoBehaviour:
   gravity: {x: 0, y: 0, z: 0}
   stableMovementSharpness: 15
   orientationSharpness: 10
-  airMovementSharpness: 15
+  airMovementSharpness: 25
   MaxAirMoveSpeed: 10
-  Drag: 0.1
+  Drag: 0
   IgnoredColliders: []
 --- !u!114 &959866917490569354
 MonoBehaviour:
@@ -389,6 +390,8 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 2147483648
   enemyStepCheckRadius: 2
+  currentAirJump: 0
+  currentAirDash: 0
   wasRunning: 0
   hoverMode: 0
   sideWallDistance: 0.7

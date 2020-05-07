@@ -17,6 +17,7 @@ namespace TAPI.Entities.Characters.States
             PhysicsManager.forceMovement = Vector3.zero;
             PhysicsManager.forceGravity = Vector3.zero;
             controller.ResetAirActions();
+            controller.currentAirJump = -1;
         }
 
         public override void OnUpdate()
@@ -33,7 +34,7 @@ namespace TAPI.Entities.Characters.States
                 StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if(StateManager.CurrentStateFrame >= 5)
+            if(StateManager.CurrentStateFrame >= 4)
             {
                 StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;

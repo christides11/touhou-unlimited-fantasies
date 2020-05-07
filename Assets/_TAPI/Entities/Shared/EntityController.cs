@@ -28,6 +28,8 @@ namespace TAPI.Entities
         public int Health { get; protected set; } = 0;
         public bool Lockonable { get; protected set; } = true;
 
+        public Vector3 Center { get { return pushbox.Collider.bounds.center; } }
+
         #region References
         [Header("References")]
         [SerializeField] protected EntityInput entityInput;
@@ -48,7 +50,8 @@ namespace TAPI.Entities
         public LayerMask GroundedLayerMask;
         public LayerMask attackLayerMask;
         public Vector3 groundCheckOffset;
-        public Vector3 centerOffset;
+        public int currentAirJump = 0;
+        public int currentAirDash = 0;
 
         [Header("Lock On")]
         public float softLockonRadius;
@@ -60,10 +63,6 @@ namespace TAPI.Entities
         [Header("Enemy Step")]
         public LayerMask enemyStepLayerMask;
         public float enemyStepCheckRadius;
-
-        [Header("Stuff")]
-        public int currentAirJump = 0;
-        public int currentAirDash = 0;
 
         /// <summary>
         /// Initializes the entity with the references needed.
@@ -185,7 +184,7 @@ namespace TAPI.Entities
         private void PickLockonTarget()
         {
             LockonTarget = null;
-            Collider[] list = Physics.OverlapSphere(transform.position, lockonRadius, lockonLayerMask);
+            Collider[] list = Physics.OverlapSphere(Center, lockonRadius, lockonLayerMask);
 
             // The direction of the lockon defaults to the forward of the camera.
             Vector3 referenceDirection = GetMovementVector(0, 1);
@@ -209,16 +208,17 @@ namespace TAPI.Entities
                     continue;
                 }
                 // Only objects with ILockonable can be locked on to.
-                if (c.TryGetComponent(out ILockonable lockonComponent))
+                if (c.TryGetComponent(out ILockonable targetLockonComponent))
                 {
                     // The target can not be locked on to right now.
-                    if (!lockonComponent.Lockonable)
+                    if (!targetLockonComponent.Lockonable)
                     {
                         continue;
                     }
-                    Vector3 targetDistance = (c.transform.position - transform.position);
+                    //Vector3 targetDistance = (c.transform.position - (transform.position+centerOffset));
+                    Vector3 targetDistance = targetLockonComponent.Center - Center;
                     // If we can't see the target, it can not be locked on to.
-                    if(Physics.Raycast(transform.position, targetDistance.normalized, lockonRadius, visibilityLayerMask))
+                    if(Physics.Raycast(Center, targetDistance.normalized, lockonRadius, visibilityLayerMask))
                     {
                         continue;
                     }
