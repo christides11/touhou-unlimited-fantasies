@@ -31,6 +31,7 @@ MonoBehaviour:
   animationAir: {fileID: 0}
   wrapMode: 0
   jumpCancelFrames: []
+  enemyStepFrames: []
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
@@ -47,7 +48,7 @@ MonoBehaviour:
       offset: {x: 0, y: 1, z: 1}
       size: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0}
-      radius: 1.5
+      radius: 2.5
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -84,7 +85,7 @@ MonoBehaviour:
   - nickname: Movement
     active: 1
     onHit: 0
-    onHitHitboxID: 0
+    onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
     startFrame: 5
@@ -101,7 +102,7 @@ MonoBehaviour:
   - nickname: Set Attack
     active: 1
     onHit: 0
-    onHitHitboxID: 0
+    onHitHitboxGroup: 0
     onDetect: 1
     onDetectHitboxGroup: 0
     startFrame: 10
@@ -111,5 +112,5 @@ MonoBehaviour:
       intVars: 00000000
       floatVars: []
       objectVars:
-      - {fileID: 3193021667813939668, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
+      - {fileID: 940632825082632535, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
       curveVars: []

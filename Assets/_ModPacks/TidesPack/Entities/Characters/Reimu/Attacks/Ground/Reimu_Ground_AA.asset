@@ -32,10 +32,12 @@ MonoBehaviour:
   wrapMode: 0
   jumpCancelFrames:
   - {x: 10, y: 100}
+  enemyStepFrames: []
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
-  attackCancelFrames: []
+  attackCancelFrames:
+  - {x: 6, y: 60}
   bulletCancelFrames:
   - {x: 10, y: 100}
   specialCancelFrames:
@@ -47,7 +49,7 @@ MonoBehaviour:
     hitGroupType: 0
     hitboxes:
     - shape: 0
-      offset: {x: 0, y: 1, z: 1.5}
+      offset: {x: 0, y: 1, z: 1.75}
       size: {x: 3, y: 3, z: 4}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
@@ -75,7 +77,7 @@ MonoBehaviour:
       forceType: 2
       forceRelation: 1
       causesTumble: 0
-      opponentForceMagnitude: -8
+      opponentForceMagnitude: -8.7
       opponentForceDir: {x: 0, y: 0, z: -1}
       forceIncludeYForce: 0
       opponentMaxMagnitude: 16
@@ -90,9 +92,9 @@ MonoBehaviour:
   - nickname: Friction
     active: 1
     onHit: 0
-    onHitHitboxID: 0
+    onHitHitboxGroup: 0
     onDetect: 0
-    onDetectHitboxID: 0
+    onDetectHitboxGroup: 0
     startFrame: 6
     endFrame: 30
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
@@ -105,9 +107,9 @@ MonoBehaviour:
   - nickname: Backwards
     active: 1
     onHit: 0
-    onHitHitboxID: 0
+    onHitHitboxGroup: 0
     onDetect: 0
-    onDetectHitboxID: 0
+    onDetectHitboxGroup: 0
     startFrame: 4
     endFrame: 4
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}

@@ -329,7 +329,6 @@ namespace TAPI.Entities
         /// <param name="hitboxID">The ID of the detectbox.</param>
         private void OnDetectboxDetect(GameObject hurtable, int hitboxID, int hitboxGroup)
         {
-            Debug.Log($"Detectbox. {hurtable.name}");
             detectboxesDetectedHurtables[hitboxGroup].Add(hurtable.GetComponent<IHurtable>());
             hurtablesDetected[hitboxID].Add(hurtable.GetComponent<IHurtable>());
             UpdateIDDetectboxGroup(hitboxID);

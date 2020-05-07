@@ -15,47 +15,43 @@ MonoBehaviour:
   attackName: AAA
   description: 
   stateOverride: -1
-  length: 40
+  length: 37
   groundAble: 1
   airAble: 0
   heightRestriction: 0
   possibleGround: 0
-  modifiesInertia: 1
-  inertiaModifer: 0.25
-  carriesInertia: 1
+  modifiesInertia: 0
+  inertiaModifer: 1
+  carriesInertia: 0
   carriedInertia: 1
-  chargeFrames: 
-  chargeLength: 0
+  chargeFrames: 04000000
+  chargeLength: 24
   gravityScaleAdded: 0
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
   jumpCancelFrames:
-  - {x: 10, y: 100}
+  - {x: 13, y: 100}
+  enemyStepFrames: []
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
   attackCancelFrames: []
   bulletCancelFrames:
-  - {x: 10, y: 100}
+  - {x: 13, y: 100}
   specialCancelFrames:
-  - {x: 10, y: 100}
+  - {x: 13, y: 100}
   hitboxGroups:
   - ID: 0
-    activeFramesStart: 5
-    activeFramesEnd: 9
+    activeFramesStart: 7
+    activeFramesEnd: 10
     hitGroupType: 0
     hitboxes:
-    - shape: 1
-      offset: {x: 0, y: 1, z: 1}
-      size: {x: 4, y: 2, z: 4}
-      rotation: {x: 0, y: 0, z: 0}
-      radius: 2
-    - shape: 1
+    - shape: 0
       offset: {x: 0, y: 1, z: 2}
-      size: {x: 0, y: 0, z: 0}
+      size: {x: 3, y: 2.5, z: 3.5}
       rotation: {x: 0, y: 0, z: 0}
-      radius: 2
+      radius: 0
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -68,64 +64,59 @@ MonoBehaviour:
       groundBounces: 0
       groundBounceForce: 0
       wallBounces: 0
-      wallBounceForce: 0
+      wallBounceForce: 20
       damageOnHit: 0
       damageOnBlock: 0
       hitKills: 1
-      attackerHitstop: 2
-      hitstop: 2
-      hitstun: 10
-      opponentResetXForce: 1
-      opponentResetYForce: 1
-      forceType: 0
-      forceRelation: 0
-      causesTumble: 0
-      opponentForceMagnitude: 7
-      opponentForceDir: {x: 0, y: 0, z: 1}
-      forceIncludeYForce: 0
-      opponentMaxMagnitude: 1
-      opponentMinMagnitude: 1
-    throwConfirm: {fileID: 0}
-  - ID: 1
-    activeFramesStart: 18
-    activeFramesEnd: 22
-    hitGroupType: 0
-    hitboxes:
-    - shape: 1
-      offset: {x: 0, y: 1, z: 1}
-      size: {x: 4, y: 1, z: 4}
-      rotation: {x: 0, y: 0, z: 0}
-      radius: 2
-    - shape: 1
-      offset: {x: 0, y: 1, z: 1}
-      size: {x: 0, y: 0, z: 0}
-      rotation: {x: 0, y: 0, z: 0}
-      radius: 2
-    attachToEntity: 1
-    hitInfo:
-      airOnly: 0
-      groundOnly: 0
-      continuousHit: 0
-      spaceBetweenHits: 0
-      breakArmor: 0
-      unblockable: 0
-      knockdown: 0
-      groundBounces: 0
-      groundBounceForce: 0
-      wallBounces: 0
-      wallBounceForce: 0
-      damageOnHit: 0
-      damageOnBlock: 0
-      hitKills: 1
-      attackerHitstop: 2
-      hitstop: 2
+      attackerHitstop: 4
+      hitstop: 4
       hitstun: 30
       opponentResetXForce: 1
       opponentResetYForce: 1
       forceType: 0
       forceRelation: 0
       causesTumble: 0
-      opponentForceMagnitude: 12
+      opponentForceMagnitude: 10
+      opponentForceDir: {x: 0, y: 0, z: 1}
+      forceIncludeYForce: 0
+      opponentMaxMagnitude: 1
+      opponentMinMagnitude: 1
+    throwConfirm: {fileID: 0}
+  - ID: 1
+    activeFramesStart: 13
+    activeFramesEnd: 16
+    hitGroupType: 0
+    hitboxes:
+    - shape: 0
+      offset: {x: 0, y: 1, z: 2.25}
+      size: {x: 3, y: 2.5, z: 3.5}
+      rotation: {x: 0, y: 0, z: 0}
+      radius: 0
+    attachToEntity: 1
+    hitInfo:
+      airOnly: 0
+      groundOnly: 0
+      continuousHit: 0
+      spaceBetweenHits: 0
+      breakArmor: 0
+      unblockable: 0
+      knockdown: 0
+      groundBounces: 0
+      groundBounceForce: 0
+      wallBounces: 1
+      wallBounceForce: 0
+      damageOnHit: 0
+      damageOnBlock: 0
+      hitKills: 1
+      attackerHitstop: 6
+      hitstop: 6
+      hitstun: 40
+      opponentResetXForce: 1
+      opponentResetYForce: 1
+      forceType: 0
+      forceRelation: 0
+      causesTumble: 1
+      opponentForceMagnitude: 30
       opponentForceDir: {x: 0, y: 0, z: 1}
       forceIncludeYForce: 0
       opponentMaxMagnitude: 1
@@ -134,14 +125,14 @@ MonoBehaviour:
   faceLockonTargetWindows: []
   bulletGroups: []
   events:
-  - nickname: Move Forward
+  - nickname: Forward
     active: 1
     onHit: 0
     onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
     startFrame: 5
-    endFrame: 30
+    endFrame: 5
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
     variables:
       intVars: 
@@ -157,12 +148,12 @@ MonoBehaviour:
     onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
-    startFrame: 31
-    endFrame: 40
+    startFrame: 13
+    endFrame: 37
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 0.9
+      - 0.3
       objectVars: []
       curveVars: []

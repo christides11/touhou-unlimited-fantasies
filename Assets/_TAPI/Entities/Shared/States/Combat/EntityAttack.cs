@@ -108,23 +108,26 @@ namespace TAPI.Entities.Shared
 
             if (!eventCancel)
             {
-                // Handle charging attacks.
-                bool charging = false;
-                if (InputManager.GetButton(CombatManager.CurrentAttack.executeButton[0].button).isDown)
+                if (currentAttack.chargeFrames.Count > 0)
                 {
-                    for (int i = 0; i < currentAttack.chargeFrames.Count; i++)
+                    // Handle charging attacks.
+                    bool charging = false;
+                    if (InputManager.GetButton(CombatManager.CurrentAttack.executeButton[0].button).isDown)
                     {
-                        if (StateManager.CurrentStateFrame == currentAttack.chargeFrames[i] &&
-                            (CombatManager.chargeTimes[i] < currentAttack.chargeLength || currentAttack.chargeLength == -1))
+                        for (int i = 0; i < currentAttack.chargeFrames.Count; i++)
                         {
-                            CombatManager.chargeTimes[i] += 1;
-                            charging = true;
+                            if (StateManager.CurrentStateFrame == currentAttack.chargeFrames[i] &&
+                                (CombatManager.chargeTimes[i] < currentAttack.chargeLength || currentAttack.chargeLength == -1))
+                            {
+                                CombatManager.chargeTimes[i] += 1;
+                                charging = true;
+                            }
                         }
                     }
-                }
-                if (charging)
-                {
-                    return;
+                    if (charging)
+                    {
+                        return;
+                    }
                 }
                 controller.StateManager.IncrementFrame();
             }
