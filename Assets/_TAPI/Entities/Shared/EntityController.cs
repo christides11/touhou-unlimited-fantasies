@@ -331,22 +331,6 @@ namespace TAPI.Entities
         }
 
         /// <summary>
-        /// If the entity can currently air jump.
-        /// </summary>
-        /// <returns>True if the entity can air jump currently.</returns>
-        public virtual bool CheckAirDash()
-        {
-            if (InputManager.GetButton(EntityInputs.Dash).firstPress)
-            {
-                //if (currentAirJump < definition.stats.airdas)
-                //{
-                    return true;
-                //}
-            }
-            return false;
-        }
-
-        /// <summary>
         // Tries to jump cancel if possible.
         /// </summary>
         /// <returns>True if the jump cancel was successful.</returns>

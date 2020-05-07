@@ -85,10 +85,7 @@ namespace TAPI.Entities.Shared
                 HandleBulletGroup(i, currentAttack.bulletGroups[i]);
             }
 
-            if (CheckEnemyStepWindows(currentAttack) 
-                || CheckDashCancelWindows(currentAttack)
-                || CheckJumpCancelWindows(currentAttack)
-                || CheckLandCancelWindows(currentAttack))
+            if (CheckCancelWindows(currentAttack))
             {
                 CombatManager.Reset();
                 return;
@@ -148,7 +145,19 @@ namespace TAPI.Entities.Shared
             PhysicsManager.forceMovement = Vector3.zero;
         }
 
-        private void HandleBulletGroup(int index, BulletGroup bulletGroup)
+        protected virtual bool CheckCancelWindows(AttackSO currentAttack)
+        {
+            if (CheckEnemyStepWindows(currentAttack)
+                || CheckDashCancelWindows(currentAttack)
+                || CheckJumpCancelWindows(currentAttack)
+                || CheckLandCancelWindows(currentAttack))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        protected virtual void HandleBulletGroup(int index, BulletGroup bulletGroup)
         {
             for (int b = 0; b < bulletGroup.spawns.Count; b++)
             {
@@ -169,7 +178,7 @@ namespace TAPI.Entities.Shared
         /// </summary>
         /// <param name="group">The group number being processed.</param>
         /// <param name="hitboxGroup">The group being processed.</param>
-        private void HandleBoxGroup(int group, HitboxGroup hitboxGroup)
+        protected virtual void HandleBoxGroup(int group, HitboxGroup hitboxGroup)
         {
             // If this is the end of the group's lifetime, deactivate them.
             if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)

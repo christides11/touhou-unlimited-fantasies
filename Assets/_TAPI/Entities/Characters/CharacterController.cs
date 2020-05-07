@@ -1,11 +1,17 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TAPI.Core;
 using TAPI.Entities.Characters.States;
 using TAPI.Entities.Shared;
 using UnityEngine;
 
 namespace TAPI.Entities.Characters
 {
+    /// <summary>
+    /// The main controller of a character. Unlike the general EntityController,
+    /// this controller is assumed to be for entities that the player will control,
+    /// and assumes that a few extra states will be used. 
+    /// </summary>
     public class CharacterController : EntityController
     {
         [HideInInspector] public bool wasRunning;
@@ -23,6 +29,9 @@ namespace TAPI.Entities.Characters
             SetupDefaultStates();
         }
 
+        /// <summary>
+        /// Sets up the states and starts the state machine.
+        /// </summary>
         protected virtual void SetupDefaultStates()
         {
             // Combat
@@ -56,7 +65,22 @@ namespace TAPI.Entities.Characters
             StateManager.ChangeState((int)EntityStates.FALL);
         }
 
-        #region Walls
+        /// <summary>
+        /// If the entity can currently air jump.
+        /// </summary>
+        /// <returns>True if the entity can air jump currently.</returns>
+        public virtual bool CheckAirDash()
+        {
+            if (InputManager.GetButton(EntityInputs.Dash).firstPress)
+            {
+                //if (currentAirJump < definition.stats.airdas)
+                //{
+                return true;
+                //}
+            }
+            return false;
+        }
+
         RaycastHit hit;
         public bool CheckForWallsSide()
         {
@@ -82,6 +106,5 @@ namespace TAPI.Entities.Characters
                 
             return false;
         }
-        #endregion
     }
 }
