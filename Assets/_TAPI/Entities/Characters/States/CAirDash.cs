@@ -11,7 +11,7 @@ namespace TAPI.Entities.Characters.States
         public override void OnStart()
         {
             base.OnStart();
-            controller.currentAirDash++;
+            ((CharacterController)controller).currentAirDash++;
             controller.PhysicsManager.forceGravity = Vector3.zero;
             Vector2 movement = controller.InputManager.GetMovement(0);
             if(movement.magnitude < InputConstants.movementMagnitude)

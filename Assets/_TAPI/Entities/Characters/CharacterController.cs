@@ -16,6 +16,7 @@ namespace TAPI.Entities.Characters
     {
         [HideInInspector] public bool wasRunning;
         [HideInInspector] public bool hoverMode;
+        public int currentAirDash = 0;
 
         [Header("Wall Movement")]
         public float sideWallDistance;
@@ -92,6 +93,12 @@ namespace TAPI.Entities.Characters
                 }
             }
             return false;
+        }
+
+        public override void ResetAirActions()
+        {
+            base.ResetAirActions();
+            currentAirDash = 0;
         }
 
 

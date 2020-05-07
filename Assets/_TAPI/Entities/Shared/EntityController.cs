@@ -51,7 +51,6 @@ namespace TAPI.Entities
         public LayerMask attackLayerMask;
         public Vector3 groundCheckOffset;
         public int currentAirJump = 0;
-        public int currentAirDash = 0;
 
         [Header("Lock On")]
         public float softLockonRadius;
@@ -398,7 +397,6 @@ namespace TAPI.Entities
         {
             PhysicsManager.CurrentGravityScale = 1.0f;
             currentAirJump = 0;
-            currentAirDash = 0;
         }
     }
 }
