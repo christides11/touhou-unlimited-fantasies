@@ -35,37 +35,52 @@ namespace TAPI.Entities
             states.Add(stateNumber, state);
         }
 
-        public virtual void ChangeState(int stateNumber, uint StateTime = 0, bool CallOnInterupt = true)
+        /// <summary>
+        /// Changes the state to the given one.
+        /// </summary>
+        /// <param name="state">The state to change to.</param>
+        /// <param name="stateFrame">What frame to start the state at.</param>
+        /// <param name="callOnInterrupt">If OnInterrupt of the current state should be called.</param>
+        /// <returns></returns>
+        public virtual bool ChangeState(int state, uint stateFrame = 0, bool callOnInterrupt = true)
         {
-            if (states.ContainsKey(stateNumber))
+            if (states.ContainsKey(state))
             {
-                if (CallOnInterupt)
+                if (callOnInterrupt)
                 {
                     if (currentState != null)
                     {
                         currentState.OnInterrupted();
                     }
                 }
-                currentStateFrame = StateTime;
-                currentState = states[stateNumber];
+                currentStateFrame = stateFrame;
+                currentState = states[state];
                 if (currentStateFrame == 0)
                 {
                     currentState.OnStart();
                 }
                 currentStateName = currentState.GetName();
+                return true;
             }
+            return false;
         }
 
-        public virtual void ChangeState(EntityState State, uint StateTime = 0, bool CallOnInterupt = true)
+        /// <summary>
+        /// Changes the state to the given one.
+        /// </summary>
+        /// <param name="state">The state to change to.</param>
+        /// <param name="stateFrame">What frame to start the state at.</param>
+        /// <param name="callOnInterrupt">If OnInterrupt of the current state should be called.</param>
+        public virtual void ChangeState(EntityState state, uint stateFrame = 0, bool callOnInterrupt = true)
         {
-            currentStateFrame = StateTime;
-            if (CallOnInterupt)
+            currentStateFrame = stateFrame;
+            if (callOnInterrupt)
             {
                 currentState.OnInterrupted();
             }
 
-            currentState = State;
-            State.controller = controller;
+            currentState = state;
+            state.controller = controller;
             if (currentStateFrame == 0)
             {
                 currentState.OnStart();

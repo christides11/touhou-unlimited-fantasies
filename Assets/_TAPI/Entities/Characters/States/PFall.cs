@@ -37,7 +37,7 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;
             }
-            if (controller.InputManager.GetButton(EntityInputs.Dash).firstPress)
+            if (((CharacterController)controller).CheckAirDash())
             {
                 controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;

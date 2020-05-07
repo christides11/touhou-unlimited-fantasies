@@ -65,21 +65,35 @@ namespace TAPI.Entities.Characters
             StateManager.ChangeState((int)EntityStates.FALL);
         }
 
-        /// <summary>
-        /// If the entity can currently air jump.
-        /// </summary>
-        /// <returns>True if the entity can air jump currently.</returns>
         public virtual bool CheckAirDash()
         {
-            if (InputManager.GetButton(EntityInputs.Dash).firstPress)
+            if (InputManager.GetButton(EntityInputs.Dash, 0, true).firstPress)
             {
-                //if (currentAirJump < definition.stats.airdas)
-                //{
-                return true;
-                //}
+                if (currentAirDash < ((CharacterStats)definition.stats).maxAirDashes)
+                {
+                    return true;
+                }
             }
             return false;
         }
+
+        public override bool DashCancel()
+        {
+            if (IsGrounded)
+            {
+                StateManager.ChangeState((int)EntityStates.DASH);
+                return true;
+            }
+            else
+            {
+                if (currentAirDash < ((CharacterStats)definition.stats).maxAirDashes) {
+                    StateManager.ChangeState((int)EntityStates.AIR_DASH);
+                    return true;
+                }
+            }
+            return false;
+        }
+
 
         RaycastHit hit;
         public bool CheckForWallsSide()

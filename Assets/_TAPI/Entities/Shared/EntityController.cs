@@ -9,6 +9,9 @@ using System;
 
 namespace TAPI.Entities
 {
+    /// <summary>
+    /// A general controller that should work for a majority of entities.
+    /// </summary>
     public class EntityController : SimObject, ILockonable
     {
         public GameManager GameManager { get; protected set; }

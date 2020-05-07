@@ -11,7 +11,7 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            if (controller.InputManager.GetButton(EntityInputs.Dash).firstPress)
+            if (((CharacterController)controller).CheckAirDash())
             {
                 controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;
