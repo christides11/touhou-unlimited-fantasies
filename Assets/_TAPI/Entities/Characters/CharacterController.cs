@@ -25,35 +25,34 @@ namespace TAPI.Entities.Characters
 
         protected virtual void SetupDefaultStates()
         {
+            // Combat
+            StateManager.AddState(new PAttack(), (int)EntityStates.ATTACK);
+            StateManager.AddState(new EntityFlinch(), (int)EntityStates.FLINCH);
+
+            // Ground
             StateManager.AddState(new PIdle(), (int)EntityStates.IDLE);
             StateManager.AddState(new PWalk(), (int)EntityStates.WALK);
             StateManager.AddState(new PDash(), (int)EntityStates.DASH);
             StateManager.AddState(new PRun(), (int)EntityStates.RUN);
-            StateManager.AddState(new PFall(), (int)EntityStates.FALL);
-            StateManager.AddState(new PEnemyStep(), (int)EntityStates.ENEMY_STEP);
-            PJump jump = new PJump();
-            StateManager.AddState(jump, (int)EntityStates.JUMP);
-            PJumpSquat jumpSquat = new PJumpSquat();
-            StateManager.AddState(jumpSquat, (int)EntityStates.JUMP_SQUAT);
-            PAirDash airDash = new PAirDash();
-            StateManager.AddState(airDash, (int)EntityStates.AIR_DASH);
-            PWallCling wallCling = new PWallCling();
-            StateManager.AddState(wallCling, (int)BaseCharacterStates.WALL_CLING);
-            PWallJump wallJump = new PWallJump();
-            StateManager.AddState(wallJump, (int)BaseCharacterStates.WALL_JUMP);
-            PFloat aFloat = new PFloat();
-            StateManager.AddState(aFloat, (int)EntityStates.FLOAT);
-            PAirJump airJump = new PAirJump();
-            StateManager.AddState(airJump, (int)EntityStates.AIR_JUMP);
-            PFloatDodge floatDodge = new PFloatDodge();
-            StateManager.AddState(floatDodge, (int)BaseCharacterStates.FLOAT_DODGE);
-            PFloatDash floatDash = new PFloatDash();
-            StateManager.AddState(floatDash, (int)BaseCharacterStates.FLOAT_DASH);
-            PAttack attack = new PAttack();
-            StateManager.AddState(attack, (int)EntityStates.ATTACK);
-            EntityFlinch flinch = new EntityFlinch();
-            StateManager.AddState(flinch, (int)EntityStates.FLINCH);
+            StateManager.AddState(new PJumpSquat(), (int)EntityStates.JUMP_SQUAT);
 
+            // Air
+            StateManager.AddState(new PJump(), (int)EntityStates.JUMP);
+            StateManager.AddState(new PAirJump(), (int)EntityStates.AIR_JUMP);
+            StateManager.AddState(new PFall(), (int)EntityStates.FALL);
+            StateManager.AddState(new PAirDash(), (int)EntityStates.AIR_DASH);
+            StateManager.AddState(new PEnemyStep(), (int)EntityStates.ENEMY_STEP);
+
+            // Float
+            StateManager.AddState(new PFloat(), (int)EntityStates.FLOAT);
+            StateManager.AddState(new PFloatDodge(), (int)BaseCharacterStates.FLOAT_DODGE);
+            StateManager.AddState(new PFloatDash(), (int)BaseCharacterStates.FLOAT_DASH);
+
+            // Walls
+            StateManager.AddState(new PWallCling(), (int)BaseCharacterStates.WALL_CLING);
+            StateManager.AddState(new PWallJump(), (int)BaseCharacterStates.WALL_JUMP);
+
+            // Start State Machine
             StateManager.ChangeState((int)EntityStates.FALL);
         }
 
