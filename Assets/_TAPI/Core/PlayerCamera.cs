@@ -3,6 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 using Cinemachine;
 using TAPI.Inputs;
+using TAPI.Entities;
+using TAPI.Combat;
+using System;
 
 namespace TAPI.Core
 {
@@ -18,6 +21,7 @@ namespace TAPI.Core
         [SerializeField] private CinemachineFreeLook thirdPersonLook;
         [SerializeField] private CinemachineVirtualCamera lockOnCam;
         [SerializeField] private CinemachineTargetGroup lockOnTargetGroup;
+        [SerializeField] private CameraShake cameraShake;
 
         [SerializeField] private float mouseDeadzone = 0.05f;
         [SerializeField] private float mouseXAxisSpeed = 1.0f;
@@ -29,10 +33,23 @@ namespace TAPI.Core
         [SerializeField] private float stickXAxisSpeed = 1.0f;
         [SerializeField] private float stickYAxisSpeed = 1.0f;
 
+        private EntityController currentEntity;
+
+        public virtual void Initialize(EntityController entity)
+        {
+            currentEntity = entity;
+            currentEntity.CombatManager.hitboxManager.OnHitboxHit += CauseShake;
+        }
+
+        private void CauseShake(GameObject hurtableHit, int hitboxGroupIndex, MovesetAttackNode attack)
+        {
+            cameraShake.Shake(attack.action.hitboxGroups[hitboxGroupIndex].cameraShake);
+        }
+
         public virtual void Update()
         {
-            Vector2 stickInput = new Vector2(GlobalInputManager.instance.GetAxis(0, Action.Camera_X),
-                GlobalInputManager.instance.GetAxis(0, Action.Camera_Y));
+            Vector2 stickInput = new Vector2(GlobalInputManager.instance.GetAxis(0, Inputs.Action.Camera_X),
+                GlobalInputManager.instance.GetAxis(0, Inputs.Action.Camera_Y));
             switch (GlobalInputManager.instance.GetCurrentInputMethod(0))
             {
                 case CurrentInputMethod.MK:

@@ -255,6 +255,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7870037177381701912}
   - component: {fileID: 1272570577}
+  - component: {fileID: 682206380411410042}
   m_Layer: 0
   m_Name: PlayerCamera
   m_TagString: Untagged
@@ -297,6 +298,7 @@ MonoBehaviour:
   thirdPersonLook: {fileID: 7870037177992123087}
   lockOnCam: {fileID: 7935446693508596637}
   lockOnTargetGroup: {fileID: 5125472044599796219}
+  cameraShake: {fileID: 682206380411410042}
   mouseDeadzone: 0.05
   mouseXAxisSpeed: 0.8
   mouseYAxisSpeed: 0.8
@@ -304,6 +306,19 @@ MonoBehaviour:
   stickAxialDeadZone: 0.18
   stickXAxisSpeed: 0.8
   stickYAxisSpeed: 0.8
+--- !u!114 &682206380411410042
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870037177381701913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116fca2e2f72d9e4787259852c7be1dc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  freeLook: {fileID: 7870037177992123087}
 --- !u!1 &7870037177992123084
 GameObject:
   m_ObjectHideFlags: 0
@@ -781,6 +796,7 @@ GameObject:
   - component: {fileID: 7870037178679435137}
   - component: {fileID: 7870037178679435150}
   - component: {fileID: 7870037178679435151}
+  - component: {fileID: 4340573504331708504}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -895,6 +911,23 @@ MonoBehaviour:
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
+--- !u!114 &4340573504331708504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870037178679435149}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &7870037178748706333
 GameObject:
   m_ObjectHideFlags: 0
@@ -907,6 +940,7 @@ GameObject:
   - component: {fileID: 7870037178748706321}
   - component: {fileID: 7870037178748706334}
   - component: {fileID: 7870037178748706335}
+  - component: {fileID: 7092544769886498779}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1021,6 +1055,23 @@ MonoBehaviour:
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
+--- !u!114 &7092544769886498779
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870037178748706333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}
 --- !u!1 &7870037178842028434
 GameObject:
   m_ObjectHideFlags: 0
@@ -1107,6 +1158,7 @@ GameObject:
   - component: {fileID: 7870037179034517981}
   - component: {fileID: 7870037179034517978}
   - component: {fileID: 7870037179034517979}
+  - component: {fileID: 5849610352367562778}
   m_Layer: 0
   m_Name: cm
   m_TagString: Untagged
@@ -1221,3 +1273,20 @@ MonoBehaviour:
   m_BiasX: 0
   m_BiasY: 0
   m_CenterOnActivate: 1
+--- !u!114 &5849610352367562778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7870037179034517977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  m_PivotOffset: {x: 0, y: 0, z: 0}
+  m_AmplitudeGain: 0
+  m_FrequencyGain: 1
+  mNoiseOffsets: {x: 0, y: 0, z: 0}

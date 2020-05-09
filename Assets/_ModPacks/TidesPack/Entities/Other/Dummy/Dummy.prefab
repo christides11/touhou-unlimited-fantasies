@@ -142,7 +142,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
-  centerOffset: {x: 0, y: 0.5, z: 0}
+  currentAirJump: 0
   softLockonRadius: 0
   lockonRadius: 20
   lockonFudging: 0.1
@@ -156,10 +156,9 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   enemyStepCheckRadius: 0
-  currentAirJump: 0
-  currentAirDash: 0
   wasRunning: 0
   hoverMode: 0
+  currentAirDash: 0
   sideWallDistance: 0.7
   lastWall: {fileID: 0}
   currentWallNormal: {x: 0, y: 0, z: 0}
@@ -2616,7 +2615,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2103768422263544786
 Transform:
   m_ObjectHideFlags: 0
@@ -5269,7 +5268,7 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.5, y: 2, z: 1.1}
+  m_Size: {x: 0.9, y: 2, z: 0.9}
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &7085641176877330724
 MonoBehaviour:

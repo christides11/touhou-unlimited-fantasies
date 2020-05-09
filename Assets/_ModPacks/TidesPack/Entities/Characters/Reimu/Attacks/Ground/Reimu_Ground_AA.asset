@@ -53,6 +53,13 @@ MonoBehaviour:
       size: {x: 3, y: 3, z: 4}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
+    cameraShake:
+      amplitude: 0
+      frequency: 0
+      holdLength: 0
+      fadeLength: 0
+      amplitudeDecay: 0
+      frequencyDecay: 0
     attachToEntity: 1
     hitInfo:
       airOnly: 0

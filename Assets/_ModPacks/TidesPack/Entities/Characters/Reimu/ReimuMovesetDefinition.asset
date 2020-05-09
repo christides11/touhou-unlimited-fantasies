@@ -110,7 +110,7 @@ MonoBehaviour:
   m_Name: Ground_Gohei Rush
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -232, y: -968}
+  position: {x: -568, y: -1256}
   ports:
     keys:
     - lastNode
@@ -156,10 +156,7 @@ MonoBehaviour:
   - button: 0
     stickDir: {x: 0, y: 1}
     dirDeviation: 0.85
-  buttonSequence:
-  - button: 0
-    stickDir: {x: 0, y: -1}
-    dirDeviation: 0.85
+  buttonSequence: []
   action: {fileID: 11400000, guid: 96edd3a7d1cffc74ab4827d34ba48189, type: 2}
   cancelWindows:
   - {x: 0, y: 0}
@@ -178,7 +175,7 @@ MonoBehaviour:
   m_Name: Ground_AA
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 8, y: -472}
+  position: {x: 8, y: -664}
   ports:
     keys:
     - lastNode
@@ -373,12 +370,13 @@ MonoBehaviour:
   m_Name: Ground_A
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -232, y: -472}
+  position: {x: -232, y: -664}
   ports:
     keys:
     - lastNode
     - nextNode
     - nextNode 0
+    - nextNode 1
     values:
     - _fieldName: lastNode
       _node: {fileID: -1246202044470491312}
@@ -411,6 +409,18 @@ MonoBehaviour:
       _connectionType: 0
       _typeConstraint: 0
       _dynamic: 1
+    - _fieldName: nextNode 1
+      _node: {fileID: -1246202044470491312}
+      _typeQualifiedName: TAPI.Combat.MovesetAttackNode, TAPI_CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: lastNode
+        node: {fileID: 12511944799891416}
+        reroutePoints: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 1
   lastNode: {fileID: 0}
   executeButton:
   - button: 3
@@ -419,9 +429,11 @@ MonoBehaviour:
   buttonSequence: []
   action: {fileID: 11400000, guid: 45c7d584065e42c4f96ddda7d9e513d9, type: 2}
   cancelWindows:
-  - {x: 13, y: 100}
+  - {x: 9, y: 25}
+  - {x: 26, y: 100}
   nextNode:
   - {fileID: -3004213846102699117}
+  - {fileID: 12511944799891416}
 --- !u!114 &-44835109134355712
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -498,6 +510,7 @@ MonoBehaviour:
   - {fileID: -44835109134355712}
   - {fileID: -5814627679322703643}
   - {fileID: 940632825082632535}
+  - {fileID: 12511944799891416}
   groundAttackCommandNormals:
   - {fileID: -5814627679322703643}
   - {fileID: 3193021667813939668}
@@ -523,6 +536,56 @@ MonoBehaviour:
   airSpecialStartNodes: []
   floatingSpecialCommandNormals: []
   floatingSpecialStartNodes: []
+--- !u!114 &12511944799891416
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
+  m_Name: Ground_AA*A
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 8, y: -408}
+  ports:
+    keys:
+    - lastNode
+    - nextNode
+    values:
+    - _fieldName: lastNode
+      _node: {fileID: 12511944799891416}
+      _typeQualifiedName: TAPI.Combat.MovesetAttackNode, TAPI_CSharp, Version=0.0.0.0,
+        Culture=neutral, PublicKeyToken=null
+      connections:
+      - fieldName: nextNode 1
+        node: {fileID: -1246202044470491312}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: nextNode
+      _node: {fileID: 12511944799891416}
+      _typeQualifiedName: System.Collections.Generic.List`1[[TAPI.Combat.MovesetAttackNode,
+        TAPI_CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
+        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  lastNode: {fileID: 0}
+  executeButton:
+  - button: 3
+    stickDir: {x: 0, y: 0}
+    dirDeviation: 15
+  buttonSequence: []
+  action: {fileID: 11400000, guid: 3dc7fbfd5e174bf499f236231c449f9a, type: 2}
+  cancelWindows: []
+  nextNode: []
 --- !u!114 &940632825082632535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -536,7 +599,7 @@ MonoBehaviour:
   m_Name: Ground_GoheiRush_Hit
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 8, y: -968}
+  position: {x: -328, y: -1256}
   ports:
     keys:
     - lastNode
@@ -583,7 +646,7 @@ MonoBehaviour:
   m_Name: Ground Launcher
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -232, y: -728}
+  position: {x: -568, y: -1016}
   ports:
     keys:
     - lastNode
@@ -695,7 +758,7 @@ MonoBehaviour:
   m_Name: Ground_AAA
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: 264, y: -472}
+  position: {x: 264, y: -664}
   ports:
     keys:
     - lastNode

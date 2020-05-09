@@ -41,7 +41,7 @@ namespace TAPI.Entities
                 hitStun--;
             }
 
-            hitboxManager.LateUpdate();
+            hitboxManager.TickBoxes();
         }
 
         public void Reset(bool resetAttack = true)
@@ -50,7 +50,7 @@ namespace TAPI.Entities
             {
                 return;
             }
-            hitboxManager.Cleanup();
+            hitboxManager.Reset();
             if (resetAttack)
             {
                 currentAttack = null;

@@ -201,16 +201,6 @@ namespace TAPI.Entities.Shared
             switch (hitboxGroup.hitGroupType) {
                 case HitboxGroupType.HIT:
                     CombatManager.hitboxManager.CreateHitboxes(group);
-
-                    if (hitboxGroup.hitInfo.continuousHit)
-                    {
-                        if ((controller.StateManager.CurrentStateFrame - hitboxGroup.activeFramesStart) % hitboxGroup.hitInfo.spaceBetweenHits
-                            == 0
-                            && CombatManager.hitStop == 0)
-                        {
-                            CombatManager.hitboxManager.ReactivateHitboxes(group);
-                        }
-                    }
                     break;
                 case HitboxGroupType.DETECT:
                     CombatManager.hitboxManager.CreateDetectboxes(group);

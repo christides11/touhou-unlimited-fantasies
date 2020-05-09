@@ -12,6 +12,9 @@ namespace TAPI.Entities
     /// </summary>
     public class EntityHitboxManager
     {
+        public delegate void HitboxGroupEventAction(GameObject hurtableHit, int hitboxGroupIndex, MovesetAttackNode attack);
+        public event HitboxGroupEventAction OnHitboxHit;
+
         // Hitbox Group : Hitboxes
         private Dictionary<int, List<Hitbox>> hitboxes = new Dictionary<int, List<Hitbox>>();
         // Hitbox ID : IHurtables Hit
@@ -33,7 +36,11 @@ namespace TAPI.Entities
             this.controller = controller;
         }
 
-        public void LateUpdate()
+        /// <summary>
+        /// Checks the hitboxes and detectboxes to see what they hit this frame.
+        /// This should be called in late update, as physics update right after update.
+        /// </summary>
+        public void TickBoxes()
         {
             foreach (List<Hitbox> hitboxGroup in hitboxes.Values)
             {
@@ -53,73 +60,30 @@ namespace TAPI.Entities
         }
 
         /// <summary>
-        /// Destroy the hitboxes and detectboxes.
+        /// Destroys all boxes and clears variables.
         /// </summary>
-        public void Cleanup()
+        public void Reset()
         {
-            CleanupAllHitboxes();
-            CleanupAllDetectboxes();
+            CleanupAllBoxes<Hitbox>(ref hitboxes);
+            CleanupAllBoxes<DetectionBox>(ref detectboxes);
             hurtablesHit.Clear();
             detectboxesDetectedHurtables.Clear();
             hurtablesDetected.Clear();
         }
 
         /// <summary>
-        /// Destroy all hitboxes and empty the dictionary.
+        /// Destroy all the boxes and clears the dictionary.
         /// </summary>
-        private void CleanupAllHitboxes()
+        private void CleanupAllBoxes<T>(ref Dictionary<int, List<T>> d)
         {
-            foreach(int key in hitboxes.Keys)
+            foreach(int key in d.Keys)
             {
-                CleanupHitboxes(key);
+                for (int i = 0; i < hitboxes[key].Count; i++)
+                {
+                    GameObject.Destroy(hitboxes[key][i].gameObject);
+                }
             }
-            hitboxes.Clear();
-        }
-
-        /// <summary>
-        /// Destory all detectboxes and empty the dictionary.
-        /// </summary>
-        private void CleanupAllDetectboxes()
-        {
-            foreach(int key in detectboxes.Keys)
-            {
-                CleanupDetectboxes(key);
-            }
-            detectboxes.Clear();
-        }
-
-        /// <summary>
-        /// Cleanup the hitboxes of the given group.
-        /// </summary>
-        /// <param name="group">The group to clean the hitboxes for.</param>
-        public virtual void CleanupHitboxes(int group)
-        {
-            if (!hitboxes.ContainsKey(group))
-            {
-                return;
-            }
-
-            for (int i = 0; i < hitboxes[group].Count; i++)
-            {
-                GameObject.Destroy(hitboxes[group][i].gameObject);
-            }
-        }
-
-        /// <summary>
-        /// Cleanup the detectboxes of the given group.
-        /// </summary>
-        /// <param name="group">The group to clean the hitboxes for.</param>
-        public virtual void CleanupDetectboxes(int group)
-        {
-            if (!detectboxes.ContainsKey(group))
-            {
-                return;
-            }
-
-            for (int i = 0; i < detectboxes[group].Count; i++)
-            {
-                GameObject.Destroy(detectboxes[group][i].gameObject);
-            }
+            d.Clear();
         }
 
         public virtual void DeactivateHitboxes(int group)
@@ -149,19 +113,27 @@ namespace TAPI.Entities
         }
 
         /// <summary>
-        /// Reactivates the hitboxes within a given group.
+        /// Reactivates the hitboxes in a ID group.
         /// </summary>
-        /// <param name="group">The group to reactivate the hitboxes for.</param>
-        public void ReactivateHitboxes(int group)
+        /// <param name="ID">The group to reactivate the hitboxes for.</param>
+        public void ReactivateHitboxesByID(int ID)
         {
-            if (!hitboxes.ContainsKey(group))
-            {
-                return;
-            }
+            AttackSO atk = combatManager.currentAttack.action;
 
-            for (int i = 0; i < hitboxes[group].Count; i++)
+            hurtablesHit[ID]?.Clear();
+
+            for(int i = 0; i < atk.hitboxGroups.Count; i++)
             {
-                hitboxes[group][i].ReActivate(hurtablesHit[combatManager.currentAttack.action.hitboxGroups[group].ID]);
+                if(atk.hitboxGroups[i].ID == ID)
+                {
+                    if (hitboxes.ContainsKey(i))
+                    {
+                        for(int w = 0; w < hitboxes[i].Count; w++)
+                        {
+                            hitboxes[i][w].ReActivate(hurtablesHit[ID]);
+                        }
+                    }
+                }
             }
         }
 
@@ -184,6 +156,8 @@ namespace TAPI.Entities
                 return;
             }
             List<Hitbox> hitboxList = new List<Hitbox>(currentGroup.hitboxes.Count);
+            
+            // Keep track of what this ID has hit.
             if (!hurtablesHit.ContainsKey(currentGroup.ID))
             {
                 hurtablesHit.Add(currentGroup.ID, new List<IHurtable>());
@@ -219,9 +193,11 @@ namespace TAPI.Entities
                 {
                     hbox.transform.SetParent(controller.transform);
                 }
+
                 int cID = currentGroup.ID;
+                int groupLocalVar = group;
                 // Activate the hitbox and add it to our list.
-                hbox.GetComponent<Hitbox>().OnHurt += (hurtable, hInfo) => { OnHitboxHurt(hurtable, hInfo, cID); };
+                hbox.GetComponent<Hitbox>().OnHurt += (hurtable, hInfo) => { OnHitboxHurt(hurtable, hInfo, cID, group); };
                 hbox.GetComponent<Hitbox>().Activate(controller.gameObject, controller.visualTransform,
                     currentGroup.hitInfo, hurtablesHit[currentGroup.ID]);
                 hitboxList.Add(hbox.GetComponent<Hitbox>());
@@ -236,11 +212,12 @@ namespace TAPI.Entities
         /// <param name="hurtableHit">The hurtable that was hit.</param>
         /// <param name="hitInfo">The hitInfo of the hitbox.</param>
         /// <param name="hitboxID">The hitbox ID of the hitbox.</param>
-        private void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID)
+        private void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID, int hitboxGroup)
         {
             hurtablesHit[hitboxID].Add(hurtableHit.GetComponent<IHurtable>());
             combatManager.hitStop = hitInfo.attackerHitstop;
             UpdateIDHitboxGroup(hitboxID);
+            OnHitboxHit?.Invoke(hurtableHit, hitboxGroup, combatManager.currentAttack);
         }
 
         /// <summary>

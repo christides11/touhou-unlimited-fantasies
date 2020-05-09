@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Ground Attack A
   description: 
   stateOverride: -1
-  length: 35
+  length: 50
   groundAble: 1
   airAble: 0
   heightRestriction: 0
@@ -32,6 +32,7 @@ MonoBehaviour:
   wrapMode: 8
   jumpCancelFrames:
   - {x: 9, y: 100}
+  enemyStepFrames: []
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
@@ -51,6 +52,13 @@ MonoBehaviour:
       size: {x: 3.4, y: 1.25, z: 3.32}
       rotation: {x: 0, y: 0, z: 0}
       radius: 5
+    cameraShake:
+      amplitude: 0.7
+      frequency: 4
+      holdLength: 0.03
+      fadeLength: 0.01
+      amplitudeDecay: 0.7
+      frequencyDecay: 1
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -125,8 +133,8 @@ MonoBehaviour:
     onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
-    startFrame: 8
-    endFrame: 35
+    startFrame: 7
+    endFrame: 50
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
     variables:
       intVars: 

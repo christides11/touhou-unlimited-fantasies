@@ -42,8 +42,8 @@ MonoBehaviour:
   - {x: 4, y: 60}
   hitboxGroups:
   - ID: 0
-    activeFramesStart: 3
-    activeFramesEnd: 5
+    activeFramesStart: 1
+    activeFramesEnd: 3
     hitGroupType: 0
     hitboxes:
     - shape: 0
@@ -75,7 +75,7 @@ MonoBehaviour:
       forceType: 0
       forceRelation: 0
       causesTumble: 0
-      opponentForceMagnitude: 15
+      opponentForceMagnitude: 11
       opponentForceDir: {x: 0, y: 0, z: 1}
       forceIncludeYForce: 0
       opponentMaxMagnitude: 1
@@ -85,7 +85,7 @@ MonoBehaviour:
   bulletGroups: []
   events:
   - nickname: Forward
-    active: 1
+    active: 0
     onHit: 0
     onHitHitboxGroup: 0
     onDetect: 0
@@ -97,7 +97,7 @@ MonoBehaviour:
       intVars: 
       floatVars:
       - 0
-      - 30
+      - 15
       - 0
       objectVars: []
       curveVars: []
@@ -113,6 +113,6 @@ MonoBehaviour:
     variables:
       intVars: 
       floatVars:
-      - 6
+      - 3
       objectVars: []
       curveVars: []
