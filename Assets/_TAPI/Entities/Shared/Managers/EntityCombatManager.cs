@@ -14,7 +14,7 @@ namespace TAPI.Entities
         public HitInfo LastHitBy { get; protected set; }
         public EntityTeams Team { get { return team; } }
 
-        [SerializeField] protected EntityController controller;
+        [SerializeField] public EntityController controller;
         [SerializeField] public MovesetAttackNode currentAttack;
         [SerializeField] protected MovesetDefinition moveset;
         public EntityHitboxManager hitboxManager;

@@ -59,6 +59,7 @@ MonoBehaviour:
       fadeLength: 0.01
       amplitudeDecay: 0.7
       frequencyDecay: 1
+    hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -141,4 +142,19 @@ MonoBehaviour:
       floatVars:
       - 0.3
       objectVars: []
+      curveVars: []
+  - nickname: Sound
+    active: 1
+    onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
+    startFrame: 3
+    endFrame: 3
+    attackEvent: {fileID: 11400000, guid: 681865ba95b123443974ea826098437a, type: 2}
+    variables:
+      intVars: 
+      floatVars: []
+      objectVars:
+      - {fileID: 11400000, guid: 5213772973da55a4d9c4f6cf503da527, type: 2}
       curveVars: []

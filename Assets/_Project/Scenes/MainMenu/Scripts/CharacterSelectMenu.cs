@@ -16,7 +16,7 @@ namespace Touhou.Menus
     {
         public delegate void ExitAction();
         public event ExitAction OnExit;
-        public delegate void CharacterSelectedAction(ModEntityReference entity);
+        public delegate void CharacterSelectedAction(ModObjectReference entity);
         public event CharacterSelectedAction OnCharacterSelected;
 
         private Dictionary<string, CharacterSelectContentItem> characters
@@ -27,9 +27,9 @@ namespace Touhou.Menus
 
         private void OnEnable()
         {
-            List<ModEntityReference> entityReferences = GameManager.current.ModManager.GetEntities();
+            List<ModObjectReference> entityReferences = GameManager.current.ModManager.GetEntities();
 
-            foreach(ModEntityReference entityReference in entityReferences)
+            foreach(ModObjectReference entityReference in entityReferences)
             {
                 EntityDefinition entityDefinition = GameManager.current.ModManager.GetEntity(entityReference);
 
@@ -62,9 +62,9 @@ namespace Touhou.Menus
             }
         }
 
-        private void SelectedCharacter(ModEntityReference entityReference)
+        private void SelectedCharacter(ModObjectReference entityReference)
         {
-            GameManager.current.ConsoleWindow.WriteLine($"Selected {entityReference.modIdentifier}/{entityReference.entityName}.");
+            GameManager.current.ConsoleWindow.WriteLine($"Selected {entityReference.ToString()}.");
             OnCharacterSelected?.Invoke(entityReference);
         }
     }

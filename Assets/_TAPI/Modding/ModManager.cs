@@ -9,6 +9,7 @@ using TAPI.GameMode;
 using System.Threading.Tasks;
 using UnityEngine.SceneManagement;
 using TAPI.Entities.Shared;
+using TAPI.Sound;
 
 namespace TAPI.Modding
 {
@@ -28,14 +29,14 @@ namespace TAPI.Modding
             modLoader.Init(this, gameManager);
         }
 
-        public GameModeDefinition GetGamemodeDefinition(ModGamemodeReference gamemode)
+        public GameModeDefinition GetGamemodeDefinition(ModObjectReference gamemode)
         {
             if (!mods.ContainsKey(gamemode.modIdentifier))
             {
                 return null;
             }
 
-            GameModeDefinition g = mods[gamemode.modIdentifier].GetGamemodeDefinition(gamemode.gamemodeName);
+            GameModeDefinition g = mods[gamemode.modIdentifier].GetGamemodeDefinition(gamemode.objectName);
 
             if(g == null)
             {
@@ -45,23 +46,23 @@ namespace TAPI.Modding
             return g;
         }
 
-        public List<ModGamemodeReference> GetGamemodeDefinitions()
+        public List<ModObjectReference> GetGamemodeDefinitions()
         {
-            List<ModGamemodeReference> gamemodes = new List<ModGamemodeReference>();
+            List<ModObjectReference> gamemodes = new List<ModObjectReference>();
 
             foreach (string m in mods.Keys)
             {
                 List<GameModeDefinition> gmds = mods[m].GetGamemodeDefinitions();
                 foreach (GameModeDefinition gmd in gmds)
                 {
-                    gamemodes.Add(new ModGamemodeReference(m, gmd.gameModeName));
+                    gamemodes.Add(new ModObjectReference(m, gmd.gameModeName));
                 }
             }
 
             return gamemodes;
         }
 
-        public EntityDefinition GetEntity(ModEntityReference entity)
+        public EntityDefinition GetEntity(ModObjectReference entity)
         {
             entity.modIdentifier = entity.modIdentifier.ToLower();
             if (!mods.ContainsKey(entity.modIdentifier))
@@ -69,7 +70,7 @@ namespace TAPI.Modding
                 return null;
             }
 
-            EntityDefinition e = mods[entity.modIdentifier].GetEntityDefinition(entity.entityName);
+            EntityDefinition e = mods[entity.modIdentifier].GetEntityDefinition(entity.objectName);
 
             if(e == null)
             {
@@ -79,23 +80,23 @@ namespace TAPI.Modding
             return e;
         }
 
-        public List<ModEntityReference> GetEntities()
+        public List<ModObjectReference> GetEntities()
         {
-            List<ModEntityReference> entities = new List<ModEntityReference>();
+            List<ModObjectReference> entities = new List<ModObjectReference>();
 
             foreach (string m in mods.Keys)
             {
                 List<EntityDefinition> eds = mods[m].GetEntityDefinitions();
                 foreach (EntityDefinition ed in eds)
                 {
-                    entities.Add(new ModEntityReference(m, ed.entityName));
+                    entities.Add(new ModObjectReference(m, ed.entityName));
                 }
             }
 
             return entities;
         }
 
-        public StageDefinition GetStageDefinition(ModStageReference stage)
+        public StageDefinition GetStageDefinition(ModObjectReference stage)
         {
             stage.modIdentifier = stage.modIdentifier.ToLower();
             if (!mods.ContainsKey(stage.modIdentifier))
@@ -103,7 +104,7 @@ namespace TAPI.Modding
                 return null;
             }
 
-            StageDefinition s = mods[stage.modIdentifier].GetStageDefinition(stage.stageName);
+            StageDefinition s = mods[stage.modIdentifier].GetStageDefinition(stage.objectName);
 
             if(s == null)
             {
@@ -117,23 +118,23 @@ namespace TAPI.Modding
         /// Get a list of all stages available.
         /// </summary>
         /// <returns>A list that can be used to get the definition of any stage.</returns>
-        public List<ModStageReference> GetStageDefinitions()
+        public List<ModObjectReference> GetStageDefinitions()
         {
-            List<ModStageReference> stages = new List<ModStageReference>();
+            List<ModObjectReference> stages = new List<ModObjectReference>();
 
             foreach (string mod in mods.Keys)
             {
                 List<StageDefinition> stageDefinitions = mods[mod].GetStageDefinitions();
                 foreach (StageDefinition stageDefinition in stageDefinitions)
                 {
-                    stages.Add(new ModStageReference(mod, stageDefinition.stageName));
+                    stages.Add(new ModObjectReference(mod, stageDefinition.stageName));
                 }
             }
 
             return stages;
         }
 
-        public StageCollection GetStageCollection(ModStageCollectionReference stageCollection)
+        public StageCollection GetStageCollection(ModObjectReference stageCollection)
         {
             stageCollection.modIdentifier = stageCollection.modIdentifier.ToLower();
             if (!mods.ContainsKey(stageCollection.modIdentifier))
@@ -141,7 +142,7 @@ namespace TAPI.Modding
                 return null;
             }
 
-            StageCollection c = mods[stageCollection.modIdentifier].GetStageCollection(stageCollection.stageCollectionName);
+            StageCollection c = mods[stageCollection.modIdentifier].GetStageCollection(stageCollection.objectName);
 
             if(c == null)
             {
@@ -151,27 +152,27 @@ namespace TAPI.Modding
             return c;
         }
 
-        public List<ModStageCollectionReference> GetStageCollections()
+        public List<ModObjectReference> GetStageCollections()
         {
-            List<ModStageCollectionReference> stageCollections = new List<ModStageCollectionReference>();
+            List<ModObjectReference> stageCollections = new List<ModObjectReference>();
 
             foreach(string m in mods.Keys)
             {
                 List<StageCollection> scs = mods[m].GetStageCollections();
                 foreach(StageCollection sc in scs)
                 {
-                    stageCollections.Add(new ModStageCollectionReference(m, sc.collectionName));
+                    stageCollections.Add(new ModObjectReference(m, sc.collectionName));
                 }
             }
 
             return stageCollections;
         }
 
-        public async Task<bool> LoadStage(ModStageReference stage)
+        public async Task<bool> LoadStage(ModObjectReference stage)
         {
             if (mods.TryGetValue(stage.modIdentifier, out ModDefinition mod))
             {
-                StageDefinition sd = mod.GetStageDefinition(stage.stageName);
+                StageDefinition sd = mod.GetStageDefinition(stage.objectName);
                 if (sd)
                 {
                     if (mod.local)
@@ -193,6 +194,39 @@ namespace TAPI.Modding
                 }
             }
             return false;
+        }
+
+        public SoundDefinition GetSoundDefinition(ModObjectReference sound)
+        {
+            if (!mods.ContainsKey(sound.modIdentifier))
+            {
+                return null;
+            }
+
+            SoundDefinition g = mods[sound.modIdentifier].GetSoundDefinition(sound.objectName);
+
+            if (g == null)
+            {
+                return null;
+            }
+
+            return g;
+        }
+
+        public List<ModObjectReference> GetSoundDefinitions()
+        {
+            List<ModObjectReference> sounds = new List<ModObjectReference>();
+
+            foreach (string m in mods.Keys)
+            {
+                List<SoundDefinition> gmds = mods[m].GetSoundDefinitions();
+                foreach (SoundDefinition gmd in gmds)
+                {
+                    sounds.Add(new ModObjectReference(m, gmd.soundName));
+                }
+            }
+
+            return sounds;
         }
     }
 }

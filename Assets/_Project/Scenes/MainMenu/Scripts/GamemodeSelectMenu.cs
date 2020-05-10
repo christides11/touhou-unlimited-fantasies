@@ -34,9 +34,9 @@ namespace Touhou.Menus.MainMenu
 
             GameManager gm = GameManager.current;
 
-            List<ModGamemodeReference> gamemodeReferences = gm.ModManager.GetGamemodeDefinitions();
+            List<ModObjectReference> gamemodeReferences = gm.ModManager.GetGamemodeDefinitions();
 
-            foreach(ModGamemodeReference gamemodeReference in gamemodeReferences)
+            foreach(ModObjectReference gamemodeReference in gamemodeReferences)
             {
                 GameModeDefinition gamemodeDefinition = gm.ModManager.GetGamemodeDefinition(gamemodeReference);
 
@@ -79,7 +79,7 @@ namespace Touhou.Menus.MainMenu
             }
         }
 
-        public void GamemodeSelected(ModGamemodeReference gamemode)
+        public void GamemodeSelected(ModObjectReference gamemode)
         {
             GameModeDefinition gm = GameManager.current.ModManager.GetGamemodeDefinition(gamemode);
             if (gm)
@@ -89,7 +89,7 @@ namespace Touhou.Menus.MainMenu
             }
         }
 
-        public void GamemodeSubmitted(ModGamemodeReference gamemode)
+        public void GamemodeSubmitted(ModObjectReference gamemode)
         {
             characterSelectMenu.gameObject.SetActive(true);
             characterSelectMenu.OnCharacterSelected += (entity) => { OpenStageSelect(gamemode, entity); };
@@ -97,14 +97,14 @@ namespace Touhou.Menus.MainMenu
             gameObject.SetActive(false);
         }
 
-        private void OpenStageSelect(ModGamemodeReference gamemode, ModEntityReference entityReference)
+        private void OpenStageSelect(ModObjectReference gamemode, ModObjectReference entityReference)
         {
             stageSelectMenu.gameObject.SetActive(true);
             stageSelectMenu.OnStageSelected += (s) => { StartGamemode(gamemode, entityReference, s); };
             characterSelectMenu.gameObject.SetActive(false);
         }
 
-        private void StartGamemode(ModGamemodeReference gamemode, ModEntityReference entity, ModStageReference stage)
+        private void StartGamemode(ModObjectReference gamemode, ModObjectReference entity, ModObjectReference stage)
         {
             GameManager.current.StartGameMode(entity, gamemode, stage);
         }

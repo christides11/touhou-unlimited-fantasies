@@ -19,7 +19,9 @@ MonoBehaviour:
   gamemodes:
   - {fileID: 11400000, guid: a5b526946280dfd4c8df63cb9a86360c, type: 2}
   stages:
-  - {fileID: 11400000, guid: c405b1c7794e5fc41a6fa2eca2f6fafb, type: 2}
   - {fileID: 11400000, guid: ea7b46e2262e6c4478323b5863ccb3e1, type: 2}
+  - {fileID: 11400000, guid: c405b1c7794e5fc41a6fa2eca2f6fafb, type: 2}
   stageCollections:
   - {fileID: 11400000, guid: 0e9d7da6e2f869c478c7a0d58c1f5155, type: 2}
+  sounds: []
+  songs: []

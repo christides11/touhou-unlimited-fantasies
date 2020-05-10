@@ -19,5 +19,15 @@ namespace TAPI.Sound
         [Range(0, 256)] public byte priority;
         // The volume of the audio source.
         [Range(0, 1)] public float volume;
+        public float startTime;
+
+        // If the song loops.
+        public bool doesLoop;
+        // The time at which it loops back.
+        public double loopPoint;
+        // The time at which it loops back to.
+        public double loopBackTo;
+        // How many times it loops. Set to -1 to loop forever.
+        public int loopsFor = -1;
     }
 }

@@ -14,7 +14,7 @@ namespace Touhou.Menus
 {
     public class StageSelectMenu : MonoBehaviour
     {
-        public delegate void StageSelectedAction(ModStageReference stage);
+        public delegate void StageSelectedAction(ModObjectReference stage);
         public event StageSelectedAction OnStageSelected;
 
         public StageContentItem stageContentItemPrefab;
@@ -23,7 +23,7 @@ namespace Touhou.Menus
         private int currentPage = 0;
         [SerializeField] private int stagesPerPage = 30;
 
-        private List<ModStageReference> stageReferences;
+        private List<ModObjectReference> stageReferences;
 
         private void OnEnable()
         {
@@ -51,7 +51,7 @@ namespace Touhou.Menus
                     return;
                 }
 
-                ModStageReference stageReference = stageReferences[i];
+                ModObjectReference stageReference = stageReferences[i];
 
                 StageDefinition stageDefinition = GameManager.current.ModManager.GetStageDefinition(stageReferences[i]);
                 if (!stageDefinition.selectableForGamemodes)
@@ -65,7 +65,7 @@ namespace Touhou.Menus
             }
         }
 
-        private void StageSelected(ModStageReference stageReference)
+        private void StageSelected(ModObjectReference stageReference)
         {
             OnStageSelected?.Invoke(stageReference);
             gameObject.SetActive(false);

@@ -15,8 +15,8 @@ namespace TAPI.Core
     [System.Serializable]
     public class GamemodeStageDefinition
     {
-        public ModGamemodeReference gamemode;
-        public ModStageReference stage;
+        public ModObjectReference gamemode;
+        public ModObjectReference stage;
 
         public override string ToString()
         {

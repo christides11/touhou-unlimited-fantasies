@@ -63,8 +63,8 @@ namespace TAPI.Core
         /// <param name="entity"></param>
         /// <param name="gamemode"></param>
         /// <param name="stage"></param>
-        public virtual async void StartGameMode(ModEntityReference entity, ModGamemodeReference gamemode, ModStageReference stage,
-            ModStageCollectionReference stageCollection = null) {
+        public virtual async void StartGameMode(ModObjectReference entity, ModObjectReference gamemode, ModObjectReference stage,
+            ModObjectReference stageCollection = null) {
             EntityDefinition entityDefinition = modManager.GetEntity(entity);
             GameModeDefinition gamemodeDefinition = modManager.GetGamemodeDefinition(gamemode);
             StageDefinition stageDefinition = modManager.GetStageDefinition(stage);
@@ -74,17 +74,17 @@ namespace TAPI.Core
             // Error checking.
             if(entityDefinition == null)
             {
-                Debug.Log($"Can not find entity {entity.modIdentifier}/{entity.entityName}.");
+                Debug.Log($"Can not find entity {entity.ToString()}.");
                 return;
             }
             if(gamemodeDefinition == null)
             {
-                Debug.Log($"Can not find gamemode {gamemode.modIdentifier}/{gamemode.gamemodeName}.");
+                Debug.Log($"Can not find gamemode {gamemode.ToString()}.");
                 return;
             }
             if(stageDefinition == null)
             {
-                Debug.Log($"Can not find stage {stage.modIdentifier}/{stage.stageName}.");
+                Debug.Log($"Can not find stage {stage.ToString()}.");
                 return;
             }
 
@@ -94,7 +94,7 @@ namespace TAPI.Core
             bool result = await modManager.LoadStage(stage);
             if (!result)
             {
-                Debug.Log($"Error loading stage {stage.modIdentifier}/{stage.stageName}.");
+                Debug.Log($"Error loading stage {stage.ToString()}.");
                 return;
             }
             // Unloads scenes that aren't the singletons scene.

@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TAPI.Combat;
 using UnityEngine;
 using TAPI.Core;
+using TAPI.Sound;
 
 namespace TAPI.Entities
 {
@@ -37,6 +38,18 @@ namespace TAPI.Entities
         }
 
         /// <summary>
+        /// Destroys all boxes and clears variables.
+        /// </summary>
+        public void Reset()
+        {
+            CleanupAllBoxes<Hitbox>(ref hitboxes);
+            CleanupAllBoxes<DetectionBox>(ref detectboxes);
+            hurtablesHit.Clear();
+            detectboxesDetectedHurtables.Clear();
+            hurtablesDetected.Clear();
+        }
+
+        /// <summary>
         /// Checks the hitboxes and detectboxes to see what they hit this frame.
         /// This should be called in late update, as physics update right after update.
         /// </summary>
@@ -60,18 +73,6 @@ namespace TAPI.Entities
         }
 
         /// <summary>
-        /// Destroys all boxes and clears variables.
-        /// </summary>
-        public void Reset()
-        {
-            CleanupAllBoxes<Hitbox>(ref hitboxes);
-            CleanupAllBoxes<DetectionBox>(ref detectboxes);
-            hurtablesHit.Clear();
-            detectboxesDetectedHurtables.Clear();
-            hurtablesDetected.Clear();
-        }
-
-        /// <summary>
         /// Destroy all the boxes and clears the dictionary.
         /// </summary>
         private void CleanupAllBoxes<T>(ref Dictionary<int, List<T>> d)
@@ -86,37 +87,45 @@ namespace TAPI.Entities
             d.Clear();
         }
 
-        public virtual void DeactivateHitboxes(int group)
+        /// <summary>
+        /// Deactivate the hitboxes of the given index.
+        /// </summary>
+        /// <param name="index">The index of the hitbox group.</param>
+        public virtual void DeactivateHitboxes(int index)
         {
-            if (!hitboxes.ContainsKey(group))
+            if (!hitboxes.ContainsKey(index))
             {
                 return;
             }
 
-            for(int i = 0; i < hitboxes[group].Count; i++)
+            for(int i = 0; i < hitboxes[index].Count; i++)
             {
-                hitboxes[group][i].Deactivate();
-            }
-        }
-
-        public virtual void DeactivateDetectboxes(int group)
-        {
-            if (!detectboxes.ContainsKey(group))
-            {
-                return;
-            }
-
-            for(int i = 0; i < detectboxes[group].Count; i++)
-            {
-                detectboxes[group][i].Deactivate();
+                hitboxes[index][i].Deactivate();
             }
         }
 
         /// <summary>
-        /// Reactivates the hitboxes in a ID group.
+        /// Deactivate the detectboxes of the given index.
+        /// </summary>
+        /// <param name="index">The inex of the detectbox group.</param>
+        public virtual void DeactivateDetectboxes(int index)
+        {
+            if (!detectboxes.ContainsKey(index))
+            {
+                return;
+            }
+
+            for(int i = 0; i < detectboxes[index].Count; i++)
+            {
+                detectboxes[index][i].Deactivate();
+            }
+        }
+
+        /// <summary>
+        /// Reactivates the hitboxes with the given ID.
         /// </summary>
         /// <param name="ID">The group to reactivate the hitboxes for.</param>
-        public void ReactivateHitboxesByID(int ID)
+        public void ReactivateHitboxID(int ID)
         {
             AttackSO atk = combatManager.currentAttack.action;
 
@@ -137,20 +146,21 @@ namespace TAPI.Entities
             }
         }
 
+        #region Hitboxes
         /// <summary>
-        /// Create the hitboxes of the given group.
+        /// Create the hitboxes of the given hitbox group index.
         /// </summary>
-        /// <param name="group">The hitbox group to create the hitboxes for.</param>
-        public void CreateHitboxes(int group)
+        /// <param name="index">The index to create the hitboxes for.</param>
+        public void CreateHitboxes(int index)
         {
             // Hitboxes were already created.
-            if (hitboxes.ContainsKey(group))
+            if (hitboxes.ContainsKey(index))
             {
                 return;
             }
 
             // Variables.
-            HitboxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[group];
+            HitboxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[index];
             if (currentGroup.hitGroupType != HitboxGroupType.HIT)
             {
                 return;
@@ -195,15 +205,15 @@ namespace TAPI.Entities
                 }
 
                 int cID = currentGroup.ID;
-                int groupLocalVar = group;
+                int groupLocalVar = index;
                 // Activate the hitbox and add it to our list.
-                hbox.GetComponent<Hitbox>().OnHurt += (hurtable, hInfo) => { OnHitboxHurt(hurtable, hInfo, cID, group); };
+                hbox.GetComponent<Hitbox>().OnHurt += (hurtable, hInfo) => { OnHitboxHurt(hurtable, hInfo, cID, index); };
                 hbox.GetComponent<Hitbox>().Activate(controller.gameObject, controller.visualTransform,
                     currentGroup.hitInfo, hurtablesHit[currentGroup.ID]);
                 hitboxList.Add(hbox.GetComponent<Hitbox>());
             }
             // Add the hitbox group to our list.
-            hitboxes.Add(group, hitboxList);
+            hitboxes.Add(index, hitboxList);
         }
 
         /// <summary>
@@ -214,6 +224,8 @@ namespace TAPI.Entities
         /// <param name="hitboxID">The hitbox ID of the hitbox.</param>
         private void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID, int hitboxGroup)
         {
+            SoundDefinition sd = combatManager.controller.GameManager.ModManager.GetSoundDefinition(combatManager.currentAttack.action.hitboxGroups[hitboxGroup].hitSound?.reference);
+            SoundManager.Play(sd, 0, controller.transform);
             hurtablesHit[hitboxID].Add(hurtableHit.GetComponent<IHurtable>());
             combatManager.hitStop = hitInfo.attackerHitstop;
             UpdateIDHitboxGroup(hitboxID);
@@ -234,7 +246,9 @@ namespace TAPI.Entities
                 }
             }
         }
+        #endregion
 
+        #region Detectboxes
         /// <summary>
         /// Create the detectboxes of the given group.
         /// </summary>
@@ -334,5 +348,6 @@ namespace TAPI.Entities
             }
             return detectboxesDetectedHurtables[group];
         }
+        #endregion
     }
 }

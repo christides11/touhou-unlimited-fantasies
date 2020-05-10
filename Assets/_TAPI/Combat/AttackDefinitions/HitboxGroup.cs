@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using TAPI.Core;
+using TAPI.Modding;
 using UnityEngine;
 
 namespace TAPI.Combat
@@ -14,10 +15,11 @@ namespace TAPI.Combat
         public HitboxGroupType hitGroupType;
         public List<HitboxDefinition> hitboxes = new List<HitboxDefinition>();
         public CameraShakeDefinition cameraShake;
+        public ModObjectLink hitSound;
         public bool attachToEntity = true;
 
         [SerializeField] public HitInfo hitInfo = new HitInfo();
-
+        
         #region Throw
         public AttackSO throwConfirm;
         #endregion

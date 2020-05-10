@@ -34,8 +34,8 @@ namespace Touhou.Menus.MainMenu
         {
             GameManager gm = GameManager.current;
 
-            List<ModStageCollectionReference> stageCollections = gm.ModManager.GetStageCollections();
-            foreach (ModStageCollectionReference sc in stageCollections)
+            List<ModObjectReference> stageCollections = gm.ModManager.GetStageCollections();
+            foreach (ModObjectReference sc in stageCollections)
             {
                 StageCollection collection = gm.ModManager.GetStageCollection(sc);
                 StageCollectionItem item = Instantiate(stageCollectionItem.gameObject, contentHolder.transform, false)
@@ -84,7 +84,7 @@ namespace Touhou.Menus.MainMenu
                 .AddOnSubmitListeners((d) => { StageStartButton(stage.gamemode, stage.stage); });
         }
 
-        private void StageStartButton(ModGamemodeReference gamemode, ModStageReference stage)
+        private void StageStartButton(ModObjectReference gamemode, ModObjectReference stage)
         {
             characterSelectMenu.OnCharacterSelected += (d) => { StartStage(d, gamemode, stage); };
             characterSelectMenu.OnExit += () => { gameObject.SetActive(true); };
@@ -92,7 +92,7 @@ namespace Touhou.Menus.MainMenu
             gameObject.SetActive(false);
         }
 
-        private void StartStage(ModEntityReference entity, ModGamemodeReference gamemode, ModStageReference stage)
+        private void StartStage(ModObjectReference entity, ModObjectReference gamemode, ModObjectReference stage)
         {
             GameManager gm = GameManager.current;
             gm.StartGameMode(entity, gamemode, stage);

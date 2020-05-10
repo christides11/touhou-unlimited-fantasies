@@ -12,9 +12,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c8a1e6f87d13a4190aefa57fad852a, type: 3}
   m_Name: CoreMod
   m_EditorClassIdentifier: 
-  local: 0
+  local: 1
   entities: []
-  gamemodes:
-  - {fileID: 11400000, guid: 311f8f8c06b3c954f9dc0dc4b8f21e3b, type: 2}
+  gamemodes: []
   stages: []
   stageCollections: []
+  sounds:
+  - {fileID: 11400000, guid: 1949d57e468f8b149be00fb14bb43d60, type: 2}
+  - {fileID: 11400000, guid: de934d72f9f96c44c886ec736475b5f1, type: 2}
+  songs: []

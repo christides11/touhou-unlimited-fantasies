@@ -9,9 +9,16 @@ namespace TAPI.Core
 {
     public class MusicManager : MonoBehaviour
     {
-        private Dictionary<AudioSource, SongDefinition> currentlyPlaying = new Dictionary<AudioSource, SongDefinition>();
+        public static MusicManager instance;
 
-        public bool IsPlaying(SongDefinition music)
+        private Dictionary<AudioSource, SoundDefinition> currentlyPlaying = new Dictionary<AudioSource, SoundDefinition>();
+
+        public void Awake()
+        {
+            instance = this;
+        }
+
+        public bool IsPlaying(SoundDefinition music)
         {
             foreach(AudioSource audio in currentlyPlaying.Keys)
             {
@@ -31,7 +38,7 @@ namespace TAPI.Core
                 AudioSource aSource = song.Key;
                 if (song.Value.doesLoop)
                 {
-                    SongDefinition musicDefinition = song.Value;
+                    SoundDefinition musicDefinition = song.Value;
                     t = (double)aSource.timeSamples / (double)aSource.clip.frequency;
                     if (t >= musicDefinition.loopPoint)
                     {
@@ -49,10 +56,10 @@ namespace TAPI.Core
             }
         }
 
-        public AudioSource Play(SongDefinition song, float startTime = 0)
+        public AudioSource Play(SoundDefinition song, float startTime = 0)
         {
             AudioSource aSource = gameObject.AddComponent<AudioSource>();
-            aSource.clip = song.song;
+            aSource.clip = song.sound;
             aSource.volume = song.volume;
             aSource.loop = song.doesLoop;
             aSource.outputAudioMixerGroup = song.mixerGroup;
