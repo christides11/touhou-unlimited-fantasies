@@ -42,8 +42,8 @@ namespace TAPI.Entities
         /// </summary>
         public void Reset()
         {
-            CleanupAllBoxes<Hitbox>(ref hitboxes);
-            CleanupAllBoxes<DetectionBox>(ref detectboxes);
+            CleanupAllHitboxes();
+            CleanupAllDetectboxes();
             hurtablesHit.Clear();
             detectboxesDetectedHurtables.Clear();
             hurtablesDetected.Clear();
@@ -75,16 +75,31 @@ namespace TAPI.Entities
         /// <summary>
         /// Destroy all the boxes and clears the dictionary.
         /// </summary>
-        private void CleanupAllBoxes<T>(ref Dictionary<int, List<T>> d)
+        private void CleanupAllHitboxes()
         {
-            foreach(int key in d.Keys)
+            foreach(int key in hitboxes.Keys)
             {
                 for (int i = 0; i < hitboxes[key].Count; i++)
                 {
                     GameObject.Destroy(hitboxes[key][i].gameObject);
                 }
             }
-            d.Clear();
+            hitboxes.Clear();
+        }
+
+        /// <summary>
+        /// Destroy all the boxes and clears the dictionary.
+        /// </summary>
+        private void CleanupAllDetectboxes()
+        {
+            foreach (int key in detectboxes.Keys)
+            {
+                for (int i = 0; i < detectboxes[key].Count; i++)
+                {
+                    GameObject.Destroy(detectboxes[key][i].gameObject);
+                }
+            }
+            detectboxes.Clear();
         }
 
         /// <summary>
