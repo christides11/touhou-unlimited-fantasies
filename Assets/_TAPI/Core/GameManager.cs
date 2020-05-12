@@ -15,6 +15,7 @@ namespace TAPI.Core
         public static GameManager current;
 
         public ModManager ModManager { get { return modManager; } }
+        public GameModeHandler GameModeHanlder { get { return currentGameModeHandler; } }
         public ConsoleWindow ConsoleWindow { get { return consoleWindow; } }
 
         protected GameModeHandler currentGameModeHandler;

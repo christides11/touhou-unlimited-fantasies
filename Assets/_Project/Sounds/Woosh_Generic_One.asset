@@ -18,7 +18,7 @@ MonoBehaviour:
   sound: {fileID: 8300000, guid: 1cf22e3cab2f62b4195c6c86204998aa, type: 3}
   priority: 0
   volume: 1
-  startTime: 0
+  startTime: 0.1
   doesLoop: 0
   loopPoint: 0
   loopBackTo: 0

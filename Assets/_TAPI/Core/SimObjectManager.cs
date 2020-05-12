@@ -20,6 +20,7 @@ namespace TAPI.Core
                 return;
             }
             simObjects.Add(simObject);
+            simObject.Init(this);
         }
 
         /// <summary>
@@ -32,8 +33,17 @@ namespace TAPI.Core
         public GameObject SpawnObject(GameObject prefab, Vector3 position, Quaternion rotation)
         {
             GameObject obj = GameObject.Instantiate(prefab, position, rotation);
-            simObjects.Add(obj.GetComponent<SimObject>());
+            RegisterObject(obj.GetComponent<SimObject>());
             return obj;
+        }
+
+        public void DestroyObject(SimObject simObject)
+        {
+            if (simObjects.Contains(simObject))
+            {
+                simObjects.Remove(simObject);
+            }
+            GameObject.Destroy(simObject.gameObject);
         }
 
         /// <summary>

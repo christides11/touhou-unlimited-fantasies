@@ -90,11 +90,15 @@ MonoBehaviour:
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
+  bulletGroups:
+  - spawnFrame: 3
+    bulletPattern: {fileID: 11400000, guid: 9ca04555ea6e61f47bacad60c0db881b, type: 2}
+    attachToEntity: 0
+    offset: {x: 0, y: 0, z: 0}
   faceLockonTargetWindows:
   - startFrame: 0
     endFrame: 0
     amount: 0
-  bulletGroups: []
   events:
   - nickname: start friction
     active: 1

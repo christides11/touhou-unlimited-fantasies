@@ -8,6 +8,7 @@ using UnityEngine;
 namespace TAPI.GameMode{
     public class GameModeHandler : MonoBehaviour
     {
+        public SimObjectManager SimObjectManager { get { return simObjectManager; } }
         public bool GamemodeActive { get { return gamemodeActive; } }
 
         protected GameManager gameManager;

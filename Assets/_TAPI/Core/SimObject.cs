@@ -6,7 +6,7 @@ namespace TAPI.Core
 {
     public class SimObject : MonoBehaviour
     {
-        private SimObjectManager simObjectManager;
+        protected SimObjectManager simObjectManager;
 
         public virtual void Init(SimObjectManager simObjectManager)
         {

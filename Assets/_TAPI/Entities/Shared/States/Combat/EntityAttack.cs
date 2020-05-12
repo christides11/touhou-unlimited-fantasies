@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using TAPI.Combat;
+using TAPI.Combat.Bullets;
 using TAPI.Core;
 using UnityEngine;
 
@@ -80,6 +81,7 @@ namespace TAPI.Entities.Shared
                 HandleBoxGroup(i, currentAttack.hitboxGroups[i]);
             }
 
+            
             for(int i = 0; i < currentAttack.bulletGroups.Count; i++)
             {
                 HandleBulletGroup(i, currentAttack.bulletGroups[i]);
@@ -133,6 +135,19 @@ namespace TAPI.Entities.Shared
             }
         }
 
+        private void HandleBulletGroup(int index, BulletPatternGroup bulletPatternGroup)
+        {
+            if (controller.StateManager.CurrentStateFrame == bulletPatternGroup.spawnFrame)
+            {
+                GameObject patternManager = new GameObject();
+                patternManager.transform.position = controller.transform.position;
+                patternManager.transform.rotation = controller.visual.transform.rotation;
+                BulletPatternManager bpm = patternManager.AddComponent<BulletPatternManager>();
+                bpm.Initialize(bulletPatternGroup.bulletPattern, bulletPatternGroup.attachToEntity ? controller.transform : patternManager.transform);
+                controller.GameManager.GameModeHanlder.SimObjectManager.RegisterObject(bpm);
+            }
+        }
+
         public override void OnInterrupted()
         {
             AttackSO currentAttack = CombatManager.CurrentAttack.action;
@@ -158,22 +173,6 @@ namespace TAPI.Entities.Shared
                 return true;
             }
             return false;
-        }
-
-        protected virtual void HandleBulletGroup(int index, BulletGroup bulletGroup)
-        {
-            for (int b = 0; b < bulletGroup.spawns.Count; b++)
-            {
-                if (controller.StateManager.CurrentStateFrame == bulletGroup.spawns[b].frame)
-                {
-                    Vector3 pos = controller.GetVisualBasedDirection(Vector3.forward) * bulletGroup.spawns[b].offset.z
-                        + controller.GetVisualBasedDirection(Vector3.right) * bulletGroup.spawns[b].offset.x
-                        + controller.GetVisualBasedDirection(Vector3.up) * bulletGroup.spawns[b].offset.y;
-                    GameObject bullet = GameObject.Instantiate(bulletGroup.bullet.gameObject,
-                        pos,
-                        Quaternion.Euler(controller.transform.eulerAngles + bulletGroup.spawns[b].rotation));
-                }
-            }
         }
 
         /// <summary>

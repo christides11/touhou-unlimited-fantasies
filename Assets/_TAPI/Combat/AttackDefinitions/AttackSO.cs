@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TAPI.Combat.Bullets;
 using UnityEngine;
 
 namespace TAPI.Combat
@@ -46,9 +47,9 @@ namespace TAPI.Combat
         public List<HitboxGroup> hitboxGroups = new List<HitboxGroup>();
         #endregion
 
-        public List<AttackFaceLockonWindow> faceLockonTargetWindows = new List<AttackFaceLockonWindow>();
+        public List<BulletPatternGroup> bulletGroups = new List<BulletPatternGroup>();
 
-        public List<BulletGroup> bulletGroups = new List<BulletGroup>();
+        public List<AttackFaceLockonWindow> faceLockonTargetWindows = new List<AttackFaceLockonWindow>();
 
         public List<AttackEventDefinition> events = new List<AttackEventDefinition>();
     }

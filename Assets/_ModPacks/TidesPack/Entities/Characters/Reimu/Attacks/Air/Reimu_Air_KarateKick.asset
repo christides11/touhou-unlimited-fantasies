@@ -31,6 +31,7 @@ MonoBehaviour:
   animationAir: {fileID: 0}
   wrapMode: 0
   jumpCancelFrames: []
+  enemyStepFrames: []
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
@@ -48,6 +49,14 @@ MonoBehaviour:
       size: {x: 2, y: 1.5, z: 3}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
+    cameraShake:
+      amplitude: 0
+      frequency: 0
+      holdLength: 0
+      fadeLength: 0
+      amplitudeDecay: 0
+      frequencyDecay: 0
+    hitSound: {fileID: 0}
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -84,6 +93,9 @@ MonoBehaviour:
   - nickname: Friction Gravity
     active: 1
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 0
     endFrame: 4
     attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
@@ -96,6 +108,9 @@ MonoBehaviour:
   - nickname: Foward Force
     active: 1
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 5
     endFrame: 5
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
@@ -110,6 +125,9 @@ MonoBehaviour:
   - nickname: Friction XZ
     active: 0
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 17
     endFrame: 36
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
@@ -122,6 +140,9 @@ MonoBehaviour:
   - nickname: Force Up
     active: 1
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 0
     endFrame: 36
     attackEvent: {fileID: 11400000, guid: 6d654b585335a4c4399b22cccf96ff34, type: 2}
