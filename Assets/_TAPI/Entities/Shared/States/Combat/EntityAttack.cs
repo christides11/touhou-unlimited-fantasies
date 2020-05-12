@@ -141,9 +141,12 @@ namespace TAPI.Entities.Shared
             {
                 GameObject patternManager = new GameObject();
                 patternManager.transform.position = controller.transform.position;
+                patternManager.transform.position += controller.GetVisualBasedDirection(Vector3.forward) * bulletPatternGroup.offset.z
+                    + controller.GetVisualBasedDirection(Vector3.up) * bulletPatternGroup.offset.y
+                    + controller.GetVisualBasedDirection(Vector3.right) * bulletPatternGroup.offset.x;
                 patternManager.transform.rotation = controller.visual.transform.rotation;
                 BulletPatternManager bpm = patternManager.AddComponent<BulletPatternManager>();
-                bpm.Initialize(bulletPatternGroup.bulletPattern, bulletPatternGroup.attachToEntity ? controller.transform : patternManager.transform);
+                bpm.Initialize(bulletPatternGroup.bulletPattern);
                 controller.GameManager.GameModeHanlder.SimObjectManager.RegisterObject(bpm);
             }
         }

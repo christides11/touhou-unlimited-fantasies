@@ -20,14 +20,21 @@ namespace TAPI.Combat
                 data.floatVariables.Add(variableName, 0);
             }
 
-            if(((int)data.floatVariables[variableName]) < loopAmount)
+            if (loopAmount == -1)
             {
-                data.floatVariables[variableName] += 1;
-                data.patternPosition = loopToPosition-1;
+                data.patternPosition = loopToPosition - 1;
             }
             else
             {
-                data.floatVariables.Remove(variableName);
+                if (((int)data.floatVariables[variableName]) < loopAmount)
+                {
+                    data.floatVariables[variableName] += 1;
+                    data.patternPosition = loopToPosition - 1;
+                }
+                else
+                {
+                    data.floatVariables.Remove(variableName);
+                }
             }
             return false;
         }

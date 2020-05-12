@@ -12,11 +12,16 @@ namespace TAPI.Combat.Bullets
         public Transform relativeTo;
 
         public Vector3 currentSpeed;
+        public Vector3 currentLocalSpeed;
+        public Vector3 currentAngularSpeed;
+        public Vector3 currentLocalAngularSpeed;
+        public Vector3 currentOffset;
 
         public Dictionary<string, float> floatVariables = new Dictionary<string, float>();
 
-        public BulletPatternData(BulletPattern bulletPattern, Transform relativeTo)
+        public BulletPatternData(int ID, BulletPattern bulletPattern, Transform relativeTo)
         {
+            this.ID = ID;
             this.bulletPattern = bulletPattern;
             this.relativeTo = relativeTo;
         }

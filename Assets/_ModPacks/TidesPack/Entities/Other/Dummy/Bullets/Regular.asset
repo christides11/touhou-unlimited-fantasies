@@ -19,20 +19,22 @@ MonoBehaviour:
   - id: 3
   - id: 4
   - id: 5
+  - id: 6
+  - id: 7
   references:
     version: 1
     00000000:
-      type: {class: SetSpeedBulletPatternAction, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
+      type: {class: SetLocalSpeedBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
       data:
-        speed: {x: 0, y: 0, z: 8}
+        localSpeed: {x: 2, y: 0, z: 4}
     00000001:
-      type: {class: AddSpeedBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
+      type: {class: SetLocalAngularSpeedBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
       data:
-        speed: {x: 0, y: 0, z: 3}
+        localAngularSpeed: {x: 0, y: 0, z: 8}
     00000002:
       type: {class: AddSpeedBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
       data:
-        speed: {x: 2, y: 0, z: 0}
+        speed: {x: 0, y: 0, z: 0}
     00000003:
       type: {class: CreateBulletBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
       data:
@@ -47,5 +49,12 @@ MonoBehaviour:
       type: {class: LoopBulletPatternAction, ns: TAPI.Combat, asm: TAPI_CSharp}
       data:
         loopAmount: 5
-        loopToPosition: 1
+        loopToPosition: 2
         variableName: loopVarOne
+    00000006:
+      type: {class: WaitBulletPatternAction, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
+      data:
+        waitFrames: 240
+        variableName: lastWait
+    00000007:
+      type: {class: ClearBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}

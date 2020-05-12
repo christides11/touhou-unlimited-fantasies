@@ -10,13 +10,26 @@ namespace TAPI.Combat.Bullets
     public class Bullet : MonoBehaviour
     {
         public Vector3 Speed { get { return speed; } }
+        public Vector3 LocalSpeed { get { return localSpeed; } }
 
         [SerializeField] private new Rigidbody rigidbody;
         [SerializeField] private Vector3 speed;
-
+        [SerializeField] private Vector3 localSpeed;
+        [SerializeField] private Vector3 angularSpeed;
+        [SerializeField] private Vector3 localAngularSpeed;
+        
         public void Tick()
         {
-            rigidbody.velocity = speed;
+            if(angularSpeed != Vector3.zero)
+            {
+                transform.Rotate(angularSpeed, Space.World);
+            }
+            if (localAngularSpeed != Vector3.zero)
+            {
+                transform.Rotate(localAngularSpeed, Space.Self);
+            }
+            rigidbody.velocity = GetForwardBasedSpeed(localSpeed)
+                + speed;
         }
 
         public void SetPosition(Vector3 position)
@@ -34,13 +47,45 @@ namespace TAPI.Combat.Bullets
             this.speed += speed;
         }
 
+        public void SetLocalSpeed(Vector3 speed)
+        {
+            this.localSpeed = speed;
+        }
+
+        public void AddLocalSpeed(Vector3 speed)
+        {
+            this.localSpeed += speed;
+        }
+
+        public void SetAngularSpeed(Vector3 angularSpeed)
+        {
+            this.angularSpeed = angularSpeed;
+        }
+
+        public void AddAngularSpeed(Vector3 angularSpeed)
+        {
+            this.angularSpeed += angularSpeed;
+        }
+
+        public void SetLocalAngularVelocity(Vector3 angularVelocity)
+        {
+            this.localAngularSpeed = angularVelocity;
+        }
+
+        public void AddLocalAngularVelocity(Vector3 angularVelocity)
+        {
+            this.localAngularSpeed += angularVelocity;
+        }
+
         public Vector3 GetForwardBasedSpeed(Vector3 speed)
         {
             Vector3 forward = transform.forward;
             Vector3 right = transform.right;
             Vector3 up = transform.up;
 
-            return forward * speed.z + right * speed.x + up * speed.y;
+            return forward * speed.z + 
+                right * speed.x 
+                + up * speed.y;
         }
     }
 }
