@@ -16,6 +16,7 @@ namespace TAPI.Combat.Bullets
         public Vector3 currentAngularSpeed;
         public Vector3 currentLocalAngularSpeed;
         public Vector3 currentOffset;
+        public int currentLifetime = -1;
 
         public Dictionary<string, float> floatVariables = new Dictionary<string, float>();
 

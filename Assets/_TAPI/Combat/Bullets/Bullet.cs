@@ -11,13 +11,15 @@ namespace TAPI.Combat.Bullets
     {
         public Vector3 Speed { get { return speed; } }
         public Vector3 LocalSpeed { get { return localSpeed; } }
+        public int Lifetime { get { return lifetime; } }
 
         [SerializeField] private new Rigidbody rigidbody;
         [SerializeField] private Vector3 speed;
         [SerializeField] private Vector3 localSpeed;
         [SerializeField] private Vector3 angularSpeed;
         [SerializeField] private Vector3 localAngularSpeed;
-        
+        [SerializeField] private int lifetime = -1;
+
         public void Tick()
         {
             if(angularSpeed != Vector3.zero)
@@ -30,6 +32,16 @@ namespace TAPI.Combat.Bullets
             }
             rigidbody.velocity = GetForwardBasedSpeed(localSpeed)
                 + speed;
+
+            if (lifetime != -1)
+            {
+                lifetime--;
+            }
+        }
+
+        public void SetLifetime(int lifetime)
+        {
+            this.lifetime = lifetime;
         }
 
         public void SetPosition(Vector3 position)

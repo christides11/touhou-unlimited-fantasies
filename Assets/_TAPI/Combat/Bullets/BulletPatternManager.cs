@@ -12,6 +12,9 @@ namespace TAPI.Combat.Bullets
         // Pattern ID : Bullet List
         public Dictionary<int, List<Bullet>> patternBullets = new Dictionary<int, List<Bullet>>();
 
+        public bool disablePatterns = false;
+        public bool disableLooping = false;
+
         public void Initialize(BulletPattern pattern)
         {
             AddPattern(pattern);
@@ -27,14 +30,17 @@ namespace TAPI.Combat.Bullets
         {
             for(int i = 0; i < patterns.Count; i++)
             {
-                while (patterns[i].patternPosition < patterns[i].bulletPattern.actions.Count)
+                if (!disablePatterns)
                 {
-                    // If it returns true, we need to wait for a tick.
-                    if (patterns[i].bulletPattern.actions[patterns[i].patternPosition].Process(this, i, patterns[i]))
+                    while (patterns[i].patternPosition < patterns[i].bulletPattern.actions.Count)
                     {
-                        break;
+                        // If it returns true, we need to wait for a tick.
+                        if (patterns[i].bulletPattern.actions[patterns[i].patternPosition].Process(this, i, patterns[i]))
+                        {
+                            break;
+                        }
+                        patterns[i].patternPosition++;
                     }
-                    patterns[i].patternPosition++;
                 }
 
                 // Tick all the bullets that have been created.
@@ -43,6 +49,11 @@ namespace TAPI.Combat.Bullets
                     for(int j = 0; j < patternBullets[i].Count; j++)
                     {
                         patternBullets[i][j].Tick();
+                        if(patternBullets[i][j].Lifetime == 0)
+                        {
+                            Destroy(patternBullets[i][j].gameObject);
+                            patternBullets[i].RemoveAt(j);
+                        }
                     }
                 }
             }
@@ -82,6 +93,10 @@ namespace TAPI.Combat.Bullets
 
         private bool PatternsFinished()
         {
+            if (disablePatterns)
+            {
+                return true;
+            }
             for(int i = 0; i < patterns.Count; i++)
             {
                 if(patterns[i].patternPosition < patterns[i].bulletPattern.actions.Count)
@@ -146,6 +161,7 @@ namespace TAPI.Combat.Bullets
             b.SetLocalSpeed(patterns[patternIndex].currentLocalSpeed);
             b.SetAngularSpeed(patterns[patternIndex].currentAngularSpeed);
             b.SetLocalAngularVelocity(patterns[patternIndex].currentLocalAngularSpeed);
+            b.SetLifetime(patterns[patternIndex].currentLifetime);
             patternBullets[patterns[patternIndex].ID].Add(b);
         }
 
