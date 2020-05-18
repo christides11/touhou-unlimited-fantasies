@@ -19,7 +19,7 @@ namespace TAPI.Entities.Shared
             }
 
             PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFrictionXZ);
-            if (StateManager.CurrentStateFrame >= controller.applyFlinchGravityAfter)
+            if (StateManager.CurrentStateFrame > 9)
             {
                 PhysicsManager.HandleGravity(controller.definition.stats.hitstunMaxFallSpeed,
                     controller.definition.stats.hitstunGravity, 1.0f, 0.97f);
@@ -45,7 +45,7 @@ namespace TAPI.Entities.Shared
             }
             if (controller.IsGrounded)
             {
-                StateManager.ChangeState((int)EntityStates.FLINCH, StateManager.CurrentStateFrame);
+                StateManager.ChangeState((int)EntityStates.FLINCH, StateManager.CurrentStateFrame, false);
                 return true;
             }
             return false;

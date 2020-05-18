@@ -31,6 +31,7 @@ MonoBehaviour:
   animationAir: {fileID: 0}
   wrapMode: 0
   jumpCancelFrames: []
+  enemyStepFrames: []
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
@@ -48,6 +49,14 @@ MonoBehaviour:
       size: {x: 2, y: 2, z: 2}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
+    cameraShake:
+      amplitude: 0
+      frequency: 0
+      holdLength: 0
+      fadeLength: 0
+      amplitudeDecay: 0
+      frequencyDecay: 0
+    hitSound: {fileID: 0}
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -66,24 +75,27 @@ MonoBehaviour:
       hitKills: 1
       attackerHitstop: 4
       hitstop: 4
-      hitstun: 15
+      hitstun: 30
       opponentResetXForce: 1
       opponentResetYForce: 1
       forceType: 0
       forceRelation: 0
       causesTumble: 0
-      opponentForceMagnitude: 10
+      opponentForceMagnitude: 1
       opponentForceDir: {x: 0, y: 1, z: 0}
       forceIncludeYForce: 0
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
-  faceLockonTargetWindows: []
   bulletGroups: []
+  faceLockonTargetWindows: []
   events:
   - nickname: Gravity Friction
     active: 1
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 0
     endFrame: 7
     attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
@@ -96,6 +108,9 @@ MonoBehaviour:
   - nickname: Gravity
     active: 1
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 13
     endFrame: 60
     attackEvent: {fileID: 11400000, guid: 497e270a3fbb60f40a1da2727a61f70d, type: 2}

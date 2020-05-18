@@ -76,13 +76,13 @@ MonoBehaviour:
       hitKills: 1
       attackerHitstop: 3
       hitstop: 3
-      hitstun: 20
+      hitstun: 30
       opponentResetXForce: 1
       opponentResetYForce: 1
       forceType: 0
       forceRelation: 0
       causesTumble: 0
-      opponentForceMagnitude: 3
+      opponentForceMagnitude: 1
       opponentForceDir: {x: 0, y: 1, z: 0}
       forceIncludeYForce: 0
       opponentMaxMagnitude: 1

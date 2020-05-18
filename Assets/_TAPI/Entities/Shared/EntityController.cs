@@ -64,8 +64,6 @@ namespace TAPI.Entities
         public LayerMask enemyStepLayerMask;
         public float enemyStepCheckRadius;
 
-        public int applyFlinchGravityAfter = 4;
-
         /// <summary>
         /// Initializes the entity with the references needed.
         /// </summary>

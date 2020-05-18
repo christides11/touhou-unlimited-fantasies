@@ -156,7 +156,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   enemyStepCheckRadius: 0
-  applyFlinchGravityAfter: 4
+  applyFlinchGravityAfter: 8
   wasRunning: 0
   hoverMode: 0
   currentAirDash: 0
