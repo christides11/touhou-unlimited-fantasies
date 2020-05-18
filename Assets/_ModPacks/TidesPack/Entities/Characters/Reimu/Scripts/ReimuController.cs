@@ -24,18 +24,26 @@ namespace TidesPack.Characters.Reimu
                 if(bpm == null)
                 {
                     GameObject go = new GameObject();
-                    go.transform.SetParent(transform, false);
+                    go.transform.position = visualTransform.position;
                     go.transform.rotation = visualTransform.rotation;
                     bpm = go.AddComponent<BulletPatternManager>();
-                    bpm.Initialize(bulletMove);
+                    BulletPatternManagerSettings settings = new BulletPatternManagerSettings();
+                    settings.active = true;
+                    bpm.Initialize(settings, bulletMove, go.transform.position + new Vector3(0, 2, 3));
                     GameManager.GameModeHanlder.SimObjectManager.RegisterObject(bpm);
+                }
+                else
+                {
+                    bpm.patterns[0].active = true;
+                    bpm.bulletSpawnPosition = visualTransform.position + new Vector3(0, 2, 3);
+                    bpm.bulletSpawnRotation = visualTransform.eulerAngles;
                 }
             }
             if (InputManager.GetButton(EntityInputs.Bullet).released)
             {
                 if (bpm)
                 {
-                    bpm.disableLooping = true;
+                    bpm.patterns[0].active = false;
                 }
             }
         }

@@ -7,16 +7,20 @@ namespace TAPI.Combat.Bullets
 {
     public class BulletPatternManager : SimObject
     {
+        public BulletPatternManagerSettings settings;
+
         public List<BulletPatternData> patterns = new List<BulletPatternData>();
         public List<BulletPatternManager> childManagers = new List<BulletPatternManager>();
         // Pattern ID : Bullet List
         public Dictionary<int, List<Bullet>> patternBullets = new Dictionary<int, List<Bullet>>();
 
-        public bool disablePatterns = false;
-        public bool disableLooping = false;
+        public Vector3 bulletSpawnPosition;
+        public Vector3 bulletSpawnRotation;
 
-        public void Initialize(BulletPattern pattern)
+        public void Initialize(BulletPatternManagerSettings settings, BulletPattern pattern, Vector3 bulletSpawnPosition)
         {
+            this.bulletSpawnPosition = bulletSpawnPosition;
+            this.settings = settings;
             AddPattern(pattern);
         }
 
@@ -28,12 +32,16 @@ namespace TAPI.Combat.Bullets
 
         public void Tick()
         {
-            for(int i = 0; i < patterns.Count; i++)
+            if (settings.active)
             {
-                if (!disablePatterns)
+                for (int i = 0; i < patterns.Count; i++)
                 {
                     while (patterns[i].patternPosition < patterns[i].bulletPattern.actions.Count)
                     {
+                        if (!patterns[i].active)
+                        {
+                            break;
+                        }
                         // If it returns true, we need to wait for a tick.
                         if (patterns[i].bulletPattern.actions[patterns[i].patternPosition].Process(this, i, patterns[i]))
                         {
@@ -41,18 +49,26 @@ namespace TAPI.Combat.Bullets
                         }
                         patterns[i].patternPosition++;
                     }
-                }
 
-                // Tick all the bullets that have been created.
-                if (patternBullets.ContainsKey(i))
-                {
-                    for(int j = 0; j < patternBullets[i].Count; j++)
+                    if (!patterns[i].active)
                     {
-                        patternBullets[i][j].Tick();
-                        if(patternBullets[i][j].Lifetime == 0)
+                        continue;
+                    }
+
+                    if (settings.tickBullets)
+                    {
+                        // Tick all the bullets that have been created.
+                        if (patternBullets.ContainsKey(i))
                         {
-                            Destroy(patternBullets[i][j].gameObject);
-                            patternBullets[i].RemoveAt(j);
+                            for (int j = 0; j < patternBullets[i].Count; j++)
+                            {
+                                patternBullets[i][j].Tick();
+                                if (patternBullets[i][j].Lifetime == 0)
+                                {
+                                    Destroy(patternBullets[i][j].gameObject);
+                                    patternBullets[i].RemoveAt(j);
+                                }
+                            }
                         }
                     }
                 }
@@ -65,7 +81,10 @@ namespace TAPI.Combat.Bullets
 
             if (CheckForDeletion())
             {
-                simObjectManager.DestroyObject(this);
+                if (settings.autoDelete)
+                {
+                    simObjectManager.DestroyObject(this);
+                }
             }
         }
 
@@ -76,7 +95,10 @@ namespace TAPI.Combat.Bullets
             {
                 if (childManagers[i].CheckForDeletion())
                 {
-                    simObjectManager.DestroyObject(childManagers[i]);
+                    if (childManagers[i].settings.autoDelete)
+                    {
+                        simObjectManager.DestroyObject(childManagers[i]);
+                    }
                 }
                 else
                 {
@@ -93,10 +115,6 @@ namespace TAPI.Combat.Bullets
 
         private bool PatternsFinished()
         {
-            if (disablePatterns)
-            {
-                return true;
-            }
             for(int i = 0; i < patterns.Count; i++)
             {
                 if(patterns[i].patternPosition < patterns[i].bulletPattern.actions.Count)
@@ -126,20 +144,18 @@ namespace TAPI.Combat.Bullets
             {
                 ID = patterns[patterns.Count - 1].ID + 1;
             }
-            GameObject patternGO = new GameObject();
-            patternGO.transform.SetParent(transform, false);
-            patternGO.transform.position = transform.position;
-            patternGO.transform.rotation = transform.rotation;
-            patterns.Add(new BulletPatternData(ID, pattern, patternGO.transform));
+            patterns.Add(new BulletPatternData(ID, pattern, transform));
         }
         
-        public void AddChildPatternManager(int patternIndex, BulletPattern pattern)
+        public void AddChildPatternManager(int patternIndex, BulletPattern pattern, BulletPatternManagerSettings settings = null)
         {
             GameObject patternManager = new GameObject();
             patternManager.transform.SetParent(transform, false);
-            patternManager.transform.localPosition = patterns[patternIndex].currentOffset;
+            patternManager.transform.localPosition = patterns[patternIndex].currentPositionOffset;
+            patternManager.transform.rotation = Quaternion.Euler(bulletSpawnRotation + patterns[patternIndex].currentRotationOffset);
             BulletPatternManager bpm = patternManager.AddComponent<BulletPatternManager>();
-            bpm.Initialize(pattern);
+            bpm.bulletSpawnRotation = bulletSpawnRotation + patterns[patternIndex].currentRotationOffset;
+            bpm.Initialize((settings == null) ? this.settings : settings, pattern, bulletSpawnPosition);
             bpm.Init(simObjectManager);
         }
 
@@ -156,7 +172,8 @@ namespace TAPI.Combat.Bullets
             }
 
             Bullet b = GameObject.Instantiate(bullet.gameObject, transform, false).GetComponent<Bullet>();
-            b.SetPosition(transform.position + patterns[patternIndex].currentOffset);
+            b.SetPosition(bulletSpawnPosition + patterns[patternIndex].currentPositionOffset);
+            b.SetRotation(bulletSpawnRotation + patterns[patternIndex].currentRotationOffset);
             b.SetSpeed(patterns[patternIndex].currentSpeed);
             b.SetLocalSpeed(patterns[patternIndex].currentLocalSpeed);
             b.SetAngularSpeed(patterns[patternIndex].currentAngularSpeed);

@@ -49,6 +49,11 @@ namespace TAPI.Combat.Bullets
             rigidbody.position = position;
         }
 
+        public void SetRotation(Vector3 eulerAngle)
+        {
+            transform.rotation = Quaternion.Euler(eulerAngle);
+        }
+
         public void SetSpeed(Vector3 speed)
         {
             this.speed = speed;

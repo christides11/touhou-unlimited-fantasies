@@ -13,9 +13,21 @@ namespace TAPI.Entities.Shared
         public override void OnStart()
         {
             controller.IsGrounded = false;
+
+            Vector3 moveDir = controller.GetMovementVector();
+            Vector3 wallNormalForward = controller.PhysicsManager.wallRayHit.normal.normalized;
+
+            Vector3 translatedMovement = Vector3.zero;
+            if(Vector3.Dot(wallNormalForward, moveDir.normalized) >= controller.definition.stats.wallJumpMinAngle)
+            {
+                translatedMovement = moveDir * controller.definition.stats.wallJumpHVelo;
+            }
+            else
+            {
+                translatedMovement = wallNormalForward * controller.definition.stats.wallJumpHVelo;
+            }
+            
             controller.PhysicsManager.forceGravity.y = controller.definition.stats.wallJumpYVelo;
-            Vector3 translatedMovement = controller.PhysicsManager.wallRayHit.normal.normalized 
-                * controller.definition.stats.wallJumpHVelo;
             controller.PhysicsManager.forceMovement = translatedMovement;
         }
 

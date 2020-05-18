@@ -14,6 +14,16 @@ namespace Touhou.Core
 
         [SerializeField] private string defaultScene;
 
+        [SerializeField] private int targetFramerate = -1;
+
+        private void Awake()
+        {
+            if(targetFramerate > 0)
+            {
+                Application.targetFrameRate = targetFramerate;
+            }
+        }
+
         async void Start()
         {
             modManager.Init();

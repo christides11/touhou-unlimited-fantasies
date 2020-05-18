@@ -59,7 +59,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 23bd576233476444f9adc4e4fe26374f, type: 2}
+  - {fileID: 2100000, guid: 770471b447a010547afe21913f96787b, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -138,7 +138,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 23bd576233476444f9adc4e4fe26374f, type: 2}
+  - {fileID: 2100000, guid: 69fc558ea73a9b3429469c9a550caef2, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -313,7 +313,7 @@ MonoBehaviour:
     m_Bits: 1024
   DiscreteCollisionEvents: 1
   StepHandling: 2
-  MaxStepHeight: 1
+  MaxStepHeight: 0.5
   AllowSteppingWithoutStableGrounding: 1
   MinRequiredStepDepth: 0.36
   LedgeAndDenivelationHandling: 1
@@ -339,9 +339,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motor: {fileID: 7770053379858479286}
   gravity: {x: 0, y: 0, z: 0}
-  stableMovementSharpness: 15
+  stableMovementSharpness: 250
   orientationSharpness: 10
-  airMovementSharpness: 25
+  airMovementSharpness: 250
   MaxAirMoveSpeed: 10
   Drag: 0
   IgnoredColliders: []

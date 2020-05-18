@@ -16,42 +16,20 @@ MonoBehaviour:
   - id: 0
   - id: 1
   - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
   references:
     version: 1
     00000000:
-      type: {class: SetLocalSpeedBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
+      type: {class: CreateBulletPatternBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
       data:
-        localSpeed: {x: 0, y: 0, z: 10}
+        pattern: {fileID: 11400000, guid: 608baac5cc88d5a47aeb31d64fe4a16d, type: 2}
     00000001:
-      type: {class: SetLifetimeBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
-      data:
-        lifetime: 240
-    00000002:
-      type: {class: CreateBulletBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
-      data:
-        bullet: {fileID: 2871119549239778259, guid: 3a36d441fc5e59e4e81c4a62b57b002c,
-          type: 3}
-    00000003:
       type: {class: WaitBulletPatternAction, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
       data:
         waitFrames: 4
         variableName: ait
-    00000004:
+    00000002:
       type: {class: LoopBulletPatternAction, ns: TAPI.Combat, asm: TAPI_CSharp}
       data:
         loopAmount: -1
-        loopToPosition: 2
+        loopToPosition: 0
         variableName: a
-    00000005:
-      type: {class: WaitBulletPatternAction, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
-      data:
-        waitFrames: 10
-        variableName: wLate
-    00000006:
-      type: {class: SetLocalSpeedBPA, ns: TAPI.Combat.Bullets, asm: TAPI_CSharp}
-      data:
-        localSpeed: {x: 0, y: 10, z: 0}

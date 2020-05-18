@@ -17,6 +17,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/_ModPacks/TidesPack/Stages/EoSD/Stage 1/EoSD_Stage1.unity
     guid: 3f09599c48299ca448a158e34b0af784
+  - enabled: 1
+    path: Assets/_Project/Stages/DebugRoom/DebugRoom.unity
+    guid: c5e566bd95e76c34bb9a75a963ce367b
   m_configObjects:
     com.unity.addressableassets: {fileID: 11400000, guid: 25bbb83902b6f414f91117c0a72c4f76,
       type: 2}

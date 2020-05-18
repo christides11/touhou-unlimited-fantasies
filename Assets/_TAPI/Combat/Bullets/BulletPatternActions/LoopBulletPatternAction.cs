@@ -19,7 +19,7 @@ namespace TAPI.Combat
             {
                 data.floatVariables.Add(variableName, 0);
             }
-            if (manager.disableLooping)
+            if (manager.settings.disableLooping)
             {
                 data.floatVariables.Remove(variableName);
             }

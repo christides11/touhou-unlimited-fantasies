@@ -6665,6 +6665,7 @@ MonoBehaviour:
   gameManager: {fileID: 2100487049}
   modManager: {fileID: 2100487050}
   defaultScene: MainMenu
+  targetFramerate: 60
 --- !u!1 &2086142363
 GameObject:
   m_ObjectHideFlags: 0

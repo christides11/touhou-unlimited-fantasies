@@ -36,6 +36,11 @@ namespace TAPI.Entities.Shared
             {
                 HandleMovement();
             }
+
+            if (controller.LockedOn)
+            {
+                controller.RotateVisual(controller.LockonForward, controller.definition.stats.floatLockOnRotationSpeed);
+            }
         }
 
         protected virtual void HandleMovement()

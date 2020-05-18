@@ -11,6 +11,14 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
+            if (controller.StateManager.CurrentStateFrame > 3)
+            {
+                if (controller.CheckAirJump())
+                {
+                    controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
+                    return true;
+                }
+            }
             if (((CharacterController)controller).CheckAirDash())
             {
                 controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);

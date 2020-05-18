@@ -15,7 +15,8 @@ MonoBehaviour:
   local: 1
   entities: []
   gamemodes: []
-  stages: []
+  stages:
+  - {fileID: 11400000, guid: 22f0de35093934c459e91523687631c8, type: 2}
   stageCollections: []
   sounds:
   - {fileID: 11400000, guid: 1949d57e468f8b149be00fb14bb43d60, type: 2}

@@ -19,7 +19,6 @@ namespace TAPI.Entities
         [Header("Air Movement")]
         public float airMovementSharpness = 15f;
         public float MaxAirMoveSpeed = 15f;
-        public float Drag = 0.1f;
 
         [Header("Misc")]
         public List<Collider> IgnoredColliders = new List<Collider>();
@@ -127,47 +126,8 @@ namespace TAPI.Entities
                     }
                 }
 
-                //currentVelocity = targetMovementVelocity + gravity;
                 // Smooth movement Velocity
                 currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity + gravity, 1f - Mathf.Exp(-airMovementSharpness * deltaTime));
-
-
-                /*
-                Vector3 addedVelocity = moveVector;
-
-                Vector3 currentVelocityOnInputsPlane = Vector3.ProjectOnPlane(currentVelocity, Motor.CharacterUp);
-
-                // Limit air velocity from inputs
-                if (currentVelocityOnInputsPlane.magnitude < MaxAirMoveSpeed)
-                {
-                    // clamp addedVel to make total vel not exceed max vel on inputs plane
-                    Vector3 newTotal = Vector3.ClampMagnitude(currentVelocityOnInputsPlane + addedVelocity, MaxAirMoveSpeed);
-                    addedVelocity = newTotal - currentVelocityOnInputsPlane;
-                }
-                else
-                {
-                    // Make sure added vel doesn't go in the direction of the already-exceeding velocity
-                    if (Vector3.Dot(currentVelocityOnInputsPlane, addedVelocity) > 0f)
-                    {
-                        addedVelocity = Vector3.ProjectOnPlane(addedVelocity, currentVelocityOnInputsPlane.normalized);
-                    }
-                }
-
-                // Prevent air-climbing sloped walls
-                if (Motor.GroundingStatus.FoundAnyGround)
-                {
-                    if (Vector3.Dot(currentVelocity + addedVelocity, addedVelocity) > 0f)
-                    {
-                        Vector3 perpenticularObstructionNormal = Vector3.Cross(Vector3.Cross(Motor.CharacterUp, Motor.GroundingStatus.GroundNormal), Motor.CharacterUp).normalized;
-                        addedVelocity = Vector3.ProjectOnPlane(addedVelocity, perpenticularObstructionNormal);
-                    }
-                }
-
-                // Apply added velocity
-                //currentVelocity += addedVelocity;*/
-
-                // Drag
-                currentVelocity *= (1f / (1f + (Drag * deltaTime)));
             }
         }
 

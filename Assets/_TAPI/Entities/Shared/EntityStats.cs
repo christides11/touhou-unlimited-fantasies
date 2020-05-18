@@ -51,6 +51,7 @@ namespace TAPI.Entities.Shared
         public int wallJumpTime;
         public float wallJumpYVelo;
         public float wallJumpHVelo;
+        public float wallJumpMinAngle = -1;
 
         [Header("Float")]
         public float floatFriction;
@@ -59,6 +60,7 @@ namespace TAPI.Entities.Shared
         public float floatBaseAccel;
         public float floatAcceleration;
         public float floatRotationSpeed;
+        public float floatLockOnRotationSpeed;
 
         [Header("Other")]
         public float hitstunGravity; //Gravity while in hitstun.

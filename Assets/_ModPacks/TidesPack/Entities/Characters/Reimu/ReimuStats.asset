@@ -25,6 +25,7 @@ MonoBehaviour:
   jumpsquat: 4
   fullHopVelocity: 15
   shortHopJumpVelocity: 10
+  maxAirJumps: 1
   airJumpVelocity: 14
   airJumpModi: 0
   airJumpCarriedMomentum: 0.2
@@ -44,17 +45,20 @@ MonoBehaviour:
   wallJumpTime: 20
   wallJumpYVelo: 17.6
   wallJumpHVelo: 17
+  wallJumpMinAngle: 0.2
   floatFriction: 0.9
   maxFloatSpeed: 11
   floatVerticalSpeed: 11
   floatBaseAccel: 1
   floatAcceleration: 2
   floatRotationSpeed: 0.35
+  floatLockOnRotationSpeed: 0
   hitstunGravity: 0.35
   hitstunMaxFallSpeed: 0
   hitstunFrictionXZ: 0
   inertiaFriction: 0.35
   weight: 1
+  maxAirDashes: 1
   airDashVelo: 40
   airDashHoldVelo: 10
   airDashLength: 15

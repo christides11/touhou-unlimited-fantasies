@@ -7,6 +7,7 @@ namespace TAPI.Combat.Bullets
     public class BulletPatternData
     {
         public int ID;
+        public bool active = true;
         public int patternPosition;
         public BulletPattern bulletPattern;
         public Transform relativeTo;
@@ -15,7 +16,8 @@ namespace TAPI.Combat.Bullets
         public Vector3 currentLocalSpeed;
         public Vector3 currentAngularSpeed;
         public Vector3 currentLocalAngularSpeed;
-        public Vector3 currentOffset;
+        public Vector3 currentPositionOffset;
+        public Vector3 currentRotationOffset;
         public int currentLifetime = -1;
 
         public Dictionary<string, float> floatVariables = new Dictionary<string, float>();

@@ -146,7 +146,7 @@ namespace TAPI.Entities.Shared
                     + controller.GetVisualBasedDirection(Vector3.right) * bulletPatternGroup.offset.x;
                 patternManager.transform.rotation = controller.visual.transform.rotation;
                 BulletPatternManager bpm = patternManager.AddComponent<BulletPatternManager>();
-                bpm.Initialize(bulletPatternGroup.bulletPattern);
+                bpm.Initialize(new BulletPatternManagerSettings(), bulletPatternGroup.bulletPattern, controller.visualTransform.transform.position);
                 controller.GameManager.GameModeHanlder.SimObjectManager.RegisterObject(bpm);
             }
         }
