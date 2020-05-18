@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Ground Attack AA
   description: 
   stateOverride: -1
-  length: 50
+  length: 40
   groundAble: 1
   airAble: 0
   heightRestriction: 0
@@ -60,6 +60,7 @@ MonoBehaviour:
       fadeLength: 0
       amplitudeDecay: 0
       frequencyDecay: 0
+    hitSound: {fileID: 0}
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -90,11 +91,11 @@ MonoBehaviour:
       opponentMaxMagnitude: 16
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
+  bulletGroups: []
   faceLockonTargetWindows:
   - startFrame: 0
     endFrame: 3
     amount: 4
-  bulletGroups: []
   events:
   - nickname: Friction
     active: 1

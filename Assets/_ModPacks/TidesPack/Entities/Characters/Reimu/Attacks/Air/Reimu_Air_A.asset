@@ -20,7 +20,7 @@ MonoBehaviour:
   airAble: 1
   heightRestriction: 0
   possibleGround: 0
-  modifiesInertia: 1
+  modifiesInertia: 0
   inertiaModifer: 0
   carriesInertia: 0
   carriedInertia: 1
@@ -57,6 +57,7 @@ MonoBehaviour:
       fadeLength: 0
       amplitudeDecay: 0
       frequencyDecay: 0
+    hitSound: {fileID: 0}
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -73,36 +74,39 @@ MonoBehaviour:
       damageOnHit: 0
       damageOnBlock: 0
       hitKills: 1
-      attackerHitstop: 4
-      hitstop: 4
-      hitstun: 15
+      attackerHitstop: 3
+      hitstop: 3
+      hitstun: 20
       opponentResetXForce: 1
       opponentResetYForce: 1
       forceType: 0
       forceRelation: 0
       causesTumble: 0
-      opponentForceMagnitude: 15
+      opponentForceMagnitude: 3
       opponentForceDir: {x: 0, y: 1, z: 0}
       forceIncludeYForce: 0
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
-  faceLockonTargetWindows: []
   bulletGroups: []
+  faceLockonTargetWindows:
+  - startFrame: 0
+    endFrame: 5
+    amount: 0.5
   events:
-  - nickname: Gravity Friction
+  - nickname: S.GF
     active: 1
     onHit: 0
     onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
-    startFrame: 0
-    endFrame: 7
+    startFrame: 1
+    endFrame: 1
     attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 1.5
+      - 8
       objectVars: []
       curveVars: []
   - nickname: Gravity
@@ -111,15 +115,15 @@ MonoBehaviour:
     onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
-    startFrame: 13
+    startFrame: 10
     endFrame: 40
     attackEvent: {fileID: 11400000, guid: 497e270a3fbb60f40a1da2727a61f70d, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 0.3
+      - 0.05
       - 0
-      - 6
+      - 8
       objectVars: []
       curveVars:
       - serializedVersion: 2
@@ -179,12 +183,27 @@ MonoBehaviour:
     onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
-    startFrame: 0
-    endFrame: 7
+    startFrame: 1
+    endFrame: 1
     attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 5
+      - 3
+      objectVars: []
+      curveVars: []
+  - nickname: GF
+    active: 1
+    onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
+    startFrame: 2
+    endFrame: 9
+    attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0.7
       objectVars: []
       curveVars: []

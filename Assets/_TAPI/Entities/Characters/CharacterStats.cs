@@ -14,6 +14,8 @@ namespace TAPI.Entities.Characters
         public int airDashHoldVelo; //How long to hold the init velo for.
         public int airDashLength;
         public float airDashFriction;
+        public float airDashGravityFriction;
+        public float airDashGravityInitMulti;
 
         [Header("Float Dodge")]
         public float floatDodgeVelo;

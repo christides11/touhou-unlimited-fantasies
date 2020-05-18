@@ -53,8 +53,8 @@ MonoBehaviour:
       rotation: {x: 0, y: 0, z: 0}
       radius: 5
     cameraShake:
-      amplitude: 0.7
-      frequency: 4
+      amplitude: 1
+      frequency: 9
       holdLength: 0.03
       fadeLength: 0.01
       amplitudeDecay: 0.7

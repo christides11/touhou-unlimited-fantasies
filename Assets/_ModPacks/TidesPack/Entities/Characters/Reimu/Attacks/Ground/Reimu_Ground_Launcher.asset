@@ -32,6 +32,7 @@ MonoBehaviour:
   wrapMode: 8
   jumpCancelFrames:
   - {x: 7, y: 100}
+  enemyStepFrames: []
   landCancelFrames: []
   dashCancelableFrames: []
   floatCancelFrames: []
@@ -52,6 +53,14 @@ MonoBehaviour:
       size: {x: 3, y: 4, z: 4}
       rotation: {x: 0, y: 0, z: 0}
       radius: 0
+    cameraShake:
+      amplitude: 0
+      frequency: 0
+      holdLength: 0
+      fadeLength: 0
+      amplitudeDecay: 0
+      frequencyDecay: 0
+    hitSound: {fileID: 0}
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -76,18 +85,21 @@ MonoBehaviour:
       forceType: 0
       forceRelation: 0
       causesTumble: 1
-      opponentForceMagnitude: 27
+      opponentForceMagnitude: 20
       opponentForceDir: {x: 0, y: 1, z: 0}
       forceIncludeYForce: 0
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
-  faceLockonTargetWindows: []
   bulletGroups: []
+  faceLockonTargetWindows: []
   events:
   - nickname: Up Force
     active: 1
     onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
     startFrame: 3
     endFrame: 15
     attackEvent: {fileID: 11400000, guid: 6d654b585335a4c4399b22cccf96ff34, type: 2}
@@ -95,7 +107,7 @@ MonoBehaviour:
       intVars: 00000000
       floatVars:
       - 0
-      - 26
+      - 25
       - 0
       objectVars: []
       curveVars:
@@ -177,29 +189,37 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
-  - nickname: XZ Friction
-    active: 1
-    onHit: 0
-    startFrame: 4
-    endFrame: 40
-    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
-    variables:
-      intVars: 
-      floatVars:
-      - 0.95
-      objectVars: []
-      curveVars: []
   - nickname: Forward
     active: 1
     onHit: 0
-    startFrame: 3
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
+    startFrame: 1
     endFrame: 3
     attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
     variables:
       intVars: 
       floatVars:
       - 0
-      - 5
+      - 8
+      - 0
+      objectVars: []
+      curveVars: []
+  - nickname: Set Forward
+    active: 1
+    onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
+    startFrame: 4
+    endFrame: 4
+    attackEvent: {fileID: 11400000, guid: 9c7ee72fc5b4d594aa4e0206183a2da0, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0
+      - 0
       - 0
       objectVars: []
       curveVars: []

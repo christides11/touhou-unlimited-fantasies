@@ -20,7 +20,7 @@ namespace TAPI.Entities.Shared
         public int dashTime;
 
         [Header("Jumping")]
-        public int jumpsquat = 4;
+        public int jumpsquat = 5;
         public float fullHopVelocity;
         public float shortHopJumpVelocity;
 

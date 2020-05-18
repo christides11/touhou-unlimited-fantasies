@@ -198,6 +198,11 @@ namespace TAPI.Modding
 
         public SoundDefinition GetSoundDefinition(ModObjectReference sound)
         {
+            if (sound == null)
+            {
+                return null;
+            }
+
             if (!mods.ContainsKey(sound.modIdentifier))
             {
                 return null;

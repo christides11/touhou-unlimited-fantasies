@@ -10,6 +10,7 @@ namespace TAPI.Entities.Shared
         public override void OnStart()
         {
             base.OnStart();
+            controller.fullHop = true;
             controller.PhysicsManager.ApplyMovementFriction();
             if (controller.LockedOn)
             {
@@ -29,6 +30,11 @@ namespace TAPI.Entities.Shared
         {
             if (!CheckInterrupt())
             {
+                if (controller.InputManager.GetButton(EntityInputs.Jump).released)
+                {
+                    controller.fullHop = false;
+                }
+
                 controller.StateManager.IncrementFrame();
             }
         }

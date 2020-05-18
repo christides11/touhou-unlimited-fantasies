@@ -34,7 +34,7 @@ namespace TAPI.Entities.Characters.States
                 StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if(StateManager.CurrentStateFrame >= 4)
+            if(StateManager.CurrentStateFrame >= 6)
             {
                 StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;

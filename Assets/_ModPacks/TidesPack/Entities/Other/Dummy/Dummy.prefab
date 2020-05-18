@@ -105,11 +105,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Motor: {fileID: 2103768421288388345}
   gravity: {x: 0, y: 0, z: 0}
-  stableMovementSharpness: 15
+  stableMovementSharpness: 250
   orientationSharpness: 10
-  airMovementSharpness: 15
+  airMovementSharpness: 250
   MaxAirMoveSpeed: 10
-  Drag: 0.1
   IgnoredColliders: []
 --- !u!114 &2103768421288388343
 MonoBehaviour:
@@ -143,6 +142,7 @@ MonoBehaviour:
     m_Bits: 512
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   currentAirJump: 0
+  fullHop: 1
   softLockonRadius: 0
   lockonRadius: 20
   lockonFudging: 0.1
@@ -156,6 +156,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 0
   enemyStepCheckRadius: 0
+  applyFlinchGravityAfter: 4
   wasRunning: 0
   hoverMode: 0
   currentAirDash: 0
@@ -1357,7 +1358,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
@@ -2592,7 +2593,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
@@ -3718,7 +3719,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}
@@ -5204,7 +5205,7 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 3
+  serializedVersion: 4
   m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: 0}

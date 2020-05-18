@@ -51,6 +51,7 @@ namespace TAPI.Entities
         public LayerMask attackLayerMask;
         public Vector3 groundCheckOffset;
         public int currentAirJump = 0;
+        public bool fullHop = true;
 
         [Header("Lock On")]
         public float softLockonRadius;
@@ -62,6 +63,8 @@ namespace TAPI.Entities
         [Header("Enemy Step")]
         public LayerMask enemyStepLayerMask;
         public float enemyStepCheckRadius;
+
+        public int applyFlinchGravityAfter = 4;
 
         /// <summary>
         /// Initializes the entity with the references needed.

@@ -434,7 +434,6 @@ MonoBehaviour:
   nodes:
   - {fileID: -1246202044470491312}
   - {fileID: 3193021667813939668}
-  - {fileID: 8296779188355047815}
   - {fileID: -8484630490610987400}
   - {fileID: -3004213846102699117}
   - {fileID: 6696736325389599499}
@@ -451,7 +450,6 @@ MonoBehaviour:
   groundAttackStartNodes:
   - {fileID: -1246202044470491312}
   airAttackCommandNormals:
-  - {fileID: 8296779188355047815}
   - {fileID: -8484630490610987400}
   airAttackStartNodes:
   - {fileID: 4975244848732337459}
@@ -727,55 +725,5 @@ MonoBehaviour:
     dirDeviation: 15
   buttonSequence: []
   action: {fileID: 11400000, guid: 367d53d64f1794448a5a1904a414c429, type: 2}
-  cancelWindows: []
-  nextNode: []
---- !u!114 &8296779188355047815
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
-  m_Name: Attack_Air_Air Twirl
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -232, y: 168}
-  ports:
-    keys:
-    - lastNode
-    - nextNode
-    values:
-    - _fieldName: lastNode
-      _node: {fileID: 8296779188355047815}
-      _typeQualifiedName: TAPI.Combat.MovesetAttackNode, TAPI_CSharp, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: nextNode
-      _node: {fileID: 8296779188355047815}
-      _typeQualifiedName: System.Collections.Generic.List`1[[TAPI.Combat.MovesetAttackNode,
-        TAPI_CSharp, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib,
-        Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  lastNode: {fileID: 0}
-  executeButton:
-  - button: 3
-    stickDir: {x: 0, y: 0}
-    dirDeviation: 15
-  - button: 0
-    stickDir: {x: 0, y: -1}
-    dirDeviation: 0.95
-  buttonSequence: []
-  action: {fileID: 11400000, guid: df2d0b14c36a10847b4260af388bc700, type: 2}
   cancelWindows: []
   nextNode: []

@@ -59,10 +59,12 @@ MonoBehaviour:
   inertiaFriction: 0.35
   weight: 1
   maxAirDashes: 1
-  airDashVelo: 40
+  airDashVelo: 30
   airDashHoldVelo: 10
   airDashLength: 15
-  airDashFriction: 7
+  airDashFriction: 4
+  airDashGravityFriction: 0.2
+  airDashGravityInitMulti: 0.25
   floatDodgeVelo: 40
   floatDodgeHoldVelo: 10
   floatDodgeLength: 15

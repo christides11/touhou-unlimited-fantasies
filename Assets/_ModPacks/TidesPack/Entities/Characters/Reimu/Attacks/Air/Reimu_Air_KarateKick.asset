@@ -87,8 +87,8 @@ MonoBehaviour:
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
-  faceLockonTargetWindows: []
   bulletGroups: []
+  faceLockonTargetWindows: []
   events:
   - nickname: Friction Gravity
     active: 1

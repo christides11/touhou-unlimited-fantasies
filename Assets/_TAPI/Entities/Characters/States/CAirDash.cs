@@ -8,11 +8,14 @@ namespace TAPI.Entities.Characters.States
 {
     public class CAirDash : CharacterState
     {
+
         public override void OnStart()
         {
             base.OnStart();
+            CharacterStats cs = ((CharacterStats)controller.definition.stats);
+
             ((CharacterController)controller).currentAirDash++;
-            controller.PhysicsManager.forceGravity = Vector3.zero;
+            controller.PhysicsManager.forceGravity *= cs.airDashGravityInitMulti;
             Vector2 movement = controller.InputManager.GetMovement(0);
             if(movement.magnitude < InputConstants.movementMagnitude)
             {
@@ -21,7 +24,7 @@ namespace TAPI.Entities.Characters.States
                 movement.y = v.z;
             }
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
-            translatedMovement *= ((CharacterStats)controller.definition.stats).airDashVelo;
+            translatedMovement *= cs.airDashVelo;
 
             controller.PhysicsManager.forceMovement = translatedMovement;
             controller.RotateVisual(translatedMovement, 100);
@@ -31,11 +34,12 @@ namespace TAPI.Entities.Characters.States
         {
             if (!CheckInterrupt())
             {
-                CharacterStats ps = ((CharacterStats)controller.definition.stats);
-                if (controller.StateManager.CurrentStateFrame > ps.airDashHoldVelo)
+                CharacterStats cs = ((CharacterStats)controller.definition.stats);
+                if (controller.StateManager.CurrentStateFrame > cs.airDashHoldVelo)
                 {
-                    controller.PhysicsManager.ApplyMovementFriction(ps.airDashFriction);
+                    controller.PhysicsManager.ApplyMovementFriction(cs.airDashFriction);
                 }
+                controller.PhysicsManager.ApplyGravityFriction(cs.airDashGravityFriction);
                 controller.StateManager.IncrementFrame();
             }
         }

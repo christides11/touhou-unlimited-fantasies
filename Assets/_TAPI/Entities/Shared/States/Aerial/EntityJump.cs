@@ -11,7 +11,8 @@ namespace TAPI.Entities.Shared
         {
             base.OnStart();
             controller.IsGrounded = false;
-            controller.PhysicsManager.forceGravity.y = controller.definition.stats.fullHopVelocity;
+            controller.PhysicsManager.forceGravity.y = controller.fullHop ? controller.definition.stats.fullHopVelocity
+                : controller.definition.stats.shortHopJumpVelocity;
         }
 
         public override void OnUpdate()
