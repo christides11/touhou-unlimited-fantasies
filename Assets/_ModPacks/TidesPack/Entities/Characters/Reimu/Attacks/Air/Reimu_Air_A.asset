@@ -94,7 +94,7 @@ MonoBehaviour:
     endFrame: 5
     amount: 0.5
   events:
-  - nickname: S.GF
+  - nickname: Clamp Gravity
     active: 1
     onHit: 0
     onHitHitboxGroup: 0
@@ -102,11 +102,12 @@ MonoBehaviour:
     onDetectHitboxGroup: 0
     startFrame: 1
     endFrame: 1
-    attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
+    attackEvent: {fileID: 11400000, guid: 42242cce94fa68445b6ab0d8c5998b0c, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 8
+      - -4
+      - 4
       objectVars: []
       curveVars: []
   - nickname: Gravity
@@ -199,11 +200,11 @@ MonoBehaviour:
     onDetect: 0
     onDetectHitboxGroup: 0
     startFrame: 2
-    endFrame: 9
+    endFrame: 10
     attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 0.7
+      - 0.25
       objectVars: []
       curveVars: []
