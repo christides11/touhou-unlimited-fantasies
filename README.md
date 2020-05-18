@@ -1,7 +1,7 @@
 **Unlimited Fantasies** is a hack-and-slash Touhou fangame with a focus on modability. 
 
 ## Opening The Project
-The project is currently built on **Unity 2019.3.5f**.
+The project is currently built on **Unity 2019.3.13f**.
 If you want to edit the project, there's a few paid third party assets being used that are currently required.
 
 * Required
