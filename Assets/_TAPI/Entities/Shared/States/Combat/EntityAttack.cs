@@ -17,6 +17,7 @@ namespace TAPI.Entities.Shared
 
         public override void OnStart()
         {
+            base.OnStart();
             if (!controller.LockedOn)
             {
                 controller.PickSoftlockTarget();
@@ -316,10 +317,10 @@ namespace TAPI.Entities.Shared
         /// <returns>True if we dash canceled.</returns>
         protected virtual bool CheckDashCancelWindows(AttackSO currentAttack)
         {
-            for (int i = 0; i < currentAttack.landCancelFrames.Count; i++)
+            for (int i = 0; i < currentAttack.dashCancelableFrames.Count; i++)
             {
-                if (StateManager.CurrentStateFrame >= currentAttack.landCancelFrames[i].x
-                    && StateManager.CurrentStateFrame <= currentAttack.landCancelFrames[i].y)
+                if (StateManager.CurrentStateFrame >= currentAttack.dashCancelableFrames[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.dashCancelableFrames[i].y)
                 {
                     if (controller.DashCancel())
                     {

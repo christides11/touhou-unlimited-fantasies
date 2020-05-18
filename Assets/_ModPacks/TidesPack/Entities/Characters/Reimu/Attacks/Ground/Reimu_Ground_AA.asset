@@ -94,8 +94,8 @@ MonoBehaviour:
   bulletGroups: []
   faceLockonTargetWindows:
   - startFrame: 0
-    endFrame: 3
-    amount: 4
+    endFrame: 5
+    amount: 0.5
   events:
   - nickname: Friction
     active: 1

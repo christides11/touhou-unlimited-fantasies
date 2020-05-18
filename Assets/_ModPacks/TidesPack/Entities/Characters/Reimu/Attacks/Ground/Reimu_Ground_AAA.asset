@@ -59,6 +59,7 @@ MonoBehaviour:
       fadeLength: 0
       amplitudeDecay: 0
       frequencyDecay: 0
+    hitSound: {fileID: 0}
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -106,6 +107,7 @@ MonoBehaviour:
       fadeLength: 0.1
       amplitudeDecay: 0.7
       frequencyDecay: 0
+    hitSound: {fileID: 0}
     attachToEntity: 1
     hitInfo:
       airOnly: 0
@@ -136,8 +138,11 @@ MonoBehaviour:
       opponentMaxMagnitude: 1
       opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
-  faceLockonTargetWindows: []
   bulletGroups: []
+  faceLockonTargetWindows:
+  - startFrame: 0
+    endFrame: 6
+    amount: 0.5
   events:
   - nickname: Forward
     active: 1

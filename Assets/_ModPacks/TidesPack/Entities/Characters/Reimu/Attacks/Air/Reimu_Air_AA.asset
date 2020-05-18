@@ -32,7 +32,8 @@ MonoBehaviour:
   wrapMode: 0
   jumpCancelFrames: []
   enemyStepFrames: []
-  landCancelFrames: []
+  landCancelFrames:
+  - {x: 9, y: 100}
   dashCancelableFrames: []
   floatCancelFrames: []
   attackCancelFrames: []
@@ -90,19 +91,20 @@ MonoBehaviour:
   bulletGroups: []
   faceLockonTargetWindows: []
   events:
-  - nickname: Gravity Friction
+  - nickname: Gravity Clamp
     active: 1
     onHit: 0
     onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
-    startFrame: 0
-    endFrame: 7
-    attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
+    startFrame: 1
+    endFrame: 1
+    attackEvent: {fileID: 11400000, guid: 42242cce94fa68445b6ab0d8c5998b0c, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 2
+      - -3
+      - 3
       objectVars: []
       curveVars: []
   - nickname: Gravity
@@ -111,15 +113,15 @@ MonoBehaviour:
     onHitHitboxGroup: 0
     onDetect: 0
     onDetectHitboxGroup: 0
-    startFrame: 13
-    endFrame: 60
+    startFrame: 9
+    endFrame: 56
     attackEvent: {fileID: 11400000, guid: 497e270a3fbb60f40a1da2727a61f70d, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 0.3
+      - 0.2
       - 0
-      - 6
+      - 4
       objectVars: []
       curveVars:
       - serializedVersion: 2
@@ -173,3 +175,18 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+  - nickname: GF
+    active: 1
+    onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
+    startFrame: 2
+    endFrame: 8
+    attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0.23
+      objectVars: []
+      curveVars: []

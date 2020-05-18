@@ -53,12 +53,12 @@ MonoBehaviour:
       rotation: {x: 0, y: 0, z: 0}
       radius: 5
     cameraShake:
-      amplitude: 1
-      frequency: 9
+      amplitude: 1.2
+      frequency: 1000
       holdLength: 0.03
       fadeLength: 0.01
-      amplitudeDecay: 0.7
-      frequencyDecay: 1
+      amplitudeDecay: 0
+      frequencyDecay: 0
     hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     attachToEntity: 1
     hitInfo:
@@ -93,8 +93,8 @@ MonoBehaviour:
   bulletGroups: []
   faceLockonTargetWindows:
   - startFrame: 0
-    endFrame: 0
-    amount: 0
+    endFrame: 4
+    amount: 0.75
   events:
   - nickname: start friction
     active: 1

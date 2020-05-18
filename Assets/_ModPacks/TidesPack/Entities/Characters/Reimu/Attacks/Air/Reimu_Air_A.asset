@@ -33,7 +33,8 @@ MonoBehaviour:
   jumpCancelFrames: []
   enemyStepFrames:
   - {x: 0, y: 40}
-  landCancelFrames: []
+  landCancelFrames:
+  - {x: 9, y: 100}
   dashCancelableFrames: []
   floatCancelFrames: []
   attackCancelFrames: []
@@ -106,8 +107,8 @@ MonoBehaviour:
     variables:
       intVars: 
       floatVars:
-      - -4
-      - 4
+      - -3
+      - 3
       objectVars: []
       curveVars: []
   - nickname: Gravity
@@ -122,9 +123,9 @@ MonoBehaviour:
     variables:
       intVars: 
       floatVars:
-      - 0.05
+      - 0.2
       - 0
-      - 8
+      - 4
       objectVars: []
       curveVars:
       - serializedVersion: 2
@@ -200,11 +201,11 @@ MonoBehaviour:
     onDetect: 0
     onDetectHitboxGroup: 0
     startFrame: 2
-    endFrame: 10
+    endFrame: 6
     attackEvent: {fileID: 11400000, guid: 0d9310c9968cc6c48b23fe2e236ae3d9, type: 2}
     variables:
       intVars: 
       floatVars:
-      - 0.25
+      - 0.12
       objectVars: []
       curveVars: []

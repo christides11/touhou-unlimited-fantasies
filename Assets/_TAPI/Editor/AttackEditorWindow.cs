@@ -232,7 +232,7 @@ namespace TAPI.Combat
         {
             // Jump Cancel
             EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
-            jumpCancelFoldout = EditorGUILayout.Foldout(jumpCancelFoldout, "Jump Cancel Windows");
+            jumpCancelFoldout = EditorGUILayout.Foldout(jumpCancelFoldout, "Jump Cancel Windows", true);
             if (GUILayout.Button("Add"))
             {
                 attack.jumpCancelFrames.Add(new Vector2Int());
@@ -245,7 +245,7 @@ namespace TAPI.Combat
             }
             // Land Cancel
             EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
-            landCancelFoldout = EditorGUILayout.Foldout(landCancelFoldout, "Land Cancel Windows");
+            landCancelFoldout = EditorGUILayout.Foldout(landCancelFoldout, "Land Cancel Windows", true);
             if (GUILayout.Button("Add"))
             {
                 attack.landCancelFrames.Add(new Vector2Int());
@@ -258,7 +258,7 @@ namespace TAPI.Combat
             }
             // Dash Cancel
             EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
-            dashCancelFoldout = EditorGUILayout.Foldout(dashCancelFoldout, "Dash Cancel Windows");
+            dashCancelFoldout = EditorGUILayout.Foldout(dashCancelFoldout, "Dash Cancel Windows", true);
             if (GUILayout.Button("Add"))
             {
                 attack.dashCancelableFrames.Add(new Vector2Int());
@@ -271,7 +271,7 @@ namespace TAPI.Combat
             }
             // Attack Cancel
             EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
-            attackCancelFoldout = EditorGUILayout.Foldout(attackCancelFoldout, "Attack Cancel Windows");
+            attackCancelFoldout = EditorGUILayout.Foldout(attackCancelFoldout, "Attack Cancel Windows", true);
             if (GUILayout.Button("Add"))
             {
                 attack.attackCancelFrames.Add(new Vector2Int());
@@ -284,7 +284,7 @@ namespace TAPI.Combat
             }
             // Bullet Cancel
             EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
-            bulletCancelFoldout = EditorGUILayout.Foldout(bulletCancelFoldout, "Bullet Cancel Windows");
+            bulletCancelFoldout = EditorGUILayout.Foldout(bulletCancelFoldout, "Bullet Cancel Windows", true);
             if (GUILayout.Button("Add"))
             {
                 attack.bulletCancelFrames.Add(new Vector2Int());
@@ -297,7 +297,7 @@ namespace TAPI.Combat
             }
             // Special Cancel
             EditorGUILayout.BeginHorizontal(GUILayout.Width(300));
-            specialCancelFoldout = EditorGUILayout.Foldout(specialCancelFoldout, "Special Cancel Windows");
+            specialCancelFoldout = EditorGUILayout.Foldout(specialCancelFoldout, "Special Cancel Windows", true);
             if (GUILayout.Button("Add"))
             {
                 attack.specialCancelFrames.Add(new Vector2Int());
@@ -588,7 +588,7 @@ namespace TAPI.Combat
                     EditorGUILayout.LabelField(attack.events[i].startFrame.ToString(), GUILayout.Width(20));
                     float eventStart = attack.events[i].startFrame;
                     float eventEnd = attack.events[i].endFrame;
-                    EditorGUILayout.MinMaxSlider(ref eventStart, ref eventEnd, 0, attack.length, GUILayout.Height(25));
+                    EditorGUILayout.MinMaxSlider(ref eventStart, ref eventEnd, 1, attack.length, GUILayout.Height(25));
                     attack.events[i].startFrame = (uint)eventStart;
                     attack.events[i].endFrame = (uint)eventEnd;
                     EditorGUILayout.LabelField(attack.events[i].endFrame.ToString(), GUILayout.Width(20));
