@@ -74,8 +74,8 @@ MonoBehaviour:
       damageOnHit: 0
       damageOnBlock: 0
       hitKills: 1
-      attackerHitstop: 4
-      hitstop: 4
+      attackerHitstop: 3
+      hitstop: 3
       hitstun: 30
       opponentResetXForce: 1
       opponentResetYForce: 1

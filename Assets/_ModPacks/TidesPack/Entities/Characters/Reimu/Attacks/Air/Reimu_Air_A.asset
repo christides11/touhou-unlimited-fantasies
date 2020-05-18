@@ -209,3 +209,33 @@ MonoBehaviour:
       - 0.12
       objectVars: []
       curveVars: []
+  - nickname: Clamp Move
+    active: 1
+    onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
+    startFrame: 1
+    endFrame: 1
+    attackEvent: {fileID: 11400000, guid: a57a5493c2923da4a86304ec195ff426, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 3
+      objectVars: []
+      curveVars: []
+  - nickname: MF
+    active: 1
+    onHit: 0
+    onHitHitboxGroup: 0
+    onDetect: 0
+    onDetectHitboxGroup: 0
+    startFrame: 2
+    endFrame: 6
+    attackEvent: {fileID: 11400000, guid: 4764f25b452058b4d94af985d4a7b049, type: 2}
+    variables:
+      intVars: 
+      floatVars:
+      - 0.2
+      objectVars: []
+      curveVars: []
