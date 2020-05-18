@@ -1,5 +1,30 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-506668513032588967
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d88f7d353534a4fbdeb11196057db7, type: 3}
+  m_Name: UploadItch
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: UploadItch
+  note: 
+  actionEnabled: 1
+  filter:
+    condition: 0
+    clauses: []
+  pathToButlerExe: C:\Users\chris\AppData\Roaming\itch\bin\butler.exe
+  nameOfItchUser: ChrisTides
+  nameOfItchGame: touhou-unlimited-fantasies
+  useGeneratedBuildVersion: 0
+  showUploadProgress: 1
+  itchChannelOverride: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23,10 +48,10 @@ MonoBehaviour:
     autoGenerate: 0
   _releaseTypeList:
     releaseTypes:
-    - typeName: Default
+    - typeName: Nightly
       bundleIndentifier: 
       companyName: ChrisTides
-      productName: Touhou
+      productName: Touhou-UF
       developmentBuild: 0
       allowDebugging: 0
       enableHeadlessMode: 0
@@ -37,6 +62,7 @@ MonoBehaviour:
         - fileGUID: e9affd4b1ab461c42a3ca54c88810eab
         - fileGUID: 3f09599c48299ca448a158e34b0af784
         - fileGUID: 34eeeb4fdc2c48243b153e5cb2787099
+        - fileGUID: c5e566bd95e76c34bb9a75a963ce367b
   _platformList:
     platforms:
     - enabled: 1
@@ -56,26 +82,26 @@ MonoBehaviour:
       targetGroup: 1
   _projectConfigurations:
     configSet:
-      _Buckets: 0100000002000000ffffffff
-      _HashCodes: 5d74602c5b38305747dd9054
-      _Next: ffffffffffffffff00000000
+      _Buckets: ffffffff0100000002000000
+      _HashCodes: b3f22b53a5b42c0e89992478
+      _Next: ffffffff00000000ffffffff
       _Count: 3
       _Version: 3
       _FreeList: -1
       _FreeCount: 0
       _Keys:
-      - Default/PC/Windows x64
-      - Default/PC
-      - Default
+      - Nightly/PC/Windows x64
+      - Nightly/PC
+      - Nightly
       _Values:
       - enabled: 1
         childKeys: []
       - enabled: 1
         childKeys:
-        - Default/PC/Windows x64
+        - Nightly/PC/Windows x64
       - enabled: 1
         childKeys:
-        - Default/PC
+        - Nightly/PC
     showViewOptions: 0
     showConfigs: 0
     showBuildInfo: 0
@@ -85,4 +111,5 @@ MonoBehaviour:
   _preBuildActions:
     buildActions: []
   _postBuildActions:
-    buildActions: []
+    buildActions:
+    - {fileID: -506668513032588967}
