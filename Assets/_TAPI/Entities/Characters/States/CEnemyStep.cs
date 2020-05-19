@@ -8,21 +8,28 @@ namespace TAPI.Entities.Characters.States
 {
     public class CEnemyStep : EntityState
     {
-        Vector3 inertiaBackup;
+        Vector3 forceBackup;
         public override void OnStart()
         {
             base.OnStart();
-            inertiaBackup = PhysicsManager.forceInertia;
-            PhysicsManager.forceInertia = Vector3.zero;
+            forceBackup = controller.visualTransform.InverseTransformDirection(PhysicsManager.forceMovement);
             PhysicsManager.forceMovement = Vector3.zero;
             PhysicsManager.forceGravity = Vector3.zero;
             controller.ResetAirActions();
             controller.currentAirJump = -1;
+            CombatManager.Reset();
         }
 
         public override void OnUpdate()
         {
             base.OnUpdate();
+
+            Vector3 movement = controller.GetMovementVector();
+
+            if (movement.magnitude > InputConstants.movementMagnitude)
+            {
+                controller.SetVisualRotation(controller.GetMovementVector());
+            }
             StateManager.IncrementFrame();
         }
 
@@ -30,7 +37,7 @@ namespace TAPI.Entities.Characters.States
         {
             if (CombatManager.CheckForAction())
             {
-                PhysicsManager.forceInertia = inertiaBackup;
+                PhysicsManager.forceMovement = controller.visualTransform.TransformDirection(forceBackup);
                 StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }

@@ -37,13 +37,11 @@ namespace TAPI.Entities
             gravity = forceGravity;
         }
 
-        public void SetMovement(Vector3 forceMovement, Vector3 forceDamage, Vector3 forceGravity, Vector3 forceInertia)
+        public void SetMovement(Vector3 forceMovement, Vector3 forceDamage, Vector3 forceGravity)
         {
             gravity = forceGravity;
-            gravity.y += forceInertia.y;
-            forceInertia.y = 0;
 
-            moveVector = forceMovement + forceDamage + forceInertia;
+            moveVector = forceMovement + forceDamage;
 
             if (gravity.y > 0.0f)
             {

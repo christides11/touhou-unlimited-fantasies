@@ -449,8 +449,7 @@ MonoBehaviour:
   - {fileID: 3193021667813939668}
   groundAttackStartNodes:
   - {fileID: -1246202044470491312}
-  airAttackCommandNormals:
-  - {fileID: -8484630490610987400}
+  airAttackCommandNormals: []
   airAttackStartNodes:
   - {fileID: 4975244848732337459}
   floatingAttackCommandNormals: []

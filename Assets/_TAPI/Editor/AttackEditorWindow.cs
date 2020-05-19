@@ -127,19 +127,6 @@ namespace TAPI.Combat
             }
             float gravityScale = EditorGUILayout.FloatField("Gravity Scale Added", attack.gravityScaleAdded);
 
-            bool modifiesInertia = EditorGUILayout.Toggle("Modifies Inertia", attack.modifiesInertia);
-            float inertiaModifier = attack.inertiaModifer;
-            if (modifiesInertia)
-            {
-                inertiaModifier = EditorGUILayout.FloatField("Modifier", inertiaModifier);
-            }
-            bool carriesInertia = EditorGUILayout.Toggle("Carries Inertia", attack.carriesInertia);
-            float carriedInertia = attack.carriedInertia;
-            if (carriesInertia)
-            {
-                carriedInertia = EditorGUILayout.FloatField("Carried Inertia", carriedInertia);
-            }
-
             int chargeLength = attack.chargeLength;
             chargeLength = EditorGUILayout.IntField("Charge Length", chargeLength);
 
@@ -205,10 +192,6 @@ namespace TAPI.Combat
                 attack.animationAir = animationAir;
                 attack.heightRestriction = heightRestriction;
                 attack.wrapMode = wrapMode;
-                attack.modifiesInertia = modifiesInertia;
-                attack.inertiaModifer = inertiaModifier;
-                attack.carriesInertia = carriesInertia;
-                attack.carriedInertia = carriedInertia;
                 attack.chargeFrames = chargeFrames;
                 attack.chargeLength = chargeLength;
                 attack.faceLockonTargetWindows = followWindows;

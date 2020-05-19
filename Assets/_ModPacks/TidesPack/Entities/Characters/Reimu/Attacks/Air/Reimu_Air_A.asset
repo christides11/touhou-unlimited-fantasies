@@ -93,7 +93,7 @@ MonoBehaviour:
   faceLockonTargetWindows:
   - startFrame: 0
     endFrame: 5
-    amount: 0.5
+    amount: 1
   events:
   - nickname: Clamp Gravity
     active: 1

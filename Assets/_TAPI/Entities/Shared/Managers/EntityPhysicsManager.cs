@@ -20,7 +20,6 @@ namespace TAPI.Entities
         public Vector3 forceMovement;
         public Vector3 forceGravity;
         public Vector3 forceDamage;
-        public Vector3 forceInertia;
         public Vector3 forcePushbox;
 
         [Header("Physics")]
@@ -31,8 +30,7 @@ namespace TAPI.Entities
 
         public virtual void Tick()
         {
-            controller.cc.SetMovement(forceMovement+forcePushbox, forceDamage, forceGravity, forceInertia);
-            ApplyInertiaFriction();
+            controller.cc.SetMovement(forceMovement+forcePushbox, forceDamage, forceGravity);
             forcePushbox = Vector3.zero;
         }
 
@@ -94,22 +92,6 @@ namespace TAPI.Entities
             Vector3 realFriction = forceMovement.normalized * friction;
             forceMovement.x = ApplyFriction(forceMovement.x, Mathf.Abs(realFriction.x));
             forceMovement.z = ApplyFriction(forceMovement.z, Mathf.Abs(realFriction.z));
-        }
-
-        public virtual void ApplyInertiaFriction(float friction = -1)
-        {
-            if(forceInertia == Vector3.zero)
-            {
-                return;
-            }
-            if(friction == -1)
-            {
-                friction = controller.definition.stats.inertiaFriction;
-            }
-            Vector3 realFriction = forceInertia.normalized * friction;
-            forceInertia.x = ApplyFriction(forceInertia.x, Mathf.Abs(realFriction.x));
-            forceInertia.y = ApplyFriction(forceInertia.y, Mathf.Abs(realFriction.y));
-            forceInertia.z = ApplyFriction(forceInertia.z, Mathf.Abs(realFriction.z));
         }
 
         public virtual void ApplyGravityFriction(float friction)

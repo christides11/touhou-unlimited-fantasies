@@ -11,9 +11,9 @@ namespace TAPI.Core
         }
         public virtual void OnUpdate()
         {
-            if (!CheckInterrupt())
+            if (CheckInterrupt())
             {
-
+                return;
             }
         }
         public virtual bool CheckInterrupt()

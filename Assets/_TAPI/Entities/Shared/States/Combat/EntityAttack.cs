@@ -28,13 +28,6 @@ namespace TAPI.Entities.Shared
                 StateManager.ChangeState(currentAttack.stateOverride);
                 return;
             }
-            if (currentAttack)
-            {
-                if (currentAttack.modifiesInertia)
-                {
-                    PhysicsManager.forceInertia *= currentAttack.inertiaModifer;
-                }
-            }
         }
 
         public override void OnUpdate()
@@ -154,17 +147,12 @@ namespace TAPI.Entities.Shared
 
         public override void OnInterrupted()
         {
+            
             AttackSO currentAttack = CombatManager.CurrentAttack.action;
             if (currentAttack)
             {
                 PhysicsManager.CurrentGravityScale += currentAttack.gravityScaleAdded;
-                if (currentAttack.carriesInertia)
-                {
-                    PhysicsManager.forceInertia += (PhysicsManager.forceMovement + PhysicsManager.forceGravity)
-                        * currentAttack.carriedInertia;
-                }
             }
-            PhysicsManager.forceMovement = Vector3.zero;
         }
 
         protected virtual bool CheckCancelWindows(AttackSO currentAttack)

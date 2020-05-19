@@ -17,10 +17,6 @@ namespace TAPI.Combat
         public bool airAble;
         public float heightRestriction;
         public bool possibleGround;
-        public bool modifiesInertia = true;
-        public float inertiaModifer = 0.0f;
-        public bool carriesInertia = false;
-        public float carriedInertia = 1.0f;
         public List<int> chargeFrames = new List<int>();
         public int chargeLength;
         public float gravityScaleAdded = 0;
