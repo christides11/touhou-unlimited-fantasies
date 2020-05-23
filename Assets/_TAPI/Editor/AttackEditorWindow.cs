@@ -369,8 +369,6 @@ namespace TAPI.Combat
             }
             HitboxGroup currentGroup = attack.hitboxGroups[currentHitboxGroupIndex];
             DrawHitboxGroup(currentGroup);
-
-
         }
 
         bool hitboxesFoldout;

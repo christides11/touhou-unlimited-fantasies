@@ -20,10 +20,6 @@ MonoBehaviour:
   airAble: 1
   heightRestriction: 0
   possibleGround: 0
-  modifiesInertia: 0
-  inertiaModifer: 0
-  carriesInertia: 0
-  carriedInertia: 1
   chargeFrames: 
   chargeLength: 0
   gravityScaleAdded: 0
@@ -216,7 +212,7 @@ MonoBehaviour:
     onDetect: 0
     onDetectHitboxGroup: 0
     startFrame: 1
-    endFrame: 1
+    endFrame: 6
     attackEvent: {fileID: 11400000, guid: a57a5493c2923da4a86304ec195ff426, type: 2}
     variables:
       intVars: 
@@ -236,6 +232,6 @@ MonoBehaviour:
     variables:
       intVars: 
       floatVars:
-      - 0.2
+      - 0.1
       objectVars: []
       curveVars: []
