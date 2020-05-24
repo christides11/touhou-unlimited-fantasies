@@ -5,21 +5,17 @@ using TAPI.Combat;
 using UnityEngine;
 using TAPI.Core;
 using TAPI.Sound;
+using CAF.Combat;
 
 namespace TAPI.Entities
 {
     /// <summary>
     /// Handles the hitboxes and other boxes used by entities for combat.
     /// </summary>
-    public class EntityHitboxManager
+    public class EntityHitboxManager : CAF.Entities.EntityHitboxManager
     {
         public delegate void HitboxGroupEventAction(GameObject hurtableHit, int hitboxGroupIndex, MovesetAttackNode attack);
         public event HitboxGroupEventAction OnHitboxHit;
-
-        // Hitbox Group : Hitboxes
-        private Dictionary<int, List<Hitbox>> hitboxes = new Dictionary<int, List<Hitbox>>();
-        // Hitbox ID : IHurtables Hit
-        private Dictionary<int, List<IHurtable>> hurtablesHit = new Dictionary<int, List<IHurtable>>();
 
         // Detectbox Group : Detectboxes
         private Dictionary<int, List<DetectionBox>> detectboxes = new Dictionary<int, List<DetectionBox>>();
@@ -31,22 +27,17 @@ namespace TAPI.Entities
         private EntityCombatManager combatManager;
         private EntityController controller;
 
-        public EntityHitboxManager(EntityCombatManager combatManager, EntityController controller)
-        {
-            this.combatManager = combatManager;
-            this.controller = controller;
-        }
-
         /// <summary>
         /// Destroys all boxes and clears variables.
         /// </summary>
         public void Reset()
         {
+            /*
             CleanupAllHitboxes();
             CleanupAllDetectboxes();
             hurtablesHit.Clear();
             detectboxesDetectedHurtables.Clear();
-            hurtablesDetected.Clear();
+            hurtablesDetected.Clear();*/
         }
 
         /// <summary>
@@ -142,7 +133,7 @@ namespace TAPI.Entities
         /// <param name="ID">The group to reactivate the hitboxes for.</param>
         public void ReactivateHitboxID(int ID)
         {
-            AttackSO atk = combatManager.currentAttack.action;
+            Combat.AttackDefinition atk = combatManager.currentAttack.action;
 
             hurtablesHit[ID]?.Clear();
 
@@ -162,75 +153,6 @@ namespace TAPI.Entities
         }
 
         #region Hitboxes
-        /// <summary>
-        /// Create the hitboxes of the given hitbox group index.
-        /// </summary>
-        /// <param name="index">The index to create the hitboxes for.</param>
-        public void CreateHitboxes(int index)
-        {
-            // Hitboxes were already created.
-            if (hitboxes.ContainsKey(index))
-            {
-                return;
-            }
-
-            // Variables.
-            HitboxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[index];
-            if (currentGroup.hitGroupType != HitboxGroupType.HIT)
-            {
-                return;
-            }
-            List<Hitbox> hitboxList = new List<Hitbox>(currentGroup.hitboxes.Count);
-            
-            // Keep track of what this ID has hit.
-            if (!hurtablesHit.ContainsKey(currentGroup.ID))
-            {
-                hurtablesHit.Add(currentGroup.ID, new List<IHurtable>());
-                hurtablesHit[currentGroup.ID].Add(combatManager);
-            }
-
-            // Loop through all the hitboxes in the group.
-            for (int i = 0; i < currentGroup.hitboxes.Count; i++)
-            {
-                // Instantiate the hitbox with the correct position and rotation.
-                HitboxDefinition hitboxDefinition = currentGroup.hitboxes[i];
-                Vector3 pos = controller.GetVisualBasedDirection(Vector3.forward) * hitboxDefinition.offset.z
-                    + controller.GetVisualBasedDirection(Vector3.right) * hitboxDefinition.offset.x
-                    + controller.GetVisualBasedDirection(Vector3.up) * hitboxDefinition.offset.y;
-                GameObject hbox = GameObject.Instantiate(controller.GameManager.gameVars.combat.hitbox,
-                    controller.transform.position + pos,
-                    Quaternion.Euler(controller.transform.eulerAngles + hitboxDefinition.rotation));
-
-                // Initialize it with the correct shape.
-                switch (currentGroup.hitboxes[i].shape)
-                {
-                    case ShapeType.Rectangle:
-                        hbox.GetComponent<Hitbox>().InitRectangle(currentGroup.hitboxes[i].size,
-                            controller.visual.transform.eulerAngles + currentGroup.hitboxes[i].rotation);
-                        break;
-                    case ShapeType.Circle:
-                        hbox.GetComponent<Hitbox>().InitSphere(currentGroup.hitboxes[i].radius);
-                        break;
-                }
-
-                // Attach the hitbox if neccessary.
-                if (currentGroup.attachToEntity)
-                {
-                    hbox.transform.SetParent(controller.transform);
-                }
-
-                int cID = currentGroup.ID;
-                int groupLocalVar = index;
-                // Activate the hitbox and add it to our list.
-                hbox.GetComponent<Hitbox>().OnHurt += (hurtable, hInfo) => { OnHitboxHurt(hurtable, hInfo, cID, index); };
-                hbox.GetComponent<Hitbox>().Activate(controller.gameObject, controller.visualTransform,
-                    currentGroup.hitInfo, hurtablesHit[currentGroup.ID]);
-                hitboxList.Add(hbox.GetComponent<Hitbox>());
-            }
-            // Add the hitbox group to our list.
-            hitboxes.Add(index, hitboxList);
-        }
-
         /// <summary>
         /// Called whenever a hitbox hits a hurtbox successfully.
         /// </summary>
@@ -276,7 +198,7 @@ namespace TAPI.Entities
             }
 
             // Variables.
-            HitboxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[group];
+            BoxGroup currentGroup = combatManager.currentAttack.action.hitboxGroups[group];
             if(currentGroup.hitGroupType != HitboxGroupType.DETECT)
             {
                 return;

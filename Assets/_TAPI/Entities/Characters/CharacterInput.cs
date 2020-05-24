@@ -5,7 +5,7 @@ using UnityEngine;
 
 namespace TAPI.Entities.Characters
 {
-    public class CharacterInput : EntityInput
+    public class CharacterInput : EntityInputManager
     {
 
     }

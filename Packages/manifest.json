@@ -1,6 +1,8 @@
 {
   "dependencies": {
+    "com.christides.character-action-framework": "https://github.com/christides11/Character-Action-Framework.git#upm",
     "com.github.siccity.xnode": "https://github.com/siccity/xNode.git",
+    "com.malee.reorderablelist": "https://github.com/cfoulston/Unity-Reorderable-List.git",
     "com.unity.cinemachine": "2.5.0",
     "com.unity.probuilder": "4.2.3",
     "com.unity.progrids": "3.0.3-preview.5",
@@ -41,9 +43,17 @@
     "com.unity.modules.xr": "1.0.0"
   },
   "lock": {
+    "com.christides.character-action-framework": {
+      "revision": "upm",
+      "hash": "7b441f376a9ef6b9a88657a311134e01c5ab28f7"
+    },
     "com.github.siccity.xnode": {
       "revision": "HEAD",
       "hash": "c9e1ef1c922000b8798b2198f8fa318c44adca07"
+    },
+    "com.malee.reorderablelist": {
+      "revision": "HEAD",
+      "hash": "b6a47f8257cf065e9feb04acdc92e500761e605c"
     }
   }
 }

@@ -4,45 +4,24 @@ using System.Collections.Generic;
 using TAPI.Combat;
 using UnityEngine;
 using TAPI.Core;
+using CAF.Combat;
 
 namespace TAPI.Entities
 {
-    public class EntityCombatManager : MonoBehaviour, IHurtable
+    public class EntityCombatManager : CAF.Entities.EntityCombatManager
     {
-        public MovesetAttackNode CurrentAttack { get { return currentAttack; } }
+        //public new MovesetAttackNode CurrentAttack { get { return currentAttack; } }
         public bool WasFloating { get; set; } = false;
         public HitInfo LastHitBy { get; protected set; }
-        public EntityTeams Team { get { return team; } }
 
-        [SerializeField] public EntityController controller;
+        [SerializeField] public new EntityController controller;
         [SerializeField] public MovesetAttackNode currentAttack;
         [SerializeField] protected MovesetDefinition moveset;
-        public EntityHitboxManager hitboxManager;
-        [SerializeField] public int hitStun;
-        [SerializeField] public int hitStop;
+        public new EntityHitboxManager hitboxManager;
 
         [SerializeField] protected EntityTeams team;
 
         public List<int> chargeTimes = new List<int>();
-
-
-        private void Awake()
-        {
-            hitboxManager = new EntityHitboxManager(this, controller);
-        }
-
-        public virtual void CLateUpdate()
-        {
-            if(hitStop > 0)
-            {
-                hitStop--;
-            }else if(hitStun > 0)
-            {
-                hitStun--;
-            }
-
-            hitboxManager.TickBoxes();
-        }
 
         public void Reset(bool resetAttack = true)
         {
@@ -57,6 +36,16 @@ namespace TAPI.Entities
             }
         }
 
+        protected override bool CheckStartingNodes()
+        {
+            if (controller.IsFloating)
+            {
+
+            }
+            return base.CheckStartingNodes();
+        }
+
+        /*
         public bool CheckForAction(bool ignoreCurrentAttack = false)
         {
             if (CheckForSpecial(ignoreCurrentAttack))
@@ -287,11 +276,11 @@ namespace TAPI.Entities
             Reset();
             currentAttack = node;
             return true;
-        }
+        }*/
 
-        bool CheckStickDirection(Vector2 wantedDirection, float deviation, int framesBack)
+        protected override bool CheckStickDirection(Vector2 wantedDirection, float deviation, int framesBack)
         {
-            Vector2 stickDir = controller.InputManager.GetMovement(framesBack);
+            Vector2 stickDir = controller.InputManager.GetAxis2D((int)EntityInputs.Movement, framesBack);
             if (stickDir.magnitude < InputConstants.movementMagnitude)
             {
                 return false;
@@ -307,12 +296,15 @@ namespace TAPI.Entities
             return false;
         }
 
-        public virtual HurtReactions Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfo hitInfo)
+        public override HitReaction Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfo hitInfo)
         {
+            HitReaction hitReaction = new HitReaction();
+            hitReaction.reactionType = HitReactionType.Hit;
             if(hitInfo.groundOnly && !controller.IsGrounded
                 || hitInfo.airOnly && controller.IsGrounded)
             {
-                return HurtReactions.Avoided;
+                hitReaction.reactionType = HitReactionType.Avoided;
+                return hitReaction;
             }
             LastHitBy = hitInfo;
             hitStop = hitInfo.hitstop;
@@ -355,18 +347,18 @@ namespace TAPI.Entities
             if (controller.IsGrounded && hitInfo.groundBounces)
             {
                 controller.StateManager.ChangeState((int)EntityStates.GROUND_BOUNCE);
-                return HurtReactions.Hit;
+                return hitReaction;
             }
 
             if (hitInfo.causesTumble)
             {
                 controller.StateManager.ChangeState((int)EntityStates.TUMBLE);
-                return HurtReactions.Hit;
+                return hitReaction;
             }
             else
             {
                 controller.StateManager.ChangeState((int)(controller.IsGrounded ? EntityStates.FLINCH : EntityStates.FLINCH_AIR));
-                return HurtReactions.Hit;
+                return hitReaction;
             }
         }
 

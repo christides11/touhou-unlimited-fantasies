@@ -22,7 +22,7 @@ namespace TAPI.Entities.Shared
             {
                 controller.PickSoftlockTarget();
             }
-            AttackSO currentAttack = CombatManager.CurrentAttack.action;
+            AttackDefinition currentAttack = CombatManager.CurrentAttack.action;
             if(currentAttack.stateOverride > -1)
             {
                 StateManager.ChangeState(currentAttack.stateOverride);
@@ -37,7 +37,7 @@ namespace TAPI.Entities.Shared
                 return;
             }
 
-            AttackSO currentAttack = CombatManager.CurrentAttack.action;
+            AttackDefinition currentAttack = CombatManager.CurrentAttack.action;
 
             for(int i = 0; i < currentAttack.faceLockonTargetWindows.Count; i++)
             {
@@ -148,14 +148,14 @@ namespace TAPI.Entities.Shared
         public override void OnInterrupted()
         {
             
-            AttackSO currentAttack = CombatManager.CurrentAttack.action;
+            AttackDefinition currentAttack = CombatManager.CurrentAttack.action;
             if (currentAttack)
             {
                 PhysicsManager.CurrentGravityScale += currentAttack.gravityScaleAdded;
             }
         }
 
-        protected virtual bool CheckCancelWindows(AttackSO currentAttack)
+        protected virtual bool CheckCancelWindows(AttackDefinition currentAttack)
         {
             if (CheckEnemyStepWindows(currentAttack)
                 || CheckDashCancelWindows(currentAttack)
@@ -172,7 +172,7 @@ namespace TAPI.Entities.Shared
         /// </summary>
         /// <param name="group">The group number being processed.</param>
         /// <param name="hitboxGroup">The group being processed.</param>
-        protected virtual void HandleBoxGroup(int group, HitboxGroup hitboxGroup)
+        protected virtual void HandleBoxGroup(int group, BoxGroup hitboxGroup)
         {
             // If this is the end of the group's lifetime, deactivate them.
             if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
@@ -240,7 +240,7 @@ namespace TAPI.Entities.Shared
         /// </summary>
         /// <param name="currentAttack">The current attack's information.</param>
         /// <returns>True if we land canceled.</returns>
-        protected virtual bool CheckLandCancelWindows(AttackSO currentAttack)
+        protected virtual bool CheckLandCancelWindows(AttackDefinition currentAttack)
         {
             for(int i = 0; i < currentAttack.landCancelFrames.Count; i++)
             {
@@ -261,7 +261,7 @@ namespace TAPI.Entities.Shared
         /// </summary>
         /// <param name="currentAttack">The current attack's information.</param>
         /// <returns>True if we jump canceled</returns>
-        protected virtual bool CheckJumpCancelWindows(AttackSO currentAttack)
+        protected virtual bool CheckJumpCancelWindows(AttackDefinition currentAttack)
         {
             for(int i = 0; i < currentAttack.jumpCancelFrames.Count; i++)
             {
@@ -282,7 +282,7 @@ namespace TAPI.Entities.Shared
         /// </summary>
         /// <param name="currentAttack">The current attack's information.</param>
         /// <returns>True if we jump canceled</returns>
-        protected virtual bool CheckEnemyStepWindows(AttackSO currentAttack)
+        protected virtual bool CheckEnemyStepWindows(AttackDefinition currentAttack)
         {
             for (int i = 0; i < currentAttack.enemyStepFrames.Count; i++)
             {
@@ -303,7 +303,7 @@ namespace TAPI.Entities.Shared
         /// </summary>
         /// <param name="currentAttack">The current attack's information.</param>
         /// <returns>True if we dash canceled.</returns>
-        protected virtual bool CheckDashCancelWindows(AttackSO currentAttack)
+        protected virtual bool CheckDashCancelWindows(AttackDefinition currentAttack)
         {
             for (int i = 0; i < currentAttack.dashCancelableFrames.Count; i++)
             {
@@ -324,7 +324,7 @@ namespace TAPI.Entities.Shared
         /// </summary>
         /// <param name="currentAttack">The current attack's information.</param>
         /// <returns>True if we attack canceled.</returns>
-        protected virtual bool CheckAttackCancelWindows(AttackSO currentAttack)
+        protected virtual bool CheckAttackCancelWindows(AttackDefinition currentAttack)
         {
             for (int i = 0; i < currentAttack.attackCancelFrames.Count; i++)
             {

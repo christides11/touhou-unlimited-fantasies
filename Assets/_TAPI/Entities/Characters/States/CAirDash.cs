@@ -9,14 +9,14 @@ namespace TAPI.Entities.Characters.States
     public class CAirDash : CharacterState
     {
 
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             CharacterStats cs = ((CharacterStats)controller.definition.stats);
 
             ((CharacterController)controller).currentAirDash++;
             controller.PhysicsManager.forceGravity *= cs.airDashGravityInitMulti;
-            Vector2 movement = controller.InputManager.GetMovement(0);
+            Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             if(movement.magnitude < InputConstants.movementMagnitude)
             {
                 Vector3 v = controller.lookTransform.InverseTransformDirection(controller.GetVisualBasedDirection(Vector3.forward));
@@ -48,7 +48,7 @@ namespace TAPI.Entities.Characters.States
         {
             if (controller.StateManager.CurrentStateFrame >= 3)
             {
-                if (controller.CombatManager.CheckForAction())
+                if (controller.CombatManager.TryAttack())
                 {
                     controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                     return true;
@@ -61,7 +61,7 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
                 return true;
             }
-            if (Mathf.Abs(controller.InputManager.GetFloatDir()) > InputConstants.floatMagnitude)
+            if (Mathf.Abs(controller.InputManager.GetAxis((int)EntityInputs.Float)) > InputConstants.floatMagnitude)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;

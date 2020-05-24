@@ -4,13 +4,13 @@ using UnityEngine;
 using System.Collections.Generic;
 using TAPI.Sound;
 using TAPI.Modding;
+using CAF.Combat;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
 namespace TAPI.Combat.Events
 {
-    [CreateAssetMenu(fileName = "PlaySoundEvent", menuName = "Attack Events/Play Sound")]
     public class PlaySoundEvent : AttackEvent
     {
         public override bool Evaluate(uint frame, uint endFrame,

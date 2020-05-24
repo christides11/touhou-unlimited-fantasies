@@ -6,10 +6,11 @@ using TAPI.Inputs;
 using TAPI.Entities;
 using TAPI.Combat;
 using System;
+using CAF.Simulation;
 
 namespace TAPI.Core
 {
-    public class PlayerCamera : SimObject
+    public class PlayerCamera : SimObject, CAF.Camera.LookHandler
     {
         public static PlayerCamera current;
 
@@ -38,12 +39,12 @@ namespace TAPI.Core
         public virtual void Initialize(EntityController entity)
         {
             currentEntity = entity;
-            currentEntity.CombatManager.hitboxManager.OnHitboxHit += CauseShake;
+            //currentEntity.CombatManager.hitboxManager.OnHitboxHit += CauseShake;
         }
 
         private void CauseShake(GameObject hurtableHit, int hitboxGroupIndex, MovesetAttackNode attack)
         {
-            cameraShake.Shake(attack.action.hitboxGroups[hitboxGroupIndex].cameraShake);
+            //cameraShake.Shake(attack.attackDefinition.boxGroups[hitboxGroupIndex].cameraShake);
         }
 
         public virtual void Update()
@@ -116,6 +117,31 @@ namespace TAPI.Core
             thirdPersonLook.m_RecenterToTargetHeading.m_enabled = false;
             lockOnTargetGroup.m_Targets[1].target = lockonTarget;
             lockOnCam.gameObject.SetActive(false);
+        }
+
+        public void SetLookDirection(Vector3 direction)
+        {
+
+        }
+
+        public void LookAt(Vector3 position)
+        {
+
+        }
+
+        public Vector3 Forward()
+        {
+            return transform.forward;
+        }
+
+        public Vector3 Right()
+        {
+            return transform.right;
+        }
+
+        public Vector3 Up()
+        {
+            return transform.up;
         }
     }
 }

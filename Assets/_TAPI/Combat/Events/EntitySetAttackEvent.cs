@@ -2,13 +2,13 @@
 using TAPI.Entities.Shared;
 using UnityEngine;
 using System.Collections.Generic;
+using CAF.Combat;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
 namespace TAPI.Combat.Events
 {
-    [CreateAssetMenu(fileName = "EntitySetAttackEvent", menuName = "Attack Events/Set Attack")]
     public class EntitySetAttackEvent : AttackEvent
     {
         public override bool Evaluate(uint frame, uint endFrame,

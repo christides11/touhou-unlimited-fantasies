@@ -4,13 +4,13 @@ using TAPI.Entities;
 using TAPI.Entities.Shared;
 using UnityEngine;
 using TAPI.Core;
+using CAF.Combat;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
 namespace TAPI.Combat.Events
 {
-    [CreateAssetMenu(fileName = "EntityFrictionEvent", menuName = "Attack Events/Force Curve")]
     public class EntityForceCurveEvent : AttackEvent
     {
         public bool xForce;

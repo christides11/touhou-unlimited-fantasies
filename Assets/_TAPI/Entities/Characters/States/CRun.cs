@@ -16,7 +16,7 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            EntityInput ei = controller.InputManager;
+            EntityInputManager ei = controller.InputManager;
             if (controller.CombatManager.CheckForAction())
             {
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);

@@ -3,13 +3,13 @@ using System.Collections.Generic;
 using TAPI.Entities;
 using TAPI.Entities.Shared;
 using UnityEngine;
+using CAF.Combat;
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
 
 namespace TAPI.Combat.Events
 {
-    [CreateAssetMenu(fileName = "EntityForceSetEvent", menuName = "Attack Events/Force Set")]
     public class EntityForceSetEvent : AttackEvent
     {
         public bool xzForce;

@@ -12,18 +12,15 @@ namespace TAPI.Entities
     /// <summary>
     /// A general controller that should work for a majority of entities.
     /// </summary>
-    public class EntityController : SimObject, ILockonable
+    public class EntityController : CAF.Entities.EntityController
     {
+        public new EntityPhysicsManager PhysicsManager { get { return entityPhysicsManager; } }
+
         public GameManager GameManager { get; protected set; }
-        public EntityInput InputManager { get { return entityInput; } }
-        public EntityStateManager StateManager { get { return entityStateManager; } }
-        public EntityCombatManager CombatManager { get { return entityCombatManager; } }
-        public EntityPhysicsManager PhysicsManager { get { return entityPhysicsManager; } }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
         public GameObject LockonTarget { get; protected set; } = null;
         public bool LockedOn { get; protected set; } = false;
         public Vector3 LockonForward { get; protected set; } = Vector3.forward;
-        public bool IsGrounded { get; set; } = false;
         public bool IsFloating { get; set; } = false;
         public int Health { get; protected set; } = 0;
         public bool Lockonable { get; protected set; } = true;
@@ -32,15 +29,10 @@ namespace TAPI.Entities
 
         #region References
         [Header("References")]
-        [SerializeField] protected EntityInput entityInput;
-        [SerializeField] protected EntityStateManager entityStateManager;
-        [SerializeField] protected EntityCombatManager entityCombatManager;
-        [SerializeField] protected EntityPhysicsManager entityPhysicsManager;
+        [SerializeField] protected new EntityPhysicsManager entityPhysicsManager;
         [SerializeField] protected EntityAnimator entityAnimator;
         public EntityDefinition definition;
         public EntityCharacterController cc;
-        public CapsuleCollider coll;
-        public GameObject visual;
         public Transform lookTransform;
         public Transform visualTransform;
         public TriggerDetector pushbox;
@@ -110,7 +102,7 @@ namespace TAPI.Entities
         /// <summary>
         /// Handles finding and locking on to targets.
         /// </summary>
-        private void HandleLockon()
+        protected override void HandleLockon()
         {
             InputRecordButton lockonButton = InputManager.GetButton(EntityInputs.Lockon);
 
@@ -268,7 +260,7 @@ namespace TAPI.Entities
         /// <param name="horizontal">The horizontal axis of the vector.</param>
         /// <param name="vertical">The vertical axis of the vector.</param>
         /// <returns>A direction vector based on the camera's forward.</returns>
-        public virtual Vector3 GetMovementVector(float horizontal, float vertical)
+        public override Vector3 GetMovementVector(float horizontal, float vertical)
         {
             if(lookTransform == null)
             {
@@ -289,11 +281,11 @@ namespace TAPI.Entities
         /// <summary>
         /// Transforms the given direction into one based on the visual's forward.
         /// </summary>
-        /// <param name="dir">The direction vector.</param>
+        /// <param name="direction">The direction vector.</param>
         /// <returns>A direction vector based on the visual's forward.</returns>
-        public virtual Vector3 GetVisualBasedDirection(Vector3 dir)
+        public override Vector3 GetVisualBasedDirection(Vector3 direction)
         {
-            Vector3 vector = visualTransform.TransformDirection(dir);
+            Vector3 vector = visualTransform.TransformDirection(direction);
             return vector;
         }
 
@@ -302,7 +294,7 @@ namespace TAPI.Entities
         /// </summary>
         /// <param name="direction">The direction to rotate towards.</param>
         /// <param name="speed">The speed of the rotation.</param>
-        public virtual void RotateVisual(Vector3 direction, float speed)
+        public override void RotateVisual(Vector3 direction, float speed)
         {
             Vector3 newDirection = Vector3.RotateTowards(visual.transform.forward, direction, speed, 0.0f);
             visual.transform.rotation = Quaternion.LookRotation(newDirection);
@@ -312,7 +304,7 @@ namespace TAPI.Entities
         /// Set the visual's rotation to the given direction.
         /// </summary>
         /// <param name="direction">The direction to set the rotation to.</param>
-        public virtual void SetVisualRotation(Vector3 direction)
+        public override void SetVisualRotation(Vector3 direction)
         {
             visual.transform.rotation = Quaternion.LookRotation(direction);
         }
@@ -339,7 +331,7 @@ namespace TAPI.Entities
         /// <returns>True if the jump cancel was successful.</returns>
         public virtual bool JumpCancel()
         {
-            if (InputManager.GetButton(EntityInputs.Jump).firstPress)
+            if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
                 if (IsGrounded)
                 {
@@ -356,7 +348,7 @@ namespace TAPI.Entities
 
         public virtual bool EnemyStepCancel()
         {
-            if (InputManager.GetButton(EntityInputs.Jump, 0, true).firstPress)
+            if (InputManager.GetButton((int)EntityInputs.Jump, 0, true).firstPress)
             {
                 Collider[] c = Physics.OverlapSphere(transform.position, enemyStepCheckRadius, enemyStepLayerMask);
                 for (int i = 0; i < c.Length; i++)

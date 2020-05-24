@@ -1,26 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TAPI.Combat;
-using TAPI.Core;
-using TAPI.Entities.Shared;
+﻿using TAPI.Core;
 using UnityEngine;
-using KinematicCharacterController;
-using System;
 
 namespace TAPI.Entities
 {
-    public class EntityPhysicsManager : MonoBehaviour
+    public class EntityPhysicsManager : CAF.Entities.EntityPhysicsManager
     {
         public float CurrentGravityScale { get; set; } = 1.0f;
         public float CurrentFallSpeed { get; set; } = 0;
 
-        [SerializeField] protected EntityController controller;
-
-        [Header("Forces")]
-        public Vector3 forceMovement;
-        public Vector3 forceGravity;
-        public Vector3 forceDamage;
-        public Vector3 forcePushbox;
+        [SerializeField] protected new EntityController controller;
 
         [Header("Physics")]
         public float wallCheckDistance = 0.7f;
@@ -28,7 +16,7 @@ namespace TAPI.Entities
         public float ceilingCheckDistance = 1.2f;
         public RaycastHit wallRayHit;
 
-        public virtual void Tick()
+        public override void Tick()
         {
             controller.cc.SetMovement(forceMovement+forcePushbox, forceDamage, forceGravity);
             forcePushbox = Vector3.zero;
@@ -40,34 +28,33 @@ namespace TAPI.Entities
             forcePushbox = dir * controller.GameManager.gameVars.pushboxForce;
         }
 
-        public virtual void SetForceDirect(Vector3 movement, Vector3 gravity)
+        public override void SetForceDirect(Vector3 movement, Vector3 gravity)
         {
             controller.cc.SetMovement(movement, gravity);
         }
 
-        public virtual Vector3 GetOverallForce()
+        public override Vector3 GetOverallForce()
         {
             return forceMovement + forceGravity + forceDamage;
         }
 
-        public virtual void HandleGravity(float decelerationFactor = 0.97f)
+        public virtual void HandleGravity()
         {
             HandleGravity(controller.definition.stats.maxFallSpeed, 
-                controller.definition.stats.gravity,
-                CurrentGravityScale, decelerationFactor);
+                controller.definition.stats.gravity, CurrentGravityScale);
         }
 
-        public virtual void HandleGravity(float gravity, float decelerationFactor = 0.97f)
+        public virtual void HandleGravity(float gravity)
         {
             HandleGravity(gravity, CurrentGravityScale, decelerationFactor);
         }
 
-        public virtual void HandleGravity(float gravity, float gravityScale, float decelerationFactor = 0.97f)
+        public virtual void HandleGravity(float gravity, float gravityScale)
         {
-            HandleGravity(controller.definition.stats.maxFallSpeed, gravity, gravityScale, decelerationFactor);
+            HandleGravity(controller.definition.stats.maxFallSpeed, gravity, gravityScale);
         }
 
-        public virtual void HandleGravity(float maxFallSpeed, float gravity, float gravityScale, float decelerationFactor = 0.97f)
+        public override void HandleGravity(float maxFallSpeed, float gravity, float gravityScale)
         {
             if (forceGravity.y > -(maxFallSpeed))
             {
@@ -83,7 +70,7 @@ namespace TAPI.Entities
             }
         }
 
-        public virtual void ApplyMovementFriction(float friction = -1)
+        public override void ApplyMovementFriction(float friction = -1)
         {
             if (friction == -1)
             {
@@ -94,7 +81,7 @@ namespace TAPI.Entities
             forceMovement.z = ApplyFriction(forceMovement.z, Mathf.Abs(realFriction.z));
         }
 
-        public virtual void ApplyGravityFriction(float friction)
+        public override void ApplyGravityFriction(float friction)
         {
             forceGravity.y = ApplyFriction(forceGravity.y, friction);
         }
@@ -105,7 +92,7 @@ namespace TAPI.Entities
         /// <param name="value">The value to apply traction to.</param>
         /// <param name="traction">The traction to apply.</param>
         /// <returns>The new value with the traction applied.</returns>
-        protected virtual float ApplyFriction(float value, float traction)
+        protected override float ApplyFriction(float value, float traction)
         {
             if (value > 0)
             {
@@ -134,9 +121,9 @@ namespace TAPI.Entities
         /// <param name="max">The max magnitude of our movement force.</param>
         /// <param name="decel">How much the entity decelerates when moving faster than the max magnitude.
         /// 1.0 = doesn't decelerate, 0.0 = force set to 0.</param>
-        public virtual void ApplyMovement(float accel, float max, float decel)
+        public override void ApplyMovement(float accel, float max, float decel)
         {
-            Vector2 movement = controller.InputManager.GetMovement(0);
+            Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             if (movement.magnitude >= InputConstants.movementMagnitude)
             {
                 //Translate movment based on "camera."
@@ -183,7 +170,7 @@ namespace TAPI.Entities
         public virtual RaycastHit DetectWall()
         {
             //Get stick direction.
-            Vector2 movement = controller.InputManager.GetMovement(0);
+            Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             Vector3 translatedMovement = controller.lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
             translatedMovement.y = 0;
 

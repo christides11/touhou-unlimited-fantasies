@@ -5,15 +5,15 @@ using UnityEngine;
 
 namespace TAPI.Entities
 {
-    public class EntityState : BaseState
+    public class EntityState : CAF.Entities.EntityState
     {
         public virtual EntityController controller { get; set; }
         protected EntityCombatManager CombatManager { get { return controller.CombatManager; } }
         protected EntityStateManager StateManager { get { return controller.StateManager; } }
-        protected EntityInput InputManager { get { return controller.InputManager; } }
+        protected EntityInputManager InputManager { get { return controller.InputManager; } }
         protected EntityPhysicsManager PhysicsManager { get { return controller.PhysicsManager; } }
 
-        public override void OnStart()
+        public override void Initialize()
         {
             controller.StateManager.SetFrame(1);
         }
