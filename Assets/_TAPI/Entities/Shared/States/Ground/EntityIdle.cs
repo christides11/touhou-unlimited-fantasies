@@ -6,9 +6,9 @@ namespace TAPI.Entities.Shared
 {
     public class EntityIdle : EntityState
     {
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             controller.ResetAirActions();
         }
 

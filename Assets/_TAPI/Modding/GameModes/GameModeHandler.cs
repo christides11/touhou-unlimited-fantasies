@@ -1,9 +1,11 @@
-﻿using KinematicCharacterController;
+﻿using CAF.Simulation;
+using KinematicCharacterController;
 using System.Collections;
 using System.Collections.Generic;
 using TAPI.Core;
 using TAPI.Entities.Shared;
 using UnityEngine;
+using SimObjectManager = TAPI.Core.SimObjectManager;
 
 namespace TAPI.GameMode{
     public class GameModeHandler : MonoBehaviour

@@ -10,7 +10,7 @@ namespace TAPI.Entities.Characters.States
     {
         public override bool CheckInterrupt()
         {
-            if (controller.InputManager.GetButton(EntityInputs.Jump).firstPress)
+            if (controller.InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
                 controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_JUMP);
                 return true;

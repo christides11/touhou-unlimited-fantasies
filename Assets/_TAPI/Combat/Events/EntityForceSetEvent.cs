@@ -15,8 +15,8 @@ namespace TAPI.Combat.Events
         public bool xzForce;
         public bool yForce;
 
-        public override bool Evaluate(uint frame, uint endFrame, EntityAttack attackState, EntityController controller,
-    AttackEventVariables variables)
+        public override bool Evaluate(uint frame, uint endFrame, 
+            CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
             Vector3 f = Vector3.zero;
             if (xzForce)

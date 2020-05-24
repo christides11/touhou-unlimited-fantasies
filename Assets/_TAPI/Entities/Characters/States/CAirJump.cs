@@ -10,7 +10,7 @@ namespace TAPI.Entities.Characters.States
     {
         public override bool CheckInterrupt()
         {
-            if (controller.CombatManager.CheckForAction())
+            if (controller.CombatManager.TryAttack())
             {
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
@@ -24,7 +24,7 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;
             }
-            if (Mathf.Abs(controller.InputManager.GetFloatDir()) > InputConstants.floatMagnitude)
+            if (Mathf.Abs(controller.InputManager.GetAxis((int)EntityInputs.Float)) > InputConstants.floatMagnitude)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;

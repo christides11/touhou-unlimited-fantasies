@@ -11,7 +11,7 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            if (controller.CombatManager.CheckForAction())
+            if (controller.CombatManager.TryAttack())
             {
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
@@ -23,7 +23,7 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
                 return true;
             }
-            if (Mathf.Abs(controller.InputManager.GetFloatDir()) > InputConstants.floatMagnitude)
+            if (Mathf.Abs(controller.InputManager.GetAxis((int)EntityInputs.Float)) > InputConstants.floatMagnitude)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;
@@ -44,7 +44,7 @@ namespace TAPI.Entities.Characters.States
             }
             if (controller.IsGrounded)
             {
-                if (controller.InputManager.GetMovement(0).magnitude > InputConstants.movementMagnitude)
+                if (controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude > InputConstants.movementMagnitude)
                 {
                     if (((CharacterController)controller).wasRunning)
                     {

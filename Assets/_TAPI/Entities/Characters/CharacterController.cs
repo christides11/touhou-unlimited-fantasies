@@ -68,7 +68,7 @@ namespace TAPI.Entities.Characters
 
         public virtual bool CheckAirDash()
         {
-            if (InputManager.GetButton(EntityInputs.Dash, 0, true).firstPress)
+            if (InputManager.GetButton((int)EntityInputs.Dash, 0, true).firstPress)
             {
                 if (currentAirDash < ((CharacterStats)definition.stats).maxAirDashes)
                 {
@@ -105,7 +105,7 @@ namespace TAPI.Entities.Characters
         RaycastHit hit;
         public bool CheckForWallsSide()
         {
-            Vector2 movement = InputManager.GetMovement(0);
+            Vector2 movement = InputManager.GetAxis2D((int)EntityInputs.Movement);
             Vector3 translatedMovement = lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
 
             Vector3 right = Vector3.Cross(translatedMovement.normalized, Vector3.up.normalized);

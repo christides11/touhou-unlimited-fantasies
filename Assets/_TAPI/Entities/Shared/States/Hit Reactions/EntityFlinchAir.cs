@@ -6,9 +6,9 @@ namespace TAPI.Entities.Shared
 {
     public class EntityFlinchAir : EntityState
     {
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
         }
 
         public override void OnUpdate()
@@ -22,7 +22,7 @@ namespace TAPI.Entities.Shared
             if (StateManager.CurrentStateFrame > 9)
             {
                 PhysicsManager.HandleGravity(controller.definition.stats.hitstunMaxFallSpeed,
-                    controller.definition.stats.hitstunGravity, 1.0f, 0.97f);
+                    controller.definition.stats.hitstunGravity, 1.0f);
             }
 
             StateManager.IncrementFrame();

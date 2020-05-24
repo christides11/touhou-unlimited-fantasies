@@ -6,6 +6,7 @@ using TAPI.Entities.Shared;
 using UnityEngine;
 using KinematicCharacterController;
 using System;
+using CAF.Input;
 
 namespace TAPI.Entities
 {
@@ -14,6 +15,7 @@ namespace TAPI.Entities
     /// </summary>
     public class EntityController : CAF.Entities.EntityController
     {
+        public new EntityInputManager InputManager { get { return entityInput; } }
         public new EntityPhysicsManager PhysicsManager { get { return entityPhysicsManager; } }
 
         public GameManager GameManager { get; protected set; }
@@ -25,10 +27,11 @@ namespace TAPI.Entities
         public int Health { get; protected set; } = 0;
         public bool Lockonable { get; protected set; } = true;
 
-        public Vector3 Center { get { return pushbox.Collider.bounds.center; } }
+        public new Vector3 Center { get { return pushbox.Collider.bounds.center; } }
 
         #region References
         [Header("References")]
+        [SerializeField] protected new EntityInputManager entityInput;
         [SerializeField] protected new EntityPhysicsManager entityPhysicsManager;
         [SerializeField] protected EntityAnimator entityAnimator;
         public EntityDefinition definition;
@@ -104,7 +107,7 @@ namespace TAPI.Entities
         /// </summary>
         protected override void HandleLockon()
         {
-            InputRecordButton lockonButton = InputManager.GetButton(EntityInputs.Lockon);
+            InputRecordButton lockonButton = InputManager.GetButton((int)EntityInputs.Lockon);
 
             LockedOn = false;
             if (!lockonButton.isDown)
@@ -144,7 +147,7 @@ namespace TAPI.Entities
         /// </summary>
         public void PickSoftlockTarget()
         {
-            if (LockedOn || InputManager.GetMovement(0).magnitude < InputConstants.movementMagnitude)
+            if (LockedOn || InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude < InputConstants.movementMagnitude)
             {
                 return;
             }
@@ -160,7 +163,7 @@ namespace TAPI.Entities
                     continue;
                 }
                 // Only objects with ILockonable can be locked on to.
-                if (c.TryGetComponent(out ILockonable lockonComponent))
+                if (c.TryGetComponent(out ITargetable lockonComponent))
                 {
                     if(Vector3.Distance(transform.position, c.transform.position) < closestDistance)
                     {
@@ -182,7 +185,7 @@ namespace TAPI.Entities
             Vector3 referenceDirection = GetMovementVector(0, 1);
             // If the movement stick is pointing in a direction, then our lockon should
             // be based on that angle instead.
-            Vector2 movementDir = InputManager.GetMovement(0);
+            Vector2 movementDir = InputManager.GetAxis2D((int)EntityInputs.Movement);
             if (movementDir.magnitude >= InputConstants.movementMagnitude)
             {
                 referenceDirection = GetMovementVector(movementDir.x, movementDir.y);
@@ -200,10 +203,10 @@ namespace TAPI.Entities
                     continue;
                 }
                 // Only objects with ILockonable can be locked on to.
-                if (c.TryGetComponent(out ILockonable targetLockonComponent))
+                if (c.TryGetComponent(out ITargetable targetLockonComponent))
                 {
                     // The target can not be locked on to right now.
-                    if (!targetLockonComponent.Lockonable)
+                    if (!targetLockonComponent.Targetable)
                     {
                         continue;
                     }
@@ -250,7 +253,7 @@ namespace TAPI.Entities
         /// <returns>A direction vector based on the camera's forward.</returns>
         public virtual Vector3 GetMovementVector(int frame = 0)
         {
-            Vector2 movement = InputManager.GetMovement(frame);
+            Vector2 movement = InputManager.GetAxis2D((int)EntityInputs.Movement, frame);
             return GetMovementVector(movement.x, movement.y);
         }
 
@@ -315,7 +318,7 @@ namespace TAPI.Entities
         /// <returns>True if the entity can air jump currently.</returns>
         public virtual bool CheckAirJump()
         {
-            if (InputManager.GetButton(EntityInputs.Jump).firstPress)
+            if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
                 if (currentAirJump < definition.stats.maxAirJumps)
                 {

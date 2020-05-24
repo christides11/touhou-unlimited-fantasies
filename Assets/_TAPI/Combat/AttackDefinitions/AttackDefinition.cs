@@ -15,6 +15,8 @@ namespace TAPI.Combat
         public List<Vector2Int> specialCancelFrames = new List<Vector2Int>();
         #endregion
 
+        public new List<BoxGroup> boxGroups;
+
         public List<BulletPatternGroup> bulletGroups = new List<BulletPatternGroup>();
         public List<AttackFaceLockonWindow> faceLockonTargetWindows = new List<AttackFaceLockonWindow>();
     }

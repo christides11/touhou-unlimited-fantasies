@@ -12,9 +12,9 @@ namespace TAPI.Entities.Shared
             return "Wall Cling";
         }
 
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             counter = 0;
             PhysicsManager.forceGravity.y *= controller.definition.stats.wallClingInitFrictionY;
             PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingInitFrictionXZ);
@@ -28,7 +28,7 @@ namespace TAPI.Entities.Shared
             {
                 PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingFrictionXZ);
                 EntityStats es = controller.definition.stats;
-                PhysicsManager.HandleGravity(es.wallClingMaxFallSpeed, es.wallClingGravity, PhysicsManager.CurrentGravityScale, 0.97f);
+                PhysicsManager.HandleGravity(es.wallClingMaxFallSpeed, es.wallClingGravity, PhysicsManager.CurrentGravityScale);
             }
         }
 

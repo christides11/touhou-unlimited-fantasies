@@ -1,21 +1,22 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TAPI.Core;
 using UnityEngine;
 
 namespace TAPI.Entities.Shared
 {
     public class EntityWalk : EntityState
     {
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             controller.ResetAirActions();
         }
         public override void OnUpdate()
         {
             if (!CheckInterrupt())
             {
-                Vector2 movement = controller.InputManager.GetMovement(0);
+                Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
                 Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
                 translatedMovement.y = 0;
 

@@ -6,9 +6,9 @@ namespace TAPI.Entities.Shared
 {
     public class EntityTumble : EntityState
     {
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
         }
 
         public override void OnUpdate()

@@ -17,8 +17,8 @@ namespace TAPI.Combat.Events
         public bool yForce;
         public bool zForce;
 
-        public override bool Evaluate(uint frame, uint endFrame, EntityAttack attackState, EntityController controller, 
-            AttackEventVariables variables)
+        public override bool Evaluate(uint frame, uint endFrame, 
+            CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
             Vector3 f = Vector3.zero;
             float percent = (float)frame / (float)endFrame;
@@ -42,7 +42,7 @@ namespace TAPI.Combat.Events
             f = controller.GetVisualBasedDirection(f);
 
             // Set Mode
-            if(variables.intVars[0] == 0)
+            if (variables.intVars[0] == 0)
             {
                 if (yForce)
                 {

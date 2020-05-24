@@ -1,14 +1,15 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TAPI.Core;
 using UnityEngine;
 
 namespace TAPI.Entities.Shared
 {
     public class EntityRun : EntityState
     {
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             controller.ResetAirActions();
         }
 
@@ -16,7 +17,7 @@ namespace TAPI.Entities.Shared
         {
             if (!CheckInterrupt())
             {
-                Vector2 movement = controller.InputManager.GetMovement(0);
+                Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
                 Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
                 translatedMovement *= controller.definition.stats.runAcceleration;
 

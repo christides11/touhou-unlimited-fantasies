@@ -12,18 +12,18 @@ namespace TAPI.Entities.Characters.States
         public override bool CheckInterrupt()
         {
             EntityInputManager ei = controller.InputManager;
-            if (controller.CombatManager.CheckForAction())
+            if (controller.CombatManager.TryAttack())
             {
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if (ei.GetButton(EntityInputs.Dash).firstPress
+            if (ei.GetButton((int)EntityInputs.Dash).firstPress
                 && controller.StateManager.CurrentStateFrame >= 3)
             {
                 controller.StateManager.ChangeState((int)EntityStates.DASH);
                 return true;
             }
-            if (ei.GetButton(EntityInputs.Jump).firstPress)
+            if (ei.GetButton((int)EntityInputs.Jump).firstPress)
             {
                 controller.StateManager.ChangeState((int)EntityStates.JUMP_SQUAT);
                 return true;

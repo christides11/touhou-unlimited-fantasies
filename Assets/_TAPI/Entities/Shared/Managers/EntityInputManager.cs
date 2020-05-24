@@ -9,7 +9,7 @@ namespace TAPI.Entities
 {
     public class EntityInputManager : CAF.Entities.EntityInputManager
     {
-        public EntityControlType controlType;
+        public InputControlType controlType;
         [SerializeField] protected AIBrain aiBrain;
         [SerializeField] private EntityController controller;
 

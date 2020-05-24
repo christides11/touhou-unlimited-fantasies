@@ -10,7 +10,7 @@ namespace TAPI.Entities.Shared
         {
             return "Wall Jump";
         }
-        public override void OnStart()
+        public override void Initialize()
         {
             controller.IsGrounded = false;
 

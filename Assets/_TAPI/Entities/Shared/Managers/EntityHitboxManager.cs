@@ -6,6 +6,7 @@ using UnityEngine;
 using TAPI.Core;
 using TAPI.Sound;
 using CAF.Combat;
+using MovesetAttackNode = TAPI.Combat.MovesetAttackNode;
 
 namespace TAPI.Entities
 {
@@ -133,7 +134,7 @@ namespace TAPI.Entities
         /// <param name="ID">The group to reactivate the hitboxes for.</param>
         public void ReactivateHitboxID(int ID)
         {
-            Combat.AttackDefinition atk = combatManager.currentAttack.action;
+            Combat.AttackDefinition atk = combatManager.currentAttack.attackDefinition;
 
             hurtablesHit[ID]?.Clear();
 

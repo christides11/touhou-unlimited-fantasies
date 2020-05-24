@@ -9,9 +9,9 @@ namespace TAPI.Entities.Characters.States
     public class CEnemyStep : EntityState
     {
         Vector3 forceBackup;
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             forceBackup = controller.visualTransform.InverseTransformDirection(PhysicsManager.forceMovement);
             PhysicsManager.forceMovement = Vector3.zero;
             PhysicsManager.forceGravity = Vector3.zero;
@@ -35,7 +35,7 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            if (CombatManager.CheckForAction())
+            if (CombatManager.TryAttack())
             {
                 PhysicsManager.forceMovement = controller.visualTransform.TransformDirection(forceBackup);
                 StateManager.ChangeState((int)EntityStates.ATTACK);

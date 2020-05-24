@@ -16,7 +16,7 @@ namespace TAPI.Combat.Events
         public bool useEntityGravityScale;
 
         public override bool Evaluate(uint frame, uint endFrame, 
-            EntityAttack attackState, EntityController controller, AttackEventVariables variables)
+            CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
             float percent = (float)frame / (float)endFrame;
 
@@ -27,7 +27,7 @@ namespace TAPI.Combat.Events
                     * variables.floatVars[0];
             }
 
-            float gravityScale = controller.PhysicsManager.CurrentGravityScale;
+            float gravityScale = controller.PhysicsManager.GravityScale;
             if (!useEntityGravityScale)
             {
                 gravityScale = variables.curveVars[1].Evaluate(percent)

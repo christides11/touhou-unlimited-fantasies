@@ -11,10 +11,10 @@ namespace TAPI.Combat.Events
 {
     public class EntityChangeStateEvent : AttackEvent
     {
-        public override bool Evaluate(uint frame, uint endFrame,
-            EntityAttack attackState, EntityController controller, AttackEventVariables variables)
+        public override bool Evaluate(uint frame, uint endFrame, 
+            CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
-            return false;
+            return base.Evaluate(frame, endFrame, controller, variables);
         }
 
 #if UNITY_EDITOR

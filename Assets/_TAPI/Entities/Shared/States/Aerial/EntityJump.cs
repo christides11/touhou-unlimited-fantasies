@@ -7,9 +7,9 @@ namespace TAPI.Entities.Shared
     public class EntityJump : EntityState
     {
 
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             controller.IsGrounded = false;
             controller.PhysicsManager.forceGravity.y = controller.fullHop ? controller.definition.stats.fullHopVelocity
                 : controller.definition.stats.shortHopJumpVelocity;

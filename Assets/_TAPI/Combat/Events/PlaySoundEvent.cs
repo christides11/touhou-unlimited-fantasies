@@ -1,6 +1,4 @@
-﻿using TAPI.Entities;
-using TAPI.Entities.Shared;
-using UnityEngine;
+﻿using UnityEngine;
 using System.Collections.Generic;
 using TAPI.Sound;
 using TAPI.Modding;
@@ -13,10 +11,11 @@ namespace TAPI.Combat.Events
 {
     public class PlaySoundEvent : AttackEvent
     {
-        public override bool Evaluate(uint frame, uint endFrame,
-            EntityAttack attackState, EntityController controller, AttackEventVariables variables)
+        public override bool Evaluate(uint frame, uint endFrame, 
+            CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
-            SoundDefinition sound = controller.GameManager.ModManager.GetSoundDefinition(((ModObjectLink)variables.objectVars[0]).reference);
+            TAPI.Entities.EntityController c = (TAPI.Entities.EntityController)controller;
+            SoundDefinition sound = c.GameManager.ModManager.GetSoundDefinition(((ModObjectLink)variables.objectVars[0]).reference);
             if (sound)
             {
                 SoundManager.Play(sound, 0, controller.transform);

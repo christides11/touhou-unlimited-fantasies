@@ -7,9 +7,9 @@ namespace TAPI.Entities.Shared
 {
     public class EntityJumpSquat : EntityState
     {
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             controller.fullHop = true;
             controller.PhysicsManager.ApplyMovementFriction();
             if (controller.LockedOn)
@@ -30,7 +30,7 @@ namespace TAPI.Entities.Shared
         {
             if (!CheckInterrupt())
             {
-                if (controller.InputManager.GetButton(EntityInputs.Jump).released)
+                if (controller.InputManager.GetButton((int)EntityInputs.Jump).released)
                 {
                     controller.fullHop = false;
                 }

@@ -15,7 +15,7 @@ namespace TAPI.Combat.Events
         public bool xzFriction;
 
         public override bool Evaluate(uint frame, uint endFrame, 
-            EntityAttack attackState, EntityController controller, AttackEventVariables variables)
+            CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
             if (xzFriction)
             {

@@ -12,9 +12,9 @@ namespace TAPI.Entities.Shared
             return "Float";
         }
 
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             controller.IsFloating = true;
         }
 
@@ -25,10 +25,10 @@ namespace TAPI.Entities.Shared
                 return;
             }
 
-            controller.PhysicsManager.forceGravity.y = controller.InputManager.GetFloatDir(0)
+            controller.PhysicsManager.forceGravity.y = controller.InputManager.GetAxis((int)EntityInputs.Float)
                 * controller.definition.stats.floatVerticalSpeed;
 
-            if(controller.InputManager.GetMovement(0).magnitude <= InputConstants.movementMagnitude)
+            if(controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude <= InputConstants.movementMagnitude)
             {
                 controller.PhysicsManager.ApplyMovementFriction(controller.definition.stats.floatFriction);
             }
@@ -45,7 +45,7 @@ namespace TAPI.Entities.Shared
 
         protected virtual void HandleMovement()
         {
-            Vector2 movement = controller.InputManager.GetMovement(0);
+            Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
 
             Vector3 velo = (translatedMovement * controller.definition.stats.floatAcceleration)

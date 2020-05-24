@@ -11,11 +11,10 @@ namespace TAPI.Combat.Events
 {
     public class EntitySetAttackEvent : AttackEvent
     {
-        public override bool Evaluate(uint frame, uint endFrame,
-    EntityAttack attackState, EntityController controller, AttackEventVariables variables)
+        public override bool Evaluate(uint frame, uint endFrame, CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
-            controller.CombatManager.Reset();
-            controller.CombatManager.currentAttack = (MovesetAttackNode)variables.objectVars[0];
+            controller.CombatManager.Cleanup();
+            controller.CombatManager.CurrentAttack = (MovesetAttackNode)variables.objectVars[0];
             controller.StateManager.ChangeState((int)EntityStates.ATTACK);
             return true;
         }

@@ -5,14 +5,15 @@ using TAPI.Combat;
 using UnityEngine;
 using TAPI.Core;
 using CAF.Combat;
+using MovesetAttackNode = TAPI.Combat.MovesetAttackNode;
+using MovesetDefinition = TAPI.Combat.MovesetDefinition;
 
 namespace TAPI.Entities
 {
     public class EntityCombatManager : CAF.Entities.EntityCombatManager
     {
-        //public new MovesetAttackNode CurrentAttack { get { return currentAttack; } }
+        public new MovesetAttackNode CurrentAttack { get { return currentAttack; } }
         public bool WasFloating { get; set; } = false;
-        public HitInfo LastHitBy { get; protected set; }
 
         [SerializeField] public new EntityController controller;
         [SerializeField] public MovesetAttackNode currentAttack;
@@ -313,7 +314,7 @@ namespace TAPI.Entities
             // Convert forces the attacker-based forward direction.
             switch (hitInfo.forceType)
             {
-                case HitForceType.SET:
+                case HitboxForceType.SET:
                     Vector3 baseForce = hitInfo.opponentForceDir * hitInfo.opponentForceMagnitude;
                     Vector3 forces = (forward * baseForce.z + right * baseForce.x);
                     forces.y = baseForce.y;
@@ -321,7 +322,7 @@ namespace TAPI.Entities
                     forces.y = 0;
                     controller.PhysicsManager.forceMovement = forces;
                     break;
-                case HitForceType.PULL:
+                case HitboxForceType.PULL:
                     Vector3 dir = transform.position - center;
                     if (!hitInfo.forceIncludeYForce)
                     {
@@ -362,7 +363,7 @@ namespace TAPI.Entities
             }
         }
 
-        public virtual void Heal()
+        public override void Heal()
         {
 
         }

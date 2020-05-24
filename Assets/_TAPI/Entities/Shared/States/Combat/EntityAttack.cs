@@ -1,10 +1,13 @@
-﻿using System;
+﻿using CAF.Combat;
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TAPI.Combat;
 using TAPI.Combat.Bullets;
 using TAPI.Core;
 using UnityEngine;
+using AttackDefinition = TAPI.Combat.AttackDefinition;
+using BoxGroup = TAPI.Combat.BoxGroup;
 
 namespace TAPI.Entities.Shared
 {
@@ -15,14 +18,14 @@ namespace TAPI.Entities.Shared
             return $"Attack ({CombatManager.CurrentAttack?.name}).";
         }
 
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
             if (!controller.LockedOn)
             {
                 controller.PickSoftlockTarget();
             }
-            AttackDefinition currentAttack = CombatManager.CurrentAttack.action;
+            AttackDefinition currentAttack = (TAPI.Combat.AttackDefinition)CombatManager.CurrentAttack.attackDefinition;
             if(currentAttack.stateOverride > -1)
             {
                 StateManager.ChangeState(currentAttack.stateOverride);
@@ -37,14 +40,14 @@ namespace TAPI.Entities.Shared
                 return;
             }
 
-            AttackDefinition currentAttack = CombatManager.CurrentAttack.action;
+            AttackDefinition currentAttack = (TAPI.Combat.AttackDefinition)CombatManager.CurrentAttack.attackDefinition;
 
             for(int i = 0; i < currentAttack.faceLockonTargetWindows.Count; i++)
             {
                 if(StateManager.CurrentStateFrame >= currentAttack.faceLockonTargetWindows[i].startFrame
                     && StateManager.CurrentStateFrame <= currentAttack.faceLockonTargetWindows[i].endFrame)
                 {
-                    Vector3 mov = controller.InputManager.GetMovement(0);
+                    Vector3 mov = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
                     Vector3 forwardDir = controller.visualTransform.forward;
                     // We're currently locked on to something.
                     if (controller.LockedOn)
@@ -70,9 +73,9 @@ namespace TAPI.Entities.Shared
                 }
             }
 
-            for(int i = 0; i < currentAttack.hitboxGroups.Count; i++)
+            for(int i = 0; i < currentAttack.boxGroups.Count; i++)
             {
-                HandleBoxGroup(i, currentAttack.hitboxGroups[i]);
+                HandleBoxGroup(i, currentAttack.boxGroups[i]);
             }
 
             
@@ -104,6 +107,7 @@ namespace TAPI.Entities.Shared
 
             if (!eventCancel)
             {
+                /*
                 if (currentAttack.chargeFrames.Count > 0)
                 {
                     // Handle charging attacks.
@@ -124,7 +128,7 @@ namespace TAPI.Entities.Shared
                     {
                         return;
                     }
-                }
+                }*/
                 controller.StateManager.IncrementFrame();
             }
         }
@@ -147,8 +151,8 @@ namespace TAPI.Entities.Shared
 
         public override void OnInterrupted()
         {
-            
-            AttackDefinition currentAttack = CombatManager.CurrentAttack.action;
+
+            AttackDefinition currentAttack = (TAPI.Combat.AttackDefinition)CombatManager.CurrentAttack.attackDefinition;
             if (currentAttack)
             {
                 PhysicsManager.CurrentGravityScale += currentAttack.gravityScaleAdded;
@@ -190,10 +194,10 @@ namespace TAPI.Entities.Shared
 
             // Create the correct box.
             switch (hitboxGroup.hitGroupType) {
-                case HitboxGroupType.HIT:
-                    CombatManager.hitboxManager.CreateHitboxes(group);
+                case BoxGroupType.HIT:
+                    CombatManager.hitboxManager.CreateHitboxGroup(group);
                     break;
-                case HitboxGroupType.DETECT:
+                case BoxGroupType.DETECT:
                     CombatManager.hitboxManager.CreateDetectboxes(group);
                     break;
             }
@@ -228,7 +232,6 @@ namespace TAPI.Entities.Shared
                 }
                 return currentEvent.attackEvent.Evaluate(StateManager.CurrentStateFrame - currentEvent.startFrame, 
                     currentEvent.endFrame - currentEvent.startFrame,
-                    this, 
                     controller,
                     currentEvent.variables);
             }
@@ -242,10 +245,10 @@ namespace TAPI.Entities.Shared
         /// <returns>True if we land canceled.</returns>
         protected virtual bool CheckLandCancelWindows(AttackDefinition currentAttack)
         {
-            for(int i = 0; i < currentAttack.landCancelFrames.Count; i++)
+            for(int i = 0; i < currentAttack.landCancelWindows.Count; i++)
             {
-                if (StateManager.CurrentStateFrame >= currentAttack.landCancelFrames[i].x
-                    && StateManager.CurrentStateFrame <= currentAttack.landCancelFrames[i].y)
+                if (StateManager.CurrentStateFrame >= currentAttack.landCancelWindows[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.landCancelWindows[i].y)
                 {
                     if (controller.LandCancel())
                     {
@@ -263,10 +266,10 @@ namespace TAPI.Entities.Shared
         /// <returns>True if we jump canceled</returns>
         protected virtual bool CheckJumpCancelWindows(AttackDefinition currentAttack)
         {
-            for(int i = 0; i < currentAttack.jumpCancelFrames.Count; i++)
+            for(int i = 0; i < currentAttack.jumpCancelWindows.Count; i++)
             {
-                if(StateManager.CurrentStateFrame >= currentAttack.jumpCancelFrames[i].x
-                    && StateManager.CurrentStateFrame <= currentAttack.jumpCancelFrames[i].y)
+                if(StateManager.CurrentStateFrame >= currentAttack.jumpCancelWindows[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.jumpCancelWindows[i].y)
                 {
                     if (controller.JumpCancel())
                     {
@@ -284,10 +287,10 @@ namespace TAPI.Entities.Shared
         /// <returns>True if we jump canceled</returns>
         protected virtual bool CheckEnemyStepWindows(AttackDefinition currentAttack)
         {
-            for (int i = 0; i < currentAttack.enemyStepFrames.Count; i++)
+            for (int i = 0; i < currentAttack.enemyStepWindows.Count; i++)
             {
-                if (StateManager.CurrentStateFrame >= currentAttack.enemyStepFrames[i].x
-                    && StateManager.CurrentStateFrame <= currentAttack.enemyStepFrames[i].y)
+                if (StateManager.CurrentStateFrame >= currentAttack.enemyStepWindows[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.enemyStepWindows[i].y)
                 {
                     if (controller.EnemyStepCancel())
                     {
@@ -326,10 +329,11 @@ namespace TAPI.Entities.Shared
         /// <returns>True if we attack canceled.</returns>
         protected virtual bool CheckAttackCancelWindows(AttackDefinition currentAttack)
         {
-            for (int i = 0; i < currentAttack.attackCancelFrames.Count; i++)
+            /*
+            for (int i = 0; i < currentAttack.commandAttackCancelWindows.Count; i++)
             {
-                if (StateManager.CurrentStateFrame >= currentAttack.attackCancelFrames[i].x
-                    && StateManager.CurrentStateFrame <= currentAttack.attackCancelFrames[i].y)
+                if (StateManager.CurrentStateFrame >= currentAttack.commandAttackCancelWindows[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.commandAttackCancelWindows[i].y)
                 {
                     if (CombatManager.CheckForAction(true))
                     {
@@ -337,7 +341,7 @@ namespace TAPI.Entities.Shared
                         return true;
                     }
                 }
-            }
+            }*/
             return false;
         }
     }

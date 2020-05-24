@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TAPI.Core;
+using CAF.Simulation;
 
 namespace TAPI.Combat.Bullets
 {
@@ -156,7 +157,7 @@ namespace TAPI.Combat.Bullets
             BulletPatternManager bpm = patternManager.AddComponent<BulletPatternManager>();
             bpm.bulletSpawnRotation = bulletSpawnRotation + patterns[patternIndex].currentRotationOffset;
             bpm.Initialize((settings == null) ? this.settings : settings, pattern, bulletSpawnPosition);
-            bpm.Init(simObjectManager);
+            bpm.simObjectManager = simObjectManager;
         }
 
         /// <summary>

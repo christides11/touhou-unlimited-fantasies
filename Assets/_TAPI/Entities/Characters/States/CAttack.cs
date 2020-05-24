@@ -11,14 +11,14 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            if (CombatManager.CheckForAction())
+            if (CombatManager.TryAttack())
             {
                 StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
 
             if(controller.StateManager.CurrentStateFrame >
-                controller.CombatManager.CurrentAttack.action.length)
+                controller.CombatManager.CurrentAttack.attackDefinition.length)
             {
                 if (CombatManager.WasFloating)
                 {
@@ -33,7 +33,7 @@ namespace TAPI.Entities.Characters.States
                 {
                     StateManager.ChangeState((int)EntityStates.FALL);
                 }
-                controller.CombatManager.Reset();
+                controller.CombatManager.Cleanup();
                 return true;
             }
             return false;

@@ -12,8 +12,8 @@ namespace TAPI.Combat.Events
     public class ClampGravityEvent : AttackEvent
     {
 
-        public override bool Evaluate(uint frame, uint endFrame,
-            EntityAttack attackState, EntityController controller, AttackEventVariables variables)
+        public override bool Evaluate(uint frame, uint endFrame, 
+            CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
             controller.PhysicsManager.forceGravity.y = Mathf.Clamp(controller.PhysicsManager.forceGravity.y,
                 variables.floatVars[0], variables.floatVars[1]);

@@ -43,10 +43,6 @@
     "com.unity.modules.xr": "1.0.0"
   },
   "lock": {
-    "com.christides.character-action-framework": {
-      "revision": "upm",
-      "hash": "7b441f376a9ef6b9a88657a311134e01c5ab28f7"
-    },
     "com.github.siccity.xnode": {
       "revision": "HEAD",
       "hash": "c9e1ef1c922000b8798b2198f8fa318c44adca07"
@@ -54,6 +50,10 @@
     "com.malee.reorderablelist": {
       "revision": "HEAD",
       "hash": "b6a47f8257cf065e9feb04acdc92e500761e605c"
+    },
+    "com.christides.character-action-framework": {
+      "revision": "upm",
+      "hash": "7d39110ac7559f204a82d7be15e1da2cee0a75c2"
     }
   }
 }

@@ -10,9 +10,9 @@ namespace TAPI.Entities.Characters.States
     {
         private CharacterStats Stats { get { return (CharacterStats)controller.definition.stats; } }
 
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
         }
 
         public override void OnUpdate()
@@ -21,11 +21,11 @@ namespace TAPI.Entities.Characters.States
             {
                 Vector3 totalMovement = controller.PhysicsManager.forceMovement + controller.PhysicsManager.forceGravity;
 
-                Vector2 movement = controller.InputManager.GetMovement(0);
+                Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
                 Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
                 translatedMovement *= Stats.floatDashAcceleration;
 
-                translatedMovement.y = controller.InputManager.GetFloatDir(0)
+                translatedMovement.y = controller.InputManager.GetAxis((int)EntityInputs.Float)
                     * Stats.floatDashAcceleration;
 
                 totalMovement += translatedMovement;
@@ -45,17 +45,17 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            if (controller.InputManager.GetButton(EntityInputs.Dash).firstPress)
+            if (controller.InputManager.GetButton((int)EntityInputs.Dash).firstPress)
             {
                 controller.StateManager.ChangeState((int)BaseCharacterStates.FLOAT_DODGE);
                 return true;
             }
-            if (controller.InputManager.GetButton(EntityInputs.Jump).firstPress)
+            if (controller.InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
-            if (controller.InputManager.GetMovement().magnitude <= InputConstants.movementMagnitude)
+            if (controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude <= InputConstants.movementMagnitude)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;

@@ -10,13 +10,13 @@ namespace TAPI.Entities.Characters.States
     {
         private CharacterStats Stats { get { return (CharacterStats)controller.definition.stats; } }
 
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
-            controller.PhysicsManager.forceGravity.y = controller.InputManager.GetFloatDir(0)
+            base.Initialize();
+            controller.PhysicsManager.forceGravity.y = controller.InputManager.GetAxis((int)EntityInputs.Float)
                 * Stats.floatDodgeVelo;
 
-            Vector2 movement = controller.InputManager.GetMovement(0);
+            Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             Vector3 translatedMovement = Vector3.zero;
             if (movement.magnitude <= InputConstants.movementMagnitude)
             {
@@ -50,7 +50,7 @@ namespace TAPI.Entities.Characters.States
         {
             if (controller.IsGrounded)
             {
-                if (controller.InputManager.GetMovement().magnitude > InputConstants.movementMagnitude)
+                if (controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude > InputConstants.movementMagnitude)
                 {
                     controller.StateManager.ChangeState((int)EntityStates.RUN);
                 }
@@ -67,11 +67,11 @@ namespace TAPI.Entities.Characters.States
             }
             if(controller.StateManager.CurrentStateFrame > Stats.floatDodgeHoldVelo)
             {
-                if (controller.InputManager.GetButton(EntityInputs.Dash).firstPress)
+                if (controller.InputManager.GetButton((int)EntityInputs.Dash).firstPress)
                 {
                     controller.StateManager.ChangeState((int)BaseCharacterStates.FLOAT_DODGE);
                     return true;
-                }else if (controller.InputManager.GetButton(EntityInputs.Dash).isDown)
+                }else if (controller.InputManager.GetButton((int)EntityInputs.Dash).isDown)
                 {
                     controller.StateManager.ChangeState((int)BaseCharacterStates.FLOAT_DASH);
                     return true;

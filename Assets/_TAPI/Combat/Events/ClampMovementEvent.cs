@@ -12,10 +12,10 @@ namespace TAPI.Combat.Events
     public class ClampMovementEvent : AttackEvent
     {
 
-        public override bool Evaluate(uint frame, uint endFrame,
-            EntityAttack attackState, EntityController controller, AttackEventVariables variables)
+        public override bool Evaluate(uint frame, uint endFrame, 
+            CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
-            controller.PhysicsManager.forceMovement = Vector3.ClampMagnitude(controller.PhysicsManager.forceMovement, 
+            controller.PhysicsManager.forceMovement = Vector3.ClampMagnitude(controller.PhysicsManager.forceMovement,
                 variables.floatVars[0]);
             return false;
         }
