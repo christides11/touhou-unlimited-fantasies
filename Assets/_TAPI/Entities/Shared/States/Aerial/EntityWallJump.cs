@@ -15,7 +15,7 @@ namespace TAPI.Entities.Shared
             controller.IsGrounded = false;
 
             Vector3 moveDir = controller.GetMovementVector();
-            Vector3 wallNormalForward = controller.PhysicsManager.wallRayHit.normal.normalized;
+            Vector3 wallNormalForward = PhysicsManager.wallRayHit.normal.normalized;
 
             Vector3 translatedMovement = Vector3.zero;
             if(Vector3.Dot(wallNormalForward, moveDir.normalized) >= controller.definition.stats.wallJumpMinAngle)

@@ -18,8 +18,8 @@ namespace TidesPack.Characters.Reimu
         {
             base.SimUpdate();
 
-            if(InputManager.GetButton(TAPI.Core.EntityInputs.Bullet).firstPress
-                && InputManager.GetMovement(0).magnitude < InputConstants.movementMagnitude)
+            if(InputManager.GetButton((int)TAPI.Core.EntityInputs.Bullet).firstPress
+                && InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude < InputConstants.movementMagnitude)
             {
                 if(bpm == null)
                 {
@@ -39,7 +39,7 @@ namespace TidesPack.Characters.Reimu
                     bpm.bulletSpawnRotation = visualTransform.eulerAngles;
                 }
             }
-            if (InputManager.GetButton(EntityInputs.Bullet).released)
+            if (InputManager.GetButton((int)EntityInputs.Bullet).released)
             {
                 if (bpm)
                 {

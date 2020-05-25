@@ -15,8 +15,6 @@ namespace TAPI.Entities
     /// </summary>
     public class EntityHitboxManager : CAF.Entities.EntityHitboxManager
     {
-        public delegate void HitboxGroupEventAction(GameObject hurtableHit, int hitboxGroupIndex, MovesetAttackNode attack);
-        public event HitboxGroupEventAction OnHitboxHit;
 
         // Detectbox Group : Detectboxes
         private Dictionary<int, List<DetectionBox>> detectboxes = new Dictionary<int, List<DetectionBox>>();
@@ -25,13 +23,15 @@ namespace TAPI.Entities
         // Detectbox ID : IHurtables Hit
         private Dictionary<int, List<IHurtable>> hurtablesDetected = new Dictionary<int, List<IHurtable>>();
 
-        private EntityCombatManager combatManager;
-        private EntityController controller;
+        public EntityHitboxManager(EntityCombatManager combatManager, EntityController controller) : base(combatManager, controller)
+        {
+
+        }
 
         /// <summary>
         /// Destroys all boxes and clears variables.
         /// </summary>
-        public void Reset()
+        public override void Reset()
         {
             /*
             CleanupAllHitboxes();
@@ -45,15 +45,9 @@ namespace TAPI.Entities
         /// Checks the hitboxes and detectboxes to see what they hit this frame.
         /// This should be called in late update, as physics update right after update.
         /// </summary>
-        public void TickBoxes()
+        public override void TickBoxes()
         {
-            foreach (List<Hitbox> hitboxGroup in hitboxes.Values)
-            {
-                for (int i = 0; i < hitboxGroup.Count; i++)
-                {
-                    hitboxGroup[i].CheckHits();
-                }
-            }
+            base.TickBoxes();
 
             foreach(List<DetectionBox> detectboxGroup in detectboxes.Values)
             {
@@ -62,21 +56,6 @@ namespace TAPI.Entities
                     detectboxGroup[i].CheckDetection();
                 }
             }
-        }
-
-        /// <summary>
-        /// Destroy all the boxes and clears the dictionary.
-        /// </summary>
-        private void CleanupAllHitboxes()
-        {
-            foreach(int key in hitboxes.Keys)
-            {
-                for (int i = 0; i < hitboxes[key].Count; i++)
-                {
-                    GameObject.Destroy(hitboxes[key][i].gameObject);
-                }
-            }
-            hitboxes.Clear();
         }
 
         /// <summary>
@@ -92,23 +71,6 @@ namespace TAPI.Entities
                 }
             }
             detectboxes.Clear();
-        }
-
-        /// <summary>
-        /// Deactivate the hitboxes of the given index.
-        /// </summary>
-        /// <param name="index">The index of the hitbox group.</param>
-        public virtual void DeactivateHitboxes(int index)
-        {
-            if (!hitboxes.ContainsKey(index))
-            {
-                return;
-            }
-
-            for(int i = 0; i < hitboxes[index].Count; i++)
-            {
-                hitboxes[index][i].Deactivate();
-            }
         }
 
         /// <summary>
@@ -128,6 +90,7 @@ namespace TAPI.Entities
             }
         }
 
+        /*
         /// <summary>
         /// Reactivates the hitboxes with the given ID.
         /// </summary>
@@ -151,40 +114,21 @@ namespace TAPI.Entities
                     }
                 }
             }
-        }
+        }*/
 
-        #region Hitboxes
         /// <summary>
         /// Called whenever a hitbox hits a hurtbox successfully.
         /// </summary>
         /// <param name="hurtableHit">The hurtable that was hit.</param>
         /// <param name="hitInfo">The hitInfo of the hitbox.</param>
         /// <param name="hitboxID">The hitbox ID of the hitbox.</param>
-        private void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID, int hitboxGroup)
+        protected override void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID, int hitboxGroup)
         {
-            SoundDefinition sd = combatManager.controller.GameManager.ModManager.GetSoundDefinition(combatManager.currentAttack.action.hitboxGroups[hitboxGroup].hitSound?.reference);
-            SoundManager.Play(sd, 0, controller.transform);
-            hurtablesHit[hitboxID].Add(hurtableHit.GetComponent<IHurtable>());
-            combatManager.hitStop = hitInfo.attackerHitstop;
-            UpdateIDHitboxGroup(hitboxID);
-            OnHitboxHit?.Invoke(hurtableHit, hitboxGroup, combatManager.currentAttack);
+            //SoundDefinition sd = combatManager.controller.GameManager.ModManager
+            //    .GetSoundDefinition(combatManager.currentAttack.attackDefinition.boxGroups[hitboxGroup].hitSound?.reference);
+            //SoundManager.Play(sd, 0, controller.transform);
+            base.OnHitboxHurt(hurtableHit, hitInfo, hitboxID, hitboxGroup);
         }
-
-        /// <summary>
-        /// Updates the ignore/hit list of all hitboxes with the given ID.
-        /// </summary>
-        /// <param name="hitboxID">The ID to update the hitboxes for.</param>
-        private void UpdateIDHitboxGroup(int hitboxID)
-        {
-            foreach(int key in hitboxes.Keys)
-            {
-                for(int i = 0; i < hitboxes[key].Count; i++)
-                {
-                    hitboxes[key][i].ignoreList = hurtablesHit[hitboxID];
-                }
-            }
-        }
-        #endregion
 
         #region Detectboxes
         /// <summary>
@@ -193,6 +137,7 @@ namespace TAPI.Entities
         /// <param name="group">The hitbox group to create the detectboxes for.</param>
         public void CreateDetectboxes(int group)
         {
+            /*
             if (detectboxes.ContainsKey(group))
             {
                 return;
@@ -220,7 +165,7 @@ namespace TAPI.Entities
             for (int i = 0; i < currentGroup.hitboxes.Count; i++)
             {
                 // Instantiate the hitbox with the correct position and rotation.
-                HitboxDefinition currHitbox = currentGroup.hitboxes[i];
+                BoxDefinition currHitbox = currentGroup.hitboxes[i];
                 Vector3 pos = controller.GetVisualBasedDirection(Vector3.forward) * currHitbox.offset.z
                     + controller.GetVisualBasedDirection(Vector3.right) * currHitbox.offset.x
                     + controller.GetVisualBasedDirection(Vector3.up) * currHitbox.offset.y;
@@ -230,11 +175,11 @@ namespace TAPI.Entities
 
                 switch (currentGroup.hitboxes[i].shape)
                 {
-                    case ShapeType.Rectangle:
+                    case BoxShapeType.Rectangle:
                         dbox.GetComponent<DetectionBox>().Initialize(controller.gameObject, currentGroup.hitboxes[i].size,
                             controller.visual.transform.eulerAngles + currentGroup.hitboxes[i].rotation);
                         break;
-                    case ShapeType.Circle:
+                    case BoxShapeType.Circle:
                         dbox.GetComponent<DetectionBox>().Initialize(controller.gameObject, currentGroup.hitboxes[i].radius);
                         break;
                 }
@@ -248,7 +193,7 @@ namespace TAPI.Entities
                 dbox.GetComponent<DetectionBox>().Activate(hurtablesDetected[currentGroup.ID]);
                 detectionboxes.Add(dbox.GetComponent<DetectionBox>());
             }
-            detectboxes.Add(group, detectionboxes);
+            detectboxes.Add(group, detectionboxes);*/
         }
 
         /// <summary>

@@ -11,31 +11,30 @@ namespace TAPI.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            EntityInputManager ei = controller.InputManager;
-            if (controller.CombatManager.TryAttack())
+            if (CombatManager.TryAttack())
             {
-                controller.StateManager.ChangeState((int)EntityStates.ATTACK);
+                StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if (ei.GetButton((int)EntityInputs.Dash).firstPress
+            if (InputManager.GetButton((int)EntityInputs.Dash).firstPress
                 && controller.StateManager.CurrentStateFrame >= 3)
             {
-                controller.StateManager.ChangeState((int)EntityStates.DASH);
+                StateManager.ChangeState((int)EntityStates.DASH);
                 return true;
             }
-            if (ei.GetButton((int)EntityInputs.Jump).firstPress)
+            if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
-                controller.StateManager.ChangeState((int)EntityStates.JUMP_SQUAT);
+                StateManager.ChangeState((int)EntityStates.JUMP_SQUAT);
                 return true;
             }
             if (!controller.IsGrounded)
             {
-                controller.StateManager.ChangeState((int)EntityStates.FALL);
+                StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
-            if (controller.StateManager.CurrentStateFrame >= controller.definition.stats.dashTime)
+            if (StateManager.CurrentStateFrame >= controller.definition.stats.dashTime)
             {
-                controller.StateManager.ChangeState((int)EntityStates.RUN);
+                StateManager.ChangeState((int)EntityStates.RUN);
                 return true;
             }
             return false;

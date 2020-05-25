@@ -54,16 +54,16 @@ namespace TAPI.Entities.Characters.States
                     return true;
                 }
             }
-            RaycastHit rh = controller.PhysicsManager.DetectWall();
+            RaycastHit rh = PhysicsManager.DetectWall();
             if (rh.collider)
             {
-                controller.PhysicsManager.currentWall = rh.transform.gameObject;
-                controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
+                PhysicsManager.currentWall = rh.transform.gameObject;
+                StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
                 return true;
             }
             if (Mathf.Abs(controller.InputManager.GetAxis((int)EntityInputs.Float)) > InputConstants.floatMagnitude)
             {
-                controller.StateManager.ChangeState((int)EntityStates.FLOAT);
+                StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;
             }
             if (controller.EnemyStepCancel())
@@ -72,12 +72,12 @@ namespace TAPI.Entities.Characters.States
             }
             if (controller.CheckAirJump())
             {
-                controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
+                StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;
             }
-            if (controller.StateManager.CurrentStateFrame >= ((CharacterStats)controller.definition.stats).airDashLength)
+            if (StateManager.CurrentStateFrame >= ((CharacterStats)controller.definition.stats).airDashLength)
             {
-                controller.StateManager.ChangeState((int)EntityStates.FALL);
+                StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
             if (controller.IsGrounded)

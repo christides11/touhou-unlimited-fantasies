@@ -10,9 +10,9 @@ namespace TidesPack.Characters.Reimu
     public class ReimuStateTeleport : CharacterState
     {
 
-        public override void OnStart()
+        public override void Initialize()
         {
-            base.OnStart();
+            base.Initialize();
         }
 
         public override void OnUpdate()
@@ -49,7 +49,7 @@ namespace TidesPack.Characters.Reimu
                 controller.PhysicsManager.forceMovement = forwardDir.normalized * rStats.teleportForwardForce;
             }
 
-            controller.PhysicsManager.HandleGravity();
+            PhysicsManager.HandleGravity();
             StateManager.IncrementFrame();
         }
 
@@ -58,7 +58,7 @@ namespace TidesPack.Characters.Reimu
             if(StateManager.CurrentStateFrame == 15)
             {
                 StateManager.ChangeState((int)EntityStates.FALL);
-                controller.CombatManager.Reset();
+                CombatManager.Reset();
                 return true;
             }
             return false;

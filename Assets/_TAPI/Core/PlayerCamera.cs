@@ -49,6 +49,7 @@ namespace TAPI.Core
 
         public virtual void Update()
         {
+            /*
             Vector2 stickInput = new Vector2(GlobalInputManager.instance.GetAxis(0, Inputs.Action.Camera_X),
                 GlobalInputManager.instance.GetAxis(0, Inputs.Action.Camera_Y));
             switch (GlobalInputManager.instance.GetCurrentInputMethod(0))
@@ -91,7 +92,7 @@ namespace TAPI.Core
             }
 
             thirdPersonLook.m_XAxis.m_InputAxisValue = stickInput.x;
-            thirdPersonLook.m_YAxis.m_InputAxisValue = stickInput.y;
+            thirdPersonLook.m_YAxis.m_InputAxisValue = stickInput.y;*/
         }
 
         public virtual void UpdateTarget(Transform newTarget)

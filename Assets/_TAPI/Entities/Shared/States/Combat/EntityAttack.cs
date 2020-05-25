@@ -181,7 +181,7 @@ namespace TAPI.Entities.Shared
             // If this is the end of the group's lifetime, deactivate them.
             if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
             {
-                CombatManager.hitboxManager.DeactivateHitboxes(group);
+                CombatManager.hitboxManager.DeactivateHitboxGroup(group);
                 CombatManager.hitboxManager.DeactivateDetectboxes(group);
             }
 

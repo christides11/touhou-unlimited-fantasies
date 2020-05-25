@@ -16,16 +16,16 @@ namespace TAPI.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            RaycastHit rh = controller.PhysicsManager.DetectWall();
+            RaycastHit rh = PhysicsManager.DetectWall();
             if (rh.collider)
             {
-                controller.PhysicsManager.currentWall = rh.transform.gameObject;
-                controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
+                PhysicsManager.currentWall = rh.transform.gameObject;
+                StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
                 return true;
             }
             if (Mathf.Abs(controller.InputManager.GetAxis((int)EntityInputs.Float)) > InputConstants.floatMagnitude)
             {
-                controller.StateManager.ChangeState((int)EntityStates.FLOAT);
+                StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;
             }
             if (controller.EnemyStepCancel())
@@ -34,12 +34,12 @@ namespace TAPI.Entities.Characters.States
             }
             if (controller.CheckAirJump())
             {
-                controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
+                StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;
             }
             if (((CharacterController)controller).CheckAirDash())
             {
-                controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);
+                StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;
             }
             if (controller.IsGrounded)
@@ -48,16 +48,16 @@ namespace TAPI.Entities.Characters.States
                 {
                     if (((CharacterController)controller).wasRunning)
                     {
-                        controller.StateManager.ChangeState((int)EntityStates.RUN);
+                        StateManager.ChangeState((int)EntityStates.RUN);
                     }
                     else
                     {
-                        controller.StateManager.ChangeState((int)EntityStates.WALK);
+                        StateManager.ChangeState((int)EntityStates.WALK);
                     }
                 }
                 else
                 {
-                    controller.StateManager.ChangeState((int)EntityStates.IDLE);
+                    StateManager.ChangeState((int)EntityStates.IDLE);
                 }
                 return true;
             }

@@ -8,10 +8,10 @@ namespace TAPI.Entities
     public class EntityState : CAF.Entities.EntityState
     {
         public virtual EntityController controller { get; set; }
-        protected EntityCombatManager CombatManager { get { return controller.CombatManager; } }
-        protected EntityStateManager StateManager { get { return controller.StateManager; } }
-        protected EntityInputManager InputManager { get { return controller.InputManager; } }
-        protected EntityPhysicsManager PhysicsManager { get { return controller.PhysicsManager; } }
+        protected EntityCombatManager CombatManager { get { return (EntityCombatManager)controller.CombatManager; } }
+        protected EntityStateManager StateManager { get { return (EntityStateManager)controller.StateManager; } }
+        protected EntityInputManager InputManager { get { return (EntityInputManager)controller.InputManager; } }
+        protected EntityPhysicsManager PhysicsManager { get { return (EntityPhysicsManager)controller.PhysicsManager; } }
 
         public override void Initialize()
         {

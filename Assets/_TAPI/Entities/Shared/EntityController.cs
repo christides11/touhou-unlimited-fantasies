@@ -15,9 +15,6 @@ namespace TAPI.Entities
     /// </summary>
     public class EntityController : CAF.Entities.EntityController
     {
-        public new EntityInputManager InputManager { get { return entityInput; } }
-        public new EntityPhysicsManager PhysicsManager { get { return entityPhysicsManager; } }
-
         public GameManager GameManager { get; protected set; }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
         public GameObject LockonTarget { get; protected set; } = null;
@@ -31,8 +28,6 @@ namespace TAPI.Entities
 
         #region References
         [Header("References")]
-        [SerializeField] protected new EntityInputManager entityInput;
-        [SerializeField] protected new EntityPhysicsManager entityPhysicsManager;
         [SerializeField] protected EntityAnimator entityAnimator;
         public EntityDefinition definition;
         public EntityCharacterController cc;
@@ -74,32 +69,7 @@ namespace TAPI.Entities
             base.Awake();
             GameManager = TAPI.Core.GameManager.current;
             KinematicCharacterSystem.Settings.AutoSimulation = false;
-            pushbox.TriggerStay += PhysicsManager.HandlePushForce;
-        }
-
-        /// <summary>
-        /// Called every simulation tick. 
-        /// </summary>
-        public override void SimUpdate()
-        {
-            InputManager.Tick();
-            if (CombatManager.hitStop == 0)
-            {
-                HandleLockon();
-                PhysicsManager.GroundedCheck();
-                StateManager.Tick();
-                PhysicsManager.Tick();
-            }
-            else
-            {
-                PhysicsManager.SetForceDirect(Vector3.zero, Vector3.zero);
-            }
-        }
-
-
-        public override void SimLateUpdate()
-        {
-            CombatManager.CLateUpdate();
+            //pushbox.TriggerStay += PhysicsManager.HandlePushForce;
         }
 
         /// <summary>
@@ -258,30 +228,6 @@ namespace TAPI.Entities
         }
 
         /// <summary>
-        /// Translates the given vector based on the look transform's forward.
-        /// </summary>
-        /// <param name="horizontal">The horizontal axis of the vector.</param>
-        /// <param name="vertical">The vertical axis of the vector.</param>
-        /// <returns>A direction vector based on the camera's forward.</returns>
-        public override Vector3 GetMovementVector(float horizontal, float vertical)
-        {
-            if(lookTransform == null)
-            {
-                return Vector3.forward;
-            }
-            Vector3 forward = lookTransform.forward;
-            Vector3 right = lookTransform.right;
-
-            forward.y = 0;
-            right.y = 0;
-
-            forward.Normalize();
-            right.Normalize();
-
-            return forward * vertical + right * horizontal;
-        }
-
-        /// <summary>
         /// Transforms the given direction into one based on the visual's forward.
         /// </summary>
         /// <param name="direction">The direction vector.</param>
@@ -290,26 +236,6 @@ namespace TAPI.Entities
         {
             Vector3 vector = visualTransform.TransformDirection(direction);
             return vector;
-        }
-
-        /// <summary>
-        /// Rotate the visual towards the given direction based on the speed given.
-        /// </summary>
-        /// <param name="direction">The direction to rotate towards.</param>
-        /// <param name="speed">The speed of the rotation.</param>
-        public override void RotateVisual(Vector3 direction, float speed)
-        {
-            Vector3 newDirection = Vector3.RotateTowards(visual.transform.forward, direction, speed, 0.0f);
-            visual.transform.rotation = Quaternion.LookRotation(newDirection);
-        }
-
-        /// <summary>
-        /// Set the visual's rotation to the given direction.
-        /// </summary>
-        /// <param name="direction">The direction to set the rotation to.</param>
-        public override void SetVisualRotation(Vector3 direction)
-        {
-            visual.transform.rotation = Quaternion.LookRotation(direction);
         }
 
         /// <summary>
@@ -391,7 +317,7 @@ namespace TAPI.Entities
 
         public virtual void ResetAirActions()
         {
-            PhysicsManager.CurrentGravityScale = 1.0f;
+            PhysicsManager.GravityScale = 1.0f;
             currentAirJump = 0;
         }
     }
