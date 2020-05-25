@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
-namespace Touhou.Menus
+namespace TUF.Menus
 {
     public class StageContentItem : MonoBehaviour
     {

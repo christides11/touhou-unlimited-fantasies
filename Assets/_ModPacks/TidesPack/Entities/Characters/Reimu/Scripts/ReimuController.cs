@@ -1,10 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TAPI.Combat.Bullets;
-using TAPI.Core;
-using TAPI.Entities.Characters;
+using TUF.Combat.Bullets;
+using TUF.Core;
 using UnityEngine;
-using CharacterController = TAPI.Entities.Characters.CharacterController;
+using CharacterController = TUF.Entities.Characters.CharacterController;
 
 namespace TidesPack.Characters.Reimu
 {
@@ -18,7 +17,7 @@ namespace TidesPack.Characters.Reimu
         {
             base.SimUpdate();
 
-            if(InputManager.GetButton((int)TAPI.Core.EntityInputs.Bullet).firstPress
+            if(InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).firstPress
                 && InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude < InputConstants.movementMagnitude)
             {
                 if(bpm == null)

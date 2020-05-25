@@ -1,11 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TAPI.Entities;
-using TAPI.Entities.Characters;
-using TAPI.Entities.Shared;
+using TUF.Entities;
+using TUF.Entities.Characters;
+using TUF.Entities.Shared;
 using Touhou.Entities;
 using UnityEngine;
-using CharacterController = TAPI.Entities.Characters.CharacterController;
+using CharacterController = TUF.Entities.Characters.CharacterController;
 
 namespace Touhou.Characters
 {

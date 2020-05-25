@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-namespace Touhou.Menus.MainMenu
+namespace TUF.Menus.MainMenu
 {
     public class StageCollectionItem : MonoBehaviour
     {

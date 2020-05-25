@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TAPI.Entities.Characters;
+﻿using TUF.Entities.Characters;
 using UnityEngine;
 
 namespace TidesPack.Characters.Reimu

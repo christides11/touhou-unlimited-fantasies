@@ -1,16 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TAPI.Entities.Shared;
 using UnityEngine.EventSystems;
-using Touhou.Core;
-using TAPI.Core;
-using GameManager = Touhou.Core.GameManager;
-using TAPI.Inputs;
-using GlobalInputManager = Touhou.Core.GlobalInputManager;
-using TAPI.Modding;
+using TUF.Modding;
+using TUF.Core;
 
-namespace Touhou.Menus
+namespace TUF.Menus
 {
     public class StageSelectMenu : MonoBehaviour
     {

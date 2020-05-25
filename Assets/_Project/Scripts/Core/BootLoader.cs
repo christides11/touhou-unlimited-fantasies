@@ -1,16 +1,13 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using TAPI.Core;
-using Touhou.Core;
+﻿using TUF.Modding;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-namespace Touhou.Core
+namespace TUF.Core
 {
     public class BootLoader : MonoBehaviour
     {
         [SerializeField] private GameManager gameManager;
-        [SerializeField] private TAPI.Modding.ModManager modManager;
+        [SerializeField] private ModManager modManager;
 
         [SerializeField] private string defaultScene;
 

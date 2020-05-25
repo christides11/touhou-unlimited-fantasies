@@ -1,9 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TAPI.Entities.Shared;
-using TAPI.Entities.Characters;
-using TAPI.Entities;
+using TUF.Entities.Shared;
+using TUF.Entities.Characters;
+using TUF.Entities;
 
 namespace Touhou.Entities
 {

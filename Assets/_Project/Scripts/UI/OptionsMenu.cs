@@ -1,11 +1,8 @@
-﻿using TAPI.Core;
-using TAPI.Entities.Shared;
-using TAPI.Inputs;
+﻿using TUF.Core;
+using TUF.Inputs;
 using UnityEngine;
-using UnityEngine.EventSystems;
-using GameManager = Touhou.Core.GameManager;
 
-namespace Touhou.Menus.Options
+namespace TUF.Menus.Options
 {
     public class OptionsMenu : MonoBehaviour
     {
@@ -14,7 +11,7 @@ namespace Touhou.Menus.Options
 
         private void Update()
         {
-            if (GlobalInputManager.instance.GetButtonDown(0, TAPI.Inputs.Action.Cancel))
+            if (GlobalInputManager.instance.GetButtonDown(0, TUF.Inputs.Action.Cancel))
             {
                 gameObject.SetActive(false);
                 OnMenuExited?.Invoke();
@@ -23,7 +20,7 @@ namespace Touhou.Menus.Options
 
         public void OpenControlSettings()
         {
-            (GameManager.current as GameManager).cMapper.Open();
+            GameManager.current.cMapper.Open();
         }
     }
 }

@@ -1,11 +1,9 @@
-﻿using TAPI.Core;
-using TAPI.Entities.Shared;
-using Touhou.Menus.Options;
+﻿using TUF.Core;
+using TUF.Menus.Options;
 using UnityEngine;
 using UnityEngine.EventSystems;
-using GameManager = Touhou.Core.GameManager;
 
-namespace Touhou.Menus.MainMenu
+namespace TUF.Menus.MainMenu
 {
     public class MainMenuHandler : MonoBehaviour
     {

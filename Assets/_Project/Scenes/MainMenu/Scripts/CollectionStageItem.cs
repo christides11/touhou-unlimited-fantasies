@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace Touhou.Menus.MainMenu
+namespace TUF.Menus.MainMenu
 {
     public class CollectionStageItem : MonoBehaviour
     {

@@ -1,13 +1,13 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TAPI.Core;
-using TAPI.Modding;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
 using TMPro;
+using TUF.Core;
+using TUF.Modding;
 
-namespace Touhou.Menus.MainMenu
+namespace TUF.Menus.MainMenu
 {
     public class StageCollectionsMenu : MonoBehaviour
     {

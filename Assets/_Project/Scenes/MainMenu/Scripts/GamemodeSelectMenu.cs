@@ -1,17 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TAPI.Core;
-using TAPI.Modding;
-using TAPI.GameMode;
 using UnityEngine.EventSystems;
-using TAPI.Entities.Shared;
 using System;
-using TAPI.Inputs;
 using TMPro;
 using UnityEngine.UI;
+using TUF.Modding;
+using TUF.Core;
+using TUF.GameMode;
+using TUF.Inputs;
 
-namespace Touhou.Menus.MainMenu
+namespace TUF.Menus.MainMenu
 {
     public class GamemodeSelectMenu : MonoBehaviour
     {
@@ -58,7 +57,7 @@ namespace Touhou.Menus.MainMenu
 
         private void Update()
         {
-            if(GlobalInputManager.instance.GetButtonDown(0, TAPI.Inputs.Action.Cancel))
+            if(GlobalInputManager.instance.GetButtonDown(0, TUF.Inputs.Action.Cancel))
             {
                 OnBack();
             }

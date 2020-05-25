@@ -1,16 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using TAPI.Entities.Shared;
 using UnityEngine.EventSystems;
-using Touhou.Core;
-using TAPI.Core;
-using GameManager = Touhou.Core.GameManager;
-using TAPI.Inputs;
-using GlobalInputManager = Touhou.Core.GlobalInputManager;
-using TAPI.Modding;
+using GameManager = TUF.Core.GameManager;
+using TUF.Modding;
+using TUF.Entities.Shared;
+using TUF.Core;
+using TUF.Inputs;
 
-namespace Touhou.Menus
+namespace TUF.Menus
 {
     public class CharacterSelectMenu : MonoBehaviour
     {

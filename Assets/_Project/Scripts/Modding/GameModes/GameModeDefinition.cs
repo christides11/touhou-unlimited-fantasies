@@ -1,0 +1,17 @@
+﻿using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+
+namespace TUF.GameMode
+{
+    [CreateAssetMenu(fileName = "GameModeDefiniton", menuName = "TAPI/GameModeDefinition")]
+    public class GameModeDefinition : ScriptableObject
+    {
+        public string gameModeName;
+        [TextArea] public string gameModeDescription;
+        public GameModeHandler gameModeHandler;
+
+        public bool selectable = true;
+        public bool characterSelect;
+    }
+}

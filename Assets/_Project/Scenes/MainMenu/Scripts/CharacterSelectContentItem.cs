@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-namespace Touhou.Menus
+namespace TUF.Menus
 {
     public class CharacterSelectContentItem : MonoBehaviour
     {
