@@ -14,32 +14,34 @@ namespace TUF.Entities.Shared
         }
         public override void OnUpdate()
         {
-            if (!CheckInterrupt())
+            if (CheckInterrupt())
             {
-                Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
-                Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
-                translatedMovement.y = 0;
+                return;
+            }
 
-                Vector3 velo = (translatedMovement * controller.definition.stats.walkAcceleration)
-                    + (translatedMovement.normalized * controller.definition.stats.walkBaseAccel);
+            Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
+            Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
+            translatedMovement.y = 0;
 
-                controller.PhysicsManager.forceMovement += velo;
-                //Limit movement velocity.
-                if(controller.PhysicsManager.forceMovement.magnitude > 
-                    controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude)
-                {
-                    controller.PhysicsManager.forceMovement = controller.PhysicsManager.forceMovement.normalized
-                        * controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude;
-                }
+            Vector3 velo = (translatedMovement * controller.definition.stats.walkAcceleration)
+                + (translatedMovement.normalized * controller.definition.stats.walkBaseAccel);
 
-                if (controller.LockedOn)
-                {
-                    controller.RotateVisual(controller.LockonForward, controller.definition.stats.walkRotationSpeed);
-                }
-                else
-                {
-                    controller.RotateVisual(translatedMovement, controller.definition.stats.walkRotationSpeed);
-                }
+            controller.PhysicsManager.forceMovement += velo;
+            //Limit movement velocity.
+            if(controller.PhysicsManager.forceMovement.magnitude > 
+                controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude)
+            {
+                controller.PhysicsManager.forceMovement = controller.PhysicsManager.forceMovement.normalized
+                    * controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude;
+            }
+
+            if (controller.LockedOn)
+            {
+                controller.RotateVisual(controller.LockonForward, controller.definition.stats.walkRotationSpeed);
+            }
+            else
+            {
+                controller.RotateVisual(translatedMovement, controller.definition.stats.walkRotationSpeed);
             }
         }
 

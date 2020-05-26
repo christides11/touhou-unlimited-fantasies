@@ -28,7 +28,7 @@ namespace TUF.Entities.Shared
             {
                 PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingFrictionXZ);
                 EntityStats es = controller.definition.stats;
-                PhysicsManager.HandleGravity(es.wallClingMaxFallSpeed, es.wallClingGravity, PhysicsManager.CurrentGravityScale);
+                PhysicsManager.HandleGravity(es.wallClingMaxFallSpeed, es.wallClingGravity, PhysicsManager.GravityScale);
             }
         }
 

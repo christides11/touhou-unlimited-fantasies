@@ -24,6 +24,12 @@ namespace TUF.Entities
 
         public List<int> chargeTimes = new List<int>();
 
+        protected override void Awake()
+        {
+            CurrentMoveset = moveset;
+            base.Awake();
+        }
+
         public void Reset(bool resetAttack = true)
         {
             if(currentAttack == null)

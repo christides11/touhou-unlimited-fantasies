@@ -6,7 +6,6 @@ namespace TUF.Entities
     public class EntityPhysicsManager : CAF.Entities.EntityPhysicsManager
     {
         protected EntityController Controller { get { return (EntityController)controller; } }
-        public float CurrentGravityScale { get; set; } = 1.0f;
         public float CurrentFallSpeed { get; set; } = 0;
 
         [Header("Physics")]
@@ -40,33 +39,17 @@ namespace TUF.Entities
         public virtual void HandleGravity()
         {
             HandleGravity(Controller.definition.stats.maxFallSpeed, 
-                Controller.definition.stats.gravity, CurrentGravityScale);
+                Controller.definition.stats.gravity, GravityScale);
         }
 
         public virtual void HandleGravity(float gravity)
         {
-            HandleGravity(gravity, CurrentGravityScale, decelerationFactor);
+            HandleGravity(Controller.definition.stats.maxFallSpeed, gravity, GravityScale);
         }
 
         public virtual void HandleGravity(float gravity, float gravityScale)
         {
             HandleGravity(Controller.definition.stats.maxFallSpeed, gravity, gravityScale);
-        }
-
-        public override void HandleGravity(float maxFallSpeed, float gravity, float gravityScale)
-        {
-            if (forceGravity.y > -(maxFallSpeed))
-            {
-                forceGravity.y -= gravity * gravityScale;
-                if (forceGravity.y < -(maxFallSpeed))
-                {
-                    forceGravity.y = -maxFallSpeed;
-                }
-            }
-            else if (forceGravity.y < -(maxFallSpeed))
-            {
-                forceGravity.y *= decelerationFactor;
-            }
         }
 
         public override void ApplyMovementFriction(float friction = -1)
@@ -142,7 +125,7 @@ namespace TUF.Entities
         /// <summary>
         /// Check if we are on the ground.
         /// </summary>
-        public virtual void GroundedCheck()
+        public override void CheckIfGrounded()
         {
             Controller.IsGrounded = Controller.cc.Motor.GroundingStatus.IsStableOnGround;
         }

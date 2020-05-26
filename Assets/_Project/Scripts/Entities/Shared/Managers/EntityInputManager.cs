@@ -15,6 +15,8 @@ namespace TUF.Entities
 
         public override void Awake()
         {
+            ControlType = InputControlType.Direct;
+            controllerID = 0;
             InputRecord = new List<CAF.Input.InputRecordItem>(inputRecordMaxSize);
         }
 
@@ -26,8 +28,10 @@ namespace TUF.Entities
                 new InputRecordAxis2D(gim.GetAxis2D(controllerID, Action.Movement_X, Action.Movement_Y)));
             recordItem.AddInput((int)EntityInputs.Camera,
                 new InputRecordAxis2D(gim.GetAxis2D(controllerID, Action.Camera_X, Action.Camera_Y)));
+
             recordItem.AddInput((int)EntityInputs.Float,
                 new InputRecordAxis(gim.GetAxis(controllerID, Action.Float)));
+
             recordItem.AddInput((int)EntityInputs.Lockon,
                 new InputRecordButton(gim.GetButton(controllerID, Action.Lock_On)));
             recordItem.AddInput((int)EntityInputs.Interact,
@@ -44,6 +48,8 @@ namespace TUF.Entities
                 new InputRecordButton(gim.GetButton(controllerID, Action.Jump)));
             recordItem.AddInput((int)EntityInputs.Taunt,
                 new InputRecordButton(gim.GetButton(controllerID, Action.Taunt)));
+
+            InputRecord.Add(recordItem);
         }
     }
 }

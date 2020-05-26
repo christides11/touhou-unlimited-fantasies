@@ -155,7 +155,7 @@ namespace TUF.Entities.Shared
             AttackDefinition currentAttack = (TUF.Combat.AttackDefinition)CombatManager.CurrentAttack.attackDefinition;
             if (currentAttack)
             {
-                PhysicsManager.CurrentGravityScale += currentAttack.gravityScaleAdded;
+                PhysicsManager.GravityScale += currentAttack.gravityScaleAdded;
             }
         }
 

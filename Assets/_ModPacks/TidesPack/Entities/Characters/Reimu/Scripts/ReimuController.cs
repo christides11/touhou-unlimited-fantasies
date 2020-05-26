@@ -17,6 +17,7 @@ namespace TidesPack.Characters.Reimu
         {
             base.SimUpdate();
 
+            /*
             if(InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).firstPress
                 && InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude < InputConstants.movementMagnitude)
             {
@@ -44,7 +45,7 @@ namespace TidesPack.Characters.Reimu
                 {
                     bpm.patterns[0].active = false;
                 }
-            }
+            }*/
         }
 
         protected override void SetupDefaultStates()

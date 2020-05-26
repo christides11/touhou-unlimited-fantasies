@@ -6902,7 +6902,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 2100487047}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b413e42fb0110da4382b8b39068eea8c, type: 3}
+  m_Script: {fileID: 11500000, guid: 2506a0333e36c9f4a8cb6772e4978301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   coreMod: {fileID: 11400000, guid: 66ce31cc7041f9e45a8d0ffb7d2853a8, type: 2}
@@ -6910,9 +6910,9 @@ MonoBehaviour:
   modManager: {fileID: 2100487050}
   consoleWindow: {fileID: 1482370770}
   musicManager: {fileID: 2100487051}
+  cMapper: {fileID: 1867955591}
   gameVars: {fileID: 11400000, guid: b11034d549bfa394f93848f8ddbef6f6, type: 2}
   playerCamera: {fileID: 1272570577, guid: 5f2778e0fc6dcf84899bf63a47d121b9, type: 3}
-  cMapper: {fileID: 1867955591}
 --- !u!114 &2100487050
 MonoBehaviour:
   m_ObjectHideFlags: 0

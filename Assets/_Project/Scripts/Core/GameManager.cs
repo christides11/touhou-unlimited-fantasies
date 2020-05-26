@@ -8,6 +8,7 @@ using TUF.Modding;
 using TUF.Entities.Shared;
 using TUF.GameMode;
 using Rewired.UI.ControlMapper;
+using TUF.Inputs;
 
 namespace TUF.Core
 {
@@ -36,6 +37,7 @@ namespace TUF.Core
 
         protected virtual void Awake()
         {
+            GlobalInputManager.instance = new GlobalInputManager();
             current = this;
             coreMod.local = true;
             modManager.mods.Add("core", coreMod);

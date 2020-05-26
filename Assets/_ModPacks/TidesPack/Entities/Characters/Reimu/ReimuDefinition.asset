@@ -16,4 +16,4 @@ MonoBehaviour:
   playerSelectable: 1
   entity: {fileID: 6981093855673240406, guid: 7468837157648f742ab07e16ea628811, type: 3}
   stats: {fileID: 11400000, guid: 6c775f93ac6e2b148b305659c8c568d7, type: 2}
-  moveset: {fileID: 0}
+  moveset: {fileID: 11400000, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}

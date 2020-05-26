@@ -23,9 +23,9 @@ namespace TUF.GameMode
             playerCharacters[0].GetComponent<EntityController>().Init(gameManager, playerCamera.Cam.transform);
             playerCamera.Initialize(playerCharacters[0].GetComponent<EntityController>());
 
-            GameObject d = simObjectManager.SpawnObject(dummy.gameObject, scene.spawnPosition[0] + new Vector3(0, 0, 5), 
-                Quaternion.identity);
-            d.GetComponent<EntityController>().Init(gameManager, null);
+            //GameObject d = simObjectManager.SpawnObject(dummy.gameObject, scene.spawnPosition[0] + new Vector3(0, 0, 5), 
+            //    Quaternion.identity);
+            //d.GetComponent<EntityController>().Init(gameManager, null);
         }
 
         public override void Update()
