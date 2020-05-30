@@ -19,7 +19,7 @@ namespace TUF.Entities.Characters.States
             Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             if(movement.magnitude < InputConstants.movementMagnitude)
             {
-                Vector3 v = controller.lookTransform.InverseTransformDirection(controller.GetVisualBasedDirection(Vector3.forward));
+                Vector3 v = controller.lookHandler.LookTransform().InverseTransformDirection(controller.GetVisualBasedDirection(Vector3.forward));
                 movement.x = v.x;
                 movement.y = v.z;
             }

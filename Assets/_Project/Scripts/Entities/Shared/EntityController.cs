@@ -8,6 +8,7 @@ using KinematicCharacterController;
 using System;
 using CAF.Input;
 using CAF.Combat;
+using CAF.Camera;
 
 namespace TUF.Entities
 {
@@ -32,7 +33,6 @@ namespace TUF.Entities
         [SerializeField] protected EntityAnimator entityAnimator;
         public EntityDefinition definition;
         public EntityCharacterController cc;
-        public Transform lookTransform;
         public Transform visualTransform;
         public TriggerDetector pushbox;
         #endregion
@@ -59,11 +59,11 @@ namespace TUF.Entities
         /// Initializes the entity with the references needed.
         /// </summary>
         /// <param name="gameManager">The global game manager.</param>
-        /// <param name="lookTransform">The "Camera" transform that this entity uses.</param>
-        public virtual void Init(GameManager gameManager, Transform lookTransform)
+        /// <param name="lookHandler">The "Camera" transform that this entity uses.</param>
+        public virtual void Init(GameManager gameManager, LookHandler lookHandler)
         {
             this.GameManager = gameManager;
-            this.lookTransform = lookTransform;
+            this.lookHandler = lookHandler;
         }
         protected override void Awake()
         {

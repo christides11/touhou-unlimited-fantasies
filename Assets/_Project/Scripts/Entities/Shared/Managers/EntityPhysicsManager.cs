@@ -109,7 +109,7 @@ namespace TUF.Entities
             if (movement.magnitude >= InputConstants.movementMagnitude)
             {
                 //Translate movment based on "camera."
-                Vector3 translatedMovement = Controller.lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
+                Vector3 translatedMovement = Controller.GetMovementVector(movement.x, movement.y);
                 translatedMovement.y = 0;
                 translatedMovement *= accel;
 
@@ -152,8 +152,7 @@ namespace TUF.Entities
         public virtual RaycastHit DetectWall()
         {
             //Get stick direction.
-            Vector2 movement = Controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
-            Vector3 translatedMovement = Controller.lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
+            Vector3 translatedMovement = Controller.GetMovementVector();
             translatedMovement.y = 0;
 
             wallRayHit = new RaycastHit();

@@ -106,7 +106,7 @@ namespace TUF.Entities.Characters
         public bool CheckForWallsSide()
         {
             Vector2 movement = InputManager.GetAxis2D((int)EntityInputs.Movement);
-            Vector3 translatedMovement = lookTransform.TransformDirection(new Vector3(movement.x, 0, movement.y));
+            Vector3 translatedMovement = GetMovementVector(movement.x, movement.y);
 
             Vector3 right = Vector3.Cross(translatedMovement.normalized, Vector3.up.normalized);
             Vector3 left = -right;

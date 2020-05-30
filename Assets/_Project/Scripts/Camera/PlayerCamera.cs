@@ -144,5 +144,10 @@ namespace TUF.Core
         {
             return cam.transform.right;
         }
+
+        public Transform LookTransform()
+        {
+            return cam.transform;
+        }
     }
 }
