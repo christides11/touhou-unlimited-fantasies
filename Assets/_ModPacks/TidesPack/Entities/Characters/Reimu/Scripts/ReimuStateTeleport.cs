@@ -57,7 +57,7 @@ namespace TidesPack.Characters.Reimu
             if(StateManager.CurrentStateFrame == 15)
             {
                 StateManager.ChangeState((int)EntityStates.FALL);
-                CombatManager.Reset();
+                CombatManager.Cleanup();
                 return true;
             }
             return false;

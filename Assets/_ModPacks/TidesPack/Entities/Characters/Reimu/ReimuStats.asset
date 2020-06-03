@@ -64,7 +64,7 @@ MonoBehaviour:
   airDashLength: 15
   airDashFriction: 4
   airDashGravityFriction: 0.2
-  airDashGravityInitMulti: 0.25
+  airDashGravityInitMulti: 0
   floatDodgeVelo: 40
   floatDodgeHoldVelo: 10
   floatDodgeLength: 15

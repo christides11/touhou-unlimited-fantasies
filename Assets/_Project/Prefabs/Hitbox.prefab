@@ -125,8 +125,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 69713f947fc4d704d9864cd74c8469c2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  hitHurtables: []
-  hitHitboxes: []
   hitInfo:
     airOnly: 0
     groundOnly: 0
@@ -155,7 +153,8 @@ MonoBehaviour:
     forceIncludeYForce: 0
     opponentMaxMagnitude: 1
     opponentMinMagnitude: 1
-  boxVisual: {fileID: 372141906028558252}
+  hitHurtables: []
+  rectangleVisual: {fileID: 372141906028558252}
   sphereVisual: {fileID: 6216409204843601049}
 --- !u!54 &1511375867113998447
 Rigidbody:

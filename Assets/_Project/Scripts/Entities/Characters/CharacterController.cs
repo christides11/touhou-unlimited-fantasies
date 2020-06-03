@@ -78,7 +78,7 @@ namespace TUF.Entities.Characters
             return false;
         }
 
-        public override bool DashCancel()
+        public override bool TryDash()
         {
             if (IsGrounded)
             {

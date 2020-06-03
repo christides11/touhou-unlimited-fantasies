@@ -243,7 +243,7 @@ namespace TUF.Entities
         /// If the entity can currently air jump.
         /// </summary>
         /// <returns>True if the entity can air jump currently.</returns>
-        public virtual bool CheckAirJump()
+        public virtual bool CanAirJump()
         {
             if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
@@ -259,7 +259,7 @@ namespace TUF.Entities
         // Tries to jump cancel if possible.
         /// </summary>
         /// <returns>True if the jump cancel was successful.</returns>
-        public virtual bool JumpCancel()
+        public virtual bool TryJump()
         {
             if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
@@ -276,7 +276,7 @@ namespace TUF.Entities
             return false;
         }
 
-        public virtual bool EnemyStepCancel()
+        public virtual bool TryEnemyStep()
         {
             if (InputManager.GetButton((int)EntityInputs.Jump, 0, true).firstPress)
             {
@@ -296,8 +296,8 @@ namespace TUF.Entities
         /// <summary>
         /// Tries to dash if possible.
         /// </summary>
-        /// <returns>True if the dash cancel was successful.</returns>
-        public virtual bool DashCancel()
+        /// <returns>True if the dash was successful.</returns>
+        public virtual bool TryDash()
         {
             return false;
         }
@@ -306,7 +306,7 @@ namespace TUF.Entities
         /// Tries to land cancel if possible.
         /// </summary>
         /// <returns>True if the land cancel was successful.</returns>
-        public virtual bool LandCancel()
+        public virtual bool TryLandCancel()
         {
             if (IsGrounded)
             {

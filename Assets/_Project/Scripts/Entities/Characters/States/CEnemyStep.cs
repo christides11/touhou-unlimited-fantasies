@@ -17,7 +17,7 @@ namespace TUF.Entities.Characters.States
             PhysicsManager.forceGravity = Vector3.zero;
             controller.ResetAirActions();
             controller.currentAirJump = -1;
-            CombatManager.Reset();
+            CombatManager.Cleanup();
         }
 
         public override void OnUpdate()

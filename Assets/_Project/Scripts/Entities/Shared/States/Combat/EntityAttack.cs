@@ -75,7 +75,7 @@ namespace TUF.Entities.Shared
 
             for(int i = 0; i < currentAttack.boxGroups.Count; i++)
             {
-                HandleBoxGroup(i, currentAttack.boxGroups[i]);
+                HandleBoxGroup(i, (BoxGroup)currentAttack.boxGroups[i]);
             }
 
             
@@ -86,7 +86,7 @@ namespace TUF.Entities.Shared
 
             if (CheckCancelWindows(currentAttack))
             {
-                CombatManager.Reset();
+                CombatManager.Cleanup();
                 return;
             }
 
@@ -107,28 +107,6 @@ namespace TUF.Entities.Shared
 
             if (!eventCancel)
             {
-                /*
-                if (currentAttack.chargeFrames.Count > 0)
-                {
-                    // Handle charging attacks.
-                    bool charging = false;
-                    if (InputManager.GetButton(CombatManager.CurrentAttack.executeButton[0].button).isDown)
-                    {
-                        for (int i = 0; i < currentAttack.chargeFrames.Count; i++)
-                        {
-                            if (StateManager.CurrentStateFrame == currentAttack.chargeFrames[i] &&
-                                (CombatManager.chargeTimes[i] < currentAttack.chargeLength || currentAttack.chargeLength == -1))
-                            {
-                                CombatManager.chargeTimes[i] += 1;
-                                charging = true;
-                            }
-                        }
-                    }
-                    if (charging)
-                    {
-                        return;
-                    }
-                }*/
                 controller.StateManager.IncrementFrame();
             }
         }
@@ -182,7 +160,7 @@ namespace TUF.Entities.Shared
             if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
             {
                 CombatManager.hitboxManager.DeactivateHitboxGroup(group);
-                CombatManager.hitboxManager.DeactivateDetectboxes(group);
+                //((EntityHitboxManager)CombatManager.hitboxManager).DeactivateDetectboxes(group);
             }
 
             // If we're within the lifetime of the boxes, do nothing.
@@ -198,7 +176,7 @@ namespace TUF.Entities.Shared
                     CombatManager.hitboxManager.CreateHitboxGroup(group);
                     break;
                 case BoxGroupType.DETECT:
-                    CombatManager.hitboxManager.CreateDetectboxes(group);
+                    ((EntityHitboxManager)CombatManager.hitboxManager).CreateDetectboxes(group);
                     break;
             }
         }
@@ -208,7 +186,7 @@ namespace TUF.Entities.Shared
         /// </summary>
         /// <param name="currentEvent">The event being processed.</param>
         /// <returns>True if the current attack state was canceled by the event.</returns>
-        protected virtual bool HandleEvents(AttackEventDefinition currentEvent)
+        protected virtual bool HandleEvents(CAF.Combat.AttackEventDefinition currentEvent)
         {
             if (!currentEvent.active)
             {
@@ -220,7 +198,7 @@ namespace TUF.Entities.Shared
                 // If the event needs a detection to happen, check if it happened.
                 if (currentEvent.onDetect)
                 {
-                    List<IHurtable> ihList = CombatManager.hitboxManager.GetDetectedList(currentEvent.onDetectHitboxGroup);
+                    List<IHurtable> ihList = ((EntityHitboxManager)CombatManager.hitboxManager).GetDetectedList(currentEvent.onDetectHitboxGroup);
                     if(ihList == null)
                     {
                         return false;
@@ -250,7 +228,7 @@ namespace TUF.Entities.Shared
                 if (StateManager.CurrentStateFrame >= currentAttack.landCancelWindows[i].x
                     && StateManager.CurrentStateFrame <= currentAttack.landCancelWindows[i].y)
                 {
-                    if (controller.LandCancel())
+                    if (controller.TryLandCancel())
                     {
                         return true;
                     }
@@ -271,7 +249,7 @@ namespace TUF.Entities.Shared
                 if(StateManager.CurrentStateFrame >= currentAttack.jumpCancelWindows[i].x
                     && StateManager.CurrentStateFrame <= currentAttack.jumpCancelWindows[i].y)
                 {
-                    if (controller.JumpCancel())
+                    if (controller.TryJump())
                     {
                         return true;
                     }
@@ -292,7 +270,7 @@ namespace TUF.Entities.Shared
                 if (StateManager.CurrentStateFrame >= currentAttack.enemyStepWindows[i].x
                     && StateManager.CurrentStateFrame <= currentAttack.enemyStepWindows[i].y)
                 {
-                    if (controller.EnemyStepCancel())
+                    if (controller.TryEnemyStep())
                     {
                         return true;
                     }
@@ -313,7 +291,7 @@ namespace TUF.Entities.Shared
                 if (StateManager.CurrentStateFrame >= currentAttack.dashCancelableFrames[i].x
                     && StateManager.CurrentStateFrame <= currentAttack.dashCancelableFrames[i].y)
                 {
-                    if (controller.DashCancel())
+                    if (controller.TryDash())
                     {
                         return true;
                     }

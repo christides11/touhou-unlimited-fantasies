@@ -66,11 +66,11 @@ namespace TUF.Entities.Characters.States
                 StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;
             }
-            if (controller.EnemyStepCancel())
+            if (controller.TryEnemyStep())
             {
                 return true;
             }
-            if (controller.CheckAirJump())
+            if (controller.CanAirJump())
             {
                 StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;

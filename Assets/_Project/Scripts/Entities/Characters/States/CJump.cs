@@ -17,11 +17,11 @@ namespace TUF.Entities.Characters.States
                 StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if (controller.EnemyStepCancel())
+            if (controller.TryEnemyStep())
             {
                 return true;
             }
-            if (controller.CheckAirJump())
+            if (controller.CanAirJump())
             {
                 controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;

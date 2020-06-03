@@ -13,7 +13,7 @@ namespace TUF.Entities.Characters.States
         {
             if (controller.StateManager.CurrentStateFrame > 3)
             {
-                if (controller.CheckAirJump())
+                if (controller.CanAirJump())
                 {
                     controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                     return true;

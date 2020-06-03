@@ -33,12 +33,7 @@ namespace TUF.Entities
         /// </summary>
         public override void Reset()
         {
-            /*
-            CleanupAllHitboxes();
-            CleanupAllDetectboxes();
-            hurtablesHit.Clear();
-            detectboxesDetectedHurtables.Clear();
-            hurtablesDetected.Clear();*/
+            base.Reset();
         }
 
         /// <summary>
@@ -49,72 +44,21 @@ namespace TUF.Entities
         {
             base.TickBoxes();
 
+            /*
             foreach(List<DetectionBox> detectboxGroup in detectboxes.Values)
             {
                 for(int i = 0; i < detectboxGroup.Count; i++)
                 {
                     detectboxGroup[i].CheckDetection();
                 }
-            }
+            }*/
         }
 
-        /// <summary>
-        /// Destroy all the boxes and clears the dictionary.
-        /// </summary>
-        private void CleanupAllDetectboxes()
+        protected override CAF.Combat.Hitbox InstantiateHitbox(Vector3 position, Quaternion rotation)
         {
-            foreach (int key in detectboxes.Keys)
-            {
-                for (int i = 0; i < detectboxes[key].Count; i++)
-                {
-                    GameObject.Destroy(detectboxes[key][i].gameObject);
-                }
-            }
-            detectboxes.Clear();
+            return GameObject.Instantiate(((EntityController)controller).GameManager.gameVars.combat.hitbox,
+                position, rotation).GetComponent<Combat.Hitbox>();
         }
-
-        /// <summary>
-        /// Deactivate the detectboxes of the given index.
-        /// </summary>
-        /// <param name="index">The inex of the detectbox group.</param>
-        public virtual void DeactivateDetectboxes(int index)
-        {
-            if (!detectboxes.ContainsKey(index))
-            {
-                return;
-            }
-
-            for(int i = 0; i < detectboxes[index].Count; i++)
-            {
-                detectboxes[index][i].Deactivate();
-            }
-        }
-
-        /*
-        /// <summary>
-        /// Reactivates the hitboxes with the given ID.
-        /// </summary>
-        /// <param name="ID">The group to reactivate the hitboxes for.</param>
-        public void ReactivateHitboxID(int ID)
-        {
-            Combat.AttackDefinition atk = combatManager.currentAttack.attackDefinition;
-
-            hurtablesHit[ID]?.Clear();
-
-            for(int i = 0; i < atk.hitboxGroups.Count; i++)
-            {
-                if(atk.hitboxGroups[i].ID == ID)
-                {
-                    if (hitboxes.ContainsKey(i))
-                    {
-                        for(int w = 0; w < hitboxes[i].Count; w++)
-                        {
-                            hitboxes[i][w].ReActivate(hurtablesHit[ID]);
-                        }
-                    }
-                }
-            }
-        }*/
 
         /// <summary>
         /// Called whenever a hitbox hits a hurtbox successfully.

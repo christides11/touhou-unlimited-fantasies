@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TUF.Combat
 {
-    [CustomEditor(typeof(AttackDefinition))]
+    [CustomEditor(typeof(AttackDefinition), true)]
     public class AttackSOEditor : Editor
     {
         public override void OnInspectorGUI()

@@ -70,7 +70,7 @@ namespace TUF.Combat.Events
         }
 
 #if UNITY_EDITOR
-        public override void DrawEventVariables(AttackEventDefinition eventDefinition)
+        public override void DrawEventVariables(CAF.Combat.AttackEventDefinition eventDefinition)
         {
             if (eventDefinition.variables.floatVars == null
                 || eventDefinition.variables.floatVars.Count != 3)

@@ -13,12 +13,9 @@ namespace TUF.Entities
     public class EntityCombatManager : CAF.Entities.EntityCombatManager
     {
         public EntityController Controller { get { return (EntityController)controller; } }
-        public new MovesetAttackNode CurrentAttack { get { return currentAttack; } }
         public bool WasFloating { get; set; } = false;
 
-        [SerializeField] public MovesetAttackNode currentAttack;
         [SerializeField] protected MovesetDefinition moveset;
-        public new EntityHitboxManager hitboxManager;
 
         [SerializeField] protected EntityTeams team;
 
@@ -28,19 +25,12 @@ namespace TUF.Entities
         {
             CurrentMoveset = moveset;
             base.Awake();
+            hitboxManager = new TUF.Entities.EntityHitboxManager(this, (EntityController)controller);
         }
 
-        public void Reset(bool resetAttack = true)
+        public override void Cleanup()
         {
-            if(currentAttack == null)
-            {
-                return;
-            }
-            hitboxManager.Reset();
-            if (resetAttack)
-            {
-                currentAttack = null;
-            }
+            base.Cleanup();
         }
 
         protected override bool CheckStartingNodes()
