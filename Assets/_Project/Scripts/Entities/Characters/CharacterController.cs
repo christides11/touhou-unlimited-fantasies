@@ -21,7 +21,7 @@ namespace TUF.Entities.Characters
         [Header("Wall Movement")]
         public float sideWallDistance;
         public GameObject lastWall;
-        public Vector3 currentWallNormal;
+        public RaycastHit lastWallHit;
         public int wallSide;
 
         protected override void Awake()
@@ -59,8 +59,10 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new CFloatDash(), (int)BaseCharacterStates.FLOAT_DASH);
 
             // Walls
-            StateManager.AddState(new CWallCling(), (int)BaseCharacterStates.WALL_CLING);
+            //StateManager.AddState(new CWallCling(), (int)BaseCharacterStates.WALL_CLING);
             StateManager.AddState(new CWallJump(), (int)BaseCharacterStates.WALL_JUMP);
+            StateManager.AddState(new CVertWallRun(), (int)BaseCharacterStates.WALL_RUN_VERTICAL);
+            StateManager.AddState(new CHozWallRun(), (int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
 
             // Start State Machine
             StateManager.ChangeState((int)EntityStates.FALL);
@@ -101,7 +103,6 @@ namespace TUF.Entities.Characters
             currentAirDash = 0;
         }
 
-
         RaycastHit hit;
         public bool CheckForWallsSide()
         {
@@ -113,14 +114,14 @@ namespace TUF.Entities.Characters
 
             if(Physics.Raycast(Center, right, out hit, sideWallDistance, GroundedLayerMask))
             {
-                currentWallNormal = hit.normal;
+                lastWallHit = hit;
                 wallSide = 1;
                 return true;
             }
 
             if(Physics.Raycast(Center, left, out hit, sideWallDistance, GroundedLayerMask))
             {
-                currentWallNormal = hit.normal;
+                lastWallHit = hit;
                 wallSide = -1;
                 return true;
             }

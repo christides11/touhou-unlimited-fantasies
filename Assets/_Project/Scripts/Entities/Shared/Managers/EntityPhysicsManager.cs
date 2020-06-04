@@ -149,10 +149,10 @@ namespace TUF.Entities
         /// Check if there's a wall in the movement direction we're pointing.
         /// </summary>
         /// <returns>The RaycastHit result.</returns>
-        public virtual RaycastHit DetectWall()
+        public virtual RaycastHit DetectWall(bool useCharacterForward = false)
         {
             //Get stick direction.
-            Vector3 translatedMovement = Controller.GetMovementVector();
+            Vector3 translatedMovement = useCharacterForward ? Controller.visualTransform.forward : Controller.GetMovementVector();
             translatedMovement.y = 0;
 
             wallRayHit = new RaycastHit();

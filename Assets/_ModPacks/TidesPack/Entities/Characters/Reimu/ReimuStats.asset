@@ -29,12 +29,12 @@ MonoBehaviour:
   airJumpVelocity: 14
   airJumpModi: 0
   airJumpCarriedMomentum: 0.2
-  airJumpHorizontalVelo: 9
+  airJumpHorizontalVelo: 12
   airRotationSpeed: 0.25
   airFriction: 0.8
   airAcceleration: 0.3
   airDeceleration: 0.7
-  maxAirSpeed: 16
+  maxAirSpeed: 18
   gravity: 0.7
   maxFallSpeed: 20
   wallClingInitFrictionY: 0.7
@@ -72,6 +72,9 @@ MonoBehaviour:
   floatDashMaxSpeed: 20
   floatDashBaseAccel: 4
   floatDashAcceleration: 3
+  wallRunVerticalSpeed: 16
+  wallRunHorizontalSpeed: 0
+  wallRunHorizontalChainMulti: 0
   teleportNoTargetForwardDist: 5
   teleportNoTargetUpDist: 5
   teleportTargetForwardDist: 1

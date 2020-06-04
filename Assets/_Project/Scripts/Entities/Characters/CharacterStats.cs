@@ -27,5 +27,10 @@ namespace TUF.Entities.Characters
         public float floatDashMaxSpeed;
         public float floatDashBaseAccel;
         public float floatDashAcceleration;
+
+        [Header("Wall")]
+        public float wallRunVerticalSpeed;
+        public float wallRunHorizontalSpeed;
+        public float wallRunHorizontalChainMulti;
     }
 }

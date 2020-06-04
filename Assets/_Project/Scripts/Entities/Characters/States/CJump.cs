@@ -33,9 +33,12 @@ namespace TUF.Entities.Characters.States
             }
             if (rh.collider)
             {
-                PhysicsManager.currentWall = rh.transform.gameObject;
-                StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
-                return true;
+                if(Vector3.Dot(rh.normal, controller.GetMovementVector()) < 0.75f)
+                {
+                    ((CharacterController)controller).lastWallHit = rh;
+                    StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_VERTICAL);
+                    return true;
+                }
             }
             if (((CharacterController)controller).CheckAirDash())
             {

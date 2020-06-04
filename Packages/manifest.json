@@ -4,6 +4,7 @@
     "com.coffee.upm-git-extension": "https://github.com/mob-sakai/UpmGitExtension.git",
     "com.github.siccity.xnode": "https://github.com/siccity/xNode.git",
     "com.malee.reorderablelist": "https://github.com/cfoulston/Unity-Reorderable-List.git",
+    "com.redfox-interactive.smartbutton": "https://github.com/Menyus777/RedFox-Smart-Button.git#master",
     "com.unity.cinemachine": "2.5.0",
     "com.unity.probuilder": "4.2.3",
     "com.unity.progrids": "3.0.3-preview.5",
@@ -44,6 +45,10 @@
     "com.unity.modules.xr": "1.0.0"
   },
   "lock": {
+    "com.christides.character-action-framework": {
+      "revision": "upm",
+      "hash": "b8342e1c72a6abade645293b4fe9f7c38e05e190"
+    },
     "com.coffee.upm-git-extension": {
       "revision": "HEAD",
       "hash": "3721ff96c879bb58373913e6cab3c6908ec04846"
@@ -56,9 +61,9 @@
       "revision": "HEAD",
       "hash": "b6a47f8257cf065e9feb04acdc92e500761e605c"
     },
-    "com.christides.character-action-framework": {
-      "revision": "upm",
-      "hash": "b8342e1c72a6abade645293b4fe9f7c38e05e190"
+    "com.redfox-interactive.smartbutton": {
+      "revision": "master",
+      "hash": "deaebaf788a1d94afc755166b0fac452381c91b2"
     }
   }
 }
