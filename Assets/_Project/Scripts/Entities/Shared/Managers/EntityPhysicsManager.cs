@@ -145,6 +145,10 @@ namespace TUF.Entities
             return false;
         }
 
+        RaycastHit forwardRay;
+        RaycastHit leftForwardRay;
+        RaycastHit rightForwardRay;
+        RaycastHit leftRay;
         /// <summary>
         /// Check if there's a wall in the movement direction we're pointing.
         /// </summary>
@@ -152,16 +156,71 @@ namespace TUF.Entities
         public virtual RaycastHit DetectWall(bool useCharacterForward = false)
         {
             //Get stick direction.
-            Vector3 translatedMovement = useCharacterForward ? Controller.visualTransform.forward : Controller.GetMovementVector();
+            Vector3 movement = Controller.GetMovementVector();
+            Vector3 translatedMovement = useCharacterForward || movement.magnitude < InputConstants.movementMagnitude
+                ? Controller.visualTransform.forward
+                : Controller.GetMovementVector();
             translatedMovement.y = 0;
+            Vector3 translatedLeft = Vector3.Cross(translatedMovement, Vector3.up);
 
-            wallRayHit = new RaycastHit();
-            if (translatedMovement.magnitude > InputConstants.movementMagnitude)
+            Vector3 movementLeftForward = (translatedLeft + translatedMovement).normalized;
+            Vector3 movementRightForward = ((-translatedLeft) + translatedMovement).normalized;
+
+            Physics.Raycast(transform.position + new Vector3(0, 1, 0),
+                translatedMovement.normalized, out forwardRay, wallCheckDistance, Controller.GroundedLayerMask);
+
+            Physics.Raycast(transform.position + new Vector3(0, 1, 0),
+                movementLeftForward, out leftForwardRay, wallCheckDistance, Controller.GroundedLayerMask);
+
+            Physics.Raycast(transform.position + new Vector3(0, 1, 0),
+                translatedLeft.normalized, out leftRay, wallCheckDistance, Controller.GroundedLayerMask);
+
+            Physics.Raycast(transform.position + new Vector3(0, 1, 0),
+                movementRightForward, out rightForwardRay, wallCheckDistance, Controller.GroundedLayerMask);
+
+            //Physics.Raycast(transform.position + new Vector3(0, 1, 0),
+            //    translated.normalized, out leftRay, wallCheckDistance, Controller.GroundedLayerMask);
+
+            FixRaycastHit(ref forwardRay);
+            FixRaycastHit(ref leftRay);
+            FixRaycastHit(ref leftForwardRay);
+            FixRaycastHit(ref rightForwardRay);
+
+            if (forwardRay.collider != null
+                && forwardRay.distance <= leftForwardRay.distance
+                && forwardRay.distance <= rightForwardRay.distance
+                && forwardRay.distance <= leftRay.distance)
             {
-                Physics.Raycast(transform.position + new Vector3(0, 1, 0),
-                    translatedMovement.normalized, out wallRayHit, wallCheckDistance, Controller.GroundedLayerMask);
+                return forwardRay;
             }
-            return wallRayHit;
+            else if (
+               leftForwardRay.collider != null
+               && leftForwardRay.distance <= forwardRay.distance
+               && leftForwardRay.distance <= leftRay.distance
+               && leftForwardRay.distance <= rightForwardRay.distance)
+            {
+                return leftForwardRay;
+            }
+            else if (
+               leftRay.collider != null
+               && leftRay.distance <= forwardRay.distance
+               && leftRay.distance <= leftForwardRay.distance
+               && leftRay.distance <= rightForwardRay.distance)
+            {
+                return leftRay;
+            }
+            else
+            {
+                return rightForwardRay;
+            }
+        }
+
+        private void FixRaycastHit(ref RaycastHit rh)
+        {
+            if (rh.collider == null)
+            {
+                rh.distance = Mathf.Infinity;
+            }
         }
     }
 }

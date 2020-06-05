@@ -29,11 +29,15 @@ namespace TUF.Entities.Characters.States
         public override bool CheckInterrupt()
         {
             if (controller.InputManager.GetButton((int)EntityInputs.Jump).firstPress
-                || PhysicsManager.DetectWall(true).collider == null
-                || StateManager.CurrentStateFrame > 30)
+                || PhysicsManager.DetectWall(true).collider == null)
             {
                 controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_JUMP);
                 return true;
+            }
+
+            if(StateManager.CurrentStateFrame > 30)
+            {
+                controller.StateManager.ChangeState((int)EntityStates.FALL);
             }
             return false;
         }

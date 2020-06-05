@@ -16,12 +16,24 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            RaycastHit rh = PhysicsManager.DetectWall();
-            if (rh.collider)
+            if (Controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude >= InputConstants.movementMagnitude)
             {
-                PhysicsManager.currentWall = rh.transform.gameObject;
-                StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
-                return true;
+                RaycastHit rh = PhysicsManager.DetectWall();
+                if (rh.collider)
+                {
+                    if (Vector3.Dot(rh.normal, controller.GetMovementVector()) < -0.85f)
+                    {
+                        ((CharacterController)controller).lastWallHit = rh;
+                        StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_VERTICAL);
+                        return true;
+                    }
+                    else if (Vector3.Dot(rh.normal, controller.GetMovementVector()) < -0.2f)
+                    {
+                        ((CharacterController)controller).lastWallHit = rh;
+                        StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
+                        return true;
+                    }
+                }
             }
             if (Mathf.Abs(controller.InputManager.GetAxis((int)EntityInputs.Float)) > InputConstants.floatMagnitude)
             {

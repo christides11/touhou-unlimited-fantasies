@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TUF.Core;
 using UnityEngine;
 
 namespace TUF.Entities.Shared
@@ -18,7 +19,8 @@ namespace TUF.Entities.Shared
             Vector3 wallNormalForward = PhysicsManager.wallRayHit.normal.normalized;
 
             Vector3 translatedMovement = Vector3.zero;
-            if(Vector3.Dot(wallNormalForward, moveDir.normalized) >= controller.definition.stats.wallJumpMinAngle)
+            if(moveDir.magnitude >= InputConstants.movementMagnitude
+                || Vector3.Dot(wallNormalForward, moveDir.normalized) >= controller.definition.stats.wallJumpMinAngle)
             {
                 translatedMovement = moveDir * controller.definition.stats.wallJumpHVelo;
             }

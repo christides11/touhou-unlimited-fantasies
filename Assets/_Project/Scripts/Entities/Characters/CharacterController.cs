@@ -102,31 +102,5 @@ namespace TUF.Entities.Characters
             base.ResetAirActions();
             currentAirDash = 0;
         }
-
-        RaycastHit hit;
-        public bool CheckForWallsSide()
-        {
-            Vector2 movement = InputManager.GetAxis2D((int)EntityInputs.Movement);
-            Vector3 translatedMovement = GetMovementVector(movement.x, movement.y);
-
-            Vector3 right = Vector3.Cross(translatedMovement.normalized, Vector3.up.normalized);
-            Vector3 left = -right;
-
-            if(Physics.Raycast(Center, right, out hit, sideWallDistance, GroundedLayerMask))
-            {
-                lastWallHit = hit;
-                wallSide = 1;
-                return true;
-            }
-
-            if(Physics.Raycast(Center, left, out hit, sideWallDistance, GroundedLayerMask))
-            {
-                lastWallHit = hit;
-                wallSide = -1;
-                return true;
-            }
-                
-            return false;
-        }
     }
 }

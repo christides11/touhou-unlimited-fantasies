@@ -11,7 +11,6 @@ namespace TUF.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            RaycastHit rh = PhysicsManager.DetectWall();
             if (CombatManager.TryAttack())
             {
                 StateManager.ChangeState((int)EntityStates.ATTACK);
@@ -31,13 +30,23 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;
             }
-            if (rh.collider)
+            if (Controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude >= InputConstants.movementMagnitude)
             {
-                if(Vector3.Dot(rh.normal, controller.GetMovementVector()) < 0.75f)
+                RaycastHit rh = PhysicsManager.DetectWall();
+                if (rh.collider)
                 {
-                    ((CharacterController)controller).lastWallHit = rh;
-                    StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_VERTICAL);
-                    return true;
+                    if (Vector3.Dot(rh.normal, controller.GetMovementVector()) < -0.85f)
+                    {
+                        ((CharacterController)controller).lastWallHit = rh;
+                        StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_VERTICAL);
+                        return true;
+                    }
+                    else if (Vector3.Dot(rh.normal, controller.GetMovementVector()) < -0.2f)
+                    {
+                        ((CharacterController)controller).lastWallHit = rh;
+                        StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
+                        return true;
+                    }
                 }
             }
             if (((CharacterController)controller).CheckAirDash())

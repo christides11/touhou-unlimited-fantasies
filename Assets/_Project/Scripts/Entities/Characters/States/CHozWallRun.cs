@@ -9,6 +9,8 @@ namespace TUF.Entities.Characters.States
         public override void Initialize()
         {
             base.Initialize();
+            PhysicsManager.forceMovement = Vector3.zero;
+            PhysicsManager.forceGravity = Vector3.zero;
         }
 
         public override void OnUpdate()
