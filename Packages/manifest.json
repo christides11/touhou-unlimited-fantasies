@@ -45,10 +45,6 @@
     "com.unity.modules.xr": "1.0.0"
   },
   "lock": {
-    "com.christides.character-action-framework": {
-      "revision": "upm",
-      "hash": "b8342e1c72a6abade645293b4fe9f7c38e05e190"
-    },
     "com.coffee.upm-git-extension": {
       "revision": "HEAD",
       "hash": "3721ff96c879bb58373913e6cab3c6908ec04846"
@@ -64,6 +60,10 @@
     "com.redfox-interactive.smartbutton": {
       "revision": "master",
       "hash": "deaebaf788a1d94afc755166b0fac452381c91b2"
+    },
+    "com.christides.character-action-framework": {
+      "revision": "upm",
+      "hash": "667ae6d583fdc13785165f2f74ce3a25b454747b"
     }
   }
 }

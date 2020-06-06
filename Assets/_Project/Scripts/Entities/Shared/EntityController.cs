@@ -26,8 +26,6 @@ namespace TUF.Entities
         public int Health { get; protected set; } = 0;
         public bool Lockonable { get; protected set; } = true;
 
-        public new Vector3 Center { get { return pushbox.Collider.bounds.center; } }
-
         #region References
         [Header("References")]
         [SerializeField] protected EntityAnimator entityAnimator;
@@ -55,6 +53,8 @@ namespace TUF.Entities
         public LayerMask enemyStepLayerMask;
         public float enemyStepCheckRadius;
 
+        private Vector3 size;
+
         /// <summary>
         /// Initializes the entity with the references needed.
         /// </summary>
@@ -70,7 +70,18 @@ namespace TUF.Entities
             base.Awake();
             GameManager = TUF.Core.GameManager.current;
             KinematicCharacterSystem.Settings.AutoSimulation = false;
+            size = coll.bounds.size;
             //pushbox.TriggerStay += PhysicsManager.HandlePushForce;
+        }
+
+        public override Vector3 GetSize()
+        {
+            return size;
+        }
+
+        public override Vector3 GetCenter()
+        {
+            return transform.position + new Vector3(0, size.y/2.0f, 0);
         }
 
         /// <summary>
@@ -150,7 +161,7 @@ namespace TUF.Entities
         private void PickLockonTarget()
         {
             LockonTarget = null;
-            Collider[] list = Physics.OverlapSphere(Center, lockonRadius, lockonLayerMask);
+            Collider[] list = Physics.OverlapSphere(GetCenter(), lockonRadius, lockonLayerMask);
 
             // The direction of the lockon defaults to the forward of the camera.
             Vector3 referenceDirection = GetMovementVector(0, 1);
@@ -181,10 +192,9 @@ namespace TUF.Entities
                     {
                         continue;
                     }
-                    //Vector3 targetDistance = (c.transform.position - (transform.position+centerOffset));
-                    Vector3 targetDistance = targetLockonComponent.Center - Center;
+                    Vector3 targetDistance = targetLockonComponent.GetCenter() - GetCenter();
                     // If we can't see the target, it can not be locked on to.
-                    if(Physics.Raycast(Center, targetDistance.normalized, lockonRadius, visibilityLayerMask))
+                    if(Physics.Raycast(GetCenter(), targetDistance.normalized, lockonRadius, visibilityLayerMask))
                     {
                         continue;
                     }

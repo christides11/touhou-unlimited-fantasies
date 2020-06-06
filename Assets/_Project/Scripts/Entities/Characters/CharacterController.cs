@@ -97,6 +97,30 @@ namespace TUF.Entities.Characters
             return false;
         }
 
+        public virtual bool TryWallRun()
+        {
+            if (InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude >= InputConstants.movementMagnitude)
+            {
+                RaycastHit rh = ((EntityPhysicsManager)PhysicsManager).DetectWall();
+                if (rh.collider)
+                {
+                    if (Vector3.Dot(rh.normal, GetMovementVector()) < -0.9f)
+                    {
+                        lastWallHit = rh;
+                        StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_VERTICAL);
+                        return true;
+                    }
+                    else if (Vector3.Dot(rh.normal, GetMovementVector()) < -0.2f)
+                    {
+                        lastWallHit = rh;
+                        StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
         public override void ResetAirActions()
         {
             base.ResetAirActions();

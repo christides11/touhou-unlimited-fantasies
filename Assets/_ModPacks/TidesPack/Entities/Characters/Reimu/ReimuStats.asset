@@ -73,7 +73,7 @@ MonoBehaviour:
   floatDashBaseAccel: 4
   floatDashAcceleration: 3
   wallRunVerticalSpeed: 16
-  wallRunHorizontalSpeed: 0
+  wallRunHorizontalSpeed: 16
   wallRunHorizontalChainMulti: 0
   teleportNoTargetForwardDist: 5
   teleportNoTargetUpDist: 5
