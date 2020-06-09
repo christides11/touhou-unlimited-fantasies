@@ -149,6 +149,7 @@ namespace TUF.Entities
         RaycastHit leftForwardRay;
         RaycastHit rightForwardRay;
         RaycastHit leftRay;
+        RaycastHit rightRay;
         /// <summary>
         /// Check if there's a wall in the movement direction we're pointing.
         /// </summary>
@@ -178,18 +179,20 @@ namespace TUF.Entities
             Physics.Raycast(transform.position + new Vector3(0, 1, 0),
                 movementRightForward, out rightForwardRay, wallCheckDistance, Controller.GroundedLayerMask);
 
-            //Physics.Raycast(transform.position + new Vector3(0, 1, 0),
-            //    translated.normalized, out leftRay, wallCheckDistance, Controller.GroundedLayerMask);
+            Physics.Raycast(transform.position + new Vector3(0, 1, 0),
+                -translatedLeft.normalized, out rightRay, wallCheckDistance, Controller.GroundedLayerMask);
 
             FixRaycastHit(ref forwardRay);
             FixRaycastHit(ref leftRay);
             FixRaycastHit(ref leftForwardRay);
             FixRaycastHit(ref rightForwardRay);
+            FixRaycastHit(ref rightRay);
 
             if (forwardRay.collider != null
                 && forwardRay.distance <= leftForwardRay.distance
                 && forwardRay.distance <= rightForwardRay.distance
-                && forwardRay.distance <= leftRay.distance)
+                && forwardRay.distance <= leftRay.distance
+                && forwardRay.distance <= rightRay.distance)
             {
                 return forwardRay;
             }
@@ -197,7 +200,8 @@ namespace TUF.Entities
                leftForwardRay.collider != null
                && leftForwardRay.distance <= forwardRay.distance
                && leftForwardRay.distance <= leftRay.distance
-               && leftForwardRay.distance <= rightForwardRay.distance)
+               && leftForwardRay.distance <= rightForwardRay.distance
+               && leftForwardRay.distance <= rightRay.distance)
             {
                 return leftForwardRay;
             }
@@ -205,9 +209,19 @@ namespace TUF.Entities
                leftRay.collider != null
                && leftRay.distance <= forwardRay.distance
                && leftRay.distance <= leftForwardRay.distance
-               && leftRay.distance <= rightForwardRay.distance)
+               && leftRay.distance <= rightForwardRay.distance
+               && leftRay.distance <= rightRay.distance)
             {
                 return leftRay;
+            }
+            else if (
+                rightRay.collider != null
+                && rightRay.distance <= forwardRay.distance
+                && rightRay.distance <= leftForwardRay.distance
+                && rightRay.distance <= rightForwardRay.distance
+                && rightRay.distance <= leftRay.distance)
+            {
+                return rightRay;
             }
             else
             {

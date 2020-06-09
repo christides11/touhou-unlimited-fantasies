@@ -23,6 +23,7 @@ namespace TUF.Entities.Characters
         public GameObject lastWall;
         public RaycastHit lastWallHit;
         public int wallSide;
+        public float wallRunHozMultiplier = 1.0f;
 
         protected override void Awake()
         {
@@ -110,7 +111,7 @@ namespace TUF.Entities.Characters
                         StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_VERTICAL);
                         return true;
                     }
-                    else if (Vector3.Dot(rh.normal, GetMovementVector()) < -0.2f)
+                    else if (Vector3.Dot(rh.normal, GetMovementVector()) < -0.1f)
                     {
                         lastWallHit = rh;
                         StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
@@ -125,6 +126,7 @@ namespace TUF.Entities.Characters
         {
             base.ResetAirActions();
             currentAirDash = 0;
+            wallRunHozMultiplier = 1.0f;
         }
     }
 }

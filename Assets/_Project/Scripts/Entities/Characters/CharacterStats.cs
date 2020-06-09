@@ -32,5 +32,6 @@ namespace TUF.Entities.Characters
         public float wallRunVerticalSpeed;
         public float wallRunHorizontalSpeed;
         public float wallRunHorizontalChainMulti;
+        public float wallRunHorizontalChainMaxMulti;
     }
 }

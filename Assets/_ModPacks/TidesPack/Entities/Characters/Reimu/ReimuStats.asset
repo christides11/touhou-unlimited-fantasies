@@ -32,9 +32,9 @@ MonoBehaviour:
   airJumpHorizontalVelo: 12
   airRotationSpeed: 0.25
   airFriction: 0.8
-  airAcceleration: 0.3
+  airAcceleration: 0.4
   airDeceleration: 0.7
-  maxAirSpeed: 18
+  maxAirSpeed: 20
   gravity: 0.7
   maxFallSpeed: 20
   wallClingInitFrictionY: 0.7
@@ -44,10 +44,10 @@ MonoBehaviour:
   wallClingMaxFallSpeed: 4
   wallJumpTime: 20
   wallJumpYVelo: 17.6
-  wallJumpHVelo: 17
+  wallJumpHVelo: 20
   wallJumpMinAngle: 0.2
   floatFriction: 0.9
-  maxFloatSpeed: 11
+  maxFloatSpeed: 20
   floatVerticalSpeed: 11
   floatBaseAccel: 1
   floatAcceleration: 2
@@ -74,7 +74,8 @@ MonoBehaviour:
   floatDashAcceleration: 3
   wallRunVerticalSpeed: 16
   wallRunHorizontalSpeed: 16
-  wallRunHorizontalChainMulti: 0
+  wallRunHorizontalChainMulti: 0.5
+  wallRunHorizontalChainMaxMulti: 4
   teleportNoTargetForwardDist: 5
   teleportNoTargetUpDist: 5
   teleportTargetForwardDist: 1
