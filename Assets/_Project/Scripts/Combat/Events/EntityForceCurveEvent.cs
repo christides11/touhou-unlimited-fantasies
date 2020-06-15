@@ -17,6 +17,11 @@ namespace TUF.Combat.Events
         public bool yForce;
         public bool zForce;
 
+        public override string GetName()
+        {
+            return "Force Curve";
+        }
+
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityController controller, AttackEventVariables variables)
         {

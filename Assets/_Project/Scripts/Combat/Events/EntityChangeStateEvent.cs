@@ -11,6 +11,11 @@ namespace TUF.Combat.Events
 {
     public class EntityChangeStateEvent : AttackEvent
     {
+        public override string GetName()
+        {
+            return "Change State";
+        }
+
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityController controller, AttackEventVariables variables)
         {

@@ -15,6 +15,11 @@ namespace TUF.Combat.Events
         public bool xzForce;
         public bool yForce;
 
+        public override string GetName()
+        {
+            return "Set Forces";
+        }
+
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
@@ -55,12 +60,24 @@ namespace TUF.Combat.Events
                 eventDefinition.variables.floatVars.Add(0);
             }
 
-            eventDefinition.variables.floatVars[0] = EditorGUILayout.FloatField("X Force",
-                eventDefinition.variables.floatVars[0]);
-            eventDefinition.variables.floatVars[2] = EditorGUILayout.FloatField("Y Force",
-                eventDefinition.variables.floatVars[2]);
-            eventDefinition.variables.floatVars[1] = EditorGUILayout.FloatField("Z Force",
-                eventDefinition.variables.floatVars[1]);
+            xzForce = EditorGUILayout.Toggle("XZ Force", xzForce);
+            yForce = EditorGUILayout.Toggle("Y Force", yForce);
+
+            if (xzForce)
+            {
+                eventDefinition.variables.floatVars[0] = EditorGUILayout.FloatField("X Force",
+                    eventDefinition.variables.floatVars[0]);
+            }
+            if (yForce)
+            {
+                eventDefinition.variables.floatVars[2] = EditorGUILayout.FloatField("Y Force",
+                    eventDefinition.variables.floatVars[2]);
+            }
+            if (xzForce)
+            {
+                eventDefinition.variables.floatVars[1] = EditorGUILayout.FloatField("Z Force",
+                    eventDefinition.variables.floatVars[1]);
+            }
         }
 #endif
     }

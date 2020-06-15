@@ -15,13 +15,17 @@ namespace TUF.Combat.Events
         public bool useEntityGravity;
         public bool useEntityGravityScale;
 
+        public override string GetName()
+        {
+            return "Apply Gravity";
+        }
+
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
-            /*
             float percent = (float)frame / (float)endFrame;
 
-            float gravity = controller.definition.stats.gravity;
+            float gravity = ((TUF.Entities.EntityController)controller).definition.stats.gravity;
             if (!useEntityGravity)
             {
                 gravity = variables.curveVars[0].Evaluate(percent)
@@ -35,14 +39,14 @@ namespace TUF.Combat.Events
                     * variables.floatVars[1];
             }
 
-            float maxFallSpeed = controller.definition.stats.maxFallSpeed;
+            float maxFallSpeed = ((TUF.Entities.EntityController)controller).definition.stats.maxFallSpeed;
             if (!useEntityMaxFallSpeed)
             {
                 maxFallSpeed = variables.curveVars[2].Evaluate(percent)
                     * variables.floatVars[2];
             }
 
-            controller.PhysicsManager.HandleGravity(maxFallSpeed, gravity, gravityScale);*/
+            controller.PhysicsManager.HandleGravity(maxFallSpeed, gravity, gravityScale);
             return false;
         }
 
@@ -65,6 +69,12 @@ namespace TUF.Combat.Events
                 eventDefinition.variables.curveVars.Add(new AnimationCurve());
                 eventDefinition.variables.curveVars.Add(new AnimationCurve());
             }
+
+            useEntityGravity = EditorGUILayout.Toggle("Use Entity Gravity?", useEntityGravity);
+            useEntityGravityScale = EditorGUILayout.Toggle("Use Entity Gravity Scale?", useEntityGravityScale);
+            useEntityMaxFallSpeed = EditorGUILayout.Toggle("Use Entity Max Fall Speed?", useEntityMaxFallSpeed);
+            
+            EditorGUILayout.Space();
 
             if (!useEntityGravity)
             {

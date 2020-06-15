@@ -11,6 +11,11 @@ namespace TUF.Combat.Events
 {
     public class EntitySetAttackEvent : AttackEvent
     {
+        public override string GetName()
+        {
+            return "Set Attack";
+        }
+
         public override bool Evaluate(uint frame, uint endFrame, CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
             controller.CombatManager.Cleanup();

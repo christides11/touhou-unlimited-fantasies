@@ -28,7 +28,10 @@ MonoBehaviour:
   commandAttackCancelWindows: []
   boxGroups:
   - id: 0
-  events: []
+  events:
+  - id: 1
+  - id: 2
+  - id: 3
   dashCancelableFrames: []
   floatCancelFrames: []
   bulletCancelFrames: []
@@ -44,15 +47,16 @@ MonoBehaviour:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         ID: 0
-        activeFramesStart: 7
-        activeFramesEnd: 15
+        activeFramesStart: 6
+        activeFramesEnd: 7
         hitGroupType: 0
         boxes:
-        - shape: 1
-          offset: {x: 0, y: 1, z: 1}
+        - shape: 2
+          offset: {x: 1, y: 1, z: 1}
           size: {x: 2, y: 2, z: 2}
-          rotation: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 25, z: 0}
           radius: 2
+          height: 2
         attachToEntity: 1
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
@@ -91,3 +95,74 @@ MonoBehaviour:
           amplitudeDecay: 0
           frequencyDecay: 0
         hitSound: {fileID: 0}
+    00000001:
+      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
+      data:
+        nickname: Restrict M
+        active: 1
+        onHit: 0
+        onHitHitboxGroup: 0
+        onDetect: 0
+        onDetectHitboxGroup: 0
+        startFrame: 1
+        endFrame: 2
+        attackEvent:
+          id: 4
+        variables:
+          intVars: 
+          floatVars:
+          - 2
+          objectVars: []
+          curveVars: []
+    00000002:
+      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
+      data:
+        nickname: Friction
+        active: 1
+        onHit: 0
+        onHitHitboxGroup: 0
+        onDetect: 0
+        onDetectHitboxGroup: 0
+        startFrame: 4
+        endFrame: 50
+        attackEvent:
+          id: 5
+        variables:
+          intVars: 
+          floatVars:
+          - 0.15
+          objectVars: []
+          curveVars: []
+    00000003:
+      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
+      data:
+        nickname: Forward
+        active: 1
+        onHit: 0
+        onHitHitboxGroup: 0
+        onDetect: 0
+        onDetectHitboxGroup: 0
+        startFrame: 3
+        endFrame: 3
+        attackEvent:
+          id: 6
+        variables:
+          intVars: 
+          floatVars:
+          - 0
+          - 7
+          - 0
+          objectVars: []
+          curveVars: []
+    00000004:
+      type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+    00000005:
+      type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      data:
+        yFriction: 0
+        xzFriction: 1
+    00000006:
+      type: {class: EntityForceSetEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      data:
+        xzForce: 1
+        yForce: 0

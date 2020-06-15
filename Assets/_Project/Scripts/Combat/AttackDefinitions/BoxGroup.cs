@@ -8,5 +8,14 @@ namespace TUF.Combat
     {
         public CameraShakeDefinition cameraShake;
         public ModObjectLink hitSound;
+
+        public BoxGroup()
+        {
+        }
+
+        public BoxGroup(TUF.Combat.BoxGroup other) : base(other)
+        {
+
+        }
     }
 }

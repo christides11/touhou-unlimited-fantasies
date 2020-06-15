@@ -6,6 +6,7 @@ namespace TUF.Combat
     {
         [SerializeField] protected GameObject rectangleVisual;
         [SerializeField] protected GameObject sphereVisual;
+        [SerializeField] protected GameObject capsuleVisual;
 
         protected override void CreateRectangle(Vector3 size)
         {
@@ -19,6 +20,13 @@ namespace TUF.Combat
             base.CreateSphere(radius);
             sphereVisual.transform.localScale = Vector3.one * radius;
             sphereVisual.SetActive(true);
+        }
+
+        protected override void CreateCapsule(float radius, float height)
+        {
+            base.CreateCapsule(radius, height);
+            capsuleVisual.transform.localScale = new Vector3(1, height, 1);
+            capsuleVisual.SetActive(true);
         }
     }
 }

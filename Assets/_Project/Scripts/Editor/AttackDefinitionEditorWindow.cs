@@ -69,6 +69,16 @@ namespace TUF.Combat
             attack.faceLockonTargetWindows = followWindows;
         }
 
+        protected override void BoxesMenuNavigationBar()
+        {
+            base.BoxesMenuNavigationBar();
+            if (GUILayout.Button("Duplicate", GUILayout.Width(75))) { 
+                AttackDefinition attack = (AttackDefinition)this.attack;
+
+                attack.boxGroups.Add(new TUF.Combat.BoxGroup((TUF.Combat.BoxGroup)attack.boxGroups[currentHitboxGroupIndex]));
+            }
+        }
+
         protected override void DrawCancelWindows()
         {
             base.DrawCancelWindows();

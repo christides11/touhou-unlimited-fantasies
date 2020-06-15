@@ -14,6 +14,11 @@ namespace TUF.Combat.Events
         public bool yFriction;
         public bool xzFriction;
 
+        public override string GetName()
+        {
+            return "Friction";
+        }
+
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
@@ -37,6 +42,9 @@ namespace TUF.Combat.Events
                 eventDefinition.variables.floatVars = new List<float>(1);
                 eventDefinition.variables.floatVars.Add(0);
             }
+
+            xzFriction = EditorGUILayout.Toggle("XZ-Axis", xzFriction);
+            yFriction = EditorGUILayout.Toggle("Y-Axis", yFriction);
 
             eventDefinition.variables.floatVars[0] = EditorGUILayout.FloatField("Friction", 
                 eventDefinition.variables.floatVars[0]);

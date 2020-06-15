@@ -6,7 +6,7 @@ namespace TUF.Sound
     /// <summary>
     /// Defines the parameters needed for a sound.
     /// </summary>
-    [CreateAssetMenu(fileName = "SoundDefinition", menuName = "TAPI/Sound Definition")]
+    [CreateAssetMenu(fileName = "SoundDefinition", menuName = "Touhou/Sound Definition")]
     public class SoundDefinition : ScriptableObject
     {
         // The name of the sound.

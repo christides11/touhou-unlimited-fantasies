@@ -11,6 +11,11 @@ namespace TUF.Combat.Events
 {
     public class PlaySoundEvent : AttackEvent
     {
+        public override string GetName()
+        {
+            return "Play Sound";
+        }
+
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityController controller, AttackEventVariables variables)
         {

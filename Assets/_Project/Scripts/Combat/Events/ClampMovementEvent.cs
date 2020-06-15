@@ -12,6 +12,11 @@ namespace TUF.Combat.Events
     public class ClampMovementEvent : AttackEvent
     {
 
+        public override string GetName()
+        {
+            return "Clamp Movement";
+        }
+
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityController controller, AttackEventVariables variables)
         {
