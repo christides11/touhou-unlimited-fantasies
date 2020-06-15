@@ -105,6 +105,10 @@ namespace TUF.Combat.Events
                 (ForceType)eventDefinition.variables.intVars[0]);
             eventDefinition.variables.intVars[0] = (int)ft;
 
+            xForce = EditorGUILayout.Toggle("X Force", xForce);
+            yForce = EditorGUILayout.Toggle("Y Force", yForce);
+            zForce = EditorGUILayout.Toggle("Z Force", zForce);
+
             if (xForce)
             {
                 eventDefinition.variables.floatVars[0] = EditorGUILayout.FloatField("X Curve Multiplier",

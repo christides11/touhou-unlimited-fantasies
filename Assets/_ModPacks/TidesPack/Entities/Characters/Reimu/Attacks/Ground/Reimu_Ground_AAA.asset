@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc111f7afe810b2449e31c9e6dd282e4, type: 3}
-  m_Name: Reimu_Ground_A
+  m_Name: Reimu_Ground_AAA
   m_EditorClassIdentifier: 
-  attackName: Reimu Ground A
+  attackName: Reimu Ground AAA
   description: 
   stateOverride: -1
   length: 50
