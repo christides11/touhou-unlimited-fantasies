@@ -25,13 +25,36 @@ namespace TUF.Combat
         protected override void CreateCapsule(float radius, float height)
         {
             base.CreateCapsule(radius, height);
-            capsuleVisual.transform.localScale = new Vector3(1, height, 1);
+            capsuleVisual.transform.localScale = new Vector3(radius*2.0f, height, radius*2.0f);
             capsuleVisual.SetActive(true);
         }
 
-        public override void SimLateUpdate()
+        public override void CheckHits()
         {
-            base.SimLateUpdate();
+            base.CheckHits();
+        }
+
+        protected override void OnTriggerStay(Collider other)
+        {
+            if (!activated)
+            {
+                return;
+            }
+
+            Hurtbox otherHurtbox = null;
+            if (!other.TryGetComponent<Hurtbox>(out otherHurtbox))
+            {
+                return;
+            }
+
+            if (otherHurtbox != null)
+            {
+                if (!hitHurtables.Contains(otherHurtbox.Owner)
+                    && (ignoreList == null || !ignoreList.Contains(otherHurtbox.Hurtable)))
+                {
+                    hitHurtables.Add(otherHurtbox.Owner);
+                }
+            }
         }
     }
 }

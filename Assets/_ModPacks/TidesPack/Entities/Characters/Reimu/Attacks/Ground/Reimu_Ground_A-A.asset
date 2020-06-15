@@ -168,4 +168,4 @@ MonoBehaviour:
     00000003:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
-        dy: 0
+        dmy: 0
