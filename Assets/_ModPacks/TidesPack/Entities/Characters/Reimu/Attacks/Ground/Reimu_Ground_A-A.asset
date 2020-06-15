@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc111f7afe810b2449e31c9e6dd282e4, type: 3}
-  m_Name: Reimu_Ground_AA
+  m_Name: Reimu_Ground_A-A
   m_EditorClassIdentifier: 
-  attackName: Reimu Ground AA
+  attackName: Reimu Ground A-A
   description: 
   stateOverride: -1
   length: 50
@@ -31,10 +31,6 @@ MonoBehaviour:
   - id: 1
   events:
   - id: 2
-  - id: 3
-  - id: 4
-  - id: 5
-  - id: 6
   dashCancelableFrames: []
   floatCancelFrames: []
   bulletCancelFrames: []
@@ -162,7 +158,7 @@ MonoBehaviour:
         startFrame: 1
         endFrame: 2
         attackEvent:
-          id: 7
+          id: 3
         variables:
           intVars: 
           floatVars:
@@ -170,106 +166,6 @@ MonoBehaviour:
           objectVars: []
           curveVars: []
     00000003:
-      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
-      data:
-        nickname: Forward 1
-        active: 1
-        onHit: 0
-        onHitHitboxGroup: 0
-        onDetect: 0
-        onDetectHitboxGroup: 0
-        startFrame: 6
-        endFrame: 6
-        attackEvent:
-          id: 8
-        variables:
-          intVars: 
-          floatVars:
-          - 0
-          - 4
-          - 0
-          objectVars: []
-          curveVars: []
-    00000004:
-      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
-      data:
-        nickname: Forward 2
-        active: 1
-        onHit: 0
-        onHitHitboxGroup: 0
-        onDetect: 0
-        onDetectHitboxGroup: 0
-        startFrame: 12
-        endFrame: 12
-        attackEvent:
-          id: 9
-        variables:
-          intVars: 
-          floatVars:
-          - 0
-          - 6
-          - 0
-          objectVars: []
-          curveVars: []
-    00000005:
-      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
-      data:
-        nickname: Friction
-        active: 1
-        onHit: 0
-        onHitHitboxGroup: 0
-        onDetect: 0
-        onDetectHitboxGroup: 0
-        startFrame: 2
-        endFrame: 5
-        attackEvent:
-          id: 10
-        variables:
-          intVars: 
-          floatVars:
-          - 0.3
-          objectVars: []
-          curveVars: []
-    00000006:
-      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
-      data:
-        nickname: Friction 2
-        active: 1
-        onHit: 0
-        onHitHitboxGroup: 0
-        onDetect: 0
-        onDetectHitboxGroup: 0
-        startFrame: 7
-        endFrame: 50
-        attackEvent:
-          id: 11
-        variables:
-          intVars: 
-          floatVars:
-          - 0.3
-          objectVars: []
-          curveVars: []
-    00000007:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         dy: 0
-    00000008:
-      type: {class: EntityMovementForceAddEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
-      data:
-        xzForce: 1
-        yForce: 0
-    00000009:
-      type: {class: EntityMovementForceAddEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
-      data:
-        xzForce: 1
-        yForce: 0
-    0000000A:
-      type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
-      data:
-        yFriction: 0
-        xzFriction: 1
-    0000000B:
-      type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
-      data:
-        yFriction: 0
-        xzFriction: 1

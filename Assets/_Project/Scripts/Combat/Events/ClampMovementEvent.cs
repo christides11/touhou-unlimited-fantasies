@@ -11,6 +11,7 @@ namespace TUF.Combat.Events
 {
     public class ClampMovementEvent : AttackEvent
     {
+        public bool dmy;
 
         public override string GetName()
         {

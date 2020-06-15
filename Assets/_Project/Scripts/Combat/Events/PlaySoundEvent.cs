@@ -11,6 +11,8 @@ namespace TUF.Combat.Events
 {
     public class PlaySoundEvent : AttackEvent
     {
+        public bool dmy;
+
         public override string GetName()
         {
             return "Play Sound";

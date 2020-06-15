@@ -28,5 +28,10 @@ namespace TUF.Combat
             capsuleVisual.transform.localScale = new Vector3(1, height, 1);
             capsuleVisual.SetActive(true);
         }
+
+        public override void SimLateUpdate()
+        {
+            base.SimLateUpdate();
+        }
     }
 }

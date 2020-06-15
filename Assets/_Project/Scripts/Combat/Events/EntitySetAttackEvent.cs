@@ -11,6 +11,8 @@ namespace TUF.Combat.Events
 {
     public class EntitySetAttackEvent : AttackEvent
     {
+        public bool dmy;
+
         public override string GetName()
         {
             return "Set Attack";

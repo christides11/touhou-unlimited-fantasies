@@ -74,6 +74,11 @@ namespace TUF.Entities
             base.OnHitboxHurt(hurtableHit, hitInfo, hitboxID, hitboxGroup);
         }
 
+        public override void CreateHitboxGroup(int index)
+        {
+            base.CreateHitboxGroup(index);
+        }
+
         #region Detectboxes
         /// <summary>
         /// Create the detectboxes of the given group.
