@@ -55,6 +55,6 @@ MonoBehaviour:
   floatLockOnRotationSpeed: 0
   hitstunGravity: 0.7
   hitstunMaxFallSpeed: 15
-  hitstunFrictionXZ: 0.5
+  hitstunFrictionXZ: 0.35
   inertiaFriction: 0
   weight: 1

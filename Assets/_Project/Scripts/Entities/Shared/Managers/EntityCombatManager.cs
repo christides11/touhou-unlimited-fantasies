@@ -67,7 +67,6 @@ namespace TUF.Entities
 
         public override HitReaction Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfo hitInfo)
         {
-            Debug.Log("Hurt.");
             HitReaction hitReaction = new HitReaction();
             hitReaction.reactionType = HitReactionType.Hit;
             if(hitInfo.groundOnly && !Controller.IsGrounded

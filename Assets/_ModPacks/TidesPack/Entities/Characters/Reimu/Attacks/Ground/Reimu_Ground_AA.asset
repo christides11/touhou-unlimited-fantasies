@@ -85,7 +85,7 @@ MonoBehaviour:
           forceType: 0
           forceRelation: 0
           causesTumble: 0
-          opponentForceMagnitude: 1
+          opponentForceMagnitude: 5
           opponentForceDir: {x: 0, y: 0, z: 1}
           forceIncludeYForce: 0
           opponentMaxMagnitude: 1
@@ -102,8 +102,8 @@ MonoBehaviour:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         ID: 0
-        activeFramesStart: 14
-        activeFramesEnd: 16
+        activeFramesStart: 15
+        activeFramesEnd: 17
         hitGroupType: 0
         boxes:
         - shape: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
           forceType: 0
           forceRelation: 0
           causesTumble: 0
-          opponentForceMagnitude: 1
+          opponentForceMagnitude: 5
           opponentForceDir: {x: 0, y: 0, z: 1}
           forceIncludeYForce: 0
           opponentMaxMagnitude: 1
@@ -252,7 +252,7 @@ MonoBehaviour:
     00000007:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
-        dy: 0
+        dmy: 0
     00000008:
       type: {class: EntityMovementForceAddEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
