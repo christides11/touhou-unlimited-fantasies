@@ -77,9 +77,9 @@ MonoBehaviour:
           damageOnHit: 0
           damageOnBlock: 0
           hitKills: 1
-          attackerHitstop: 0
-          hitstop: 0
-          hitstun: 0
+          attackerHitstop: 4
+          hitstop: 4
+          hitstun: 30
           opponentResetXForce: 1
           opponentResetYForce: 1
           forceType: 0
@@ -101,7 +101,7 @@ MonoBehaviour:
     00000001:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
-        ID: 0
+        ID: 1
         activeFramesStart: 15
         activeFramesEnd: 17
         hitGroupType: 0
@@ -129,9 +129,9 @@ MonoBehaviour:
           damageOnHit: 0
           damageOnBlock: 0
           hitKills: 1
-          attackerHitstop: 0
-          hitstop: 0
-          hitstun: 0
+          attackerHitstop: 4
+          hitstop: 4
+          hitstun: 30
           opponentResetXForce: 1
           opponentResetYForce: 1
           forceType: 0

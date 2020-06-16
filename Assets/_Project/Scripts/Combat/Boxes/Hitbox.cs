@@ -34,6 +34,14 @@ namespace TUF.Combat
             base.CheckHits();
         }
 
+        public override void Deactivate()
+        {
+            base.Deactivate();
+            rectangleVisual.SetActive(false);
+            sphereVisual.SetActive(false);
+            capsuleVisual.SetActive(false);
+        }
+
         protected override void OnTriggerStay(Collider other)
         {
             if (!activated)
