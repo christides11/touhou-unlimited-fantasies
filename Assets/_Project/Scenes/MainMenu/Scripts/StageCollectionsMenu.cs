@@ -6,6 +6,7 @@ using UnityEngine.UI;
 using TMPro;
 using TUF.Core;
 using TUF.Modding;
+using UnityEngine.SceneManagement;
 
 namespace TUF.Menus.MainMenu
 {
@@ -95,7 +96,7 @@ namespace TUF.Menus.MainMenu
         private void StartStage(ModObjectReference entity, ModObjectReference gamemode, ModObjectReference stage)
         {
             GameManager gm = GameManager.current;
-            gm.StartGameMode(entity, gamemode, stage);
+            gm.StartGameMode(entity, gamemode, stage, null, SceneManager.GetActiveScene().name);
         }
 
         private void StartStageCollection()

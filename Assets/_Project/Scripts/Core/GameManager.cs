@@ -35,7 +35,7 @@ namespace TUF.Core
         public GameVariables gameVars;
         public PlayerCamera playerCamera;
 
-        protected virtual void Awake()
+        public virtual void Initialize()
         {
             GlobalInputManager.instance = new GlobalInputManager();
             current = this;
@@ -68,8 +68,8 @@ namespace TUF.Core
         /// <param name="entity"></param>
         /// <param name="gamemode"></param>
         /// <param name="stage"></param>
-        public virtual async void StartGameMode(ModObjectReference entity, ModObjectReference gamemode, ModObjectReference stage,
-            ModObjectReference stageCollection = null) {
+        public virtual async Task StartGameMode(ModObjectReference entity, ModObjectReference gamemode, ModObjectReference stage,
+            ModObjectReference stageCollection = null, string sceneToUnload = null) {
             EntityDefinition entityDefinition = modManager.GetEntity(entity);
             GameModeDefinition gamemodeDefinition = modManager.GetGamemodeDefinition(gamemode);
             StageDefinition stageDefinition = modManager.GetStageDefinition(stage);
@@ -103,9 +103,9 @@ namespace TUF.Core
                 return;
             }
             // Unloads scenes that aren't the singletons scene.
-            if (SceneManager.sceneCount > 1)
+            if (sceneToUnload != null)
             {
-                await SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+                await SceneManager.UnloadSceneAsync(sceneToUnload);
             }
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(stageDefinition.sceneName));
 

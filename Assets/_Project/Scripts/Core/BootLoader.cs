@@ -1,4 +1,5 @@
-﻿using TUF.Modding;
+﻿using TUF.Console;
+using TUF.Modding;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,7 +14,10 @@ namespace TUF.Core
 
         [SerializeField] private int targetFramerate = -1;
 
-        public string editorArgs;
+        [SerializeField]private ConsoleReader consoleReader;
+
+        public bool readEditorParams;
+        public string[] editorArgs;
 
         private void Awake()
         {
@@ -25,10 +29,16 @@ namespace TUF.Core
 
         async void Start()
         {
+            gameManager.Initialize();
             modManager.Init();
             modManager.ModLoader.LoadAllMods();
 
-            if (SceneManager.GetActiveScene().name != defaultScene)
+            if (readEditorParams)
+            {
+                await consoleReader.Convert(editorArgs);
+            }
+
+            if (SceneManager.sceneCount == 1)
             {
                 await gameManager.LoadSceneAsync(defaultScene);
             }

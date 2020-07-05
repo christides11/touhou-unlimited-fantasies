@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2895a1d9eb9463c4cbb4f0b7a4eb7cbd, type: 3}
   m_Name: EOSD_Stage1
   m_EditorClassIdentifier: 
-  stageName: 'Fantastic Night Parade Scroll ~ Mystic Flier '
+  stageName: Fantastic Night Parade Scroll ~ Mystic Flier
   sceneName: EoSD_Stage1
   selectableForGamemodes: 0
   spawnPosition:
