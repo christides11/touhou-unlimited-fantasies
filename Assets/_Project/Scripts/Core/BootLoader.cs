@@ -13,6 +13,8 @@ namespace TUF.Core
 
         [SerializeField] private int targetFramerate = -1;
 
+        public string editorArgs;
+
         private void Awake()
         {
             if(targetFramerate > 0)

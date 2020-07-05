@@ -16,7 +16,7 @@ MonoBehaviour:
   stages:
   - gamemode:
       modIdentifier: core
-      gamemodeName: stage
+      objectName: stage
     stage:
       modIdentifier: christides11.tidespack
-      stageName: 'Fantastic Night Parade Scroll ~ Mystic Flier '
+      objectName: 'Fantastic Night Parade Scroll ~ Mystic Flier '

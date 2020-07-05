@@ -167,7 +167,7 @@ MonoBehaviour:
           intVars: 
           floatVars:
           - 0
-          - 8
+          - 6.5
           - 12
           objectVars: []
           curveVars:
