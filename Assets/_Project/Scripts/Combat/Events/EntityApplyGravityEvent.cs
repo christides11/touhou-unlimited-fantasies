@@ -21,7 +21,7 @@ namespace TUF.Combat.Events
         }
 
         public override bool Evaluate(uint frame, uint endFrame, 
-            CAF.Entities.EntityController controller, AttackEventVariables variables)
+            CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
             float percent = (float)frame / (float)endFrame;
 

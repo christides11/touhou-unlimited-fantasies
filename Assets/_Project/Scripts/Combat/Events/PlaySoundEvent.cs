@@ -19,7 +19,7 @@ namespace TUF.Combat.Events
         }
 
         public override bool Evaluate(uint frame, uint endFrame, 
-            CAF.Entities.EntityController controller, AttackEventVariables variables)
+            CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
             TUF.Entities.EntityController c = (TUF.Entities.EntityController)controller;
             SoundDefinition sound = c.GameManager.ModManager.GetSoundDefinition(((ModObjectLink)variables.objectVars[0]).reference);

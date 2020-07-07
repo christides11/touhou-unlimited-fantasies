@@ -19,7 +19,7 @@ namespace TUF.Combat.Events
         }
 
         public override bool Evaluate(uint frame, uint endFrame, 
-            CAF.Entities.EntityController controller, AttackEventVariables variables)
+            CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
             controller.PhysicsManager.forceGravity.y = Mathf.Clamp(controller.PhysicsManager.forceGravity.y,
                 variables.floatVars[0], variables.floatVars[1]);

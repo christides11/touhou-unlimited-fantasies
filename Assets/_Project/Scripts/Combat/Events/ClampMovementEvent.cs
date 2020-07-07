@@ -19,7 +19,7 @@ namespace TUF.Combat.Events
         }
 
         public override bool Evaluate(uint frame, uint endFrame, 
-            CAF.Entities.EntityController controller, AttackEventVariables variables)
+            CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
             controller.PhysicsManager.forceMovement = Vector3.ClampMagnitude(controller.PhysicsManager.forceMovement,
                 variables.floatVars[0]);

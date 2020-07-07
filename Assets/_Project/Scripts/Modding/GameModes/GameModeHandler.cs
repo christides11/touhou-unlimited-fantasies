@@ -14,7 +14,6 @@ namespace TUF.GameMode{
         public bool GamemodeActive { get { return gamemodeActive; } }
 
         protected GameManager gameManager;
-        protected TimeStepManager timeStepManager;
         protected SimObjectManager simObjectManager;
         protected bool gamemodeActive;
 
@@ -33,8 +32,6 @@ namespace TUF.GameMode{
         {
             this.gameManager = gameManager;
             simObjectManager = new SimObjectManager();
-            timeStepManager = new TimeStepManager(60.0f, 1.0f, 120.0f, 30.0f);
-            timeStepManager.OnUpdate += Tick;
         }
 
         /// <summary>
@@ -50,7 +47,6 @@ namespace TUF.GameMode{
             this.currentStage = currentStage;
             playerCamera = Instantiate(gameManager.playerCamera.gameObject, currentStage.spawnPosition[0], Quaternion.identity)
                 .GetComponent<PlayerCamera>();
-            timeStepManager.Activate();
             ActivateGamemode();
         }
 
@@ -77,7 +73,7 @@ namespace TUF.GameMode{
         {
             if (gamemodeActive)
             {
-                timeStepManager.ManualUpdate(Time.fixedDeltaTime);
+                Tick(Time.fixedDeltaTime);
             }
         }
 

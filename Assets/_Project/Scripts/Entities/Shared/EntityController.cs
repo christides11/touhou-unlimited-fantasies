@@ -15,7 +15,7 @@ namespace TUF.Entities
     /// <summary>
     /// A general controller that should work for a majority of entities.
     /// </summary>
-    public class EntityController : CAF.Entities.EntityController
+    public class EntityController : CAF.Entities.EntityManager
     {
         public GameManager GameManager { get; protected set; }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
@@ -33,6 +33,7 @@ namespace TUF.Entities
         public EntityCharacterController cc;
         public Transform visualTransform;
         public TriggerDetector pushbox;
+        public Collider coll;
         #endregion
 
         [Header("Variables")]
@@ -64,8 +65,8 @@ namespace TUF.Entities
         {
             this.GameManager = gameManager;
             this.lookHandler = lookHandler;
-            //InputManager.ControlType = InputControlType.Direct;
-            //controllerID = 0;
+            InputManager.SetController(0);
+            InputManager.SetControlType(controlType);
         }
         protected override void Awake()
         {
