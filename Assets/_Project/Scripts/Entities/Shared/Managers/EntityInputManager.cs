@@ -15,8 +15,6 @@ namespace TUF.Entities
 
         public override void Awake()
         {
-            ControlType = InputControlType.Direct;
-            controllerID = 0;
             InputRecord = new List<CAF.Input.InputRecordItem>(inputRecordMaxSize);
         }
 

@@ -16,20 +16,35 @@ namespace TUF
         public Collider Collider { get { return coll; } }
 
         [SerializeField] private Collider coll;
+        [SerializeField] private LayerMask layerMask;
 
         public void OnTriggerEnter(Collider other)
         {
-            TriggerEnter?.Invoke(other);
+            if (CheckLayer(other))
+            {
+                TriggerEnter?.Invoke(other);
+            }
         }
 
         public void OnTriggerStay(Collider other)
         {
-            TriggerStay?.Invoke(other);
+            if (CheckLayer(other))
+            {
+                TriggerStay?.Invoke(other);
+            }
         }
 
         public void OnTriggerExit(Collider other)
         {
-            TriggerExit?.Invoke(other);   
+            if (CheckLayer(other))
+            {
+                TriggerExit?.Invoke(other);
+            }
+        }
+
+        private bool CheckLayer(Collider other)
+        {
+            return layerMask == (layerMask | (1 << other.gameObject.layer));
         }
     }
 }

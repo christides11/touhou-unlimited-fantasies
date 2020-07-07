@@ -33,5 +33,8 @@ namespace TUF.Entities.Characters
         public float wallRunHorizontalSpeed;
         public float wallRunHorizontalChainMulti;
         public float wallRunHorizontalChainMaxMulti;
+
+        [Header("Slide")]
+        public float slideBaseSpeed;
     }
 }

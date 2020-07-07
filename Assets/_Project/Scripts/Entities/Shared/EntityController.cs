@@ -60,10 +60,12 @@ namespace TUF.Entities
         /// </summary>
         /// <param name="gameManager">The global game manager.</param>
         /// <param name="lookHandler">The "Camera" transform that this entity uses.</param>
-        public virtual void Init(GameManager gameManager, LookHandler lookHandler)
+        public virtual void Init(GameManager gameManager, LookHandler lookHandler, InputControlType controlType)
         {
             this.GameManager = gameManager;
             this.lookHandler = lookHandler;
+            //InputManager.ControlType = InputControlType.Direct;
+            //controllerID = 0;
         }
         protected override void Awake()
         {
