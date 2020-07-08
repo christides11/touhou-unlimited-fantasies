@@ -74,7 +74,7 @@ MonoBehaviour:
           groundBounceForce: 0
           wallBounces: 0
           wallBounceForce: 0
-          damageOnHit: 0
+          damageOnHit: 15
           damageOnBlock: 0
           hitKills: 1
           attackerHitstop: 4
@@ -126,7 +126,7 @@ MonoBehaviour:
           groundBounceForce: 0
           wallBounces: 0
           wallBounceForce: 0
-          damageOnHit: 0
+          damageOnHit: 15
           damageOnBlock: 0
           hitKills: 1
           attackerHitstop: 4

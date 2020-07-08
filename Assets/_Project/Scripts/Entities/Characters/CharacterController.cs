@@ -38,7 +38,6 @@ namespace TUF.Entities.Characters
         {
             // Combat
             StateManager.AddState(new CAttack(), (int)EntityStates.ATTACK);
-            StateManager.AddState(new EntityFlinch(), (int)EntityStates.FLINCH);
 
             // Ground
             StateManager.AddState(new CIdle(), (int)EntityStates.IDLE);
@@ -64,6 +63,11 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new CWallJump(), (int)BaseCharacterStates.WALL_JUMP);
             StateManager.AddState(new CVertWallRun(), (int)BaseCharacterStates.WALL_RUN_VERTICAL);
             StateManager.AddState(new CHozWallRun(), (int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
+
+            // Hit Reactions
+            StateManager.AddState(new EntityFlinch(), (int)EntityStates.FLINCH);
+            StateManager.AddState(new EntityFlinchAir(), (int)EntityStates.FLINCH_AIR);
+            StateManager.AddState(new EntityTumble(), (int)EntityStates.TUMBLE);
 
             // Start State Machine
             StateManager.ChangeState((int)EntityStates.FALL);

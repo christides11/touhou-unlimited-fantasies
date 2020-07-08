@@ -205,6 +205,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   coll: {fileID: 5790042689169332272}
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!65 &5790042689169332272
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -252,6 +255,7 @@ GameObject:
   - component: {fileID: 359055167191230430}
   - component: {fileID: 5820165911642462714}
   - component: {fileID: -1274951725818220127}
+  - component: {fileID: 6180977717417611396}
   m_Layer: 9
   m_Name: Reimu
   m_TagString: Player
@@ -272,6 +276,7 @@ Transform:
   m_Children:
   - {fileID: 524244244}
   - {fileID: 5833781762323981783}
+  - {fileID: 3184808130856364879}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -343,7 +348,6 @@ MonoBehaviour:
   orientationSharpness: 10
   airMovementSharpness: 250
   MaxAirMoveSpeed: 10
-  Drag: 0
   IgnoredColliders: []
 --- !u!114 &959866917490569354
 MonoBehaviour:
@@ -361,14 +365,14 @@ MonoBehaviour:
   entityStateManager: {fileID: 5473496294964507337}
   entityCombatManager: {fileID: 359055167191230430}
   entityPhysicsManager: {fileID: 5820165911642462714}
+  healthManager: {fileID: 6180977717417611396}
+  visual: {fileID: 524244243}
   entityAnimator: {fileID: -1274951725818220127}
   definition: {fileID: 11400000, guid: db56f4faf80d8ab4c9a20f7577243ebc, type: 2}
   cc: {fileID: 6168304025253122080}
-  coll: {fileID: 8764617790503674124}
-  visual: {fileID: 524244243}
-  lookTransform: {fileID: 0}
   visualTransform: {fileID: 524244244}
   pushbox: {fileID: 13461346698822138}
+  coll: {fileID: 8764617790503674124}
   GroundedLayerMask:
     serializedVersion: 2
     m_Bits: 1024
@@ -377,6 +381,7 @@ MonoBehaviour:
     m_Bits: 1073741824
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   currentAirJump: 0
+  fullHop: 1
   softLockonRadius: 10
   lockonRadius: 40
   lockonFudging: 0.1
@@ -395,10 +400,10 @@ MonoBehaviour:
   currentAirDash: 0
   sideWallDistance: 0.7
   lastWall: {fileID: 0}
-  currentWallNormal: {x: 0, y: 0, z: 0}
   wallSide: 0
+  wallRunHozMultiplier: 1
   bpm: {fileID: 0}
-  bulletMove: {fileID: 11400000, guid: 7624f85c7ed42cd49ab7d84e054b187c, type: 2}
+  bulletMove: {fileID: 0}
 --- !u!114 &268217326523756411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -411,10 +416,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30adad02ae13af4194b9a574c0fe90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controlType: 0
-  aiBrain: {fileID: 0}
   controller: {fileID: 959866917490569354}
-  frameInterpolate: 0
+  aiBrain: {fileID: 0}
   visualOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &5473496294964507337
 MonoBehaviour:
@@ -444,11 +447,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 959866917490569354}
-  currentAttack: {fileID: 0}
-  moveset: {fileID: 11400000, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
   hitStun: 0
   hitStop: 0
-  team: 0
+  moveset: {fileID: 11400000, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
+  team: 1
   chargeTimes: 
 --- !u!114 &5820165911642462714
 MonoBehaviour:
@@ -466,7 +468,6 @@ MonoBehaviour:
   forceMovement: {x: 0, y: 0, z: 0}
   forceGravity: {x: 0, y: 0, z: 0}
   forceDamage: {x: 0, y: 0, z: 0}
-  forceInertia: {x: 0, y: 0, z: 0}
   forcePushbox: {x: 0, y: 0, z: 0}
   wallCheckDistance: 0.7
   currentWall: {fileID: 0}
@@ -483,3 +484,91 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 960bb850b7fcc67468cc174815b2c524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &6180977717417611396
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6981093855673240406}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ecd4de386c4e723469e4e0b8e5e4009c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+--- !u!1 &8781265322137494762
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3184808130856364879}
+  - component: {fileID: 1595539478142278121}
+  - component: {fileID: 1329547882874135443}
+  - component: {fileID: 7165752661929608322}
+  m_Layer: 30
+  m_Name: Hurtbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3184808130856364879
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781265322137494762}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1414496598879703979}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &1595539478142278121
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781265322137494762}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &1329547882874135443
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781265322137494762}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &7165752661929608322
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8781265322137494762}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7fb41654d8c0c94297046a0f7534773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 6981093855673240406}

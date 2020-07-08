@@ -112,6 +112,7 @@ namespace TUF.Entities
                 Controller.IsGrounded = false;
             }
 
+            controller.HealthManager.Hurt(hitInfo.damageOnHit);
             // Change state to the correct one.
             if (Controller.IsGrounded && hitInfo.groundBounces)
             {
@@ -134,6 +135,11 @@ namespace TUF.Entities
         public override void Heal()
         {
 
+        }
+
+        public void SetTeam(EntityTeams team)
+        {
+            this.team = team;
         }
     }
 }

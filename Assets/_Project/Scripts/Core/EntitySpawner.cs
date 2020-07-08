@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using TUF.Combat;
+using TUF.Entities;
 using TUF.Entities.Shared;
 using TUF.Modding;
 using UnityEngine;
@@ -13,6 +15,7 @@ namespace TUF.Core
         public class EntitySpawnInfo {
             public ModObjectLink entity;
             public Transform spawnPosition;
+            public EntityTeams team;
         }
 
         [SerializeField] private bool hasSpawned;
@@ -43,8 +46,24 @@ namespace TUF.Core
                     continue;
                 }
 
-                gameManager.GameModeHanlder.SimObjectManager.SpawnObject(entityDefinition.entity, entitySpawns[i].spawnPosition.position,
+                GameObject entity = gameManager.GameModeHanlder.SimObjectManager.SpawnObject(entityDefinition.entity, entitySpawns[i].spawnPosition.position,
                     Quaternion.identity);
+
+                entity.GetComponent<EntityCombatManager>().SetTeam(EntityTeams.Enemy);
+                entity.GetComponent<CAF.Entities.HealthManager>().OnHurt += EntityHealthCheck;
+                entity.GetComponent<CAF.Entities.HealthManager>().OnHealthSet += EntityHealthCheck;
+            }
+
+            hasSpawned = true;
+        }
+
+        private void EntityHealthCheck(GameObject gameObject, float oldHealth, float currentHealth)
+        {
+            GameManager gameManager = GameManager.current;
+
+            if (currentHealth <= 0)
+            {
+                gameManager.GameModeHanlder.SimObjectManager.DestroyObject(gameObject.GetComponent<CAF.Simulation.SimObject>());
             }
         }
     }

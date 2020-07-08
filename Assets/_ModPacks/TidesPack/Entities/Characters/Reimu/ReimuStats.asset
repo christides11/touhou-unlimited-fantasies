@@ -53,10 +53,10 @@ MonoBehaviour:
   floatAcceleration: 2
   floatRotationSpeed: 0.35
   floatLockOnRotationSpeed: 0
-  hitstunGravity: 0.35
-  hitstunMaxFallSpeed: 0
-  hitstunFrictionXZ: 0
-  inertiaFriction: 0.35
+  hitstunGravity: 0.7
+  hitstunMaxFallSpeed: 15
+  hitstunFrictionXZ: 0.35
+  inertiaFriction: 0
   weight: 1
   maxAirDashes: 1
   airDashVelo: 30
@@ -76,6 +76,7 @@ MonoBehaviour:
   wallRunHorizontalSpeed: 16
   wallRunHorizontalChainMulti: 0.5
   wallRunHorizontalChainMaxMulti: 4
+  slideBaseSpeed: 0
   teleportNoTargetForwardDist: 5
   teleportNoTargetUpDist: 5
   teleportTargetForwardDist: 1
