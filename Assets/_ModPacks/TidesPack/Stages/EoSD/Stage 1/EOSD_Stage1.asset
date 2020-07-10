@@ -16,4 +16,4 @@ MonoBehaviour:
   sceneName: EoSD_Stage1
   selectableForGamemodes: 0
   spawnPosition:
-  - {x: 0, y: 2, z: 0}
+  - {x: 1.28, y: 2.96, z: 21.49}

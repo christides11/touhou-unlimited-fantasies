@@ -10,6 +10,7 @@ namespace TUF.Entities.Shared
         {
             base.Initialize();
             controller.ResetAirActions();
+            controller.PhysicsManager.forceGravity = Vector3.zero;
         }
 
         public override void OnUpdate()

@@ -25,7 +25,8 @@ MonoBehaviour:
   - {x: 11, y: 60}
   enemyStepWindows: []
   landCancelWindows: []
-  commandAttackCancelWindows: []
+  commandAttackCancelWindows:
+  - {x: 11, y: 60}
   boxGroups:
   - id: 0
   - id: 1
@@ -97,7 +98,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 0}
+        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     00000001:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
@@ -149,7 +150,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 0}
+        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     00000002:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
@@ -201,7 +202,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 0}
+        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     00000003:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
@@ -253,7 +254,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 0}
+        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     00000004:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
@@ -305,7 +306,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 0}
+        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     00000005:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:

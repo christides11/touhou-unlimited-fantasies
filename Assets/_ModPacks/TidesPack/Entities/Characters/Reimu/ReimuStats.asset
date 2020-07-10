@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: ReimuStats
   m_EditorClassIdentifier: 
   groundFriction: 1.3
-  maxWalkSpeed: 8
+  maxWalkSpeed: 10
   walkBaseAccel: 1
   walkAcceleration: 1
   walkRotationSpeed: 0.35
-  maxRunSpeed: 18
-  runAcceleration: 2.25
+  maxRunSpeed: 20
+  runAcceleration: 2.5
   runRotationSpeed: 0.97
   dashSpeed: 20
   dashTime: 20

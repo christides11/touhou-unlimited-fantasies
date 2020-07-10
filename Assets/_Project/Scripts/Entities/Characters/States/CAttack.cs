@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TUF.Combat;
 using TUF.Core;
 using TUF.Entities.Shared;
 using UnityEngine;
@@ -11,13 +12,11 @@ namespace TUF.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            if (CombatManager.TryAttack())
+            if (controller.TryAttack())
             {
-                StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-
-            if(controller.StateManager.CurrentStateFrame >
+            if (controller.StateManager.CurrentStateFrame >
                 controller.CombatManager.CurrentAttack.attackDefinition.length)
             {
                 if (CombatManager.WasFloating)

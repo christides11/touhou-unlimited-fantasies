@@ -8,6 +8,7 @@ using TUF.Core;
 using UnityEngine;
 using AttackDefinition = TUF.Combat.AttackDefinition;
 using BoxGroup = TUF.Combat.BoxGroup;
+using MovesetAttackNode = TUF.Combat.MovesetAttackNode;
 
 namespace TUF.Entities.Shared
 {
@@ -35,11 +36,6 @@ namespace TUF.Entities.Shared
 
         public override void OnUpdate()
         {
-            if (CheckInterrupt())
-            {
-                return;
-            }
-
             AttackDefinition currentAttack = (TUF.Combat.AttackDefinition)CombatManager.CurrentAttack.attackDefinition;
 
             for(int i = 0; i < currentAttack.faceLockonTargetWindows.Count; i++)
@@ -90,7 +86,7 @@ namespace TUF.Entities.Shared
                 return;
             }
 
-            if (CheckAttackCancelWindows(currentAttack))
+            if (TryCommandAttackCancel(currentAttack))
             {
                 return;
             }
@@ -109,6 +105,8 @@ namespace TUF.Entities.Shared
             {
                 controller.StateManager.IncrementFrame();
             }
+
+            CheckInterrupt();
         }
 
         private void HandleBulletGroup(int index, BulletPatternGroup bulletPatternGroup)
@@ -208,6 +206,18 @@ namespace TUF.Entities.Shared
                         return false;
                     }
                 }
+                if (currentEvent.onHit)
+                {
+                    List<IHurtable> ihList = ((EntityHitboxManager)CombatManager.hitboxManager).GetHitList(currentEvent.onHitHitboxGroup);
+                    if (ihList == null)
+                    {
+                        return false;
+                    }
+                    if (ihList.Count <= 1)
+                    {
+                        return false;
+                    }
+                }
                 return currentEvent.attackEvent.Evaluate(StateManager.CurrentStateFrame - currentEvent.startFrame, 
                     currentEvent.endFrame - currentEvent.startFrame,
                     controller,
@@ -301,25 +311,26 @@ namespace TUF.Entities.Shared
         }
 
         /// <summary>
-        /// Check if we should attack cancel on the current frame.
+        /// Tries to cancel into a command attack.
         /// </summary>
         /// <param name="currentAttack">The current attack's information.</param>
         /// <returns>True if we attack canceled.</returns>
-        protected virtual bool CheckAttackCancelWindows(AttackDefinition currentAttack)
+        protected virtual bool TryCommandAttackCancel(AttackDefinition currentAttack)
         {
-            /*
             for (int i = 0; i < currentAttack.commandAttackCancelWindows.Count; i++)
             {
                 if (StateManager.CurrentStateFrame >= currentAttack.commandAttackCancelWindows[i].x
                     && StateManager.CurrentStateFrame <= currentAttack.commandAttackCancelWindows[i].y)
                 {
-                    if (CombatManager.CheckForAction(true))
+                    MovesetAttackNode man = (MovesetAttackNode)CombatManager.TryCommandAttack();
+                    if (man != null)
                     {
+                        CombatManager.SetAttack(man);
                         StateManager.ChangeState((int)EntityStates.ATTACK);
                         return true;
                     }
                 }
-            }*/
+            }
             return false;
         }
     }

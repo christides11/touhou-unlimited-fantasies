@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc111f7afe810b2449e31c9e6dd282e4, type: 3}
-  m_Name: Reimu_Ground_AAA
+  m_Name: Reimu_Ground_B_A
   m_EditorClassIdentifier: 
-  attackName: Reimu Ground AAA
+  attackName: Reimu Ground Back-A
   description: 
   stateOverride: -1
-  length: 50
+  length: 30
   heightRestriction: 0
   gravityScaleAdded: 0
   animationGround: {fileID: 0}
@@ -25,8 +25,7 @@ MonoBehaviour:
   - {x: 11, y: 60}
   enemyStepWindows: []
   landCancelWindows: []
-  commandAttackCancelWindows:
-  - {x: 9, y: 60}
+  commandAttackCancelWindows: []
   boxGroups:
   - id: 0
   events:
@@ -49,13 +48,13 @@ MonoBehaviour:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         ID: 0
-        activeFramesStart: 8
-        activeFramesEnd: 10
+        activeFramesStart: 5
+        activeFramesEnd: 9
         hitGroupType: 0
         boxes:
-        - shape: 0
-          offset: {x: 0, y: 1, z: 1.5}
-          size: {x: 2.5, y: 2.5, z: 2.5}
+        - shape: 2
+          offset: {x: 0, y: 1, z: 0}
+          size: {x: 2, y: 2, z: 2}
           rotation: {x: 0, y: 0, z: 0}
           radius: 2
           height: 2
@@ -73,7 +72,7 @@ MonoBehaviour:
           groundBounceForce: 0
           wallBounces: 0
           wallBounceForce: 0
-          damageOnHit: 15
+          damageOnHit: 10
           damageOnBlock: 0
           hitKills: 1
           attackerHitstop: 4
@@ -83,9 +82,9 @@ MonoBehaviour:
           opponentResetYForce: 1
           forceType: 0
           forceRelation: 0
-          causesTumble: 1
-          opponentForceMagnitude: 30
-          opponentForceDir: {x: 0, y: 0, z: 1}
+          causesTumble: 0
+          opponentForceMagnitude: 15
+          opponentForceDir: {x: 0, y: 1, z: 0}
           forceIncludeYForce: 0
           opponentMaxMagnitude: 1
           opponentMinMagnitude: 1
@@ -96,7 +95,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
+        hitSound: {fileID: 0}
     00000001:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:
@@ -119,26 +118,26 @@ MonoBehaviour:
     00000002:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:
-        nickname: Friction 1
+        nickname: Friction
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
         onDetect: 0
         onDetectHitboxGroup: 0
         startFrame: 2
-        endFrame: 6
+        endFrame: 30
         attackEvent:
           id: 6
         variables:
           intVars: 
           floatVars:
-          - 0.2
+          - 0.3
           objectVars: []
           curveVars: []
     00000003:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:
-        nickname: Forward
+        nickname: Up
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
@@ -152,27 +151,27 @@ MonoBehaviour:
           intVars: 
           floatVars:
           - 0
-          - 6
           - 0
+          - 25
           objectVars: []
           curveVars: []
     00000004:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:
-        nickname: Friction 2
+        nickname: U.Friction
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
         onDetect: 0
         onDetectHitboxGroup: 0
-        startFrame: 8
-        endFrame: 50
+        startFrame: 11
+        endFrame: 30
         attackEvent:
           id: 8
         variables:
           intVars: 
           floatVars:
-          - 0.25
+          - 1.6666666
           objectVars: []
           curveVars: []
     00000005:
@@ -185,12 +184,12 @@ MonoBehaviour:
         yFriction: 0
         xzFriction: 1
     00000007:
-      type: {class: EntityMovementForceAddEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      type: {class: EntityForceSetEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
-        xzForce: 1
-        yForce: 0
+        xzForce: 0
+        yForce: 1
     00000008:
       type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
-        yFriction: 0
-        xzFriction: 1
+        yFriction: 1
+        xzFriction: 0

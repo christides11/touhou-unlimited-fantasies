@@ -20,8 +20,7 @@ namespace TUF.Combat.Events
 
         public override bool Evaluate(uint frame, uint endFrame, CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
-            controller.CombatManager.Cleanup();
-            controller.CombatManager.CurrentAttack = (MovesetAttackNode)variables.objectVars[0];
+            controller.CombatManager.SetAttack((MovesetAttackNode)variables.objectVars[0]);
             controller.StateManager.ChangeState((int)EntityStates.ATTACK);
             return true;
         }

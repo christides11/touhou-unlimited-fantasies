@@ -38,7 +38,7 @@ namespace TUF.Entities
             base.Cleanup();
         }
 
-        protected override bool CheckStartingNodes()
+        protected override CAF.Combat.MovesetAttackNode CheckStartingNodes()
         {
             if (Controller.IsFloating)
             {

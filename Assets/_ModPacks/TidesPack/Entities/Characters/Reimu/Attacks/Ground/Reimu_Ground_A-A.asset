@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc111f7afe810b2449e31c9e6dd282e4, type: 3}
   m_Name: Reimu_Ground_A-A
   m_EditorClassIdentifier: 
-  attackName: Reimu Ground A-A
+  attackName: Reimu Ground A*A
   description: 
   stateOverride: -1
   length: 50
@@ -25,7 +25,8 @@ MonoBehaviour:
   - {x: 11, y: 60}
   enemyStepWindows: []
   landCancelWindows: []
-  commandAttackCancelWindows: []
+  commandAttackCancelWindows:
+  - {x: 9, y: 60}
   boxGroups:
   - id: 0
   - id: 1
@@ -97,7 +98,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 0}
+        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     00000001:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
@@ -149,7 +150,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 0}
+        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     00000002:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:

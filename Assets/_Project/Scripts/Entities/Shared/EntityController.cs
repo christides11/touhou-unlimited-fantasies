@@ -190,6 +190,7 @@ namespace TUF.Entities
                 // Only objects with ILockonable can be locked on to.
                 if (c.TryGetComponent(out ITargetable targetLockonComponent))
                 {
+                    Debug.Log($"? {c.name}");
                     // The target can not be locked on to right now.
                     if (!targetLockonComponent.Targetable)
                     {
@@ -324,6 +325,18 @@ namespace TUF.Entities
             if (IsGrounded)
             {
                 StateManager.ChangeState((int)EntityStates.IDLE);
+                return true;
+            }
+            return false;
+        }
+
+        public virtual bool TryAttack()
+        {
+            Combat.MovesetAttackNode man = (Combat.MovesetAttackNode)CombatManager.TryAttack();
+            if (man != null)
+            {
+                CombatManager.SetAttack(man);
+                StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
             return false;

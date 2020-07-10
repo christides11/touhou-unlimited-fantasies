@@ -16,9 +16,8 @@ namespace TUF.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
-            if (CombatManager.TryAttack())
+            if (controller.TryAttack())
             {
-                StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
             if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)

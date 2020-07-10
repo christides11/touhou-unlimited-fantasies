@@ -68,9 +68,10 @@ namespace TUF.Entities
         /// <param name="hitboxID">The hitbox ID of the hitbox.</param>
         protected override void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID, int hitboxGroup)
         {
-            //SoundDefinition sd = combatManager.controller.GameManager.ModManager
-            //    .GetSoundDefinition(combatManager.currentAttack.attackDefinition.boxGroups[hitboxGroup].hitSound?.reference);
-            //SoundManager.Play(sd, 0, controller.transform);
+            SoundDefinition sd = ((EntityController)combatManager.controller).GameManager.ModManager
+                .GetSoundDefinition(
+                ((Combat.BoxGroup)combatManager.CurrentAttack.attackDefinition.boxGroups[hitboxGroup]).hitSound?.reference);
+            SoundManager.Play(sd, 0, controller.transform);
             base.OnHitboxHurt(hurtableHit, hitInfo, hitboxID, hitboxGroup);
         }
 
@@ -170,6 +171,15 @@ namespace TUF.Entities
                     detectboxes[key][i].ignoreList = hurtablesDetected[hitboxID];
                 }
             }
+        }
+
+        public List<IHurtable> GetHitList(int group)
+        {
+            if (!hurtablesHit.ContainsKey(group))
+            {
+                return null;
+            }
+            return hurtablesHit[group];
         }
 
         public List<IHurtable> GetDetectedList(int group)
