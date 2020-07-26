@@ -7,7 +7,12 @@ using UnityEngine;
 
 namespace TUF.GameMode
 {
-    public class StageModeHandler : GameModeBase
+    /// <summary>
+    /// The "Stage" Game Mode is about getting to the finish point, usually
+    /// with enemies and bosses in between that. When you reach the finish, 
+    /// you're given a score based on a number of factors that can be customized.
+    /// </summary>
+    public class GameModeStage : GameModeBase
     {
 
         public override void StartGameMode(EntityDefinition character, 

@@ -5,6 +5,7 @@ using System.Collections.Generic;
 using TUF.Core;
 using TUF.Entities.Shared;
 using UnityEngine;
+using ReadOnlyAttribute = TUF.Core.ReadOnlyAttribute;
 using SimObjectManager = TUF.Core.SimObjectManager;
 
 namespace TUF.GameMode{
@@ -27,7 +28,7 @@ namespace TUF.GameMode{
         private StageDefinition currentStage;
 
         [SerializeField] protected List<GameModeComponent> componentPrefabs = new List<GameModeComponent>();
-        public List<GameModeComponent> components = new List<GameModeComponent>();
+        [ReadOnly] public List<GameModeComponent> components = new List<GameModeComponent>();
 
 
         /// <summary>
@@ -39,6 +40,13 @@ namespace TUF.GameMode{
         {
             this.gameManager = gameManager;
             simObjectManager = new SimObjectManager();
+
+            components.Clear();
+            for(int i = 0; i < componentPrefabs.Count; i++)
+            {
+                components.Add(GameObject.Instantiate(componentPrefabs[i].gameObject, transform, false)
+                    .GetComponent<GameModeComponent>());
+            }
         }
 
         /// <summary>

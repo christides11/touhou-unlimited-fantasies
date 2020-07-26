@@ -2,9 +2,9 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace TUF.GameMode
+namespace TUF.Core
 {
-    public class StageCollectionModeHandler : StageModeHandler
+    public class ReadOnlyAttribute : PropertyAttribute
     {
 
     }

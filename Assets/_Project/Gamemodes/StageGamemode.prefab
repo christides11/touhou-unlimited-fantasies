@@ -43,3 +43,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2abbee3aa291f4e91793e39e363611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  componentPrefabs: []
+  components: []
