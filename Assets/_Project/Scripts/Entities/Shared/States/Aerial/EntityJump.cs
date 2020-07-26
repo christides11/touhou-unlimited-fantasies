@@ -21,7 +21,7 @@ namespace TUF.Entities.Shared
             {
                 EntityStats es = controller.definition.stats;
                 PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration);
-                PhysicsManager.HandleGravity(es.gravity);
+                PhysicsManager.HandleGravity();
                 controller.RotateVisual(controller.GetMovementVector(0), es.airRotationSpeed);
             }
         }

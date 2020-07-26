@@ -79,8 +79,20 @@ namespace TUF.Combat
             }
         }
 
+        protected bool dashCancelWindowsFoldout;
         protected override void DrawCancelWindows()
         {
+            EditorGUI.BeginChangeCheck();
+            List<Vector2Int> dashCancelWindows = new List<Vector2Int>(((TUF.Combat.AttackDefinition)attack).dashCancelableFrames);
+
+            DrawCancelWindow("Dash Cancel Windows", ref dashCancelWindowsFoldout, ref dashCancelWindows, 180);
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(attack, "Changed Cancel Window.");
+                ((TUF.Combat.AttackDefinition)attack).dashCancelableFrames = dashCancelWindows; ;
+            }
+
             base.DrawCancelWindows();
         }
 

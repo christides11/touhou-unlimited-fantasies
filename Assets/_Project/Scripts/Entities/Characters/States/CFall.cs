@@ -16,7 +16,7 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if (((CharacterController)controller).TryWallRun())
+            if (((CharacterManager)controller).TryWallRun())
             {
                 return true;
             }
@@ -34,7 +34,7 @@ namespace TUF.Entities.Characters.States
                 StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;
             }
-            if (((CharacterController)controller).CheckAirDash())
+            if (((CharacterManager)controller).CheckAirDash())
             {
                 StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;
@@ -43,7 +43,7 @@ namespace TUF.Entities.Characters.States
             {
                 if (controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude > InputConstants.movementMagnitude)
                 {
-                    if (((CharacterController)controller).wasRunning)
+                    if (((CharacterManager)controller).wasRunning)
                     {
                         StateManager.ChangeState((int)EntityStates.RUN);
                     }

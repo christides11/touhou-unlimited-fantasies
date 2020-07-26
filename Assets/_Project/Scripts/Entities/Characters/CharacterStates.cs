@@ -7,6 +7,7 @@
         FLOAT_DODGE = 22,
         FLOAT_DASH = 23,
         WALL_RUN_HORIZONTAL = 24,
-        WALL_RUN_VERTICAL = 25
+        WALL_RUN_VERTICAL = 25,
+        SLIDE = 26
     }
 }

@@ -12,7 +12,7 @@ namespace TUF.Entities.Characters.States
         public override void Initialize()
         {
             base.Initialize();
-            ((CharacterController)controller).wasRunning = false;
+            ((CharacterManager)controller).wasRunning = false;
         }
 
         public override void OnUpdate()
@@ -21,7 +21,7 @@ namespace TUF.Entities.Characters.States
 
             if (controller.InputManager.GetButton((int)EntityInputs.Dash).firstPress)
             {
-                ((CharacterController)controller).hoverMode = !((CharacterController)controller).hoverMode;
+                ((CharacterManager)controller).hoverMode = !((CharacterManager)controller).hoverMode;
             }
         }
 
@@ -29,6 +29,11 @@ namespace TUF.Entities.Characters.States
         {
             if (controller.TryAttack())
             {
+                return true;
+            }
+            if (InputManager.GetAxis((int)EntityInputs.Float) < -0.5f)
+            {
+                StateManager.ChangeState((int)BaseCharacterStates.SLIDE);
                 return true;
             }
             if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)

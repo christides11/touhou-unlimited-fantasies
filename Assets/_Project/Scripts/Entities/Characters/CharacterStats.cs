@@ -35,6 +35,10 @@ namespace TUF.Entities.Characters
         public float wallRunHorizontalChainMaxMulti;
 
         [Header("Slide")]
-        public float slideBaseSpeed;
+        public float slideInitialSpeed;
+        public int slideHoldFrames;
+        public float slideSlopeBaseSpeed;
+        public float slideSpeedPerAngle;
+        public float slideForceTransitionTime;
     }
 }

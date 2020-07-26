@@ -23,7 +23,7 @@ namespace TUF.Entities
         // Detectbox ID : IHurtables Hit
         private Dictionary<int, List<IHurtable>> hurtablesDetected = new Dictionary<int, List<IHurtable>>();
 
-        public EntityHitboxManager(EntityCombatManager combatManager, EntityController controller) : base(combatManager, controller)
+        public EntityHitboxManager(EntityCombatManager combatManager, EntityManager controller) : base(combatManager, controller)
         {
 
         }
@@ -56,7 +56,7 @@ namespace TUF.Entities
 
         protected override CAF.Combat.Hitbox InstantiateHitbox(Vector3 position, Quaternion rotation)
         {
-            return GameObject.Instantiate(((EntityController)controller).GameManager.gameVars.combat.hitbox,
+            return GameObject.Instantiate(((EntityManager)controller).GameManager.gameVars.combat.hitbox,
                 position, rotation).GetComponent<Combat.Hitbox>();
         }
 
@@ -68,7 +68,7 @@ namespace TUF.Entities
         /// <param name="hitboxID">The hitbox ID of the hitbox.</param>
         protected override void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID, int hitboxGroup)
         {
-            SoundDefinition sd = ((EntityController)combatManager.controller).GameManager.ModManager
+            SoundDefinition sd = ((EntityManager)combatManager.controller).GameManager.ModManager
                 .GetSoundDefinition(
                 ((Combat.BoxGroup)combatManager.CurrentAttack.attackDefinition.boxGroups[hitboxGroup]).hitSound?.reference);
             SoundManager.Play(sd, 0, controller.transform);

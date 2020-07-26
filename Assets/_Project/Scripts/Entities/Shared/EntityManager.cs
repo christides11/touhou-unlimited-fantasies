@@ -15,7 +15,7 @@ namespace TUF.Entities
     /// <summary>
     /// A general controller that should work for a majority of entities.
     /// </summary>
-    public class EntityController : CAF.Entities.EntityManager
+    public class EntityManager : CAF.Entities.EntityManager
     {
         public GameManager GameManager { get; protected set; }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
@@ -106,6 +106,7 @@ namespace TUF.Entities
                 PickLockonTarget();
                 // No target but holding down lock on menas you lock the visuals rotation.
                 LockonForward = visual.transform.forward;
+                lookHandler.SetTarget(LockonTarget?.GetComponent<EntityManager>());
             }
 
             // No target.
@@ -118,6 +119,7 @@ namespace TUF.Entities
             if(Vector3.Distance(transform.position, LockonTarget.transform.position) > lockonRadius)
             {
                 LockonTarget = null;
+                lookHandler.SetTarget(null);
                 return;
             }
 

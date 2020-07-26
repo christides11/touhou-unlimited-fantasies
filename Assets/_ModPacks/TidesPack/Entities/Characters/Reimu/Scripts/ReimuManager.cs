@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using TUF.Combat.Bullets;
 using TUF.Core;
 using UnityEngine;
-using CharacterController = TUF.Entities.Characters.CharacterController;
+using CharacterManager = TUF.Entities.Characters.CharacterManager;
 
 namespace TidesPack.Characters.Reimu
 {
-    public class ReimuController : CharacterController
+    public class ReimuManager : CharacterManager
     {
 
         [SerializeField] private BulletPatternManager bpm;

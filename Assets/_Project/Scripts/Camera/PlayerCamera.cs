@@ -34,9 +34,9 @@ namespace TUF.Core
         [SerializeField] private float stickXAxisSpeed = 1.0f;
         [SerializeField] private float stickYAxisSpeed = 1.0f;
 
-        private EntityController currentEntity;
+        private Entities.EntityManager currentEntity;
 
-        public virtual void Initialize(EntityController entity)
+        public virtual void Initialize(Entities.EntityManager entity)
         {
             currentEntity = entity;
             //currentEntity.CombatManager.hitboxManager.OnHitboxHit += CauseShake;
@@ -148,6 +148,16 @@ namespace TUF.Core
         public Transform LookTransform()
         {
             return cam.transform;
+        }
+
+        public void SetTarget(CAF.Entities.EntityManager entityTarget)
+        {
+            if (entityTarget)
+            {
+                LockOn(entityTarget.transform);
+                return;
+            }
+            UnlockOn();
         }
     }
 }

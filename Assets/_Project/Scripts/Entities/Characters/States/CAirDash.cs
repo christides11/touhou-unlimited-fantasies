@@ -14,7 +14,7 @@ namespace TUF.Entities.Characters.States
             base.Initialize();
             CharacterStats cs = ((CharacterStats)controller.definition.stats);
 
-            ((CharacterController)controller).currentAirDash++;
+            ((CharacterManager)controller).currentAirDash++;
             controller.PhysicsManager.forceGravity *= cs.airDashGravityInitMulti;
             Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             if(movement.magnitude < InputConstants.movementMagnitude)
@@ -54,7 +54,7 @@ namespace TUF.Entities.Characters.States
                     return true;
                 }
             }
-            if (((CharacterController)controller).TryWallRun())
+            if (((CharacterManager)controller).TryWallRun())
             {
                 return true;
             }

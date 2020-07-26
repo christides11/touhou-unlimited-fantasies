@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Reimu Ground A
   description: 
   stateOverride: -1
-  length: 50
+  length: 35
   heightRestriction: 0
   gravityScaleAdded: 0
   animationGround: {fileID: 0}
@@ -32,7 +32,8 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
-  dashCancelableFrames: []
+  dashCancelableFrames:
+  - {x: 8, y: 100}
   floatCancelFrames: []
   bulletCancelFrames: []
   specialCancelFrames: []
@@ -94,7 +95,7 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 0}
+        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
     00000001:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:
@@ -123,14 +124,14 @@ MonoBehaviour:
         onHitHitboxGroup: 0
         onDetect: 0
         onDetectHitboxGroup: 0
-        startFrame: 4
+        startFrame: 10
         endFrame: 50
         attackEvent:
           id: 5
         variables:
           intVars: 
           floatVars:
-          - 0.15
+          - 0.5
           objectVars: []
           curveVars: []
     00000003:

@@ -12,7 +12,7 @@ namespace TUF.Entities
 {
     public class EntityCombatManager : CAF.Entities.EntityCombatManager
     {
-        public EntityController Controller { get { return (EntityController)controller; } }
+        public EntityManager Controller { get { return (EntityManager)controller; } }
         public bool WasFloating { get; set; } = false;
 
         [SerializeField] protected MovesetDefinition moveset;
@@ -25,7 +25,7 @@ namespace TUF.Entities
         {
             CurrentMoveset = moveset;
             base.Awake();
-            hitboxManager = new TUF.Entities.EntityHitboxManager(this, (EntityController)controller);
+            hitboxManager = new TUF.Entities.EntityHitboxManager(this, (EntityManager)controller);
         }
 
         public override void CLateUpdate()

@@ -11,7 +11,7 @@ namespace TUF.Entities.Characters.States
         public override void Initialize()
         {
             base.Initialize();
-            ((CharacterController)controller).wasRunning = true;
+            ((CharacterManager)controller).wasRunning = true;
         }
 
         public override bool CheckInterrupt()

@@ -5,11 +5,11 @@ using TUF.Entities.Characters;
 using TUF.Entities.Shared;
 using Touhou.Entities;
 using UnityEngine;
-using CharacterController = TUF.Entities.Characters.CharacterController;
+using CharacterManager = TUF.Entities.Characters.CharacterManager;
 
 namespace Touhou.Characters
 {
-    public class DummyController : CharacterController
+    public class DummyController : CharacterManager
     {
 
         protected override void SetupDefaultStates()

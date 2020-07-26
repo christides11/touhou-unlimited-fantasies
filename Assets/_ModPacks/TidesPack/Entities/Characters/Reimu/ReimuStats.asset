@@ -76,7 +76,11 @@ MonoBehaviour:
   wallRunHorizontalSpeed: 16
   wallRunHorizontalChainMulti: 0.5
   wallRunHorizontalChainMaxMulti: 4
-  slideBaseSpeed: 0
+  slideInitialSpeed: 25
+  slideHoldFrames: 15
+  slideSlopeBaseSpeed: 10
+  slideSpeedPerAngle: 0.75
+  slideForceTransitionTime: 2
   teleportNoTargetForwardDist: 5
   teleportNoTargetUpDist: 5
   teleportTargetForwardDist: 1

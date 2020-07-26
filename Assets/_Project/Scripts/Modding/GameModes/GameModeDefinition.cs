@@ -9,7 +9,7 @@ namespace TUF.GameMode
     {
         public string gameModeName;
         [TextArea] public string gameModeDescription;
-        public GameModeHandler gameModeHandler;
+        public GameModeBase gameModeHandler;
 
         public bool selectable = true;
         public bool characterSelect;

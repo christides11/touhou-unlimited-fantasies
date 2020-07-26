@@ -301,9 +301,12 @@ namespace TUF.Entities.Shared
                 if (StateManager.CurrentStateFrame >= currentAttack.dashCancelableFrames[i].x
                     && StateManager.CurrentStateFrame <= currentAttack.dashCancelableFrames[i].y)
                 {
-                    if (controller.TryDash())
+                    if (InputManager.GetButton((int)EntityInputs.Dash, 0, true).firstPress)
                     {
-                        return true;
+                        if (controller.TryDash())
+                        {
+                            return true;
+                        }
                     }
                 }
             }

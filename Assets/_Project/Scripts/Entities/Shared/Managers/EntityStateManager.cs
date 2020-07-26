@@ -22,7 +22,7 @@ namespace TUF.Entities
             }
 
             currentState = state;
-            state.Controller = (EntityController)controller;
+            state.Controller = (EntityManager)controller;
             if (currentStateFrame == 0)
             {
                 currentState.Initialize();

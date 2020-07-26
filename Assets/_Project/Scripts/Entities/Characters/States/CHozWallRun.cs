@@ -14,14 +14,14 @@ namespace TUF.Entities.Characters.States
             PhysicsManager.forceGravity = Vector3.zero;
 
             float v = Vector3.SignedAngle(controller.visualTransform.forward,
-                -((CharacterController)controller).lastWallHit.normal,
+                -((CharacterManager)controller).lastWallHit.normal,
                 Vector3.up);
 
-            Vector3 c = -Vector3.Cross(Vector3.up, ((CharacterController)controller).lastWallHit.normal);
+            Vector3 c = -Vector3.Cross(Vector3.up, ((CharacterManager)controller).lastWallHit.normal);
             controller.visualTransform.rotation = Quaternion.LookRotation((v <= 0 ? 1 : -1) * c, Vector3.up);
 
-            controller.transform.position = ((CharacterController)controller).lastWallHit.point
-                + (((CharacterController)controller).lastWallHit.normal) * (controller.GetSize().x / 2.0f);
+            controller.transform.position = ((CharacterManager)controller).lastWallHit.point
+                + (((CharacterManager)controller).lastWallHit.normal) * (controller.GetSize().x / 2.0f);
         }
 
         public override void OnUpdate()
@@ -33,7 +33,7 @@ namespace TUF.Entities.Characters.States
 
             PhysicsManager.forceMovement = controller.visualTransform.forward 
                 * ((CharacterStats)controller.definition.stats).wallRunHorizontalSpeed
-                * ((CharacterController)controller).wallRunHozMultiplier;
+                * ((CharacterManager)controller).wallRunHozMultiplier;
 
             StateManager.IncrementFrame();
         }
@@ -58,7 +58,7 @@ namespace TUF.Entities.Characters.States
         public override void OnInterrupted()
         {
             base.OnInterrupted();
-            ((CharacterController)controller).wallRunHozMultiplier 
+            ((CharacterManager)controller).wallRunHozMultiplier 
                 += ((CharacterStats)controller.definition.stats).wallRunHorizontalChainMulti;
         }
     }

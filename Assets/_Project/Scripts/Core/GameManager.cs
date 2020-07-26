@@ -17,10 +17,10 @@ namespace TUF.Core
         public static GameManager current;
 
         public ModManager ModManager { get { return modManager; } }
-        public GameModeHandler GameModeHanlder { get { return currentGameModeHandler; } }
+        public GameModeBase GameModeHanlder { get { return currentGameModeHandler; } }
         public ConsoleWindow ConsoleWindow { get { return consoleWindow; } }
 
-        protected GameModeHandler currentGameModeHandler;
+        protected GameModeBase currentGameModeHandler;
 
         [SerializeField] private ModDefinition coreMod;
         [SerializeField] private ModDefinition internalMod;
@@ -109,7 +109,7 @@ namespace TUF.Core
             }
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(stageDefinition.sceneName));
 
-            currentGameModeHandler.Initialize(this);
+            currentGameModeHandler.InitGameMode(this);
             currentGameModeHandler.StartGameMode(entityDefinition, stageDefinition);
         }
 
@@ -124,7 +124,7 @@ namespace TUF.Core
                 Destroy(currentGameModeHandler.gameObject);
             }
             GameObject gameMode = Instantiate(gameModeDefinition.gameModeHandler.gameObject, transform);
-            currentGameModeHandler = gameMode.GetComponent<GameModeHandler>();
+            currentGameModeHandler = gameMode.GetComponent<GameModeBase>();
         }
     }
 }

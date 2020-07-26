@@ -12,7 +12,7 @@ namespace TUF.Entities.Characters
     /// this controller is assumed to be for entities that the player will control,
     /// and assumes that a few extra states will be used. 
     /// </summary>
-    public class CharacterController : EntityController
+    public class CharacterManager : EntityManager
     {
         [HideInInspector] public bool wasRunning;
         [HideInInspector] public bool hoverMode;
@@ -68,6 +68,9 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new EntityFlinch(), (int)EntityStates.FLINCH);
             StateManager.AddState(new EntityFlinchAir(), (int)EntityStates.FLINCH_AIR);
             StateManager.AddState(new EntityTumble(), (int)EntityStates.TUMBLE);
+
+            // Other
+            StateManager.AddState(new CSlide(), (int)BaseCharacterStates.SLIDE);
 
             // Start State Machine
             StateManager.ChangeState((int)EntityStates.FALL);

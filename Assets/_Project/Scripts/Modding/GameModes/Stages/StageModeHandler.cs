@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace TUF.GameMode
 {
-    public class StageModeHandler : GameModeHandler
+    public class StageModeHandler : GameModeBase
     {
 
         public override void StartGameMode(EntityDefinition character, 
@@ -18,7 +18,7 @@ namespace TUF.GameMode
 
             playerCharacters.Add(simObjectManager.SpawnObject(character.entity, currentStage.spawnPosition[0], Quaternion.identity));
             playerCamera.UpdateTarget(playerCharacters[0].transform);
-            playerCharacters[0].GetComponent<EntityController>().Init(gameManager, playerCamera, CAF.Input.InputControlType.Direct);
+            playerCharacters[0].GetComponent<EntityManager>().Init(gameManager, playerCamera, CAF.Input.InputControlType.Direct);
         }
     }
 }

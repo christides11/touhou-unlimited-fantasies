@@ -8,7 +8,10 @@ using UnityEngine;
 using SimObjectManager = TUF.Core.SimObjectManager;
 
 namespace TUF.GameMode{
-    public class GameModeHandler : MonoBehaviour
+    /// <summary>
+    /// The base class all game modes should inherit from. 
+    /// </summary>
+    public class GameModeBase : MonoBehaviour
     {
         public SimObjectManager SimObjectManager { get { return simObjectManager; } }
         public bool GamemodeActive { get { return gamemodeActive; } }
@@ -23,12 +26,16 @@ namespace TUF.GameMode{
         private StageCollection stageCollection;
         private StageDefinition currentStage;
 
+        [SerializeField] protected List<GameModeComponent> componentPrefabs = new List<GameModeComponent>();
+        public List<GameModeComponent> components = new List<GameModeComponent>();
+
 
         /// <summary>
-        /// Initializes variables.
+        /// Initializes the gamemode with any components it needs.
+        /// Should be called before anything else.
         /// </summary>
-        /// <param name="gameManager">The gameManager in use.</param>
-        public virtual void Initialize(GameManager gameManager)
+        /// <param name="gameManager">the current Game Manager.</param>
+        public virtual void InitGameMode(GameManager gameManager)
         {
             this.gameManager = gameManager;
             simObjectManager = new SimObjectManager();

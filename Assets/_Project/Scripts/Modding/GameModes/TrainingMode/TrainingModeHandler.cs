@@ -7,9 +7,9 @@ using UnityEngine;
 
 namespace TUF.GameMode
 {
-    public class TrainingModeHandler : GameModeHandler
+    public class TrainingModeHandler : GameModeBase
     {
-        public EntityController dummy;
+        public EntityManager dummy;
 
         public bool frameByFrame = false;
 
@@ -20,12 +20,12 @@ namespace TUF.GameMode
 
             playerCharacters.Add(simObjectManager.SpawnObject(character.entity, scene.spawnPosition[0], Quaternion.identity));
             playerCamera.UpdateTarget(playerCharacters[0].transform);
-            playerCharacters[0].GetComponent<EntityController>().Init(gameManager, playerCamera, CAF.Input.InputControlType.Direct);
-            playerCamera.Initialize(playerCharacters[0].GetComponent<EntityController>());
+            playerCharacters[0].GetComponent<EntityManager>().Init(gameManager, playerCamera, CAF.Input.InputControlType.Direct);
+            playerCamera.Initialize(playerCharacters[0].GetComponent<EntityManager>());
 
             GameObject d = simObjectManager.SpawnObject(dummy.gameObject, scene.spawnPosition[0] + new Vector3(0, 0, 5), 
                 Quaternion.identity);
-            d.GetComponent<EntityController>().Init(gameManager, null, CAF.Input.InputControlType.None);
+            d.GetComponent<EntityManager>().Init(gameManager, null, CAF.Input.InputControlType.None);
         }
 
         public override void Update()

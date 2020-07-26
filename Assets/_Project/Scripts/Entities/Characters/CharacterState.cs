@@ -6,6 +6,6 @@ namespace TUF.Entities.Characters
 {
     public class CharacterState : EntityState
     {
-        public virtual CharacterController pc { get { return (CharacterController)controller; } }
+        public virtual CharacterManager pc { get { return (CharacterManager)controller; } }
     }
 }
