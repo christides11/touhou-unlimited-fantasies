@@ -7001,12 +7001,6 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.ActivateGamemode
   nameWithType: GameModeBase.ActivateGamemode
-- uid: TUF.GameMode.GameModeBase.componentPrefabs
-  name: componentPrefabs
-  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_componentPrefabs
-  commentId: F:TUF.GameMode.GameModeBase.componentPrefabs
-  fullName: TUF.GameMode.GameModeBase.componentPrefabs
-  nameWithType: GameModeBase.componentPrefabs
 - uid: TUF.GameMode.GameModeBase.components
   name: components
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_components
@@ -7077,6 +7071,19 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.GamemodeActive
   nameWithType: GameModeBase.GamemodeActive
+- uid: TUF.GameMode.GameModeBase.GameModeComponents
+  name: GameModeComponents
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_GameModeComponents
+  commentId: P:TUF.GameMode.GameModeBase.GameModeComponents
+  fullName: TUF.GameMode.GameModeBase.GameModeComponents
+  nameWithType: GameModeBase.GameModeComponents
+- uid: TUF.GameMode.GameModeBase.GameModeComponents*
+  name: GameModeComponents
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_GameModeComponents_
+  commentId: Overload:TUF.GameMode.GameModeBase.GameModeComponents
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeBase.GameModeComponents
+  nameWithType: GameModeBase.GameModeComponents
 - uid: TUF.GameMode.GameModeBase.InitGameMode(TUF.Core.GameManager)
   name: InitGameMode(GameManager)
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_InitGameMode_TUF_Core_GameManager_
@@ -7134,6 +7141,19 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.StartGameMode
   nameWithType: GameModeBase.StartGameMode
+- uid: TUF.GameMode.GameModeBase.TestMethod
+  name: TestMethod()
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_TestMethod
+  commentId: M:TUF.GameMode.GameModeBase.TestMethod
+  fullName: TUF.GameMode.GameModeBase.TestMethod()
+  nameWithType: GameModeBase.TestMethod()
+- uid: TUF.GameMode.GameModeBase.TestMethod*
+  name: TestMethod
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_TestMethod_
+  commentId: Overload:TUF.GameMode.GameModeBase.TestMethod
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeBase.TestMethod
+  nameWithType: GameModeBase.TestMethod
 - uid: TUF.GameMode.GameModeBase.Tick(System.Single)
   name: Tick(Single)
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_Tick_System_Single_
@@ -7224,6 +7244,81 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeComponent.Tick
   nameWithType: GameModeComponent.Tick
+- uid: TUF.GameMode.GameModeComponentTimer
+  name: GameModeComponentTimer
+  href: api/TUF.GameMode.GameModeComponentTimer.html
+  commentId: T:TUF.GameMode.GameModeComponentTimer
+  fullName: TUF.GameMode.GameModeComponentTimer
+  nameWithType: GameModeComponentTimer
+- uid: TUF.GameMode.GameModeComponentTimer.currentTime
+  name: currentTime
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_currentTime
+  commentId: F:TUF.GameMode.GameModeComponentTimer.currentTime
+  fullName: TUF.GameMode.GameModeComponentTimer.currentTime
+  nameWithType: GameModeComponentTimer.currentTime
+- uid: TUF.GameMode.GameModeComponentTimer.CurrentTime
+  name: CurrentTime
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_CurrentTime
+  commentId: P:TUF.GameMode.GameModeComponentTimer.CurrentTime
+  fullName: TUF.GameMode.GameModeComponentTimer.CurrentTime
+  nameWithType: GameModeComponentTimer.CurrentTime
+- uid: TUF.GameMode.GameModeComponentTimer.CurrentTime*
+  name: CurrentTime
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_CurrentTime_
+  commentId: Overload:TUF.GameMode.GameModeComponentTimer.CurrentTime
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentTimer.CurrentTime
+  nameWithType: GameModeComponentTimer.CurrentTime
+- uid: TUF.GameMode.GameModeComponentTimer.InitComponent(TUF.GameMode.GameModeBase)
+  name: InitComponent(GameModeBase)
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_InitComponent_TUF_GameMode_GameModeBase_
+  commentId: M:TUF.GameMode.GameModeComponentTimer.InitComponent(TUF.GameMode.GameModeBase)
+  fullName: TUF.GameMode.GameModeComponentTimer.InitComponent(TUF.GameMode.GameModeBase)
+  nameWithType: GameModeComponentTimer.InitComponent(GameModeBase)
+- uid: TUF.GameMode.GameModeComponentTimer.InitComponent*
+  name: InitComponent
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_InitComponent_
+  commentId: Overload:TUF.GameMode.GameModeComponentTimer.InitComponent
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentTimer.InitComponent
+  nameWithType: GameModeComponentTimer.InitComponent
+- uid: TUF.GameMode.GameModeComponentTimer.Timer
+  name: Timer
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_Timer
+  commentId: P:TUF.GameMode.GameModeComponentTimer.Timer
+  fullName: TUF.GameMode.GameModeComponentTimer.Timer
+  nameWithType: GameModeComponentTimer.Timer
+- uid: TUF.GameMode.GameModeComponentTimer.Timer*
+  name: Timer
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_Timer_
+  commentId: Overload:TUF.GameMode.GameModeComponentTimer.Timer
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentTimer.Timer
+  nameWithType: GameModeComponentTimer.Timer
+- uid: TUF.GameMode.GameModeComponentTimer.timerType
+  name: timerType
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_timerType
+  commentId: F:TUF.GameMode.GameModeComponentTimer.timerType
+  fullName: TUF.GameMode.GameModeComponentTimer.timerType
+  nameWithType: GameModeComponentTimer.timerType
+- uid: TUF.GameMode.GameModeComponentTimer.TimerType
+  name: GameModeComponentTimer.TimerType
+  href: api/TUF.GameMode.GameModeComponentTimer.TimerType.html
+  commentId: T:TUF.GameMode.GameModeComponentTimer.TimerType
+  fullName: TUF.GameMode.GameModeComponentTimer.TimerType
+  nameWithType: GameModeComponentTimer.TimerType
+- uid: TUF.GameMode.GameModeComponentTimer.TimerType.Countdown
+  name: Countdown
+  href: api/TUF.GameMode.GameModeComponentTimer.TimerType.html#TUF_GameMode_GameModeComponentTimer_TimerType_Countdown
+  commentId: F:TUF.GameMode.GameModeComponentTimer.TimerType.Countdown
+  fullName: TUF.GameMode.GameModeComponentTimer.TimerType.Countdown
+  nameWithType: GameModeComponentTimer.TimerType.Countdown
+- uid: TUF.GameMode.GameModeComponentTimer.TimerType.Stopwatch
+  name: Stopwatch
+  href: api/TUF.GameMode.GameModeComponentTimer.TimerType.html#TUF_GameMode_GameModeComponentTimer_TimerType_Stopwatch
+  commentId: F:TUF.GameMode.GameModeComponentTimer.TimerType.Stopwatch
+  fullName: TUF.GameMode.GameModeComponentTimer.TimerType.Stopwatch
+  nameWithType: GameModeComponentTimer.TimerType.Stopwatch
 - uid: TUF.GameMode.GameModeDefinition
   name: GameModeDefinition
   href: api/TUF.GameMode.GameModeDefinition.html
@@ -7285,50 +7380,50 @@ references:
   commentId: T:TUF.GameMode.GameModeStageCollection
   fullName: TUF.GameMode.GameModeStageCollection
   nameWithType: GameModeStageCollection
-- uid: TUF.GameMode.TrainingModeHandler
-  name: TrainingModeHandler
-  href: api/TUF.GameMode.TrainingModeHandler.html
-  commentId: T:TUF.GameMode.TrainingModeHandler
-  fullName: TUF.GameMode.TrainingModeHandler
-  nameWithType: TrainingModeHandler
-- uid: TUF.GameMode.TrainingModeHandler.dummy
+- uid: TUF.GameMode.GameModeTraining
+  name: GameModeTraining
+  href: api/TUF.GameMode.GameModeTraining.html
+  commentId: T:TUF.GameMode.GameModeTraining
+  fullName: TUF.GameMode.GameModeTraining
+  nameWithType: GameModeTraining
+- uid: TUF.GameMode.GameModeTraining.dummy
   name: dummy
-  href: api/TUF.GameMode.TrainingModeHandler.html#TUF_GameMode_TrainingModeHandler_dummy
-  commentId: F:TUF.GameMode.TrainingModeHandler.dummy
-  fullName: TUF.GameMode.TrainingModeHandler.dummy
-  nameWithType: TrainingModeHandler.dummy
-- uid: TUF.GameMode.TrainingModeHandler.frameByFrame
+  href: api/TUF.GameMode.GameModeTraining.html#TUF_GameMode_GameModeTraining_dummy
+  commentId: F:TUF.GameMode.GameModeTraining.dummy
+  fullName: TUF.GameMode.GameModeTraining.dummy
+  nameWithType: GameModeTraining.dummy
+- uid: TUF.GameMode.GameModeTraining.frameByFrame
   name: frameByFrame
-  href: api/TUF.GameMode.TrainingModeHandler.html#TUF_GameMode_TrainingModeHandler_frameByFrame
-  commentId: F:TUF.GameMode.TrainingModeHandler.frameByFrame
-  fullName: TUF.GameMode.TrainingModeHandler.frameByFrame
-  nameWithType: TrainingModeHandler.frameByFrame
-- uid: TUF.GameMode.TrainingModeHandler.StartGameMode(TUF.Entities.Shared.EntityDefinition,TUF.Core.StageDefinition,TUF.Core.StageCollection)
+  href: api/TUF.GameMode.GameModeTraining.html#TUF_GameMode_GameModeTraining_frameByFrame
+  commentId: F:TUF.GameMode.GameModeTraining.frameByFrame
+  fullName: TUF.GameMode.GameModeTraining.frameByFrame
+  nameWithType: GameModeTraining.frameByFrame
+- uid: TUF.GameMode.GameModeTraining.StartGameMode(TUF.Entities.Shared.EntityDefinition,TUF.Core.StageDefinition,TUF.Core.StageCollection)
   name: StartGameMode(EntityDefinition, StageDefinition, StageCollection)
-  href: api/TUF.GameMode.TrainingModeHandler.html#TUF_GameMode_TrainingModeHandler_StartGameMode_TUF_Entities_Shared_EntityDefinition_TUF_Core_StageDefinition_TUF_Core_StageCollection_
-  commentId: M:TUF.GameMode.TrainingModeHandler.StartGameMode(TUF.Entities.Shared.EntityDefinition,TUF.Core.StageDefinition,TUF.Core.StageCollection)
-  fullName: TUF.GameMode.TrainingModeHandler.StartGameMode(TUF.Entities.Shared.EntityDefinition, TUF.Core.StageDefinition, TUF.Core.StageCollection)
-  nameWithType: TrainingModeHandler.StartGameMode(EntityDefinition, StageDefinition, StageCollection)
-- uid: TUF.GameMode.TrainingModeHandler.StartGameMode*
+  href: api/TUF.GameMode.GameModeTraining.html#TUF_GameMode_GameModeTraining_StartGameMode_TUF_Entities_Shared_EntityDefinition_TUF_Core_StageDefinition_TUF_Core_StageCollection_
+  commentId: M:TUF.GameMode.GameModeTraining.StartGameMode(TUF.Entities.Shared.EntityDefinition,TUF.Core.StageDefinition,TUF.Core.StageCollection)
+  fullName: TUF.GameMode.GameModeTraining.StartGameMode(TUF.Entities.Shared.EntityDefinition, TUF.Core.StageDefinition, TUF.Core.StageCollection)
+  nameWithType: GameModeTraining.StartGameMode(EntityDefinition, StageDefinition, StageCollection)
+- uid: TUF.GameMode.GameModeTraining.StartGameMode*
   name: StartGameMode
-  href: api/TUF.GameMode.TrainingModeHandler.html#TUF_GameMode_TrainingModeHandler_StartGameMode_
-  commentId: Overload:TUF.GameMode.TrainingModeHandler.StartGameMode
+  href: api/TUF.GameMode.GameModeTraining.html#TUF_GameMode_GameModeTraining_StartGameMode_
+  commentId: Overload:TUF.GameMode.GameModeTraining.StartGameMode
   isSpec: "True"
-  fullName: TUF.GameMode.TrainingModeHandler.StartGameMode
-  nameWithType: TrainingModeHandler.StartGameMode
-- uid: TUF.GameMode.TrainingModeHandler.Update
+  fullName: TUF.GameMode.GameModeTraining.StartGameMode
+  nameWithType: GameModeTraining.StartGameMode
+- uid: TUF.GameMode.GameModeTraining.Update
   name: Update()
-  href: api/TUF.GameMode.TrainingModeHandler.html#TUF_GameMode_TrainingModeHandler_Update
-  commentId: M:TUF.GameMode.TrainingModeHandler.Update
-  fullName: TUF.GameMode.TrainingModeHandler.Update()
-  nameWithType: TrainingModeHandler.Update()
-- uid: TUF.GameMode.TrainingModeHandler.Update*
+  href: api/TUF.GameMode.GameModeTraining.html#TUF_GameMode_GameModeTraining_Update
+  commentId: M:TUF.GameMode.GameModeTraining.Update
+  fullName: TUF.GameMode.GameModeTraining.Update()
+  nameWithType: GameModeTraining.Update()
+- uid: TUF.GameMode.GameModeTraining.Update*
   name: Update
-  href: api/TUF.GameMode.TrainingModeHandler.html#TUF_GameMode_TrainingModeHandler_Update_
-  commentId: Overload:TUF.GameMode.TrainingModeHandler.Update
+  href: api/TUF.GameMode.GameModeTraining.html#TUF_GameMode_GameModeTraining_Update_
+  commentId: Overload:TUF.GameMode.GameModeTraining.Update
   isSpec: "True"
-  fullName: TUF.GameMode.TrainingModeHandler.Update
-  nameWithType: TrainingModeHandler.Update
+  fullName: TUF.GameMode.GameModeTraining.Update
+  nameWithType: GameModeTraining.Update
 - uid: TUF.Inputs
   name: TUF.Inputs
   href: api/TUF.Inputs.html
