@@ -284,6 +284,21 @@
     "title": "Class StatusEffectArea | Touhou Unlimited Fantasies Documentation",
     "keywords": "Class StatusEffectArea Inheritance Object StatusEffectArea Namespace : TUF.Combat Assembly : TUF_CSharp.dll Syntax public class StatusEffectArea : MonoBehaviour"
   },
+  "api/TUF.Console.CommandStartGameMode.html": {
+    "href": "api/TUF.Console.CommandStartGameMode.html",
+    "title": "Class CommandStartGameMode | Touhou Unlimited Fantasies Documentation",
+    "keywords": "Class CommandStartGameMode Inheritance Object ConsoleCommand CommandStartGameMode Inherited Members ConsoleCommand.processor ConsoleCommand.Initialize(ConsoleInputProcessor) Namespace : TUF.Console Assembly : TUF_CSharp.dll Syntax public class CommandStartGameMode : ConsoleCommand Constructors | Improve this Doc View Source CommandStartGameMode(ModObjectReference, ModObjectReference, ModObjectReference) Declaration public CommandStartGameMode(ModObjectReference entity, ModObjectReference gameMode, ModObjectReference stage) Parameters Type Name Description ModObjectReference entity ModObjectReference gameMode ModObjectReference stage Methods | Improve this Doc View Source Do() Declaration public override Task<string> Do() Returns Type Description Task < String > Overrides ConsoleCommand.Do()"
+  },
+  "api/TUF.Console.CommandUnloadAllMods.html": {
+    "href": "api/TUF.Console.CommandUnloadAllMods.html",
+    "title": "Class CommandUnloadAllMods | Touhou Unlimited Fantasies Documentation",
+    "keywords": "Class CommandUnloadAllMods Inheritance Object ConsoleCommand CommandUnloadAllMods Inherited Members ConsoleCommand.processor ConsoleCommand.Initialize(ConsoleInputProcessor) Namespace : TUF.Console Assembly : TUF_CSharp.dll Syntax public class CommandUnloadAllMods : ConsoleCommand Methods | Improve this Doc View Source Do() Declaration public override Task<string> Do() Returns Type Description Task < String > Overrides ConsoleCommand.Do()"
+  },
+  "api/TUF.Console.ConsoleCommand.html": {
+    "href": "api/TUF.Console.ConsoleCommand.html",
+    "title": "Class ConsoleCommand | Touhou Unlimited Fantasies Documentation",
+    "keywords": "Class ConsoleCommand Inheritance Object ConsoleCommand CommandStartGameMode CommandUnloadAllMods Namespace : TUF.Console Assembly : TUF_CSharp.dll Syntax public class ConsoleCommand Fields | Improve this Doc View Source processor Declaration protected ConsoleInputProcessor processor Field Value Type Description ConsoleInputProcessor Methods | Improve this Doc View Source Do() Declaration public virtual Task<string> Do() Returns Type Description Task < String > | Improve this Doc View Source Initialize(ConsoleInputProcessor) Declaration public virtual ConsoleCommand Initialize(ConsoleInputProcessor processor) Parameters Type Name Description ConsoleInputProcessor processor Returns Type Description ConsoleCommand"
+  },
   "api/TUF.Console.ConsoleInput.html": {
     "href": "api/TUF.Console.ConsoleInput.html",
     "title": "Class ConsoleInput | Touhou Unlimited Fantasies Documentation",
@@ -292,17 +307,17 @@
   "api/TUF.Console.ConsoleInputProcessor.html": {
     "href": "api/TUF.Console.ConsoleInputProcessor.html",
     "title": "Class ConsoleInputProcessor | Touhou Unlimited Fantasies Documentation",
-    "keywords": "Class ConsoleInputProcessor Inheritance Object ConsoleInputProcessor Namespace : TUF.Console Assembly : TUF_CSharp.dll Syntax public class ConsoleInputProcessor : MonoBehaviour Methods | Improve this Doc View Source Process(List<ConsoleInput>) Declaration public Task Process(List<ConsoleInput> inputs) Parameters Type Name Description List < ConsoleInput > inputs Returns Type Description Task"
+    "keywords": "Class ConsoleInputProcessor Inheritance Object ConsoleInputProcessor Namespace : TUF.Console Assembly : TUF_CSharp.dll Syntax public class ConsoleInputProcessor : MonoBehaviour Fields | Improve this Doc View Source consoleWindow Declaration public ConsoleWindow consoleWindow Field Value Type Description ConsoleWindow | Improve this Doc View Source gameManager Declaration public GameManager gameManager Field Value Type Description GameManager | Improve this Doc View Source postCommands Declaration protected List<ConsoleCommand> postCommands Field Value Type Description List < ConsoleCommand > | Improve this Doc View Source preCommands Declaration protected List<ConsoleCommand> preCommands Field Value Type Description List < ConsoleCommand > | Improve this Doc View Source regularCommands Declaration protected List<ConsoleCommand> regularCommands Field Value Type Description List < ConsoleCommand > Methods | Improve this Doc View Source Process(List<ConsoleInput>) Declaration public virtual Task Process(List<ConsoleInput> inputs) Parameters Type Name Description List < ConsoleInput > inputs Returns Type Description Task"
   },
   "api/TUF.Console.ConsoleReader.html": {
     "href": "api/TUF.Console.ConsoleReader.html",
     "title": "Class ConsoleReader | Touhou Unlimited Fantasies Documentation",
-    "keywords": "Class ConsoleReader Inheritance Object ConsoleReader Namespace : TUF.Console Assembly : TUF_CSharp.dll Syntax public class ConsoleReader : MonoBehaviour Methods | Improve this Doc View Source Convert(String[]) Declaration public Task Convert(string[] input) Parameters Type Name Description String [] input Returns Type Description Task | Improve this Doc View Source ReadCommandLine() Declaration public void ReadCommandLine()"
+    "keywords": "Class ConsoleReader Inheritance Object ConsoleReader Namespace : TUF.Console Assembly : TUF_CSharp.dll Syntax public class ConsoleReader : MonoBehaviour Methods | Improve this Doc View Source Convert(String[]) Declaration public Task Convert(string[] input) Parameters Type Name Description String [] input Returns Type Description Task | Improve this Doc View Source ReadCommandLine() Declaration public Task ReadCommandLine() Returns Type Description Task"
   },
   "api/TUF.Console.html": {
     "href": "api/TUF.Console.html",
     "title": "Namespace TUF.Console | Touhou Unlimited Fantasies Documentation",
-    "keywords": "Namespace TUF.Console Classes ConsoleInput ConsoleInputProcessor ConsoleReader"
+    "keywords": "Namespace TUF.Console Classes CommandStartGameMode CommandUnloadAllMods ConsoleCommand ConsoleInput ConsoleInputProcessor ConsoleReader"
   },
   "api/TUF.Core.BootLoader.html": {
     "href": "api/TUF.Core.BootLoader.html",

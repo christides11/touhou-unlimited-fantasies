@@ -600,6 +600,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Console.CommandStartGameMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Console.CommandStartGameMode.html",
+          "hash": "Aw0cpjXbW7eMsJ3LYVABUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Console.CommandUnloadAllMods.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Console.CommandUnloadAllMods.html",
+          "hash": "XN6trztU/soFDTT4WleXkQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Console.ConsoleCommand.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Console.ConsoleCommand.html",
+          "hash": "GF6SySo4Of8BxwAg4jNLbQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TUF.Console.ConsoleInput.yml",
       "output": {
         ".html": {
@@ -616,7 +652,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.ConsoleInputProcessor.html",
-          "hash": "7oLES0g6+cTTvlyHqJBZKg=="
+          "hash": "kqwgSiamFaAsIOc3By/37A=="
         }
       },
       "is_incremental": false,
@@ -628,7 +664,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.ConsoleReader.html",
-          "hash": "ymAyKlbfAk3L4j6ZNkwBQQ=="
+          "hash": "VIOj6azM2m0wcUtt7aGdeg=="
         }
       },
       "is_incremental": false,
@@ -640,7 +676,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.html",
-          "hash": "F7cZOG5OzxWmxLfpGjkhuA=="
+          "hash": "nMXjK2DXPzTFREQoP6MVcQ=="
         }
       },
       "is_incremental": false,
@@ -2344,7 +2380,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "XqR79jx62fl13kI2X79wZg=="
+          "hash": "028WY06+bUfEtqQYH+zQbA=="
         }
       },
       "is_incremental": false,
@@ -2453,7 +2489,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 193,
+          "total_file_count": 196,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

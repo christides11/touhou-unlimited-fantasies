@@ -2242,6 +2242,95 @@ references:
   commentId: N:TUF.Console
   fullName: TUF.Console
   nameWithType: TUF.Console
+- uid: TUF.Console.CommandStartGameMode
+  name: CommandStartGameMode
+  href: api/TUF.Console.CommandStartGameMode.html
+  commentId: T:TUF.Console.CommandStartGameMode
+  fullName: TUF.Console.CommandStartGameMode
+  nameWithType: CommandStartGameMode
+- uid: TUF.Console.CommandStartGameMode.#ctor(TUF.Modding.ModObjectReference,TUF.Modding.ModObjectReference,TUF.Modding.ModObjectReference)
+  name: CommandStartGameMode(ModObjectReference, ModObjectReference, ModObjectReference)
+  href: api/TUF.Console.CommandStartGameMode.html#TUF_Console_CommandStartGameMode__ctor_TUF_Modding_ModObjectReference_TUF_Modding_ModObjectReference_TUF_Modding_ModObjectReference_
+  commentId: M:TUF.Console.CommandStartGameMode.#ctor(TUF.Modding.ModObjectReference,TUF.Modding.ModObjectReference,TUF.Modding.ModObjectReference)
+  fullName: TUF.Console.CommandStartGameMode.CommandStartGameMode(TUF.Modding.ModObjectReference, TUF.Modding.ModObjectReference, TUF.Modding.ModObjectReference)
+  nameWithType: CommandStartGameMode.CommandStartGameMode(ModObjectReference, ModObjectReference, ModObjectReference)
+- uid: TUF.Console.CommandStartGameMode.#ctor*
+  name: CommandStartGameMode
+  href: api/TUF.Console.CommandStartGameMode.html#TUF_Console_CommandStartGameMode__ctor_
+  commentId: Overload:TUF.Console.CommandStartGameMode.#ctor
+  isSpec: "True"
+  fullName: TUF.Console.CommandStartGameMode.CommandStartGameMode
+  nameWithType: CommandStartGameMode.CommandStartGameMode
+- uid: TUF.Console.CommandStartGameMode.Do
+  name: Do()
+  href: api/TUF.Console.CommandStartGameMode.html#TUF_Console_CommandStartGameMode_Do
+  commentId: M:TUF.Console.CommandStartGameMode.Do
+  fullName: TUF.Console.CommandStartGameMode.Do()
+  nameWithType: CommandStartGameMode.Do()
+- uid: TUF.Console.CommandStartGameMode.Do*
+  name: Do
+  href: api/TUF.Console.CommandStartGameMode.html#TUF_Console_CommandStartGameMode_Do_
+  commentId: Overload:TUF.Console.CommandStartGameMode.Do
+  isSpec: "True"
+  fullName: TUF.Console.CommandStartGameMode.Do
+  nameWithType: CommandStartGameMode.Do
+- uid: TUF.Console.CommandUnloadAllMods
+  name: CommandUnloadAllMods
+  href: api/TUF.Console.CommandUnloadAllMods.html
+  commentId: T:TUF.Console.CommandUnloadAllMods
+  fullName: TUF.Console.CommandUnloadAllMods
+  nameWithType: CommandUnloadAllMods
+- uid: TUF.Console.CommandUnloadAllMods.Do
+  name: Do()
+  href: api/TUF.Console.CommandUnloadAllMods.html#TUF_Console_CommandUnloadAllMods_Do
+  commentId: M:TUF.Console.CommandUnloadAllMods.Do
+  fullName: TUF.Console.CommandUnloadAllMods.Do()
+  nameWithType: CommandUnloadAllMods.Do()
+- uid: TUF.Console.CommandUnloadAllMods.Do*
+  name: Do
+  href: api/TUF.Console.CommandUnloadAllMods.html#TUF_Console_CommandUnloadAllMods_Do_
+  commentId: Overload:TUF.Console.CommandUnloadAllMods.Do
+  isSpec: "True"
+  fullName: TUF.Console.CommandUnloadAllMods.Do
+  nameWithType: CommandUnloadAllMods.Do
+- uid: TUF.Console.ConsoleCommand
+  name: ConsoleCommand
+  href: api/TUF.Console.ConsoleCommand.html
+  commentId: T:TUF.Console.ConsoleCommand
+  fullName: TUF.Console.ConsoleCommand
+  nameWithType: ConsoleCommand
+- uid: TUF.Console.ConsoleCommand.Do
+  name: Do()
+  href: api/TUF.Console.ConsoleCommand.html#TUF_Console_ConsoleCommand_Do
+  commentId: M:TUF.Console.ConsoleCommand.Do
+  fullName: TUF.Console.ConsoleCommand.Do()
+  nameWithType: ConsoleCommand.Do()
+- uid: TUF.Console.ConsoleCommand.Do*
+  name: Do
+  href: api/TUF.Console.ConsoleCommand.html#TUF_Console_ConsoleCommand_Do_
+  commentId: Overload:TUF.Console.ConsoleCommand.Do
+  isSpec: "True"
+  fullName: TUF.Console.ConsoleCommand.Do
+  nameWithType: ConsoleCommand.Do
+- uid: TUF.Console.ConsoleCommand.Initialize(TUF.Console.ConsoleInputProcessor)
+  name: Initialize(ConsoleInputProcessor)
+  href: api/TUF.Console.ConsoleCommand.html#TUF_Console_ConsoleCommand_Initialize_TUF_Console_ConsoleInputProcessor_
+  commentId: M:TUF.Console.ConsoleCommand.Initialize(TUF.Console.ConsoleInputProcessor)
+  fullName: TUF.Console.ConsoleCommand.Initialize(TUF.Console.ConsoleInputProcessor)
+  nameWithType: ConsoleCommand.Initialize(ConsoleInputProcessor)
+- uid: TUF.Console.ConsoleCommand.Initialize*
+  name: Initialize
+  href: api/TUF.Console.ConsoleCommand.html#TUF_Console_ConsoleCommand_Initialize_
+  commentId: Overload:TUF.Console.ConsoleCommand.Initialize
+  isSpec: "True"
+  fullName: TUF.Console.ConsoleCommand.Initialize
+  nameWithType: ConsoleCommand.Initialize
+- uid: TUF.Console.ConsoleCommand.processor
+  name: processor
+  href: api/TUF.Console.ConsoleCommand.html#TUF_Console_ConsoleCommand_processor
+  commentId: F:TUF.Console.ConsoleCommand.processor
+  fullName: TUF.Console.ConsoleCommand.processor
+  nameWithType: ConsoleCommand.processor
 - uid: TUF.Console.ConsoleInput
   name: ConsoleInput
   href: api/TUF.Console.ConsoleInput.html
@@ -2266,6 +2355,30 @@ references:
   commentId: T:TUF.Console.ConsoleInputProcessor
   fullName: TUF.Console.ConsoleInputProcessor
   nameWithType: ConsoleInputProcessor
+- uid: TUF.Console.ConsoleInputProcessor.consoleWindow
+  name: consoleWindow
+  href: api/TUF.Console.ConsoleInputProcessor.html#TUF_Console_ConsoleInputProcessor_consoleWindow
+  commentId: F:TUF.Console.ConsoleInputProcessor.consoleWindow
+  fullName: TUF.Console.ConsoleInputProcessor.consoleWindow
+  nameWithType: ConsoleInputProcessor.consoleWindow
+- uid: TUF.Console.ConsoleInputProcessor.gameManager
+  name: gameManager
+  href: api/TUF.Console.ConsoleInputProcessor.html#TUF_Console_ConsoleInputProcessor_gameManager
+  commentId: F:TUF.Console.ConsoleInputProcessor.gameManager
+  fullName: TUF.Console.ConsoleInputProcessor.gameManager
+  nameWithType: ConsoleInputProcessor.gameManager
+- uid: TUF.Console.ConsoleInputProcessor.postCommands
+  name: postCommands
+  href: api/TUF.Console.ConsoleInputProcessor.html#TUF_Console_ConsoleInputProcessor_postCommands
+  commentId: F:TUF.Console.ConsoleInputProcessor.postCommands
+  fullName: TUF.Console.ConsoleInputProcessor.postCommands
+  nameWithType: ConsoleInputProcessor.postCommands
+- uid: TUF.Console.ConsoleInputProcessor.preCommands
+  name: preCommands
+  href: api/TUF.Console.ConsoleInputProcessor.html#TUF_Console_ConsoleInputProcessor_preCommands
+  commentId: F:TUF.Console.ConsoleInputProcessor.preCommands
+  fullName: TUF.Console.ConsoleInputProcessor.preCommands
+  nameWithType: ConsoleInputProcessor.preCommands
 - uid: TUF.Console.ConsoleInputProcessor.Process(System.Collections.Generic.List{TUF.Console.ConsoleInput})
   name: Process(List<ConsoleInput>)
   href: api/TUF.Console.ConsoleInputProcessor.html#TUF_Console_ConsoleInputProcessor_Process_System_Collections_Generic_List_TUF_Console_ConsoleInput__
@@ -2282,6 +2395,12 @@ references:
   isSpec: "True"
   fullName: TUF.Console.ConsoleInputProcessor.Process
   nameWithType: ConsoleInputProcessor.Process
+- uid: TUF.Console.ConsoleInputProcessor.regularCommands
+  name: regularCommands
+  href: api/TUF.Console.ConsoleInputProcessor.html#TUF_Console_ConsoleInputProcessor_regularCommands
+  commentId: F:TUF.Console.ConsoleInputProcessor.regularCommands
+  fullName: TUF.Console.ConsoleInputProcessor.regularCommands
+  nameWithType: ConsoleInputProcessor.regularCommands
 - uid: TUF.Console.ConsoleReader
   name: ConsoleReader
   href: api/TUF.Console.ConsoleReader.html
