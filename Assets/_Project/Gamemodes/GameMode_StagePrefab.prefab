@@ -50,5 +50,6 @@ MonoBehaviour:
     00000000:
       type: {class: GameModeComponentTimer, ns: TUF.GameMode, asm: TUF_CSharp}
       data:
-        timerType: 0
+        gameMode: {fileID: 0}
+        timerType: 1
         currentTime: 0

@@ -8,6 +8,11 @@ using TUF.Entities.Shared;
 using UnityEngine;
 using ReadOnlyAttribute = TUF.Core.ReadOnlyAttribute;
 using SimObjectManager = TUF.Core.SimObjectManager;
+using System;
+
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace TUF.GameMode{
     /// <summary>
@@ -30,14 +35,48 @@ namespace TUF.GameMode{
         private StageCollection stageCollection;
         private StageDefinition currentStage;
 
-        [SerializeReference] protected List<GameModeComponent> components = new List<GameModeComponent>();
-
-
         [EditorButton("Add Component")]
         public void TestMethod()
         {
-
+#if UNITY_EDITOR
+            GenericMenu menu = new GenericMenu();
+            BuildItems();
+            foreach (string t in gameModeComponentTypes.Keys)
+            {
+                string destination = t.Replace('.', '/');
+                menu.AddItem(new GUIContent(destination), true, OnComponentSelected, t);
+            }
+            menu.AddSeparator("");
+            menu.ShowAsContext();
+#endif
         }
+
+#if UNITY_EDITOR
+        private Dictionary<string, Type> gameModeComponentTypes = new Dictionary<string, Type>();
+        private void BuildItems()
+        {
+            gameModeComponentTypes.Clear();
+            foreach (var a in AppDomain.CurrentDomain.GetAssemblies())
+            {
+                foreach (var givenType in a.GetTypes())
+                {
+                    if (givenType.IsSubclassOf(typeof(GameModeComponent)))
+                    {
+                        gameModeComponentTypes.Add(givenType.FullName, givenType);
+                    }
+                }
+            }
+        }
+
+        protected void OnComponentSelected(object t)
+        {
+            Undo.RecordObject(this, "Added component.");
+            components.Add((GameModeComponent)Activator.CreateInstance(gameModeComponentTypes[(string)t]));
+        }
+#endif
+
+        [SerializeReference] protected List<GameModeComponent> components = new List<GameModeComponent>();
+
 
         /// <summary>
         /// Initializes the gamemode with any components it needs.
