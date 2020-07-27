@@ -1,0 +1,10 @@
+apiRules:
+- include:
+    uidRegex: ^TUF
+    type: Namespace
+- include:
+    uidRegex: ^TidesPack
+    type: Namespace
+- exclude:
+    uidRegex: .* # Every other namespaces are ignored
+    type: Namespace
