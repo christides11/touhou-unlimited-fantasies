@@ -1,0 +1,2468 @@
+{
+  "sitemap": {
+    "fileOptions": {
+      "api/*": {
+        "baseUrl": "https://christides11.github.io/touhou-unlimited-fantasies/",
+        "changefreq": "daily"
+      }
+    },
+    "baseUrl": "https://christides11.github.io/touhou-unlimited-fantasies/",
+    "changefreq": "weekly"
+  },
+  "homepages": [],
+  "source_base_path": "D:/a/touhou-unlimited-fantasies/touhou-unlimited-fantasies/Documentation",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      },
+      "is_incremental": false
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.AttackDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.AttackDefinition.html",
+          "hash": "BRMH+ovfWh28ksUt+Adgag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.AttackDefinitionEditorWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.AttackDefinitionEditorWindow.html",
+          "hash": "3PPzs1238RuNvzT0z8nx2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.AttackEventDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.AttackEventDefinition.html",
+          "hash": "6Lfh3tkCafB2P+tMyqe/dA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.AttackFaceLockonWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.AttackFaceLockonWindow.html",
+          "hash": "dwYgNbsxhgUb/yUXnsOECA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.AttackSOEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.AttackSOEditor.html",
+          "hash": "Kc6JwfUiVHAIgGRPluQz7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.BoxGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.BoxGroup.html",
+          "hash": "eWEZ04vWwpeqRP/IiicjeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.AddRotationBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.AddRotationBPA.html",
+          "hash": "rCplIWNSZoe+WjTGAjbvsQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.AddSpeedBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.AddSpeedBPA.html",
+          "hash": "YZOTq8/zNM+mU55tCnqf4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.ApplySpeedBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.ApplySpeedBPA.html",
+          "hash": "DvWpEJUhes+AIH0w6gNrzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.Bullet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.Bullet.html",
+          "hash": "nGuq4Air2yVIkHPT3PVBcA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.BulletPattern.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.BulletPattern.html",
+          "hash": "l/dP7oMTRR9Pwrdp9OOHrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.BulletPatternAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.BulletPatternAction.html",
+          "hash": "fPQxqVzPB44K1ckXPGOWaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.BulletPatternData.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.BulletPatternData.html",
+          "hash": "PKRAFUO/41fOKIXmGFj89g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.BulletPatternGroup.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.BulletPatternGroup.html",
+          "hash": "mBHXm3Ieq6V8HVXJEWXglg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.BulletPatternManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.BulletPatternManager.html",
+          "hash": "sJDHaACMRuLLWguI5+jIzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.BulletPatternManagerSettings.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.BulletPatternManagerSettings.html",
+          "hash": "cG9UN8/MAUnZpTaDJ27ZrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.ClearBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.ClearBPA.html",
+          "hash": "d84IpDw2/F3eoYptFoTQgg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.CreateBulletBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.CreateBulletBPA.html",
+          "hash": "PlXP/NBvG4SN64xSxw0hbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.CreateBulletPatternBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.CreateBulletPatternBPA.html",
+          "hash": "2OIKfng5KB2mWs5pZyWQfw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.SetAngularSpeedBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.SetAngularSpeedBPA.html",
+          "hash": "eqOlAsZF3JEtsuBBdAsqrQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.SetLifetimeBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.SetLifetimeBPA.html",
+          "hash": "VVyTgleTpvLp0nK2yWWs/w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.SetLocalAngularSpeedBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.SetLocalAngularSpeedBPA.html",
+          "hash": "AR4p5TuIeDoGBRSEHpMUfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.SetLocalSpeedBPA.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.SetLocalSpeedBPA.html",
+          "hash": "FNQJBA8xk6DgcLF8wlz1FA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.SetSpeedBulletPatternAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.SetSpeedBulletPatternAction.html",
+          "hash": "zfxItMDsJJ7scwQ0+TOYug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.WaitBulletPatternAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.WaitBulletPatternAction.html",
+          "hash": "x0Rn2bj2qJ1iumofJYYu2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Bullets.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Bullets.html",
+          "hash": "iD+4RRffCqqcZJGvnrECEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.DetectionBox.DetectAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.DetectionBox.DetectAction.html",
+          "hash": "1jlCnwWB3sYVHWLA+3QRuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.DetectionBox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.DetectionBox.html",
+          "hash": "eRaVlrQY37WsvvXKseqYRw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.EntityTeams.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.EntityTeams.html",
+          "hash": "s/yAffgG5+fixWZ+hqi+sA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.ClampGravityEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.ClampGravityEvent.html",
+          "hash": "7B8hbxMAbOFX96IpROHffw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.ClampMovementEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.ClampMovementEvent.html",
+          "hash": "6V9VeN2v2jqFK8qxts2LUg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.EntityApplyGravityEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.EntityApplyGravityEvent.html",
+          "hash": "6XDKXOSR7xlAucBN1mIBtg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.EntityChangeStateEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.EntityChangeStateEvent.html",
+          "hash": "zARqAmc+5IvEw4jCd4Wppw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.EntityForceCurveEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.EntityForceCurveEvent.html",
+          "hash": "F3+di7TxLXAuU7pdJb7lcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.EntityForceSetEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.EntityForceSetEvent.html",
+          "hash": "5eQ4KcVvOy87asOeb/48XA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.EntityFrictionEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.EntityFrictionEvent.html",
+          "hash": "jWsr0iZ77GA0RQohHYdeDQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.EntityMovementForceAddEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.EntityMovementForceAddEvent.html",
+          "hash": "OMNJbaCnwChFFcnLUT85sw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.EntitySetAttackEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.EntitySetAttackEvent.html",
+          "hash": "l2WIaQi5SFOdYFxBxJ2vyw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.PlaySoundEvent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.PlaySoundEvent.html",
+          "hash": "hHcsmDO5wa3mpG+v1wgEAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Events.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Events.html",
+          "hash": "FW/XJWURxR1XGHs5iX/Jdg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Hitbox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Hitbox.html",
+          "hash": "7UmPN7omkUnAS03VUerg+Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.HurtReactions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.HurtReactions.html",
+          "hash": "o57Twi70CkfcCULwxaHJlw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.Hurtbox.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.Hurtbox.html",
+          "hash": "qvNg+k+24UOaeZuQt9TZuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.LoopBulletPatternAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.LoopBulletPatternAction.html",
+          "hash": "uhpd1AvxtCfhzZvlMmqE9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.MovesetAttackNode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.MovesetAttackNode.html",
+          "hash": "sUeP8Uco9bqOFjbuNDBJyQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.MovesetDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.MovesetDefinition.html",
+          "hash": "dwd1q7+iIAzq6Iuws6Ov2w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.StatusEffectArea.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.StatusEffectArea.html",
+          "hash": "B1/fsDU6iVvAUiB67lk70g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.html",
+          "hash": "6TVxTmpKAgZl2jq84+TZ6Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Console.ConsoleInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Console.ConsoleInput.html",
+          "hash": "N/QDmZFkI6l3qyyQmK+awA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Console.ConsoleInputProcessor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Console.ConsoleInputProcessor.html",
+          "hash": "Npa8xf2PASQfmP9Ew6yUKA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Console.ConsoleReader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Console.ConsoleReader.html",
+          "hash": "m1QoeNpVGt/ih3HhgwbDxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Console.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Console.html",
+          "hash": "5LvIDT4OS8UuPfoBZT+2Jw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.BootLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.BootLoader.html",
+          "hash": "XpXv3WjVyA91PkVYMOa47Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.CameraShake.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.CameraShake.html",
+          "hash": "0FCjoH1VhMgUg16QGu5Q+g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.CameraShakeDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.CameraShakeDefinition.html",
+          "hash": "onN5+EJU1C6YjswZszpdIA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.CombatVariables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.CombatVariables.html",
+          "hash": "ggHcZN/wtzHpBHquh/GOPA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.ConsoleWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.ConsoleWindow.html",
+          "hash": "Q8oFgbC8mv3UsEgpamDVpA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.Editor.ReadOnlyDrawer.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.Editor.ReadOnlyDrawer.html",
+          "hash": "sUsDT5g+S3tYl/cO02sOaw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.Editor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.Editor.html",
+          "hash": "2jufSaQZdVYq7SPYiz6M8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.EntityInputs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.EntityInputs.html",
+          "hash": "gCyTfGNc7xFMQROggf2eOQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.EntitySpawner.EntitySpawnInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.EntitySpawner.EntitySpawnInfo.html",
+          "hash": "TNDgvqcJdl59R7k6vLVwBw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.EntitySpawner.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.EntitySpawner.html",
+          "hash": "PSYURxt2VasCI+fiOLLtvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.GameManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.GameManager.html",
+          "hash": "ti88cqIbduNpxSECup+rVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.GameVariables.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.GameVariables.html",
+          "hash": "eSvzizuS9wkIJqZlJIX07Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.GamemodeStageDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.GamemodeStageDefinition.html",
+          "hash": "A1Fc98aD0134SrJHXoqymA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.Helpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.Helpers.html",
+          "hash": "sgmPNKRuMeNPipU2RvKkIg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.InputConstants.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.InputConstants.html",
+          "hash": "/+I6Zqq1qS6lURJ8QA+T5Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.MusicManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.MusicManager.html",
+          "hash": "Hdv9fYhbJXneBbrrQdVp8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.PlayerCamera.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.PlayerCamera.html",
+          "hash": "Qo8dNKshzTtpxd64s5BriA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.ReadOnlyAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.ReadOnlyAttribute.html",
+          "hash": "RB8S9wZoH18yKbn2mcRepQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.SimObjectManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.SimObjectManager.html",
+          "hash": "zeH/s5jAtahI+1wfQ1Iy+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.StageCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.StageCollection.html",
+          "hash": "6BVyspDpRfA1IkNHEYqmuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.StageDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.StageDefinition.html",
+          "hash": "ssmp+yT9xejJgVkuY0E8hA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Core.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Core.html",
+          "hash": "GAVgo/FSOhqPPfGrEstEAw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.AIBrain.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.AIBrain.html",
+          "hash": "tyQlwj1kiMPluYevyTbI+A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.BaseCharacterStates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.BaseCharacterStates.html",
+          "hash": "q93a4xnBLhiS0s4JUzT40g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.CharacterInput.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.CharacterInput.html",
+          "hash": "Ufen/8u7joyzZPBtJd40rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.CharacterManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.CharacterManager.html",
+          "hash": "3e4EpRGNL89dGwoB+PSH7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.CharacterState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.CharacterState.html",
+          "hash": "/pMQDWmG5MQ6Hmvd3cH/mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.CharacterStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.CharacterStats.html",
+          "hash": "ANcs8GZCiNpQqYYh302SuA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CAirDash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CAirDash.html",
+          "hash": "IH7eYpbFxjRIdQaV0cggKw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CAirJump.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CAirJump.html",
+          "hash": "Q2WmlvgnABfku4WpRJJsRg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CAttack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CAttack.html",
+          "hash": "/irNo+ln7tqMumdukNcAmg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CDash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CDash.html",
+          "hash": "1Q84gAsaxY4fIOR4WTGDWg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CEnemyStep.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CEnemyStep.html",
+          "hash": "pUm1sRalVSOMEBqCKTETGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CFall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CFall.html",
+          "hash": "oM7oznI7Fzzc/TPB5yT6KQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CFloat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CFloat.html",
+          "hash": "/PIj+lkbB4WjZPy8dmk48A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CFloatDash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CFloatDash.html",
+          "hash": "dbfX/x7NqDR4G8F01Fdc7A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CFloatDodge.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CFloatDodge.html",
+          "hash": "78CvhLyG/4XSk/SMF74Wvw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CHozWallRun.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CHozWallRun.html",
+          "hash": "inEqEo1OEcuhdQnmWpPVHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CIdle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CIdle.html",
+          "hash": "bAP3BjSuyepm3r6qwxD/7w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CJump.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CJump.html",
+          "hash": "TXv5nHhY3xU1YS/24xSi8g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CJumpSquat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CJumpSquat.html",
+          "hash": "HJcypV3dlYCyg39kQtgwJQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CRun.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CRun.html",
+          "hash": "JIiA8Qi60WTvZsNz0zI61g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CSlide.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CSlide.html",
+          "hash": "EQPIHK9BcVg04otaoru9iw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CVertWallRun.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CVertWallRun.html",
+          "hash": "/izgGGTjFbBu75gPYfYBTQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CWalk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CWalk.html",
+          "hash": "6cXLufpmgMxcUjNjXVUM8A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CWallCling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CWallCling.html",
+          "hash": "aQc+1GXuSTwYcOA6ohBozw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.CWallJump.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.CWallJump.html",
+          "hash": "OfExLL4CeZakBN0kwgXkxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.States.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.States.html",
+          "hash": "LLfrtkps+HwNFCFyQCV/tA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Characters.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Characters.html",
+          "hash": "Rp+ORhZv7rWZRnp9IVLYTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityAnimator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityAnimator.html",
+          "hash": "Z3JXv2tZX/I2afvj9VVciQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityCharacterController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityCharacterController.html",
+          "hash": "NPtPt1K96fE884MJQuj8hg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityCombatManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityCombatManager.html",
+          "hash": "cZBvZlaLMiaVPDRYT/CDmw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityHitboxManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityHitboxManager.html",
+          "hash": "h83Yj1HLCMfKpBtNN9tnYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityInputManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityInputManager.html",
+          "hash": "7XuRLC2oB9O9dG7sHDogHA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityManager.html",
+          "hash": "ORmO8Nnu+g+GdLeDSmp86w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityPhysicsManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityPhysicsManager.html",
+          "hash": "OZXu4PknyuKRwQRep8QMnQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityState.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityState.html",
+          "hash": "/Gs8FzaK9u4ha+OtSojkTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityStateManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityStateManager.html",
+          "hash": "6/9EOHvnIXFAk+zkz0jEFg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.EntityStates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.EntityStates.html",
+          "hash": "s2lyHEu6B1IVOAVqQNQlhQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityAirJump.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityAirJump.html",
+          "hash": "0Z4p//aqpp9LcIKnDb5smQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityAttack.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityAttack.html",
+          "hash": "HRyEtzPjDTi2YgUyi26u3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityDash.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityDash.html",
+          "hash": "8ZLfXQn8rmCDF1NRzBMZKg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityDefinition.html",
+          "hash": "hLjSfreIt504sVCilNvztA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityFall.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityFall.html",
+          "hash": "ckTYkrKxVFeug+yEcQqxGQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityFlinch.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityFlinch.html",
+          "hash": "2pjtjvAgSpup4dGZZlJHvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityFlinchAir.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityFlinchAir.html",
+          "hash": "RX5bkTLRraTm9pMFxBrW3w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityFloat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityFloat.html",
+          "hash": "obTNpbHEL49X/7g9Y60vDw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityIdle.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityIdle.html",
+          "hash": "EiDmG99EykOlTWp1EhW1fQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityJump.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityJump.html",
+          "hash": "fp9zUjtipd9Cs+WaKiWmOA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityJumpSquat.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityJumpSquat.html",
+          "hash": "wI+PkZ8jm/m+K4rA/0QcJw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityRun.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityRun.html",
+          "hash": "QNAMHnaLFtyItoHkrWKDvA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityStats.html",
+          "hash": "zB6J+dJ5c2vkHFbo739bwA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityTumble.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityTumble.html",
+          "hash": "QdSZJWBVDfCWLxrwmlkovQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityWalk.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityWalk.html",
+          "hash": "5ZFtuMmJSSjNzc74IF6G4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityWallCling.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityWallCling.html",
+          "hash": "pp3a90klhp2wNu66C8rv6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.EntityWallJump.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.EntityWallJump.html",
+          "hash": "bMOLIkTJEt9pWGogeHfsyg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.Shared.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.Shared.html",
+          "hash": "qy/j4FpEi+BpWn1gVpzQrw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.html",
+          "hash": "52SGvjOYXkvKdCCPB3cIfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.GameMode.GameModeBase.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.GameMode.GameModeBase.html",
+          "hash": "6VPfnHXhyP1FKrOARICVXQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.GameMode.GameModeComponent.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.GameMode.GameModeComponent.html",
+          "hash": "e8xyvHidlpqlhRD3wqQBhw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.GameMode.GameModeDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.GameMode.GameModeDefinition.html",
+          "hash": "WMer91OXx4MRriSJo5z9rw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.GameMode.GameModeStage.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.GameMode.GameModeStage.html",
+          "hash": "sAULYOjTt0xINSU90U5N0A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.GameMode.GameModeStageCollection.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.GameMode.GameModeStageCollection.html",
+          "hash": "ubB8ociXJfOnlgUxsBEniQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.GameMode.TrainingModeHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.GameMode.TrainingModeHandler.html",
+          "hash": "YJ5/tg2a1oWfzn9zI8gsGg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.GameMode.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.GameMode.html",
+          "hash": "KoktgMHvVNjItXG/q6hUzw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.Action.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.Action.html",
+          "hash": "x+8VrSwzchsin6GhAlZL4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.Category.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.Category.html",
+          "hash": "uZdJWr4iMCNYGSND3tghog=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.CurrentInputMethod.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.CurrentInputMethod.html",
+          "hash": "FWqBA1dIxB+Ek5DlOzJwfg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.CustomController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.CustomController.html",
+          "hash": "t13ZXZCwGDNjBEk5Vvfw/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.GlobalInputManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.GlobalInputManager.html",
+          "hash": "zh2knaM638zIGIBUAhRLGA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.Layout.CustomController.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.Layout.CustomController.html",
+          "hash": "Cgqh+3+vj3oAf5aUFLJIgA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.Layout.Joystick.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.Layout.Joystick.html",
+          "hash": "0BWE9aie+ct3RT+0Oblf/Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.Layout.Keyboard.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.Layout.Keyboard.html",
+          "hash": "AqczYyCT2HpHvRj8RPt+1A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.Layout.Mouse.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.Layout.Mouse.html",
+          "hash": "MkwJQG5ei4HO5k3K40P1WA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.Layout.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.Layout.html",
+          "hash": "yYpCrvYSQXbVXxxRjjsjzA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.LayoutManagerRuleSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.LayoutManagerRuleSet.html",
+          "hash": "u+QC3nWqgojGtXQn4Cp8lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.MapEnablerRuleSet.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.MapEnablerRuleSet.html",
+          "hash": "iBqChBmS4wHyZfuVgnLS4w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.Player.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.Player.html",
+          "hash": "DDMb7jH40TIu2v7iLQJB9A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Inputs.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Inputs.html",
+          "hash": "oL8OcaNoEeMnNWNHHXkLVQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.CharacterSelectContentItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.CharacterSelectContentItem.html",
+          "hash": "up3OfXijreGrLLSwXxEA4g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.CharacterSelectMenu.CharacterSelectedAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.CharacterSelectMenu.CharacterSelectedAction.html",
+          "hash": "xWuBkHW1ZQ8csoSIyvAHQg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.CharacterSelectMenu.ExitAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.CharacterSelectMenu.ExitAction.html",
+          "hash": "fsY9+vCQT953g+YfG0LJWQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.CharacterSelectMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.CharacterSelectMenu.html",
+          "hash": "jJdddzwt9tP11cnVem5oww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.GamemodeContentItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.GamemodeContentItem.html",
+          "hash": "J7GvyTRPvP4v8qCljQg+Lw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.MainMenu.CollectionStageItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.MainMenu.CollectionStageItem.html",
+          "hash": "AqbTZSDJ9igskQew360v9g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.MainMenu.GamemodeSelectMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.MainMenu.GamemodeSelectMenu.html",
+          "hash": "ODkO6mGnsxa78c5QUhZKzg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.MainMenu.MainMenuHandler.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.MainMenu.MainMenuHandler.html",
+          "hash": "37gnlpQdMSYjHvshAh3fhg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.MainMenu.StageCollectionItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.MainMenu.StageCollectionItem.html",
+          "hash": "j6vZIdqudnn/i+JqdrX3PA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.MainMenu.StageCollectionsMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.MainMenu.StageCollectionsMenu.html",
+          "hash": "g/2OsZxL3FAf9t5eWiLMww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.MainMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.MainMenu.html",
+          "hash": "0lrC3sTRFCUlZOFvYsnftw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.Options.OptionsMenu.MenuExitedAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.Options.OptionsMenu.MenuExitedAction.html",
+          "hash": "DPboxIjklD9tR+t8HsTlRA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.Options.OptionsMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.Options.OptionsMenu.html",
+          "hash": "FR0EatzSVrFGY3aA4Pe3Ug=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.Options.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.Options.html",
+          "hash": "6tcMOkMEwnn4oSneckuocQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.StageContentItem.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.StageContentItem.html",
+          "hash": "4T8BD4wVCmOS2fMIWJw9Ng=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.StageSelectMenu.StageSelectedAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.StageSelectMenu.StageSelectedAction.html",
+          "hash": "zy8BWocxKO9NScDBZ0EVPg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.StageSelectMenu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.StageSelectMenu.html",
+          "hash": "Tbvw6YOxEPaDlv/9zmMD6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Menus.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Menus.html",
+          "hash": "YTWIeIBnxUdmxYaVNQJNew=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Modding.ModDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Modding.ModDefinition.html",
+          "hash": "hR69N0vY9Aqpx1ZEKfuLCw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Modding.ModInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Modding.ModInfo.html",
+          "hash": "O7Bi9NuFYx0GtqhCyKpN4A=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Modding.ModLoader.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Modding.ModLoader.html",
+          "hash": "dFYxFLtr4ccDzVsO69hzeA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Modding.ModManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Modding.ModManager.html",
+          "hash": "H0AAsCPHRRxCgeCEuGsDfA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Modding.ModObjectLink.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Modding.ModObjectLink.html",
+          "hash": "iqaeAMUJQcDwoiycXWFh9Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Modding.ModObjectReference.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Modding.ModObjectReference.html",
+          "hash": "FGVjU/I88XACFxSdGGuynw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Modding.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Modding.html",
+          "hash": "uR+DepLYsUvAz/A93IoYHg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Sound.SoundDefinition.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Sound.SoundDefinition.html",
+          "hash": "aLEZmkmpBb4NFsbUsqZW7Q=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Sound.SoundManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Sound.SoundManager.html",
+          "hash": "UHmJU+jRqP+kJhqkuP5LvQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Sound.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Sound.html",
+          "hash": "15qGBapM8CBUQ0gOaZel6g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.TriggerDetector.TriggerAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.TriggerDetector.TriggerAction.html",
+          "hash": "RRuWtmq35ypnRS8qDVGjBQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.TriggerDetector.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.TriggerDetector.html",
+          "hash": "Z/xIFuShXy7jKdfBPD8HlA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.html",
+          "hash": "7+DtJwn50raKGGrhjYuyXw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Characters.Reimu.ReimuManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Characters.Reimu.ReimuManager.html",
+          "hash": "1DW6thNhXaMkevH2AQx4WQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Characters.Reimu.ReimuStateTeleport.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Characters.Reimu.ReimuStateTeleport.html",
+          "hash": "xaKfd1K450mZFgAUUerEbw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Characters.Reimu.ReimuStates.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Characters.Reimu.ReimuStates.html",
+          "hash": "tU7Kl20Qq/+FPtEViS47lA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Characters.Reimu.ReimuStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Characters.Reimu.ReimuStats.html",
+          "hash": "ePSa4SBZm+6HWhmaEYQhOw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Characters.Reimu.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Characters.Reimu.html",
+          "hash": "xiGGmIGcLqHJwgclr85GNA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Enemies.Fairies.BFairyManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Enemies.Fairies.BFairyManager.html",
+          "hash": "/4q2vqBcM28+VcXbf3W6Ag=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Enemies.Fairies.FairyManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Enemies.Fairies.FairyManager.html",
+          "hash": "3+aUlqGlpug+aLwvYRanVA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Enemies.Fairies.FairyStats.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Enemies.Fairies.FairyStats.html",
+          "hash": "PCbqndJFa/9Fe+q84uy6Yw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TidesPack.Enemies.Fairies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TidesPack.Enemies.Fairies.html",
+          "hash": "a6oB5Xk3Wn+S0qYzbi/jxw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "8eemIJD+HTxJqLMoSTYvxg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html",
+          "hash": "lHqsuJCDDXv2z35zbQQjaA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/coniunctis.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/coniunctis.html",
+          "hash": "arbsLPaG1GStVdVR7XFoUA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "manual/etiam.md",
+      "output": {
+        ".html": {
+          "relative_path": "manual/etiam.html",
+          "hash": "FykMxW1sX2Y0GamNj5VhAA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "manual/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "manual/toc.html",
+          "hash": "2q0qq03gpYNjYV8lSAAcVw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleManual.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleManual.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Resource",
+      "source_relative_path": "resources/ExampleScriptingApi.png",
+      "output": {
+        "resource": {
+          "relative_path": "resources/ExampleScriptingApi.png"
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html",
+          "hash": "poWCeg1m8qKyEi0xpakkcQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    }
+  ],
+  "incremental_info": [
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot build incrementally because last build info is missing.",
+        "incrementalPhase": "build",
+        "total_file_count": 0,
+        "skipped_file_count": 0,
+        "full_build_reason_code": "NoAvailableBuildCache"
+      },
+      "processors": {
+        "ConceptualDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 3,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 191,
+          "skipped_file_count": 0
+        },
+        "ResourceDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor ResourceDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        },
+        "TocDocumentProcessor": {
+          "can_incremental": false,
+          "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
+          "incrementalPhase": "build",
+          "total_file_count": 0,
+          "skipped_file_count": 0
+        }
+      }
+    },
+    {
+      "status": {
+        "can_incremental": false,
+        "details": "Cannot support incremental post processing, the reason is: should not trace intermediate info.",
+        "incrementalPhase": "postProcessing",
+        "total_file_count": 0,
+        "skipped_file_count": 0
+      },
+      "processors": {}
+    }
+  ],
+  "version_info": {},
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}

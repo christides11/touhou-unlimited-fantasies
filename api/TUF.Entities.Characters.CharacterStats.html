@@ -1,0 +1,952 @@
+﻿<!DOCTYPE html>
+<!--[if IE]><![endif]-->
+<html>
+  
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <title>Class CharacterStats
+   | Touhou Unlimited Fantasies Documentation </title>
+    <meta name="viewport" content="width=device-width">
+    <meta name="title" content="Class CharacterStats
+   | Touhou Unlimited Fantasies Documentation ">
+    <meta name="generator" content="docfx 2.56.1.0">
+    
+    <link rel="shortcut icon" href="../favicon.ico">
+    <link rel="stylesheet" href="../styles/docfx.vendor.css">
+    <link rel="stylesheet" href="../styles/docfx.css">
+    <link rel="stylesheet" href="../styles/main.css">
+    <meta property="docfx:navrel" content="../toc.html">
+    <meta property="docfx:tocrel" content="toc.html">
+    
+    <meta property="docfx:rel" content="../">
+    
+  </head>
+  <body data-spy="scroll" data-target="#affix" data-offset="120">
+    <div id="wrapper">
+      <header>
+        
+        <nav id="autocollapse" class="navbar navbar-inverse ng-scope" role="navigation">
+          <div class="container">
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              
+              <a class="navbar-brand" href="../index.html">
+                <img id="logo" class="svg" src="../logo.svg" alt="">
+              </a>
+            </div>
+            <div class="collapse navbar-collapse" id="navbar">
+              <form class="navbar-form navbar-right" role="search" id="search">
+                <div class="form-group">
+                  <input type="text" class="form-control" id="search-query" placeholder="Search" autocomplete="off">
+                </div>
+              </form>
+            </div>
+          </div>
+        </nav>
+        
+        <div class="subnav navbar navbar-default">
+          <div class="container hide-when-search" id="breadcrumb">
+            <ul class="breadcrumb">
+              <li></li>
+            </ul>
+          </div>
+        </div>
+      </header>
+      <div class="container body-content">
+        
+        <div id="search-results">
+          <div class="search-list"></div>
+          <div class="sr-items">
+            <p><i class="glyphicon glyphicon-refresh index-loading"></i></p>
+          </div>
+          <ul id="pagination"></ul>
+        </div>
+      </div>
+      <div role="main" class="container body-content hide-when-search">
+        
+        <div class="sidenav hide-when-search">
+          <a class="btn toc-toggle collapse" data-toggle="collapse" href="#sidetoggle" aria-expanded="false" aria-controls="sidetoggle">Show / Hide Table of Contents</a>
+          <div class="sidetoggle collapse" id="sidetoggle">
+            <div id="sidetoc"></div>
+          </div>
+        </div>
+        <div class="article row grid-right">
+          <div class="col-md-10">
+            <article class="content wrap" id="_content" data-uid="TUF.Entities.Characters.CharacterStats">
+  
+  
+  <h1 id="TUF_Entities_Characters_CharacterStats" data-uid="TUF.Entities.Characters.CharacterStats" class="text-break">Class CharacterStats
+  </h1>
+  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 conceptual"></div>
+  <div class="inheritance">
+    <h5>Inheritance</h5>
+    <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
+    <div class="level1"><a class="xref" href="TUF.Entities.Shared.EntityStats.html">EntityStats</a></div>
+    <div class="level2"><span class="xref">CharacterStats</span></div>
+      <div class="level3"><a class="xref" href="TidesPack.Characters.Reimu.ReimuStats.html">ReimuStats</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_groundFriction">EntityStats.groundFriction</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_maxWalkSpeed">EntityStats.maxWalkSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_walkBaseAccel">EntityStats.walkBaseAccel</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_walkAcceleration">EntityStats.walkAcceleration</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_walkRotationSpeed">EntityStats.walkRotationSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_maxRunSpeed">EntityStats.maxRunSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_runAcceleration">EntityStats.runAcceleration</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_runRotationSpeed">EntityStats.runRotationSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_dashSpeed">EntityStats.dashSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_dashTime">EntityStats.dashTime</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_jumpsquat">EntityStats.jumpsquat</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_fullHopVelocity">EntityStats.fullHopVelocity</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_shortHopJumpVelocity">EntityStats.shortHopJumpVelocity</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_maxAirJumps">EntityStats.maxAirJumps</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_airJumpVelocity">EntityStats.airJumpVelocity</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_airJumpModi">EntityStats.airJumpModi</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_airJumpCarriedMomentum">EntityStats.airJumpCarriedMomentum</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_airJumpHorizontalVelo">EntityStats.airJumpHorizontalVelo</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_airRotationSpeed">EntityStats.airRotationSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_airFriction">EntityStats.airFriction</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_airAcceleration">EntityStats.airAcceleration</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_airDeceleration">EntityStats.airDeceleration</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_maxAirSpeed">EntityStats.maxAirSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_gravity">EntityStats.gravity</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_maxFallSpeed">EntityStats.maxFallSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallClingInitFrictionY">EntityStats.wallClingInitFrictionY</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallClingInitFrictionXZ">EntityStats.wallClingInitFrictionXZ</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallClingFrictionXZ">EntityStats.wallClingFrictionXZ</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallClingGravity">EntityStats.wallClingGravity</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallClingMaxFallSpeed">EntityStats.wallClingMaxFallSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallJumpTime">EntityStats.wallJumpTime</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallJumpYVelo">EntityStats.wallJumpYVelo</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallJumpHVelo">EntityStats.wallJumpHVelo</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_wallJumpMinAngle">EntityStats.wallJumpMinAngle</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_floatFriction">EntityStats.floatFriction</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_maxFloatSpeed">EntityStats.maxFloatSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_floatVerticalSpeed">EntityStats.floatVerticalSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_floatBaseAccel">EntityStats.floatBaseAccel</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_floatAcceleration">EntityStats.floatAcceleration</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_floatRotationSpeed">EntityStats.floatRotationSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_floatLockOnRotationSpeed">EntityStats.floatLockOnRotationSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_hitstunGravity">EntityStats.hitstunGravity</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_hitstunMaxFallSpeed">EntityStats.hitstunMaxFallSpeed</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_hitstunFrictionXZ">EntityStats.hitstunFrictionXZ</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_inertiaFriction">EntityStats.inertiaFriction</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_weight">EntityStats.weight</a>
+    </div>
+  </div>
+  <h6><strong>Namespace</strong>: <a class="xref" href="TUF.Entities.Characters.html">TUF.Entities.Characters</a></h6>
+  <h6><strong>Assembly</strong>: TUF_CSharp.dll</h6>
+  <h5 id="TUF_Entities_Characters_CharacterStats_syntax">Syntax</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public class CharacterStats : EntityStats</code></pre>
+  </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_airDashFriction.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.airDashFriction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L16">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_airDashFriction" data-uid="TUF.Entities.Characters.CharacterStats.airDashFriction">airDashFriction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float airDashFriction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_airDashGravityFriction.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.airDashGravityFriction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L17">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_airDashGravityFriction" data-uid="TUF.Entities.Characters.CharacterStats.airDashGravityFriction">airDashGravityFriction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float airDashGravityFriction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_airDashGravityInitMulti.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.airDashGravityInitMulti%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L18">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_airDashGravityInitMulti" data-uid="TUF.Entities.Characters.CharacterStats.airDashGravityInitMulti">airDashGravityInitMulti</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float airDashGravityInitMulti</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_airDashHoldVelo.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.airDashHoldVelo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L14">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_airDashHoldVelo" data-uid="TUF.Entities.Characters.CharacterStats.airDashHoldVelo">airDashHoldVelo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int airDashHoldVelo</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_airDashLength.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.airDashLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L15">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_airDashLength" data-uid="TUF.Entities.Characters.CharacterStats.airDashLength">airDashLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int airDashLength</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_airDashVelo.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.airDashVelo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L13">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_airDashVelo" data-uid="TUF.Entities.Characters.CharacterStats.airDashVelo">airDashVelo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float airDashVelo</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_floatDashAcceleration.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.floatDashAcceleration%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L29">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_floatDashAcceleration" data-uid="TUF.Entities.Characters.CharacterStats.floatDashAcceleration">floatDashAcceleration</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float floatDashAcceleration</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_floatDashBaseAccel.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.floatDashBaseAccel%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L28">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_floatDashBaseAccel" data-uid="TUF.Entities.Characters.CharacterStats.floatDashBaseAccel">floatDashBaseAccel</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float floatDashBaseAccel</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_floatDashMaxSpeed.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.floatDashMaxSpeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L27">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_floatDashMaxSpeed" data-uid="TUF.Entities.Characters.CharacterStats.floatDashMaxSpeed">floatDashMaxSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float floatDashMaxSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_floatDodgeFriction.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.floatDodgeFriction%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L24">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_floatDodgeFriction" data-uid="TUF.Entities.Characters.CharacterStats.floatDodgeFriction">floatDodgeFriction</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float floatDodgeFriction</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_floatDodgeHoldVelo.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.floatDodgeHoldVelo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L22">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_floatDodgeHoldVelo" data-uid="TUF.Entities.Characters.CharacterStats.floatDodgeHoldVelo">floatDodgeHoldVelo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int floatDodgeHoldVelo</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_floatDodgeLength.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.floatDodgeLength%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L23">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_floatDodgeLength" data-uid="TUF.Entities.Characters.CharacterStats.floatDodgeLength">floatDodgeLength</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int floatDodgeLength</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_floatDodgeVelo.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.floatDodgeVelo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L21">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_floatDodgeVelo" data-uid="TUF.Entities.Characters.CharacterStats.floatDodgeVelo">floatDodgeVelo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float floatDodgeVelo</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_maxAirDashes.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.maxAirDashes%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L12">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_maxAirDashes" data-uid="TUF.Entities.Characters.CharacterStats.maxAirDashes">maxAirDashes</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int maxAirDashes</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_slideForceTransitionTime.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.slideForceTransitionTime%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L42">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_slideForceTransitionTime" data-uid="TUF.Entities.Characters.CharacterStats.slideForceTransitionTime">slideForceTransitionTime</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float slideForceTransitionTime</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_slideHoldFrames.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.slideHoldFrames%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L39">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_slideHoldFrames" data-uid="TUF.Entities.Characters.CharacterStats.slideHoldFrames">slideHoldFrames</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int slideHoldFrames</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_slideInitialSpeed.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.slideInitialSpeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L38">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_slideInitialSpeed" data-uid="TUF.Entities.Characters.CharacterStats.slideInitialSpeed">slideInitialSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float slideInitialSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_slideSlopeBaseSpeed.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.slideSlopeBaseSpeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L40">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_slideSlopeBaseSpeed" data-uid="TUF.Entities.Characters.CharacterStats.slideSlopeBaseSpeed">slideSlopeBaseSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float slideSlopeBaseSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_slideSpeedPerAngle.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.slideSpeedPerAngle%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L41">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_slideSpeedPerAngle" data-uid="TUF.Entities.Characters.CharacterStats.slideSpeedPerAngle">slideSpeedPerAngle</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float slideSpeedPerAngle</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_wallRunHorizontalChainMaxMulti.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.wallRunHorizontalChainMaxMulti%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L35">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_wallRunHorizontalChainMaxMulti" data-uid="TUF.Entities.Characters.CharacterStats.wallRunHorizontalChainMaxMulti">wallRunHorizontalChainMaxMulti</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float wallRunHorizontalChainMaxMulti</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_wallRunHorizontalChainMulti.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.wallRunHorizontalChainMulti%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L34">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_wallRunHorizontalChainMulti" data-uid="TUF.Entities.Characters.CharacterStats.wallRunHorizontalChainMulti">wallRunHorizontalChainMulti</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float wallRunHorizontalChainMulti</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_wallRunHorizontalSpeed.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.wallRunHorizontalSpeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L33">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_wallRunHorizontalSpeed" data-uid="TUF.Entities.Characters.CharacterStats.wallRunHorizontalSpeed">wallRunHorizontalSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float wallRunHorizontalSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats_wallRunVerticalSpeed.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats.wallRunVerticalSpeed%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L32">View Source</a>
+  </span>
+  <h4 id="TUF_Entities_Characters_CharacterStats_wallRunVerticalSpeed" data-uid="TUF.Entities.Characters.CharacterStats.wallRunVerticalSpeed">wallRunVerticalSpeed</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public float wallRunVerticalSpeed</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.single">Single</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+</article>
+          </div>
+          
+          <div class="hidden-sm col-md-2" role="complementary">
+            <div class="sideaffix">
+              <div class="contribution">
+                <ul class="nav">
+                  <li>
+                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Entities_Characters_CharacterStats.md&amp;value=---%0Auid%3A%20TUF.Entities.Characters.CharacterStats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Entities/Characters/CharacterStats.cs/#L8" class="contribution-link">View Source</a>
+                  </li>
+                </ul>
+              </div>
+              <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
+              <!-- <p><a class="back-to-top" href="#top">Back to top</a><p> -->
+              </nav>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <footer>
+        <div class="grad-bottom"></div>
+        <div class="footer">
+          <div class="container">
+            <span class="pull-right">
+              <a href="#top">Back to top</a>
+            </span>
+            Powered by DocFX
+            
+          </div>
+        </div>
+      </footer>
+    </div>
+    
+    <script type="text/javascript" src="../styles/docfx.vendor.js"></script>
+    <script type="text/javascript" src="../styles/docfx.js"></script>
+    <script type="text/javascript" src="../styles/main.js"></script>
+  </body>
+</html>
