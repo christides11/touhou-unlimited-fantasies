@@ -1,3 +1,4 @@
+![Documentation](https://github.com/christides11/touhou-unlimited-fantasies/workflows/Documentation/badge.svg)   
 **Unlimited Fantasies** is a hack-and-slash Touhou fangame with a focus on modability. 
 
 ## Opening The Project
