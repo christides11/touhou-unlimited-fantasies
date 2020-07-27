@@ -33,9 +33,13 @@ namespace TUF.Core
             modManager.Init();
             modManager.ModLoader.LoadAllMods();
 
-            if (readEditorParams)
+            if (readEditorParams && Application.isEditor)
             {
                 await consoleReader.Convert(editorArgs);
+            }
+            else
+            {
+                await consoleReader.ReadCommandLine();
             }
 
             if (SceneManager.sceneCount == 1)

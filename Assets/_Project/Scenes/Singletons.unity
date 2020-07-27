@@ -852,6 +852,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameManager: {fileID: 2100487049}
+  consoleWindow: {fileID: 1482370770}
 --- !u!114 &273061155
 MonoBehaviour:
   m_ObjectHideFlags: 0

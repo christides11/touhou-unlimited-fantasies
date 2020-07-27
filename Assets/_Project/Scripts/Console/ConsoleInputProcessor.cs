@@ -10,12 +10,21 @@ namespace TUF.Console
 {
     public class ConsoleInputProcessor : MonoBehaviour
     {
-        [SerializeField] private GameManager gameManager;
+        public GameManager gameManager;
+        public ConsoleWindow consoleWindow;
 
-        public async Task Process(List<ConsoleInput> inputs)
+        protected List<ConsoleCommand> preCommands = new List<ConsoleCommand>();
+        protected List<ConsoleCommand> regularCommands = new List<ConsoleCommand>();
+        protected List<ConsoleCommand> postCommands = new List<ConsoleCommand>();
+
+        public async virtual Task Process(List<ConsoleInput> inputs)
         {
             for(int i = 0; i < inputs.Count; i++)
             {
+                if(inputs[i].command == "+unloadallmods")
+                {
+                    preCommands.Add(new CommandUnloadAllMods().Initialize(this));
+                }
                 if(inputs[i].command == "+sgm")
                 {
                     string[] s = inputs[i].variables[0].Split('/');
@@ -33,14 +42,24 @@ namespace TUF.Console
                     stage.modIdentifier = s[0];
                     stage.objectName = s[1];
 
-                    string sceneToUnload = null;
-                    if(SceneManager.GetActiveScene().name != "Singletons")
-                    {
-                        sceneToUnload = SceneManager.GetActiveScene().name;
-                    }
+                    CommandStartGameMode sgmCommand = new CommandStartGameMode(entity, gamemode, stage);
 
-                    await gameManager.StartGameMode(entity, gamemode, stage, null, sceneToUnload);
+                    regularCommands.Add(sgmCommand.Initialize(this));
                 }
+            }
+
+            foreach(ConsoleCommand cc in preCommands)
+            {
+                consoleWindow.WriteLine(await cc.Do());
+
+            }
+            foreach (ConsoleCommand cc in regularCommands)
+            {
+                consoleWindow.WriteLine(await cc.Do());
+            }
+            foreach (ConsoleCommand cc in postCommands)
+            {
+                consoleWindow.WriteLine(await cc.Do());
             }
         }
     }

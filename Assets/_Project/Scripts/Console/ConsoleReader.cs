@@ -9,9 +9,9 @@ namespace TUF.Console
     {
         [SerializeField] private ConsoleInputProcessor inputProcessor;
 
-        public void ReadCommandLine()
+        public async Task ReadCommandLine()
         {
-            Convert(System.Environment.GetCommandLineArgs());
+            await Convert(System.Environment.GetCommandLineArgs());
         }
 
         public async Task Convert(string[] input)

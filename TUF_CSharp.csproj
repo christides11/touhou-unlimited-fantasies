@@ -118,6 +118,9 @@
     <Compile Include="Assets\_Project\Scripts\Combat\Moveset\MovesetAttackNode.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Moveset\MovesetDefinition.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Status Effects\DisableFloatStatusEffectDefinition.cs" />
+    <Compile Include="Assets\_Project\Scripts\Console\Commands\CommandStartGameMode.cs" />
+    <Compile Include="Assets\_Project\Scripts\Console\Commands\CommandUnloadAllMods.cs" />
+    <Compile Include="Assets\_Project\Scripts\Console\Commands\ConsoleCommand.cs" />
     <Compile Include="Assets\_Project\Scripts\Console\ConsoleInput.cs" />
     <Compile Include="Assets\_Project\Scripts\Console\ConsoleInputProcessor.cs" />
     <Compile Include="Assets\_Project\Scripts\Console\ConsoleReader.cs" />
