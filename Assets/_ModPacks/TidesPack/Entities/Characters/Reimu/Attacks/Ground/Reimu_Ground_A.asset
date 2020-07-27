@@ -63,6 +63,7 @@ MonoBehaviour:
           radius: 2
           height: 2
         attachToEntity: 1
+        styleGain: 0
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
           airOnly: 0
@@ -115,6 +116,7 @@ MonoBehaviour:
           radius: 2
           height: 2
         attachToEntity: 1
+        styleGain: 0
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
           airOnly: 0
@@ -167,6 +169,7 @@ MonoBehaviour:
           radius: 2
           height: 2
         attachToEntity: 1
+        styleGain: 0
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
           airOnly: 0
@@ -219,6 +222,7 @@ MonoBehaviour:
           radius: 2
           height: 2
         attachToEntity: 1
+        styleGain: 0
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
           airOnly: 0
@@ -271,6 +275,7 @@ MonoBehaviour:
           radius: 2
           height: 2
         attachToEntity: 1
+        styleGain: 0
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
           airOnly: 0

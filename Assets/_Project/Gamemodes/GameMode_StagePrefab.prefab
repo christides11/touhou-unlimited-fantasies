@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 8376058606984313824}
   - component: {fileID: 4315833933845352629}
   m_Layer: 0
-  m_Name: StageGamemode
+  m_Name: GameMode_StagePrefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -43,5 +43,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: df2abbee3aa291f4e91793e39e363611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  componentPrefabs: []
-  components: []
+  components:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: GameModeComponentTimer, ns: TUF.GameMode, asm: TUF_CSharp}
+      data:
+        timerType: 0
+        currentTime: 0

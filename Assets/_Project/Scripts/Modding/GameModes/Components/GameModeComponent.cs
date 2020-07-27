@@ -4,7 +4,8 @@ using UnityEngine;
 
 namespace TUF.GameMode
 {
-    public class GameModeComponent : MonoBehaviour
+    [System.Serializable]
+    public class GameModeComponent
     {
         protected GameModeBase gameMode;
 

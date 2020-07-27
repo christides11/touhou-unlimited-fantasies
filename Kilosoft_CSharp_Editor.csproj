@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{18F92F35-1554-EE1F-6AF4-18A06F02FED9}</ProjectGuid>
+    <ProjectGuid>{A3162F01-B064-C5FF-DB1C-DC4C121AD29D}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>TUF_CSharp</AssemblyName>
+    <AssemblyName>Kilosoft_CSharp_Editor</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -47,7 +47,7 @@
   <PropertyGroup>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <UnityProjectGenerator>Unity/VSTU</UnityProjectGenerator>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2019.4.0f1</UnityVersion>
   </PropertyGroup>
@@ -63,156 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\CharacterSelectContentItem.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\CharacterSelectMenu.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\CollectionStageItem.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\GamemodeContentItem.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\GamemodeSelectMenu.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\MainMenuHandler.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\StageCollectionItem.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\StageCollectionsMenu.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\StageSelect\StageContentItem.cs" />
-    <Compile Include="Assets\_Project\Scenes\MainMenu\Scripts\StageSelect\StageSelectMenu.cs" />
-    <Compile Include="Assets\_Project\Scripts\Camera\CameraShake.cs" />
-    <Compile Include="Assets\_Project\Scripts\Camera\CameraShakeDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Camera\PlayerCamera.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\AttackDefinitions\AttackDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\AttackDefinitions\BoxGroup.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\AttackFaceLockonWindow.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Boxes\DetectionBox.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Boxes\Hitbox.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Boxes\Hurtbox.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\Bullet.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPattern.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\AddRotationBA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\AddSpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\ApplySpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\ClearBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\CreateBulletBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\CreateBulletPatternBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\LoopBulletPatternAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetAngularSpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetLifetimeBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetLocalAngularSpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetLocalSpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetSpeedBulletPatternAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\WaitBulletPatternAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternData.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternGroup.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternManagerSettings.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\DamageReactions.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\EntityTeams.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\AttackEventDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\ClampGravityEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\ClampMovementEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\EntityApplyGravityEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\EntityChangeStateEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\EntityForceCurveEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\EntityForceSetEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\EntityFrictionEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\EntityMovementForceAddEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\EntitySetAttackEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Events\PlaySoundEvent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Moveset\MovesetAttackNode.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Moveset\MovesetDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Status Effects\DisableFloatStatusEffectDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Console\ConsoleInput.cs" />
-    <Compile Include="Assets\_Project\Scripts\Console\ConsoleInputProcessor.cs" />
-    <Compile Include="Assets\_Project\Scripts\Console\ConsoleReader.cs" />
-    <Compile Include="Assets\_Project\Scripts\Console\ConsoleWindow.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\BootLoader.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\EntitySpawner.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\GameManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\Helpers.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\ReadOnlyAttribute.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\SimObjectManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\TriggerDetector.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\Variables\CombatVariables.cs" />
-    <Compile Include="Assets\_Project\Scripts\Core\Variables\GameVariables.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\AIBrain.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\CharacterInput.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\CharacterManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\CharacterState.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\CharacterStates.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\CharacterStats.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CAirDash.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CAirJump.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CAttack.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CDash.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CEnemyStep.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CFall.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CFloat.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CFloatDash.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CFloatDodge.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CHozWallRun.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CIdle.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CJump.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CJumpSquat.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CRun.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CSlide.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CVertWallRun.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CWalk.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CWallCling.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CWallJump.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\EntityStates.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityAnimator.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityCharacterController.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityState.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityStats.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityCombatManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityHitboxManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityInputManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityPhysicsManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityStateManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Aerial\EntityAirJump.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Aerial\EntityFall.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Aerial\EntityJump.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Aerial\EntityWallCling.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Aerial\EntityWallJump.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Combat\EntityAttack.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Float\EntityFloat.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Ground\EntityDash.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Ground\EntityIdle.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Ground\EntityJumpSquat.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Ground\EntityRun.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Ground\EntityWalk.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityFlinch.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityFlinchAir.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityGroundBounce.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityKnockdown.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityTrip.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityTumble.cs" />
-    <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityWakeup.cs" />
-    <Compile Include="Assets\_Project\Scripts\Input\ControllerType.cs" />
-    <Compile Include="Assets\_Project\Scripts\Input\EntityInputs.cs" />
-    <Compile Include="Assets\_Project\Scripts\Input\GlobalInputManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Input\InputConstants.cs" />
-    <Compile Include="Assets\_Project\Scripts\Input\RewiredConsts.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\GameModes\Components\GameModeComponent.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\GameModes\Components\GameModeComponentTimer.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\GameModes\GameModeBase.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\GameModes\GameModeDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\GameModes\Stages\GameModeStage.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\GameModes\Stages\GameModeStageCollection.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\GameModes\TrainingMode\GameModeTraining.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\ModDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\ModInfo.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\ModLoader.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\ModManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\ModObjectLink.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\ModObjectReference.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\Stages\StageCollection.cs" />
-    <Compile Include="Assets\_Project\Scripts\Modding\Stages\StageDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Sound\MusicManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Sound\SoundDefinition.cs" />
-    <Compile Include="Assets\_Project\Scripts\Sound\SoundManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\StatusEffectArea.cs" />
-    <Compile Include="Assets\_Project\Scripts\UI\OptionsMenu.cs" />
-    <None Include="Assets\_Project\TUF_CSharp.asmdef" />
+    <Compile Include="Assets\Plugins\Kilosoft\EditorButton\Editor\ButtonEditor.cs" />
+    <None Include="Assets\Plugins\Kilosoft\EditorButton\Editor\Kilosoft_CSharp_Editor.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.0f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
@@ -849,18 +701,6 @@
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.0f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
     </Reference>
-    <Reference Include="Unity.TextMeshPro">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/ScriptAssemblies/Unity.TextMeshPro.dll</HintPath>
-    </Reference>
-    <Reference Include="CAF">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/ScriptAssemblies/CAF.dll</HintPath>
-    </Reference>
-    <Reference Include="XNode">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/ScriptAssemblies/XNode.dll</HintPath>
-    </Reference>
-    <Reference Include="Cinemachine">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/ScriptAssemblies/Cinemachine.dll</HintPath>
-    </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>
     </Reference>
@@ -869,18 +709,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="AsyncAwait_CSharp.csproj">
-      <Project>{D4C8F508-ABA8-51F4-BDCF-136B03A98C3E}</Project>
-      <Name>AsyncAwait_CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="Rewired_CSharp.csproj">
-      <Project>{D69A459A-A34A-76C4-2767-51EC1D026B57}</Project>
-      <Name>Rewired_CSharp</Name>
-    </ProjectReference>
-    <ProjectReference Include="kcc_CSharp.csproj">
-      <Project>{6431F69A-8E9A-2A73-C3DA-B0DC9FEDC754}</Project>
-      <Name>kcc_CSharp</Name>
-    </ProjectReference>
     <ProjectReference Include="Kilosoft_CSharp.csproj">
       <Project>{54BACC97-00F4-BEDB-D463-1C401574D56E}</Project>
       <Name>Kilosoft_CSharp</Name>

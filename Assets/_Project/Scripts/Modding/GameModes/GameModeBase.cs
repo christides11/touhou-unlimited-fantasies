@@ -1,4 +1,5 @@
 ﻿using CAF.Simulation;
+using Kilosoft.Tools;
 using KinematicCharacterController;
 using System.Collections;
 using System.Collections.Generic;
@@ -10,12 +11,14 @@ using SimObjectManager = TUF.Core.SimObjectManager;
 
 namespace TUF.GameMode{
     /// <summary>
-    /// The base class all game modes should inherit from. 
+    /// Defines the game mode being played, it's rules, scoring, etc.
     /// </summary>
     public class GameModeBase : MonoBehaviour
     {
         public SimObjectManager SimObjectManager { get { return simObjectManager; } }
         public bool GamemodeActive { get { return gamemodeActive; } }
+
+        public IReadOnlyCollection<GameModeComponent> GameModeComponents { get { return components.AsReadOnly(); } }
 
         protected GameManager gameManager;
         protected SimObjectManager simObjectManager;
@@ -27,9 +30,14 @@ namespace TUF.GameMode{
         private StageCollection stageCollection;
         private StageDefinition currentStage;
 
-        [SerializeField] protected List<GameModeComponent> componentPrefabs = new List<GameModeComponent>();
-        [ReadOnly] public List<GameModeComponent> components = new List<GameModeComponent>();
+        [SerializeReference] protected List<GameModeComponent> components = new List<GameModeComponent>();
 
+
+        [EditorButton("Add Component")]
+        public void TestMethod()
+        {
+
+        }
 
         /// <summary>
         /// Initializes the gamemode with any components it needs.
@@ -40,13 +48,6 @@ namespace TUF.GameMode{
         {
             this.gameManager = gameManager;
             simObjectManager = new SimObjectManager();
-
-            components.Clear();
-            for(int i = 0; i < componentPrefabs.Count; i++)
-            {
-                components.Add(GameObject.Instantiate(componentPrefabs[i].gameObject, transform, false)
-                    .GetComponent<GameModeComponent>());
-            }
         }
 
         /// <summary>

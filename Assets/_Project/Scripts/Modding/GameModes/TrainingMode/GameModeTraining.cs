@@ -7,7 +7,7 @@ using UnityEngine;
 
 namespace TUF.GameMode
 {
-    public class TrainingModeHandler : GameModeBase
+    public class GameModeTraining : GameModeBase
     {
         public EntityManager dummy;
 

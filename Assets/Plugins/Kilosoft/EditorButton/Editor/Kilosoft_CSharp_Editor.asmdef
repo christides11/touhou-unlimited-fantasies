@@ -1,0 +1,17 @@
+{
+    "name": "Kilosoft_CSharp_Editor",
+    "references": [
+        "GUID:9e5f45384529cb94d9995e0ed18bd071"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
