@@ -1,0 +1,1 @@
+modioUNITY_2.1.0-2017.3+.unitypackage ( https://github.com/modio/UnityPlugin/releases/tag/v2.1.0f1 )

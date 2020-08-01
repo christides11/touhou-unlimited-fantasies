@@ -54,6 +54,12 @@ namespace TUF.Menus.MainMenu
             gameObject.SetActive(false);
         }
 
+        public void ButtonModMenu()
+        {
+            GameManager.current.modBrowser.gameObject.SetActive(true);
+            gameObject.SetActive(false);
+        }
+
         private void ReturnFromOptionsMenu()
         {
             gameObject.SetActive(true);

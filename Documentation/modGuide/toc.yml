@@ -1,0 +1,6 @@
+- name: Overview
+  href: index.md
+- name: 0 Installing Mods
+  href: installMods.md
+- name: 1 Setup
+  href: setup.md

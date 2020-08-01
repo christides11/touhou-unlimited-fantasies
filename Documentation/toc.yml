@@ -1,4 +1,4 @@
-- name: Manual
-  href: manual/
+- name: Modding Guide
+  href: modGuide/
 - name: Scripting API
   href: api/

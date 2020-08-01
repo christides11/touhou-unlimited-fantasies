@@ -43,7 +43,7 @@ MonoBehaviour:
     openFolderPostBuild: 1
   _productParameters:
     buildCounter: 0
-    lastGeneratedVersion: 1.0.124.4914
+    lastGeneratedVersion: 0.0.1
     version: 0.0.1
     autoGenerate: 0
   _releaseTypeList:
@@ -112,4 +112,27 @@ MonoBehaviour:
     buildActions: []
   _postBuildActions:
     buildActions:
+    - {fileID: 3620475056132746298}
     - {fileID: -506668513032588967}
+--- !u!114 &3620475056132746298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 54626104f6c7de94f9976e1672abc45b, type: 3}
+  m_Name: FolderOperation
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: FolderOperation
+  note: 
+  actionEnabled: 1
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: ModdingTools
+  outputPath: bin/$YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION/ModdingTools
+  operation: 1
