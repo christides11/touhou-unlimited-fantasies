@@ -1,5 +1,13 @@
 fileFormatVersion: 2
+<<<<<<< HEAD
 guid: 8a6c98a0ca1c4ee468870bf1d67f3d6a
+=======
+<<<<<<< HEAD:Assets/Modding/Initializer/TUFDependencies.cs.meta
+guid: d114f5173f8edbf4d9ee7b828e8fd20e
+=======
+guid: 8a6c98a0ca1c4ee468870bf1d67f3d6a
+>>>>>>> master:Assets/Modding/Initializer/Editor/TUFModToolsWindow.cs.meta
+>>>>>>> master
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

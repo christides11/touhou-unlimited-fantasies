@@ -1,4 +1,4 @@
-![Documentation](https://github.com/christides11/touhou-unlimited-fantasies/workflows/Documentation/badge.svg)   
+[![Documentation](https://github.com/christides11/touhou-unlimited-fantasies/workflows/Documentation/badge.svg)](https://christides11.github.io/touhou-unlimited-fantasies/)   
 **Unlimited Fantasies** is a hack-and-slash Touhou fangame with a focus on modability. 
 
 ## Opening The Project

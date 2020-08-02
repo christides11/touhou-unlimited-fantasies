@@ -78,12 +78,12 @@ namespace TUF.Modding
         /// <summary>
         /// Gets a stage by name.
         /// </summary>
-        /// <param name="stageName">The name of the stage.</param>
+        /// <param name="stageIdentifier">The name of the stage.</param>
         /// <returns>The SceneDefinition with the scene name given. If it does not exist,
         /// returns null.</returns>
-        public virtual StageDefinition GetStageDefinition(string stageName)
+        public virtual StageDefinition GetStageDefinition(string stageIdentifier)
         {
-            return stages.FirstOrDefault(x => x.stageName.ToLower() == stageName.ToLower());
+            return stages.FirstOrDefault(x => x.stageIdentifier.ToLower() == stageIdentifier.ToLower());
         }
         #endregion
 

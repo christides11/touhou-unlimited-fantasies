@@ -1,0 +1,3 @@
+Unity 2019.4.5f1
+
+mod.io package: https://github.com/modio/UnityPlugin/releases/tag/v2.1.0f1
