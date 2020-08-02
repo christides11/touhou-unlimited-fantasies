@@ -7688,7 +7688,7 @@ MonoBehaviour:
   defaultScene: MainMenu
   targetFramerate: 60
   consoleReader: {fileID: 273061155}
-  readEditorParams: 0
+  readEditorParams: 1
   editorArgs:
   - +sgm=christides11.tidespack/Reimu,core/stage,christides11.tidespack/EOSD_FNPS
   mods: []
