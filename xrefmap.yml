@@ -216,128 +216,6 @@ references:
   commentId: F:TUF.Combat.AttackDefinition.specialCancelFrames
   fullName: TUF.Combat.AttackDefinition.specialCancelFrames
   nameWithType: AttackDefinition.specialCancelFrames
-- uid: TUF.Combat.AttackDefinitionEditorWindow
-  name: AttackDefinitionEditorWindow
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html
-  commentId: T:TUF.Combat.AttackDefinitionEditorWindow
-  fullName: TUF.Combat.AttackDefinitionEditorWindow
-  nameWithType: AttackDefinitionEditorWindow
-- uid: TUF.Combat.AttackDefinitionEditorWindow.AddAttackEventDefinition
-  name: AddAttackEventDefinition()
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_AddAttackEventDefinition
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.AddAttackEventDefinition
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.AddAttackEventDefinition()
-  nameWithType: AttackDefinitionEditorWindow.AddAttackEventDefinition()
-- uid: TUF.Combat.AttackDefinitionEditorWindow.AddAttackEventDefinition*
-  name: AddAttackEventDefinition
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_AddAttackEventDefinition_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.AddAttackEventDefinition
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.AddAttackEventDefinition
-  nameWithType: AttackDefinitionEditorWindow.AddAttackEventDefinition
-- uid: TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup
-  name: AddBoxGroup()
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_AddBoxGroup
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup()
-  nameWithType: AttackDefinitionEditorWindow.AddBoxGroup()
-- uid: TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup*
-  name: AddBoxGroup
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_AddBoxGroup_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup
-  nameWithType: AttackDefinitionEditorWindow.AddBoxGroup
-- uid: TUF.Combat.AttackDefinitionEditorWindow.BoxesMenuNavigationBar
-  name: BoxesMenuNavigationBar()
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_BoxesMenuNavigationBar
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.BoxesMenuNavigationBar
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.BoxesMenuNavigationBar()
-  nameWithType: AttackDefinitionEditorWindow.BoxesMenuNavigationBar()
-- uid: TUF.Combat.AttackDefinitionEditorWindow.BoxesMenuNavigationBar*
-  name: BoxesMenuNavigationBar
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_BoxesMenuNavigationBar_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.BoxesMenuNavigationBar
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.BoxesMenuNavigationBar
-  nameWithType: AttackDefinitionEditorWindow.BoxesMenuNavigationBar
-- uid: TUF.Combat.AttackDefinitionEditorWindow.dashCancelWindowsFoldout
-  name: dashCancelWindowsFoldout
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_dashCancelWindowsFoldout
-  commentId: F:TUF.Combat.AttackDefinitionEditorWindow.dashCancelWindowsFoldout
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.dashCancelWindowsFoldout
-  nameWithType: AttackDefinitionEditorWindow.dashCancelWindowsFoldout
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup(CAF.Combat.BoxGroup)
-  name: DrawBoxGroup(CAF.Combat.BoxGroup)
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawBoxGroup_CAF_Combat_BoxGroup_
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup(CAF.Combat.BoxGroup)
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup(CAF.Combat.BoxGroup)
-  nameWithType: AttackDefinitionEditorWindow.DrawBoxGroup(CAF.Combat.BoxGroup)
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup*
-  name: DrawBoxGroup
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawBoxGroup_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup
-  nameWithType: AttackDefinitionEditorWindow.DrawBoxGroup
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawCancelWindows
-  name: DrawCancelWindows()
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawCancelWindows
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.DrawCancelWindows
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawCancelWindows()
-  nameWithType: AttackDefinitionEditorWindow.DrawCancelWindows()
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawCancelWindows*
-  name: DrawCancelWindows
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawCancelWindows_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.DrawCancelWindows
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawCancelWindows
-  nameWithType: AttackDefinitionEditorWindow.DrawCancelWindows
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawGeneralMenu
-  name: DrawGeneralMenu()
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawGeneralMenu
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.DrawGeneralMenu
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawGeneralMenu()
-  nameWithType: AttackDefinitionEditorWindow.DrawGeneralMenu()
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawGeneralMenu*
-  name: DrawGeneralMenu
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawGeneralMenu_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.DrawGeneralMenu
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawGeneralMenu
-  nameWithType: AttackDefinitionEditorWindow.DrawGeneralMenu
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawMenuBar
-  name: DrawMenuBar()
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawMenuBar
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.DrawMenuBar
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawMenuBar()
-  nameWithType: AttackDefinitionEditorWindow.DrawMenuBar()
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawMenuBar*
-  name: DrawMenuBar
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawMenuBar_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.DrawMenuBar
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawMenuBar
-  nameWithType: AttackDefinitionEditorWindow.DrawMenuBar
-- uid: TUF.Combat.AttackDefinitionEditorWindow.followTargetDropdown
-  name: followTargetDropdown
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_followTargetDropdown
-  commentId: F:TUF.Combat.AttackDefinitionEditorWindow.followTargetDropdown
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.followTargetDropdown
-  nameWithType: AttackDefinitionEditorWindow.followTargetDropdown
-- uid: TUF.Combat.AttackDefinitionEditorWindow.Init(AttackDefinition)
-  name: Init(AttackDefinition)
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_Init_AttackDefinition_
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.Init(AttackDefinition)
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.Init(AttackDefinition)
-  nameWithType: AttackDefinitionEditorWindow.Init(AttackDefinition)
-- uid: TUF.Combat.AttackDefinitionEditorWindow.Init*
-  name: Init
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_Init_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.Init
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.Init
-  nameWithType: AttackDefinitionEditorWindow.Init
 - uid: TUF.Combat.AttackEventDefinition
   name: AttackEventDefinition
   href: api/TUF.Combat.AttackEventDefinition.html
@@ -368,25 +246,6 @@ references:
   commentId: F:TUF.Combat.AttackFaceLockonWindow.startFrame
   fullName: TUF.Combat.AttackFaceLockonWindow.startFrame
   nameWithType: AttackFaceLockonWindow.startFrame
-- uid: TUF.Combat.AttackSOEditor
-  name: AttackSOEditor
-  href: api/TUF.Combat.AttackSOEditor.html
-  commentId: T:TUF.Combat.AttackSOEditor
-  fullName: TUF.Combat.AttackSOEditor
-  nameWithType: AttackSOEditor
-- uid: TUF.Combat.AttackSOEditor.OnInspectorGUI
-  name: OnInspectorGUI()
-  href: api/TUF.Combat.AttackSOEditor.html#TUF_Combat_AttackSOEditor_OnInspectorGUI
-  commentId: M:TUF.Combat.AttackSOEditor.OnInspectorGUI
-  fullName: TUF.Combat.AttackSOEditor.OnInspectorGUI()
-  nameWithType: AttackSOEditor.OnInspectorGUI()
-- uid: TUF.Combat.AttackSOEditor.OnInspectorGUI*
-  name: OnInspectorGUI
-  href: api/TUF.Combat.AttackSOEditor.html#TUF_Combat_AttackSOEditor_OnInspectorGUI_
-  commentId: Overload:TUF.Combat.AttackSOEditor.OnInspectorGUI
-  isSpec: "True"
-  fullName: TUF.Combat.AttackSOEditor.OnInspectorGUI
-  nameWithType: AttackSOEditor.OnInspectorGUI
 - uid: TUF.Combat.BoxGroup
   name: BoxGroup
   href: api/TUF.Combat.BoxGroup.html
@@ -2454,6 +2313,12 @@ references:
   commentId: F:TUF.Core.BootLoader.editorArgs
   fullName: TUF.Core.BootLoader.editorArgs
   nameWithType: BootLoader.editorArgs
+- uid: TUF.Core.BootLoader.mods
+  name: mods
+  href: api/TUF.Core.BootLoader.html#TUF_Core_BootLoader_mods
+  commentId: F:TUF.Core.BootLoader.mods
+  fullName: TUF.Core.BootLoader.mods
+  nameWithType: BootLoader.mods
 - uid: TUF.Core.BootLoader.readEditorParams
   name: readEditorParams
   href: api/TUF.Core.BootLoader.html#TUF_Core_BootLoader_readEditorParams
@@ -2564,6 +2429,12 @@ references:
   commentId: T:TUF.Core.ConsoleWindow
   fullName: TUF.Core.ConsoleWindow
   nameWithType: ConsoleWindow
+- uid: TUF.Core.ConsoleWindow.consoleWindowCamera
+  name: consoleWindowCamera
+  href: api/TUF.Core.ConsoleWindow.html#TUF_Core_ConsoleWindow_consoleWindowCamera
+  commentId: F:TUF.Core.ConsoleWindow.consoleWindowCamera
+  fullName: TUF.Core.ConsoleWindow.consoleWindowCamera
+  nameWithType: ConsoleWindow.consoleWindowCamera
 - uid: TUF.Core.ConsoleWindow.Write(System.String)
   name: Write(String)
   href: api/TUF.Core.ConsoleWindow.html#TUF_Core_ConsoleWindow_Write_System_String_
@@ -2590,44 +2461,6 @@ references:
   isSpec: "True"
   fullName: TUF.Core.ConsoleWindow.WriteLine
   nameWithType: ConsoleWindow.WriteLine
-- uid: TUF.Core.Editor
-  name: TUF.Core.Editor
-  href: api/TUF.Core.Editor.html
-  commentId: N:TUF.Core.Editor
-  fullName: TUF.Core.Editor
-  nameWithType: TUF.Core.Editor
-- uid: TUF.Core.Editor.ReadOnlyDrawer
-  name: ReadOnlyDrawer
-  href: api/TUF.Core.Editor.ReadOnlyDrawer.html
-  commentId: T:TUF.Core.Editor.ReadOnlyDrawer
-  fullName: TUF.Core.Editor.ReadOnlyDrawer
-  nameWithType: ReadOnlyDrawer
-- uid: TUF.Core.Editor.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
-  name: GetPropertyHeight(SerializedProperty, GUIContent)
-  href: api/TUF.Core.Editor.ReadOnlyDrawer.html#TUF_Core_Editor_ReadOnlyDrawer_GetPropertyHeight_SerializedProperty_GUIContent_
-  commentId: M:TUF.Core.Editor.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty,GUIContent)
-  fullName: TUF.Core.Editor.ReadOnlyDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
-  nameWithType: ReadOnlyDrawer.GetPropertyHeight(SerializedProperty, GUIContent)
-- uid: TUF.Core.Editor.ReadOnlyDrawer.GetPropertyHeight*
-  name: GetPropertyHeight
-  href: api/TUF.Core.Editor.ReadOnlyDrawer.html#TUF_Core_Editor_ReadOnlyDrawer_GetPropertyHeight_
-  commentId: Overload:TUF.Core.Editor.ReadOnlyDrawer.GetPropertyHeight
-  isSpec: "True"
-  fullName: TUF.Core.Editor.ReadOnlyDrawer.GetPropertyHeight
-  nameWithType: ReadOnlyDrawer.GetPropertyHeight
-- uid: TUF.Core.Editor.ReadOnlyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
-  name: OnGUI(Rect, SerializedProperty, GUIContent)
-  href: api/TUF.Core.Editor.ReadOnlyDrawer.html#TUF_Core_Editor_ReadOnlyDrawer_OnGUI_Rect_SerializedProperty_GUIContent_
-  commentId: M:TUF.Core.Editor.ReadOnlyDrawer.OnGUI(Rect,SerializedProperty,GUIContent)
-  fullName: TUF.Core.Editor.ReadOnlyDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-  nameWithType: ReadOnlyDrawer.OnGUI(Rect, SerializedProperty, GUIContent)
-- uid: TUF.Core.Editor.ReadOnlyDrawer.OnGUI*
-  name: OnGUI
-  href: api/TUF.Core.Editor.ReadOnlyDrawer.html#TUF_Core_Editor_ReadOnlyDrawer_OnGUI_
-  commentId: Overload:TUF.Core.Editor.ReadOnlyDrawer.OnGUI
-  isSpec: "True"
-  fullName: TUF.Core.Editor.ReadOnlyDrawer.OnGUI
-  nameWithType: ReadOnlyDrawer.OnGUI
 - uid: TUF.Core.EntityInputs
   name: EntityInputs
   href: api/TUF.Core.EntityInputs.html
@@ -2812,6 +2645,12 @@ references:
   isSpec: "True"
   fullName: TUF.Core.GameManager.LoadSceneAsync
   nameWithType: GameManager.LoadSceneAsync
+- uid: TUF.Core.GameManager.modBrowser
+  name: modBrowser
+  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_modBrowser
+  commentId: F:TUF.Core.GameManager.modBrowser
+  fullName: TUF.Core.GameManager.modBrowser
+  nameWithType: GameManager.modBrowser
 - uid: TUF.Core.GameManager.ModManager
   name: ModManager
   href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_ModManager
@@ -3433,12 +3272,6 @@ references:
   commentId: F:TUF.Core.StageDefinition.selectableForGamemodes
   fullName: TUF.Core.StageDefinition.selectableForGamemodes
   nameWithType: StageDefinition.selectableForGamemodes
-- uid: TUF.Core.StageDefinition.spawnPosition
-  name: spawnPosition
-  href: api/TUF.Core.StageDefinition.html#TUF_Core_StageDefinition_spawnPosition
-  commentId: F:TUF.Core.StageDefinition.spawnPosition
-  fullName: TUF.Core.StageDefinition.spawnPosition
-  nameWithType: StageDefinition.spawnPosition
 - uid: TUF.Core.StageDefinition.stageName
   name: stageName
   href: api/TUF.Core.StageDefinition.html#TUF_Core_StageDefinition_stageName
@@ -7247,6 +7080,12 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.SimObjectManager
   nameWithType: GameModeBase.SimObjectManager
+- uid: TUF.GameMode.GameModeBase.spawnPointManager
+  name: spawnPointManager
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_spawnPointManager
+  commentId: F:TUF.GameMode.GameModeBase.spawnPointManager
+  fullName: TUF.GameMode.GameModeBase.spawnPointManager
+  nameWithType: GameModeBase.spawnPointManager
 - uid: TUF.GameMode.GameModeBase.StartGameMode(TUF.Entities.Shared.EntityDefinition,TUF.Core.StageDefinition,TUF.Core.StageCollection)
   name: StartGameMode(EntityDefinition, StageDefinition, StageCollection)
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_StartGameMode_TUF_Entities_Shared_EntityDefinition_TUF_Core_StageDefinition_TUF_Core_StageCollection_
@@ -8137,6 +7976,19 @@ references:
   isSpec: "True"
   fullName: TUF.Menus.MainMenu.MainMenuHandler.ButtonGameModes
   nameWithType: MainMenuHandler.ButtonGameModes
+- uid: TUF.Menus.MainMenu.MainMenuHandler.ButtonModMenu
+  name: ButtonModMenu()
+  href: api/TUF.Menus.MainMenu.MainMenuHandler.html#TUF_Menus_MainMenu_MainMenuHandler_ButtonModMenu
+  commentId: M:TUF.Menus.MainMenu.MainMenuHandler.ButtonModMenu
+  fullName: TUF.Menus.MainMenu.MainMenuHandler.ButtonModMenu()
+  nameWithType: MainMenuHandler.ButtonModMenu()
+- uid: TUF.Menus.MainMenu.MainMenuHandler.ButtonModMenu*
+  name: ButtonModMenu
+  href: api/TUF.Menus.MainMenu.MainMenuHandler.html#TUF_Menus_MainMenu_MainMenuHandler_ButtonModMenu_
+  commentId: Overload:TUF.Menus.MainMenu.MainMenuHandler.ButtonModMenu
+  isSpec: "True"
+  fullName: TUF.Menus.MainMenu.MainMenuHandler.ButtonModMenu
+  nameWithType: MainMenuHandler.ButtonModMenu
 - uid: TUF.Menus.MainMenu.MainMenuHandler.ButtonOptionsMenu
   name: ButtonOptionsMenu()
   href: api/TUF.Menus.MainMenu.MainMenuHandler.html#TUF_Menus_MainMenu_MainMenuHandler_ButtonOptionsMenu
@@ -8891,6 +8743,48 @@ references:
   isSpec: "True"
   fullName: TUF.Modding.ModObjectReference.ToString
   nameWithType: ModObjectReference.ToString
+- uid: TUF.ModdingTools
+  name: TUF.ModdingTools
+  href: api/TUF.ModdingTools.html
+  commentId: N:TUF.ModdingTools
+  fullName: TUF.ModdingTools
+  nameWithType: TUF.ModdingTools
+- uid: TUF.ModdingTools.TUFDependencies
+  name: TUFDependencies
+  href: api/TUF.ModdingTools.TUFDependencies.html
+  commentId: T:TUF.ModdingTools.TUFDependencies
+  fullName: TUF.ModdingTools.TUFDependencies
+  nameWithType: TUFDependencies
+- uid: TUF.ModdingTools.TUFDependencies.dlls
+  name: dlls
+  href: api/TUF.ModdingTools.TUFDependencies.html#TUF_ModdingTools_TUFDependencies_dlls
+  commentId: F:TUF.ModdingTools.TUFDependencies.dlls
+  fullName: TUF.ModdingTools.TUFDependencies.dlls
+  nameWithType: TUFDependencies.dlls
+- uid: TUF.ModdingTools.TUFDependencies.packages
+  name: packages
+  href: api/TUF.ModdingTools.TUFDependencies.html#TUF_ModdingTools_TUFDependencies_packages
+  commentId: F:TUF.ModdingTools.TUFDependencies.packages
+  fullName: TUF.ModdingTools.TUFDependencies.packages
+  nameWithType: TUFDependencies.packages
+- uid: TUF.ModdingTools.TUFModToolsWindow
+  name: TUFModToolsWindow
+  href: api/TUF.ModdingTools.TUFModToolsWindow.html
+  commentId: T:TUF.ModdingTools.TUFModToolsWindow
+  fullName: TUF.ModdingTools.TUFModToolsWindow
+  nameWithType: TUFModToolsWindow
+- uid: TUF.ModdingTools.TUFModToolsWindow.currentTab
+  name: currentTab
+  href: api/TUF.ModdingTools.TUFModToolsWindow.html#TUF_ModdingTools_TUFModToolsWindow_currentTab
+  commentId: F:TUF.ModdingTools.TUFModToolsWindow.currentTab
+  fullName: TUF.ModdingTools.TUFModToolsWindow.currentTab
+  nameWithType: TUFModToolsWindow.currentTab
+- uid: TUF.ModdingTools.TUFModToolsWindow.listRequest
+  name: listRequest
+  href: api/TUF.ModdingTools.TUFModToolsWindow.html#TUF_ModdingTools_TUFModToolsWindow_listRequest
+  commentId: F:TUF.ModdingTools.TUFModToolsWindow.listRequest
+  fullName: TUF.ModdingTools.TUFModToolsWindow.listRequest
+  nameWithType: TUFModToolsWindow.listRequest
 - uid: TUF.Sound
   name: TUF.Sound
   href: api/TUF.Sound.html
@@ -9047,6 +8941,88 @@ references:
   isSpec: "True"
   fullName: TUF.Sound.SoundManager.Update
   nameWithType: SoundManager.Update
+- uid: TUF.Stages
+  name: TUF.Stages
+  href: api/TUF.Stages.html
+  commentId: N:TUF.Stages
+  fullName: TUF.Stages
+  nameWithType: TUF.Stages
+- uid: TUF.Stages.SpawnPointManager
+  name: SpawnPointManager
+  href: api/TUF.Stages.SpawnPointManager.html
+  commentId: T:TUF.Stages.SpawnPointManager
+  fullName: TUF.Stages.SpawnPointManager
+  nameWithType: SpawnPointManager
+- uid: TUF.Stages.SpawnPointManager.GetSpawnPoint
+  name: GetSpawnPoint()
+  href: api/TUF.Stages.SpawnPointManager.html#TUF_Stages_SpawnPointManager_GetSpawnPoint
+  commentId: M:TUF.Stages.SpawnPointManager.GetSpawnPoint
+  fullName: TUF.Stages.SpawnPointManager.GetSpawnPoint()
+  nameWithType: SpawnPointManager.GetSpawnPoint()
+- uid: TUF.Stages.SpawnPointManager.GetSpawnPoint(System.Int32)
+  name: GetSpawnPoint(Int32)
+  href: api/TUF.Stages.SpawnPointManager.html#TUF_Stages_SpawnPointManager_GetSpawnPoint_System_Int32_
+  commentId: M:TUF.Stages.SpawnPointManager.GetSpawnPoint(System.Int32)
+  fullName: TUF.Stages.SpawnPointManager.GetSpawnPoint(System.Int32)
+  nameWithType: SpawnPointManager.GetSpawnPoint(Int32)
+- uid: TUF.Stages.SpawnPointManager.GetSpawnPoint*
+  name: GetSpawnPoint
+  href: api/TUF.Stages.SpawnPointManager.html#TUF_Stages_SpawnPointManager_GetSpawnPoint_
+  commentId: Overload:TUF.Stages.SpawnPointManager.GetSpawnPoint
+  isSpec: "True"
+  fullName: TUF.Stages.SpawnPointManager.GetSpawnPoint
+  nameWithType: SpawnPointManager.GetSpawnPoint
+- uid: TUF.Stages.SpawnPointManager.SpawnPointCount
+  name: SpawnPointCount()
+  href: api/TUF.Stages.SpawnPointManager.html#TUF_Stages_SpawnPointManager_SpawnPointCount
+  commentId: M:TUF.Stages.SpawnPointManager.SpawnPointCount
+  fullName: TUF.Stages.SpawnPointManager.SpawnPointCount()
+  nameWithType: SpawnPointManager.SpawnPointCount()
+- uid: TUF.Stages.SpawnPointManager.SpawnPointCount*
+  name: SpawnPointCount
+  href: api/TUF.Stages.SpawnPointManager.html#TUF_Stages_SpawnPointManager_SpawnPointCount_
+  commentId: Overload:TUF.Stages.SpawnPointManager.SpawnPointCount
+  isSpec: "True"
+  fullName: TUF.Stages.SpawnPointManager.SpawnPointCount
+  nameWithType: SpawnPointManager.SpawnPointCount
+- uid: TUF.Stages.SpawnPointManagerEditor
+  name: SpawnPointManagerEditor
+  href: api/TUF.Stages.SpawnPointManagerEditor.html
+  commentId: T:TUF.Stages.SpawnPointManagerEditor
+  fullName: TUF.Stages.SpawnPointManagerEditor
+  nameWithType: SpawnPointManagerEditor
+- uid: TUF.Stages.SpawnPointManagerEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/TUF.Stages.SpawnPointManagerEditor.html#TUF_Stages_SpawnPointManagerEditor_OnInspectorGUI
+  commentId: M:TUF.Stages.SpawnPointManagerEditor.OnInspectorGUI
+  fullName: TUF.Stages.SpawnPointManagerEditor.OnInspectorGUI()
+  nameWithType: SpawnPointManagerEditor.OnInspectorGUI()
+- uid: TUF.Stages.SpawnPointManagerEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/TUF.Stages.SpawnPointManagerEditor.html#TUF_Stages_SpawnPointManagerEditor_OnInspectorGUI_
+  commentId: Overload:TUF.Stages.SpawnPointManagerEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: TUF.Stages.SpawnPointManagerEditor.OnInspectorGUI
+  nameWithType: SpawnPointManagerEditor.OnInspectorGUI
+- uid: TUF.Stages.StageTools
+  name: StageTools
+  href: api/TUF.Stages.StageTools.html
+  commentId: T:TUF.Stages.StageTools
+  fullName: TUF.Stages.StageTools
+  nameWithType: StageTools
+- uid: TUF.Stages.StageTools.SetupStage
+  name: SetupStage()
+  href: api/TUF.Stages.StageTools.html#TUF_Stages_StageTools_SetupStage
+  commentId: M:TUF.Stages.StageTools.SetupStage
+  fullName: TUF.Stages.StageTools.SetupStage()
+  nameWithType: StageTools.SetupStage()
+- uid: TUF.Stages.StageTools.SetupStage*
+  name: SetupStage
+  href: api/TUF.Stages.StageTools.html#TUF_Stages_StageTools_SetupStage_
+  commentId: Overload:TUF.Stages.StageTools.SetupStage
+  isSpec: "True"
+  fullName: TUF.Stages.StageTools.SetupStage
+  nameWithType: StageTools.SetupStage
 - uid: TUF.TriggerDetector
   name: TriggerDetector
   href: api/TUF.TriggerDetector.html

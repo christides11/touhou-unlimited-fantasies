@@ -36,18 +36,6 @@
     },
     {
       "type": "ManagedReference",
-      "source_relative_path": "api/TUF.Combat.AttackDefinitionEditorWindow.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TUF.Combat.AttackDefinitionEditorWindow.html",
-          "hash": "G3UD8YS52xHi0r+ImL5B+g=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
       "source_relative_path": "api/TUF.Combat.AttackEventDefinition.yml",
       "output": {
         ".html": {
@@ -65,18 +53,6 @@
         ".html": {
           "relative_path": "api/TUF.Combat.AttackFaceLockonWindow.html",
           "hash": "vaFwPrPw1FVAM8Ctn+F/5Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TUF.Combat.AttackSOEditor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TUF.Combat.AttackSOEditor.html",
-          "hash": "vK3KZPnhB7b2sfxxeiER2A=="
         }
       },
       "is_incremental": false,
@@ -592,7 +568,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.html",
-          "hash": "kL5h8FNT67VsIEArS89bmg=="
+          "hash": "mVlx5lvjtUGBFPUSQzzmlA=="
         }
       },
       "is_incremental": false,
@@ -688,7 +664,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.BootLoader.html",
-          "hash": "wq0KCftyhpTquZByZOQWKg=="
+          "hash": "rbRyVJYwEn0UVejZr5CpoQ=="
         }
       },
       "is_incremental": false,
@@ -736,31 +712,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.ConsoleWindow.html",
-          "hash": "77HoOJ8EumUALo+eB2nm6Q=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TUF.Core.Editor.ReadOnlyDrawer.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TUF.Core.Editor.ReadOnlyDrawer.html",
-          "hash": "oTN6UzcCTDDKYc4zmtsSCA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "api/TUF.Core.Editor.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/TUF.Core.Editor.html",
-          "hash": "jl4kEk4nBWP6mNSemGPEkQ=="
+          "hash": "fjtUxS4l3CnY+ix6VAuD+g=="
         }
       },
       "is_incremental": false,
@@ -808,7 +760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.GameManager.html",
-          "hash": "aB3yciSW+LT2EXTaGj7KYA=="
+          "hash": "VwagDOyWadqr0H7LC6VXOg=="
         }
       },
       "is_incremental": false,
@@ -928,7 +880,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.StageDefinition.html",
-          "hash": "ogVJBK9rlJ/bUxwNjVmx6g=="
+          "hash": "rgs2tmoTVY4zY0kOv7MWJg=="
         }
       },
       "is_incremental": false,
@@ -1624,7 +1576,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeBase.html",
-          "hash": "oB8bgvasHoXMwk7rNAimmQ=="
+          "hash": "DMdx7ASJJR18d8uwTjv2tw=="
         }
       },
       "is_incremental": false,
@@ -1684,7 +1636,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeStage.html",
-          "hash": "FNmR+8hVUsWSRIu1gISJfA=="
+          "hash": "ZRylI790QzbalCCRtU3RFg=="
         }
       },
       "is_incremental": false,
@@ -1696,7 +1648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeStageCollection.html",
-          "hash": "4plX+gBntkb4OnozvTTpvA=="
+          "hash": "UEU3fAGX5ES8andBf2YJLQ=="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeTraining.html",
-          "hash": "+MGjKQODQY81J79kyvj1Nw=="
+          "hash": "ZVSLXioRJ5+P/4f75otM9w=="
         }
       },
       "is_incremental": false,
@@ -1984,7 +1936,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.MainMenu.MainMenuHandler.html",
-          "hash": "TBLQEzHEeCyAEUEDYi8kNg=="
+          "hash": "x26Zxc9Sn4sqmEfC/eqMSg=="
         }
       },
       "is_incremental": false,
@@ -2196,6 +2148,42 @@
     },
     {
       "type": "ManagedReference",
+      "source_relative_path": "api/TUF.ModdingTools.TUFDependencies.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.ModdingTools.TUFDependencies.html",
+          "hash": "JlxmWjEmraMJjzxm/5DjEg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.ModdingTools.TUFModToolsWindow.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.ModdingTools.TUFModToolsWindow.html",
+          "hash": "g4BAYENH1ndYb3C+EySWjw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.ModdingTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.ModdingTools.html",
+          "hash": "CY/7fEKMSOgt7imLHw64rA=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
       "source_relative_path": "api/TUF.Sound.SoundDefinition.yml",
       "output": {
         ".html": {
@@ -2225,6 +2213,54 @@
         ".html": {
           "relative_path": "api/TUF.Sound.html",
           "hash": "PcoAT+C5y7JftrOrXuO8DQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Stages.SpawnPointManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Stages.SpawnPointManager.html",
+          "hash": "eGcf9Ovos0u1VQcrolHosg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Stages.SpawnPointManagerEditor.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Stages.SpawnPointManagerEditor.html",
+          "hash": "p8EGJro5TeYq15z26lSpkw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Stages.StageTools.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Stages.StageTools.html",
+          "hash": "S3wYgcMzJq177yeURtSH6w=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Stages.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Stages.html",
+          "hash": "umFTSigYttNYsLC8OQJgew=="
         }
       },
       "is_incremental": false,
@@ -2380,7 +2416,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "028WY06+bUfEtqQYH+zQbA=="
+          "hash": "A8kANkfhB5mGg2OTg7OC7g=="
         }
       },
       "is_incremental": false,
@@ -2400,11 +2436,11 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/coniunctis.md",
+      "source_relative_path": "modGuide/index.md",
       "output": {
         ".html": {
-          "relative_path": "manual/coniunctis.html",
-          "hash": "IjtW8anYVqgpi4KJ5VUrcw=="
+          "relative_path": "modGuide/index.html",
+          "hash": "zACLZWfcPr9NgEJQ43oKbQ=="
         }
       },
       "is_incremental": false,
@@ -2412,11 +2448,23 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "manual/etiam.md",
+      "source_relative_path": "modGuide/installMods.md",
       "output": {
         ".html": {
-          "relative_path": "manual/etiam.html",
-          "hash": "uSZGfyh0YBZR/4WwKtzcFw=="
+          "relative_path": "modGuide/installMods.html",
+          "hash": "zs30ftD2c0/UwCCQ1ocoTw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "modGuide/setup.md",
+      "output": {
+        ".html": {
+          "relative_path": "modGuide/setup.html",
+          "hash": "hLWHcKo9iNPzdkWoBE7TVA=="
         }
       },
       "is_incremental": false,
@@ -2424,11 +2472,11 @@
     },
     {
       "type": "Toc",
-      "source_relative_path": "manual/toc.yml",
+      "source_relative_path": "modGuide/toc.yml",
       "output": {
         ".html": {
-          "relative_path": "manual/toc.html",
-          "hash": "2q0qq03gpYNjYV8lSAAcVw=="
+          "relative_path": "modGuide/toc.html",
+          "hash": "uHRXt2QQcvI7oc/HhLEYMA=="
         }
       },
       "is_incremental": false,
@@ -2462,7 +2510,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "poWCeg1m8qKyEi0xpakkcQ=="
+          "hash": "ZdyK4CbJvUhGO7GIrw926A=="
         }
       },
       "is_incremental": false,
@@ -2483,13 +2531,13 @@
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 3,
+          "total_file_count": 4,
           "skipped_file_count": 0
         },
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 196,
+          "total_file_count": 199,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

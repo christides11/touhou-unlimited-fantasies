@@ -5,11 +5,9 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>Namespace TUF.Combat
-   | Touhou Unlimited Fantasies Documentation </title>
+    <title>Setup | Touhou Unlimited Fantasies Documentation </title>
     <meta name="viewport" content="width=device-width">
-    <meta name="title" content="Namespace TUF.Combat
-   | Touhou Unlimited Fantasies Documentation ">
+    <meta name="title" content="Setup | Touhou Unlimited Fantasies Documentation ">
     <meta name="generator" content="docfx 2.56.2.0">
     
     <link rel="shortcut icon" href="../favicon.ico">
@@ -78,47 +76,25 @@
         </div>
         <div class="article row grid-right">
           <div class="col-md-10">
-            <article class="content wrap" id="_content" data-uid="TUF.Combat">
-  
-  <h1 id="TUF_Combat" data-uid="TUF.Combat" class="text-break">Namespace TUF.Combat
-  </h1>
-  <div class="markdown level0 summary"></div>
-  <div class="markdown level0 conceptual"></div>
-  <div class="markdown level0 remarks"></div>
-    <h3 id="classes">Classes
-  </h3>
-      <h4><a class="xref" href="TUF.Combat.AttackDefinition.html">AttackDefinition</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.AttackEventDefinition.html">AttackEventDefinition</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.AttackFaceLockonWindow.html">AttackFaceLockonWindow</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.BoxGroup.html">BoxGroup</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.DetectionBox.html">DetectionBox</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.Hitbox.html">Hitbox</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.Hurtbox.html">Hurtbox</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.LoopBulletPatternAction.html">LoopBulletPatternAction</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.MovesetAttackNode.html">MovesetAttackNode</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.MovesetDefinition.html">MovesetDefinition</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.StatusEffectArea.html">StatusEffectArea</a></h4>
-      <section></section>
-    <h3 id="enums">Enums
-  </h3>
-      <h4><a class="xref" href="TUF.Combat.EntityTeams.html">EntityTeams</a></h4>
-      <section></section>
-      <h4><a class="xref" href="TUF.Combat.HurtReactions.html">HurtReactions</a></h4>
-      <section></section>
-    <h3 id="delegates">Delegates
-  </h3>
-      <h4><a class="xref" href="TUF.Combat.DetectionBox.DetectAction.html">DetectionBox.DetectAction</a></h4>
-      <section></section>
+            <article class="content wrap" id="_content" data-uid="">
+<h1 id="setup">Setup</h1>
+
+<p>Before you get started modding, there&#39;s are a few tools that we need to get.</p>
+<h2 id="download-tools">Download Tools</h2>
+<p>The first thing you should get is the modding tools, which come with the game. You can find it <a href="https://christides.itch.io/touhou-unlimited-fantasies">here</a>.</p>
+<h2 id="install-unity">Install Unity</h2>
+<p>Next you&#39;ll need to download the Specific Unity version used by the toolkit. You can find out which version this is by checking the <code>info.txt</code> in the <code>Modding</code> folder. </p>
+<p>Once you get that, you should <a href="https://unity3d.com/get-unity/download">download Unity Hub here</a>, and then use it to get the correct version of Unity.</p>
+<h2 id="creating-project">Creating Project</h2>
+<p>Now that you have Unity installed, you want to create a new project where you&#39;ll be creating mods. 
+Using Unity Hub, create a new <strong>Universal Render Pipeline</strong> template project. Name it whatever you like.
+Once it opens you can delete all the folders except for the <code>Settings</code>, as you won&#39;t be needing them.</p>
+<h2 id="importing-modio-package">Importing Mod.io Package</h2>
+<p>First we have to import the Mod.io package, which we use to keep track of what mods the user has installed. You can find a link to the proper package in the <code>info.txt</code> in the <code>Modding</code> folder.</p>
+<h2 id="finalizing-the-setup">Finalizing the Setup</h2>
+<p>Now import the <code>InitializerTool</code> package that&#39;s in the <code>Modding</code> folder. This will handle getting the rest of the files we need.
+In Unity, go to <code>TUF&gt;Initializer</code> on the top navigation bar. It should open a window like this</p>
+<p>The first thing we&#39;ll do is install the needed packages by clicking on their buttons one by one. Once you finish that, the <code>Finalize</code> button should be available to you. Press it and locate the game&#39;s .exe file, and if you did everything right, you should get a <code>Successfully imported mod tools.</code> message in the console. Now we&#39;re ready to create mods.</p>
 </article>
           </div>
           
@@ -126,6 +102,9 @@
             <div class="sideaffix">
               <div class="contribution">
                 <ul class="nav">
+                  <li>
+                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Documentation/modGuide/setup.md/#L1" class="contribution-link">Improve this Doc</a>
+                  </li>
                 </ul>
               </div>
               <nav class="bs-docs-sidebar hidden-print hidden-xs hidden-sm affix" id="affix">
