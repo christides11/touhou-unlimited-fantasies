@@ -7690,8 +7690,7 @@ MonoBehaviour:
   consoleReader: {fileID: 273061155}
   readEditorParams: 0
   editorArgs:
-  - +sgm=christides11.tidespack/Reimu,core/stage,christides11.tidespack/Fantastic
-    Night Parade Scroll ~ Mystic Flier
+  - +sgm=christides11.tidespack/Reimu,core/stage,christides11.tidespack/EOSD_FNPS
   mods: []
 --- !u!1 &2086142363
 GameObject:

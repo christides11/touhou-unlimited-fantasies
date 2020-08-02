@@ -89,6 +89,30 @@ MonoBehaviour:
     buildActions:
     - {fileID: 5306991047793594157}
     - {fileID: 7787600329505294563}
+    - {fileID: 100828190524961538}
+--- !u!114 &100828190524961538
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e19aa5315bf4a409c07e84ca8c4248, type: 3}
+  m_Name: FileOperation
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: FileOperation
+  note: 
+  actionEnabled: 1
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: Assets\info.txt
+  outputPath: bin/$YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION/Modding/info.txt
+  recursiveSearch: 1
+  operation: 1
 --- !u!114 &5306991047793594157
 MonoBehaviour:
   m_ObjectHideFlags: 0
