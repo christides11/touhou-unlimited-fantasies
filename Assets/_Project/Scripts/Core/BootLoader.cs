@@ -2,6 +2,9 @@
 using TUF.Modding;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using ModIO;
+using System.Collections.Generic;
+using ModManager = TUF.Modding.ModManager;
 
 namespace TUF.Core
 {
@@ -19,6 +22,8 @@ namespace TUF.Core
         public bool readEditorParams;
         public string[] editorArgs;
 
+        public List<string> mods;
+
         private void Awake()
         {
             if(targetFramerate > 0)
@@ -30,6 +35,7 @@ namespace TUF.Core
         async void Start()
         {
             gameManager.Initialize();
+            mods = ModIO.ModManager.GetInstalledModDirectories(true);
             modManager.Init();
             modManager.ModLoader.LoadAllMods();
 

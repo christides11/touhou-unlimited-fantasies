@@ -31,7 +31,12 @@
                 "src": "manual",
                 "files": [ "toc.yml", "*.md" ],
                 "dest": "manual"
-            }
+            },
+			{
+				"src": "modGuide",
+				"files": [ "toc.yml", "*.md" ],
+                "dest": "modGuide"
+			}
         ],
         "overwrite": [
             {
@@ -54,7 +59,7 @@
                 }
             }
         },
-        "xref": [ "https://normanderwan.github.io/DocFxForUnity/Unity/xrefmap.yml" ],
+        "xref": [ "https://normanderwan.github.io/DocFxForUnity/Unity/2019.4/xrefmap.yml" ],
         "xrefService": [ "https://xref.docs.microsoft.com/query?uid={uid}" ],
         "dest": "../_site"
     }

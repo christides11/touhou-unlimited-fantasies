@@ -10,6 +10,5 @@ namespace TUF.Core
         public string stageName;
         public string sceneName;
         public bool selectableForGamemodes;
-        public Vector3[] spawnPosition;
     }
 }

@@ -1,30 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-506668513032588967
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 97d88f7d353534a4fbdeb11196057db7, type: 3}
-  m_Name: UploadItch
-  m_EditorClassIdentifier: 
-  actionType: 1
-  actionName: UploadItch
-  note: 
-  actionEnabled: 1
-  filter:
-    condition: 0
-    clauses: []
-  pathToButlerExe: C:\Users\chris\AppData\Roaming\itch\bin\butler.exe
-  nameOfItchUser: ChrisTides
-  nameOfItchGame: touhou-unlimited-fantasies
-  useGeneratedBuildVersion: 0
-  showUploadProgress: 1
-  itchChannelOverride: 
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43,7 +18,7 @@ MonoBehaviour:
     openFolderPostBuild: 1
   _productParameters:
     buildCounter: 0
-    lastGeneratedVersion: 1.0.124.4914
+    lastGeneratedVersion: 0.0.1
     version: 0.0.1
     autoGenerate: 0
   _releaseTypeList:
@@ -112,4 +87,50 @@ MonoBehaviour:
     buildActions: []
   _postBuildActions:
     buildActions:
-    - {fileID: -506668513032588967}
+    - {fileID: 5306991047793594157}
+    - {fileID: 7787600329505294563}
+--- !u!114 &5306991047793594157
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86e19aa5315bf4a409c07e84ca8c4248, type: 3}
+  m_Name: FileOperation
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: FileOperation
+  note: 
+  actionEnabled: 1
+  filter:
+    condition: 0
+    clauses: []
+  inputPath: TUFModdingTools.unitypackage
+  outputPath: bin/$YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION/Modding/TUFModdingTools.unitypackage
+  recursiveSearch: 1
+  operation: 1
+--- !u!114 &7787600329505294563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 90903a1e113dcdf429326941f0236a13, type: 3}
+  m_Name: ExportPackageOperation
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: ExportPackageOperation
+  note: 
+  actionEnabled: 1
+  filter:
+    condition: 0
+    clauses: []
+  packageFolderPath: Assets\Modding\Initializer
+  outputPath: bin/$YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION/Modding
+  packageName: InitializerTool

@@ -18,12 +18,12 @@ namespace TUF.GameMode
         {
             base.StartGameMode(character, scene, stageCollection);
 
-            playerCharacters.Add(simObjectManager.SpawnObject(character.entity, scene.spawnPosition[0], Quaternion.identity));
+            playerCharacters.Add(simObjectManager.SpawnObject(character.entity, spawnPointManager.GetSpawnPoint().position, Quaternion.identity));
             playerCamera.UpdateTarget(playerCharacters[0].transform);
             playerCharacters[0].GetComponent<EntityManager>().Init(gameManager, playerCamera, CAF.Input.InputControlType.Direct);
             playerCamera.Initialize(playerCharacters[0].GetComponent<EntityManager>());
 
-            GameObject d = simObjectManager.SpawnObject(dummy.gameObject, scene.spawnPosition[0] + new Vector3(0, 0, 5), 
+            GameObject d = simObjectManager.SpawnObject(dummy.gameObject, spawnPointManager.GetSpawnPoint().position + new Vector3(0, 0, 5), 
                 Quaternion.identity);
             d.GetComponent<EntityManager>().Init(gameManager, null, CAF.Input.InputControlType.None);
         }

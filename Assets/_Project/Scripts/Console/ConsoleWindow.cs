@@ -7,6 +7,7 @@ namespace TUF.Core
 {
     public class ConsoleWindow : MonoBehaviour
     {
+        public Camera consoleWindowCamera;
         [SerializeField] private GameObject container;
         [SerializeField] private TextMeshProUGUI consoleText;
 

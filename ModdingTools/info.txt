@@ -1,0 +1,17 @@
+Unity 2019.4.5f1
+
+.dlls Needed:
+	- AsyncAwait_CSharp
+	- CAF
+	- kcc_CSharp
+	- Kilosoft_CSharp
+	- Rewired_Core
+	- Rewired_CSharp
+	- Rewired_Windows
+	- TUF_CSharp
+	- UMod
+	- UMod-Shared
+	
+Packages Needed:
+	- Cinemachine 2.6.0
+	- xNode 1.8.0 (https://github.com/Siccity/xNode)

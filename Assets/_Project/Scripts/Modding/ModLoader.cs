@@ -26,7 +26,7 @@ namespace TUF.Modding
             this.modManager = modManager;
             modInstallPath = Path.Combine(Application.persistentDataPath, "Mods");
             Directory.CreateDirectory(modInstallPath);
-            modDirectory = new ModDirectory(modInstallPath);
+            modDirectory = new ModDirectory(modInstallPath, true, false);
             inited = true;
             gameManager.ConsoleWindow.WriteLine($"ModLoader initialized. Path: {modInstallPath}");
             UpdateModList();

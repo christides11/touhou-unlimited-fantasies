@@ -29,6 +29,7 @@ namespace TUF.Core
         [SerializeField] private ModManager modManager;
         [SerializeField] private ConsoleWindow consoleWindow;
         [SerializeField] private MusicManager musicManager;
+        [SerializeField] public ModIO.UI.ModBrowser modBrowser;
         public ControlMapper cMapper;
 
         [Header("Prefabs")]

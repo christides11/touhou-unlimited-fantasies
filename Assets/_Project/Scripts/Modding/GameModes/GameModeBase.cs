@@ -9,6 +9,7 @@ using UnityEngine;
 using ReadOnlyAttribute = TUF.Core.ReadOnlyAttribute;
 using SimObjectManager = TUF.Core.SimObjectManager;
 using System;
+using TUF.Stages;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -28,6 +29,8 @@ namespace TUF.GameMode{
         protected GameManager gameManager;
         protected SimObjectManager simObjectManager;
         protected bool gamemodeActive;
+
+        protected SpawnPointManager spawnPointManager;
 
         protected List<GameObject> playerCharacters = new List<GameObject>();
         protected PlayerCamera playerCamera;
@@ -87,6 +90,12 @@ namespace TUF.GameMode{
         {
             this.gameManager = gameManager;
             simObjectManager = new SimObjectManager();
+            spawnPointManager = GameObject.FindObjectOfType<SpawnPointManager>();
+            if(spawnPointManager == null)
+            {
+                string tx = $"<color=red>SCENE HAS NO SPAWNPOINTMANAGER!</color>";
+                gameManager.ConsoleWindow.WriteLine(tx);
+            }
         }
 
         /// <summary>
@@ -100,7 +109,7 @@ namespace TUF.GameMode{
         {
             this.stageCollection = stageCollection;
             this.currentStage = currentStage;
-            playerCamera = Instantiate(gameManager.playerCamera.gameObject, currentStage.spawnPosition[0], Quaternion.identity)
+            playerCamera = Instantiate(gameManager.playerCamera.gameObject, spawnPointManager.GetSpawnPoint().position, Quaternion.identity)
                 .GetComponent<PlayerCamera>();
             ActivateGamemode();
         }

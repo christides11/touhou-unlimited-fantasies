@@ -21,7 +21,7 @@ namespace TUF.GameMode
         {
             base.StartGameMode(character, currentStage, stageCollection);
 
-            playerCharacters.Add(simObjectManager.SpawnObject(character.entity, currentStage.spawnPosition[0], Quaternion.identity));
+            playerCharacters.Add(simObjectManager.SpawnObject(character.entity, spawnPointManager.GetSpawnPoint().position, Quaternion.identity));
             playerCamera.UpdateTarget(playerCharacters[0].transform);
             playerCharacters[0].GetComponent<EntityManager>().Init(gameManager, playerCamera, CAF.Input.InputControlType.Direct);
         }

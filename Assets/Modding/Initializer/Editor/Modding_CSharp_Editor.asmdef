@@ -1,0 +1,17 @@
+{
+    "name": "Modding_CSharp_Editor",
+    "references": [
+        "GUID:69b4537d4ecc09c4b861d7f141a1a03f"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
