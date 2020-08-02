@@ -269,6 +269,12 @@
     <Reference Include="SyntaxTree.VisualStudio.Unity.Bridge">
       <HintPath>C:/Program Files (x86)/Microsoft Visual Studio Tools for Unity/16.0/Editor/SyntaxTree.VisualStudio.Unity.Bridge.dll</HintPath>
     </Reference>
+    <Reference Include="Ionic.Zip.Unity">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Plugins/dotnetzip-for-unity/Release/Ionic.Zip.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Plugins/JsonNet/lib/Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
     </Reference>
@@ -349,12 +355,6 @@
     </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
-    </Reference>
-    <Reference Include="Ionic.Zip.Unity">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Plugins/dotnetzip-for-unity/Release/Ionic.Zip.Unity.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Plugins/JsonNet/lib/Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.5f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Spirit
   - Enemy
+  - PlayerSpawn
   layers:
   - Default
   - TransparentFX

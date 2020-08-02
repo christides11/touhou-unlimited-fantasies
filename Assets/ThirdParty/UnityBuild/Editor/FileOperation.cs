@@ -154,6 +154,11 @@ public class FileOperation : BuildAction, IPreBuildAction, IPreBuildPerPlatformA
         }
         else
         {
+            string p = Path.GetDirectoryName(outputPath);
+            if (!Directory.Exists(p))
+            {
+                Directory.CreateDirectory(p);
+            }
             FileUtil.CopyFileOrDirectory(inputPath, outputPath);
         }
     }

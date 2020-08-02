@@ -8,6 +8,7 @@ using UnityEditor.PackageManager;
 using System.Threading.Tasks;
 using System.Linq;
 using System.IO;
+using System.Reflection;
 
 namespace TUF.ModdingTools
 {
@@ -18,7 +19,7 @@ namespace TUF.ModdingTools
         public static ListRequest listRequest;
 
         // Add menu named "My Window" to the Window menu
-        [MenuItem("TUF/Modding Tools")]
+        [MenuItem("TUF/Initializer")]
         static void Init()
         {
             // Get existing open window or if none, make a new one:
@@ -33,10 +34,6 @@ namespace TUF.ModdingTools
 
         private void OnGUI()
         {
-            NavBar();
-
-            GUILayout.Space(20);
-
             switch (currentTab)
             {
                 case 0:
@@ -74,9 +71,10 @@ namespace TUF.ModdingTools
             EditorGUILayout.Space();
 
             EditorGUI.BeginDisabledGroup(packagesInstalled < TUFDependencies.packages.Length);
-            GUILayout.Label("2. Get DLLs");
-            if (GUILayout.Button("Get DLLs"))
+            GUILayout.Label("2. Finalize");
+            if (GUILayout.Button("Finalize"))
             {
+                // GET DLLs
                 string path = EditorUtility.OpenFilePanel("Select Game Executable", "", "exe");
 
                 if (!File.Exists(path))
@@ -106,21 +104,25 @@ namespace TUF.ModdingTools
                         Debug.LogWarning($@"Modding Tools: Couldn't find {assembly}.dll.");
                     }
                 }
+
+                // IMPORT PACKAGE
+                AssetDatabase.ImportPackage(Path.GetDirectoryName(path) + @"\Modding\TUFModdingTools.unitypackage", false);
+
                 AssetDatabase.Refresh();
+
+                ClearConsole();
+
+                Debug.Log("Successfully imported mod tools.");
             }
             EditorGUI.EndDisabledGroup();
         }
 
-        public void NavBar()
+        private void ClearConsole()
         {
-            EditorGUILayout.BeginHorizontal();
-
-            if (GUILayout.Button("Initialization"))
-            {
-                currentTab = 0;
-            }
-
-            EditorGUILayout.EndHorizontal();
+            var assembly = Assembly.GetAssembly(typeof(SceneView));
+            var type = assembly.GetType("UnityEditor.LogEntries");
+            var method = type.GetMethod("Clear");
+            method.Invoke(new object(), null);
         }
     }
 }
