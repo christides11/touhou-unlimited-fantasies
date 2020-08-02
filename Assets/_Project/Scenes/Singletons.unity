@@ -7937,9 +7937,8 @@ MonoBehaviour:
   consoleWindow: {fileID: 1482370770}
   musicManager: {fileID: 2100487051}
   modBrowser: {fileID: 56247231}
-  cMapper: {fileID: 1867955591}
-  gameVars: {fileID: 11400000, guid: b11034d549bfa394f93848f8ddbef6f6, type: 2}
-  playerCamera: {fileID: 1272570577, guid: 5f2778e0fc6dcf84899bf63a47d121b9, type: 3}
+  controlMapper: {fileID: 1867955591}
+  gameVariables: {fileID: 11400000, guid: b11034d549bfa394f93848f8ddbef6f6, type: 2}
 --- !u!114 &2100487050
 MonoBehaviour:
   m_ObjectHideFlags: 0

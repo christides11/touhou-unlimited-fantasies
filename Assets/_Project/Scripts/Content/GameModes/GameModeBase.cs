@@ -109,7 +109,8 @@ namespace TUF.GameMode{
         {
             this.stageCollection = stageCollection;
             this.currentStage = currentStage;
-            playerCamera = Instantiate(gameManager.playerCamera.gameObject, spawnPointManager.GetSpawnPoint().position, Quaternion.identity)
+            playerCamera = Instantiate(gameManager.gameVariables.playerCameraPrefab.gameObject, 
+                spawnPointManager.GetSpawnPoint().position, Quaternion.identity)
                 .GetComponent<PlayerCamera>();
             ActivateGamemode();
         }

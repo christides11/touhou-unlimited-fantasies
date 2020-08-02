@@ -20,7 +20,7 @@ namespace TUF.Menus.Options
 
         public void OpenControlSettings()
         {
-            GameManager.current.cMapper.Open();
+            GameManager.current.controlMapper.Open();
         }
     }
 }

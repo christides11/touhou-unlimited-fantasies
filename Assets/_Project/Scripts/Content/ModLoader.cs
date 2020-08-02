@@ -8,12 +8,25 @@ using TUF.Core;
 
 namespace TUF.Modding
 {
+    /// <summary>
+    /// Handles loading and unloading mods, along with keeping track of what is
+    /// currently installed.
+    /// </summary>
     [System.Serializable]
     public class ModLoader
     {
+        /// <summary>
+        /// A list of all mods in the Mods folder.
+        /// </summary>
         public List<ModInfo> modList = new List<ModInfo>();
+        /// <summary>
+        /// A list of all currently enabled mods.
+        /// </summary>
         public Dictionary<string, ModHost> loadedMods = new Dictionary<string, ModHost>();
-        public string modInstallPath = "";
+        /// <summary>
+        /// The path where mods are installed.
+        /// </summary>
+        private string modInstallPath = "";
         private ModDirectory modDirectory = null;
 
         protected bool inited;

@@ -121,7 +121,7 @@ namespace TUF.Entities.Shared
                 patternManager.transform.rotation = controller.visual.transform.rotation;
                 BulletPatternManager bpm = patternManager.AddComponent<BulletPatternManager>();
                 bpm.Initialize(new BulletPatternManagerSettings(), bulletPatternGroup.bulletPattern, controller.visualTransform.transform.position);
-                controller.GameManager.GameModeHanlder.SimObjectManager.RegisterObject(bpm);
+                controller.GameManager.GameMode.SimObjectManager.RegisterObject(bpm);
             }
         }
 

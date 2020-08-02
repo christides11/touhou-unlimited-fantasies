@@ -56,7 +56,7 @@ namespace TUF.Entities
 
         protected override CAF.Combat.Hitbox InstantiateHitbox(Vector3 position, Quaternion rotation)
         {
-            return GameObject.Instantiate(((EntityManager)controller).GameManager.gameVars.combat.hitbox,
+            return GameObject.Instantiate(((EntityManager)controller).GameManager.gameVariables.combat.hitbox,
                 position, rotation).GetComponent<Combat.Hitbox>();
         }
 

@@ -46,7 +46,7 @@ namespace TUF.Core
                     continue;
                 }
 
-                GameObject entity = gameManager.GameModeHanlder.SimObjectManager.SpawnObject(entityDefinition.entity, entitySpawns[i].spawnPosition.position,
+                GameObject entity = gameManager.GameMode.SimObjectManager.SpawnObject(entityDefinition.entity, entitySpawns[i].spawnPosition.position,
                     Quaternion.identity);
 
                 entity.GetComponent<EntityCombatManager>().SetTeam(EntityTeams.Enemy);
@@ -63,7 +63,7 @@ namespace TUF.Core
 
             if (currentHealth <= 0)
             {
-                gameManager.GameModeHanlder.SimObjectManager.DestroyObject(gameObject.GetComponent<CAF.Simulation.SimObject>());
+                gameManager.GameMode.SimObjectManager.DestroyObject(gameObject.GetComponent<CAF.Simulation.SimObject>());
             }
         }
     }

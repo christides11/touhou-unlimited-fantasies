@@ -23,7 +23,7 @@ namespace TUF.Entities
         public void HandlePushForce(Collider other)
         {
             Vector3 dir = Controller.pushbox.transform.position - other.transform.position;
-            forcePushbox = dir * Controller.GameManager.gameVars.pushboxForce;
+            forcePushbox = dir * Controller.GameManager.gameVariables.pushboxForce;
         }
 
         public override void SetForceDirect(Vector3 movement, Vector3 gravity)

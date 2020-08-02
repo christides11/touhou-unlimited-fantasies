@@ -12,17 +12,32 @@ using TUF.Inputs;
 
 namespace TUF.Core
 {
+    /// <summary>
+    /// The Game Manager keeps references to important scripts 
+    /// and provides functionally for handling the overall game state.
+    /// </summary>
     public class GameManager : MonoBehaviour
     {
+        /// <summary>
+        /// A singleton referring to the currently active Game Manager.
+        /// </summary>
         public static GameManager current;
 
         public ModManager ModManager { get { return modManager; } }
-        public GameModeBase GameModeHanlder { get { return currentGameModeHandler; } }
         public ConsoleWindow ConsoleWindow { get { return consoleWindow; } }
+        /// <summary>
+        /// Returns the current Game Mode that we are in.
+        /// If we aren't in any Game Mode, returns null.
+        /// </summary>
+        public GameModeBase GameMode { get; protected set; } = null;
 
-        protected GameModeBase currentGameModeHandler;
-
+        /// <summary>
+        /// A definition of content that's included with TUF.
+        /// </summary>
         [SerializeField] private ModDefinition coreMod;
+        /// <summary>
+        /// A definition of a mod included with TUF.
+        /// </summary>
         [SerializeField] private ModDefinition internalMod;
 
         [Header("References")]
@@ -30,12 +45,21 @@ namespace TUF.Core
         [SerializeField] private ConsoleWindow consoleWindow;
         [SerializeField] private MusicManager musicManager;
         [SerializeField] public ModIO.UI.ModBrowser modBrowser;
-        public ControlMapper cMapper;
+        /// <summary>
+        /// The UI that allows us to change our controls. Comes from Rewired.
+        /// </summary>
+        public ControlMapper controlMapper;
 
+        /// <summary>
+        /// Stores variables and prefabs that are commonly used.
+        /// </summary>
         [Header("Prefabs")]
-        public GameVariables gameVars;
-        public PlayerCamera playerCamera;
+        public GameVariables gameVariables;
 
+        /// <summary>
+        /// Initializes the Game Manager. This is called by the Boot Loader,
+        /// so don't call this manually.
+        /// </summary>
         public virtual void Initialize()
         {
             GlobalInputManager.instance = new GlobalInputManager();
@@ -49,7 +73,9 @@ namespace TUF.Core
         /// Loads the given scene, and returns the name of the
         /// current active scene.
         /// </summary>
-        /// <param name="SceneName"></param>
+        /// <param name="SceneName">The name of the scene to load.</param>
+        /// <param name="setActiveScene">If the scene should be set as the active one.</param>
+        /// <returns>The scene that was active before this operation.</returns>
         /// <returns></returns>
         public virtual async Task<string> LoadSceneAsync(string SceneName, bool setActiveScene = true)
         {
@@ -66,9 +92,12 @@ namespace TUF.Core
         /// Loads the gamemode and the scene provided,
         /// then starts the gamemode.
         /// </summary>
-        /// <param name="entity"></param>
-        /// <param name="gamemode"></param>
-        /// <param name="stage"></param>
+        /// <param name="entity">The Entity the player will be controlling.</param>
+        /// <param name="gamemode">The Game Mode the player will be playing.</param>
+        /// <param name="stage">The Stage the player will be playing on.</param>
+        /// <param name="stageCollection">The Stage Collection that will be played through, if applicable.</param>
+        /// <param name="sceneToUnload">The scene to unload. This should be any scene that's loaded besides Singletons.</param>
+        /// <returns></returns>
         public virtual async Task StartGameMode(ModObjectReference entity, ModObjectReference gamemode, ModObjectReference stage,
             ModObjectReference stageCollection = null, string sceneToUnload = null) {
             EntityDefinition entityDefinition = modManager.GetEntity(entity);
@@ -110,22 +139,22 @@ namespace TUF.Core
             }
             SceneManager.SetActiveScene(SceneManager.GetSceneByName(stageDefinition.sceneName));
 
-            currentGameModeHandler.InitGameMode(this);
-            currentGameModeHandler.StartGameMode(entityDefinition, stageDefinition);
+            GameMode.InitGameMode(this);
+            GameMode.StartGameMode(entityDefinition, stageDefinition);
         }
 
         /// <summary>
-        /// Loads the given gamemode and sets it as the active one.
+        /// Loads the given Game Mode and sets it as the active one.
         /// </summary>
-        /// <param name="gameModeDefinition"></param>
+        /// <param name="gameModeDefinition">The Game Mode to load.</param>
         protected virtual void SetGameMode(GameModeDefinition gameModeDefinition)
         {
-            if (currentGameModeHandler)
+            if (this.GameMode)
             {
-                Destroy(currentGameModeHandler.gameObject);
+                Destroy(this.GameMode.gameObject);
             }
             GameObject gameMode = Instantiate(gameModeDefinition.gameModeHandler.gameObject, transform);
-            currentGameModeHandler = gameMode.GetComponent<GameModeBase>();
+            this.GameMode = gameMode.GetComponent<GameModeBase>();
         }
     }
 }
