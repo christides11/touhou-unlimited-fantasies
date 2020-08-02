@@ -3272,6 +3272,12 @@ references:
   commentId: F:TUF.Core.StageDefinition.selectableForGamemodes
   fullName: TUF.Core.StageDefinition.selectableForGamemodes
   nameWithType: StageDefinition.selectableForGamemodes
+- uid: TUF.Core.StageDefinition.stageIdentifier
+  name: stageIdentifier
+  href: api/TUF.Core.StageDefinition.html#TUF_Core_StageDefinition_stageIdentifier
+  commentId: F:TUF.Core.StageDefinition.stageIdentifier
+  fullName: TUF.Core.StageDefinition.stageIdentifier
+  nameWithType: StageDefinition.stageIdentifier
 - uid: TUF.Core.StageDefinition.stageName
   name: stageName
   href: api/TUF.Core.StageDefinition.html#TUF_Core_StageDefinition_stageName

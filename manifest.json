@@ -880,7 +880,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.StageDefinition.html",
-          "hash": "rgs2tmoTVY4zY0kOv7MWJg=="
+          "hash": "kJmUOFgyGMtVnMkIDzshKQ=="
         }
       },
       "is_incremental": false,
@@ -2068,7 +2068,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.ModDefinition.html",
-          "hash": "oVmc/4aptcJwvTz5q2OGeQ=="
+          "hash": "lI01g9ZLG9xTRrjnk2NWDg=="
         }
       },
       "is_incremental": false,
