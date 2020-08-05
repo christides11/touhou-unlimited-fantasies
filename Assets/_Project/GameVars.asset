@@ -12,6 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f49fd644a193f894b93a2b48981081fe, type: 3}
   m_Name: GameVars
   m_EditorClassIdentifier: 
+  playerCameraPrefab: {fileID: 1272570577, guid: 5f2778e0fc6dcf84899bf63a47d121b9,
+    type: 3}
   inputBuffer: 3
   pushboxForce: 1
   combat:

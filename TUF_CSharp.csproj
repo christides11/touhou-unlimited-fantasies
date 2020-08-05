@@ -125,7 +125,10 @@
     <Compile Include="Assets\_Project\Scripts\Console\ConsoleInputProcessor.cs" />
     <Compile Include="Assets\_Project\Scripts\Console\ConsoleReader.cs" />
     <Compile Include="Assets\_Project\Scripts\Console\ConsoleWindow.cs" />
-    <Compile Include="Assets\_Project\Scripts\Content\GameModes\Components\GameModeComponent.cs" />
+    <Compile Include="Assets\_Project\Scripts\Content\GameModes\Components\GameModeComponentBase.cs" />
+    <Compile Include="Assets\_Project\Scripts\Content\GameModes\Components\GameModeComponentData.cs" />
+    <Compile Include="Assets\_Project\Scripts\Content\GameModes\Components\GameModeComponentHolder.cs" />
+    <Compile Include="Assets\_Project\Scripts\Content\GameModes\Components\GameModeComponentStyleMeter.cs" />
     <Compile Include="Assets\_Project\Scripts\Content\GameModes\Components\GameModeComponentTimer.cs" />
     <Compile Include="Assets\_Project\Scripts\Content\GameModes\GameModeBase.cs" />
     <Compile Include="Assets\_Project\Scripts\Content\GameModes\GameModeDefinition.cs" />
@@ -140,6 +143,9 @@
     <Compile Include="Assets\_Project\Scripts\Content\Stages\SpawnPointManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Content\Stages\StageCollection.cs" />
     <Compile Include="Assets\_Project\Scripts\Content\Stages\StageDefinition.cs" />
+    <Compile Include="Assets\_Project\Scripts\Content\UI\UIDefinition.cs" />
+    <Compile Include="Assets\_Project\Scripts\Content\UI\UIOverrideBase.cs" />
+    <Compile Include="Assets\_Project\Scripts\Content\UI\UIOverrideDefinition.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\AIBrain.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Characters\CharacterInput.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Characters\CharacterManager.cs" />
@@ -209,12 +215,15 @@
     <Compile Include="Assets\_Project\Scripts\Managers\GameManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\ModManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\MusicManager.cs" />
+    <Compile Include="Assets\_Project\Scripts\Managers\SaveLoadManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\SimObjectManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\SoundManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\Variables\CombatVariables.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\Variables\GameVariables.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\Variables\SoundDefinition.cs" />
     <Compile Include="Assets\_Project\Scripts\StatusEffectArea.cs" />
+    <Compile Include="Assets\_Project\Scripts\UI\ManageModsMenu.cs" />
+    <Compile Include="Assets\_Project\Scripts\UI\ModsMenu.cs" />
     <Compile Include="Assets\_Project\Scripts\UI\OptionsMenu.cs" />
     <None Include="Assets\_Project\TUF_CSharp.asmdef" />
     <Reference Include="UnityEngine">

@@ -75,7 +75,7 @@
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
     <None Include="Assets\UMod\Resources\Source\Usage.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\UMod\Resources\Editor\Data\Readme.txt" />
+    <None Include="Assets\TUFModdingTools\UMod\Resources\Editor\Data\Readme.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
     <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
@@ -87,6 +87,7 @@
     <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
     <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
     <None Include="Assets\Modding\info.txt" />
+    <None Include="Assets\info.txt" />
     <None Include="Assets\Plugins\Sirenix\Assemblies\link.xml" />
     <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
     <None Include="Assets\Plugins\dotnetzip-for-unity\Readme.txt" />
@@ -332,38 +333,14 @@
     <Reference Include="Rewired_Windows">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows.dll</HintPath>
     </Reference>
-    <Reference Include="Trivial.CodeSecurity">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Trivial.CodeSecurity.dll</HintPath>
-    </Reference>
-    <Reference Include="Trivial.Mono.Cecil">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Trivial.Mono.Cecil.dll</HintPath>
-    </Reference>
     <Reference Include="Trivial.Mono.Cecil.Mdb">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Trivial.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Trivial.Mono.Cecil.Pdb">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Trivial.Mono.Cecil.Pdb.dll</HintPath>
     </Reference>
-    <Reference Include="UMod-Interface">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/UMod-Interface.dll</HintPath>
-    </Reference>
-    <Reference Include="UMod-ModTools">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/UMod-ModTools.dll</HintPath>
-    </Reference>
-    <Reference Include="UMod-Shared">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/UMod-Shared.dll</HintPath>
-    </Reference>
     <Reference Include="UMod">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/UMod.dll</HintPath>
-    </Reference>
-    <Reference Include="Trivial.ImGUI">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/Trivial.ImGUI.dll</HintPath>
-    </Reference>
-    <Reference Include="UMod-BuildEngine">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/UMod-BuildEngine.dll</HintPath>
-    </Reference>
-    <Reference Include="UMod-BuildPipeline">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/UMod-BuildPipeline.dll</HintPath>
     </Reference>
     <Reference Include="UMod-BuildTools-Wizard">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/UMod-BuildTools-Wizard.dll</HintPath>
@@ -374,17 +351,41 @@
     <Reference Include="UMod-Editor">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/UMod-Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UMod-Exporter">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/UMod-Exporter.dll</HintPath>
-    </Reference>
     <Reference Include="UMod-Interface-Editor">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/UMod-Interface-Editor.dll</HintPath>
     </Reference>
-    <Reference Include="UMod-Shared-Editor">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/UMod-Shared-Editor.dll</HintPath>
-    </Reference>
     <Reference Include="ICSharpCode.NRefactory">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/PackageCache/com.unity.render-pipelines.core@7.3.1/Editor/ShaderGenerator/ICSharpCode.NRefactory.dll</HintPath>
+    </Reference>
+    <Reference Include="UMod-BuildEngine">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/Editor/UMod-BuildEngine.dll</HintPath>
+    </Reference>
+    <Reference Include="UMod-Shared-Editor">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/Editor/UMod-Shared-Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="Trivial.ImGUI">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/Editor/Trivial.ImGUI.dll</HintPath>
+    </Reference>
+    <Reference Include="UMod-Shared">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/UMod-Shared.dll</HintPath>
+    </Reference>
+    <Reference Include="Trivial.CodeSecurity">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/Trivial.CodeSecurity.dll</HintPath>
+    </Reference>
+    <Reference Include="Trivial.Mono.Cecil">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/Trivial.Mono.Cecil.dll</HintPath>
+    </Reference>
+    <Reference Include="UMod-Interface">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/UMod-Interface.dll</HintPath>
+    </Reference>
+    <Reference Include="UMod-ModTools">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/UMod-ModTools.dll</HintPath>
+    </Reference>
+    <Reference Include="UMod-BuildPipeline">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/Editor/UMod-BuildPipeline.dll</HintPath>
+    </Reference>
+    <Reference Include="UMod-Exporter">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/Editor/UMod-Exporter.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.5f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

@@ -5,6 +5,8 @@ using UMod;
 using System.IO;
 using System;
 using TUF.Core;
+using Newtonsoft.Json;
+using System.Security.AccessControl;
 
 namespace TUF.Modding
 {
@@ -15,6 +17,7 @@ namespace TUF.Modding
     [System.Serializable]
     public class ModLoader
     {
+        public static string modsLoadedFileName = "LoadedMods.json";
         /// <summary>
         /// A list of all mods in the Mods folder.
         /// </summary>
@@ -40,9 +43,21 @@ namespace TUF.Modding
             modInstallPath = Path.Combine(Application.persistentDataPath, "Mods");
             Directory.CreateDirectory(modInstallPath);
             modDirectory = new ModDirectory(modInstallPath, true, false);
+            Mod.DefaultDirectory = modDirectory;
             inited = true;
             gameManager.ConsoleWindow.WriteLine($"ModLoader initialized. Path: {modInstallPath}");
             UpdateModList();
+            List<string> loadedMods = SaveLoadService.Load<List<string>>("");
+            if(loadedMods == null)
+            {
+                loadedMods = new List<string>();
+            }
+            List<string> unloadedMods = LoadMods(loadedMods);
+            foreach(string um in unloadedMods)
+            {
+                loadedMods.Remove(um);
+            }
+            SaveLoadService.Save(modsLoadedFileName, JsonUtility.ToJson(loadedMods));
         }
 
         public virtual void UpdateModList()
@@ -64,6 +79,7 @@ namespace TUF.Modding
                     mi.path = modDirectory.GetModPath(modName);
                     mi.fileName = modName;
                     IModInfo modInfo = modDirectory.GetMod(mi.fileName);
+                    mi.modName = modInfo.NameInfo.ModName;
                     mi.identifier = $"{modInfo.ModAuthor.ToLower()}.{modInfo.NameInfo.ModName.ToLower()}";
                     modList.Add(mi);
                 }
@@ -79,8 +95,25 @@ namespace TUF.Modding
                     mi.path = modPath;
                     mi.fileName = System.IO.Path.GetFileName(modPath.LocalPath);
                     IModInfo modInfo = ModDirectory.GetMod(new FileInfo(mi.path.LocalPath));
+                    mi.modName = modInfo.NameInfo.ModName;
                     mi.identifier = $"{modInfo.ModAuthor.ToLower()}.{modInfo.NameInfo.ModName.ToLower()}";
                     modList.Add(mi);
+                }
+            }
+        }
+
+        /// <summary>
+        /// Check to see if any mods have loaded that we didn't catch.
+        /// These will usually be dependencies since these get loaded automatically.
+        /// </summary>
+        protected virtual void CheckLoadedModList()
+        {
+            foreach(ModInfo mi in modList)
+            {
+                if(ModHost.IsModInUse(mi.path) && !loadedMods.ContainsKey(mi.identifier))
+                {
+                    gameManager.ConsoleWindow.WriteLine($"Found stray mod {mi.identifier}.");
+                    LoadMod(mi);
                 }
             }
         }
@@ -103,41 +136,53 @@ namespace TUF.Modding
             return false;
         }
 
+        public virtual List<string> LoadMods(List<string> identifiers)
+        {
+            List<string> notLoaded = new List<string>();
+            for(int i = 0; i < identifiers.Count; i++)
+            {
+                if (!LoadMod(identifiers[i]))
+                {
+                    notLoaded.Add(identifiers[i]);
+                }
+            }
+            return notLoaded;
+        }
+
         public virtual bool LoadMod(ModInfo modInfo)
         {
-            if(Mod.IsModLoaded(modInfo.path)){
+            if(loadedMods.ContainsKey(modInfo.identifier)){
+                gameManager.ConsoleWindow.WriteLine($"Mod {modInfo.identifier} is already loaded.");
                 return false;
             }
 
             ModHost mod = Mod.Load(modInfo.path);
 
-            if (mod.IsModLoaded)
+            try
             {
-                GetReferencedMods(mod);
-
-                if (mod.Assets.Exists("ModDefinition"))
+                if (mod.IsModLoaded)
                 {
-                    loadedMods.Add(modInfo.identifier, mod);
-                    ModDefinition modDefinition = mod.Assets.Load("ModDefinition") as ModDefinition;
-                    modManager.mods.Add(modInfo.identifier, modDefinition);
+                    if (mod.Assets.Exists("ModDefinition"))
+                    {
+                        ModDefinition modDefinition = mod.Assets.Load("ModDefinition") as ModDefinition;
+                        loadedMods.Add(modInfo.identifier, mod);
+                        modManager.mods.Add(modInfo.identifier, modDefinition);
+                        gameManager.ConsoleWindow.WriteLine($"Loaded mod {modInfo.identifier}.");
+                        CheckLoadedModList();
+                        return true;
+                    }
+                    throw new Exception($"No ModDefinition found.");
                 }
-                gameManager.ConsoleWindow.WriteLine($"Loaded mod {modInfo.identifier}.");
-                return true;
-            }
-            gameManager.ConsoleWindow.WriteLine($"Failed loading mod {modInfo.identifier} from {modInfo.path}.");
-            return false;
-        }
-
-        /// <summary>
-        /// When mods are loaded, any mod that they reference are loaded alongside them.
-        /// This method makes sure that these mods are added to our loaded list.
-        /// </summary>
-        /// <param name="mod"></param>
-        private void GetReferencedMods(ModHost mod)
-        {
-            foreach(IModInfo referencedMod in mod.ReferencedMods)
+                throw new Exception($"{mod.LoadResult.Error}");
+            }catch(Exception e)
             {
-
+                gameManager.ConsoleWindow.WriteLine($"Failed loading mod {modInfo.identifier}: {e.Message}");
+                if (mod.IsModLoaded)
+                {
+                    mod.UnloadMod();
+                }
+                CheckLoadedModList();
+                return false;
             }
         }
         #endregion

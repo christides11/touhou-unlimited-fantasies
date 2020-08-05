@@ -13,6 +13,7 @@ namespace TUF.Modding
     public class ModInfo
     {
         public Uri path;
+        public string modName;
         public string fileName;
         public string identifier;
         public bool commandLine;

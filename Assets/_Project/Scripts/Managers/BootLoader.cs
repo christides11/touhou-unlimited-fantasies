@@ -52,7 +52,6 @@ namespace TUF.Core
         {
             gameManager.Initialize();
             modManager.Init();
-            modManager.ModLoader.LoadAllMods();
 
             if (readEditorParams && Application.isEditor)
             {

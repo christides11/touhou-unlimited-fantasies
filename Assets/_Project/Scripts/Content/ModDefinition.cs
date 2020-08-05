@@ -6,6 +6,7 @@ using TUF.Core;
 using TUF.Entities.Shared;
 using TUF.GameMode;
 using TUF.Sound;
+using TUF.UI;
 using UnityEngine;
 
 namespace TUF.Modding
@@ -13,6 +14,7 @@ namespace TUF.Modding
     [CreateAssetMenu(fileName = "ModDefinition", menuName = "TAPI/ModDefinition")]
     public class ModDefinition : ScriptableObject
     {
+        [TextArea] [SerializeField] private string description;
         [HideInInspector] public bool local = false;
         [SerializeField] private List<EntityDefinition> entities = new List<EntityDefinition>();
         [SerializeField] private List<GameModeDefinition> gamemodes = new List<GameModeDefinition>();
@@ -20,6 +22,8 @@ namespace TUF.Modding
         [SerializeField] private List<StageCollection> stageCollections = new List<StageCollection>();
         [SerializeField] private List<SoundDefinition> sounds = new List<SoundDefinition>();
         [SerializeField] private List<SoundDefinition> songs = new List<SoundDefinition>();
+        [SerializeField] private List<UIDefinition> uis = new List<UIDefinition>();
+        [SerializeField] private List<UIOverrideDefinition> uiOverrides = new List<UIOverrideDefinition>();
 
         #region Entities
         /// <summary>

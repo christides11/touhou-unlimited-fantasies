@@ -46,6 +46,10 @@ namespace TUF.Console
 
                     regularCommands.Add(sgmCommand.Initialize(this));
                 }
+                if(inputs[i].command == "+ping")
+                {
+                    consoleWindow.WriteLine("<color=green>Pong!</color>");
+                }
             }
 
             foreach(ConsoleCommand cc in preCommands)

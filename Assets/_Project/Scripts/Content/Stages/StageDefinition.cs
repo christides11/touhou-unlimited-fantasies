@@ -1,10 +1,8 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace TUF.Core
 {
-    [CreateAssetMenu(fileName = "StageDefiniton", menuName = "TAPI/StageDefinition")]
+    [CreateAssetMenu(fileName = "StageDefiniton", menuName = "TUF/StageDefinition")]
     public class StageDefinition : ScriptableObject
     {
         public string stageIdentifier;

@@ -13,6 +13,7 @@ namespace TUF.Menus.MainMenu
         [SerializeField] private StageCollectionsMenu stageCollectionsMenu;
         [SerializeField] private GamemodeSelectMenu gamemodeSelectMenu;
         [SerializeField] private OptionsMenu optionsMenu;
+        [SerializeField] private ModsMenu modsMenu;
         [SerializeField] private string trainingModeScene;
         [SerializeField] private string TrainingModeIdentifier;
 
@@ -56,7 +57,8 @@ namespace TUF.Menus.MainMenu
 
         public void ButtonModMenu()
         {
-            GameManager.current.modBrowser.gameObject.SetActive(true);
+            modsMenu.OnMenuExited += ReturnFromModsMenu;
+            modsMenu.gameObject.SetActive(true);
             gameObject.SetActive(false);
         }
 
@@ -64,6 +66,12 @@ namespace TUF.Menus.MainMenu
         {
             gameObject.SetActive(true);
             optionsMenu.OnMenuExited -= ReturnFromOptionsMenu;
+        }
+
+        private void ReturnFromModsMenu()
+        {
+            gameObject.SetActive(true);
+            modsMenu.OnMenuExited -= ReturnFromModsMenu;
         }
 
         public void ButtonExit()

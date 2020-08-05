@@ -24,8 +24,6 @@ namespace TUF.GameMode{
         public SimObjectManager SimObjectManager { get { return simObjectManager; } }
         public bool GamemodeActive { get { return gamemodeActive; } }
 
-        public IReadOnlyCollection<GameModeComponent> GameModeComponents { get { return components.AsReadOnly(); } }
-
         protected GameManager gameManager;
         protected SimObjectManager simObjectManager;
         protected bool gamemodeActive;
@@ -38,48 +36,16 @@ namespace TUF.GameMode{
         private StageCollection stageCollection;
         private StageDefinition currentStage;
 
-        [EditorButton("Add Component")]
-        public void TestMethod()
-        {
-#if UNITY_EDITOR
-            GenericMenu menu = new GenericMenu();
-            BuildItems();
-            foreach (string t in gameModeComponentTypes.Keys)
-            {
-                string destination = t.Replace('.', '/');
-                menu.AddItem(new GUIContent(destination), true, OnComponentSelected, t);
-            }
-            menu.AddSeparator("");
-            menu.ShowAsContext();
-#endif
-        }
+        public List<GameModeComponentBase> components
+            = new List<GameModeComponentBase>();
 
-#if UNITY_EDITOR
-        private Dictionary<string, Type> gameModeComponentTypes = new Dictionary<string, Type>();
-        private void BuildItems()
-        {
-            gameModeComponentTypes.Clear();
-            foreach (var a in AppDomain.CurrentDomain.GetAssemblies())
-            {
-                foreach (var givenType in a.GetTypes())
-                {
-                    if (givenType.IsSubclassOf(typeof(GameModeComponent)))
-                    {
-                        gameModeComponentTypes.Add(givenType.FullName, givenType);
-                    }
-                }
-            }
-        }
+        [HideInInspector] 
+        public List<GameModeComponentHolder> componentPrefabs 
+            = new List<GameModeComponentHolder>();
 
-        protected void OnComponentSelected(object t)
-        {
-            Undo.RecordObject(this, "Added component.");
-            components.Add((GameModeComponent)Activator.CreateInstance(gameModeComponentTypes[(string)t]));
-        }
-#endif
-
-        [SerializeReference] protected List<GameModeComponent> components = new List<GameModeComponent>();
-
+        [SerializeReference] [HideInInspector] 
+        public List<GameModeComponentData> componentsData
+            = new List<GameModeComponentData>();
 
         /// <summary>
         /// Initializes the gamemode with any components it needs.

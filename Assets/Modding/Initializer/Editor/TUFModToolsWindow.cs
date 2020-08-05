@@ -89,7 +89,7 @@ namespace TUF.ModdingTools
                 var destination = Application.dataPath + @"/assemblies";
                 if (Directory.Exists(destination))
                 {
-                    Directory.Delete(destination);
+                    Directory.Delete(destination, true);
                 }
                 Directory.CreateDirectory(destination);
 

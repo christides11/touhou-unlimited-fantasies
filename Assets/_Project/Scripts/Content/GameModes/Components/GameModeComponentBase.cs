@@ -6,7 +6,7 @@ using ReadOnlyAttribute = TUF.Core.ReadOnlyAttribute;
 namespace TUF.GameMode
 {
     [System.Serializable]
-    public class GameModeComponent
+    public class GameModeComponentBase
     {
         [SerializeField] [ReadOnly] protected GameModeBase gameMode;
 
@@ -16,6 +16,16 @@ namespace TUF.GameMode
         }
 
         public virtual void Tick()
+        {
+
+        } 
+
+        public virtual GameModeComponentData GetComponentData()
+        {
+            return null;
+        }
+
+        public virtual void SetComponentData(GameModeComponentData componentData)
         {
 
         }
