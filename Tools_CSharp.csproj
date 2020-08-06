@@ -65,6 +65,7 @@
   <ItemGroup>
     <Compile Include="Assets\Modding\Tools\SpawnPointManagerEditor.cs" />
     <Compile Include="Assets\Modding\Tools\StageTools.cs" />
+    <Compile Include="Assets\Modding\Tools\uMod\BuildModWindow.cs" />
     <None Include="Assets\Modding\Tools\Tools_CSharp.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.5f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>

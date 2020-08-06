@@ -81,6 +81,7 @@
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\InputFieldInfo.cs" />
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\InputRow.cs" />
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\LanguageData.cs" />
+    <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\LanguageDataBase.cs" />
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\ScrollRectSelectableChild.cs" />
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\ScrollbarVisibilityHelper.cs" />
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\ThemeSettings.cs" />
@@ -96,6 +97,7 @@
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\UITools.cs" />
     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\Window.cs" />
     <Compile Include="Assets\Rewired\Integration\UnityUI\PlayerPointerEventData.cs" />
+    <Compile Include="Assets\Rewired\Integration\UnityUI\RewiredEventSystem.cs" />
     <Compile Include="Assets\Rewired\Integration\UnityUI\RewiredPointerInputModule.cs" />
     <Compile Include="Assets\Rewired\Integration\UnityUI\RewiredStandaloneInputModule.cs" />
     <Compile Include="Assets\Rewired\Internal\Scripts\ControllerTemplates\ControllerTemplates.cs" />

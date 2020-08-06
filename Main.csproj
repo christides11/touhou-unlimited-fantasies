@@ -303,9 +303,6 @@
     <Reference Include="Ionic.Zip.Unity">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Plugins/dotnetzip-for-unity/Release/Ionic.Zip.Unity.dll</HintPath>
     </Reference>
-    <Reference Include="Newtonsoft.Json">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Plugins/JsonNet/lib/Newtonsoft.Json.dll</HintPath>
-    </Reference>
     <Reference Include="Sirenix.OdinInspector.Attributes">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Plugins/Sirenix/Assemblies/Sirenix.OdinInspector.Attributes.dll</HintPath>
     </Reference>
@@ -327,20 +324,11 @@
     <Reference Include="Rewired_Editor">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Rewired/Internal/Libraries/Editor/Rewired_Editor.dll</HintPath>
     </Reference>
-    <Reference Include="Rewired_Core">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
-    </Reference>
-    <Reference Include="Rewired_Windows">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/Rewired/Internal/Libraries/Runtime/Rewired_Windows.dll</HintPath>
-    </Reference>
     <Reference Include="Trivial.Mono.Cecil.Mdb">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Trivial.Mono.Cecil.Mdb.dll</HintPath>
     </Reference>
     <Reference Include="Trivial.Mono.Cecil.Pdb">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Trivial.Mono.Cecil.Pdb.dll</HintPath>
-    </Reference>
-    <Reference Include="UMod">
-      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/UMod.dll</HintPath>
     </Reference>
     <Reference Include="UMod-BuildTools-Wizard">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/UMod/Plugin/Editor/UMod-BuildTools-Wizard.dll</HintPath>
@@ -386,6 +374,18 @@
     </Reference>
     <Reference Include="UMod-Exporter">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/Editor/UMod-Exporter.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/Plugins/JsonNet/lib/Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Windows">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/Rewired/Internal/Libraries/Runtime/Rewired_Windows.dll</HintPath>
+    </Reference>
+    <Reference Include="Rewired_Core">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/Rewired/Internal/Libraries/Runtime/Rewired_Core.dll</HintPath>
+    </Reference>
+    <Reference Include="UMod">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Assets/TUFModdingTools/UMod/Plugin/UMod.dll</HintPath>
     </Reference>
     <Reference Include="mscorlib">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.5f1/Editor/Data/MonoBleedingEdge/lib/mono/4.7.1-api/mscorlib.dll</HintPath>

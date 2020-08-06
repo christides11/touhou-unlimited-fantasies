@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 12c8a1e6f87d13a4190aefa57fad852a, type: 3}
   m_Name: CoreMod
   m_EditorClassIdentifier: 
+  description: 
   local: 1
   entities: []
   gamemodes:
@@ -24,4 +25,6 @@ MonoBehaviour:
   - {fileID: 11400000, guid: de934d72f9f96c44c886ec736475b5f1, type: 2}
   songs: []
   uis:
+  - {fileID: 11400000, guid: 346de40519515dc418a79e624e31c705, type: 2}
+  uiOverrides:
   - {fileID: 11400000, guid: 8848325c6a0ed87479d6297ba291b3d6, type: 2}
