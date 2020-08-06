@@ -63,6 +63,7 @@ MonoBehaviour:
           radius: 0
           height: 0
         attachToEntity: 1
+        styleGain: 0
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
           airOnly: 0
@@ -115,6 +116,7 @@ MonoBehaviour:
           radius: 0
           height: 0
         attachToEntity: 1
+        styleGain: 0
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
           airOnly: 0

@@ -63,6 +63,8 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\_Project\Scripts\Editor\AttackDefinitionEditor.cs" />
+    <Compile Include="Assets\_Project\Scripts\Editor\AttackDefinitionEditorWindow.cs" />
     <Compile Include="Assets\_Project\Scripts\Editor\GameModeBaseEditor.cs" />
     <None Include="Assets\_Project\Scripts\Editor\TUF_Editor_CSharp.asmdef" />
     <Reference Include="UnityEngine">
@@ -706,6 +708,12 @@
     </Reference>
     <Reference Include="Boo.Lang">
       <HintPath>C:/Program Files/Unity/Hub/Editor/2019.4.5f1/Editor/Data/MonoBleedingEdge/lib/mono/unityscript/Boo.Lang.dll</HintPath>
+    </Reference>
+    <Reference Include="CAF.Editor">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/ScriptAssemblies/CAF.Editor.dll</HintPath>
+    </Reference>
+    <Reference Include="CAF">
+      <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/ScriptAssemblies/CAF.dll</HintPath>
     </Reference>
     <Reference Include="UnityEditor.UI">
       <HintPath>C:/Projects/Unity/touhou-unlimited-fantasies/Library/ScriptAssemblies/UnityEditor.UI.dll</HintPath>

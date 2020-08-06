@@ -65,7 +65,7 @@ namespace TUF.Entities
         {
             this.GameManager = gameManager;
             this.lookHandler = lookHandler;
-            InputManager.SetController(0);
+            InputManager.SetControllerID(0);
             InputManager.SetControlType(controlType);
         }
         protected override void Awake()

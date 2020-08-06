@@ -173,9 +173,6 @@ namespace TUF.Entities.Shared
                 case BoxGroupType.HIT:
                     CombatManager.hitboxManager.CreateHitboxGroup(group);
                     break;
-                case BoxGroupType.DETECT:
-                    ((EntityHitboxManager)CombatManager.hitboxManager).CreateDetectboxes(group);
-                    break;
             }
         }
 
@@ -193,19 +190,6 @@ namespace TUF.Entities.Shared
             if(StateManager.CurrentStateFrame >= currentEvent.startFrame 
                 && StateManager.CurrentStateFrame <= currentEvent.endFrame)
             {
-                // If the event needs a detection to happen, check if it happened.
-                if (currentEvent.onDetect)
-                {
-                    List<IHurtable> ihList = ((EntityHitboxManager)CombatManager.hitboxManager).GetDetectedList(currentEvent.onDetectHitboxGroup);
-                    if(ihList == null)
-                    {
-                        return false;
-                    }
-                    if(ihList.Count == 0)
-                    {
-                        return false;
-                    }
-                }
                 if (currentEvent.onHit)
                 {
                     List<IHurtable> ihList = ((EntityHitboxManager)CombatManager.hitboxManager).GetHitList(currentEvent.onHitHitboxGroup);

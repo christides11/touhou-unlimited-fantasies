@@ -1,7 +1,9 @@
 {
     "name": "TUF_Editor_CSharp",
     "references": [
-        "GUID:7f2d247fdb31d304a9758a28e684f5b3"
+        "GUID:7f2d247fdb31d304a9758a28e684f5b3",
+        "GUID:a788ad91fc7f3c2468c2e84d79716fdd",
+        "GUID:60e386f2aae2e3745835ad13422e215a"
     ],
     "includePlatforms": [
         "Editor"

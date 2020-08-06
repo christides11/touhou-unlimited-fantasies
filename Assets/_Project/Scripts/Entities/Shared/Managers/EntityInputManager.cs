@@ -23,29 +23,29 @@ namespace TUF.Entities
             GlobalInputManager gim = GlobalInputManager.instance;
             InputRecordItem recordItem = new InputRecordItem();
             recordItem.AddInput((int)EntityInputs.Movement, 
-                new InputRecordAxis2D(gim.GetAxis2D(controllerID, Action.Movement_X, Action.Movement_Y)));
+                new InputRecordAxis2D(gim.GetAxis2D(ControllerID, Action.Movement_X, Action.Movement_Y)));
             recordItem.AddInput((int)EntityInputs.Camera,
-                new InputRecordAxis2D(gim.GetAxis2D(controllerID, Action.Camera_X, Action.Camera_Y)));
+                new InputRecordAxis2D(gim.GetAxis2D(ControllerID, Action.Camera_X, Action.Camera_Y)));
 
             recordItem.AddInput((int)EntityInputs.Float,
-                new InputRecordAxis(gim.GetAxis(controllerID, Action.Float)));
+                new InputRecordAxis(gim.GetAxis(ControllerID, Action.Float)));
 
             recordItem.AddInput((int)EntityInputs.Lockon,
-                new InputRecordButton(gim.GetButton(controllerID, Action.Lock_On)));
+                new InputRecordButton(gim.GetButton(ControllerID, Action.Lock_On)));
             recordItem.AddInput((int)EntityInputs.Interact,
-                new InputRecordButton(gim.GetButton(controllerID, Action.Interact)));
+                new InputRecordButton(gim.GetButton(ControllerID, Action.Interact)));
             recordItem.AddInput((int)EntityInputs.Bullet,
-                new InputRecordButton(gim.GetButton(controllerID, Action.Bullet)));
+                new InputRecordButton(gim.GetButton(ControllerID, Action.Bullet)));
             recordItem.AddInput((int)EntityInputs.Attack,
-                new InputRecordButton(gim.GetButton(controllerID, Action.Attack)));
+                new InputRecordButton(gim.GetButton(ControllerID, Action.Attack)));
             recordItem.AddInput((int)EntityInputs.Special,
-                new InputRecordButton(gim.GetButton(controllerID, Action.Special)));
+                new InputRecordButton(gim.GetButton(ControllerID, Action.Special)));
             recordItem.AddInput((int)EntityInputs.Dash,
-                new InputRecordButton(gim.GetButton(controllerID, Action.Dash)));
+                new InputRecordButton(gim.GetButton(ControllerID, Action.Dash)));
             recordItem.AddInput((int)EntityInputs.Jump,
-                new InputRecordButton(gim.GetButton(controllerID, Action.Jump)));
+                new InputRecordButton(gim.GetButton(ControllerID, Action.Jump)));
             recordItem.AddInput((int)EntityInputs.Taunt,
-                new InputRecordButton(gim.GetButton(controllerID, Action.Taunt)));
+                new InputRecordButton(gim.GetButton(ControllerID, Action.Taunt)));
 
             InputRecord.Add(recordItem);
         }
