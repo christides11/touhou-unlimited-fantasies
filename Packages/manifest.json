@@ -1,11 +1,11 @@
 {
   "dependencies": {
-    "com.christides.character-action-framework": "https://github.com/christides11/Character-Action-Framework.git#upm/v2.0.0",
+    "com.christides.character-action-framework": "https://github.com/christides11/Character-Action-Framework.git#upm/v3.0.0",
     "com.coffee.upm-git-extension": "https://github.com/mob-sakai/UpmGitExtension.git",
     "com.github.siccity.xnode": "https://github.com/siccity/xNode.git#1.8.0",
     "com.malee.reorderablelist": "https://github.com/cfoulston/Unity-Reorderable-List.git",
     "com.redfox-interactive.smartbutton": "https://github.com/Menyus777/RedFox-Smart-Button.git#master",
-    "com.unity.cinemachine": "2.5.0",
+    "com.unity.cinemachine": "2.6.0",
     "com.unity.probuilder": "4.2.3",
     "com.unity.progrids": "3.0.3-preview.5",
     "com.unity.render-pipelines.universal": "7.3.1",

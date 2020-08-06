@@ -10,9 +10,9 @@ namespace TUF.ModdingTools
         public static readonly Tuple<string, string>[] packages =
         {
             new Tuple<string, string>("com.github.siccity.xnode@1.8.0", "https://github.com/siccity/xNode.git#1.8.0"),
-            new Tuple<string, string>("com.unity.cinemachine@2.5.0", "com.unity.cinemachine@2.5.0"),
+            new Tuple<string, string>("com.unity.cinemachine@2.6.0", "com.unity.cinemachine@2.6.0"),
             new Tuple<string, string>("com.malee.reorderablelist@1.0.1", "https://github.com/cfoulston/Unity-Reorderable-List.git#1.0.1"),
-            new Tuple<string, string>("com.christides.character-action-framework@1.0.0", "https://github.com/christides11/Character-Action-Framework.git#upm/v1.0.0")
+            new Tuple<string, string>("com.christides.character-action-framework@3.0.0", "https://github.com/christides11/Character-Action-Framework.git#upm/v3.0.0")
         };
         public static readonly List<string> dlls = new List<string>()
         {
