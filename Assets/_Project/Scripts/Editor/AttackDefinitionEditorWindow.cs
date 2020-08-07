@@ -16,6 +16,27 @@ namespace TUF.Combat
             window.Show();
         }
 
+        protected bool floatCancelWindowsFoldout;
+        protected override void DrawCancelWindows()
+        {
+            base.DrawCancelWindows();
+
+            AttackDefinition atk = (AttackDefinition)attack;
+
+            EditorGUI.BeginChangeCheck();
+
+            List<Vector2Int> floatCancelWindows = new List<Vector2Int>(atk.floatCancelFrames);
+
+            DrawCancelWindow("Float Cancel Windows", ref floatCancelWindowsFoldout, ref floatCancelWindows, 180);
+
+            if (EditorGUI.EndChangeCheck())
+            {
+                Undo.RecordObject(atk, "Changed Cancel Window.");
+                atk.floatCancelFrames = floatCancelWindows;
+                
+            }
+        }
+
         protected override void DrawBoxGroupHitOptions(CAF.Combat.BoxGroup currentGroup)
         {
             base.DrawBoxGroupHitOptions(currentGroup);

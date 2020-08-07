@@ -22,7 +22,7 @@ MonoBehaviour:
   animationAir: {fileID: 0}
   wrapMode: 0
   jumpCancelWindows:
-  - {x: 11, y: 60}
+  - {x: 6, y: 60}
   enemyStepWindows: []
   landCancelWindows: []
   commandAttackCancelWindows: []
@@ -34,7 +34,8 @@ MonoBehaviour:
   - id: 3
   - id: 4
   dashCancelableFrames: []
-  floatCancelFrames: []
+  floatCancelFrames:
+  - {x: 6, y: 60}
   bulletCancelFrames: []
   specialCancelFrames: []
   bulletGroups: []
@@ -59,6 +60,7 @@ MonoBehaviour:
           radius: 2
           height: 2
         attachToEntity: 1
+        styleGain: 0
         throwConfirm: {fileID: 0}
         hitboxHitInfo:
           airOnly: 0
@@ -103,8 +105,6 @@ MonoBehaviour:
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
-        onDetect: 0
-        onDetectHitboxGroup: 0
         startFrame: 1
         endFrame: 2
         attackEvent:
@@ -122,8 +122,6 @@ MonoBehaviour:
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
-        onDetect: 0
-        onDetectHitboxGroup: 0
         startFrame: 2
         endFrame: 30
         attackEvent:
@@ -141,8 +139,6 @@ MonoBehaviour:
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
-        onDetect: 0
-        onDetectHitboxGroup: 0
         startFrame: 6
         endFrame: 6
         attackEvent:
@@ -162,8 +158,6 @@ MonoBehaviour:
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
-        onDetect: 0
-        onDetectHitboxGroup: 0
         startFrame: 11
         endFrame: 30
         attackEvent:

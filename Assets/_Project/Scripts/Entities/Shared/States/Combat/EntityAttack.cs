@@ -140,7 +140,8 @@ namespace TUF.Entities.Shared
             if (CheckEnemyStepWindows(currentAttack)
                 || CheckDashCancelWindows(currentAttack)
                 || CheckJumpCancelWindows(currentAttack)
-                || CheckLandCancelWindows(currentAttack))
+                || CheckLandCancelWindows(currentAttack)
+                || CheckFloatCancelWindows(currentAttack))
             {
                 return true;
             }
@@ -291,6 +292,22 @@ namespace TUF.Entities.Shared
                         {
                             return true;
                         }
+                    }
+                }
+            }
+            return false;
+        }
+
+        protected virtual bool CheckFloatCancelWindows(AttackDefinition currentAttack)
+        {
+            for (int i = 0; i < currentAttack.floatCancelFrames.Count; i++)
+            {
+                if (StateManager.CurrentStateFrame >= currentAttack.floatCancelFrames[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.floatCancelFrames[i].y)
+                {
+                    if (controller.TryFloat())
+                    {
+                        return true;
                     }
                 }
             }

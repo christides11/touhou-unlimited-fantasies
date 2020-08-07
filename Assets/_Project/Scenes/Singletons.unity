@@ -4409,6 +4409,8 @@ MonoBehaviour:
       platformVars_stadia:
         disableKeyboard: 0
         ignoreInputWhenAppNotInFocus: 1
+        useNativeKeyboard: 1
+        useNativeMouse: 1
       maxJoysticksPerPlayer: 1
       autoAssignJoysticks: 1
       assignJoysticksToPlayingPlayersOnly: 0
@@ -7690,7 +7692,7 @@ MonoBehaviour:
   defaultScene: MainMenu
   targetFramerate: 60
   consoleReader: {fileID: 273061155}
-  readEditorParams: 0
+  readEditorParams: 1
   editorArgs:
   - +sgm=christides11.tidespack/Reimu,core/stage,christides11.tidespack/EOSD_FNPS
 --- !u!1 &2086142363

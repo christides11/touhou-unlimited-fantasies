@@ -318,6 +318,16 @@ namespace TUF.Entities
             return false;
         }
 
+        public virtual bool TryFloat()
+        {
+            if (Mathf.Abs(InputManager.GetAxis((int)EntityInputs.Float, 0)) >= InputConstants.floatMagnitude)
+            {
+                StateManager.ChangeState((int)EntityStates.FLOAT);
+                return true;
+            }
+            return false;
+        }
+
         /// <summary>
         /// Tries to land cancel if possible.
         /// </summary>
