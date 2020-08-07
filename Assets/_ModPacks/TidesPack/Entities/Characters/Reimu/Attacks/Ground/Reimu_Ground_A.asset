@@ -27,6 +27,7 @@ MonoBehaviour:
   landCancelWindows: []
   commandAttackCancelWindows:
   - {x: 11, y: 60}
+  chargeWindows: []
   boxGroups:
   - id: 0
   - id: 1
@@ -80,8 +81,8 @@ MonoBehaviour:
           damageOnHit: 20
           damageOnBlock: 0
           hitKills: 1
-          attackerHitstop: 4
-          hitstop: 4
+          attackerHitstop: 6
+          hitstop: 6
           hitstun: 30
           opponentResetXForce: 1
           opponentResetYForce: 1
@@ -133,8 +134,8 @@ MonoBehaviour:
           damageOnHit: 0
           damageOnBlock: 0
           hitKills: 1
-          attackerHitstop: 4
-          hitstop: 4
+          attackerHitstop: 6
+          hitstop: 6
           hitstun: 30
           opponentResetXForce: 1
           opponentResetYForce: 1
@@ -186,8 +187,8 @@ MonoBehaviour:
           damageOnHit: 0
           damageOnBlock: 0
           hitKills: 1
-          attackerHitstop: 4
-          hitstop: 4
+          attackerHitstop: 6
+          hitstop: 6
           hitstun: 30
           opponentResetXForce: 1
           opponentResetYForce: 1
@@ -239,8 +240,8 @@ MonoBehaviour:
           damageOnHit: 0
           damageOnBlock: 0
           hitKills: 1
-          attackerHitstop: 4
-          hitstop: 4
+          attackerHitstop: 6
+          hitstop: 6
           hitstun: 30
           opponentResetXForce: 1
           opponentResetYForce: 1
@@ -292,8 +293,8 @@ MonoBehaviour:
           damageOnHit: 0
           damageOnBlock: 0
           hitKills: 1
-          attackerHitstop: 4
-          hitstop: 4
+          attackerHitstop: 6
+          hitstop: 6
           hitstun: 30
           opponentResetXForce: 1
           opponentResetYForce: 1

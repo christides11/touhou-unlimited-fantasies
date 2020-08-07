@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.christides.character-action-framework": "https://github.com/christides11/Character-Action-Framework.git#upm/v3.0.0",
+    "com.christides.character-action-framework": "https://github.com/christides11/Character-Action-Framework.git#upm/v3.1.0",
     "com.coffee.upm-git-extension": "https://github.com/mob-sakai/UpmGitExtension.git",
     "com.github.siccity.xnode": "https://github.com/siccity/xNode.git#1.8.0",
     "com.malee.reorderablelist": "https://github.com/cfoulston/Unity-Reorderable-List.git",

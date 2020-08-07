@@ -17,23 +17,27 @@ namespace TUF.Combat
         }
 
         protected bool floatCancelWindowsFoldout;
-        protected override void DrawCancelWindows()
+        protected override void DrawWindowsMenu()
         {
-            base.DrawCancelWindows();
+            base.DrawWindowsMenu();
 
             AttackDefinition atk = (AttackDefinition)attack;
 
-            EditorGUI.BeginChangeCheck();
-
-            List<Vector2Int> floatCancelWindows = new List<Vector2Int>(atk.floatCancelFrames);
-
-            DrawCancelWindow("Float Cancel Windows", ref floatCancelWindowsFoldout, ref floatCancelWindows, 180);
-
-            if (EditorGUI.EndChangeCheck())
+            if (cancelWindowsFoldout)
             {
-                Undo.RecordObject(atk, "Changed Cancel Window.");
-                atk.floatCancelFrames = floatCancelWindows;
-                
+                EditorGUI.indentLevel++;
+                EditorGUI.BeginChangeCheck();
+
+                List<Vector2Int> floatCancelWindows = new List<Vector2Int>(atk.floatCancelFrames);
+
+                DrawCancelWindow("Float Cancel Windows", ref floatCancelWindowsFoldout, ref floatCancelWindows, 180);
+
+                if (EditorGUI.EndChangeCheck())
+                {
+                    Undo.RecordObject(atk, "Changed Cancel Window.");
+                    atk.floatCancelFrames = floatCancelWindows;
+                }
+                EditorGUI.indentLevel--;
             }
         }
 
