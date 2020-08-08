@@ -11,10 +11,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{270692F1-EB25-DC3E-2399-DFA8CAE2363F}</ProjectGuid>
+    <ProjectGuid>{E842914D-F11F-D1B7-FCEB-000BF0610D6C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Rewired_ControlMapper_CSharp_Editor</AssemblyName>
+    <AssemblyName>kmc_CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -55,11 +55,16 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\Editor\ControlMapperInspector.cs" />
-     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\Editor\CustomButtonInspector.cs" />
-     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\Editor\CustomSliderInspector.cs" />
-     <Compile Include="Assets\Rewired\Extras\ControlMapper\Scripts\Editor\CustomToggleInspector.cs" />
-     <None Include="Assets\Rewired\Extras\ControlMapper\Scripts\Editor\Rewired_ControlMapper_CSharp_Editor.asmdef" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\Editor\KinematicCharacterMotorEditor.cs" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\Editor\ReadOnlyPropertyDrawer.cs" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\ICharacterController.cs" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\IMoverController.cs" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\KCCSettings.cs" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\KinematicCharacterMotor.cs" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\KinematicCharacterSystem.cs" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\PhysicsMover.cs" />
+     <Compile Include="Assets\ThirdParty\KinematicCharacterController\Core\ReadOnlyAttribute.cs" />
+     <None Include="Assets\ThirdParty\KinematicCharacterController\kcc_CSharp.asmdef" />
  <Reference Include="UnityEngine">
  <HintPath>C:/Program Files/Unity/2019.4.7f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
  </Reference>
@@ -707,10 +712,6 @@
  </Reference>
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="Rewired_CSharp.csproj">
-      <Project>{D69A459A-A34A-76C4-2767-51EC1D026B57}</Project>
-      <Name>Rewired_CSharp</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -2,15 +2,15 @@
     "name": "TUF_CSharp",
     "references": [
         "GUID:69263ca5c21ed194a85d4d93893ace9d",
-        "GUID:e0dbb7afdbf3bb8429999d64abd01348",
         "GUID:6055be8ebefd69e48b49212b09b47b2f",
         "GUID:60e386f2aae2e3745835ad13422e215a",
         "GUID:b8e24fd1eb19b4226afebb2810e3c19b",
-        "GUID:8f2f9e1f5fbbbba4cb07689d4aee28a0",
         "GUID:4307f53044263cf4b835bd812fc161a4",
         "GUID:9e5f45384529cb94d9995e0ed18bd071",
         "GUID:980051fbb18c441d2b447494242d6010",
-        "GUID:d178ac4b10764814c8ae876ce6354d19"
+        "GUID:d178ac4b10764814c8ae876ce6354d19",
+        "GUID:5909ea7964e40b0429044d18f86a7617",
+        "GUID:5bfa667c1f272c54d9fd92b2a3d68a13"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
