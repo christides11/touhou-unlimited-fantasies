@@ -1,6 +1,6 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "mod.io.UnityPlugin", "mod.io.UnityPlugin.csproj", "{18C39DDA-9D01-BFBD-47B2-3EDF68753A60}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TUF_CSharp", "TUF_CSharp.csproj", "{18F92F35-1554-EE1F-6AF4-18A06F02FED9}"
