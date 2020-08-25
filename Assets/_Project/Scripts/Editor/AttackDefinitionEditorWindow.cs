@@ -41,6 +41,7 @@ namespace TUF.Combat
             }
         }
 
+        /*
         protected override void DrawBoxGroupHitOptions(CAF.Combat.BoxGroup currentGroup)
         {
             base.DrawBoxGroupHitOptions(currentGroup);
@@ -50,6 +51,6 @@ namespace TUF.Combat
             EditorGUILayout.LabelField("Sound", EditorStyles.boldLabel);
             boxGroup.hitSound = (ModObjectLink)EditorGUILayout.ObjectField("Hit Sound", boxGroup.hitSound, typeof(ModObjectLink), false);
             EditorGUILayout.Space();
-        }
+        }*/
     }
 }

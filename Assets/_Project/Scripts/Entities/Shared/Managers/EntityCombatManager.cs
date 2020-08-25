@@ -12,7 +12,7 @@ namespace TUF.Entities
 {
     public class EntityCombatManager : CAF.Entities.EntityCombatManager
     {
-        public EntityManager Controller { get { return (EntityManager)controller; } }
+        public EntityManager Controller { get { return (EntityManager)manager; } }
         public bool WasFloating { get; set; } = false;
 
         [SerializeField] protected MovesetDefinition moveset;
@@ -25,7 +25,7 @@ namespace TUF.Entities
         {
             CurrentMoveset = moveset;
             base.Awake();
-            hitboxManager = new TUF.Entities.EntityHitboxManager(this, (EntityManager)controller);
+            hitboxManager = new TUF.Entities.EntityHitboxManager(this, (EntityManager)manager);
         }
 
         public override void CLateUpdate()
@@ -65,22 +65,23 @@ namespace TUF.Entities
             return false;
         }
 
-        public override HitReaction Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfo hitInfo)
+        public override HitReaction Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfoBase hitInfoB)
         {
+            HitInfo hitInfo = (HitInfo)hitInfoB;
             HitReaction hitReaction = new HitReaction();
             hitReaction.reactionType = HitReactionType.Hit;
-            if(hitInfo.groundOnly && !Controller.IsGrounded
-                || hitInfo.airOnly && Controller.IsGrounded)
+            if(hitInfoB.groundOnly && !Controller.IsGrounded
+                || hitInfoB.airOnly && Controller.IsGrounded)
             {
                 hitReaction.reactionType = HitReactionType.Avoided;
                 return hitReaction;
             }
-            LastHitBy = hitInfo;
-            hitStop = hitInfo.hitstop;
-            hitStun = hitInfo.hitstun;
+            LastHitBy = hitInfoB;
+            SetHitStop(hitInfoB.hitstop);
+            SetHitStun(hitInfoB.hitstun);
 
             // Convert forces the attacker-based forward direction.
-            switch (hitInfo.forceType)
+            switch (hitInfoB.forceType)
             {
                 case HitboxForceType.SET:
                     Vector3 baseForce = hitInfo.opponentForceDir * hitInfo.opponentForceMagnitude;
@@ -112,7 +113,8 @@ namespace TUF.Entities
                 Controller.IsGrounded = false;
             }
 
-            controller.HealthManager.Hurt(hitInfo.damageOnHit);
+            //manager.HealthManager.Hurt(hitInfo.damageOnHit);
+
             // Change state to the correct one.
             if (Controller.IsGrounded && hitInfo.groundBounces)
             {
@@ -128,9 +130,9 @@ namespace TUF.Entities
             return hitReaction;
         }
 
-        public override void Heal()
+        public override void Heal(HealInfoBase healInfo)
         {
-
+            base.Heal(healInfo);
         }
 
         public void SetTeam(EntityTeams team)

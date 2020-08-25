@@ -7,7 +7,7 @@ namespace TUF.Entities
 {
     public class EntityState : CAF.Entities.EntityState
     {
-        protected EntityManager controller { get { return (EntityManager)Controller; } }
+        protected EntityManager controller { get { return (EntityManager)Manager; } }
         protected EntityCombatManager CombatManager { get { return (EntityCombatManager)controller.CombatManager; } }
         protected EntityStateManager StateManager { get { return (EntityStateManager)controller.StateManager; } }
         protected EntityInputManager InputManager { get { return (EntityInputManager)controller.InputManager; } }

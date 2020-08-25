@@ -2,7 +2,7 @@
 
 namespace TUF.Combat
 {
-    public class Hitbox : CAF.Combat.Hitbox
+    public class Hitbox : CAF.Combat.Hitbox3D
     {
         [SerializeField] protected GameObject rectangleVisual;
         [SerializeField] protected GameObject sphereVisual;
@@ -29,11 +29,6 @@ namespace TUF.Combat
             capsuleVisual.SetActive(true);
         }
 
-        public override void CheckHits()
-        {
-            base.CheckHits();
-        }
-
         public override void Deactivate()
         {
             base.Deactivate();
@@ -44,25 +39,7 @@ namespace TUF.Combat
 
         protected override void OnTriggerStay(Collider other)
         {
-            if (!activated)
-            {
-                return;
-            }
-
-            Hurtbox otherHurtbox = null;
-            if (!other.TryGetComponent<Hurtbox>(out otherHurtbox))
-            {
-                return;
-            }
-
-            if (otherHurtbox != null)
-            {
-                if (!hitHurtables.Contains(otherHurtbox.Owner)
-                    && (ignoreList == null || !ignoreList.Contains(otherHurtbox.Hurtable)))
-                {
-                    hitHurtables.Add(otherHurtbox.Owner);
-                }
-            }
+            base.OnTriggerStay(other);
         }
     }
 }

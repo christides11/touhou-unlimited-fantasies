@@ -5,7 +5,7 @@ namespace TUF.Entities
 {
     public class EntityPhysicsManager : CAF.Entities.EntityPhysicsManager
     {
-        protected EntityManager Controller { get { return (EntityManager)controller; } }
+        protected EntityManager Controller { get { return (EntityManager)manager; } }
         public float CurrentFallSpeed { get; set; } = 0;
 
         [Header("Physics")]

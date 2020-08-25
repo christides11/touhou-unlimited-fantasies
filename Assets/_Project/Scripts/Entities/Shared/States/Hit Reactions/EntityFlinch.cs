@@ -19,7 +19,7 @@ namespace TUF.Entities.Shared
 
         public override bool CheckInterrupt()
         {
-            if (CombatManager.hitStun == 0)
+            if (CombatManager.HitStun == 0)
             {
                 if (controller.IsGrounded)
                 {

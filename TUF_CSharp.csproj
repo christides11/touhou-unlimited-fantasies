@@ -173,6 +173,7 @@
     <Compile Include="Assets\_Project\Scripts\Entities\Characters\States\CWallJump.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\EntitySpawner.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\EntityStates.cs" />
+    <Compile Include="Assets\_Project\Scripts\Entities\HealthManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityAnimator.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityCharacterController.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityDefinition.cs" />

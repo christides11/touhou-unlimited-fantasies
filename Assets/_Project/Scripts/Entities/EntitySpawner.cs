@@ -50,8 +50,8 @@ namespace TUF.Core
                     Quaternion.identity);
 
                 entity.GetComponent<EntityCombatManager>().SetTeam(EntityTeams.Enemy);
-                entity.GetComponent<CAF.Entities.HealthManager>().OnHurt += EntityHealthCheck;
-                entity.GetComponent<CAF.Entities.HealthManager>().OnHealthSet += EntityHealthCheck;
+                entity.GetComponent<HealthManager>().OnHurt += EntityHealthCheck;
+                entity.GetComponent<HealthManager>().OnHealthSet += EntityHealthCheck;
             }
 
             hasSpawned = true;

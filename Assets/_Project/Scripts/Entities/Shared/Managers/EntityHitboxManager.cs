@@ -30,7 +30,7 @@ namespace TUF.Entities
 
         protected override CAF.Combat.Hitbox InstantiateHitbox(Vector3 position, Quaternion rotation)
         {
-            return GameObject.Instantiate(((EntityManager)controller).GameManager.gameVariables.combat.hitbox,
+            return GameObject.Instantiate(((EntityManager)manager).GameManager.gameVariables.combat.hitbox,
                 position, rotation).GetComponent<Combat.Hitbox>();
         }
 
@@ -40,27 +40,18 @@ namespace TUF.Entities
         /// <param name="hurtableHit">The hurtable that was hit.</param>
         /// <param name="hitInfo">The hitInfo of the hitbox.</param>
         /// <param name="hitboxID">The hitbox ID of the hitbox.</param>
-        protected override void OnHitboxHurt(GameObject hurtableHit, HitInfo hitInfo, int hitboxID, int hitboxGroup)
+        protected override void OnHitboxHurt(GameObject hurtableHit, HitInfoBase hitInfo, int hitboxID, int hitboxGroup)
         {
-            SoundDefinition sd = ((EntityManager)combatManager.controller).GameManager.ModManager
+            SoundDefinition sd = ((EntityManager)combatManager.manager).GameManager.ModManager
                 .GetSoundDefinition(
                 ((Combat.BoxGroup)combatManager.CurrentAttack.attackDefinition.boxGroups[hitboxGroup]).hitSound?.reference);
-            SoundManager.Play(sd, 0, controller.transform);
+            SoundManager.Play(sd, 0, manager.transform);
             base.OnHitboxHurt(hurtableHit, hitInfo, hitboxID, hitboxGroup);
         }
 
         public override void CreateHitboxGroup(int index)
         {
             base.CreateHitboxGroup(index);
-        }
-
-        public List<IHurtable> GetHitList(int group)
-        {
-            if (!hurtablesHit.ContainsKey(group))
-            {
-                return null;
-            }
-            return hurtablesHit[group];
         }
     }
 }
