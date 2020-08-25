@@ -10,6 +10,9 @@ using ReadOnlyAttribute = TUF.Core.ReadOnlyAttribute;
 using SimObjectManager = TUF.Core.SimObjectManager;
 using System;
 using TUF.Stages;
+using UnityEngine.Events;
+using TUF.Entities;
+using CAF.Combat;
 
 #if UNITY_EDITOR
 using UnityEditor;
@@ -23,6 +26,10 @@ namespace TUF.GameMode{
     {
         public SimObjectManager SimObjectManager { get { return simObjectManager; } }
         public bool GamemodeActive { get { return gamemodeActive; } }
+
+        public delegate void EntityHitAction(EntityManager attacker, EntityManager attacked, HitInfo hitInfo);
+        public event EntityHitAction OnPlayerHit;
+        public event EntityHitAction OnEnemyHit;
 
         protected GameManager gameManager;
         protected SimObjectManager simObjectManager;

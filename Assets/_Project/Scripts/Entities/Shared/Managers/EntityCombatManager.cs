@@ -117,19 +117,15 @@ namespace TUF.Entities
             if (Controller.IsGrounded && hitInfo.groundBounces)
             {
                 Controller.StateManager.ChangeState((int)EntityStates.GROUND_BOUNCE);
-                return hitReaction;
-            }
-
-            if (hitInfo.causesTumble)
+            } else if (hitInfo.causesTumble)
             {
                 Controller.StateManager.ChangeState((int)EntityStates.TUMBLE);
-                return hitReaction;
             }
             else
             {
                 Controller.StateManager.ChangeState((int)(Controller.IsGrounded ? EntityStates.FLINCH : EntityStates.FLINCH_AIR));
-                return hitReaction;
             }
+            return hitReaction;
         }
 
         public override void Heal()
