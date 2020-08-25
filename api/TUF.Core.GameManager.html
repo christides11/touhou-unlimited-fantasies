@@ -83,7 +83,9 @@
   
   <h1 id="TUF_Core_GameManager" data-uid="TUF.Core.GameManager" class="text-break">Class GameManager
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>The Game Manager keeps references to important scripts 
+and provides functionally for handling the overall game state.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -100,17 +102,18 @@
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_cMapper.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.cMapper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_controlMapper.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.controlMapper%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L33">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L51">View Source</a>
   </span>
-  <h4 id="TUF_Core_GameManager_cMapper" data-uid="TUF.Core.GameManager.cMapper">cMapper</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="TUF_Core_GameManager_controlMapper" data-uid="TUF.Core.GameManager.controlMapper">controlMapper</h4>
+  <div class="markdown level1 summary"><p>The UI that allows us to change our controls. Comes from Rewired.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public ControlMapper cMapper</code></pre>
+    <pre><code class="lang-csharp hljs">public ControlMapper controlMapper</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -132,10 +135,11 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_current.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.current%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L17">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L24">View Source</a>
   </span>
   <h4 id="TUF_Core_GameManager_current" data-uid="TUF.Core.GameManager.current">current</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A singleton referring to the currently active Game Manager.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -158,46 +162,18 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_currentGameModeHandler.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.currentGameModeHandler%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_gameVariables.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.gameVariables%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L23">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L57">View Source</a>
   </span>
-  <h4 id="TUF_Core_GameManager_currentGameModeHandler" data-uid="TUF.Core.GameManager.currentGameModeHandler">currentGameModeHandler</h4>
-  <div class="markdown level1 summary"></div>
+  <h4 id="TUF_Core_GameManager_gameVariables" data-uid="TUF.Core.GameManager.gameVariables">gameVariables</h4>
+  <div class="markdown level1 summary"><p>Stores variables and prefabs that are commonly used.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">protected GameModeBase currentGameModeHandler</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="TUF.GameMode.GameModeBase.html">GameModeBase</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_gameVars.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.gameVars%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L36">View Source</a>
-  </span>
-  <h4 id="TUF_Core_GameManager_gameVars" data-uid="TUF.Core.GameManager.gameVars">gameVars</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameVariables gameVars</code></pre>
+    <pre><code class="lang-csharp hljs">public GameVariables gameVariables</code></pre>
   </div>
   <h5 class="fieldValue">Field Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -219,7 +195,7 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_modBrowser.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.modBrowser%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L32">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L47">View Source</a>
   </span>
   <h4 id="TUF_Core_GameManager_modBrowser" data-uid="TUF.Core.GameManager.modBrowser">modBrowser</h4>
   <div class="markdown level1 summary"></div>
@@ -243,35 +219,6 @@
       </tr>
     </tbody>
   </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_playerCamera.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.playerCamera%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L37">View Source</a>
-  </span>
-  <h4 id="TUF_Core_GameManager_playerCamera" data-uid="TUF.Core.GameManager.playerCamera">playerCamera</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public PlayerCamera playerCamera</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="TUF.Core.PlayerCamera.html">PlayerCamera</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
   <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
@@ -279,7 +226,7 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_ConsoleWindow.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.ConsoleWindow%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L21">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L27">View Source</a>
   </span>
   <a id="TUF_Core_GameManager_ConsoleWindow_" data-uid="TUF.Core.GameManager.ConsoleWindow*"></a>
   <h4 id="TUF_Core_GameManager_ConsoleWindow" data-uid="TUF.Core.GameManager.ConsoleWindow">ConsoleWindow</h4>
@@ -306,18 +253,20 @@
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_GameModeHanlder.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.GameModeHanlder%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_GameMode.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.GameMode%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L20">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L32">View Source</a>
   </span>
-  <a id="TUF_Core_GameManager_GameModeHanlder_" data-uid="TUF.Core.GameManager.GameModeHanlder*"></a>
-  <h4 id="TUF_Core_GameManager_GameModeHanlder" data-uid="TUF.Core.GameManager.GameModeHanlder">GameModeHanlder</h4>
-  <div class="markdown level1 summary"></div>
+  <a id="TUF_Core_GameManager_GameMode_" data-uid="TUF.Core.GameManager.GameMode*"></a>
+  <h4 id="TUF_Core_GameManager_GameMode" data-uid="TUF.Core.GameManager.GameMode">GameMode</h4>
+  <div class="markdown level1 summary"><p>Returns the current Game Mode that we are in.
+If we aren&apos;t in any Game Mode, returns null.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public GameModeBase GameModeHanlder { get; }</code></pre>
+    <pre><code class="lang-csharp hljs">public GameModeBase GameMode { get; protected set; }</code></pre>
   </div>
   <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -339,7 +288,7 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_ModManager.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.ModManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L19">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L26">View Source</a>
   </span>
   <a id="TUF_Core_GameManager_ModManager_" data-uid="TUF.Core.GameManager.ModManager*"></a>
   <h4 id="TUF_Core_GameManager_ModManager" data-uid="TUF.Core.GameManager.ModManager">ModManager</h4>
@@ -371,11 +320,13 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_Initialize.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.Initialize%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L39">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L63">View Source</a>
   </span>
   <a id="TUF_Core_GameManager_Initialize_" data-uid="TUF.Core.GameManager.Initialize*"></a>
   <h4 id="TUF_Core_GameManager_Initialize" data-uid="TUF.Core.GameManager.Initialize">Initialize()</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>Initializes the Game Manager. This is called by the Boot Loader,
+so don&apos;t call this manually.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -386,7 +337,7 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_LoadSceneAsync_System_String_System_Boolean_.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.LoadSceneAsync(System.String%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L54">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L80">View Source</a>
   </span>
   <a id="TUF_Core_GameManager_LoadSceneAsync_" data-uid="TUF.Core.GameManager.LoadSceneAsync*"></a>
   <h4 id="TUF_Core_GameManager_LoadSceneAsync_System_String_System_Boolean_" data-uid="TUF.Core.GameManager.LoadSceneAsync(System.String,System.Boolean)">LoadSceneAsync(String, Boolean)</h4>
@@ -411,12 +362,14 @@ current active scene.</p>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">SceneName</span></td>
-        <td></td>
+        <td><p>The name of the scene to load.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.boolean">Boolean</a></td>
         <td><span class="parametername">setActiveScene</span></td>
-        <td></td>
+        <td><p>If the scene should be set as the active one.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -431,7 +384,8 @@ current active scene.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
-        <td></td>
+        <td><p>The scene that was active before this operation.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -440,11 +394,11 @@ current active scene.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_SetGameMode_TUF_GameMode_GameModeDefinition_.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.SetGameMode(TUF.GameMode.GameModeDefinition)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L121">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L150">View Source</a>
   </span>
   <a id="TUF_Core_GameManager_SetGameMode_" data-uid="TUF.Core.GameManager.SetGameMode*"></a>
   <h4 id="TUF_Core_GameManager_SetGameMode_TUF_GameMode_GameModeDefinition_" data-uid="TUF.Core.GameManager.SetGameMode(TUF.GameMode.GameModeDefinition)">SetGameMode(GameModeDefinition)</h4>
-  <div class="markdown level1 summary"><p>Loads the given gamemode and sets it as the active one.</p>
+  <div class="markdown level1 summary"><p>Loads the given Game Mode and sets it as the active one.</p>
 </div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
@@ -464,7 +418,8 @@ current active scene.</p>
       <tr>
         <td><a class="xref" href="TUF.GameMode.GameModeDefinition.html">GameModeDefinition</a></td>
         <td><span class="parametername">gameModeDefinition</span></td>
-        <td></td>
+        <td><p>The Game Mode to load.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -473,7 +428,7 @@ current active scene.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager_StartGameMode_TUF_Modding_ModObjectReference_TUF_Modding_ModObjectReference_TUF_Modding_ModObjectReference_TUF_Modding_ModObjectReference_System_String_.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager.StartGameMode(TUF.Modding.ModObjectReference%2CTUF.Modding.ModObjectReference%2CTUF.Modding.ModObjectReference%2CTUF.Modding.ModObjectReference%2CSystem.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L72">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L101">View Source</a>
   </span>
   <a id="TUF_Core_GameManager_StartGameMode_" data-uid="TUF.Core.GameManager.StartGameMode*"></a>
   <h4 id="TUF_Core_GameManager_StartGameMode_TUF_Modding_ModObjectReference_TUF_Modding_ModObjectReference_TUF_Modding_ModObjectReference_TUF_Modding_ModObjectReference_System_String_" data-uid="TUF.Core.GameManager.StartGameMode(TUF.Modding.ModObjectReference,TUF.Modding.ModObjectReference,TUF.Modding.ModObjectReference,TUF.Modding.ModObjectReference,System.String)">StartGameMode(ModObjectReference, ModObjectReference, ModObjectReference, ModObjectReference, String)</h4>
@@ -498,27 +453,32 @@ then starts the gamemode.</p>
       <tr>
         <td><a class="xref" href="TUF.Modding.ModObjectReference.html">ModObjectReference</a></td>
         <td><span class="parametername">entity</span></td>
-        <td></td>
+        <td><p>The Entity the player will be controlling.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="TUF.Modding.ModObjectReference.html">ModObjectReference</a></td>
         <td><span class="parametername">gamemode</span></td>
-        <td></td>
+        <td><p>The Game Mode the player will be playing.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="TUF.Modding.ModObjectReference.html">ModObjectReference</a></td>
         <td><span class="parametername">stage</span></td>
-        <td></td>
+        <td><p>The Stage the player will be playing on.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="TUF.Modding.ModObjectReference.html">ModObjectReference</a></td>
         <td><span class="parametername">stageCollection</span></td>
-        <td></td>
+        <td><p>The Stage Collection that will be played through, if applicable.</p>
+</td>
       </tr>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
         <td><span class="parametername">sceneToUnload</span></td>
-        <td></td>
+        <td><p>The scene to unload. This should be any scene that&apos;s loaded besides Singletons.</p>
+</td>
       </tr>
     </tbody>
   </table>
@@ -548,7 +508,7 @@ then starts the gamemode.</p>
                     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Core_GameManager.md&amp;value=---%0Auid%3A%20TUF.Core.GameManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Core/GameManager.cs/#L15" class="contribution-link">View Source</a>
+                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Managers/GameManager.cs/#L19" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

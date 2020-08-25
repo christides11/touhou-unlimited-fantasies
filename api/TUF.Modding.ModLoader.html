@@ -83,7 +83,9 @@
   
   <h1 id="TUF_Modding_ModLoader" data-uid="TUF.Modding.ModLoader" class="text-break">Class ModLoader
   </h1>
-  <div class="markdown level0 summary"></div>
+  <div class="markdown level0 summary"><p>Handles loading and unloading mods, along with keeping track of what is
+currently installed.</p>
+</div>
   <div class="markdown level0 conceptual"></div>
   <div class="inheritance">
     <h5>Inheritance</h5>
@@ -104,7 +106,7 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_inited.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.inited%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L19">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L35">View Source</a>
   </span>
   <h4 id="TUF_Modding_ModLoader_inited" data-uid="TUF.Modding.ModLoader.inited">inited</h4>
   <div class="markdown level1 summary"></div>
@@ -133,10 +135,11 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_loadedMods.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.loadedMods%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L15">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L28">View Source</a>
   </span>
   <h4 id="TUF_Modding_ModLoader_loadedMods" data-uid="TUF.Modding.ModLoader.loadedMods">loadedMods</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of all currently enabled mods.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -159,42 +162,14 @@ public class ModLoader</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_modInstallPath.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.modInstallPath%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
-  </span>
-  <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L16">View Source</a>
-  </span>
-  <h4 id="TUF_Modding_ModLoader_modInstallPath" data-uid="TUF.Modding.ModLoader.modInstallPath">modInstallPath</h4>
-  <div class="markdown level1 summary"></div>
-  <div class="markdown level1 conceptual"></div>
-  <h5 class="decalaration">Declaration</h5>
-  <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public string modInstallPath</code></pre>
-  </div>
-  <h5 class="fieldValue">Field Value</h5>
-  <table class="table table-bordered table-striped table-condensed">
-    <thead>
-      <tr>
-        <th>Type</th>
-        <th>Description</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td></td>
-      </tr>
-    </tbody>
-  </table>
-  <span class="small pull-right mobile-hide">
-    <span class="divider">|</span>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_modList.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.modList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L14">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L24">View Source</a>
   </span>
   <h4 id="TUF_Modding_ModLoader_modList" data-uid="TUF.Modding.ModLoader.modList">modList</h4>
-  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 summary"><p>A list of all mods in the Mods folder.</p>
+</div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
@@ -215,14 +190,60 @@ public class ModLoader</code></pre>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_modsLoadedFileName.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.modsLoadedFileName%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L20">View Source</a>
+  </span>
+  <h4 id="TUF_Modding_ModLoader_modsLoadedFileName" data-uid="TUF.Modding.ModLoader.modsLoadedFileName">modsLoadedFileName</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public static string modsLoadedFileName</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
   <h3 id="methods">Methods
   </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_CheckLoadedModList.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.CheckLoadedModList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L109">View Source</a>
+  </span>
+  <a id="TUF_Modding_ModLoader_CheckLoadedModList_" data-uid="TUF.Modding.ModLoader.CheckLoadedModList*"></a>
+  <h4 id="TUF_Modding_ModLoader_CheckLoadedModList" data-uid="TUF.Modding.ModLoader.CheckLoadedModList">CheckLoadedModList()</h4>
+  <div class="markdown level1 summary"><p>Check to see if any mods have loaded that we didn&apos;t catch.
+These will usually be dependencies since these get loaded automatically.</p>
+</div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">protected virtual void CheckLoadedModList()</code></pre>
+  </div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_GetModInfo_TUF_Modding_ModInfo_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.GetModInfo(TUF.Modding.ModInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L163">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L221">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_GetModInfo_" data-uid="TUF.Modding.ModLoader.GetModInfo*"></a>
   <h4 id="TUF_Modding_ModLoader_GetModInfo_TUF_Modding_ModInfo_" data-uid="TUF.Modding.ModLoader.GetModInfo(TUF.Modding.ModInfo)">GetModInfo(ModInfo)</h4>
@@ -269,7 +290,7 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_Init_TUF_Modding_ModManager_TUF_Core_GameManager_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.Init(TUF.Modding.ModManager%2CTUF.Core.GameManager)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L23">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L39">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_Init_" data-uid="TUF.Modding.ModLoader.Init*"></a>
   <h4 id="TUF_Modding_ModLoader_Init_TUF_Modding_ModManager_TUF_Core_GameManager_" data-uid="TUF.Modding.ModLoader.Init(TUF.Modding.ModManager,TUF.Core.GameManager)">Init(ModManager, GameManager)</h4>
@@ -306,7 +327,7 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_IsLoaded_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.IsLoaded(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L158">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L216">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_IsLoaded_" data-uid="TUF.Modding.ModLoader.IsLoaded*"></a>
   <h4 id="TUF_Modding_ModLoader_IsLoaded_System_String_" data-uid="TUF.Modding.ModLoader.IsLoaded(System.String)">IsLoaded(String)</h4>
@@ -353,7 +374,7 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_LoadAllMods.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.LoadAllMods%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L76">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L122">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_LoadAllMods_" data-uid="TUF.Modding.ModLoader.LoadAllMods*"></a>
   <h4 id="TUF_Modding_ModLoader_LoadAllMods" data-uid="TUF.Modding.ModLoader.LoadAllMods">LoadAllMods()</h4>
@@ -368,7 +389,7 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_LoadMod_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.LoadMod(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L84">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L130">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_LoadMod_" data-uid="TUF.Modding.ModLoader.LoadMod*"></a>
   <h4 id="TUF_Modding_ModLoader_LoadMod_System_String_" data-uid="TUF.Modding.ModLoader.LoadMod(System.String)">LoadMod(String)</h4>
@@ -415,7 +436,7 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_LoadMod_TUF_Modding_ModInfo_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.LoadMod(TUF.Modding.ModInfo)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L93">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L152">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_LoadMod_" data-uid="TUF.Modding.ModLoader.LoadMod*"></a>
   <h4 id="TUF_Modding_ModLoader_LoadMod_TUF_Modding_ModInfo_" data-uid="TUF.Modding.ModLoader.LoadMod(TUF.Modding.ModInfo)">LoadMod(ModInfo)</h4>
@@ -459,10 +480,57 @@ public class ModLoader</code></pre>
   </table>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_LoadMods_System_Collections_Generic_List_System_String__.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.LoadMods(System.Collections.Generic.List%7BSystem.String%7D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L139">View Source</a>
+  </span>
+  <a id="TUF_Modding_ModLoader_LoadMods_" data-uid="TUF.Modding.ModLoader.LoadMods*"></a>
+  <h4 id="TUF_Modding_ModLoader_LoadMods_System_Collections_Generic_List_System_String__" data-uid="TUF.Modding.ModLoader.LoadMods(System.Collections.Generic.List{System.String})">LoadMods(List&lt;String&gt;)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public virtual List&lt;string&gt; LoadMods(List&lt;string&gt; identifiers)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td><span class="parametername">identifiers</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_UnloadAllMods.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.UnloadAllMods%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L148">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L206">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_UnloadAllMods_" data-uid="TUF.Modding.ModLoader.UnloadAllMods*"></a>
   <h4 id="TUF_Modding_ModLoader_UnloadAllMods" data-uid="TUF.Modding.ModLoader.UnloadAllMods">UnloadAllMods()</h4>
@@ -477,7 +545,7 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_UnloadMod_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.UnloadMod(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L133">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L191">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_UnloadMod_" data-uid="TUF.Modding.ModLoader.UnloadMod*"></a>
   <h4 id="TUF_Modding_ModLoader_UnloadMod_System_String_" data-uid="TUF.Modding.ModLoader.UnloadMod(System.String)">UnloadMod(String)</h4>
@@ -524,7 +592,7 @@ public class ModLoader</code></pre>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader_UpdateModList.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader.UpdateModList%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L35">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L63">View Source</a>
   </span>
   <a id="TUF_Modding_ModLoader_UpdateModList_" data-uid="TUF.Modding.ModLoader.UpdateModList*"></a>
   <h4 id="TUF_Modding_ModLoader_UpdateModList" data-uid="TUF.Modding.ModLoader.UpdateModList">UpdateModList()</h4>
@@ -545,7 +613,7 @@ public class ModLoader</code></pre>
                     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModLoader.md&amp;value=---%0Auid%3A%20TUF.Modding.ModLoader%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Modding/ModLoader.cs/#L11" class="contribution-link">View Source</a>
+                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModLoader.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

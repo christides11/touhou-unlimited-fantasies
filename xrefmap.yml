@@ -216,6 +216,76 @@ references:
   commentId: F:TUF.Combat.AttackDefinition.specialCancelFrames
   fullName: TUF.Combat.AttackDefinition.specialCancelFrames
   nameWithType: AttackDefinition.specialCancelFrames
+- uid: TUF.Combat.AttackDefinitionEditor
+  name: AttackDefinitionEditor
+  href: api/TUF.Combat.AttackDefinitionEditor.html
+  commentId: T:TUF.Combat.AttackDefinitionEditor
+  fullName: TUF.Combat.AttackDefinitionEditor
+  nameWithType: AttackDefinitionEditor
+- uid: TUF.Combat.AttackDefinitionEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/TUF.Combat.AttackDefinitionEditor.html#TUF_Combat_AttackDefinitionEditor_OnInspectorGUI
+  commentId: M:TUF.Combat.AttackDefinitionEditor.OnInspectorGUI
+  fullName: TUF.Combat.AttackDefinitionEditor.OnInspectorGUI()
+  nameWithType: AttackDefinitionEditor.OnInspectorGUI()
+- uid: TUF.Combat.AttackDefinitionEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/TUF.Combat.AttackDefinitionEditor.html#TUF_Combat_AttackDefinitionEditor_OnInspectorGUI_
+  commentId: Overload:TUF.Combat.AttackDefinitionEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: TUF.Combat.AttackDefinitionEditor.OnInspectorGUI
+  nameWithType: AttackDefinitionEditor.OnInspectorGUI
+- uid: TUF.Combat.AttackDefinitionEditorWindow
+  name: AttackDefinitionEditorWindow
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html
+  commentId: T:TUF.Combat.AttackDefinitionEditorWindow
+  fullName: TUF.Combat.AttackDefinitionEditorWindow
+  nameWithType: AttackDefinitionEditorWindow
+- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
+  name: DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawBoxGroupHitOptions_CAF_Combat_BoxGroup_
+  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
+  nameWithType: AttackDefinitionEditorWindow.DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
+- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions*
+  name: DrawBoxGroupHitOptions
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawBoxGroupHitOptions_
+  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions
+  isSpec: "True"
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions
+  nameWithType: AttackDefinitionEditorWindow.DrawBoxGroupHitOptions
+- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawWindowsMenu
+  name: DrawWindowsMenu()
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawWindowsMenu
+  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.DrawWindowsMenu
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawWindowsMenu()
+  nameWithType: AttackDefinitionEditorWindow.DrawWindowsMenu()
+- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawWindowsMenu*
+  name: DrawWindowsMenu
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawWindowsMenu_
+  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.DrawWindowsMenu
+  isSpec: "True"
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawWindowsMenu
+  nameWithType: AttackDefinitionEditorWindow.DrawWindowsMenu
+- uid: TUF.Combat.AttackDefinitionEditorWindow.floatCancelWindowsFoldout
+  name: floatCancelWindowsFoldout
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_floatCancelWindowsFoldout
+  commentId: F:TUF.Combat.AttackDefinitionEditorWindow.floatCancelWindowsFoldout
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.floatCancelWindowsFoldout
+  nameWithType: AttackDefinitionEditorWindow.floatCancelWindowsFoldout
+- uid: TUF.Combat.AttackDefinitionEditorWindow.Init(TUF.Combat.AttackDefinition)
+  name: Init(AttackDefinition)
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_Init_TUF_Combat_AttackDefinition_
+  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.Init(TUF.Combat.AttackDefinition)
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.Init(TUF.Combat.AttackDefinition)
+  nameWithType: AttackDefinitionEditorWindow.Init(AttackDefinition)
+- uid: TUF.Combat.AttackDefinitionEditorWindow.Init*
+  name: Init
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_Init_
+  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.Init
+  isSpec: "True"
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.Init
+  nameWithType: AttackDefinitionEditorWindow.Init
 - uid: TUF.Combat.AttackEventDefinition
   name: AttackEventDefinition
   href: api/TUF.Combat.AttackEventDefinition.html
@@ -2313,12 +2383,6 @@ references:
   commentId: F:TUF.Core.BootLoader.editorArgs
   fullName: TUF.Core.BootLoader.editorArgs
   nameWithType: BootLoader.editorArgs
-- uid: TUF.Core.BootLoader.mods
-  name: mods
-  href: api/TUF.Core.BootLoader.html#TUF_Core_BootLoader_mods
-  commentId: F:TUF.Core.BootLoader.mods
-  fullName: TUF.Core.BootLoader.mods
-  nameWithType: BootLoader.mods
 - uid: TUF.Core.BootLoader.readEditorParams
   name: readEditorParams
   href: api/TUF.Core.BootLoader.html#TUF_Core_BootLoader_readEditorParams
@@ -2569,12 +2633,6 @@ references:
   commentId: T:TUF.Core.GameManager
   fullName: TUF.Core.GameManager
   nameWithType: GameManager
-- uid: TUF.Core.GameManager.cMapper
-  name: cMapper
-  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_cMapper
-  commentId: F:TUF.Core.GameManager.cMapper
-  fullName: TUF.Core.GameManager.cMapper
-  nameWithType: GameManager.cMapper
 - uid: TUF.Core.GameManager.ConsoleWindow
   name: ConsoleWindow
   href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_ConsoleWindow
@@ -2588,37 +2646,37 @@ references:
   isSpec: "True"
   fullName: TUF.Core.GameManager.ConsoleWindow
   nameWithType: GameManager.ConsoleWindow
+- uid: TUF.Core.GameManager.controlMapper
+  name: controlMapper
+  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_controlMapper
+  commentId: F:TUF.Core.GameManager.controlMapper
+  fullName: TUF.Core.GameManager.controlMapper
+  nameWithType: GameManager.controlMapper
 - uid: TUF.Core.GameManager.current
   name: current
   href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_current
   commentId: F:TUF.Core.GameManager.current
   fullName: TUF.Core.GameManager.current
   nameWithType: GameManager.current
-- uid: TUF.Core.GameManager.currentGameModeHandler
-  name: currentGameModeHandler
-  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_currentGameModeHandler
-  commentId: F:TUF.Core.GameManager.currentGameModeHandler
-  fullName: TUF.Core.GameManager.currentGameModeHandler
-  nameWithType: GameManager.currentGameModeHandler
-- uid: TUF.Core.GameManager.GameModeHanlder
-  name: GameModeHanlder
-  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_GameModeHanlder
-  commentId: P:TUF.Core.GameManager.GameModeHanlder
-  fullName: TUF.Core.GameManager.GameModeHanlder
-  nameWithType: GameManager.GameModeHanlder
-- uid: TUF.Core.GameManager.GameModeHanlder*
-  name: GameModeHanlder
-  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_GameModeHanlder_
-  commentId: Overload:TUF.Core.GameManager.GameModeHanlder
+- uid: TUF.Core.GameManager.GameMode
+  name: GameMode
+  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_GameMode
+  commentId: P:TUF.Core.GameManager.GameMode
+  fullName: TUF.Core.GameManager.GameMode
+  nameWithType: GameManager.GameMode
+- uid: TUF.Core.GameManager.GameMode*
+  name: GameMode
+  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_GameMode_
+  commentId: Overload:TUF.Core.GameManager.GameMode
   isSpec: "True"
-  fullName: TUF.Core.GameManager.GameModeHanlder
-  nameWithType: GameManager.GameModeHanlder
-- uid: TUF.Core.GameManager.gameVars
-  name: gameVars
-  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_gameVars
-  commentId: F:TUF.Core.GameManager.gameVars
-  fullName: TUF.Core.GameManager.gameVars
-  nameWithType: GameManager.gameVars
+  fullName: TUF.Core.GameManager.GameMode
+  nameWithType: GameManager.GameMode
+- uid: TUF.Core.GameManager.gameVariables
+  name: gameVariables
+  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_gameVariables
+  commentId: F:TUF.Core.GameManager.gameVariables
+  fullName: TUF.Core.GameManager.gameVariables
+  nameWithType: GameManager.gameVariables
 - uid: TUF.Core.GameManager.Initialize
   name: Initialize()
   href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_Initialize
@@ -2664,12 +2722,6 @@ references:
   isSpec: "True"
   fullName: TUF.Core.GameManager.ModManager
   nameWithType: GameManager.ModManager
-- uid: TUF.Core.GameManager.playerCamera
-  name: playerCamera
-  href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_playerCamera
-  commentId: F:TUF.Core.GameManager.playerCamera
-  fullName: TUF.Core.GameManager.playerCamera
-  nameWithType: GameManager.playerCamera
 - uid: TUF.Core.GameManager.SetGameMode(TUF.GameMode.GameModeDefinition)
   name: SetGameMode(GameModeDefinition)
   href: api/TUF.Core.GameManager.html#TUF_Core_GameManager_SetGameMode_TUF_GameMode_GameModeDefinition_
@@ -2745,6 +2797,12 @@ references:
   commentId: F:TUF.Core.GameVariables.inputBuffer
   fullName: TUF.Core.GameVariables.inputBuffer
   nameWithType: GameVariables.inputBuffer
+- uid: TUF.Core.GameVariables.playerCameraPrefab
+  name: playerCameraPrefab
+  href: api/TUF.Core.GameVariables.html#TUF_Core_GameVariables_playerCameraPrefab
+  commentId: F:TUF.Core.GameVariables.playerCameraPrefab
+  fullName: TUF.Core.GameVariables.playerCameraPrefab
+  nameWithType: GameVariables.playerCameraPrefab
 - uid: TUF.Core.GameVariables.pushboxForce
   name: pushboxForce
   href: api/TUF.Core.GameVariables.html#TUF_Core_GameVariables_pushboxForce
@@ -4758,19 +4816,6 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityHitboxManager.EntityHitboxManager
   nameWithType: EntityHitboxManager.EntityHitboxManager
-- uid: TUF.Entities.EntityHitboxManager.CreateDetectboxes(System.Int32)
-  name: CreateDetectboxes(Int32)
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_CreateDetectboxes_System_Int32_
-  commentId: M:TUF.Entities.EntityHitboxManager.CreateDetectboxes(System.Int32)
-  fullName: TUF.Entities.EntityHitboxManager.CreateDetectboxes(System.Int32)
-  nameWithType: EntityHitboxManager.CreateDetectboxes(Int32)
-- uid: TUF.Entities.EntityHitboxManager.CreateDetectboxes*
-  name: CreateDetectboxes
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_CreateDetectboxes_
-  commentId: Overload:TUF.Entities.EntityHitboxManager.CreateDetectboxes
-  isSpec: "True"
-  fullName: TUF.Entities.EntityHitboxManager.CreateDetectboxes
-  nameWithType: EntityHitboxManager.CreateDetectboxes
 - uid: TUF.Entities.EntityHitboxManager.CreateHitboxGroup(System.Int32)
   name: CreateHitboxGroup(Int32)
   href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_CreateHitboxGroup_System_Int32_
@@ -4784,19 +4829,6 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityHitboxManager.CreateHitboxGroup
   nameWithType: EntityHitboxManager.CreateHitboxGroup
-- uid: TUF.Entities.EntityHitboxManager.GetDetectedList(System.Int32)
-  name: GetDetectedList(Int32)
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_GetDetectedList_System_Int32_
-  commentId: M:TUF.Entities.EntityHitboxManager.GetDetectedList(System.Int32)
-  fullName: TUF.Entities.EntityHitboxManager.GetDetectedList(System.Int32)
-  nameWithType: EntityHitboxManager.GetDetectedList(Int32)
-- uid: TUF.Entities.EntityHitboxManager.GetDetectedList*
-  name: GetDetectedList
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_GetDetectedList_
-  commentId: Overload:TUF.Entities.EntityHitboxManager.GetDetectedList
-  isSpec: "True"
-  fullName: TUF.Entities.EntityHitboxManager.GetDetectedList
-  nameWithType: EntityHitboxManager.GetDetectedList
 - uid: TUF.Entities.EntityHitboxManager.GetHitList(System.Int32)
   name: GetHitList(Int32)
   href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_GetHitList_System_Int32_
@@ -4836,32 +4868,6 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityHitboxManager.OnHitboxHurt
   nameWithType: EntityHitboxManager.OnHitboxHurt
-- uid: TUF.Entities.EntityHitboxManager.Reset
-  name: Reset()
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_Reset
-  commentId: M:TUF.Entities.EntityHitboxManager.Reset
-  fullName: TUF.Entities.EntityHitboxManager.Reset()
-  nameWithType: EntityHitboxManager.Reset()
-- uid: TUF.Entities.EntityHitboxManager.Reset*
-  name: Reset
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_Reset_
-  commentId: Overload:TUF.Entities.EntityHitboxManager.Reset
-  isSpec: "True"
-  fullName: TUF.Entities.EntityHitboxManager.Reset
-  nameWithType: EntityHitboxManager.Reset
-- uid: TUF.Entities.EntityHitboxManager.TickBoxes
-  name: TickBoxes()
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_TickBoxes
-  commentId: M:TUF.Entities.EntityHitboxManager.TickBoxes
-  fullName: TUF.Entities.EntityHitboxManager.TickBoxes()
-  nameWithType: EntityHitboxManager.TickBoxes()
-- uid: TUF.Entities.EntityHitboxManager.TickBoxes*
-  name: TickBoxes
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_TickBoxes_
-  commentId: Overload:TUF.Entities.EntityHitboxManager.TickBoxes
-  isSpec: "True"
-  fullName: TUF.Entities.EntityHitboxManager.TickBoxes
-  nameWithType: EntityHitboxManager.TickBoxes
 - uid: TUF.Entities.EntityInputManager
   name: EntityInputManager
   href: api/TUF.Entities.EntityInputManager.html
@@ -5281,6 +5287,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityManager.TryEnemyStep
   nameWithType: EntityManager.TryEnemyStep
+- uid: TUF.Entities.EntityManager.TryFloat
+  name: TryFloat()
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_TryFloat
+  commentId: M:TUF.Entities.EntityManager.TryFloat
+  fullName: TUF.Entities.EntityManager.TryFloat()
+  nameWithType: EntityManager.TryFloat()
+- uid: TUF.Entities.EntityManager.TryFloat*
+  name: TryFloat
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_TryFloat_
+  commentId: Overload:TUF.Entities.EntityManager.TryFloat
+  isSpec: "True"
+  fullName: TUF.Entities.EntityManager.TryFloat
+  nameWithType: EntityManager.TryFloat
 - uid: TUF.Entities.EntityManager.TryJump
   name: TryJump()
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_TryJump
@@ -5862,6 +5881,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Shared.EntityAttack.CheckEnemyStepWindows
   nameWithType: EntityAttack.CheckEnemyStepWindows
+- uid: TUF.Entities.Shared.EntityAttack.CheckFloatCancelWindows(TUF.Combat.AttackDefinition)
+  name: CheckFloatCancelWindows(AttackDefinition)
+  href: api/TUF.Entities.Shared.EntityAttack.html#TUF_Entities_Shared_EntityAttack_CheckFloatCancelWindows_TUF_Combat_AttackDefinition_
+  commentId: M:TUF.Entities.Shared.EntityAttack.CheckFloatCancelWindows(TUF.Combat.AttackDefinition)
+  fullName: TUF.Entities.Shared.EntityAttack.CheckFloatCancelWindows(TUF.Combat.AttackDefinition)
+  nameWithType: EntityAttack.CheckFloatCancelWindows(AttackDefinition)
+- uid: TUF.Entities.Shared.EntityAttack.CheckFloatCancelWindows*
+  name: CheckFloatCancelWindows
+  href: api/TUF.Entities.Shared.EntityAttack.html#TUF_Entities_Shared_EntityAttack_CheckFloatCancelWindows_
+  commentId: Overload:TUF.Entities.Shared.EntityAttack.CheckFloatCancelWindows
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityAttack.CheckFloatCancelWindows
+  nameWithType: EntityAttack.CheckFloatCancelWindows
 - uid: TUF.Entities.Shared.EntityAttack.CheckJumpCancelWindows(TUF.Combat.AttackDefinition)
   name: CheckJumpCancelWindows(AttackDefinition)
   href: api/TUF.Entities.Shared.EntityAttack.html#TUF_Entities_Shared_EntityAttack_CheckJumpCancelWindows_TUF_Combat_AttackDefinition_
@@ -6959,12 +6991,24 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.ActivateGamemode
   nameWithType: GameModeBase.ActivateGamemode
+- uid: TUF.GameMode.GameModeBase.componentPrefabs
+  name: componentPrefabs
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_componentPrefabs
+  commentId: F:TUF.GameMode.GameModeBase.componentPrefabs
+  fullName: TUF.GameMode.GameModeBase.componentPrefabs
+  nameWithType: GameModeBase.componentPrefabs
 - uid: TUF.GameMode.GameModeBase.components
   name: components
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_components
   commentId: F:TUF.GameMode.GameModeBase.components
   fullName: TUF.GameMode.GameModeBase.components
   nameWithType: GameModeBase.components
+- uid: TUF.GameMode.GameModeBase.componentsData
+  name: componentsData
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_componentsData
+  commentId: F:TUF.GameMode.GameModeBase.componentsData
+  fullName: TUF.GameMode.GameModeBase.componentsData
+  nameWithType: GameModeBase.componentsData
 - uid: TUF.GameMode.GameModeBase.DeactivateGamemode
   name: DeactivateGamemode()
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_DeactivateGamemode
@@ -6978,6 +7022,12 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.DeactivateGamemode
   nameWithType: GameModeBase.DeactivateGamemode
+- uid: TUF.GameMode.GameModeBase.EntityHitAction
+  name: GameModeBase.EntityHitAction
+  href: api/TUF.GameMode.GameModeBase.EntityHitAction.html
+  commentId: T:TUF.GameMode.GameModeBase.EntityHitAction
+  fullName: TUF.GameMode.GameModeBase.EntityHitAction
+  nameWithType: GameModeBase.EntityHitAction
 - uid: TUF.GameMode.GameModeBase.FinishGamemode
   name: FinishGamemode()
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_FinishGamemode
@@ -7029,19 +7079,6 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.GamemodeActive
   nameWithType: GameModeBase.GamemodeActive
-- uid: TUF.GameMode.GameModeBase.GameModeComponents
-  name: GameModeComponents
-  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_GameModeComponents
-  commentId: P:TUF.GameMode.GameModeBase.GameModeComponents
-  fullName: TUF.GameMode.GameModeBase.GameModeComponents
-  nameWithType: GameModeBase.GameModeComponents
-- uid: TUF.GameMode.GameModeBase.GameModeComponents*
-  name: GameModeComponents
-  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_GameModeComponents_
-  commentId: Overload:TUF.GameMode.GameModeBase.GameModeComponents
-  isSpec: "True"
-  fullName: TUF.GameMode.GameModeBase.GameModeComponents
-  nameWithType: GameModeBase.GameModeComponents
 - uid: TUF.GameMode.GameModeBase.InitGameMode(TUF.Core.GameManager)
   name: InitGameMode(GameManager)
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_InitGameMode_TUF_Core_GameManager_
@@ -7055,6 +7092,18 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.InitGameMode
   nameWithType: GameModeBase.InitGameMode
+- uid: TUF.GameMode.GameModeBase.OnEnemyHit
+  name: OnEnemyHit
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_OnEnemyHit
+  commentId: E:TUF.GameMode.GameModeBase.OnEnemyHit
+  fullName: TUF.GameMode.GameModeBase.OnEnemyHit
+  nameWithType: GameModeBase.OnEnemyHit
+- uid: TUF.GameMode.GameModeBase.OnPlayerHit
+  name: OnPlayerHit
+  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_OnPlayerHit
+  commentId: E:TUF.GameMode.GameModeBase.OnPlayerHit
+  fullName: TUF.GameMode.GameModeBase.OnPlayerHit
+  nameWithType: GameModeBase.OnPlayerHit
 - uid: TUF.GameMode.GameModeBase.playerCamera
   name: playerCamera
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_playerCamera
@@ -7105,19 +7154,6 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.StartGameMode
   nameWithType: GameModeBase.StartGameMode
-- uid: TUF.GameMode.GameModeBase.TestMethod
-  name: TestMethod()
-  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_TestMethod
-  commentId: M:TUF.GameMode.GameModeBase.TestMethod
-  fullName: TUF.GameMode.GameModeBase.TestMethod()
-  nameWithType: GameModeBase.TestMethod()
-- uid: TUF.GameMode.GameModeBase.TestMethod*
-  name: TestMethod
-  href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_TestMethod_
-  commentId: Overload:TUF.GameMode.GameModeBase.TestMethod
-  isSpec: "True"
-  fullName: TUF.GameMode.GameModeBase.TestMethod
-  nameWithType: GameModeBase.TestMethod
 - uid: TUF.GameMode.GameModeBase.Tick(System.Single)
   name: Tick(Single)
   href: api/TUF.GameMode.GameModeBase.html#TUF_GameMode_GameModeBase_Tick_System_Single_
@@ -7170,56 +7206,202 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeBase.Update
   nameWithType: GameModeBase.Update
-- uid: TUF.GameMode.GameModeComponent
-  name: GameModeComponent
-  href: api/TUF.GameMode.GameModeComponent.html
-  commentId: T:TUF.GameMode.GameModeComponent
-  fullName: TUF.GameMode.GameModeComponent
-  nameWithType: GameModeComponent
-- uid: TUF.GameMode.GameModeComponent.gameMode
+- uid: TUF.GameMode.GameModeBaseEditor
+  name: GameModeBaseEditor
+  href: api/TUF.GameMode.GameModeBaseEditor.html
+  commentId: T:TUF.GameMode.GameModeBaseEditor
+  fullName: TUF.GameMode.GameModeBaseEditor
+  nameWithType: GameModeBaseEditor
+- uid: TUF.GameMode.GameModeBaseEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/TUF.GameMode.GameModeBaseEditor.html#TUF_GameMode_GameModeBaseEditor_OnInspectorGUI
+  commentId: M:TUF.GameMode.GameModeBaseEditor.OnInspectorGUI
+  fullName: TUF.GameMode.GameModeBaseEditor.OnInspectorGUI()
+  nameWithType: GameModeBaseEditor.OnInspectorGUI()
+- uid: TUF.GameMode.GameModeBaseEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/TUF.GameMode.GameModeBaseEditor.html#TUF_GameMode_GameModeBaseEditor_OnInspectorGUI_
+  commentId: Overload:TUF.GameMode.GameModeBaseEditor.OnInspectorGUI
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeBaseEditor.OnInspectorGUI
+  nameWithType: GameModeBaseEditor.OnInspectorGUI
+- uid: TUF.GameMode.GameModeComponentBase
+  name: GameModeComponentBase
+  href: api/TUF.GameMode.GameModeComponentBase.html
+  commentId: T:TUF.GameMode.GameModeComponentBase
+  fullName: TUF.GameMode.GameModeComponentBase
+  nameWithType: GameModeComponentBase
+- uid: TUF.GameMode.GameModeComponentBase.gameMode
   name: gameMode
-  href: api/TUF.GameMode.GameModeComponent.html#TUF_GameMode_GameModeComponent_gameMode
-  commentId: F:TUF.GameMode.GameModeComponent.gameMode
-  fullName: TUF.GameMode.GameModeComponent.gameMode
-  nameWithType: GameModeComponent.gameMode
-- uid: TUF.GameMode.GameModeComponent.InitComponent(TUF.GameMode.GameModeBase)
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_gameMode
+  commentId: F:TUF.GameMode.GameModeComponentBase.gameMode
+  fullName: TUF.GameMode.GameModeComponentBase.gameMode
+  nameWithType: GameModeComponentBase.gameMode
+- uid: TUF.GameMode.GameModeComponentBase.GetComponentData
+  name: GetComponentData()
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_GetComponentData
+  commentId: M:TUF.GameMode.GameModeComponentBase.GetComponentData
+  fullName: TUF.GameMode.GameModeComponentBase.GetComponentData()
+  nameWithType: GameModeComponentBase.GetComponentData()
+- uid: TUF.GameMode.GameModeComponentBase.GetComponentData*
+  name: GetComponentData
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_GetComponentData_
+  commentId: Overload:TUF.GameMode.GameModeComponentBase.GetComponentData
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentBase.GetComponentData
+  nameWithType: GameModeComponentBase.GetComponentData
+- uid: TUF.GameMode.GameModeComponentBase.InitComponent(TUF.GameMode.GameModeBase)
   name: InitComponent(GameModeBase)
-  href: api/TUF.GameMode.GameModeComponent.html#TUF_GameMode_GameModeComponent_InitComponent_TUF_GameMode_GameModeBase_
-  commentId: M:TUF.GameMode.GameModeComponent.InitComponent(TUF.GameMode.GameModeBase)
-  fullName: TUF.GameMode.GameModeComponent.InitComponent(TUF.GameMode.GameModeBase)
-  nameWithType: GameModeComponent.InitComponent(GameModeBase)
-- uid: TUF.GameMode.GameModeComponent.InitComponent*
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_InitComponent_TUF_GameMode_GameModeBase_
+  commentId: M:TUF.GameMode.GameModeComponentBase.InitComponent(TUF.GameMode.GameModeBase)
+  fullName: TUF.GameMode.GameModeComponentBase.InitComponent(TUF.GameMode.GameModeBase)
+  nameWithType: GameModeComponentBase.InitComponent(GameModeBase)
+- uid: TUF.GameMode.GameModeComponentBase.InitComponent*
   name: InitComponent
-  href: api/TUF.GameMode.GameModeComponent.html#TUF_GameMode_GameModeComponent_InitComponent_
-  commentId: Overload:TUF.GameMode.GameModeComponent.InitComponent
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_InitComponent_
+  commentId: Overload:TUF.GameMode.GameModeComponentBase.InitComponent
   isSpec: "True"
-  fullName: TUF.GameMode.GameModeComponent.InitComponent
-  nameWithType: GameModeComponent.InitComponent
-- uid: TUF.GameMode.GameModeComponent.Tick
+  fullName: TUF.GameMode.GameModeComponentBase.InitComponent
+  nameWithType: GameModeComponentBase.InitComponent
+- uid: TUF.GameMode.GameModeComponentBase.SetComponentData(TUF.GameMode.GameModeComponentData)
+  name: SetComponentData(GameModeComponentData)
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_SetComponentData_TUF_GameMode_GameModeComponentData_
+  commentId: M:TUF.GameMode.GameModeComponentBase.SetComponentData(TUF.GameMode.GameModeComponentData)
+  fullName: TUF.GameMode.GameModeComponentBase.SetComponentData(TUF.GameMode.GameModeComponentData)
+  nameWithType: GameModeComponentBase.SetComponentData(GameModeComponentData)
+- uid: TUF.GameMode.GameModeComponentBase.SetComponentData*
+  name: SetComponentData
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_SetComponentData_
+  commentId: Overload:TUF.GameMode.GameModeComponentBase.SetComponentData
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentBase.SetComponentData
+  nameWithType: GameModeComponentBase.SetComponentData
+- uid: TUF.GameMode.GameModeComponentBase.Tick
   name: Tick()
-  href: api/TUF.GameMode.GameModeComponent.html#TUF_GameMode_GameModeComponent_Tick
-  commentId: M:TUF.GameMode.GameModeComponent.Tick
-  fullName: TUF.GameMode.GameModeComponent.Tick()
-  nameWithType: GameModeComponent.Tick()
-- uid: TUF.GameMode.GameModeComponent.Tick*
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_Tick
+  commentId: M:TUF.GameMode.GameModeComponentBase.Tick
+  fullName: TUF.GameMode.GameModeComponentBase.Tick()
+  nameWithType: GameModeComponentBase.Tick()
+- uid: TUF.GameMode.GameModeComponentBase.Tick*
   name: Tick
-  href: api/TUF.GameMode.GameModeComponent.html#TUF_GameMode_GameModeComponent_Tick_
-  commentId: Overload:TUF.GameMode.GameModeComponent.Tick
+  href: api/TUF.GameMode.GameModeComponentBase.html#TUF_GameMode_GameModeComponentBase_Tick_
+  commentId: Overload:TUF.GameMode.GameModeComponentBase.Tick
   isSpec: "True"
-  fullName: TUF.GameMode.GameModeComponent.Tick
-  nameWithType: GameModeComponent.Tick
+  fullName: TUF.GameMode.GameModeComponentBase.Tick
+  nameWithType: GameModeComponentBase.Tick
+- uid: TUF.GameMode.GameModeComponentData
+  name: GameModeComponentData
+  href: api/TUF.GameMode.GameModeComponentData.html
+  commentId: T:TUF.GameMode.GameModeComponentData
+  fullName: TUF.GameMode.GameModeComponentData
+  nameWithType: GameModeComponentData
+- uid: TUF.GameMode.GameModeComponentData.DrawInspectorUI
+  name: DrawInspectorUI()
+  href: api/TUF.GameMode.GameModeComponentData.html#TUF_GameMode_GameModeComponentData_DrawInspectorUI
+  commentId: M:TUF.GameMode.GameModeComponentData.DrawInspectorUI
+  fullName: TUF.GameMode.GameModeComponentData.DrawInspectorUI()
+  nameWithType: GameModeComponentData.DrawInspectorUI()
+- uid: TUF.GameMode.GameModeComponentData.DrawInspectorUI*
+  name: DrawInspectorUI
+  href: api/TUF.GameMode.GameModeComponentData.html#TUF_GameMode_GameModeComponentData_DrawInspectorUI_
+  commentId: Overload:TUF.GameMode.GameModeComponentData.DrawInspectorUI
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentData.DrawInspectorUI
+  nameWithType: GameModeComponentData.DrawInspectorUI
+- uid: TUF.GameMode.GameModeComponentHolder
+  name: GameModeComponentHolder
+  href: api/TUF.GameMode.GameModeComponentHolder.html
+  commentId: T:TUF.GameMode.GameModeComponentHolder
+  fullName: TUF.GameMode.GameModeComponentHolder
+  nameWithType: GameModeComponentHolder
+- uid: TUF.GameMode.GameModeComponentHolder.gameModeComponent
+  name: gameModeComponent
+  href: api/TUF.GameMode.GameModeComponentHolder.html#TUF_GameMode_GameModeComponentHolder_gameModeComponent
+  commentId: F:TUF.GameMode.GameModeComponentHolder.gameModeComponent
+  fullName: TUF.GameMode.GameModeComponentHolder.gameModeComponent
+  nameWithType: GameModeComponentHolder.gameModeComponent
+- uid: TUF.GameMode.GameModeComponentHolder.GetGameModeComponent
+  name: GetGameModeComponent()
+  href: api/TUF.GameMode.GameModeComponentHolder.html#TUF_GameMode_GameModeComponentHolder_GetGameModeComponent
+  commentId: M:TUF.GameMode.GameModeComponentHolder.GetGameModeComponent
+  fullName: TUF.GameMode.GameModeComponentHolder.GetGameModeComponent()
+  nameWithType: GameModeComponentHolder.GetGameModeComponent()
+- uid: TUF.GameMode.GameModeComponentHolder.GetGameModeComponent*
+  name: GetGameModeComponent
+  href: api/TUF.GameMode.GameModeComponentHolder.html#TUF_GameMode_GameModeComponentHolder_GetGameModeComponent_
+  commentId: Overload:TUF.GameMode.GameModeComponentHolder.GetGameModeComponent
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentHolder.GetGameModeComponent
+  nameWithType: GameModeComponentHolder.GetGameModeComponent
+- uid: TUF.GameMode.GameModeComponentHolder.SetComponent
+  name: SetComponent()
+  href: api/TUF.GameMode.GameModeComponentHolder.html#TUF_GameMode_GameModeComponentHolder_SetComponent
+  commentId: M:TUF.GameMode.GameModeComponentHolder.SetComponent
+  fullName: TUF.GameMode.GameModeComponentHolder.SetComponent()
+  nameWithType: GameModeComponentHolder.SetComponent()
+- uid: TUF.GameMode.GameModeComponentHolder.SetComponent*
+  name: SetComponent
+  href: api/TUF.GameMode.GameModeComponentHolder.html#TUF_GameMode_GameModeComponentHolder_SetComponent_
+  commentId: Overload:TUF.GameMode.GameModeComponentHolder.SetComponent
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentHolder.SetComponent
+  nameWithType: GameModeComponentHolder.SetComponent
+- uid: TUF.GameMode.GameModeComponentStyleMeter
+  name: GameModeComponentStyleMeter
+  href: api/TUF.GameMode.GameModeComponentStyleMeter.html
+  commentId: T:TUF.GameMode.GameModeComponentStyleMeter
+  fullName: TUF.GameMode.GameModeComponentStyleMeter
+  nameWithType: GameModeComponentStyleMeter
+- uid: TUF.GameMode.GameModeComponentStyleMeter.GetComponentData
+  name: GetComponentData()
+  href: api/TUF.GameMode.GameModeComponentStyleMeter.html#TUF_GameMode_GameModeComponentStyleMeter_GetComponentData
+  commentId: M:TUF.GameMode.GameModeComponentStyleMeter.GetComponentData
+  fullName: TUF.GameMode.GameModeComponentStyleMeter.GetComponentData()
+  nameWithType: GameModeComponentStyleMeter.GetComponentData()
+- uid: TUF.GameMode.GameModeComponentStyleMeter.GetComponentData*
+  name: GetComponentData
+  href: api/TUF.GameMode.GameModeComponentStyleMeter.html#TUF_GameMode_GameModeComponentStyleMeter_GetComponentData_
+  commentId: Overload:TUF.GameMode.GameModeComponentStyleMeter.GetComponentData
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentStyleMeter.GetComponentData
+  nameWithType: GameModeComponentStyleMeter.GetComponentData
+- uid: TUF.GameMode.GameModeComponentStyleMeter.InitComponent(TUF.GameMode.GameModeBase)
+  name: InitComponent(GameModeBase)
+  href: api/TUF.GameMode.GameModeComponentStyleMeter.html#TUF_GameMode_GameModeComponentStyleMeter_InitComponent_TUF_GameMode_GameModeBase_
+  commentId: M:TUF.GameMode.GameModeComponentStyleMeter.InitComponent(TUF.GameMode.GameModeBase)
+  fullName: TUF.GameMode.GameModeComponentStyleMeter.InitComponent(TUF.GameMode.GameModeBase)
+  nameWithType: GameModeComponentStyleMeter.InitComponent(GameModeBase)
+- uid: TUF.GameMode.GameModeComponentStyleMeter.InitComponent*
+  name: InitComponent
+  href: api/TUF.GameMode.GameModeComponentStyleMeter.html#TUF_GameMode_GameModeComponentStyleMeter_InitComponent_
+  commentId: Overload:TUF.GameMode.GameModeComponentStyleMeter.InitComponent
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentStyleMeter.InitComponent
+  nameWithType: GameModeComponentStyleMeter.InitComponent
+- uid: TUF.GameMode.GameModeComponentStyleMeter.styleMeterData
+  name: styleMeterData
+  href: api/TUF.GameMode.GameModeComponentStyleMeter.html#TUF_GameMode_GameModeComponentStyleMeter_styleMeterData
+  commentId: F:TUF.GameMode.GameModeComponentStyleMeter.styleMeterData
+  fullName: TUF.GameMode.GameModeComponentStyleMeter.styleMeterData
+  nameWithType: GameModeComponentStyleMeter.styleMeterData
+- uid: TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData
+  name: GameModeComponentStyleMeter.StyleMeterData
+  href: api/TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData.html
+  commentId: T:TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData
+  fullName: TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData
+  nameWithType: GameModeComponentStyleMeter.StyleMeterData
+- uid: TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData.styleDepletionTime
+  name: styleDepletionTime
+  href: api/TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData.html#TUF_GameMode_GameModeComponentStyleMeter_StyleMeterData_styleDepletionTime
+  commentId: F:TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData.styleDepletionTime
+  fullName: TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData.styleDepletionTime
+  nameWithType: GameModeComponentStyleMeter.StyleMeterData.styleDepletionTime
 - uid: TUF.GameMode.GameModeComponentTimer
   name: GameModeComponentTimer
   href: api/TUF.GameMode.GameModeComponentTimer.html
   commentId: T:TUF.GameMode.GameModeComponentTimer
   fullName: TUF.GameMode.GameModeComponentTimer
   nameWithType: GameModeComponentTimer
-- uid: TUF.GameMode.GameModeComponentTimer.currentTime
-  name: currentTime
-  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_currentTime
-  commentId: F:TUF.GameMode.GameModeComponentTimer.currentTime
-  fullName: TUF.GameMode.GameModeComponentTimer.currentTime
-  nameWithType: GameModeComponentTimer.currentTime
 - uid: TUF.GameMode.GameModeComponentTimer.CurrentTime
   name: CurrentTime
   href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_CurrentTime
@@ -7233,6 +7415,19 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeComponentTimer.CurrentTime
   nameWithType: GameModeComponentTimer.CurrentTime
+- uid: TUF.GameMode.GameModeComponentTimer.GetComponentData
+  name: GetComponentData()
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_GetComponentData
+  commentId: M:TUF.GameMode.GameModeComponentTimer.GetComponentData
+  fullName: TUF.GameMode.GameModeComponentTimer.GetComponentData()
+  nameWithType: GameModeComponentTimer.GetComponentData()
+- uid: TUF.GameMode.GameModeComponentTimer.GetComponentData*
+  name: GetComponentData
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_GetComponentData_
+  commentId: Overload:TUF.GameMode.GameModeComponentTimer.GetComponentData
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentTimer.GetComponentData
+  nameWithType: GameModeComponentTimer.GetComponentData
 - uid: TUF.GameMode.GameModeComponentTimer.InitComponent(TUF.GameMode.GameModeBase)
   name: InitComponent(GameModeBase)
   href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_InitComponent_TUF_GameMode_GameModeBase_
@@ -7246,6 +7441,19 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeComponentTimer.InitComponent
   nameWithType: GameModeComponentTimer.InitComponent
+- uid: TUF.GameMode.GameModeComponentTimer.SetComponentData(TUF.GameMode.GameModeComponentData)
+  name: SetComponentData(GameModeComponentData)
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_SetComponentData_TUF_GameMode_GameModeComponentData_
+  commentId: M:TUF.GameMode.GameModeComponentTimer.SetComponentData(TUF.GameMode.GameModeComponentData)
+  fullName: TUF.GameMode.GameModeComponentTimer.SetComponentData(TUF.GameMode.GameModeComponentData)
+  nameWithType: GameModeComponentTimer.SetComponentData(GameModeComponentData)
+- uid: TUF.GameMode.GameModeComponentTimer.SetComponentData*
+  name: SetComponentData
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_SetComponentData_
+  commentId: Overload:TUF.GameMode.GameModeComponentTimer.SetComponentData
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentTimer.SetComponentData
+  nameWithType: GameModeComponentTimer.SetComponentData
 - uid: TUF.GameMode.GameModeComponentTimer.Timer
   name: Timer
   href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_Timer
@@ -7259,12 +7467,43 @@ references:
   isSpec: "True"
   fullName: TUF.GameMode.GameModeComponentTimer.Timer
   nameWithType: GameModeComponentTimer.Timer
-- uid: TUF.GameMode.GameModeComponentTimer.timerType
+- uid: TUF.GameMode.GameModeComponentTimer.timerData
+  name: timerData
+  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_timerData
+  commentId: F:TUF.GameMode.GameModeComponentTimer.timerData
+  fullName: TUF.GameMode.GameModeComponentTimer.timerData
+  nameWithType: GameModeComponentTimer.timerData
+- uid: TUF.GameMode.GameModeComponentTimer.TimerData
+  name: GameModeComponentTimer.TimerData
+  href: api/TUF.GameMode.GameModeComponentTimer.TimerData.html
+  commentId: T:TUF.GameMode.GameModeComponentTimer.TimerData
+  fullName: TUF.GameMode.GameModeComponentTimer.TimerData
+  nameWithType: GameModeComponentTimer.TimerData
+- uid: TUF.GameMode.GameModeComponentTimer.TimerData.currentTime
+  name: currentTime
+  href: api/TUF.GameMode.GameModeComponentTimer.TimerData.html#TUF_GameMode_GameModeComponentTimer_TimerData_currentTime
+  commentId: F:TUF.GameMode.GameModeComponentTimer.TimerData.currentTime
+  fullName: TUF.GameMode.GameModeComponentTimer.TimerData.currentTime
+  nameWithType: GameModeComponentTimer.TimerData.currentTime
+- uid: TUF.GameMode.GameModeComponentTimer.TimerData.DrawInspectorUI
+  name: DrawInspectorUI()
+  href: api/TUF.GameMode.GameModeComponentTimer.TimerData.html#TUF_GameMode_GameModeComponentTimer_TimerData_DrawInspectorUI
+  commentId: M:TUF.GameMode.GameModeComponentTimer.TimerData.DrawInspectorUI
+  fullName: TUF.GameMode.GameModeComponentTimer.TimerData.DrawInspectorUI()
+  nameWithType: GameModeComponentTimer.TimerData.DrawInspectorUI()
+- uid: TUF.GameMode.GameModeComponentTimer.TimerData.DrawInspectorUI*
+  name: DrawInspectorUI
+  href: api/TUF.GameMode.GameModeComponentTimer.TimerData.html#TUF_GameMode_GameModeComponentTimer_TimerData_DrawInspectorUI_
+  commentId: Overload:TUF.GameMode.GameModeComponentTimer.TimerData.DrawInspectorUI
+  isSpec: "True"
+  fullName: TUF.GameMode.GameModeComponentTimer.TimerData.DrawInspectorUI
+  nameWithType: GameModeComponentTimer.TimerData.DrawInspectorUI
+- uid: TUF.GameMode.GameModeComponentTimer.TimerData.timerType
   name: timerType
-  href: api/TUF.GameMode.GameModeComponentTimer.html#TUF_GameMode_GameModeComponentTimer_timerType
-  commentId: F:TUF.GameMode.GameModeComponentTimer.timerType
-  fullName: TUF.GameMode.GameModeComponentTimer.timerType
-  nameWithType: GameModeComponentTimer.timerType
+  href: api/TUF.GameMode.GameModeComponentTimer.TimerData.html#TUF_GameMode_GameModeComponentTimer_TimerData_timerType
+  commentId: F:TUF.GameMode.GameModeComponentTimer.TimerData.timerType
+  fullName: TUF.GameMode.GameModeComponentTimer.TimerData.timerType
+  nameWithType: GameModeComponentTimer.TimerData.timerType
 - uid: TUF.GameMode.GameModeComponentTimer.TimerType
   name: GameModeComponentTimer.TimerType
   href: api/TUF.GameMode.GameModeComponentTimer.TimerType.html
@@ -8077,6 +8316,63 @@ references:
   commentId: N:TUF.Menus.Options
   fullName: TUF.Menus.Options
   nameWithType: TUF.Menus.Options
+- uid: TUF.Menus.Options.ModsMenu
+  name: ModsMenu
+  href: api/TUF.Menus.Options.ModsMenu.html
+  commentId: T:TUF.Menus.Options.ModsMenu
+  fullName: TUF.Menus.Options.ModsMenu
+  nameWithType: ModsMenu
+- uid: TUF.Menus.Options.ModsMenu.ButtonModIOBrowser
+  name: ButtonModIOBrowser()
+  href: api/TUF.Menus.Options.ModsMenu.html#TUF_Menus_Options_ModsMenu_ButtonModIOBrowser
+  commentId: M:TUF.Menus.Options.ModsMenu.ButtonModIOBrowser
+  fullName: TUF.Menus.Options.ModsMenu.ButtonModIOBrowser()
+  nameWithType: ModsMenu.ButtonModIOBrowser()
+- uid: TUF.Menus.Options.ModsMenu.ButtonModIOBrowser*
+  name: ButtonModIOBrowser
+  href: api/TUF.Menus.Options.ModsMenu.html#TUF_Menus_Options_ModsMenu_ButtonModIOBrowser_
+  commentId: Overload:TUF.Menus.Options.ModsMenu.ButtonModIOBrowser
+  isSpec: "True"
+  fullName: TUF.Menus.Options.ModsMenu.ButtonModIOBrowser
+  nameWithType: ModsMenu.ButtonModIOBrowser
+- uid: TUF.Menus.Options.ModsMenu.ButtonUIConfiguration
+  name: ButtonUIConfiguration()
+  href: api/TUF.Menus.Options.ModsMenu.html#TUF_Menus_Options_ModsMenu_ButtonUIConfiguration
+  commentId: M:TUF.Menus.Options.ModsMenu.ButtonUIConfiguration
+  fullName: TUF.Menus.Options.ModsMenu.ButtonUIConfiguration()
+  nameWithType: ModsMenu.ButtonUIConfiguration()
+- uid: TUF.Menus.Options.ModsMenu.ButtonUIConfiguration*
+  name: ButtonUIConfiguration
+  href: api/TUF.Menus.Options.ModsMenu.html#TUF_Menus_Options_ModsMenu_ButtonUIConfiguration_
+  commentId: Overload:TUF.Menus.Options.ModsMenu.ButtonUIConfiguration
+  isSpec: "True"
+  fullName: TUF.Menus.Options.ModsMenu.ButtonUIConfiguration
+  nameWithType: ModsMenu.ButtonUIConfiguration
+- uid: TUF.Menus.Options.ModsMenu.ButtonUIManageMods
+  name: ButtonUIManageMods()
+  href: api/TUF.Menus.Options.ModsMenu.html#TUF_Menus_Options_ModsMenu_ButtonUIManageMods
+  commentId: M:TUF.Menus.Options.ModsMenu.ButtonUIManageMods
+  fullName: TUF.Menus.Options.ModsMenu.ButtonUIManageMods()
+  nameWithType: ModsMenu.ButtonUIManageMods()
+- uid: TUF.Menus.Options.ModsMenu.ButtonUIManageMods*
+  name: ButtonUIManageMods
+  href: api/TUF.Menus.Options.ModsMenu.html#TUF_Menus_Options_ModsMenu_ButtonUIManageMods_
+  commentId: Overload:TUF.Menus.Options.ModsMenu.ButtonUIManageMods
+  isSpec: "True"
+  fullName: TUF.Menus.Options.ModsMenu.ButtonUIManageMods
+  nameWithType: ModsMenu.ButtonUIManageMods
+- uid: TUF.Menus.Options.ModsMenu.MenuExitedAction
+  name: ModsMenu.MenuExitedAction
+  href: api/TUF.Menus.Options.ModsMenu.MenuExitedAction.html
+  commentId: T:TUF.Menus.Options.ModsMenu.MenuExitedAction
+  fullName: TUF.Menus.Options.ModsMenu.MenuExitedAction
+  nameWithType: ModsMenu.MenuExitedAction
+- uid: TUF.Menus.Options.ModsMenu.OnMenuExited
+  name: OnMenuExited
+  href: api/TUF.Menus.Options.ModsMenu.html#TUF_Menus_Options_ModsMenu_OnMenuExited
+  commentId: E:TUF.Menus.Options.ModsMenu.OnMenuExited
+  fullName: TUF.Menus.Options.ModsMenu.OnMenuExited
+  nameWithType: ModsMenu.OnMenuExited
 - uid: TUF.Menus.Options.OptionsMenu
   name: OptionsMenu
   href: api/TUF.Menus.Options.OptionsMenu.html
@@ -8162,6 +8458,77 @@ references:
   commentId: N:TUF.Modding
   fullName: TUF.Modding
   nameWithType: TUF.Modding
+- uid: TUF.Modding.BuildModWindow
+  name: BuildModWindow
+  href: api/TUF.Modding.BuildModWindow.html
+  commentId: T:TUF.Modding.BuildModWindow
+  fullName: TUF.Modding.BuildModWindow
+  nameWithType: BuildModWindow
+- uid: TUF.Modding.BuildModWindow.LaunchBuild(System.Boolean,System.Action)
+  name: LaunchBuild(Boolean, Action)
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_LaunchBuild_System_Boolean_System_Action_
+  commentId: M:TUF.Modding.BuildModWindow.LaunchBuild(System.Boolean,System.Action)
+  fullName: TUF.Modding.BuildModWindow.LaunchBuild(System.Boolean, System.Action)
+  nameWithType: BuildModWindow.LaunchBuild(Boolean, Action)
+- uid: TUF.Modding.BuildModWindow.LaunchBuild*
+  name: LaunchBuild
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_LaunchBuild_
+  commentId: Overload:TUF.Modding.BuildModWindow.LaunchBuild
+  isSpec: "True"
+  fullName: TUF.Modding.BuildModWindow.LaunchBuild
+  nameWithType: BuildModWindow.LaunchBuild
+- uid: TUF.Modding.BuildModWindow.OnEnable
+  name: OnEnable()
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnEnable
+  commentId: M:TUF.Modding.BuildModWindow.OnEnable
+  fullName: TUF.Modding.BuildModWindow.OnEnable()
+  nameWithType: BuildModWindow.OnEnable()
+- uid: TUF.Modding.BuildModWindow.OnEnable*
+  name: OnEnable
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnEnable_
+  commentId: Overload:TUF.Modding.BuildModWindow.OnEnable
+  isSpec: "True"
+  fullName: TUF.Modding.BuildModWindow.OnEnable
+  nameWithType: BuildModWindow.OnEnable
+- uid: TUF.Modding.BuildModWindow.OnFocus
+  name: OnFocus()
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnFocus
+  commentId: M:TUF.Modding.BuildModWindow.OnFocus
+  fullName: TUF.Modding.BuildModWindow.OnFocus()
+  nameWithType: BuildModWindow.OnFocus()
+- uid: TUF.Modding.BuildModWindow.OnFocus*
+  name: OnFocus
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnFocus_
+  commentId: Overload:TUF.Modding.BuildModWindow.OnFocus
+  isSpec: "True"
+  fullName: TUF.Modding.BuildModWindow.OnFocus
+  nameWithType: BuildModWindow.OnFocus
+- uid: TUF.Modding.BuildModWindow.OnGUI
+  name: OnGUI()
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnGUI
+  commentId: M:TUF.Modding.BuildModWindow.OnGUI
+  fullName: TUF.Modding.BuildModWindow.OnGUI()
+  nameWithType: BuildModWindow.OnGUI()
+- uid: TUF.Modding.BuildModWindow.OnGUI*
+  name: OnGUI
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnGUI_
+  commentId: Overload:TUF.Modding.BuildModWindow.OnGUI
+  isSpec: "True"
+  fullName: TUF.Modding.BuildModWindow.OnGUI
+  nameWithType: BuildModWindow.OnGUI
+- uid: TUF.Modding.BuildModWindow.ShowBuildTarget
+  name: ShowBuildTarget()
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_ShowBuildTarget
+  commentId: M:TUF.Modding.BuildModWindow.ShowBuildTarget
+  fullName: TUF.Modding.BuildModWindow.ShowBuildTarget()
+  nameWithType: BuildModWindow.ShowBuildTarget()
+- uid: TUF.Modding.BuildModWindow.ShowBuildTarget*
+  name: ShowBuildTarget
+  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_ShowBuildTarget_
+  commentId: Overload:TUF.Modding.BuildModWindow.ShowBuildTarget
+  isSpec: "True"
+  fullName: TUF.Modding.BuildModWindow.ShowBuildTarget
+  nameWithType: BuildModWindow.ShowBuildTarget
 - uid: TUF.Modding.ModDefinition
   name: ModDefinition
   href: api/TUF.Modding.ModDefinition.html
@@ -8354,6 +8721,12 @@ references:
   commentId: F:TUF.Modding.ModInfo.identifier
   fullName: TUF.Modding.ModInfo.identifier
   nameWithType: ModInfo.identifier
+- uid: TUF.Modding.ModInfo.modName
+  name: modName
+  href: api/TUF.Modding.ModInfo.html#TUF_Modding_ModInfo_modName
+  commentId: F:TUF.Modding.ModInfo.modName
+  fullName: TUF.Modding.ModInfo.modName
+  nameWithType: ModInfo.modName
 - uid: TUF.Modding.ModInfo.path
   name: path
   href: api/TUF.Modding.ModInfo.html#TUF_Modding_ModInfo_path
@@ -8366,6 +8739,19 @@ references:
   commentId: T:TUF.Modding.ModLoader
   fullName: TUF.Modding.ModLoader
   nameWithType: ModLoader
+- uid: TUF.Modding.ModLoader.CheckLoadedModList
+  name: CheckLoadedModList()
+  href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_CheckLoadedModList
+  commentId: M:TUF.Modding.ModLoader.CheckLoadedModList
+  fullName: TUF.Modding.ModLoader.CheckLoadedModList()
+  nameWithType: ModLoader.CheckLoadedModList()
+- uid: TUF.Modding.ModLoader.CheckLoadedModList*
+  name: CheckLoadedModList
+  href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_CheckLoadedModList_
+  commentId: Overload:TUF.Modding.ModLoader.CheckLoadedModList
+  isSpec: "True"
+  fullName: TUF.Modding.ModLoader.CheckLoadedModList
+  nameWithType: ModLoader.CheckLoadedModList
 - uid: TUF.Modding.ModLoader.GetModInfo(TUF.Modding.ModInfo)
   name: GetModInfo(ModInfo)
   href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_GetModInfo_TUF_Modding_ModInfo_
@@ -8449,18 +8835,34 @@ references:
   isSpec: "True"
   fullName: TUF.Modding.ModLoader.LoadMod
   nameWithType: ModLoader.LoadMod
-- uid: TUF.Modding.ModLoader.modInstallPath
-  name: modInstallPath
-  href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_modInstallPath
-  commentId: F:TUF.Modding.ModLoader.modInstallPath
-  fullName: TUF.Modding.ModLoader.modInstallPath
-  nameWithType: ModLoader.modInstallPath
+- uid: TUF.Modding.ModLoader.LoadMods(System.Collections.Generic.List{System.String})
+  name: LoadMods(List<String>)
+  href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_LoadMods_System_Collections_Generic_List_System_String__
+  commentId: M:TUF.Modding.ModLoader.LoadMods(System.Collections.Generic.List{System.String})
+  name.vb: LoadMods(List(Of String))
+  fullName: TUF.Modding.ModLoader.LoadMods(System.Collections.Generic.List<System.String>)
+  fullName.vb: TUF.Modding.ModLoader.LoadMods(System.Collections.Generic.List(Of System.String))
+  nameWithType: ModLoader.LoadMods(List<String>)
+  nameWithType.vb: ModLoader.LoadMods(List(Of String))
+- uid: TUF.Modding.ModLoader.LoadMods*
+  name: LoadMods
+  href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_LoadMods_
+  commentId: Overload:TUF.Modding.ModLoader.LoadMods
+  isSpec: "True"
+  fullName: TUF.Modding.ModLoader.LoadMods
+  nameWithType: ModLoader.LoadMods
 - uid: TUF.Modding.ModLoader.modList
   name: modList
   href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_modList
   commentId: F:TUF.Modding.ModLoader.modList
   fullName: TUF.Modding.ModLoader.modList
   nameWithType: ModLoader.modList
+- uid: TUF.Modding.ModLoader.modsLoadedFileName
+  name: modsLoadedFileName
+  href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_modsLoadedFileName
+  commentId: F:TUF.Modding.ModLoader.modsLoadedFileName
+  fullName: TUF.Modding.ModLoader.modsLoadedFileName
+  nameWithType: ModLoader.modsLoadedFileName
 - uid: TUF.Modding.ModLoader.UnloadAllMods
   name: UnloadAllMods()
   href: api/TUF.Modding.ModLoader.html#TUF_Modding_ModLoader_UnloadAllMods
@@ -8791,6 +9193,41 @@ references:
   commentId: F:TUF.ModdingTools.TUFModToolsWindow.listRequest
   fullName: TUF.ModdingTools.TUFModToolsWindow.listRequest
   nameWithType: TUFModToolsWindow.listRequest
+- uid: TUF.SaveLoadService
+  name: SaveLoadService
+  href: api/TUF.SaveLoadService.html
+  commentId: T:TUF.SaveLoadService
+  fullName: TUF.SaveLoadService
+  nameWithType: SaveLoadService
+- uid: TUF.SaveLoadService.Load*
+  name: Load
+  href: api/TUF.SaveLoadService.html#TUF_SaveLoadService_Load_
+  commentId: Overload:TUF.SaveLoadService.Load
+  isSpec: "True"
+  fullName: TUF.SaveLoadService.Load
+  nameWithType: SaveLoadService.Load
+- uid: TUF.SaveLoadService.Load``1(System.String)
+  name: Load<T>(String)
+  href: api/TUF.SaveLoadService.html#TUF_SaveLoadService_Load__1_System_String_
+  commentId: M:TUF.SaveLoadService.Load``1(System.String)
+  name.vb: Load(Of T)(String)
+  fullName: TUF.SaveLoadService.Load<T>(System.String)
+  fullName.vb: TUF.SaveLoadService.Load(Of T)(System.String)
+  nameWithType: SaveLoadService.Load<T>(String)
+  nameWithType.vb: SaveLoadService.Load(Of T)(String)
+- uid: TUF.SaveLoadService.Save(System.String,System.String)
+  name: Save(String, String)
+  href: api/TUF.SaveLoadService.html#TUF_SaveLoadService_Save_System_String_System_String_
+  commentId: M:TUF.SaveLoadService.Save(System.String,System.String)
+  fullName: TUF.SaveLoadService.Save(System.String, System.String)
+  nameWithType: SaveLoadService.Save(String, String)
+- uid: TUF.SaveLoadService.Save*
+  name: Save
+  href: api/TUF.SaveLoadService.html#TUF_SaveLoadService_Save_
+  commentId: Overload:TUF.SaveLoadService.Save
+  isSpec: "True"
+  fullName: TUF.SaveLoadService.Save
+  nameWithType: SaveLoadService.Save
 - uid: TUF.Sound
   name: TUF.Sound
   href: api/TUF.Sound.html
@@ -9111,3 +9548,124 @@ references:
   commentId: E:TUF.TriggerDetector.TriggerStay
   fullName: TUF.TriggerDetector.TriggerStay
   nameWithType: TriggerDetector.TriggerStay
+- uid: TUF.UI
+  name: TUF.UI
+  href: api/TUF.UI.html
+  commentId: N:TUF.UI
+  fullName: TUF.UI
+  nameWithType: TUF.UI
+- uid: TUF.UI.ManageModsMenu
+  name: ManageModsMenu
+  href: api/TUF.UI.ManageModsMenu.html
+  commentId: T:TUF.UI.ManageModsMenu
+  fullName: TUF.UI.ManageModsMenu
+  nameWithType: ManageModsMenu
+- uid: TUF.UI.ManageModsMenu.filterField
+  name: filterField
+  href: api/TUF.UI.ManageModsMenu.html#TUF_UI_ManageModsMenu_filterField
+  commentId: F:TUF.UI.ManageModsMenu.filterField
+  fullName: TUF.UI.ManageModsMenu.filterField
+  nameWithType: ManageModsMenu.filterField
+- uid: TUF.UI.ManageModsMenu.ModFilterType
+  name: ManageModsMenu.ModFilterType
+  href: api/TUF.UI.ManageModsMenu.ModFilterType.html
+  commentId: T:TUF.UI.ManageModsMenu.ModFilterType
+  fullName: TUF.UI.ManageModsMenu.ModFilterType
+  nameWithType: ManageModsMenu.ModFilterType
+- uid: TUF.UI.ManageModsMenu.ModFilterType.ALL
+  name: ALL
+  href: api/TUF.UI.ManageModsMenu.ModFilterType.html#TUF_UI_ManageModsMenu_ModFilterType_ALL
+  commentId: F:TUF.UI.ManageModsMenu.ModFilterType.ALL
+  fullName: TUF.UI.ManageModsMenu.ModFilterType.ALL
+  nameWithType: ManageModsMenu.ModFilterType.ALL
+- uid: TUF.UI.ManageModsMenu.ModFilterType.DISABLED
+  name: DISABLED
+  href: api/TUF.UI.ManageModsMenu.ModFilterType.html#TUF_UI_ManageModsMenu_ModFilterType_DISABLED
+  commentId: F:TUF.UI.ManageModsMenu.ModFilterType.DISABLED
+  fullName: TUF.UI.ManageModsMenu.ModFilterType.DISABLED
+  nameWithType: ManageModsMenu.ModFilterType.DISABLED
+- uid: TUF.UI.ManageModsMenu.ModFilterType.ENABLED
+  name: ENABLED
+  href: api/TUF.UI.ManageModsMenu.ModFilterType.html#TUF_UI_ManageModsMenu_ModFilterType_ENABLED
+  commentId: F:TUF.UI.ManageModsMenu.ModFilterType.ENABLED
+  fullName: TUF.UI.ManageModsMenu.ModFilterType.ENABLED
+  nameWithType: ManageModsMenu.ModFilterType.ENABLED
+- uid: TUF.UI.ManageModsMenu.modListContnentHolder
+  name: modListContnentHolder
+  href: api/TUF.UI.ManageModsMenu.html#TUF_UI_ManageModsMenu_modListContnentHolder
+  commentId: F:TUF.UI.ManageModsMenu.modListContnentHolder
+  fullName: TUF.UI.ManageModsMenu.modListContnentHolder
+  nameWithType: ManageModsMenu.modListContnentHolder
+- uid: TUF.UI.ManageModsMenu.modListItem
+  name: modListItem
+  href: api/TUF.UI.ManageModsMenu.html#TUF_UI_ManageModsMenu_modListItem
+  commentId: F:TUF.UI.ManageModsMenu.modListItem
+  fullName: TUF.UI.ManageModsMenu.modListItem
+  nameWithType: ManageModsMenu.modListItem
+- uid: TUF.UI.ManageModsMenu.modNameText
+  name: modNameText
+  href: api/TUF.UI.ManageModsMenu.html#TUF_UI_ManageModsMenu_modNameText
+  commentId: F:TUF.UI.ManageModsMenu.modNameText
+  fullName: TUF.UI.ManageModsMenu.modNameText
+  nameWithType: ManageModsMenu.modNameText
+- uid: TUF.UI.ManageModsMenu.modStatusButton
+  name: modStatusButton
+  href: api/TUF.UI.ManageModsMenu.html#TUF_UI_ManageModsMenu_modStatusButton
+  commentId: F:TUF.UI.ManageModsMenu.modStatusButton
+  fullName: TUF.UI.ManageModsMenu.modStatusButton
+  nameWithType: ManageModsMenu.modStatusButton
+- uid: TUF.UI.ManageModsMenu.SetModFilter(System.Int32)
+  name: SetModFilter(Int32)
+  href: api/TUF.UI.ManageModsMenu.html#TUF_UI_ManageModsMenu_SetModFilter_System_Int32_
+  commentId: M:TUF.UI.ManageModsMenu.SetModFilter(System.Int32)
+  fullName: TUF.UI.ManageModsMenu.SetModFilter(System.Int32)
+  nameWithType: ManageModsMenu.SetModFilter(Int32)
+- uid: TUF.UI.ManageModsMenu.SetModFilter*
+  name: SetModFilter
+  href: api/TUF.UI.ManageModsMenu.html#TUF_UI_ManageModsMenu_SetModFilter_
+  commentId: Overload:TUF.UI.ManageModsMenu.SetModFilter
+  isSpec: "True"
+  fullName: TUF.UI.ManageModsMenu.SetModFilter
+  nameWithType: ManageModsMenu.SetModFilter
+- uid: TUF.UI.UIDefinition
+  name: UIDefinition
+  href: api/TUF.UI.UIDefinition.html
+  commentId: T:TUF.UI.UIDefinition
+  fullName: TUF.UI.UIDefinition
+  nameWithType: UIDefinition
+- uid: TUF.UI.UIDefinition.id
+  name: id
+  href: api/TUF.UI.UIDefinition.html#TUF_UI_UIDefinition_id
+  commentId: F:TUF.UI.UIDefinition.id
+  fullName: TUF.UI.UIDefinition.id
+  nameWithType: UIDefinition.id
+- uid: TUF.UI.UIDefinition.uiName
+  name: uiName
+  href: api/TUF.UI.UIDefinition.html#TUF_UI_UIDefinition_uiName
+  commentId: F:TUF.UI.UIDefinition.uiName
+  fullName: TUF.UI.UIDefinition.uiName
+  nameWithType: UIDefinition.uiName
+- uid: TUF.UI.UIOverrideBase
+  name: UIOverrideBase
+  href: api/TUF.UI.UIOverrideBase.html
+  commentId: T:TUF.UI.UIOverrideBase
+  fullName: TUF.UI.UIOverrideBase
+  nameWithType: UIOverrideBase
+- uid: TUF.UI.UIOverrideDefinition
+  name: UIOverrideDefinition
+  href: api/TUF.UI.UIOverrideDefinition.html
+  commentId: T:TUF.UI.UIOverrideDefinition
+  fullName: TUF.UI.UIOverrideDefinition
+  nameWithType: UIOverrideDefinition
+- uid: TUF.UI.UIOverrideDefinition.uiDefinition
+  name: uiDefinition
+  href: api/TUF.UI.UIOverrideDefinition.html#TUF_UI_UIOverrideDefinition_uiDefinition
+  commentId: F:TUF.UI.UIOverrideDefinition.uiDefinition
+  fullName: TUF.UI.UIOverrideDefinition.uiDefinition
+  nameWithType: UIOverrideDefinition.uiDefinition
+- uid: TUF.UI.UIOverrideDefinition.uiPrefab
+  name: uiPrefab
+  href: api/TUF.UI.UIOverrideDefinition.html#TUF_UI_UIOverrideDefinition_uiPrefab
+  commentId: F:TUF.UI.UIOverrideDefinition.uiPrefab
+  fullName: TUF.UI.UIOverrideDefinition.uiPrefab
+  nameWithType: UIOverrideDefinition.uiPrefab
