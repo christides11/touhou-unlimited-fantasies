@@ -115,6 +115,7 @@
     <Compile Include="Assets\_Project\Scripts\Combat\Events\EntityMovementForceAddEvent.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Events\EntitySetAttackEvent.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Events\PlaySoundEvent.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\HitInfo.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Moveset\MovesetAttackNode.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Moveset\MovesetDefinition.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Status Effects\DisableFloatStatusEffectDefinition.cs" />

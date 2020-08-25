@@ -255,7 +255,6 @@ GameObject:
   - component: {fileID: 359055167191230430}
   - component: {fileID: 5820165911642462714}
   - component: {fileID: -1274951725818220127}
-  - component: {fileID: 6180977717417611396}
   m_Layer: 9
   m_Name: Reimu
   m_TagString: Player
@@ -365,7 +364,6 @@ MonoBehaviour:
   entityStateManager: {fileID: 5473496294964507337}
   entityCombatManager: {fileID: 359055167191230430}
   entityPhysicsManager: {fileID: 5820165911642462714}
-  healthManager: {fileID: 6180977717417611396}
   visual: {fileID: 524244243}
   entityAnimator: {fileID: -1274951725818220127}
   definition: {fileID: 11400000, guid: db56f4faf80d8ab4c9a20f7577243ebc, type: 2}
@@ -416,7 +414,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d30adad02ae13af4194b9a574c0fe90e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 959866917490569354}
+  manager: {fileID: 959866917490569354}
   aiBrain: {fileID: 0}
   visualOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &5473496294964507337
@@ -431,7 +429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7d73e7d89dc19c044a05cb43f7e043d2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 959866917490569354}
+  manager: {fileID: 959866917490569354}
   currentStateFrame: 0
   currentStateName: 
 --- !u!114 &359055167191230430
@@ -446,9 +444,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0dfc3a5bdb0d4ff4d8bea7cd8a89ff37, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 959866917490569354}
-  hitStun: 0
-  hitStop: 0
+  manager: {fileID: 959866917490569354}
   moveset: {fileID: 11400000, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
   team: 1
   chargeTimes: 
@@ -464,7 +460,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bee04d0646e0ae745b1b9bf7b5328532, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  controller: {fileID: 959866917490569354}
+  manager: {fileID: 959866917490569354}
   forceMovement: {x: 0, y: 0, z: 0}
   forceGravity: {x: 0, y: 0, z: 0}
   forceDamage: {x: 0, y: 0, z: 0}
@@ -484,19 +480,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 960bb850b7fcc67468cc174815b2c524, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &6180977717417611396
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6981093855673240406}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ecd4de386c4e723469e4e0b8e5e4009c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 500
 --- !u!1 &8781265322137494762
 GameObject:
   m_ObjectHideFlags: 0

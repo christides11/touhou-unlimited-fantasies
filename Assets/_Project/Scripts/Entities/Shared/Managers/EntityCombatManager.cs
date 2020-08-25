@@ -7,6 +7,7 @@ using TUF.Core;
 using CAF.Combat;
 using MovesetAttackNode = TUF.Combat.MovesetAttackNode;
 using MovesetDefinition = TUF.Combat.MovesetDefinition;
+using HitInfo = TUF.Combat.HitInfo;
 
 namespace TUF.Entities
 {
