@@ -6,11 +6,8 @@ using UnityEngine;
 
 namespace TUF.Combat
 {
-    public class Hurtbox : MonoBehaviour
+    public class Hurtbox : CAF.Combat.Hurtbox
     {
-        public GameObject Owner { get { return owner; } }
-        public IHurtable Hurtable { get { return owner.GetComponent<IHurtable>(); } }
 
-        [SerializeField] protected GameObject owner;
     }
 }

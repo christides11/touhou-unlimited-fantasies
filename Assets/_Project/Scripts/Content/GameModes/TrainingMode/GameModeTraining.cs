@@ -10,7 +10,6 @@ namespace TUF.GameMode
     public class GameModeTraining : GameModeBase
     {
         public EntityManager dummy;
-
         public bool frameByFrame = false;
 
         public override void StartGameMode(EntityDefinition character, StageDefinition scene,
@@ -23,9 +22,12 @@ namespace TUF.GameMode
             playerCharacters[0].GetComponent<EntityManager>().Init(gameManager, playerCamera, CAF.Input.InputControlType.Direct);
             playerCamera.Initialize(playerCharacters[0].GetComponent<EntityManager>());
 
-            GameObject d = simObjectManager.SpawnObject(dummy.gameObject, spawnPointManager.GetSpawnPoint().position + new Vector3(0, 0, 5), 
-                Quaternion.identity);
-            d.GetComponent<EntityManager>().Init(gameManager, null, CAF.Input.InputControlType.None);
+            if (dummy != null)
+            {
+                GameObject d = simObjectManager.SpawnObject(dummy.gameObject, spawnPointManager.GetSpawnPoint().position + new Vector3(0, 0, 5),
+                    Quaternion.identity);
+                d.GetComponent<EntityManager>().Init(gameManager, null, CAF.Input.InputControlType.None);
+            }
         }
 
         public override void Update()

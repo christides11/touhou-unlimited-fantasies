@@ -17,6 +17,7 @@ MonoBehaviour:
   entities: []
   gamemodes:
   - {fileID: 11400000, guid: 311f8f8c06b3c954f9dc0dc4b8f21e3b, type: 2}
+  - {fileID: 11400000, guid: 7d5b90b98ecaeec46a0666d0c44ef594, type: 2}
   stages:
   - {fileID: 11400000, guid: 22f0de35093934c459e91523687631c8, type: 2}
   stageCollections: []

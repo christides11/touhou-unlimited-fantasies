@@ -205,6 +205,7 @@
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityTrip.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityTumble.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityWakeup.cs" />
+    <Compile Include="Assets\_Project\Scripts\FoldAttribute.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\Helpers.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\TriggerDetector.cs" />

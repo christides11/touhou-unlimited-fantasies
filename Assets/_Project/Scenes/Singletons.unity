@@ -221,7 +221,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: RestoreDefaults
   intData: 0
-  text: {fileID: 604138429}
+  text: {fileID: 0}
 --- !u!114 &10455365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1648,7 +1648,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d106210a51deb8b48beec828f2164128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: {fileID: 29701587}
+  _label: {fileID: 0}
   _content: {fileID: 1025989790}
 --- !u!1 &273061153
 GameObject:
@@ -2442,7 +2442,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d106210a51deb8b48beec828f2164128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: {fileID: 604416924}
+  _label: {fileID: 0}
   _content: {fileID: 1007314268}
 --- !u!224 &542105417
 RectTransform:
@@ -3731,7 +3731,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: CalibrateController
   intData: 0
-  text: {fileID: 370503696}
+  text: {fileID: 0}
 --- !u!114 &977896274
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4230,7 +4230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d106210a51deb8b48beec828f2164128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: {fileID: 2104424146}
+  _label: {fileID: 0}
   _content: {fileID: 1606640024}
 --- !u!224 &1050548645
 RectTransform:
@@ -5152,7 +5152,7 @@ MonoBehaviour:
         _axisRange: 0
         _invert: 0
         _axisContribution: 0
-        _keyboardKeyCode: 304
+        _keyboardKeyCode: 104
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
@@ -5252,6 +5252,17 @@ MonoBehaviour:
         _invert: 0
         _axisContribution: 0
         _keyboardKeyCode: 52
+        _modifierKey1: 0
+        _modifierKey2: 0
+        _modifierKey3: 0
+      - _actionCategoryId: 0
+        _actionId: 32
+        _elementType: 1
+        _elementIdentifierId: -1
+        _axisRange: 0
+        _invert: 0
+        _axisContribution: 0
+        _keyboardKeyCode: 112
         _modifierKey1: 0
         _modifierKey2: 0
         _modifierKey3: 0
@@ -5570,7 +5581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: RemoveController
   intData: 0
-  text: {fileID: 1860041875}
+  text: {fileID: 0}
 --- !u!114 &1135632893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6589,7 +6600,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d106210a51deb8b48beec828f2164128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: {fileID: 1129191959}
+  _label: {fileID: 0}
   _content: {fileID: 1979435933}
 --- !u!224 &1492684152
 RectTransform:
@@ -6687,7 +6698,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d106210a51deb8b48beec828f2164128, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _label: {fileID: 1277999299}
+  _label: {fileID: 0}
   _content: {fileID: 1609832515}
 --- !u!224 &1537008033
 RectTransform:
@@ -7300,7 +7311,7 @@ MonoBehaviour:
     _inputGridVScrollbar: {fileID: 839041257}
     _inputGridScrollRect: {fileID: 290385061}
     _inputGridInnerGroup: {fileID: 621482794}
-    _controllerNameLabel: {fileID: 11272391}
+    _controllerNameLabel: {fileID: 0}
     _removeControllerButton: {fileID: 1135632895}
     _assignControllerButton: {fileID: 2086142370}
     _calibrateControllerButton: {fileID: 977896276}
@@ -7484,7 +7495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: Done
   intData: 0
-  text: {fileID: 2144327441}
+  text: {fileID: 0}
 --- !u!114 &1902424882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7694,7 +7705,7 @@ MonoBehaviour:
   consoleReader: {fileID: 273061155}
   readEditorParams: 1
   editorArgs:
-  - +sgm=christides11.tidespack/Reimu,core/stage,christides11.tidespack/EOSD_FNPS
+  - +sgm=christides11.tidespack/Reimu,core/training,core/debugroom
 --- !u!1 &2086142363
 GameObject:
   m_ObjectHideFlags: 0
@@ -7768,7 +7779,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   identifier: AssignController
   intData: 0
-  text: {fileID: 1379612535}
+  text: {fileID: 0}
 --- !u!114 &2086142367
 MonoBehaviour:
   m_ObjectHideFlags: 0

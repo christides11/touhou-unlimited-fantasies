@@ -34,6 +34,7 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
+  - id: 4
   dashCancelableFrames: []
   floatCancelFrames: []
   bulletCancelFrames: []
@@ -53,10 +54,10 @@ MonoBehaviour:
         activeFramesEnd: 10
         hitGroupType: 0
         boxes:
-        - shape: 2
-          offset: {x: 1, y: 1, z: 1}
+        - shape: 0
+          offset: {x: 0, y: 1, z: 1}
           size: {x: 2, y: 2, z: 2}
-          rotation: {x: 0, y: 25, z: 0}
+          rotation: {x: 0, y: 0, z: 0}
           radius: 2
           height: 2
         attachToEntity: 1
@@ -64,7 +65,7 @@ MonoBehaviour:
         chargeLevelNeeded: 0
         chargeLevelMax: 0
         hitboxHitInfo:
-          id: 4
+          id: 5
         cameraShake:
           amplitude: 0
           frequency: 0
@@ -81,9 +82,9 @@ MonoBehaviour:
         onHit: 0
         onHitHitboxGroup: 0
         startFrame: 1
-        endFrame: 2
+        endFrame: 1
         attackEvent:
-          id: 5
+          id: 6
         variables:
           intVars: 
           floatVars:
@@ -97,14 +98,14 @@ MonoBehaviour:
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
-        startFrame: 2
+        startFrame: 7
         endFrame: 50
         attackEvent:
-          id: 6
+          id: 7
         variables:
           intVars: 
           floatVars:
-          - 0.15
+          - 0.12
           objectVars: []
           curveVars: []
     00000003:
@@ -117,7 +118,7 @@ MonoBehaviour:
         startFrame: 1
         endFrame: 50
         attackEvent:
-          id: 7
+          id: 8
         variables:
           intVars: 
           floatVars:
@@ -142,6 +143,25 @@ MonoBehaviour:
             m_PostInfinity: 2
             m_RotationOrder: 4
     00000004:
+      type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
+      data:
+        nickname: Force M
+        active: 1
+        onHit: 0
+        onHitHitboxGroup: 0
+        startFrame: 2
+        endFrame: 2
+        attackEvent:
+          id: 9
+        variables:
+          intVars: 
+          floatVars:
+          - 0
+          - 2
+          - 0
+          objectVars: []
+          curveVars: []
+    00000005:
       type: {class: HitInfo, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         airOnly: 0
@@ -163,28 +183,33 @@ MonoBehaviour:
         groundBounceForce: 0
         wallBounces: 0
         wallBounceForce: 0
-        damageOnHit: 0
-        damageOnBlock: 0
+        damageOnHit: 5
+        damageOnBlock: 5
         causesTumble: 0
-        opponentForceMagnitude: 1
+        opponentForceMagnitude: 5
         opponentForceDir: {x: 0, y: 0, z: 1}
         forceIncludeYForce: 0
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1
         throwConfirm: {fileID: 0}
         dmy: 0
-    00000005:
+    00000006:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         dmy: 0
-    00000006:
+    00000007:
       type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         yFriction: 0
         xzFriction: 1
-    00000007:
+    00000008:
       type: {class: EntityApplyGravityEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         useEntityMaxFallSpeed: 1
         useEntityGravity: 1
         useEntityGravityScale: 1
+    00000009:
+      type: {class: EntityMovementForceAddEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      data:
+        xzForce: 1
+        yForce: 0

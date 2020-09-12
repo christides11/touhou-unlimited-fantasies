@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using TUF.Combat;
 using UnityEngine;
 using TUF.Core;
@@ -17,26 +15,13 @@ namespace TUF.Entities
         public bool WasFloating { get; set; } = false;
 
         [SerializeField] protected MovesetDefinition moveset;
-
         [SerializeField] protected EntityTeams team;
-
-        public List<int> chargeTimes = new List<int>();
 
         protected override void Awake()
         {
             CurrentMoveset = moveset;
             base.Awake();
             hitboxManager = new TUF.Entities.EntityHitboxManager(this, (EntityManager)manager);
-        }
-
-        public override void CLateUpdate()
-        {
-            base.CLateUpdate();
-        }
-
-        public override void Cleanup()
-        {
-            base.Cleanup();
         }
 
         protected override CAF.Combat.MovesetAttackNode CheckStartingNodes()
@@ -68,6 +53,7 @@ namespace TUF.Entities
 
         public override HitReaction Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfoBase hitInfoB)
         {
+            Debug.Log("Hurt.");
             HitInfo hitInfo = (HitInfo)hitInfoB;
             HitReaction hitReaction = new HitReaction();
             hitReaction.reactionType = HitReactionType.Hit;

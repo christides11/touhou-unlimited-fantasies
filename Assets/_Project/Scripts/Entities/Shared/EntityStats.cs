@@ -19,7 +19,7 @@ namespace TUF.Entities.Shared
         public float dashSpeed;
         public int dashTime;
 
-        [Header("Jumping")]
+        [Header("Jump")]
         public int jumpsquat = 5;
         public float fullHopVelocity;
         public float shortHopJumpVelocity;

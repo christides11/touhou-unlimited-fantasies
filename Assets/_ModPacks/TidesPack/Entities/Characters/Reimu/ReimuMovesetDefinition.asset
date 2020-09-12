@@ -48,7 +48,7 @@ MonoBehaviour:
     stickDirection: {x: 0, y: 0}
     directionDeviation: 0
   inputSequence: []
-  attackDefinition: {fileID: 11400000, guid: 7d06c4d801ac28841a765dc5b9c0a1f9, type: 2}
+  attackDefinition: {fileID: 11400000, guid: 6c32de5245885f841bfa8d5ee68a6354, type: 2}
   nextNode: []
 --- !u!114 &-6643447657923467853
 MonoBehaviour:
@@ -224,7 +224,7 @@ MonoBehaviour:
   inputSequence: []
   attackDefinition: {fileID: 11400000, guid: 340c4b6fd97270743aee4e18feb0572d, type: 2}
   nextNode:
-  - cancelWindow: {x: 12, y: 30}
+  - cancelWindow: {x: 11, y: 30}
     node: {fileID: -1285294409386166759}
   - cancelWindow: {x: 31, y: 100}
     node: {fileID: -340154687094389976}
@@ -289,7 +289,7 @@ MonoBehaviour:
     stickDirection: {x: 0, y: 0}
     directionDeviation: 0
   inputSequence: []
-  attackDefinition: {fileID: 11400000, guid: 1fe9791f8fd79484380ce4251d5487a0, type: 2}
+  attackDefinition: {fileID: 11400000, guid: 2e4ea75f681373d4296cd474e2991aab, type: 2}
   nextNode:
   - cancelWindow: {x: 9, y: 100}
     node: {fileID: -6971814778102208417}

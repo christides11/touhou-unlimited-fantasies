@@ -159,5 +159,10 @@ namespace TUF.Core
             }
             UnlockOn();
         }
+
+        public void Reset()
+        {
+
+        }
     }
 }

@@ -22,7 +22,7 @@ MonoBehaviour:
   runRotationSpeed: 0.97
   dashSpeed: 20
   dashTime: 20
-  jumpsquat: 4
+  jumpsquat: 6
   fullHopVelocity: 15
   shortHopJumpVelocity: 10
   maxAirJumps: 1
