@@ -105,6 +105,7 @@ namespace TUF.Entities.Characters
             return false;
         }
 
+        public float wallRunVertical = -0.9f;
         public virtual bool TryWallRun()
         {
             if (InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude >= InputConstants.movementMagnitude)
@@ -112,13 +113,14 @@ namespace TUF.Entities.Characters
                 RaycastHit rh = ((EntityPhysicsManager)PhysicsManager).DetectWall();
                 if (rh.collider)
                 {
-                    if (Vector3.Dot(rh.normal, GetMovementVector()) < -0.9f)
+                    float dotProduct = Vector3.Dot(rh.normal, GetMovementVector().normalized);
+                    if (dotProduct < wallRunVertical)
                     {
                         lastWallHit = rh;
                         StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_VERTICAL);
                         return true;
                     }
-                    else if (Vector3.Dot(rh.normal, GetMovementVector()) < -0.1f)
+                    else if (dotProduct < -0.1f)
                     {
                         lastWallHit = rh;
                         StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
