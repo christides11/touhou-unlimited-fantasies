@@ -346,7 +346,7 @@ MonoBehaviour:
   gravity: {x: 0, y: 0, z: 0}
   stableMovementSharpness: 250
   orientationSharpness: 10
-  airMovementSharpness: 250
+  airMovementSharpness: 60
   MaxAirMoveSpeed: 10
   IgnoredColliders: []
 --- !u!114 &959866917490569354
@@ -401,6 +401,7 @@ MonoBehaviour:
   lastWall: {fileID: 0}
   wallSide: 0
   wallRunHozMultiplier: 1
+  wallRunVertical: -0.95
   bpm: {fileID: 0}
   bulletMove: {fileID: 0}
 --- !u!114 &268217326523756411

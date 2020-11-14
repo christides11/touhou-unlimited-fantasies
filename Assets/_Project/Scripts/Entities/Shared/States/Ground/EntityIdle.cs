@@ -15,15 +15,12 @@ namespace TUF.Entities.Shared
 
         public override void OnUpdate()
         {
-            if (CheckInterrupt())
-            {
-                return;
-            }
             controller.PhysicsManager.ApplyMovementFriction();
             if(controller.LockedOn)
             {
                 controller.RotateVisual(controller.LockonForward, 10);
             }
+            CheckInterrupt();
         }
 
         public override string GetName()

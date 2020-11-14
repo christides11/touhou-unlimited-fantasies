@@ -125,7 +125,7 @@ namespace TUF.Entities
                 }
 
                 // Smooth movement Velocity
-                currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity + gravity, 1f - Mathf.Exp(-airMovementSharpness * deltaTime));
+                currentVelocity = Vector3.Lerp(currentVelocity, targetMovementVelocity + gravity, airMovementSharpness * deltaTime);
             }
         }
 

@@ -28,15 +28,12 @@ namespace TUF.Entities.Shared
 
         public override void OnUpdate()
         {
-            if (!CheckInterrupt())
+            if (controller.InputManager.GetButton((int)EntityInputs.Jump).released)
             {
-                if (controller.InputManager.GetButton((int)EntityInputs.Jump).released)
-                {
-                    controller.fullHop = false;
-                }
-
-                controller.StateManager.IncrementFrame();
+                controller.fullHop = false;
             }
+            CheckInterrupt();
+            controller.StateManager.IncrementFrame();
         }
     }
 }

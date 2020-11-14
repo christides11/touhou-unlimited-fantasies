@@ -17,13 +17,12 @@ namespace TUF.Entities.Shared
 
         public override void OnUpdate()
         {
-            if (!CheckInterrupt())
-            {
-                EntityStats es = controller.definition.stats;
-                PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration);
-                PhysicsManager.HandleGravity();
-                controller.RotateVisual(controller.GetMovementVector(0), es.airRotationSpeed);
-            }
+            EntityStats es = controller.definition.stats;
+            PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration);
+            PhysicsManager.HandleGravity();
+            controller.RotateVisual(controller.GetMovementVector(0), es.airRotationSpeed);
+
+            CheckInterrupt();
         }
 
         public override string GetName()
