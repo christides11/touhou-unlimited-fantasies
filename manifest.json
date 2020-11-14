@@ -28,7 +28,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.AttackDefinition.html",
-          "hash": "j61cAc73MdS4JTyeTtuogw=="
+          "hash": "Hmnls4bNX25leETCGEj7Rg=="
         }
       },
       "is_incremental": false,
@@ -40,7 +40,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.AttackDefinitionEditor.html",
-          "hash": "sZgY/BCStMSF4r91d9TZuA=="
+          "hash": "MTWvCwQ6vi507c9LbSzf7Q=="
         }
       },
       "is_incremental": false,
@@ -52,7 +52,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.AttackDefinitionEditorWindow.html",
-          "hash": "3Z9+dJh3KYuJZlGmwAjsmw=="
+          "hash": "RXA/pT5IxNy/1XtRN6/tow=="
         }
       },
       "is_incremental": false,
@@ -64,7 +64,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.AttackEventDefinition.html",
-          "hash": "I3f8H8znbXwiA9UlVSWGgg=="
+          "hash": "QG3h0ZWrjFQnm/QyNOPBSw=="
         }
       },
       "is_incremental": false,
@@ -76,7 +76,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.AttackFaceLockonWindow.html",
-          "hash": "vaFwPrPw1FVAM8Ctn+F/5Q=="
+          "hash": "cHDGrhmfkLHav6ik3KVjWw=="
         }
       },
       "is_incremental": false,
@@ -88,7 +88,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.BoxGroup.html",
-          "hash": "ZxRcmFoM/ZOvNB04WGWmRA=="
+          "hash": "VTDHsoU80yrhw5+UiVy3cQ=="
         }
       },
       "is_incremental": false,
@@ -100,7 +100,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.AddRotationBPA.html",
-          "hash": "gpkXwsBJ5TZSqBXDtyXeLQ=="
+          "hash": "FJ7C7dJxISBedos6PvkgCQ=="
         }
       },
       "is_incremental": false,
@@ -112,7 +112,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.AddSpeedBPA.html",
-          "hash": "mPKhaSr0mj1xtjRKpd9Jmw=="
+          "hash": "0SbC/5ZEa9r5U5WbeyDN+g=="
         }
       },
       "is_incremental": false,
@@ -124,7 +124,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.ApplySpeedBPA.html",
-          "hash": "VwIJvIDfgvWgwRuhbdvWLg=="
+          "hash": "60eVlsh8yq86TWGDVPM95Q=="
         }
       },
       "is_incremental": false,
@@ -136,7 +136,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.Bullet.html",
-          "hash": "SuENronI2yQXm/z2MAXing=="
+          "hash": "6RcYTgCRQcYl3fxxpy96Cw=="
         }
       },
       "is_incremental": false,
@@ -148,7 +148,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.BulletPattern.html",
-          "hash": "rbl29sB5RR6649Piw/pfRA=="
+          "hash": "JftOrCO5RqObwJhF/xVm6A=="
         }
       },
       "is_incremental": false,
@@ -160,7 +160,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.BulletPatternAction.html",
-          "hash": "AGbdGA+ptiNFUX5bhVootw=="
+          "hash": "smYoJnqOFLl2iLe1yD+dBg=="
         }
       },
       "is_incremental": false,
@@ -172,7 +172,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.BulletPatternData.html",
-          "hash": "qpChgx0M39OF9VvyXcDgNw=="
+          "hash": "EJ2q+EIcMbrozeN7OIxemw=="
         }
       },
       "is_incremental": false,
@@ -184,7 +184,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.BulletPatternGroup.html",
-          "hash": "gAgIKBW29nQOAVh8TXPkMQ=="
+          "hash": "2BEjueTKNffqlUT/BV3QXw=="
         }
       },
       "is_incremental": false,
@@ -196,7 +196,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.BulletPatternManager.html",
-          "hash": "Ia0Y94Rh3KbrpsRCkSSOzg=="
+          "hash": "vonr09XajFCmz4jZa4iSFA=="
         }
       },
       "is_incremental": false,
@@ -208,7 +208,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.BulletPatternManagerSettings.html",
-          "hash": "5OAim7twJlFLgFwxfp7f8A=="
+          "hash": "xcuS+Fevr5rk41ztkVDHsA=="
         }
       },
       "is_incremental": false,
@@ -220,7 +220,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.ClearBPA.html",
-          "hash": "Ngg6AhFChKV+SiXzw3eJEA=="
+          "hash": "3JqeQbGEGvYWcMYBlR9Dgw=="
         }
       },
       "is_incremental": false,
@@ -232,7 +232,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.CreateBulletBPA.html",
-          "hash": "hLpwLh+z6YrONpOsDbwEOQ=="
+          "hash": "NknSwXA+Z7FbLav2OtPXlw=="
         }
       },
       "is_incremental": false,
@@ -244,7 +244,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.CreateBulletPatternBPA.html",
-          "hash": "+LLmgSVqsCjs0ZtYPOszCQ=="
+          "hash": "iZGz0cW9eaMX4pDG5SgwMQ=="
         }
       },
       "is_incremental": false,
@@ -256,7 +256,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.SetAngularSpeedBPA.html",
-          "hash": "pwux1Rz1jFiEhn7QpEkp1Q=="
+          "hash": "XQlRXod1HixEFR0GokSWzQ=="
         }
       },
       "is_incremental": false,
@@ -268,7 +268,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.SetLifetimeBPA.html",
-          "hash": "LysHDgWl27vceCnEyQUGlA=="
+          "hash": "YxhYTB0cwnb4L1Galt4v2A=="
         }
       },
       "is_incremental": false,
@@ -280,7 +280,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.SetLocalAngularSpeedBPA.html",
-          "hash": "+Czet53TSAm6Do6P9D6yBQ=="
+          "hash": "FQRbOwf1+Cc2PVtnI0215g=="
         }
       },
       "is_incremental": false,
@@ -292,7 +292,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.SetLocalSpeedBPA.html",
-          "hash": "KuhEYXzdg14TwU8Tz27uiw=="
+          "hash": "4Q1JJgWlCEsxsLLhArpXww=="
         }
       },
       "is_incremental": false,
@@ -304,7 +304,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.SetSpeedBulletPatternAction.html",
-          "hash": "7rRO7nesJD7UgxniMy9/pw=="
+          "hash": "QAF94uyZ3XXIYpB8Ecki6Q=="
         }
       },
       "is_incremental": false,
@@ -316,7 +316,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.WaitBulletPatternAction.html",
-          "hash": "fvVPA2dVTJWK2AKkP0YvBA=="
+          "hash": "rZvnfYO8WCG1C7b1IkPkRQ=="
         }
       },
       "is_incremental": false,
@@ -328,7 +328,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Bullets.html",
-          "hash": "xNGGiDBYv6ApddL0lpbGXw=="
+          "hash": "ebuttg04QhUFKSB242aE2A=="
         }
       },
       "is_incremental": false,
@@ -340,7 +340,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.DetectionBox.DetectAction.html",
-          "hash": "sUR7A1fkawuU34o8UEDGJQ=="
+          "hash": "S0BRe/1WMkmHysDmeRUlOQ=="
         }
       },
       "is_incremental": false,
@@ -352,7 +352,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.DetectionBox.html",
-          "hash": "x8UQKEY37Rmu2JoZtKqe/g=="
+          "hash": "8+QyGGzRCkaYbMQlHaIHKQ=="
         }
       },
       "is_incremental": false,
@@ -364,7 +364,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.EntityTeams.html",
-          "hash": "iLL98jV8BCjkRsq2ZTPKog=="
+          "hash": "thtMPn9DlFw1CwhPhgSsfA=="
         }
       },
       "is_incremental": false,
@@ -376,7 +376,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.ClampGravityEvent.html",
-          "hash": "8LSutL5k0Fpojo8i7Kj+EQ=="
+          "hash": "V89p1JQOXBsQclMlEYazDA=="
         }
       },
       "is_incremental": false,
@@ -388,7 +388,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.ClampMovementEvent.html",
-          "hash": "QfXH9Uh8Vhf5U+Tbqq+OVg=="
+          "hash": "Nv9HECkfGjU/t/faWMLjSg=="
         }
       },
       "is_incremental": false,
@@ -400,7 +400,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.EntityApplyGravityEvent.html",
-          "hash": "KTnOaAxp8eIPpoKH33h4qQ=="
+          "hash": "HXp9/nbGCRVXXAcwqj/AAg=="
         }
       },
       "is_incremental": false,
@@ -412,7 +412,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.EntityChangeStateEvent.html",
-          "hash": "wCgCvZKsswIjnkic1+DYLQ=="
+          "hash": "dxGSwYZ6y2KfFmCpYujIFQ=="
         }
       },
       "is_incremental": false,
@@ -424,7 +424,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.EntityForceCurveEvent.html",
-          "hash": "ZQXTtNy5eLG1G/Avvz/rgA=="
+          "hash": "ZiWFRoTDNIuueHElLTCurQ=="
         }
       },
       "is_incremental": false,
@@ -436,7 +436,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.EntityForceSetEvent.html",
-          "hash": "mwqlRiAaM4lpoNOKccl/Ig=="
+          "hash": "Q9OmwH35K6x6Hm4NNdShrg=="
         }
       },
       "is_incremental": false,
@@ -448,7 +448,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.EntityFrictionEvent.html",
-          "hash": "0Ee4D6Tdw8LwubCQp/MNRA=="
+          "hash": "fhBPxELWLI21j61WbCCDLw=="
         }
       },
       "is_incremental": false,
@@ -460,7 +460,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.EntityMovementForceAddEvent.html",
-          "hash": "ZCBRyAbVcU5VxJEk0iUSnA=="
+          "hash": "lz15+5bod46pbTyccEnJIQ=="
         }
       },
       "is_incremental": false,
@@ -472,7 +472,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.EntitySetAttackEvent.html",
-          "hash": "PT9sN1012HIDEtumCawQQw=="
+          "hash": "Hta8yWV8VYaJote9JgZ79g=="
         }
       },
       "is_incremental": false,
@@ -484,7 +484,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.PlaySoundEvent.html",
-          "hash": "jHx3YvM2V9cekjU4VT1BKw=="
+          "hash": "rFAVG8et+/QEzTN38FkQQQ=="
         }
       },
       "is_incremental": false,
@@ -496,7 +496,19 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Events.html",
-          "hash": "XvePrAhkfvZPq4ABqRTbhg=="
+          "hash": "XGsieFKcVFhgm4x/aUnJSw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Combat.HitInfo.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Combat.HitInfo.html",
+          "hash": "Vx7CMFYUcErbJJqEu8vOiw=="
         }
       },
       "is_incremental": false,
@@ -508,7 +520,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Hitbox.html",
-          "hash": "PjkGfn1OKYROh6m1WMX+Gg=="
+          "hash": "amjh4jstUeoedsFJl6/aJQ=="
         }
       },
       "is_incremental": false,
@@ -520,7 +532,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.HurtReactions.html",
-          "hash": "1q+7irF4bzZPnWTJy+cafQ=="
+          "hash": "QXMiCw9Yu1NSxf5KzcDDeA=="
         }
       },
       "is_incremental": false,
@@ -532,7 +544,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.Hurtbox.html",
-          "hash": "X9efnJCO5hY8gmJlqpoOuQ=="
+          "hash": "o5voJy5wf6ziibCBVgz+7A=="
         }
       },
       "is_incremental": false,
@@ -544,7 +556,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.LoopBulletPatternAction.html",
-          "hash": "+zTX9o6yTe4aLd2Z8FI2IQ=="
+          "hash": "z8eV0QwykgNWcxfiw4+CRw=="
         }
       },
       "is_incremental": false,
@@ -556,7 +568,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.MovesetAttackNode.html",
-          "hash": "7lP4wULTa0UEmvF3WcImTA=="
+          "hash": "t1zvUXqM5Q4ESDm/MjOViQ=="
         }
       },
       "is_incremental": false,
@@ -568,7 +580,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.MovesetDefinition.html",
-          "hash": "unlnVOGPe2YzFBiAViUXYw=="
+          "hash": "qliqkhuoHFsH7Lv9L2a/Jw=="
         }
       },
       "is_incremental": false,
@@ -580,7 +592,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.StatusEffectArea.html",
-          "hash": "IhFecorzEMkp5FP4x6NIYQ=="
+          "hash": "QJzg1O64ZYV5Gy4He4WcKg=="
         }
       },
       "is_incremental": false,
@@ -592,7 +604,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Combat.html",
-          "hash": "IZMPBSEdWXn+6plzyI6wWg=="
+          "hash": "MWqFjXK+StQEaZRtXj6SuA=="
         }
       },
       "is_incremental": false,
@@ -604,7 +616,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.CommandStartGameMode.html",
-          "hash": "Aw0cpjXbW7eMsJ3LYVABUg=="
+          "hash": "7ltj5w8lLSDtYFV47mblMg=="
         }
       },
       "is_incremental": false,
@@ -616,7 +628,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.CommandUnloadAllMods.html",
-          "hash": "XN6trztU/soFDTT4WleXkQ=="
+          "hash": "Ww3UoRz1LEKpzdAYYv5w3Q=="
         }
       },
       "is_incremental": false,
@@ -628,7 +640,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.ConsoleCommand.html",
-          "hash": "GF6SySo4Of8BxwAg4jNLbQ=="
+          "hash": "HbvYmDUDbB4qoEu97SasVw=="
         }
       },
       "is_incremental": false,
@@ -640,7 +652,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.ConsoleInput.html",
-          "hash": "nKxP82hJ/AlCOsnVYDuFgg=="
+          "hash": "o9uLV4+Ty1GhJJEwmvLPPQ=="
         }
       },
       "is_incremental": false,
@@ -652,7 +664,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.ConsoleInputProcessor.html",
-          "hash": "kqwgSiamFaAsIOc3By/37A=="
+          "hash": "YI4l/QjrJEmugR+Jf4VSvQ=="
         }
       },
       "is_incremental": false,
@@ -664,7 +676,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.ConsoleReader.html",
-          "hash": "VIOj6azM2m0wcUtt7aGdeg=="
+          "hash": "2XLyzlSJpjdHVazQ5rv0eg=="
         }
       },
       "is_incremental": false,
@@ -676,7 +688,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Console.html",
-          "hash": "nMXjK2DXPzTFREQoP6MVcQ=="
+          "hash": "epmLfnf6gWxBpzyUsI7Ttw=="
         }
       },
       "is_incremental": false,
@@ -688,7 +700,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.BootLoader.html",
-          "hash": "ePewjvcm4+ril4IYbYz+gA=="
+          "hash": "uU/ay6k8+0C7Czfx1PlZaQ=="
         }
       },
       "is_incremental": false,
@@ -700,7 +712,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.CameraShake.html",
-          "hash": "yCMeKH+o1Hb2HmHBr6vwBA=="
+          "hash": "m1g5IRsE24I/V1wY75nKWw=="
         }
       },
       "is_incremental": false,
@@ -712,7 +724,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.CameraShakeDefinition.html",
-          "hash": "TvFIzoz+yHObWC3ze6KMMQ=="
+          "hash": "o/fjW7JxGCtnEuerljmQVg=="
         }
       },
       "is_incremental": false,
@@ -724,7 +736,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.CombatVariables.html",
-          "hash": "tG+iOfsIXMciZnfLaKEkAg=="
+          "hash": "C332e29ewruEfvBglPwq8w=="
         }
       },
       "is_incremental": false,
@@ -736,7 +748,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.ConsoleWindow.html",
-          "hash": "IAG1IKwxMJGg8JB45FneoA=="
+          "hash": "p/WnZRvUA8Uq7CagFvp4tw=="
         }
       },
       "is_incremental": false,
@@ -748,7 +760,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.EntityInputs.html",
-          "hash": "SeTBJ4nt/yg3NTJXWZ42hA=="
+          "hash": "EKHcFQc/3NB8ofSMjSeuAQ=="
         }
       },
       "is_incremental": false,
@@ -760,7 +772,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.EntitySpawner.EntitySpawnInfo.html",
-          "hash": "v0FFmAdlwxyjVbj5wBXHAg=="
+          "hash": "oNsgkD0yfhjehCmmgUqjtA=="
         }
       },
       "is_incremental": false,
@@ -772,7 +784,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.EntitySpawner.html",
-          "hash": "q77Shls3r/KMkFpTsVcZ7A=="
+          "hash": "CU9xEBp1uGbEjT0SV9HsFQ=="
         }
       },
       "is_incremental": false,
@@ -784,7 +796,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.GameManager.html",
-          "hash": "xGkpVNvH11PxgZaxLZZFjg=="
+          "hash": "USRZ9qnwJeZWXi9yKFFXeg=="
         }
       },
       "is_incremental": false,
@@ -796,7 +808,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.GameVariables.html",
-          "hash": "IHfC5Y+8dBJDEG8+X5N6NQ=="
+          "hash": "GzhATsJj0rAUDRvcf8D+dg=="
         }
       },
       "is_incremental": false,
@@ -808,7 +820,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.GamemodeStageDefinition.html",
-          "hash": "ffLdEeak2GCwx2jPSmaOYQ=="
+          "hash": "A065YFdU4Sz9emsSvwV4hQ=="
         }
       },
       "is_incremental": false,
@@ -820,7 +832,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.Helpers.html",
-          "hash": "iybkpjsTmCIV16q0qDmW2g=="
+          "hash": "dFTzziaOuWucOC4qyZwkoQ=="
         }
       },
       "is_incremental": false,
@@ -832,7 +844,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.InputConstants.html",
-          "hash": "5woZPEIp5+9LrHvUweGNjw=="
+          "hash": "4+SNOvNgvgPpqeJ220xwGg=="
         }
       },
       "is_incremental": false,
@@ -844,7 +856,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.MusicManager.html",
-          "hash": "JqklNhDtgshtkacjh4BxnA=="
+          "hash": "CCfLWjXHZg9g6wp0kTwpcQ=="
         }
       },
       "is_incremental": false,
@@ -856,7 +868,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.PlayerCamera.html",
-          "hash": "63vGpEanLqqfgp+uMRmokw=="
+          "hash": "bDgX0VohOse7HdIwdAZqNQ=="
         }
       },
       "is_incremental": false,
@@ -868,7 +880,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.ReadOnlyAttribute.html",
-          "hash": "pqMqcJzyyUEB4bzuAJ2Csg=="
+          "hash": "OjPrOmL5rRXmY+/J12z08A=="
         }
       },
       "is_incremental": false,
@@ -880,7 +892,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.SimObjectManager.html",
-          "hash": "wX/xXPTh5REzRWfnpeXYsQ=="
+          "hash": "sXOS04NxcblN3HP3l0sIfg=="
         }
       },
       "is_incremental": false,
@@ -892,7 +904,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.StageCollection.html",
-          "hash": "s5saM/12DP0SlQLeBgc47g=="
+          "hash": "wo+JkbvClqkapEYS/e4Hng=="
         }
       },
       "is_incremental": false,
@@ -904,7 +916,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.StageDefinition.html",
-          "hash": "HUJHn0hh2yVYEKXW5lY/Lg=="
+          "hash": "AM3CaTFEf5W0+JzAUlJKWw=="
         }
       },
       "is_incremental": false,
@@ -916,7 +928,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Core.html",
-          "hash": "TGylwIHYMUJYVdBLW84XFw=="
+          "hash": "mSVVE9Sfy0lQmoBdIX2vzw=="
         }
       },
       "is_incremental": false,
@@ -928,7 +940,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.AIBrain.html",
-          "hash": "c/y7D8+DzBCM8a6TnrQ9uA=="
+          "hash": "vyG365mr1Gc6J5Au01QSUg=="
         }
       },
       "is_incremental": false,
@@ -940,7 +952,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.BaseCharacterStates.html",
-          "hash": "49IMp9I2R9FqEpFKXx+IrQ=="
+          "hash": "Ep3ssSrDLxK/9Q8q8L7lZA=="
         }
       },
       "is_incremental": false,
@@ -952,7 +964,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.CharacterInput.html",
-          "hash": "U05c1ILMK/762DqL8TpYog=="
+          "hash": "Cz96pNfKSbEKT4vODQlHKA=="
         }
       },
       "is_incremental": false,
@@ -964,7 +976,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.CharacterManager.html",
-          "hash": "23+2Jtx9a7ddi2hnjJhHAQ=="
+          "hash": "70lgTwUOK8oBt0PtYTv4yQ=="
         }
       },
       "is_incremental": false,
@@ -976,7 +988,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.CharacterState.html",
-          "hash": "TLgHqIG330QEOW48JAsQfg=="
+          "hash": "FE+zh+NSaTEvG4zKPtasYQ=="
         }
       },
       "is_incremental": false,
@@ -988,7 +1000,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.CharacterStats.html",
-          "hash": "ub7tjoJpd+M8B8wjK5u9JA=="
+          "hash": "cZsjze34jyjbCWd2Lec/0w=="
         }
       },
       "is_incremental": false,
@@ -1000,7 +1012,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CAirDash.html",
-          "hash": "vhdZVHnClwMzELiSilD6Fg=="
+          "hash": "Zs6iOaugjU7YzOHa1IRylg=="
         }
       },
       "is_incremental": false,
@@ -1012,7 +1024,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CAirJump.html",
-          "hash": "dPsn57SDJGqBVcRlw3vXKA=="
+          "hash": "ox0VJ2ncViJAiFw6P9PrLA=="
         }
       },
       "is_incremental": false,
@@ -1024,7 +1036,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CAttack.html",
-          "hash": "T+EYHLh6YPvtuJncpcULJg=="
+          "hash": "mn/M5eTycS9J52zKWtIthg=="
         }
       },
       "is_incremental": false,
@@ -1036,7 +1048,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CDash.html",
-          "hash": "m2EMvF5IUXSiR4hrxZxcEg=="
+          "hash": "XSGlZD2T2P/v9mkpqvIdrg=="
         }
       },
       "is_incremental": false,
@@ -1048,7 +1060,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CEnemyStep.html",
-          "hash": "+TQpRNObXAWUuwpKWgNe0A=="
+          "hash": "a4c8aa+MO/lhT707i5bpeA=="
         }
       },
       "is_incremental": false,
@@ -1060,7 +1072,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CFall.html",
-          "hash": "2Fv6zHX/Xqk7jqdCOvgjoA=="
+          "hash": "QD6R+pEm0stID1pkbeJV0Q=="
         }
       },
       "is_incremental": false,
@@ -1072,7 +1084,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CFloat.html",
-          "hash": "be6Slv5Yu4SgZ4tT2gLcXQ=="
+          "hash": "q/nRA41hB3f8UbMMsBJYdg=="
         }
       },
       "is_incremental": false,
@@ -1084,7 +1096,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CFloatDash.html",
-          "hash": "58sDN2W1mUfy6a7ipdeeBg=="
+          "hash": "gq9wvL9TLa+SHO6HR56SsA=="
         }
       },
       "is_incremental": false,
@@ -1096,7 +1108,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CFloatDodge.html",
-          "hash": "w73dQCM6TeBNg/jqQp1IXw=="
+          "hash": "72A0MbL3vcULRG0jSOT/Sg=="
         }
       },
       "is_incremental": false,
@@ -1108,7 +1120,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CHozWallRun.html",
-          "hash": "kDZOC7QSsUj2zyGIXu2ylw=="
+          "hash": "qDUzFSU53OfsX3i72tbndw=="
         }
       },
       "is_incremental": false,
@@ -1120,7 +1132,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CIdle.html",
-          "hash": "iW15Z9s77qxdJleiwaEYwg=="
+          "hash": "CJOC4RDcsZj2ASNdDhIsfw=="
         }
       },
       "is_incremental": false,
@@ -1132,7 +1144,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CJump.html",
-          "hash": "DJS9Hm3whXNvhKs51P+46A=="
+          "hash": "8C3Rhdvi5tA82QvEtyNVeQ=="
         }
       },
       "is_incremental": false,
@@ -1144,7 +1156,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CJumpSquat.html",
-          "hash": "acHIoSFu68artSkhQkYH1w=="
+          "hash": "aBgbCVHHHQu0JQn8xoJ0xQ=="
         }
       },
       "is_incremental": false,
@@ -1156,7 +1168,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CRun.html",
-          "hash": "9pnoprxSWh0mxU580ozOkg=="
+          "hash": "ZDnQcEujPl1XzIVHFeMuSg=="
         }
       },
       "is_incremental": false,
@@ -1168,7 +1180,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CSlide.html",
-          "hash": "aoYa5AUqeWhyT7gYc22gdQ=="
+          "hash": "f7SgpI7+9/hRaaWkl488eA=="
         }
       },
       "is_incremental": false,
@@ -1180,7 +1192,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CVertWallRun.html",
-          "hash": "8ql8PS5ljzxH41k/J9oVzQ=="
+          "hash": "z4iE5UCyJeHF0LVvWcnjFw=="
         }
       },
       "is_incremental": false,
@@ -1192,7 +1204,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CWalk.html",
-          "hash": "Qz1zrMtMID1b5kOXS184Zw=="
+          "hash": "G7CxqnZO5O12R086qIjO7g=="
         }
       },
       "is_incremental": false,
@@ -1204,7 +1216,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CWallCling.html",
-          "hash": "fBjq4Mx9IlfIg6PWM0ZM+w=="
+          "hash": "nL++T/44xZA0oQRqv+7eZQ=="
         }
       },
       "is_incremental": false,
@@ -1216,7 +1228,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.CWallJump.html",
-          "hash": "DheSZa6Krh9lObpJK44cjQ=="
+          "hash": "sfXJ8rjQGoeINGIqAi8oyA=="
         }
       },
       "is_incremental": false,
@@ -1228,7 +1240,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.States.html",
-          "hash": "TKWbejFhxewiV3kMcZe+Ag=="
+          "hash": "U/5TGMevM3209m7R0Tbp8Q=="
         }
       },
       "is_incremental": false,
@@ -1240,7 +1252,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Characters.html",
-          "hash": "aVDWD8oPolpFO/U89mtLeA=="
+          "hash": "JdVZepryH9C96EiDWg7KLg=="
         }
       },
       "is_incremental": false,
@@ -1252,7 +1264,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityAnimator.html",
-          "hash": "0X5SaR3GA2Pak+0Kpd44nA=="
+          "hash": "PGy5gHzE4P7KeJuvdQG2eg=="
         }
       },
       "is_incremental": false,
@@ -1264,7 +1276,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityCharacterController.html",
-          "hash": "sk5j3M2xo6gnYbgFgdPmxA=="
+          "hash": "A8pXkDhRvrzjMs3qelqNoA=="
         }
       },
       "is_incremental": false,
@@ -1276,7 +1288,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityCombatManager.html",
-          "hash": "BEvJNidOi7jpg5H511k7Bg=="
+          "hash": "sIEpYK3z0MDqSgyFV1uPTw=="
         }
       },
       "is_incremental": false,
@@ -1288,7 +1300,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityHitboxManager.html",
-          "hash": "MXCK7Eb3URIbv4NxcMaMLg=="
+          "hash": "jTdoepyWrX0K/ibQP5lRmg=="
         }
       },
       "is_incremental": false,
@@ -1300,7 +1312,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityInputManager.html",
-          "hash": "BiSruBygpZiYX8CWMyTwGA=="
+          "hash": "RJ7K2F0MxdsbbJfg8F5uvQ=="
         }
       },
       "is_incremental": false,
@@ -1312,7 +1324,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityManager.html",
-          "hash": "9J62X6FpZjSeuYy7kraIfA=="
+          "hash": "CJQYRBojInS5wI8/AtmbNA=="
         }
       },
       "is_incremental": false,
@@ -1324,7 +1336,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityPhysicsManager.html",
-          "hash": "H5/JHJfK3uGkRrJmgGxEDQ=="
+          "hash": "V41aeSjnVNxSQdNTudtwnA=="
         }
       },
       "is_incremental": false,
@@ -1336,7 +1348,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityState.html",
-          "hash": "ivYYxJM+W0vxjIW9R1AUQQ=="
+          "hash": "xi7pGAb3VPYqyt3diIa//Q=="
         }
       },
       "is_incremental": false,
@@ -1348,7 +1360,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityStateManager.html",
-          "hash": "WSUC1QbZWtt7I1n9PXdLEw=="
+          "hash": "K5CSMyUrY/5VHPo82I1vxA=="
         }
       },
       "is_incremental": false,
@@ -1360,7 +1372,31 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.EntityStates.html",
-          "hash": "Rb64jL1/TAOrSZL2PuxnPg=="
+          "hash": "3vOIeWOGj9QqT1i4i64/TQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.HealthManager.HealthChangedAction.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.HealthManager.HealthChangedAction.html",
+          "hash": "zh3ieIKqvXNUp4ub/6S8mg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/TUF.Entities.HealthManager.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/TUF.Entities.HealthManager.html",
+          "hash": "PGDz3B7X40gwLJL9KNq+gA=="
         }
       },
       "is_incremental": false,
@@ -1372,7 +1408,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityAirJump.html",
-          "hash": "rLRGN7klIiQ066Z+BJmkQw=="
+          "hash": "xRGDEjwmig/K1nxEuZf4bA=="
         }
       },
       "is_incremental": false,
@@ -1384,7 +1420,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityAttack.html",
-          "hash": "ppgrkBHXqtHHdS/Yaw8K1A=="
+          "hash": "9BYj1oAtEA/m6a3ldXs5Zw=="
         }
       },
       "is_incremental": false,
@@ -1396,7 +1432,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityDash.html",
-          "hash": "VwaJ15btAVnPGxkRcMnz6Q=="
+          "hash": "rLHm+QC1rA41Snidx/8Slw=="
         }
       },
       "is_incremental": false,
@@ -1408,7 +1444,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityDefinition.html",
-          "hash": "4ZtMCXWanW2Ttuc5VIYFdg=="
+          "hash": "bQo6Ru+1dT2TZTlLT0X8mw=="
         }
       },
       "is_incremental": false,
@@ -1420,7 +1456,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityFall.html",
-          "hash": "a/Lco0p/Mvu2C5RpqktYVg=="
+          "hash": "/3ImeFnD8ovBs6A/8fsQSA=="
         }
       },
       "is_incremental": false,
@@ -1432,7 +1468,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityFlinch.html",
-          "hash": "5tYuDhJJGGByMK+PlKYBnA=="
+          "hash": "xNt0Z41WOwp/RUcZ9U2f0Q=="
         }
       },
       "is_incremental": false,
@@ -1444,7 +1480,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityFlinchAir.html",
-          "hash": "LBQ8gjkr70DIEF/ofQ2Pkw=="
+          "hash": "Ikizp/lhNhOpIeyMfeC1qw=="
         }
       },
       "is_incremental": false,
@@ -1456,7 +1492,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityFloat.html",
-          "hash": "qeux6Q5ctPYuP7sfrzpflQ=="
+          "hash": "+zLfjpLjx8exWg3u4JJBWg=="
         }
       },
       "is_incremental": false,
@@ -1468,7 +1504,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityIdle.html",
-          "hash": "iiGLad7a7pOqITSeoYsFhw=="
+          "hash": "EdWeyRNIr8MfqDx+78c1lg=="
         }
       },
       "is_incremental": false,
@@ -1480,7 +1516,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityJump.html",
-          "hash": "olSWYvjHzxA8PjtAAvjcbQ=="
+          "hash": "/PHWRfTbls6DpcnKSYWN4g=="
         }
       },
       "is_incremental": false,
@@ -1492,7 +1528,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityJumpSquat.html",
-          "hash": "w/NesysJ5kfq/axA9lEg5Q=="
+          "hash": "QUQdP39gsR7PUlBH0YjRbQ=="
         }
       },
       "is_incremental": false,
@@ -1504,7 +1540,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityRun.html",
-          "hash": "ktEpHHZx7tPx4yhzUwgOqw=="
+          "hash": "B6mYMmdX2pblWhtkce9ZGw=="
         }
       },
       "is_incremental": false,
@@ -1516,7 +1552,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityStats.html",
-          "hash": "F0FhS3YsyGy9GqqXwLAJmg=="
+          "hash": "ygfE80CFFW+8CFPZlQDysw=="
         }
       },
       "is_incremental": false,
@@ -1528,7 +1564,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityTumble.html",
-          "hash": "+aCHMqCvpXkSrLJHonyX8g=="
+          "hash": "cA5RlFUPVQkcCUCz20b2fw=="
         }
       },
       "is_incremental": false,
@@ -1540,7 +1576,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityWalk.html",
-          "hash": "XGqBVS/33LEXY7wxTBycFw=="
+          "hash": "omZnlnyl9VBlZ3mv+qcm0g=="
         }
       },
       "is_incremental": false,
@@ -1552,7 +1588,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityWallCling.html",
-          "hash": "V6kw5FXPHl2+FY4L221+wA=="
+          "hash": "JeRhQ2alT0ylE5Xr1h4/ew=="
         }
       },
       "is_incremental": false,
@@ -1564,7 +1600,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.EntityWallJump.html",
-          "hash": "6AXsorkMEHeWWVVvZpH7gA=="
+          "hash": "rXCNX2z9+KXYgqEEorSiog=="
         }
       },
       "is_incremental": false,
@@ -1576,7 +1612,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.Shared.html",
-          "hash": "o0MBP6VxhQH3QRAVhAquVA=="
+          "hash": "dCll6ECVBsVmS6LHVy3h8Q=="
         }
       },
       "is_incremental": false,
@@ -1588,7 +1624,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Entities.html",
-          "hash": "ReuRaSeudxuubh3wY38I1Q=="
+          "hash": "Y7IO/gWOZG3eQhZht6Yt+w=="
         }
       },
       "is_incremental": false,
@@ -1600,7 +1636,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeBase.EntityHitAction.html",
-          "hash": "wvkqQgEW6yBroRZMnEKbZg=="
+          "hash": "Jr7TajwgH0qZLUD8I06Mkw=="
         }
       },
       "is_incremental": false,
@@ -1612,7 +1648,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeBase.html",
-          "hash": "TBuFgpFBV3of2g3Ja41XsA=="
+          "hash": "cWGegQOLb/Gmy12n+2rp0Q=="
         }
       },
       "is_incremental": false,
@@ -1624,7 +1660,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeBaseEditor.html",
-          "hash": "mtm7NbqyB1kBjOpsEehFyg=="
+          "hash": "2mUehjoLNdCSmjGmOWt6Ew=="
         }
       },
       "is_incremental": false,
@@ -1636,7 +1672,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeComponentBase.html",
-          "hash": "Gt7Xz59geHFoGBn/XEr9lg=="
+          "hash": "RTwLC9oJZVRIdm9GHRn+Wg=="
         }
       },
       "is_incremental": false,
@@ -1648,7 +1684,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeComponentData.html",
-          "hash": "yxu3W/zPYeb1DSndyFiFbg=="
+          "hash": "zDtZeLStecjWPY5mV+ZhiQ=="
         }
       },
       "is_incremental": false,
@@ -1660,7 +1696,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeComponentHolder.html",
-          "hash": "IimQnYCvCDXXUHPx4VZJTw=="
+          "hash": "lEwr43dgK9g/ZkoHt+QjQA=="
         }
       },
       "is_incremental": false,
@@ -1672,7 +1708,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeComponentStyleMeter.StyleMeterData.html",
-          "hash": "prN6Rma7QS5cyV7Sbg19KQ=="
+          "hash": "BiQRQzFHPhCa/G0tJ5c6qQ=="
         }
       },
       "is_incremental": false,
@@ -1684,7 +1720,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeComponentStyleMeter.html",
-          "hash": "dxhe36Ef7u5wZdlxnvQb7Q=="
+          "hash": "/a7ahPCrhlwCdmOPDtHfGg=="
         }
       },
       "is_incremental": false,
@@ -1696,7 +1732,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeComponentTimer.TimerData.html",
-          "hash": "SO/6z5SWorJacLGkyQy50g=="
+          "hash": "Ow/0pMGTlHeQcsXyyZOxqQ=="
         }
       },
       "is_incremental": false,
@@ -1708,7 +1744,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeComponentTimer.TimerType.html",
-          "hash": "lU7nhe/bOttZl4tfC1zypA=="
+          "hash": "2V28PoaNVS7SuJfX+jUjyA=="
         }
       },
       "is_incremental": false,
@@ -1720,7 +1756,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeComponentTimer.html",
-          "hash": "1vek8u0USbr9P8bMc0GDbQ=="
+          "hash": "+T7AnlcsFLmw5qmzB6jI1w=="
         }
       },
       "is_incremental": false,
@@ -1732,7 +1768,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeDefinition.html",
-          "hash": "1fnBjU9A8TNpWKrCjgSahA=="
+          "hash": "8p3FkaHW77PZIh4M9BZ9fg=="
         }
       },
       "is_incremental": false,
@@ -1744,7 +1780,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeStage.html",
-          "hash": "InUMK/dkhdZqGZCS+eOS2w=="
+          "hash": "BXB9/GzNaA7GLQez5665Cw=="
         }
       },
       "is_incremental": false,
@@ -1756,7 +1792,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeStageCollection.html",
-          "hash": "Yz1Ihu4KI6ATFRvTQgTa1A=="
+          "hash": "+43aHqVwHJmavnLen+DIEQ=="
         }
       },
       "is_incremental": false,
@@ -1768,7 +1804,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.GameModeTraining.html",
-          "hash": "4gBKOa60DtPLuBbkW/+STg=="
+          "hash": "2ejLJPbuVcqxxOTVzLzPDA=="
         }
       },
       "is_incremental": false,
@@ -1780,7 +1816,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.GameMode.html",
-          "hash": "JVk8A7f65whEAzWIxP0DYQ=="
+          "hash": "cRF+HaRZTjMUvTuDqhopew=="
         }
       },
       "is_incremental": false,
@@ -1792,7 +1828,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.Action.html",
-          "hash": "F13UEsORMKmhmwPirob9kg=="
+          "hash": "Wb/fDUBAKmD+LeQwpTummw=="
         }
       },
       "is_incremental": false,
@@ -1804,7 +1840,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.Category.html",
-          "hash": "PhfYbI1atcvZJ7NqCIDp2w=="
+          "hash": "zcjj7DC4XHLkR9lUqCE+EA=="
         }
       },
       "is_incremental": false,
@@ -1816,7 +1852,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.CurrentInputMethod.html",
-          "hash": "Ynye09SNKzK1f0Q/g66qvA=="
+          "hash": "v+HTh/QG+niLfDRUicZ/PQ=="
         }
       },
       "is_incremental": false,
@@ -1828,7 +1864,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.CustomController.html",
-          "hash": "fyGkOb2Vbxmv/xyr2+Z2Xg=="
+          "hash": "nMlo7G+sffEAMunmcs2BMA=="
         }
       },
       "is_incremental": false,
@@ -1840,7 +1876,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.GlobalInputManager.html",
-          "hash": "I/Qvc0hU4DX1LvPRnDUhwg=="
+          "hash": "xAbGQ5MmhdKyC4jsot8qMQ=="
         }
       },
       "is_incremental": false,
@@ -1852,7 +1888,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.Layout.CustomController.html",
-          "hash": "HyAxG0gn+IjnuTFFYdYWsg=="
+          "hash": "itLutOgCMZF0akHiVtWFcg=="
         }
       },
       "is_incremental": false,
@@ -1864,7 +1900,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.Layout.Joystick.html",
-          "hash": "vLGFpgWpX2aRe3Apgqw4Ag=="
+          "hash": "Rni4YxGkrQmDCzcQfaxigA=="
         }
       },
       "is_incremental": false,
@@ -1876,7 +1912,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.Layout.Keyboard.html",
-          "hash": "78ZOApQW+0YjoxAeM+Jv0Q=="
+          "hash": "MHBiv+NWciOHx5Ul9wc06g=="
         }
       },
       "is_incremental": false,
@@ -1888,7 +1924,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.Layout.Mouse.html",
-          "hash": "sdfdfFRHeeElWL+d0OlzlA=="
+          "hash": "EZCCMyIsmGrDDtkhvs258A=="
         }
       },
       "is_incremental": false,
@@ -1900,7 +1936,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.Layout.html",
-          "hash": "HlZhVA3RmZaXF2ZwS4/h3A=="
+          "hash": "HNWviTXD8VTixWvhOSvh6g=="
         }
       },
       "is_incremental": false,
@@ -1912,7 +1948,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.LayoutManagerRuleSet.html",
-          "hash": "pp2fR02pl0MUFqfsSSNFHA=="
+          "hash": "86q8G/9TgRljzZrT9lC4KA=="
         }
       },
       "is_incremental": false,
@@ -1924,7 +1960,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.MapEnablerRuleSet.html",
-          "hash": "/nSlEdZBwjVp2rrqijbIQw=="
+          "hash": "J3m51nC80rSrssBxZSsItg=="
         }
       },
       "is_incremental": false,
@@ -1936,7 +1972,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.Player.html",
-          "hash": "FWNfbK/J7rMyq1eY0VFohA=="
+          "hash": "rsdKlTWH0J70ZCTi8Ro1jQ=="
         }
       },
       "is_incremental": false,
@@ -1948,7 +1984,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Inputs.html",
-          "hash": "4ZWTh6eMcEOTZUkkKELuBw=="
+          "hash": "EncWTeRSWGPfNjutfZl+0w=="
         }
       },
       "is_incremental": false,
@@ -1960,7 +1996,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.CharacterSelectContentItem.html",
-          "hash": "VHFp9h74Tc7UK3Y3OnASAA=="
+          "hash": "TAWaSAUH6WyELTacbLQPcw=="
         }
       },
       "is_incremental": false,
@@ -1972,7 +2008,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.CharacterSelectMenu.CharacterSelectedAction.html",
-          "hash": "PU/dSpA8HJ20hpIuTQf5DQ=="
+          "hash": "CecJLF/8EMfDR8Qno5yWSQ=="
         }
       },
       "is_incremental": false,
@@ -1984,7 +2020,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.CharacterSelectMenu.ExitAction.html",
-          "hash": "SFTTHXXpS27olOV8yjntzQ=="
+          "hash": "IxyO+FZooC1XyPwpw0aLVA=="
         }
       },
       "is_incremental": false,
@@ -1996,7 +2032,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.CharacterSelectMenu.html",
-          "hash": "pHyNfG1TfYiLEnkY91Bfyg=="
+          "hash": "pJpAAxU6Pa07iZrPh92Ntg=="
         }
       },
       "is_incremental": false,
@@ -2008,7 +2044,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.GamemodeContentItem.html",
-          "hash": "/TZNlsCoJtxSnKnbMKOkKw=="
+          "hash": "kcL3ETSuEkqC5b0uT03ALA=="
         }
       },
       "is_incremental": false,
@@ -2020,7 +2056,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.MainMenu.CollectionStageItem.html",
-          "hash": "EJlPNUpW4qmxKg+Wo3YevQ=="
+          "hash": "DiegZ/0gRNnkv5tHOw4F5g=="
         }
       },
       "is_incremental": false,
@@ -2032,7 +2068,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.MainMenu.GamemodeSelectMenu.html",
-          "hash": "5rSY/P3mHTKG4YeCdt1vOA=="
+          "hash": "wiY/23szhIm8D4nh/uPmLA=="
         }
       },
       "is_incremental": false,
@@ -2044,7 +2080,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.MainMenu.MainMenuHandler.html",
-          "hash": "bl+VS4VOR1Z/0m059iB1Ng=="
+          "hash": "cT0jOuTCW4YaNdtHfraO2g=="
         }
       },
       "is_incremental": false,
@@ -2056,7 +2092,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.MainMenu.StageCollectionItem.html",
-          "hash": "RkYne1/MXVROAxhveJM+cg=="
+          "hash": "96TUYIWvMVe3DyNOa0oNQw=="
         }
       },
       "is_incremental": false,
@@ -2068,7 +2104,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.MainMenu.StageCollectionsMenu.html",
-          "hash": "SuE2pTdKnBcHTk+yTfZd+A=="
+          "hash": "JVQlxqdl28NFR6XqBzI0Cw=="
         }
       },
       "is_incremental": false,
@@ -2080,7 +2116,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.MainMenu.html",
-          "hash": "zaxOS2YxxCFhQJSAPb7lVw=="
+          "hash": "L/YSG4c3Iq0Xh4jZ1BF0OA=="
         }
       },
       "is_incremental": false,
@@ -2092,7 +2128,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.Options.ModsMenu.MenuExitedAction.html",
-          "hash": "lrav9BQ38rldXkc+ZZUS5A=="
+          "hash": "66aK0vxEWTqHo1m9km5N+Q=="
         }
       },
       "is_incremental": false,
@@ -2104,7 +2140,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.Options.ModsMenu.html",
-          "hash": "10/QEAbmTEhxWRXuIHYx2w=="
+          "hash": "kQYXevJz+qYe9UBJOseZlw=="
         }
       },
       "is_incremental": false,
@@ -2116,7 +2152,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.Options.OptionsMenu.MenuExitedAction.html",
-          "hash": "f+/aWb2cDecK7KmdW9rbEg=="
+          "hash": "8J+F2kffCAR5kb+6C5KPgg=="
         }
       },
       "is_incremental": false,
@@ -2128,7 +2164,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.Options.OptionsMenu.html",
-          "hash": "jgI94GhCX9tOHz6Vk2G0nw=="
+          "hash": "Dffk02m7GnMig6d8lr5XqQ=="
         }
       },
       "is_incremental": false,
@@ -2140,7 +2176,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.Options.html",
-          "hash": "H+Cyn8pm4yEbePLsExzvmw=="
+          "hash": "deD9FagTie28Wmidk2bfdg=="
         }
       },
       "is_incremental": false,
@@ -2152,7 +2188,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.StageContentItem.html",
-          "hash": "Jw8gvJSPYug2zUqE8Z81uw=="
+          "hash": "qUZaEtzcYOrMMhp4RHaAXw=="
         }
       },
       "is_incremental": false,
@@ -2164,7 +2200,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.StageSelectMenu.StageSelectedAction.html",
-          "hash": "W6b96T4v/fBEHVBUVAoqPw=="
+          "hash": "McQnUsG3YaxirNSJHBiKxA=="
         }
       },
       "is_incremental": false,
@@ -2176,7 +2212,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.StageSelectMenu.html",
-          "hash": "85SbK36QPQ+QioWnNY/pRw=="
+          "hash": "jmE5FfxKl3UBvu0LuPaQnQ=="
         }
       },
       "is_incremental": false,
@@ -2188,7 +2224,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Menus.html",
-          "hash": "9AIBm/Q3nQTe/52H7GTstg=="
+          "hash": "JUazFkM2HQz4EhqLxWPz0A=="
         }
       },
       "is_incremental": false,
@@ -2200,7 +2236,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.BuildModWindow.html",
-          "hash": "UXKCBIh66/FlOCv2fJPsJQ=="
+          "hash": "DvNuAsGUPYrZ8qE0IdhFMA=="
         }
       },
       "is_incremental": false,
@@ -2212,7 +2248,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.ModDefinition.html",
-          "hash": "bo6glftksaUYJU6RbkekMw=="
+          "hash": "Go508/LCJ9q9WSHVH4UwEg=="
         }
       },
       "is_incremental": false,
@@ -2224,7 +2260,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.ModInfo.html",
-          "hash": "JiiTzIDgP84cICCPMUX5Xg=="
+          "hash": "ru1bYs5dpApChfS/6FIM0g=="
         }
       },
       "is_incremental": false,
@@ -2236,7 +2272,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.ModLoader.html",
-          "hash": "YRLBkQvhsxBOo77pcXS3dw=="
+          "hash": "q11Db2Xb46XG+O5sWh2qyA=="
         }
       },
       "is_incremental": false,
@@ -2248,7 +2284,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.ModManager.html",
-          "hash": "h0kw6f3F+I3jP+xaNZ8dKw=="
+          "hash": "8mIUoM+V1awzCDusEd5iPw=="
         }
       },
       "is_incremental": false,
@@ -2260,7 +2296,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.ModObjectLink.html",
-          "hash": "gNtvW8XXJyNTAVP7gaXxmQ=="
+          "hash": "Gp+ulLKwlASDKZvNUgA6GQ=="
         }
       },
       "is_incremental": false,
@@ -2272,7 +2308,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.ModObjectReference.html",
-          "hash": "aMJFFBO80AVy3cVo7mTLHQ=="
+          "hash": "Xa2tAof3oPYkshjuh8SAsg=="
         }
       },
       "is_incremental": false,
@@ -2284,7 +2320,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Modding.html",
-          "hash": "RkN9QFlZN5mS935W8DVjDA=="
+          "hash": "JZbO3xIC8BI4Iw+CHU7yzw=="
         }
       },
       "is_incremental": false,
@@ -2296,7 +2332,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.ModdingTools.TUFDependencies.html",
-          "hash": "JlxmWjEmraMJjzxm/5DjEg=="
+          "hash": "v/8VFZUeh1BBcI1pm+hysA=="
         }
       },
       "is_incremental": false,
@@ -2308,7 +2344,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.ModdingTools.TUFModToolsWindow.html",
-          "hash": "g4BAYENH1ndYb3C+EySWjw=="
+          "hash": "KbG6zZlDhXumgKDaJQk8ng=="
         }
       },
       "is_incremental": false,
@@ -2320,7 +2356,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.ModdingTools.html",
-          "hash": "CY/7fEKMSOgt7imLHw64rA=="
+          "hash": "nr1LHEc9nj8aDYb74+H6yw=="
         }
       },
       "is_incremental": false,
@@ -2332,7 +2368,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.SaveLoadService.html",
-          "hash": "rrVJsJ0jNhlUh637iD/ARQ=="
+          "hash": "KfYDB55uzKI0o7OH4ow2YA=="
         }
       },
       "is_incremental": false,
@@ -2344,7 +2380,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Sound.SoundDefinition.html",
-          "hash": "QE1OCFVilB62HNLB5pg0ew=="
+          "hash": "b/CkPotf5+9bXCTa5Ye5RA=="
         }
       },
       "is_incremental": false,
@@ -2356,7 +2392,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Sound.SoundManager.html",
-          "hash": "i+MAomoPBTmUVKO5QN9iqg=="
+          "hash": "QzPKmt7aKOo5t+JreWCuYA=="
         }
       },
       "is_incremental": false,
@@ -2368,7 +2404,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Sound.html",
-          "hash": "PcoAT+C5y7JftrOrXuO8DQ=="
+          "hash": "bhNdbXphYn+KP7GwWgnMmw=="
         }
       },
       "is_incremental": false,
@@ -2380,7 +2416,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Stages.SpawnPointManager.html",
-          "hash": "mfkPehjNCqXTHCklR0ADbQ=="
+          "hash": "JpPmtJWQ2kA5kHBa3iPiuw=="
         }
       },
       "is_incremental": false,
@@ -2392,7 +2428,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Stages.SpawnPointManagerEditor.html",
-          "hash": "p8EGJro5TeYq15z26lSpkw=="
+          "hash": "jzKOjEJUMif1wKl2ij+nWw=="
         }
       },
       "is_incremental": false,
@@ -2404,7 +2440,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Stages.StageTools.html",
-          "hash": "S3wYgcMzJq177yeURtSH6w=="
+          "hash": "bcoTmQAdyAXX35mZQa1sRw=="
         }
       },
       "is_incremental": false,
@@ -2416,7 +2452,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.Stages.html",
-          "hash": "umFTSigYttNYsLC8OQJgew=="
+          "hash": "P+e57qUc3/Zf+BrsFgJMLA=="
         }
       },
       "is_incremental": false,
@@ -2428,7 +2464,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.TriggerDetector.TriggerAction.html",
-          "hash": "CruDIqYFfhI7vnxvUEQX0A=="
+          "hash": "NdRRpD7/5WcQUwePs9w5xw=="
         }
       },
       "is_incremental": false,
@@ -2440,7 +2476,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.TriggerDetector.html",
-          "hash": "1dQf8p/ah1F+J8wGLKS9CQ=="
+          "hash": "F46pFnceyG7otm/iJx03MA=="
         }
       },
       "is_incremental": false,
@@ -2452,7 +2488,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.UI.ManageModsMenu.ModFilterType.html",
-          "hash": "PqZUm76+lsWOgzyJjt8yug=="
+          "hash": "EH0tX2uyeWE0GisfYNDyVQ=="
         }
       },
       "is_incremental": false,
@@ -2464,7 +2500,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.UI.ManageModsMenu.html",
-          "hash": "eOG6FmYmq3o3AoTqjjB+wg=="
+          "hash": "PwdkpmaWvVsLmpWwkbVkAg=="
         }
       },
       "is_incremental": false,
@@ -2476,7 +2512,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.UI.UIDefinition.html",
-          "hash": "MCN/zYw+QRNwKts+MBB68A=="
+          "hash": "S/8QFGjcjHfr2v9ck/4v0g=="
         }
       },
       "is_incremental": false,
@@ -2488,7 +2524,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.UI.UIOverrideBase.html",
-          "hash": "VMiLKqlCwGQsqOTpqFN5oQ=="
+          "hash": "Xhj0TVjoj6O7Jkm+xJg0dg=="
         }
       },
       "is_incremental": false,
@@ -2500,7 +2536,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.UI.UIOverrideDefinition.html",
-          "hash": "AnW7+Tg5Y8LhCIh1/sxOQg=="
+          "hash": "uWgOY5MOdu71RT2Vn14eEQ=="
         }
       },
       "is_incremental": false,
@@ -2512,7 +2548,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.UI.html",
-          "hash": "3aL2yoy1jRhCutEAEAYYAw=="
+          "hash": "8wBUKD1LBVBf7Tm/2WYkOQ=="
         }
       },
       "is_incremental": false,
@@ -2524,7 +2560,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TUF.html",
-          "hash": "rW8MJGD44gekdX6+GB9TyA=="
+          "hash": "Iju7tdLA0LEbav4dIbA63g=="
         }
       },
       "is_incremental": false,
@@ -2536,7 +2572,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Characters.Reimu.ReimuManager.html",
-          "hash": "oGLVi0oCi+MSbF6bWu8KcQ=="
+          "hash": "RKg1VZdM44fB2fd4wgPLyw=="
         }
       },
       "is_incremental": false,
@@ -2548,7 +2584,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Characters.Reimu.ReimuStateTeleport.html",
-          "hash": "bqqDpRVl6PbMnfy6RXaHow=="
+          "hash": "T7zfG2isEnb5wPBwPEH7eA=="
         }
       },
       "is_incremental": false,
@@ -2560,7 +2596,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Characters.Reimu.ReimuStates.html",
-          "hash": "P3obONgxEHM3nyZ2osCOrg=="
+          "hash": "IZcNsUwYjtE8dZ4c6x9oHw=="
         }
       },
       "is_incremental": false,
@@ -2572,7 +2608,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Characters.Reimu.ReimuStats.html",
-          "hash": "Eh/XRFUSCVtG9ZnKb2roxQ=="
+          "hash": "W7mR4nzA2AcwJ8GGpPa3Wg=="
         }
       },
       "is_incremental": false,
@@ -2584,7 +2620,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Characters.Reimu.html",
-          "hash": "PzMsD3JaC4WE9fAxDvPZWg=="
+          "hash": "t16easne1r4GbdsF8kCVEA=="
         }
       },
       "is_incremental": false,
@@ -2596,7 +2632,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Enemies.Fairies.BFairyManager.html",
-          "hash": "5w3bVB1Z2gj//6gqDlS6qg=="
+          "hash": "35UhPnehEQNAxqTMv37xfA=="
         }
       },
       "is_incremental": false,
@@ -2608,7 +2644,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Enemies.Fairies.FairyManager.html",
-          "hash": "D0rkmYg97OtS6LlRwKIk7A=="
+          "hash": "CRIpkUMrifV30ixUAy0Dlw=="
         }
       },
       "is_incremental": false,
@@ -2620,7 +2656,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Enemies.Fairies.FairyStats.html",
-          "hash": "wqfAun4mEqRagkcLX0Xj3g=="
+          "hash": "b72MadBa7UyXAWfMW+G6zw=="
         }
       },
       "is_incremental": false,
@@ -2632,7 +2668,7 @@
       "output": {
         ".html": {
           "relative_path": "api/TidesPack.Enemies.Fairies.html",
-          "hash": "vH7vope07by5r7JVgIuE2g=="
+          "hash": "oQGSZvQBZVeZg43YtpI53A=="
         }
       },
       "is_incremental": false,
@@ -2644,7 +2680,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "Dk5lwsywPRnDsplACLxmCA=="
+          "hash": "M1r2LmFgc7jEv+rjqTAVkw=="
         }
       },
       "is_incremental": false,
@@ -2656,7 +2692,7 @@
       "output": {
         ".html": {
           "relative_path": "index.html",
-          "hash": "ulp3Bqr3FhQ9omcRit3Awg=="
+          "hash": "q4R8KHggha3bMUlmGQvlzQ=="
         }
       },
       "is_incremental": false,
@@ -2668,7 +2704,7 @@
       "output": {
         ".html": {
           "relative_path": "modGuide/index.html",
-          "hash": "zACLZWfcPr9NgEJQ43oKbQ=="
+          "hash": "3u485Z29GXOo3hwQpfReNA=="
         }
       },
       "is_incremental": false,
@@ -2680,7 +2716,7 @@
       "output": {
         ".html": {
           "relative_path": "modGuide/installMods.html",
-          "hash": "zs30ftD2c0/UwCCQ1ocoTw=="
+          "hash": "ApRrvIerTe7U0kdGLhg8TA=="
         }
       },
       "is_incremental": false,
@@ -2692,7 +2728,7 @@
       "output": {
         ".html": {
           "relative_path": "modGuide/setup.html",
-          "hash": "hLWHcKo9iNPzdkWoBE7TVA=="
+          "hash": "GntQL9LWZkindzk2ODWh9A=="
         }
       },
       "is_incremental": false,
@@ -2765,7 +2801,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 218,
+          "total_file_count": 221,
           "skipped_file_count": 0
         },
         "ResourceDocumentProcessor": {

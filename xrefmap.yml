@@ -241,19 +241,6 @@ references:
   commentId: T:TUF.Combat.AttackDefinitionEditorWindow
   fullName: TUF.Combat.AttackDefinitionEditorWindow
   nameWithType: AttackDefinitionEditorWindow
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
-  name: DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawBoxGroupHitOptions_CAF_Combat_BoxGroup_
-  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
-  nameWithType: AttackDefinitionEditorWindow.DrawBoxGroupHitOptions(CAF.Combat.BoxGroup)
-- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions*
-  name: DrawBoxGroupHitOptions
-  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawBoxGroupHitOptions_
-  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions
-  isSpec: "True"
-  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroupHitOptions
-  nameWithType: AttackDefinitionEditorWindow.DrawBoxGroupHitOptions
 - uid: TUF.Combat.AttackDefinitionEditorWindow.DrawWindowsMenu
   name: DrawWindowsMenu()
   href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawWindowsMenu
@@ -1868,19 +1855,6 @@ references:
   commentId: F:TUF.Combat.Hitbox.capsuleVisual
   fullName: TUF.Combat.Hitbox.capsuleVisual
   nameWithType: Hitbox.capsuleVisual
-- uid: TUF.Combat.Hitbox.CheckHits
-  name: CheckHits()
-  href: api/TUF.Combat.Hitbox.html#TUF_Combat_Hitbox_CheckHits
-  commentId: M:TUF.Combat.Hitbox.CheckHits
-  fullName: TUF.Combat.Hitbox.CheckHits()
-  nameWithType: Hitbox.CheckHits()
-- uid: TUF.Combat.Hitbox.CheckHits*
-  name: CheckHits
-  href: api/TUF.Combat.Hitbox.html#TUF_Combat_Hitbox_CheckHits_
-  commentId: Overload:TUF.Combat.Hitbox.CheckHits
-  isSpec: "True"
-  fullName: TUF.Combat.Hitbox.CheckHits
-  nameWithType: Hitbox.CheckHits
 - uid: TUF.Combat.Hitbox.CreateCapsule(System.Single,System.Single)
   name: CreateCapsule(Single, Single)
   href: api/TUF.Combat.Hitbox.html#TUF_Combat_Hitbox_CreateCapsule_System_Single_System_Single_
@@ -1958,44 +1932,24 @@ references:
   commentId: F:TUF.Combat.Hitbox.sphereVisual
   fullName: TUF.Combat.Hitbox.sphereVisual
   nameWithType: Hitbox.sphereVisual
+- uid: TUF.Combat.HitInfo
+  name: HitInfo
+  href: api/TUF.Combat.HitInfo.html
+  commentId: T:TUF.Combat.HitInfo
+  fullName: TUF.Combat.HitInfo
+  nameWithType: HitInfo
+- uid: TUF.Combat.HitInfo.dmy
+  name: dmy
+  href: api/TUF.Combat.HitInfo.html#TUF_Combat_HitInfo_dmy
+  commentId: F:TUF.Combat.HitInfo.dmy
+  fullName: TUF.Combat.HitInfo.dmy
+  nameWithType: HitInfo.dmy
 - uid: TUF.Combat.Hurtbox
   name: Hurtbox
   href: api/TUF.Combat.Hurtbox.html
   commentId: T:TUF.Combat.Hurtbox
   fullName: TUF.Combat.Hurtbox
   nameWithType: Hurtbox
-- uid: TUF.Combat.Hurtbox.Hurtable
-  name: Hurtable
-  href: api/TUF.Combat.Hurtbox.html#TUF_Combat_Hurtbox_Hurtable
-  commentId: P:TUF.Combat.Hurtbox.Hurtable
-  fullName: TUF.Combat.Hurtbox.Hurtable
-  nameWithType: Hurtbox.Hurtable
-- uid: TUF.Combat.Hurtbox.Hurtable*
-  name: Hurtable
-  href: api/TUF.Combat.Hurtbox.html#TUF_Combat_Hurtbox_Hurtable_
-  commentId: Overload:TUF.Combat.Hurtbox.Hurtable
-  isSpec: "True"
-  fullName: TUF.Combat.Hurtbox.Hurtable
-  nameWithType: Hurtbox.Hurtable
-- uid: TUF.Combat.Hurtbox.owner
-  name: owner
-  href: api/TUF.Combat.Hurtbox.html#TUF_Combat_Hurtbox_owner
-  commentId: F:TUF.Combat.Hurtbox.owner
-  fullName: TUF.Combat.Hurtbox.owner
-  nameWithType: Hurtbox.owner
-- uid: TUF.Combat.Hurtbox.Owner
-  name: Owner
-  href: api/TUF.Combat.Hurtbox.html#TUF_Combat_Hurtbox_Owner
-  commentId: P:TUF.Combat.Hurtbox.Owner
-  fullName: TUF.Combat.Hurtbox.Owner
-  nameWithType: Hurtbox.Owner
-- uid: TUF.Combat.Hurtbox.Owner*
-  name: Owner
-  href: api/TUF.Combat.Hurtbox.html#TUF_Combat_Hurtbox_Owner_
-  commentId: Overload:TUF.Combat.Hurtbox.Owner
-  isSpec: "True"
-  fullName: TUF.Combat.Hurtbox.Owner
-  nameWithType: Hurtbox.Owner
 - uid: TUF.Combat.HurtReactions
   name: HurtReactions
   href: api/TUF.Combat.HurtReactions.html
@@ -3178,6 +3132,19 @@ references:
   isSpec: "True"
   fullName: TUF.Core.PlayerCamera.LookTransform
   nameWithType: PlayerCamera.LookTransform
+- uid: TUF.Core.PlayerCamera.Reset
+  name: Reset()
+  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Reset
+  commentId: M:TUF.Core.PlayerCamera.Reset
+  fullName: TUF.Core.PlayerCamera.Reset()
+  nameWithType: PlayerCamera.Reset()
+- uid: TUF.Core.PlayerCamera.Reset*
+  name: Reset
+  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Reset_
+  commentId: Overload:TUF.Core.PlayerCamera.Reset
+  isSpec: "True"
+  fullName: TUF.Core.PlayerCamera.Reset
+  nameWithType: PlayerCamera.Reset
 - uid: TUF.Core.PlayerCamera.Right
   name: Right()
   href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Right
@@ -3547,6 +3514,12 @@ references:
   commentId: F:TUF.Entities.Characters.CharacterManager.wallRunHozMultiplier
   fullName: TUF.Entities.Characters.CharacterManager.wallRunHozMultiplier
   nameWithType: CharacterManager.wallRunHozMultiplier
+- uid: TUF.Entities.Characters.CharacterManager.wallRunVertical
+  name: wallRunVertical
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_wallRunVertical
+  commentId: F:TUF.Entities.Characters.CharacterManager.wallRunVertical
+  fullName: TUF.Entities.Characters.CharacterManager.wallRunVertical
+  nameWithType: CharacterManager.wallRunVertical
 - uid: TUF.Entities.Characters.CharacterManager.wallSide
   name: wallSide
   href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_wallSide
@@ -4662,12 +4635,6 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityCombatManager.Awake
   nameWithType: EntityCombatManager.Awake
-- uid: TUF.Entities.EntityCombatManager.chargeTimes
-  name: chargeTimes
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_chargeTimes
-  commentId: F:TUF.Entities.EntityCombatManager.chargeTimes
-  fullName: TUF.Entities.EntityCombatManager.chargeTimes
-  nameWithType: EntityCombatManager.chargeTimes
 - uid: TUF.Entities.EntityCombatManager.CheckStartingNodes
   name: CheckStartingNodes()
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_CheckStartingNodes
@@ -4694,32 +4661,6 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityCombatManager.CheckStickDirection
   nameWithType: EntityCombatManager.CheckStickDirection
-- uid: TUF.Entities.EntityCombatManager.CLateUpdate
-  name: CLateUpdate()
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_CLateUpdate
-  commentId: M:TUF.Entities.EntityCombatManager.CLateUpdate
-  fullName: TUF.Entities.EntityCombatManager.CLateUpdate()
-  nameWithType: EntityCombatManager.CLateUpdate()
-- uid: TUF.Entities.EntityCombatManager.CLateUpdate*
-  name: CLateUpdate
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_CLateUpdate_
-  commentId: Overload:TUF.Entities.EntityCombatManager.CLateUpdate
-  isSpec: "True"
-  fullName: TUF.Entities.EntityCombatManager.CLateUpdate
-  nameWithType: EntityCombatManager.CLateUpdate
-- uid: TUF.Entities.EntityCombatManager.Cleanup
-  name: Cleanup()
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Cleanup
-  commentId: M:TUF.Entities.EntityCombatManager.Cleanup
-  fullName: TUF.Entities.EntityCombatManager.Cleanup()
-  nameWithType: EntityCombatManager.Cleanup()
-- uid: TUF.Entities.EntityCombatManager.Cleanup*
-  name: Cleanup
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Cleanup_
-  commentId: Overload:TUF.Entities.EntityCombatManager.Cleanup
-  isSpec: "True"
-  fullName: TUF.Entities.EntityCombatManager.Cleanup
-  nameWithType: EntityCombatManager.Cleanup
 - uid: TUF.Entities.EntityCombatManager.Controller
   name: Controller
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Controller
@@ -4733,12 +4674,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityCombatManager.Controller
   nameWithType: EntityCombatManager.Controller
-- uid: TUF.Entities.EntityCombatManager.Heal
-  name: Heal()
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Heal
-  commentId: M:TUF.Entities.EntityCombatManager.Heal
-  fullName: TUF.Entities.EntityCombatManager.Heal()
-  nameWithType: EntityCombatManager.Heal()
+- uid: TUF.Entities.EntityCombatManager.Heal(HealInfoBase)
+  name: Heal(HealInfoBase)
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Heal_HealInfoBase_
+  commentId: M:TUF.Entities.EntityCombatManager.Heal(HealInfoBase)
+  fullName: TUF.Entities.EntityCombatManager.Heal(HealInfoBase)
+  nameWithType: EntityCombatManager.Heal(HealInfoBase)
 - uid: TUF.Entities.EntityCombatManager.Heal*
   name: Heal
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Heal_
@@ -4746,12 +4687,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityCombatManager.Heal
   nameWithType: EntityCombatManager.Heal
-- uid: TUF.Entities.EntityCombatManager.Hurt(Vector3,Vector3,Vector3,HitInfo)
-  name: Hurt(Vector3, Vector3, Vector3, HitInfo)
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Hurt_Vector3_Vector3_Vector3_HitInfo_
-  commentId: M:TUF.Entities.EntityCombatManager.Hurt(Vector3,Vector3,Vector3,HitInfo)
-  fullName: TUF.Entities.EntityCombatManager.Hurt(Vector3, Vector3, Vector3, HitInfo)
-  nameWithType: EntityCombatManager.Hurt(Vector3, Vector3, Vector3, HitInfo)
+- uid: TUF.Entities.EntityCombatManager.Hurt(Vector3,Vector3,Vector3,HitInfoBase)
+  name: Hurt(Vector3, Vector3, Vector3, HitInfoBase)
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Hurt_Vector3_Vector3_Vector3_HitInfoBase_
+  commentId: M:TUF.Entities.EntityCombatManager.Hurt(Vector3,Vector3,Vector3,HitInfoBase)
+  fullName: TUF.Entities.EntityCombatManager.Hurt(Vector3, Vector3, Vector3, HitInfoBase)
+  nameWithType: EntityCombatManager.Hurt(Vector3, Vector3, Vector3, HitInfoBase)
 - uid: TUF.Entities.EntityCombatManager.Hurt*
   name: Hurt
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Hurt_
@@ -4829,19 +4770,6 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityHitboxManager.CreateHitboxGroup
   nameWithType: EntityHitboxManager.CreateHitboxGroup
-- uid: TUF.Entities.EntityHitboxManager.GetHitList(System.Int32)
-  name: GetHitList(Int32)
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_GetHitList_System_Int32_
-  commentId: M:TUF.Entities.EntityHitboxManager.GetHitList(System.Int32)
-  fullName: TUF.Entities.EntityHitboxManager.GetHitList(System.Int32)
-  nameWithType: EntityHitboxManager.GetHitList(Int32)
-- uid: TUF.Entities.EntityHitboxManager.GetHitList*
-  name: GetHitList
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_GetHitList_
-  commentId: Overload:TUF.Entities.EntityHitboxManager.GetHitList
-  isSpec: "True"
-  fullName: TUF.Entities.EntityHitboxManager.GetHitList
-  nameWithType: EntityHitboxManager.GetHitList
 - uid: TUF.Entities.EntityHitboxManager.InstantiateHitbox(Vector3,Quaternion)
   name: InstantiateHitbox(Vector3, Quaternion)
   href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_InstantiateHitbox_Vector3_Quaternion_
@@ -4855,12 +4783,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityHitboxManager.InstantiateHitbox
   nameWithType: EntityHitboxManager.InstantiateHitbox
-- uid: TUF.Entities.EntityHitboxManager.OnHitboxHurt(GameObject,HitInfo,System.Int32,System.Int32)
-  name: OnHitboxHurt(GameObject, HitInfo, Int32, Int32)
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_OnHitboxHurt_GameObject_HitInfo_System_Int32_System_Int32_
-  commentId: M:TUF.Entities.EntityHitboxManager.OnHitboxHurt(GameObject,HitInfo,System.Int32,System.Int32)
-  fullName: TUF.Entities.EntityHitboxManager.OnHitboxHurt(GameObject, HitInfo, System.Int32, System.Int32)
-  nameWithType: EntityHitboxManager.OnHitboxHurt(GameObject, HitInfo, Int32, Int32)
+- uid: TUF.Entities.EntityHitboxManager.OnHitboxHurt(GameObject,HitInfoBase,System.Int32,System.Int32)
+  name: OnHitboxHurt(GameObject, HitInfoBase, Int32, Int32)
+  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_OnHitboxHurt_GameObject_HitInfoBase_System_Int32_System_Int32_
+  commentId: M:TUF.Entities.EntityHitboxManager.OnHitboxHurt(GameObject,HitInfoBase,System.Int32,System.Int32)
+  fullName: TUF.Entities.EntityHitboxManager.OnHitboxHurt(GameObject, HitInfoBase, System.Int32, System.Int32)
+  nameWithType: EntityHitboxManager.OnHitboxHurt(GameObject, HitInfoBase, Int32, Int32)
 - uid: TUF.Entities.EntityHitboxManager.OnHitboxHurt*
   name: OnHitboxHurt
   href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_OnHitboxHurt_
@@ -5785,6 +5713,88 @@ references:
   commentId: F:TUF.Entities.EntityStates.WALK
   fullName: TUF.Entities.EntityStates.WALK
   nameWithType: EntityStates.WALK
+- uid: TUF.Entities.HealthManager
+  name: HealthManager
+  href: api/TUF.Entities.HealthManager.html
+  commentId: T:TUF.Entities.HealthManager
+  fullName: TUF.Entities.HealthManager
+  nameWithType: HealthManager
+- uid: TUF.Entities.HealthManager.Heal(System.Single)
+  name: Heal(Single)
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_Heal_System_Single_
+  commentId: M:TUF.Entities.HealthManager.Heal(System.Single)
+  fullName: TUF.Entities.HealthManager.Heal(System.Single)
+  nameWithType: HealthManager.Heal(Single)
+- uid: TUF.Entities.HealthManager.Heal*
+  name: Heal
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_Heal_
+  commentId: Overload:TUF.Entities.HealthManager.Heal
+  isSpec: "True"
+  fullName: TUF.Entities.HealthManager.Heal
+  nameWithType: HealthManager.Heal
+- uid: TUF.Entities.HealthManager.Health
+  name: Health
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_Health
+  commentId: P:TUF.Entities.HealthManager.Health
+  fullName: TUF.Entities.HealthManager.Health
+  nameWithType: HealthManager.Health
+- uid: TUF.Entities.HealthManager.Health*
+  name: Health
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_Health_
+  commentId: Overload:TUF.Entities.HealthManager.Health
+  isSpec: "True"
+  fullName: TUF.Entities.HealthManager.Health
+  nameWithType: HealthManager.Health
+- uid: TUF.Entities.HealthManager.HealthChangedAction
+  name: HealthManager.HealthChangedAction
+  href: api/TUF.Entities.HealthManager.HealthChangedAction.html
+  commentId: T:TUF.Entities.HealthManager.HealthChangedAction
+  fullName: TUF.Entities.HealthManager.HealthChangedAction
+  nameWithType: HealthManager.HealthChangedAction
+- uid: TUF.Entities.HealthManager.Hurt(System.Single)
+  name: Hurt(Single)
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_Hurt_System_Single_
+  commentId: M:TUF.Entities.HealthManager.Hurt(System.Single)
+  fullName: TUF.Entities.HealthManager.Hurt(System.Single)
+  nameWithType: HealthManager.Hurt(Single)
+- uid: TUF.Entities.HealthManager.Hurt*
+  name: Hurt
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_Hurt_
+  commentId: Overload:TUF.Entities.HealthManager.Hurt
+  isSpec: "True"
+  fullName: TUF.Entities.HealthManager.Hurt
+  nameWithType: HealthManager.Hurt
+- uid: TUF.Entities.HealthManager.OnHeal
+  name: OnHeal
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_OnHeal
+  commentId: E:TUF.Entities.HealthManager.OnHeal
+  fullName: TUF.Entities.HealthManager.OnHeal
+  nameWithType: HealthManager.OnHeal
+- uid: TUF.Entities.HealthManager.OnHealthSet
+  name: OnHealthSet
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_OnHealthSet
+  commentId: E:TUF.Entities.HealthManager.OnHealthSet
+  fullName: TUF.Entities.HealthManager.OnHealthSet
+  nameWithType: HealthManager.OnHealthSet
+- uid: TUF.Entities.HealthManager.OnHurt
+  name: OnHurt
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_OnHurt
+  commentId: E:TUF.Entities.HealthManager.OnHurt
+  fullName: TUF.Entities.HealthManager.OnHurt
+  nameWithType: HealthManager.OnHurt
+- uid: TUF.Entities.HealthManager.SetHealth(System.Single)
+  name: SetHealth(Single)
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_SetHealth_System_Single_
+  commentId: M:TUF.Entities.HealthManager.SetHealth(System.Single)
+  fullName: TUF.Entities.HealthManager.SetHealth(System.Single)
+  nameWithType: HealthManager.SetHealth(Single)
+- uid: TUF.Entities.HealthManager.SetHealth*
+  name: SetHealth
+  href: api/TUF.Entities.HealthManager.html#TUF_Entities_HealthManager_SetHealth_
+  commentId: Overload:TUF.Entities.HealthManager.SetHealth
+  isSpec: "True"
+  fullName: TUF.Entities.HealthManager.SetHealth
+  nameWithType: HealthManager.SetHealth
 - uid: TUF.Entities.Shared
   name: TUF.Entities.Shared
   href: api/TUF.Entities.Shared.html
