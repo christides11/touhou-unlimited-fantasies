@@ -11,7 +11,7 @@ namespace TUF.Entities.Shared
         {
             base.Initialize();
             controller.IsGrounded = false;
-            controller.PhysicsManager.forceGravity.y = controller.fullHop ? controller.definition.stats.fullHopVelocity
+            PhysicsManager.forceGravity.y = controller.fullHop ? controller.definition.stats.fullHopVelocity
                 : controller.definition.stats.shortHopJumpVelocity;
         }
 

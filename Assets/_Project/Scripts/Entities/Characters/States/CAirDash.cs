@@ -15,7 +15,7 @@ namespace TUF.Entities.Characters.States
             CharacterStats cs = ((CharacterStats)controller.definition.stats);
 
             ((CharacterManager)controller).currentAirDash++;
-            controller.PhysicsManager.forceGravity *= cs.airDashGravityInitMulti;
+            PhysicsManager.forceGravity *= cs.airDashGravityInitMulti;
             Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             if(movement.magnitude < InputConstants.movementMagnitude)
             {
@@ -26,7 +26,7 @@ namespace TUF.Entities.Characters.States
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement *= cs.airDashVelo;
 
-            controller.PhysicsManager.forceMovement = translatedMovement;
+            PhysicsManager.forceMovement = translatedMovement;
             controller.RotateVisual(translatedMovement, 100);
         }
 
@@ -37,9 +37,9 @@ namespace TUF.Entities.Characters.States
                 CharacterStats cs = ((CharacterStats)controller.definition.stats);
                 if (controller.StateManager.CurrentStateFrame > cs.airDashHoldVelo)
                 {
-                    controller.PhysicsManager.ApplyMovementFriction(cs.airDashFriction);
+                    PhysicsManager.ApplyMovementFriction(cs.airDashFriction);
                 }
-                controller.PhysicsManager.ApplyGravityFriction(cs.airDashGravityFriction);
+                PhysicsManager.ApplyGravityFriction(cs.airDashGravityFriction);
                 controller.StateManager.IncrementFrame();
             }
         }

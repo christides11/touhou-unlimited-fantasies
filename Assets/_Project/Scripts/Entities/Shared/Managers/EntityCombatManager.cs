@@ -6,6 +6,7 @@ using CAF.Combat;
 using MovesetAttackNode = TUF.Combat.MovesetAttackNode;
 using MovesetDefinition = TUF.Combat.MovesetDefinition;
 using HitInfo = TUF.Combat.HitInfo;
+using CAF.Input;
 
 namespace TUF.Entities
 {
@@ -33,6 +34,12 @@ namespace TUF.Entities
             return base.CheckStartingNodes();
         }
 
+        protected override bool CheckStickDirection(InputDefinition sequenceInput, int framesBack)
+        {
+            return false;
+        }
+
+        /*
         protected override bool CheckStickDirection(Vector2 wantedDirection, float deviation, int framesBack)
         {
             Vector2 stickDir = Controller.InputManager.GetAxis2D((int)EntityInputs.Movement, framesBack);
@@ -49,8 +56,14 @@ namespace TUF.Entities
                 return true;
             }
             return false;
+        }*/
+
+        public override HitReaction Hurt(HurtInfoBase hurtInfoBase)
+        {
+            return base.Hurt(hurtInfoBase);
         }
 
+        /*
         public override HitReaction Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfoBase hitInfoB)
         {
             Debug.Log("Hurt.");
@@ -115,7 +128,7 @@ namespace TUF.Entities
                 Controller.StateManager.ChangeState((int)(Controller.IsGrounded ? EntityStates.FLINCH : EntityStates.FLINCH_AIR));
             }
             return hitReaction;
-        }
+        }*/
 
         public override void Heal(HealInfoBase healInfo)
         {

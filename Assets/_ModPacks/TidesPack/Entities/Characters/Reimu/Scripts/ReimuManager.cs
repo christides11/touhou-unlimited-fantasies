@@ -13,9 +13,9 @@ namespace TidesPack.Characters.Reimu
         [SerializeField] private BulletPatternManager bpm;
         [SerializeField] private BulletPattern bulletMove;
 
-        public override void SimUpdate(float deltaTime)
+        public override void SimUpdate()
         {
-            base.SimUpdate(deltaTime);
+            base.SimUpdate();
 
             /*
             if(InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).firstPress

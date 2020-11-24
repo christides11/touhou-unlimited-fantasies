@@ -77,12 +77,12 @@ namespace TUF.Entities
             //pushbox.TriggerStay += PhysicsManager.HandlePushForce;
         }
 
-        public override Vector3 GetSize()
+        public virtual Vector3 GetSize()
         {
             return size;
         }
 
-        public override Vector3 GetCenter()
+        public virtual Vector3 GetCenter()
         {
             return transform.position + new Vector3(0, size.y/2.0f, 0);
         }
@@ -198,7 +198,7 @@ namespace TUF.Entities
                     {
                         continue;
                     }
-                    Vector3 targetDistance = targetLockonComponent.GetCenter() - GetCenter();
+                    Vector3 targetDistance = targetLockonComponent.GetGameObject().GetComponent<EntityManager>().GetCenter() - GetCenter();
                     // If we can't see the target, it can not be locked on to.
                     if(Physics.Raycast(GetCenter(), targetDistance.normalized, lockonRadius, visibilityLayerMask))
                     {
@@ -356,7 +356,7 @@ namespace TUF.Entities
 
         public virtual void ResetAirActions()
         {
-            PhysicsManager.GravityScale = 1.0f;
+            ((TUF.Entities.EntityPhysicsManager)PhysicsManager).GravityScale = 1.0f;
             currentAirJump = 0;
         }
     }

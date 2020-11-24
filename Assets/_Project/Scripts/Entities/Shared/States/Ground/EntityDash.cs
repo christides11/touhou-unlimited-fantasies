@@ -14,7 +14,7 @@ namespace TUF.Entities.Shared
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement *= controller.definition.stats.dashSpeed;
 
-            controller.PhysicsManager.forceMovement = translatedMovement;
+            PhysicsManager.forceMovement = translatedMovement;
             controller.RotateVisual(translatedMovement, 100);
             controller.ResetAirActions();
         }

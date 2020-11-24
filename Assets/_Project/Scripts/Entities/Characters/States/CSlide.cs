@@ -14,7 +14,7 @@ namespace TUF.Entities.Characters.States
 
             base.Initialize();
 
-            controller.PhysicsManager.forceMovement = controller.GetMovementVector(0).normalized * cs.slideInitialSpeed;
+            PhysicsManager.forceMovement = controller.GetMovementVector(0).normalized * cs.slideInitialSpeed;
         }
 
         protected RaycastHit hit;
@@ -45,7 +45,7 @@ namespace TUF.Entities.Characters.States
                     targetSpeed = Vector3.zero;
                 }
 
-                controller.PhysicsManager.forceMovement = Vector3.Lerp(controller.PhysicsManager.forceMovement, targetSpeed,
+                PhysicsManager.forceMovement = Vector3.Lerp(PhysicsManager.forceMovement, targetSpeed,
                     Time.fixedDeltaTime * cs.slideForceTransitionTime);
             }
 

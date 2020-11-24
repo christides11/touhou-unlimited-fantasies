@@ -28,11 +28,17 @@ namespace TUF.Entities
 
         }
 
+        protected override HitboxBase InstantiateHitbox(BoxDefinitionBase hitboxDefinitionBase)
+        {
+            return base.InstantiateHitbox(hitboxDefinitionBase);
+        }
+
+        /*
         protected override CAF.Combat.HitboxBase InstantiateHitbox(Vector3 position, Quaternion rotation)
         {
             return GameObject.Instantiate(((EntityManager)manager).GameManager.gameVariables.combat.hitbox,
                 position, rotation).GetComponent<Combat.Hitbox>();
-        }
+        }*/
 
         /// <summary>
         /// Called whenever a hitbox hits a hurtbox successfully.

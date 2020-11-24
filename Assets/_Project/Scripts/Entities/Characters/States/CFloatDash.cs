@@ -19,7 +19,7 @@ namespace TUF.Entities.Characters.States
         {
             if (!CheckInterrupt())
             {
-                Vector3 totalMovement = controller.PhysicsManager.forceMovement + controller.PhysicsManager.forceGravity;
+                Vector3 totalMovement = PhysicsManager.forceMovement + PhysicsManager.forceGravity;
 
                 Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
                 Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
@@ -37,9 +37,9 @@ namespace TUF.Entities.Characters.States
                 }
 
                 // Set movement values.
-                controller.PhysicsManager.forceMovement.x = totalMovement.x;
-                controller.PhysicsManager.forceMovement.z = totalMovement.z;
-                controller.PhysicsManager.forceGravity.y = totalMovement.y;
+                PhysicsManager.forceMovement.x = totalMovement.x;
+                PhysicsManager.forceMovement.z = totalMovement.z;
+                PhysicsManager.forceGravity.y = totalMovement.y;
             }
         }
 

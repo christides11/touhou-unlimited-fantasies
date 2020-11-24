@@ -38,7 +38,7 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;
             }
-            if (controller.PhysicsManager.forceGravity.y <= 0)
+            if (PhysicsManager.forceGravity.y <= 0)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;

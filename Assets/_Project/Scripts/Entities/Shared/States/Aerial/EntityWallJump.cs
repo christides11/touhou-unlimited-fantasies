@@ -29,8 +29,8 @@ namespace TUF.Entities.Shared
                 translatedMovement = wallNormalForward * controller.definition.stats.wallJumpHVelo;
             }
             
-            controller.PhysicsManager.forceGravity.y = controller.definition.stats.wallJumpYVelo;
-            controller.PhysicsManager.forceMovement = translatedMovement;
+            PhysicsManager.forceGravity.y = controller.definition.stats.wallJumpYVelo;
+            PhysicsManager.forceMovement = translatedMovement;
         }
 
         public override void OnUpdate()

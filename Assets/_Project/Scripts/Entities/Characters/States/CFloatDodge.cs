@@ -13,14 +13,14 @@ namespace TUF.Entities.Characters.States
         public override void Initialize()
         {
             base.Initialize();
-            controller.PhysicsManager.forceGravity.y = controller.InputManager.GetAxis((int)EntityInputs.Float)
+            PhysicsManager.forceGravity.y = InputManager.GetAxis((int)EntityInputs.Float)
                 * Stats.floatDodgeVelo;
 
-            Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
+            Vector2 movement = InputManager.GetAxis2D((int)EntityInputs.Movement);
             Vector3 translatedMovement = Vector3.zero;
             if (movement.magnitude <= InputConstants.movementMagnitude)
             {
-                movement = controller.PhysicsManager.forceGravity.y == 0 ? Vector2.zero
+                movement = PhysicsManager.forceGravity.y == 0 ? Vector2.zero
                     : Vector2.up;
             }
             else
@@ -29,7 +29,7 @@ namespace TUF.Entities.Characters.States
                 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
                 translatedMovement *= Stats.floatDodgeVelo;
             }
-            controller.PhysicsManager.forceMovement = translatedMovement;
+            PhysicsManager.forceMovement = translatedMovement;
         }
 
         public override void OnUpdate()
@@ -38,8 +38,8 @@ namespace TUF.Entities.Characters.States
             {
                 if(controller.StateManager.CurrentStateFrame > Stats.floatDodgeHoldVelo)
                 {
-                    controller.PhysicsManager.ApplyMovementFriction(Stats.floatDodgeFriction);
-                    controller.PhysicsManager.ApplyGravityFriction(Stats.floatDodgeFriction);
+                    PhysicsManager.ApplyMovementFriction(Stats.floatDodgeFriction);
+                    PhysicsManager.ApplyGravityFriction(Stats.floatDodgeFriction);
                 }
 
                 controller.StateManager.IncrementFrame();

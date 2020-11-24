@@ -70,7 +70,7 @@ namespace TUF.Combat
             activated = false;
         }
 
-        public override void SimLateUpdate(float deltaTime)
+        public override void SimLateUpdate()
         {
             CheckDetection();
         }

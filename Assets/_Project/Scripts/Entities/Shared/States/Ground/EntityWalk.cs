@@ -26,12 +26,12 @@ namespace TUF.Entities.Shared
             Vector3 velo = (translatedMovement * controller.definition.stats.walkAcceleration)
                 + (translatedMovement.normalized * controller.definition.stats.walkBaseAccel);
 
-            controller.PhysicsManager.forceMovement += velo;
+            PhysicsManager.forceMovement += velo;
             //Limit movement velocity.
-            if(controller.PhysicsManager.forceMovement.magnitude > 
+            if(PhysicsManager.forceMovement.magnitude > 
                 controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude)
             {
-                controller.PhysicsManager.forceMovement = controller.PhysicsManager.forceMovement.normalized
+                PhysicsManager.forceMovement = PhysicsManager.forceMovement.normalized
                     * controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude;
             }
 

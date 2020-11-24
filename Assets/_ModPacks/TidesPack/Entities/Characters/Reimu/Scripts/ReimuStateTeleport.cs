@@ -44,8 +44,8 @@ namespace TidesPack.Characters.Reimu
                 }
 
                 controller.cc.Motor.SetPosition(endPosition);
-                controller.PhysicsManager.forceGravity.y = rStats.teleportUpwardForce;
-                controller.PhysicsManager.forceMovement = forwardDir.normalized * rStats.teleportForwardForce;
+                PhysicsManager.forceGravity.y = rStats.teleportUpwardForce;
+                PhysicsManager.forceMovement = forwardDir.normalized * rStats.teleportForwardForce;
             }
 
             PhysicsManager.HandleGravity();

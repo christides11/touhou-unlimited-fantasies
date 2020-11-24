@@ -23,9 +23,11 @@ namespace TUF.Combat.Events
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
+            TUF.Entities.EntityPhysicsManager physicsManager = (TUF.Entities.EntityPhysicsManager)controller.PhysicsManager;
+
             if (controller.IsGrounded)
             {
-                controller.PhysicsManager.forceGravity = Vector3.zero;
+                physicsManager.forceGravity = Vector3.zero;
                 return false;
             }
             float percent = (float)frame / (float)endFrame;
@@ -37,7 +39,7 @@ namespace TUF.Combat.Events
                     * variables.floatVars[0];
             }
 
-            float gravityScale = controller.PhysicsManager.GravityScale;
+            float gravityScale = physicsManager.GravityScale;
             if (!useEntityGravityScale)
             {
                 gravityScale = variables.curveVars[1].Evaluate(percent)
@@ -51,7 +53,7 @@ namespace TUF.Combat.Events
                     * variables.floatVars[2];
             }
 
-            controller.PhysicsManager.HandleGravity(maxFallSpeed, gravity, gravityScale);
+            physicsManager.HandleGravity(maxFallSpeed, gravity, gravityScale);
             return false;
         }
 

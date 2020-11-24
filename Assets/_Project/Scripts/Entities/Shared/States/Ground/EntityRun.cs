@@ -21,11 +21,11 @@ namespace TUF.Entities.Shared
                 Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
                 translatedMovement *= controller.definition.stats.runAcceleration;
 
-                controller.PhysicsManager.forceMovement += translatedMovement;
+                PhysicsManager.forceMovement += translatedMovement;
                 //Limit movement velocity.
-                if (controller.PhysicsManager.forceMovement.magnitude > controller.definition.stats.maxRunSpeed * movement.magnitude)
+                if (PhysicsManager.forceMovement.magnitude > controller.definition.stats.maxRunSpeed * movement.magnitude)
                 {
-                    controller.PhysicsManager.forceMovement = controller.PhysicsManager.forceMovement.normalized
+                    PhysicsManager.forceMovement = PhysicsManager.forceMovement.normalized
                         * controller.definition.stats.maxRunSpeed * movement.magnitude;
                 }
 

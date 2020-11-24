@@ -183,6 +183,7 @@
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\EntityStats.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityCombatManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityHitboxManager.cs" />
+    <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityHurtboxManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityInputManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityPhysicsManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\Managers\EntityStateManager.cs" />

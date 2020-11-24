@@ -25,9 +25,9 @@ namespace TUF.Combat.Bullets
             AddPattern(pattern);
         }
 
-        public override void SimUpdate(float deltaTime)
+        public override void SimUpdate()
         {
-            base.SimUpdate(deltaTime);
+            base.SimUpdate();
             Tick();
         }
 

@@ -7,6 +7,7 @@ namespace TUF.Combat
 {
     public class StatusEffectArea : MonoBehaviour
     {
+        /*
         private void OnTriggerEnter(Collider other)
         {
             if (other.GetComponent<IStatusEffectable>() != null)
@@ -23,6 +24,6 @@ namespace TUF.Combat
             {
                 //other.GetComponent<IStatusEffectable>().ApplyStatusEffect(dfse);
             }
-        }
+        }*/
     }
 }

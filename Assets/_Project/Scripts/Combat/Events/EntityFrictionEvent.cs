@@ -22,13 +22,15 @@ namespace TUF.Combat.Events
         public override bool Evaluate(uint frame, uint endFrame, 
             CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
+            TUF.Entities.EntityPhysicsManager physicsManager = (TUF.Entities.EntityPhysicsManager)controller.PhysicsManager;
+
             if (xzFriction)
             {
-                controller.PhysicsManager.ApplyMovementFriction(variables.floatVars[0]);
+                physicsManager.ApplyMovementFriction(variables.floatVars[0]);
             }
             if (yFriction)
             {
-                controller.PhysicsManager.ApplyGravityFriction(variables.floatVars[0]);
+                physicsManager.ApplyGravityFriction(variables.floatVars[0]);
             }
             return false;
         }

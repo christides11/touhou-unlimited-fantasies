@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TUF.Entities
 {
-    public class EntityPhysicsManager : CAF.Entities.EntityPhysicsManager
+    public class EntityPhysicsManager : CAF.Entities.EntityPhysicsManager3D
     {
         protected EntityManager Controller { get { return (EntityManager)manager; } }
         public float CurrentFallSpeed { get; set; } = 0;
@@ -26,7 +26,7 @@ namespace TUF.Entities
             forcePushbox = dir * Controller.GameManager.gameVariables.pushboxForce;
         }
 
-        public override void SetForceDirect(Vector3 movement, Vector3 gravity)
+        public virtual void SetForceDirect(Vector3 movement, Vector3 gravity)
         {
             Controller.cc.SetMovement(movement, gravity);
         }
@@ -103,7 +103,7 @@ namespace TUF.Entities
         /// <param name="max">The max magnitude of our movement force.</param>
         /// <param name="decel">How much the entity decelerates when moving faster than the max magnitude.
         /// 1.0 = doesn't decelerate, 0.0 = force set to 0.</param>
-        public override void ApplyMovement(float accel, float max, float decel)
+        public virtual void ApplyMovement(float accel, float max, float decel)
         {
             Vector2 movement = Controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             if (movement.magnitude >= InputConstants.movementMagnitude)

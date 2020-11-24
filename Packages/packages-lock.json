@@ -1,11 +1,11 @@
 {
   "dependencies": {
     "com.christides.character-action-framework": {
-      "version": "https://github.com/christides11/Character-Action-Framework.git#upm/v5.0.0",
+      "version": "https://github.com/christides11/Character-Action-Framework.git#upm/v6.1.0",
       "depth": 0,
       "source": "git",
       "dependencies": {},
-      "hash": "fddbb480961caa2cefa06212a1d4adb23086161a"
+      "hash": "40f80e7bace8794c6647136e2313d59d988f6568"
     },
     "com.coffee.upm-git-extension": {
       "version": "https://github.com/mob-sakai/UpmGitExtension.git",

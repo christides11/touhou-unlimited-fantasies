@@ -25,12 +25,12 @@ namespace TUF.Entities.Shared
                 return;
             }
 
-            controller.PhysicsManager.forceGravity.y = controller.InputManager.GetAxis((int)EntityInputs.Float)
+            PhysicsManager.forceGravity.y = controller.InputManager.GetAxis((int)EntityInputs.Float)
                 * controller.definition.stats.floatVerticalSpeed;
 
             if(controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude <= InputConstants.movementMagnitude)
             {
-                controller.PhysicsManager.ApplyMovementFriction(controller.definition.stats.floatFriction);
+                PhysicsManager.ApplyMovementFriction(controller.definition.stats.floatFriction);
             }
             else
             {
@@ -51,12 +51,12 @@ namespace TUF.Entities.Shared
             Vector3 velo = (translatedMovement * controller.definition.stats.floatAcceleration)
                 + (translatedMovement.normalized * controller.definition.stats.floatBaseAccel);
 
-            controller.PhysicsManager.forceMovement += velo;
+            PhysicsManager.forceMovement += velo;
             //Limit movement velocity.
-            if (controller.PhysicsManager.forceMovement.magnitude > 
+            if (PhysicsManager.forceMovement.magnitude > 
                 controller.definition.stats.maxFloatSpeed * translatedMovement.magnitude)
             {
-                controller.PhysicsManager.forceMovement = controller.PhysicsManager.forceMovement.normalized
+                PhysicsManager.forceMovement = PhysicsManager.forceMovement.normalized
                     * controller.definition.stats.maxFloatSpeed * translatedMovement.magnitude;
             }
 
@@ -66,7 +66,7 @@ namespace TUF.Entities.Shared
             }
             else
             {
-                controller.RotateVisual(controller.PhysicsManager.forceMovement, controller.definition.stats.floatRotationSpeed);
+                controller.RotateVisual(PhysicsManager.forceMovement, controller.definition.stats.floatRotationSpeed);
             }
         }
 

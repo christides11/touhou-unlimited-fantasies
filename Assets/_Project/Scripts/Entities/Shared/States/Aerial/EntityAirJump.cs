@@ -12,14 +12,14 @@ namespace TUF.Entities.Shared
             base.Initialize();
             controller.currentAirJump++;
             controller.IsGrounded = false;
-            controller.PhysicsManager.forceGravity.y = controller.definition.stats.airJumpVelocity;
+            PhysicsManager.forceGravity.y = controller.definition.stats.airJumpVelocity;
 
             Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement *= controller.definition.stats.airJumpHorizontalVelo;
 
-            controller.PhysicsManager.forceMovement *= controller.definition.stats.airJumpCarriedMomentum;
-            controller.PhysicsManager.forceMovement += translatedMovement;
+            PhysicsManager.forceMovement *= controller.definition.stats.airJumpCarriedMomentum;
+            PhysicsManager.forceMovement += translatedMovement;
         }
 
         public override void OnUpdate()

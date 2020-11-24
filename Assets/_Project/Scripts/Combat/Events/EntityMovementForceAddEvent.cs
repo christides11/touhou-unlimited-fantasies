@@ -23,6 +23,8 @@ namespace TUF.Combat.Events
         public override bool Evaluate(uint frame, uint endFrame,
             CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
+            TUF.Entities.EntityPhysicsManager physicsManager = (TUF.Entities.EntityPhysicsManager)controller.PhysicsManager;
+
             Vector3 f = Vector3.zero;
             if (xzForce)
             {
@@ -38,12 +40,12 @@ namespace TUF.Combat.Events
 
             if (yForce)
             {
-                controller.PhysicsManager.forceGravity.y += f.y;
+                physicsManager.forceGravity.y += f.y;
             }
             if (xzForce)
             {
                 f.y = 0;
-                controller.PhysicsManager.forceMovement += f;
+                physicsManager.forceMovement += f;
             }
             return false;
         }

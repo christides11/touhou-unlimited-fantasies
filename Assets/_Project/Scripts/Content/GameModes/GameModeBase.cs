@@ -123,12 +123,12 @@ namespace TUF.GameMode{
 
         protected virtual void TickUpdate(float dt)
         {
-            simObjectManager.Update(dt);
+            simObjectManager.Update();
         }
 
         protected virtual void TickLateUpdate(float dt)
         {
-            simObjectManager.LateUpdate(dt);
+            simObjectManager.LateUpdate();
         }
     }
 }
