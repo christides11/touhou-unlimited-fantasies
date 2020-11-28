@@ -20,6 +20,12 @@ namespace TUF.Entities.Characters.States
             {
                 return true;
             }
+            if (InputManager.GetAxis((int)EntityInputs.Float) < -0.5f
+                && InputManager.GetAxis((int)EntityInputs.Float, 1) >= -0.5f)
+            {
+                StateManager.ChangeState((int)BaseCharacterStates.SLIDE);
+                return true;
+            }
             if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
                 StateManager.ChangeState((int)EntityStates.JUMP_SQUAT);

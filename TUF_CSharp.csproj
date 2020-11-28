@@ -225,6 +225,9 @@
     <Compile Include="Assets\_Project\Scripts\Managers\Variables\CombatVariables.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\Variables\GameVariables.cs" />
     <Compile Include="Assets\_Project\Scripts\Managers\Variables\SoundDefinition.cs" />
+    <Compile Include="Assets\_Project\Scripts\MovingPlatform.cs" />
+    <Compile Include="Assets\_Project\Scripts\PushEffector.cs" />
+    <Compile Include="Assets\_Project\Scripts\SimObjectRegister.cs" />
     <Compile Include="Assets\_Project\Scripts\StatusEffectArea.cs" />
     <Compile Include="Assets\_Project\Scripts\UI\ManageModsMenu.cs" />
     <Compile Include="Assets\_Project\Scripts\UI\ModsMenu.cs" />
@@ -914,6 +917,10 @@
     <ProjectReference Include="Rewired_CSharp.csproj">
       <Project>{D69A459A-A34A-76C4-2767-51EC1D026B57}</Project>
       <Name>Rewired_CSharp</Name>
+    </ProjectReference>
+    <ProjectReference Include="iTween_CSharp.csproj">
+      <Project>{95613852-A13C-4D37-F782-45529F730643}</Project>
+      <Name>iTween_CSharp</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

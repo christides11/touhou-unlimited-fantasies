@@ -305,8 +305,8 @@ MonoBehaviour:
   mouseYAxisSpeed: 0.8
   stickDeadzone: 0.15
   stickAxialDeadZone: 0.18
-  stickXAxisSpeed: 0.3
-  stickYAxisSpeed: 0.4
+  stickXAxisSpeed: 0.5
+  stickYAxisSpeed: 0.5
 --- !u!114 &682206380411410042
 MonoBehaviour:
   m_ObjectHideFlags: 0

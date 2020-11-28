@@ -25,6 +25,7 @@ namespace TUF.Core
         /// What scene we should load into after initilization.
         /// </summary>
         [SerializeField] private string defaultScene;
+        [SerializeField] private string singletonScene;
         /// <summary>
         /// The target framerate of the game. -1 if unlimited.
         /// </summary>
@@ -50,6 +51,11 @@ namespace TUF.Core
 
         async void Start()
         {
+            if(SceneManager.GetActiveScene().name != singletonScene)
+            {
+                await SceneManager.UnloadSceneAsync(SceneManager.GetActiveScene());
+            }
+
             gameManager.Initialize();
             modManager.Init();
 

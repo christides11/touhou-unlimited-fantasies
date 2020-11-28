@@ -4337,7 +4337,10 @@ MonoBehaviour:
       linux_primaryInputSource: 0
       windowsUWP_primaryInputSource: 0
       xboxOne_primaryInputSource: 0
+      gameCoreXboxOne_primaryInputSource: 0
+      gameCoreXboxSeriesX_primaryInputSource: 0
       ps4_primaryInputSource: 0
+      ps5_primaryInputSource: 0
       webGL_primaryInputSource: 0
       stadia_primaryInputSource: 0
       useXInput: 1
@@ -4385,6 +4388,9 @@ MonoBehaviour:
       platformVars_ps4:
         disableKeyboard: 0
         ignoreInputWhenAppNotInFocus: 1
+      platformVars_ps5:
+        disableKeyboard: 0
+        ignoreInputWhenAppNotInFocus: 1
       platformVars_psVita:
         disableKeyboard: 0
         ignoreInputWhenAppNotInFocus: 1
@@ -4392,6 +4398,12 @@ MonoBehaviour:
         disableKeyboard: 0
         ignoreInputWhenAppNotInFocus: 1
       platformVars_xboxOne:
+        disableKeyboard: 0
+        ignoreInputWhenAppNotInFocus: 1
+      platformVars_gameCoreXboxOne:
+        disableKeyboard: 0
+        ignoreInputWhenAppNotInFocus: 1
+      platformVars_gameCoreXboxSeriesX:
         disableKeyboard: 0
         ignoreInputWhenAppNotInFocus: 1
       platformVars_wii:

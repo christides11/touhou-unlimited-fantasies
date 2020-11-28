@@ -8,5 +8,6 @@ namespace TUF.Core
     {
         public static float movementMagnitude = 0.2f;
         public static float floatMagnitude = 0.2f;
+        public static float movementSigma = 0.001f;
     }
 }

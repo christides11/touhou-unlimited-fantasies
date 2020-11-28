@@ -1,0 +1,17 @@
+{
+    "name": "ITween_Editor",
+    "references": [
+        "GUID:9bda800479aa5724f9d404a33b4eaaf0"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

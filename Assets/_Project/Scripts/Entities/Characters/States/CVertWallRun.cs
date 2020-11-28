@@ -12,6 +12,8 @@ namespace TUF.Entities.Characters.States
             base.Initialize();
             PhysicsManager.forceMovement = Vector3.zero;
             PhysicsManager.forceGravity = Vector3.zero;
+
+            ((CharacterManager)controller).currentAirDash = 0;
         }
 
         public override void OnUpdate()
@@ -29,7 +31,7 @@ namespace TUF.Entities.Characters.States
         public override bool CheckInterrupt()
         {
             if (controller.InputManager.GetButton((int)EntityInputs.Jump).firstPress
-                || PhysicsManager.DetectWall(true).collider == null)
+                || PhysicsManager.DetectWall(out int v, true).collider == null)
             {
                 controller.StateManager.ChangeState((int)BaseCharacterStates.WALL_JUMP);
                 return true;

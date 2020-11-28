@@ -7,6 +7,8 @@ namespace TUF.Entities.Shared
     [CreateAssetMenu(fileName = "EntityStats", menuName = "Entities/Stats")]
     public class EntityStats : ScriptableObject
     {
+        public float height = 2;
+
         [Header("Ground Movement")]
         public float groundFriction;
         public float maxWalkSpeed;
@@ -23,6 +25,7 @@ namespace TUF.Entities.Shared
         public int jumpsquat = 5;
         public float fullHopVelocity;
         public float shortHopJumpVelocity;
+        public float jumpHorizontalMomentum;
 
         [Header("Air Jump")]
         public int maxAirJumps = 1;

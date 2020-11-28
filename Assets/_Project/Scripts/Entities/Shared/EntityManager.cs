@@ -320,10 +320,14 @@ namespace TUF.Entities
 
         public virtual bool TryFloat()
         {
-            if (Mathf.Abs(InputManager.GetAxis((int)EntityInputs.Float, 0)) >= InputConstants.floatMagnitude)
+            float firstInput = Mathf.Abs(InputManager.GetAxis((int)EntityInputs.Float, 0));
+            if (firstInput >= InputConstants.floatMagnitude)
             {
-                StateManager.ChangeState((int)EntityStates.FLOAT);
-                return true;
+                if (Mathf.Abs(InputManager.GetAxis((int)EntityInputs.Float, 3)) < firstInput)
+                {
+                    StateManager.ChangeState((int)EntityStates.FLOAT);
+                    return true;
+                }
             }
             return false;
         }

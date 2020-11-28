@@ -22,20 +22,52 @@ namespace TUF.Entities.Characters.States
 
             controller.transform.position = ((CharacterManager)controller).lastWallHit.point
                 + (((CharacterManager)controller).lastWallHit.normal) * (controller.GetSize().x / 2.0f);
+
+            ((CharacterManager)controller).currentAirDash = 0;
         }
 
         public override void OnUpdate()
         {
-            if (CheckInterrupt())
+            UpdatePosition();
+
+            PhysicsManager.forceMovement = 
+                ((controller.visual.transform.forward
+                * ((CharacterStats)controller.definition.stats).wallRunHorizontalSpeed
+                * ((CharacterManager)controller).wallRunHozMultiplier))
+                + 
+                (controller.visual.transform.right * ((CharacterManager)controller).wallSide
+                * ((CharacterStats)controller.definition.stats).wallRunHorizontalSpeed
+                * ((CharacterManager)controller).wallRunHozMultiplier);
+
+            StateManager.IncrementFrame();
+
+            CheckInterrupt();
+        }
+
+        void UpdatePosition()
+        {
+            RaycastHit rHit;
+            Physics.Raycast(controller.transform.position + new Vector3(0, 1, 0),
+                 (controller.visualTransform.right * ((CharacterManager)controller).wallSide).normalized, 
+                out rHit, PhysicsManager.wallCheckDistance * 1.25f, controller.GroundedLayerMask);
+
+            Debug.DrawRay(controller.transform.position + new Vector3(0, 1, 0),
+                controller.visualTransform.right * ((CharacterManager)controller).wallSide * PhysicsManager.wallCheckDistance);
+
+            if(rHit.collider == null)
             {
                 return;
             }
 
-            PhysicsManager.forceMovement = controller.visualTransform.forward 
-                * ((CharacterStats)controller.definition.stats).wallRunHorizontalSpeed
-                * ((CharacterManager)controller).wallRunHozMultiplier;
+            float v = Vector3.SignedAngle(controller.visualTransform.forward,
+            -(rHit.normal),
+            Vector3.up);
 
-            StateManager.IncrementFrame();
+            Vector3 c = -Vector3.Cross(Vector3.up, rHit.normal);
+            controller.visualTransform.rotation = Quaternion.LookRotation((v <= 0 ? 1 : -1) * c, Vector3.up);
+
+            controller.transform.position = rHit.point
+                + ((rHit.normal.normalized) * (controller.GetSize().x / 2.0f));
         }
 
         public override bool CheckInterrupt()
@@ -46,8 +78,8 @@ namespace TUF.Entities.Characters.States
                 return true;
             }
 
-            if (StateManager.CurrentStateFrame > 60
-                || PhysicsManager.DetectWall(true).collider == null)
+            if (StateManager.CurrentStateFrame > ((CharacterStats)controller.definition.stats).wallRunTime
+                || PhysicsManager.DetectWall(out int v, true).collider == null)
             {
                 StateManager.ChangeState((int)EntityStates.FALL);
                 return true;

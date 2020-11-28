@@ -25,12 +25,7 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;
             }
-            if (Mathf.Abs(controller.InputManager.GetAxis((int)EntityInputs.Float)) > InputConstants.floatMagnitude)
-            {
-                controller.StateManager.ChangeState((int)EntityStates.FLOAT);
-                return true;
-            }
-            if (((CharacterManager)controller).TryWallRun())
+            if (controller.TryFloat())
             {
                 return true;
             }

@@ -110,7 +110,7 @@ namespace TUF.Entities.Characters
         {
             if (InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude >= InputConstants.movementMagnitude)
             {
-                RaycastHit rh = ((EntityPhysicsManager)PhysicsManager).DetectWall();
+                RaycastHit rh = ((EntityPhysicsManager)PhysicsManager).DetectWall(out wallSide);
                 if (rh.collider)
                 {
                     float dotProduct = Vector3.Dot(rh.normal, GetMovementVector().normalized);

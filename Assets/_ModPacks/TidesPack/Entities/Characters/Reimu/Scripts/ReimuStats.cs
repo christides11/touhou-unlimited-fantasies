@@ -12,6 +12,5 @@ namespace TidesPack.Characters.Reimu
         public float teleportTargetUpDist;
         public float teleportUpwardForce;
         public float teleportForwardForce;
-
     }
 }

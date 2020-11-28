@@ -15,6 +15,9 @@ namespace TUF.Entities.Characters.States
             base.Initialize();
 
             PhysicsManager.forceMovement = controller.GetMovementVector(0).normalized * cs.slideInitialSpeed;
+
+            KinematicCharacterController.KinematicCharacterMotor kcm = controller.cc.Motor;
+            kcm.SetCapsuleDimensions(kcm.Capsule.radius, cs.crouchHeight, cs.crouchHeight/2.0f);
         }
 
         protected RaycastHit hit;
@@ -38,7 +41,6 @@ namespace TUF.Entities.Characters.States
                     ConstForce.Normalize();
 
                     targetSpeed = (cs.slideSlopeBaseSpeed + (slopeAngle * cs.slideSpeedPerAngle)) * ConstForce;
-                    Debug.Log(targetSpeed.magnitude);
                 }
                 else
                 {
@@ -89,6 +91,14 @@ namespace TUF.Entities.Characters.States
                 return true;
             }
             return false;
+        }
+
+        public override void OnInterrupted()
+        {
+            CharacterStats cs = ((CharacterStats)controller.definition.stats);
+
+            KinematicCharacterController.KinematicCharacterMotor kcm = controller.cc.Motor;
+            kcm.SetCapsuleDimensions(kcm.Capsule.radius, cs.height, cs.height / 2.0f);
         }
     }
 }

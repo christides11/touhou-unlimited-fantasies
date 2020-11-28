@@ -106,6 +106,7 @@ namespace TUF.Entities
         public virtual void ApplyMovement(float accel, float max, float decel)
         {
             Vector2 movement = Controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
+            // Player moving in a direction.
             if (movement.magnitude >= InputConstants.movementMagnitude)
             {
                 //Translate movment based on "camera."
@@ -118,6 +119,15 @@ namespace TUF.Entities
                 if (forceMovement.magnitude > max * movement.magnitude)
                 {
                     forceMovement *= decel;
+                }
+            }
+            else
+            {
+                // Stick at neutral, decelerate.
+                forceMovement *= decel;
+                if(forceMovement.magnitude <= InputConstants.movementSigma)
+                {
+                    forceMovement = Vector3.zero;
                 }
             }
         }
@@ -154,11 +164,11 @@ namespace TUF.Entities
         /// Check if there's a wall in the movement direction we're pointing.
         /// </summary>
         /// <returns>The RaycastHit result.</returns>
-        public virtual RaycastHit DetectWall(bool useCharacterForward = false)
+        public virtual RaycastHit DetectWall(out int wallDir, bool useCharacterForward = false)
         {
             //Get stick direction.
             Vector3 movement = Controller.GetMovementVector();
-            Vector3 translatedMovement = useCharacterForward || movement.magnitude < InputConstants.movementMagnitude
+            Vector3 translatedMovement = (useCharacterForward || movement.magnitude < InputConstants.movementMagnitude)
                 ? Controller.visualTransform.forward
                 : Controller.GetMovementVector();
             translatedMovement.y = 0;
@@ -194,6 +204,7 @@ namespace TUF.Entities
                 && forwardRay.distance <= leftRay.distance
                 && forwardRay.distance <= rightRay.distance)
             {
+                wallDir = 0;
                 return forwardRay;
             }
             else if (
@@ -203,6 +214,7 @@ namespace TUF.Entities
                && leftForwardRay.distance <= rightForwardRay.distance
                && leftForwardRay.distance <= rightRay.distance)
             {
+                wallDir = -1;
                 return leftForwardRay;
             }
             else if (
@@ -212,6 +224,7 @@ namespace TUF.Entities
                && leftRay.distance <= rightForwardRay.distance
                && leftRay.distance <= rightRay.distance)
             {
+                wallDir = -1;
                 return leftRay;
             }
             else if (
@@ -221,10 +234,12 @@ namespace TUF.Entities
                 && rightRay.distance <= rightForwardRay.distance
                 && rightRay.distance <= leftRay.distance)
             {
+                wallDir = 1;
                 return rightRay;
             }
             else
             {
+                wallDir = 1;
                 return rightForwardRay;
             }
         }

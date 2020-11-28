@@ -35,7 +35,7 @@ namespace TUF.Entities.Shared
         int counter;
         public override bool CheckInterrupt()
         {
-            if (!PhysicsManager.DetectWall().transform)
+            if (!PhysicsManager.DetectWall(out int v).transform)
             {
                 counter++;
                 if (counter > 4)

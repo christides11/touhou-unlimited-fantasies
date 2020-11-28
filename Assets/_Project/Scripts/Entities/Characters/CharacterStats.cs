@@ -29,6 +29,7 @@ namespace TUF.Entities.Characters
         public float floatDashAcceleration;
 
         [Header("Wall")]
+        public int wallRunTime = 60;
         public float wallRunVerticalSpeed;
         public float wallRunHorizontalSpeed;
         public float wallRunHorizontalChainMulti;
@@ -40,5 +41,8 @@ namespace TUF.Entities.Characters
         public float slideSlopeBaseSpeed;
         public float slideSpeedPerAngle;
         public float slideForceTransitionTime;
+
+        [Header("Crouch")]
+        public float crouchHeight = 1;
     }
 }

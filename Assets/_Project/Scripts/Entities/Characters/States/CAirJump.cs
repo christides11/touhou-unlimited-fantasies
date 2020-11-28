@@ -15,10 +15,6 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
-            if (((CharacterManager)controller).TryWallRun())
-            {
-                return true;
-            }
             if (controller.TryEnemyStep())
             {
                 return true;

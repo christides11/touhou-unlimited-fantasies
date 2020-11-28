@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TUF.Core;
 using UnityEngine;
 
 namespace TUF.Entities.Shared
@@ -11,6 +12,15 @@ namespace TUF.Entities.Shared
         {
             base.Initialize();
             controller.IsGrounded = false;
+
+            Vector3 mVector = controller.GetMovementVector();
+            mVector.y = 0;
+            if (mVector.magnitude >= InputConstants.movementMagnitude)
+            {
+                PhysicsManager.forceMovement = mVector;
+                PhysicsManager.forceMovement *= controller.definition.stats.jumpHorizontalMomentum;
+            }
+
             PhysicsManager.forceGravity.y = controller.fullHop ? controller.definition.stats.fullHopVelocity
                 : controller.definition.stats.shortHopJumpVelocity;
         }
