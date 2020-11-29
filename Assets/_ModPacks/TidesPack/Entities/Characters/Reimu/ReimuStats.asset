@@ -35,7 +35,7 @@ MonoBehaviour:
   airRotationSpeed: 0.25
   airFriction: 0.8
   airAcceleration: 3
-  airDeceleration: 0.7
+  airDeceleration: 0.8
   maxAirSpeed: 12
   gravity: 0.7
   maxFallSpeed: 15
@@ -84,10 +84,10 @@ MonoBehaviour:
   slideSlopeBaseSpeed: 10
   slideSpeedPerAngle: 0.75
   slideForceTransitionTime: 2
+  crouchHeight: 1
   teleportNoTargetForwardDist: 5
   teleportNoTargetUpDist: 5
   teleportTargetForwardDist: 1
   teleportTargetUpDist: 2
   teleportUpwardForce: 4
   teleportForwardForce: 2
-  crouchHeight: 1

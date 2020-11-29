@@ -3420,6 +3420,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3312d7739989d2b4e91e6319e9a96d76, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Padding: {x: 0, y: 0, z: 0, w: 0}
+  m_Softness: {x: 0, y: 0}
 --- !u!1 &920599358
 GameObject:
   m_ObjectHideFlags: 0
@@ -7713,6 +7715,7 @@ MonoBehaviour:
   gameManager: {fileID: 2100487049}
   modManager: {fileID: 2100487050}
   defaultScene: MainMenu
+  singletonScene: 
   targetFramerate: 60
   consoleReader: {fileID: 273061155}
   readEditorParams: 1

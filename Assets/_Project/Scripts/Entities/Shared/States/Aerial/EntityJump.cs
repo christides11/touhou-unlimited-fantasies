@@ -21,7 +21,20 @@ namespace TUF.Entities.Shared
                 PhysicsManager.forceMovement *= controller.definition.stats.jumpHorizontalMomentum;
             }
 
-            PhysicsManager.forceGravity.y = controller.fullHop ? controller.definition.stats.fullHopVelocity
+            // Moving platform movement.
+            Vector3 tempPhysicsMover = controller.cc.Motor.AttachedRigidbodyVelocity;
+            PhysicsManager.forceGravity.y = tempPhysicsMover.y;
+            tempPhysicsMover.y = 0;
+            PhysicsManager.forceMovement += tempPhysicsMover;
+
+            // Ignore negative gravity.
+            if (PhysicsManager.forceGravity.y < 0)
+            {
+                PhysicsManager.forceGravity.y = 0;
+            }
+
+            // Add jump force.
+            PhysicsManager.forceGravity.y += controller.fullHop ? controller.definition.stats.fullHopVelocity
                 : controller.definition.stats.shortHopJumpVelocity;
         }
 

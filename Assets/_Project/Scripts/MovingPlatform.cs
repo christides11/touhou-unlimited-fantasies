@@ -1,45 +1,31 @@
 ﻿using CAF.Simulation;
+using KinematicCharacterController;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Playables;
 using static iTween;
 
 namespace TUF
 {
-    public class MovingPlatform : SimObject
+    public class MovingPlatform : SimObject, IMoverController
     {
-        [System.Serializable]
-        public class PathPoint
-        {
-            public GameObject point;
-            public int delay;
-            public EaseType easeOutType;
-            public float easeOutTime;
-        }
-
-        public enum WrapType
-        {
-            None, Loop, PingPong
-        }
-
-        public GameObject platform;
-
-        public List<PathPoint> path = new List<PathPoint>();
-        public WrapType wrapType;
+        public PhysicsMover Mover;
+        public PlayableDirector Director;
         public bool autoActivate;
 
         private bool pathActivated;
-        private int pathDirection = 1;
-        private int currentPathPoint;
-        private int currentPointWaitTimer;
 
         protected override void Start()
         {
             base.Start();
+            Mover.MoverController = this;
+
             if (autoActivate)
             {
                 StartPath();
             }
+
         }
 
         public override void SimUpdate()
@@ -48,34 +34,13 @@ namespace TUF
 
             if (pathActivated)
             {
-                // Wait at this position.
-                if (currentPointWaitTimer < path[currentPathPoint].delay)
-                {
-                    currentPointWaitTimer++;
-                    if(currentPointWaitTimer == path[currentPathPoint].delay)
-                    {
-                        // No point after this one.
-                        int nextPoint = currentPathPoint + pathDirection;
-                        if (nextPoint >= path.Count || nextPoint < 0)
-                        {
-                            PathFinished();
-                            return;
-                        }
 
-                        iTween.MoveTo(platform, iTween.Hash("position", path[nextPoint].point.transform.position, 
-                            "time", path[currentPathPoint].easeOutTime, 
-                            "easetype", path[currentPathPoint].easeOutType));
-                        StartCoroutine(SelectNextPoint(path[currentPathPoint].easeOutTime));
-                    }
-                    return;
-                }
             }
         }
 
-        public void StartPath(int startPoint = 0)
+        public void StartPath()
         {
             pathActivated = true;
-            currentPathPoint = startPoint;
         }
 
         public void PausePath()
@@ -90,27 +55,32 @@ namespace TUF
 
         protected void PathFinished()
         {
-            switch (wrapType)
-            {
-                case WrapType.None:
-                    break;
-                case WrapType.Loop:
-                    platform.transform.position = path[0].point.transform.position;
-                    currentPathPoint = 0;
-                    currentPointWaitTimer = 0;
-                    break;
-                case WrapType.PingPong:
-                    pathDirection *= -1;
-                    currentPointWaitTimer = 0;
-                    break;
-            }
+
         }
 
-        protected IEnumerator SelectNextPoint(float waitTime)
+        public void UpdateMovement(out Vector3 goalPosition, out Quaternion goalRotation, float deltaTime)
         {
-            yield return new WaitForSeconds(waitTime);
-            currentPathPoint += pathDirection;
-            currentPointWaitTimer = 0;
+            // Remember pose before animation
+            Vector3 _positionBeforeAnim = transform.position;
+            Quaternion _rotationBeforeAnim = transform.rotation;
+
+            // Update animation
+            EvaluateAtTime(Time.time);
+
+            // Set our platform's goal pose to the animation's
+            goalPosition = transform.position;
+            goalRotation = transform.rotation;
+
+            // Reset the actual transform pose to where it was before evaluating. 
+            // This is so that the real movement can be handled by the physics mover; not the animation
+            transform.position = _positionBeforeAnim;
+            transform.rotation = _rotationBeforeAnim;
+        }
+
+        public void EvaluateAtTime(double time)
+        {
+            Director.time = time % Director.duration;
+            Director.Evaluate();
         }
     }
 }
