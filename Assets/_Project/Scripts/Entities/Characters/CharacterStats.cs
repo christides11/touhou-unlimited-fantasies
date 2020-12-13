@@ -44,5 +44,10 @@ namespace TUF.Entities.Characters
 
         [Header("Crouch")]
         public float crouchHeight = 1;
+
+        [Header("Ledge Jump")]
+        public float ledgeJumpMaxSpeed;
+        public float ledgeJumpYForce;
+        public float ledgeJumpMoveForce;
     }
 }

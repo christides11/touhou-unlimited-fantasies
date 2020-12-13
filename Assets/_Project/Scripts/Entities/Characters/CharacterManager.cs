@@ -71,6 +71,8 @@ namespace TUF.Entities.Characters
 
             // Other
             StateManager.AddState(new CSlide(), (int)BaseCharacterStates.SLIDE);
+            StateManager.AddState(new CLedgeHang(), (int)BaseCharacterStates.LEDGE_HANG);
+            StateManager.AddState(new CLedgeJump(), (int)BaseCharacterStates.LEDGE_JUMP);
 
             // Start State Machine
             StateManager.ChangeState((int)EntityStates.FALL);
@@ -124,6 +126,37 @@ namespace TUF.Entities.Characters
                     {
                         lastWallHit = rh;
                         StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        public Vector3 ledgeRayOffset;
+        public float ledgeRayDistance;
+        public float ledgeSphereRadius;
+        public float ledgeDistance;
+
+        public Vector3 lastLedgePosition;
+        public virtual bool TryLedgeGrab()
+        {
+            if(GetMovementVector().magnitude < InputConstants.movementMagnitude)
+            {
+                return false;
+            }
+
+            RaycastHit hitInfo;
+            Physics.SphereCast(transform.position + ledgeRayOffset, ledgeSphereRadius, visualTransform.forward, out hitInfo, ledgeRayDistance);
+            if (hitInfo.collider != null)
+            {
+                if(hitInfo.collider.TryGetComponent<Ledge>(out Ledge l))
+                {
+                    Vector3 closestLedge = l.FindClosestLedge(transform.position + ledgeRayOffset);
+                    if(Vector3.Distance(transform.position+ledgeRayOffset, closestLedge) <= ledgeDistance)
+                    {
+                        lastLedgePosition = closestLedge;
+                        StateManager.ChangeState((int)BaseCharacterStates.LEDGE_HANG);
                         return true;
                     }
                 }

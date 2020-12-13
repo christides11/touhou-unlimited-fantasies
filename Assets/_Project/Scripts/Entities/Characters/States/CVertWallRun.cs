@@ -30,6 +30,10 @@ namespace TUF.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
+            if (((CharacterManager)controller).TryLedgeGrab())
+            {
+                return true;
+            }
             if (controller.InputManager.GetButton((int)EntityInputs.Jump).firstPress
                 || PhysicsManager.DetectWall(out int v, true).collider == null)
             {

@@ -15,6 +15,7 @@ namespace TUF
         public bool autoActivate;
 
         private bool pathActivated;
+        private int timer = 0;
 
         protected override void Start()
         {
@@ -34,7 +35,7 @@ namespace TUF
 
             if (pathActivated)
             {
-
+                timer++;
             }
         }
 
@@ -65,7 +66,7 @@ namespace TUF
             Quaternion _rotationBeforeAnim = transform.rotation;
 
             // Update animation
-            EvaluateAtTime(Time.time);
+            EvaluateAtTime(timer * Time.fixedDeltaTime);
 
             // Set our platform's goal pose to the animation's
             goalPosition = transform.position;

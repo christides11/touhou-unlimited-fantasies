@@ -16,6 +16,10 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.ATTACK);
                 return true;
             }
+            if (((CharacterManager)controller).TryLedgeGrab())
+            {
+                return true;
+            }
             if (controller.TryFloat())
             {
                 return true;

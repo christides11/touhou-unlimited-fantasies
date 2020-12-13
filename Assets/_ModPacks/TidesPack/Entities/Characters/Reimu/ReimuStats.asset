@@ -85,6 +85,9 @@ MonoBehaviour:
   slideSpeedPerAngle: 0.75
   slideForceTransitionTime: 2
   crouchHeight: 1
+  ledgeJumpMaxSpeed: 30
+  ledgeJumpYForce: 10
+  ledgeJumpMoveForce: 10
   teleportNoTargetForwardDist: 5
   teleportNoTargetUpDist: 5
   teleportTargetForwardDist: 1

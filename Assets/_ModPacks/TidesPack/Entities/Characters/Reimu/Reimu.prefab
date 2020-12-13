@@ -546,6 +546,10 @@ MonoBehaviour:
   wallSide: 0
   wallRunHozMultiplier: 1
   wallRunVertical: -0.95
+  ledgeRayOffset: {x: 0, y: 1, z: 0}
+  ledgeRayDistance: 0.5
+  ledgeDistance: 0.75
+  lastLedgePosition: {x: 0, y: 0, z: 0}
   bpm: {fileID: 0}
   bulletMove: {fileID: 0}
 --- !u!114 &268217326523756411

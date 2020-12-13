@@ -8,6 +8,8 @@
         FLOAT_DASH = 23,
         WALL_RUN_HORIZONTAL = 24,
         WALL_RUN_VERTICAL = 25,
-        SLIDE = 26
+        SLIDE = 26,
+        LEDGE_HANG = 28,
+        LEDGE_JUMP = 29
     }
 }
