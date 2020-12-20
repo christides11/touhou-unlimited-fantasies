@@ -49,5 +49,6 @@ namespace TUF.Entities.Characters
         public float ledgeJumpMaxSpeed;
         public float ledgeJumpYForce;
         public float ledgeJumpMoveForce;
+        public float ledgeJumpAccel;
     }
 }

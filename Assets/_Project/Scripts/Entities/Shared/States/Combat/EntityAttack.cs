@@ -3,7 +3,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TUF.Combat;
-using TUF.Combat.Bullets;
 using TUF.Core;
 using UnityEngine;
 using AttackDefinition = TUF.Combat.AttackDefinition;
@@ -74,12 +73,6 @@ namespace TUF.Entities.Shared
                 HandleBoxGroup(i, (BoxGroup)currentAttack.boxGroups[i]);
             }
 
-            
-            for(int i = 0; i < currentAttack.bulletGroups.Count; i++)
-            {
-                HandleBulletGroup(i, currentAttack.bulletGroups[i]);
-            }
-
             if (CheckCancelWindows(currentAttack))
             {
                 CombatManager.Cleanup();
@@ -107,22 +100,6 @@ namespace TUF.Entities.Shared
             }
 
             CheckInterrupt();
-        }
-
-        private void HandleBulletGroup(int index, BulletPatternGroup bulletPatternGroup)
-        {
-            if (controller.StateManager.CurrentStateFrame == bulletPatternGroup.spawnFrame)
-            {
-                GameObject patternManager = new GameObject();
-                patternManager.transform.position = controller.transform.position;
-                patternManager.transform.position += controller.GetVisualBasedDirection(Vector3.forward) * bulletPatternGroup.offset.z
-                    + controller.GetVisualBasedDirection(Vector3.up) * bulletPatternGroup.offset.y
-                    + controller.GetVisualBasedDirection(Vector3.right) * bulletPatternGroup.offset.x;
-                patternManager.transform.rotation = controller.visual.transform.rotation;
-                BulletPatternManager bpm = patternManager.AddComponent<BulletPatternManager>();
-                bpm.Initialize(new BulletPatternManagerSettings(), bulletPatternGroup.bulletPattern, controller.visualTransform.transform.position);
-                controller.GameManager.GameMode.SimObjectManager.RegisterObject(bpm);
-            }
         }
 
         public override void OnInterrupted()

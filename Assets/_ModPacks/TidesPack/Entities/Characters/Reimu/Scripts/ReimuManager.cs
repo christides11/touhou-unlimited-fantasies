@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TUF.Combat.Bullets;
 using TUF.Core;
 using UnityEngine;
 using CharacterManager = TUF.Entities.Characters.CharacterManager;
@@ -9,9 +8,6 @@ namespace TidesPack.Characters.Reimu
 {
     public class ReimuManager : CharacterManager
     {
-
-        [SerializeField] private BulletPatternManager bpm;
-        [SerializeField] private BulletPattern bulletMove;
 
         public override void SimUpdate()
         {

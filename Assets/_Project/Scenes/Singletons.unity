@@ -7716,7 +7716,7 @@ MonoBehaviour:
   modManager: {fileID: 2100487050}
   defaultScene: MainMenu
   singletonScene: 
-  targetFramerate: 60
+  targetFramerate: -1
   consoleReader: {fileID: 273061155}
   readEditorParams: 1
   editorArgs:

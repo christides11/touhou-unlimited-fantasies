@@ -13,6 +13,7 @@ namespace TUF.Entities.Characters.States
             CharacterStats cs = (CharacterStats)controller.definition.stats;
             PhysicsManager.forceGravity.y = cs.ledgeJumpYForce;
 
+            PhysicsManager.forceMovement = PhysicsManager.forceMovement.magnitude * controller.visualTransform.forward;
             Vector3 cancelForce = -PhysicsManager.forceMovement;
             // Neutral input, just jump straight up.
             if(controller.GetMovementVector(0).magnitude < InputConstants.movementMagnitude)
@@ -29,7 +30,7 @@ namespace TUF.Entities.Characters.States
         {
             CharacterStats cs = (CharacterStats)controller.definition.stats;
 
-            //PhysicsManager.ApplyMovement(cs.airAcceleration, cs.ledgeJumpMaxSpeed, cs.airDeceleration);
+            PhysicsManager.ApplyMovement(cs.ledgeJumpAccel, cs.ledgeJumpMaxSpeed, cs.airDeceleration, false);
             PhysicsManager.HandleGravity();
 
             CheckInterrupt();
@@ -37,6 +38,33 @@ namespace TUF.Entities.Characters.States
 
         public override bool CheckInterrupt()
         {
+            if (CombatManager.TryAttack())
+            {
+                StateManager.ChangeState((int)EntityStates.ATTACK);
+                return true;
+            }
+            if (((CharacterManager)controller).TryLedgeGrab())
+            {
+                return true;
+            }
+            if (controller.TryEnemyStep())
+            {
+                return true;
+            }
+            if (controller.CanAirJump())
+            {
+                controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
+                return true;
+            }
+            if (controller.TryFloat())
+            {
+                return true;
+            }
+            if (((CharacterManager)controller).CheckAirDash())
+            {
+                StateManager.ChangeState((int)EntityStates.AIR_DASH);
+                return true;
+            }
             if (controller.IsGrounded)
             {
                 if (controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude > InputConstants.movementMagnitude)

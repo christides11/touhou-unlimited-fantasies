@@ -26,7 +26,7 @@ namespace TUF.Entities.Characters.States {
             if (controller.InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
                 controller.cc.Motor.SetPosition(((CharacterManager)controller).lastLedgePosition + new Vector3(0, 0.2f, 0));
-                if(controller.StateManager.CurrentStateFrame <= 20)
+                if(controller.StateManager.CurrentStateFrame <= 5)
                 {
                     PhysicsManager.forceMovement = savedForce;
                 }

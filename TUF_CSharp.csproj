@@ -26,7 +26,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -35,7 +35,7 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <NoWarn>0169</NoWarn>
-    <AllowUnsafeBlocks>False</AllowUnsafeBlocks>
+    <AllowUnsafeBlocks>True</AllowUnsafeBlocks>
   </PropertyGroup>
   <PropertyGroup>
     <NoConfig>true</NoConfig>
@@ -82,27 +82,16 @@
     <Compile Include="Assets\_Project\Scripts\Combat\Boxes\DetectionBox.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Boxes\Hitbox.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Boxes\Hurtbox.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\Bullet.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPattern.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\AddRotationBA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\AddSpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\ApplySpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\ClearBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\CreateBulletBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\CreateBulletPatternBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\LoopBulletPatternAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetAngularSpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetLifetimeBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetLocalAngularSpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetLocalSpeedBPA.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\SetSpeedBulletPatternAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternActions\WaitBulletPatternAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternData.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternGroup.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternManager.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Bullets\BulletPatternManagerSettings.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\DamageReactions.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\DanmakuConfig.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\DanmakuManager.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\BulletSet.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\Fireable.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\FireableExtensions.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\IFireable.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\Shapes\Circle.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\Shapes\Line.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Modifiers\IDanmakuModifier.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\EntityTeams.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Events\AttackEventDefinition.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Events\ClampGravityEvent.cs" />
@@ -210,6 +199,8 @@
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityWakeup.cs" />
     <Compile Include="Assets\_Project\Scripts\FoldAttribute.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\Helpers.cs" />
+    <Compile Include="Assets\_Project\Scripts\Helpers\Range.cs" />
+    <Compile Include="Assets\_Project\Scripts\Helpers\Range3.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\ReadOnlyAttribute.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\TriggerDetector.cs" />
     <Compile Include="Assets\_Project\Scripts\Input\ControllerType.cs" />

@@ -103,7 +103,7 @@ namespace TUF.Entities
         /// <param name="max">The max magnitude of our movement force.</param>
         /// <param name="decel">How much the entity decelerates when moving faster than the max magnitude.
         /// 1.0 = doesn't decelerate, 0.0 = force set to 0.</param>
-        public virtual void ApplyMovement(float accel, float max, float decel)
+        public virtual void ApplyMovement(float accel, float max, float decel, bool decelAtNeutral = true)
         {
             Vector2 movement = Controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             // Player moving in a direction.
@@ -123,6 +123,10 @@ namespace TUF.Entities
             }
             else
             {
+                if (!decelAtNeutral)
+                {
+                    return;
+                }
                 // Stick at neutral, decelerate.
                 forceMovement *= decel;
                 if(forceMovement.magnitude <= InputConstants.movementSigma)

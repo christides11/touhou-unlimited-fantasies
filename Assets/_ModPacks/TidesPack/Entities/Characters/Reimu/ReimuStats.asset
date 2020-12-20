@@ -38,7 +38,7 @@ MonoBehaviour:
   airDeceleration: 0.8
   maxAirSpeed: 12
   gravity: 0.7
-  maxFallSpeed: 15
+  maxFallSpeed: 19
   wallClingInitFrictionY: 0.7
   wallClingInitFrictionXZ: 100
   wallClingFrictionXZ: 4
@@ -86,8 +86,9 @@ MonoBehaviour:
   slideForceTransitionTime: 2
   crouchHeight: 1
   ledgeJumpMaxSpeed: 30
-  ledgeJumpYForce: 10
+  ledgeJumpYForce: 11
   ledgeJumpMoveForce: 10
+  ledgeJumpAccel: 0.5
   teleportNoTargetForwardDist: 5
   teleportNoTargetUpDist: 5
   teleportTargetForwardDist: 1

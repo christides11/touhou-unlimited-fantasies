@@ -1,6 +1,5 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using TUF.Combat.Bullets;
 using UnityEngine;
 
 namespace TUF.Combat
@@ -15,7 +14,6 @@ namespace TUF.Combat
         public List<Vector2Int> specialCancelFrames = new List<Vector2Int>();
         #endregion
 
-        public List<BulletPatternGroup> bulletGroups = new List<BulletPatternGroup>();
         public List<AttackFaceLockonWindow> faceLockonTargetWindows = new List<AttackFaceLockonWindow>();
     }
 }

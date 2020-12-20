@@ -27,6 +27,12 @@ namespace TUF.Core
             return Mathf.Atan2(v0.y, v0.x) * (180.0f / Mathf.PI);
         }
 
+        // https://answers.unity.com/questions/532297/rotate-a-vector-around-a-certain-point.html
+        public static Vector3 RotatePointAroundPivot(Vector3 point, Vector3 pivot, Vector3 angles)
+        {
+            return Quaternion.Euler(angles) * (point - pivot) + pivot;
+        }
+
         public static Color ChangeHue(this Color co, float change)
         {
             float h, s, v;

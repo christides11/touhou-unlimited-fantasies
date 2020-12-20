@@ -18,9 +18,9 @@ MonoBehaviour:
     openFolderPostBuild: 1
   _productParameters:
     buildCounter: 0
-    lastGeneratedVersion: 0.0.1
-    version: 0.0.1
-    autoGenerate: 0
+    lastGeneratedVersion: 2020.12.12.2
+    version: $YEAR.$MONTH.$DAY.$BUILD
+    autoGenerate: 1
   _releaseTypeList:
     releaseTypes:
     - typeName: Nightly
@@ -90,6 +90,7 @@ MonoBehaviour:
     - {fileID: 5306991047793594157}
     - {fileID: 7787600329505294563}
     - {fileID: 100828190524961538}
+    - {fileID: 3412557289686134479}
 --- !u!114 &100828190524961538
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -113,6 +114,31 @@ MonoBehaviour:
   outputPath: bin/$YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION/Modding/info.txt
   recursiveSearch: 1
   operation: 1
+--- !u!114 &3412557289686134479
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97d88f7d353534a4fbdeb11196057db7, type: 3}
+  m_Name: UploadItch
+  m_EditorClassIdentifier: 
+  actionType: 1
+  actionName: UploadItch
+  note: 
+  actionEnabled: 1
+  filter:
+    condition: 0
+    clauses: []
+  pathToButlerExe: D:\butler-windows-amd64\butler.exe
+  nameOfItchUser: christides
+  nameOfItchGame: touhou-unlimited-fantasies
+  useGeneratedBuildVersion: 1
+  showUploadProgress: 1
+  itchChannelOverride: 
 --- !u!114 &5306991047793594157
 MonoBehaviour:
   m_ObjectHideFlags: 0

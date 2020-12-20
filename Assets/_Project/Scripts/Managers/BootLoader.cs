@@ -43,10 +43,7 @@ namespace TUF.Core
 
         private void Awake()
         {
-            if(targetFramerate > 0)
-            {
-                Application.targetFrameRate = targetFramerate;
-            }
+            Application.targetFrameRate = targetFramerate;
         }
 
         async void Start()
