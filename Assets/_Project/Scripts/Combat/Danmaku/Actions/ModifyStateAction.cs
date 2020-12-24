@@ -10,29 +10,22 @@ namespace TUF.Combat.Danmaku
     [System.Serializable]
     public class ModifyStateAction : DanmakuAction
     {
-        public int bulletSetIndex = -1;
+        public List<string> bulletSets = new List<string>();
 
         public DanmakuConfig config;
 
         public override void Tick(DanmakuManager danmakuManager, DanmakuSequenceInfo info)
         {
-            int min = bulletSetIndex;
-            int max = bulletSetIndex + 1;
-            if (bulletSetIndex == -1)
+            foreach (string d in bulletSets)
             {
-                min = 0;
-                max = info.bulletSets.Count;
-            }
-
-            for (int i = min; i < max; i++)
-            {
-                for (int j = 0; j < info.bulletSets[i].bulletsConfig.Count; j++) {
-                    DanmakuState ds = info.bulletSets[i].bulletsConfig[j];
+                string s = info.id + d;
+                for (int j = 0; j < info.bulletSets[s].bulletsConfig.Count; j++) {
+                    DanmakuState ds = info.bulletSets[s].bulletsConfig[j];
                     ds.speed += config.speed.GetValue();
                     ds.angularSpeed += config.angularSpeed.GetValue();
                     ds.rotation += config.rotation;
-                    info.bulletSets[i].bullets[j].transform.eulerAngles += config.rotation;
-                    info.bulletSets[i].bulletsConfig[j] = ds;
+                    info.bulletSets[s].bullets[j].transform.eulerAngles += config.rotation;
+                    info.bulletSets[s].bulletsConfig[j] = ds;
                 }
             }
 

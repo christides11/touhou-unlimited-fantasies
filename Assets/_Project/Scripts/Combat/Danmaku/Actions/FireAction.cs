@@ -18,11 +18,13 @@ namespace TUF.Combat.Danmaku
         public Vector3 positionOffset;
         public Vector3 rotationOffset;
 
+        public string id;
+
         public override void Tick(DanmakuManager danmakuManager, DanmakuSequenceInfo info)
         {
             if(info.bulletSets.Count <= info.currentSet)
             {
-                info.bulletSets.Add(new FireableInfo());
+                info.bulletSets.Add(info.id + id, new FireableInfo());
             }
 
             DanmakuConfig dc = info.baseConfig;
@@ -33,7 +35,7 @@ namespace TUF.Combat.Danmaku
             }
             dc.position += positionOffset;
             dc.rotation += rotationOffset;
-            fireable.Fire(info.bulletSets[info.currentSet], dc);
+            fireable.Fire(info.bulletSets[info.id + id], dc);
 
             info.NextAction();
         }

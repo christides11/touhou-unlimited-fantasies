@@ -18,17 +18,9 @@ namespace TUF.Combat.Danmaku
             }
         }
 
-        public virtual void Fire(DanmakuSequence sequence, DanmakuConfig config)
+        public virtual void Fire(DanmakuSequence sequence, DanmakuConfig config, string id = "")
         {
-            sequences.Add(new DanmakuSequenceInfo(sequence, config));
+            sequences.Add(new DanmakuSequenceInfo(sequence, config, id));
         }
-    }
-
-    [System.Serializable]
-    public class FireableInfo
-    {
-        public List<GameObject> bullets = new List<GameObject>();
-        public List<DanmakuState> bulletsConfig = new List<DanmakuState>();
-        public List<DanmakuModifier> modifiers = new List<DanmakuModifier>();
     }
 }

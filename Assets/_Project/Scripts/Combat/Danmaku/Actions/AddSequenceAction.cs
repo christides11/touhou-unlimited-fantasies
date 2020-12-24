@@ -12,6 +12,8 @@ namespace TUF.Combat.Danmaku
     {
         public DanmakuSequence sequence;
 
+        public string id;
+
         public Vector3 positionOffset;
         public Vector3 rotationOffset;
 
@@ -20,7 +22,7 @@ namespace TUF.Combat.Danmaku
             DanmakuConfig dc = info.baseConfig;
             dc.position += positionOffset;
             dc.rotation += rotationOffset;
-            danmakuManager.Fire(sequence, dc);
+            danmakuManager.Fire(sequence, dc, id);
             info.NextAction();
         }
 

@@ -9,16 +9,19 @@ namespace TUF.Combat.Danmaku
     {
         public DanmakuSequence sequence;
         public DanmakuConfig baseConfig;
-        public List<FireableInfo> bulletSets = new List<FireableInfo>();
+        public Dictionary<string, FireableInfo> bulletSets = new Dictionary<string, FireableInfo>();
         public int index;
         public int frame;
 
         public int currentSet = 0;
 
-        public DanmakuSequenceInfo(DanmakuSequence sequence, DanmakuConfig baseConfig)
+        public string id;
+
+        public DanmakuSequenceInfo(DanmakuSequence sequence, DanmakuConfig baseConfig, string id = "")
         {
             this.sequence = sequence;
             this.baseConfig = baseConfig;
+            this.id = id;
         }
 
         public virtual void Tick(DanmakuManager manager)
@@ -35,13 +38,12 @@ namespace TUF.Combat.Danmaku
 
         private void MoveBullets()
         {
-            for (int i = 0; i < bulletSets.Count; i++)
+            foreach (FireableInfo fi in bulletSets.Values)
             {
-                for (int s = 0; s < bulletSets[i].bullets.Count; s++)
+                for (int s = 0; s < fi.bullets.Count; s++)
                 {
-                    FireableInfo fi = bulletSets[i];
                     fi.bullets[s].transform.position +=
-                        bulletSets[i].bullets[s].transform.forward * bulletSets[i].bulletsConfig[s].speed.z;
+                        fi.bullets[s].transform.forward * fi.bulletsConfig[s].speed.z;
 
                     fi.bullets[s].transform.Rotate(fi.bulletsConfig[s].angularSpeed, Space.Self);
                 }
@@ -50,11 +52,11 @@ namespace TUF.Combat.Danmaku
 
         private void TickModifiers()
         {
-            for(int i = 0; i < bulletSets.Count; i++)
+            foreach (FireableInfo fi in bulletSets.Values)
             {
-                for(int s = 0; s < bulletSets[i].modifiers.Count; s++)
+                for (int s = 0; s < fi.modifiers.Count; s++)
                 {
-                    bulletSets[i].modifiers[s].Tick(bulletSets[i]);
+                    fi.modifiers[s].Tick(fi);
                 }
             }
         }

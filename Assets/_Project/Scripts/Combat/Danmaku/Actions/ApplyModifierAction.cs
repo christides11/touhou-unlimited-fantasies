@@ -14,26 +14,19 @@ namespace TUF.Combat.Danmaku
     {
         [System.NonSerialized] protected Dictionary<string, Type> actionTypes = new Dictionary<string, Type>();
 
-        public int bulletSetIndex = -1;
+        public List<string> bulletSets = new List<string>();
 
         [SerializeReference] public DanmakuModifier modifier;
 
         public override void Tick(DanmakuManager danmakuManager, DanmakuSequenceInfo info)
         {
-            int min = bulletSetIndex;
-            int max = bulletSetIndex+1;
-            if(bulletSetIndex == -1)
-            {
-                min = 0;
-                max = info.bulletSets.Count;
-            }
 
-            for(int i = min; i < max; i++)
-            {
+            foreach(string d in bulletSets) {
+                string s = info.id + d;
                 DanmakuModifier dm = (DanmakuModifier)Activator.CreateInstance(modifier.GetType());
                 dm.Copy(modifier);
-                info.bulletSets[i].modifiers.Add(dm);
-                dm.Apply(info.bulletSets[i]);
+                info.bulletSets[s].modifiers.Add(dm);
+                dm.Apply(info.bulletSets[s]);
             }
 
             info.NextAction();

@@ -12,21 +12,14 @@ namespace TUF.Combat.Danmaku
     [System.Serializable]
     public class RemoveModifierAction : DanmakuAction
     {
-        public int bulletSetIndex = -1;
+        public List<string> bulletSets = new List<string>();
 
         public override void Tick(DanmakuManager danmakuManager, DanmakuSequenceInfo info)
         {
-            int min = bulletSetIndex;
-            int max = bulletSetIndex + 1;
-            if (bulletSetIndex == -1)
+            foreach (string d in bulletSets)
             {
-                min = 0;
-                max = info.bulletSets.Count;
-            }
-
-            for (int i = min; i < max; i++)
-            {
-                info.bulletSets[i].modifiers.Clear();
+                string s = info.id + d;
+                info.bulletSets[s].modifiers.Clear();
             }
 
             info.NextAction();

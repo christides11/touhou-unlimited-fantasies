@@ -86,7 +86,6 @@
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Actions\AddSequenceAction.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Actions\ApplyModifierAction.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Actions\DanmakuAction.cs" />
-    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Actions\DanmakuState.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Actions\FireAction.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Actions\ModifyStateAction.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Actions\RemoveModifierAction.cs" />
@@ -95,9 +94,11 @@
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\DanmakuManager.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\DanmakuSequence.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\DanmakuSequenceInfo.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\DanmakuState.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\BulletSet.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\Fireable.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\FireableExtensions.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\FireableInfo.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\Shapes\Circle.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Fireables\Shapes\Line.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Danmaku\Modifiers\DanmakuAcceleration.cs" />

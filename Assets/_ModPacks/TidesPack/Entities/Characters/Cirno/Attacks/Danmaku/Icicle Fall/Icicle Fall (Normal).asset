@@ -14,11 +14,64 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sequence:
   - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  - id: 5
+  - id: 6
+  - id: 7
+  - id: 8
   references:
     version: 1
     00000000:
       type: {class: AddSequenceAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
         sequence: {fileID: 11400000, guid: 4f183ec59bb3aea439bf12b45947e28c, type: 2}
+        id: f-
         positionOffset: {x: 0, y: 0, z: 0}
         rotationOffset: {x: 0, y: -100, z: 0}
+    00000001:
+      type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        waitTime: 28
+    00000002:
+      type: {class: AddSequenceAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        sequence: {fileID: 11400000, guid: 4f183ec59bb3aea439bf12b45947e28c, type: 2}
+        id: t-
+        positionOffset: {x: 0, y: 0, z: 0}
+        rotationOffset: {x: 0, y: -95, z: 0}
+    00000003:
+      type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        waitTime: 28
+    00000004:
+      type: {class: AddSequenceAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        sequence: {fileID: 11400000, guid: 4f183ec59bb3aea439bf12b45947e28c, type: 2}
+        id: three-
+        positionOffset: {x: 0, y: 0, z: 0}
+        rotationOffset: {x: 0, y: -90, z: 0}
+    00000005:
+      type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        waitTime: 28
+    00000006:
+      type: {class: AddSequenceAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        sequence: {fileID: 11400000, guid: 4f183ec59bb3aea439bf12b45947e28c, type: 2}
+        id: four-
+        positionOffset: {x: 0, y: 0, z: 0}
+        rotationOffset: {x: 0, y: -85, z: 0}
+    00000007:
+      type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        waitTime: 28
+    00000008:
+      type: {class: AddSequenceAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        sequence: {fileID: 11400000, guid: 4f183ec59bb3aea439bf12b45947e28c, type: 2}
+        id: five-
+        positionOffset: {x: 0, y: 0, z: 0}
+        rotationOffset: {x: 0, y: -80, z: 0}

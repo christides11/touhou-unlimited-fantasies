@@ -27,20 +27,23 @@ MonoBehaviour:
           id: 5
         positionOffset: {x: 0, y: 0, z: 0}
         rotationOffset: {x: 0, y: 0, z: 0}
+        id: tshot
     00000001:
       type: {class: ApplyModifierAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
-        bulletSetIndex: -1
+        bulletSets:
+        - tshot
         modifier:
           id: 6
     00000002:
       type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
-        waitTime: 40
+        waitTime: 64
     00000003:
       type: {class: ModifyStateAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
-        bulletSetIndex: -1
+        bulletSets:
+        - tshot
         config:
           startPoint: {fileID: 0}
           position: {x: 0, y: 0, z: 0}
@@ -68,7 +71,8 @@ MonoBehaviour:
     00000004:
       type: {class: RemoveModifierAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
-        bulletSetIndex: -1
+        bulletSets:
+        - tshot
     00000005:
       type: {class: Line, ns: TUF.Combat.Danmaku.Fireables, asm: TUF_CSharp}
       data:
