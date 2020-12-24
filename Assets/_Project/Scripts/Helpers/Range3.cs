@@ -30,5 +30,10 @@ namespace TUF.Core
         {
             return new Range3(lhs.x + rhs.x, lhs.y + rhs.y, lhs.z + rhs.z);
         }
+
+        public static Range3 operator *(Range3 lhs, float rhs)
+        {
+            return new Range3(lhs.x * rhs, lhs.y * rhs, lhs.z * rhs);
+        }
     }
 }

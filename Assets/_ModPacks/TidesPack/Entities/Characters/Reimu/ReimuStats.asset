@@ -34,7 +34,7 @@ MonoBehaviour:
   airJumpHorizontalVelo: 12
   airRotationSpeed: 0.25
   airFriction: 0.8
-  airAcceleration: 3
+  airAcceleration: 2
   airDeceleration: 0.8
   maxAirSpeed: 12
   gravity: 0.7

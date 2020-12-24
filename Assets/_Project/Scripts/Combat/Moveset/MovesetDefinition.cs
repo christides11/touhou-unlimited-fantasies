@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace TUF.Combat
 {
-	[CreateAssetMenu(fileName = "MovesetDefinition", menuName = "Combat/Moveset")]
+	[CreateAssetMenu(fileName = "MovesetDefinition", menuName = "TUF/Combat/MovesetDefinition")]
 	public class MovesetDefinition : CAF.Combat.MovesetDefinition
 	{
 		public List<MovesetAttackNode> floatingAttackCommandNormals = new List<MovesetAttackNode>();

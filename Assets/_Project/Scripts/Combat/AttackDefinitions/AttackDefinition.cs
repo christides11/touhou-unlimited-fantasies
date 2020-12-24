@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TUF.Combat
 {
-    [CreateAssetMenu(fileName = "AttackDefinition", menuName = "Touhou/Combat/Attack Definition")]
+    [CreateAssetMenu(fileName = "AttackDefinition", menuName = "TUF/Combat/Attack Definition")]
     public class AttackDefinition : CAF.Combat.AttackDefinition
     {
         #region Cancels

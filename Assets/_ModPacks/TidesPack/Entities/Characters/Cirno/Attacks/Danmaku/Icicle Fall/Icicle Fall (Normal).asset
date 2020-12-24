@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041a6372876de0641869bc7ca64e5f1d, type: 3}
+  m_Name: Icicle Fall (Normal)
+  m_EditorClassIdentifier: 
+  sequence:
+  - id: 0
+  references:
+    version: 1
+    00000000:
+      type: {class: AddSequenceAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        sequence: {fileID: 11400000, guid: 4f183ec59bb3aea439bf12b45947e28c, type: 2}
+        positionOffset: {x: 0, y: 0, z: 0}
+        rotationOffset: {x: 0, y: -100, z: 0}

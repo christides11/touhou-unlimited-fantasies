@@ -85,6 +85,20 @@ public struct Range
         }
     }
 
+    public void Set(float a, float b)
+    {
+        if (a > b)
+        {
+            _min = b;
+            _max = a;
+        }
+        else
+        {
+            _max = b;
+            _min = a;
+        }
+    }
+
     /// <summary>
     /// Creates a new Range expanded from the current range.
     /// </summary>

@@ -1,6 +1,9 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace TUF.Combat.Danmaku
 {
@@ -9,25 +12,11 @@ namespace TUF.Combat.Danmaku
     {
         public GameObject bulletPrefab;
 
-        public List<GameObject> bullets = new List<GameObject>();
-        public List<DanmakuConfig> bulletsConfig = new List<DanmakuConfig>();
-
-        public List<IDanmakuModifier> modifiers = new List<IDanmakuModifier>();
-
-        public virtual void Update()
+        public override void Fire(FireableInfo fireableInfo, DanmakuConfig config)
         {
-            for (int i = 0; i < bullets.Count; i++)
-            {
-                bullets[i].transform.position += bullets[i].transform.forward 
-                    * bulletsConfig[i].speed.z.GetValue();
-            }
-        }
-
-        public override void Fire(DanmakuConfig config)
-        {
-            GameObject go = GameObject.Instantiate(bulletPrefab, config.position, Quaternion.identity);
-            bullets.Add(go);
-            bulletsConfig.Add(config);
+            GameObject go = GameObject.Instantiate(bulletPrefab, config.position, Quaternion.Euler(config.rotation));
+            fireableInfo.bullets.Add(go);
+            fireableInfo.bulletsConfig.Add(config.CreateState());
         }
 
         public virtual BulletSet AddModifier()
@@ -43,6 +32,13 @@ namespace TUF.Combat.Danmaku
         public virtual void ClearModifiers()
         {
 
+        }
+
+        public override void DrawInspector()
+        {
+#if UNITY_EDITOR
+            bulletPrefab = (GameObject)EditorGUILayout.ObjectField("Bullet Prefab", bulletPrefab, typeof(GameObject), false);
+#endif
         }
     }
 }

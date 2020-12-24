@@ -5,22 +5,40 @@ using UnityEngine;
 
 namespace TUF.Combat.Danmaku
 {
-    public class Fireable : IFireable
+    [System.Serializable]
+    public class Fireable
     {
-        public IFireable Child { get; set; }
+        public Fireable Child
+        {
+            get
+            {
+                return child;
+            }
+            set
+            {
+                child = value;
+            }
+        }
 
-        public virtual void Fire(DanmakuConfig config)
+        [SerializeReference] protected Fireable child;
+
+        public virtual void DrawInspector()
         {
 
         }
 
-        public virtual void SubFire(DanmakuConfig config)
+        public virtual void Fire(FireableInfo fireableInfo, DanmakuConfig config)
+        {
+
+        }
+
+        public virtual void SubFire(FireableInfo fireableInfo, DanmakuConfig config)
         {
             if(Child == null)
             {
                 return;
             }
-            Child.Fire(config);
+            Child.Fire(fireableInfo, config);
         }
     }
 }

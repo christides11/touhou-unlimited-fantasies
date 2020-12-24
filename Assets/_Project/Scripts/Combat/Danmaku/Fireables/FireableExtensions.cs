@@ -18,7 +18,7 @@ namespace TUF.Combat.Danmaku
             return last;
         }
 
-        public static Fireable Of(this Fireable fireable, IFireable subemitter)
+        public static Fireable Of(this Fireable fireable, Fireable subemitter)
         {
             if (fireable == null)
             {

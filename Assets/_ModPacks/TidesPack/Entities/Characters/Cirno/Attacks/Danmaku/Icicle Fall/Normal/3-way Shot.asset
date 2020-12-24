@@ -1,0 +1,102 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 041a6372876de0641869bc7ca64e5f1d, type: 3}
+  m_Name: 3-way Shot
+  m_EditorClassIdentifier: 
+  sequence:
+  - id: 0
+  - id: 1
+  - id: 2
+  - id: 3
+  - id: 4
+  references:
+    version: 1
+    00000000:
+      type: {class: FireAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        fireable:
+          id: 5
+        positionOffset: {x: 0, y: 0, z: 0}
+        rotationOffset: {x: 0, y: 0, z: 0}
+    00000001:
+      type: {class: ApplyModifierAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        bulletSetIndex: -1
+        modifier:
+          id: 6
+    00000002:
+      type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        waitTime: 40
+    00000003:
+      type: {class: ModifyStateAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        bulletSetIndex: -1
+        config:
+          startPoint: {fileID: 0}
+          position: {x: 0, y: 0, z: 0}
+          rotation: {x: 0, y: 90, z: 0}
+          speed:
+            x:
+              _min: 0
+              _max: 0
+            y:
+              _min: 0
+              _max: 0
+            z:
+              _min: 0.5
+              _max: 0.5
+          angularSpeed:
+            x:
+              _min: 0
+              _max: 0
+            y:
+              _min: 0
+              _max: 0
+            z:
+              _min: 0
+              _max: 0
+    00000004:
+      type: {class: RemoveModifierAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        bulletSetIndex: -1
+    00000005:
+      type: {class: Line, ns: TUF.Combat.Danmaku.Fireables, asm: TUF_CSharp}
+      data:
+        child:
+          id: 7
+        count:
+          _min: 3
+          _max: 3
+        deltaSpeed:
+          x:
+            _min: 0
+            _max: 0
+          y:
+            _min: 0
+            _max: 0
+          z:
+            _min: 0.75
+            _max: 0.75
+    00000006:
+      type: {class: DanmakuDampen, ns: TUF.Combat.Danmaku.Modifiers, asm: TUF_CSharp}
+      data:
+        damp: 0.04
+    00000007:
+      type: {class: BulletSet, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        child:
+          id: 8
+        bulletPrefab: {fileID: 1395883990408324593, guid: 3a36d441fc5e59e4e81c4a62b57b002c,
+          type: 3}
+    00000008:
+      type: {class: , ns: , asm: }

@@ -70,5 +70,20 @@ namespace TUF.Core
                 await gameManager.LoadSceneAsync(defaultScene);
             }
         }
+
+        private void Update()
+        {
+            if (Input.GetKeyDown(KeyCode.F5))
+            {
+                if(Application.targetFrameRate == 60)
+                {
+                    Application.targetFrameRate = -1;
+                }
+                else
+                {
+                    Application.targetFrameRate = 60;
+                }
+            }
+        }
     }
 }
