@@ -1,6 +1,55 @@
 ### YamlMime:XRefMap
 sorted: true
 references:
+- uid: TidesPack
+  name: TidesPack
+  href: api/TidesPack.html
+  commentId: N:TidesPack
+  fullName: TidesPack
+  nameWithType: TidesPack
+- uid: TidesPack.BulletTester
+  name: BulletTester
+  href: api/TidesPack.BulletTester.html
+  commentId: T:TidesPack.BulletTester
+  fullName: TidesPack.BulletTester
+  nameWithType: BulletTester
+- uid: TidesPack.BulletTester.bb
+  name: bb
+  href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_bb
+  commentId: F:TidesPack.BulletTester.bb
+  fullName: TidesPack.BulletTester.bb
+  nameWithType: BulletTester.bb
+- uid: TidesPack.BulletTester.config
+  name: config
+  href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_config
+  commentId: F:TidesPack.BulletTester.config
+  fullName: TidesPack.BulletTester.config
+  nameWithType: BulletTester.config
+- uid: TidesPack.BulletTester.danmakuManager
+  name: danmakuManager
+  href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_danmakuManager
+  commentId: F:TidesPack.BulletTester.danmakuManager
+  fullName: TidesPack.BulletTester.danmakuManager
+  nameWithType: BulletTester.danmakuManager
+- uid: TidesPack.BulletTester.sequence
+  name: sequence
+  href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_sequence
+  commentId: F:TidesPack.BulletTester.sequence
+  fullName: TidesPack.BulletTester.sequence
+  nameWithType: BulletTester.sequence
+- uid: TidesPack.BulletTester.SimUpdate
+  name: SimUpdate()
+  href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_SimUpdate
+  commentId: M:TidesPack.BulletTester.SimUpdate
+  fullName: TidesPack.BulletTester.SimUpdate()
+  nameWithType: BulletTester.SimUpdate()
+- uid: TidesPack.BulletTester.SimUpdate*
+  name: SimUpdate
+  href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_SimUpdate_
+  commentId: Overload:TidesPack.BulletTester.SimUpdate
+  isSpec: "True"
+  fullName: TidesPack.BulletTester.SimUpdate
+  nameWithType: BulletTester.SimUpdate
 - uid: TidesPack.Characters.Reimu
   name: TidesPack.Characters.Reimu
   href: api/TidesPack.Characters.Reimu.html
@@ -26,12 +75,12 @@ references:
   isSpec: "True"
   fullName: TidesPack.Characters.Reimu.ReimuManager.SetupDefaultStates
   nameWithType: ReimuManager.SetupDefaultStates
-- uid: TidesPack.Characters.Reimu.ReimuManager.SimUpdate(System.Single)
-  name: SimUpdate(Single)
-  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_SimUpdate_System_Single_
-  commentId: M:TidesPack.Characters.Reimu.ReimuManager.SimUpdate(System.Single)
-  fullName: TidesPack.Characters.Reimu.ReimuManager.SimUpdate(System.Single)
-  nameWithType: ReimuManager.SimUpdate(Single)
+- uid: TidesPack.Characters.Reimu.ReimuManager.SimUpdate
+  name: SimUpdate()
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_SimUpdate
+  commentId: M:TidesPack.Characters.Reimu.ReimuManager.SimUpdate
+  fullName: TidesPack.Characters.Reimu.ReimuManager.SimUpdate()
+  nameWithType: ReimuManager.SimUpdate()
 - uid: TidesPack.Characters.Reimu.ReimuManager.SimUpdate*
   name: SimUpdate
   href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_SimUpdate_
@@ -186,12 +235,6 @@ references:
   commentId: F:TUF.Combat.AttackDefinition.bulletCancelFrames
   fullName: TUF.Combat.AttackDefinition.bulletCancelFrames
   nameWithType: AttackDefinition.bulletCancelFrames
-- uid: TUF.Combat.AttackDefinition.bulletGroups
-  name: bulletGroups
-  href: api/TUF.Combat.AttackDefinition.html#TUF_Combat_AttackDefinition_bulletGroups
-  commentId: F:TUF.Combat.AttackDefinition.bulletGroups
-  fullName: TUF.Combat.AttackDefinition.bulletGroups
-  nameWithType: AttackDefinition.bulletGroups
 - uid: TUF.Combat.AttackDefinition.dashCancelableFrames
   name: dashCancelableFrames
   href: api/TUF.Combat.AttackDefinition.html#TUF_Combat_AttackDefinition_dashCancelableFrames
@@ -340,904 +383,1067 @@ references:
   commentId: F:TUF.Combat.BoxGroup.hitSound
   fullName: TUF.Combat.BoxGroup.hitSound
   nameWithType: BoxGroup.hitSound
-- uid: TUF.Combat.Bullets
-  name: TUF.Combat.Bullets
-  href: api/TUF.Combat.Bullets.html
-  commentId: N:TUF.Combat.Bullets
-  fullName: TUF.Combat.Bullets
-  nameWithType: TUF.Combat.Bullets
-- uid: TUF.Combat.Bullets.AddRotationBPA
-  name: AddRotationBPA
-  href: api/TUF.Combat.Bullets.AddRotationBPA.html
-  commentId: T:TUF.Combat.Bullets.AddRotationBPA
-  fullName: TUF.Combat.Bullets.AddRotationBPA
-  nameWithType: AddRotationBPA
-- uid: TUF.Combat.Bullets.AddRotationBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.AddRotationBPA.html#TUF_Combat_Bullets_AddRotationBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.AddRotationBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.AddRotationBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: AddRotationBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.AddRotationBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.AddRotationBPA.html#TUF_Combat_Bullets_AddRotationBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.AddRotationBPA.Process
+- uid: TUF.Combat.Danmaku
+  name: TUF.Combat.Danmaku
+  href: api/TUF.Combat.Danmaku.html
+  commentId: N:TUF.Combat.Danmaku
+  fullName: TUF.Combat.Danmaku
+  nameWithType: TUF.Combat.Danmaku
+- uid: TUF.Combat.Danmaku.AddSequenceAction
+  name: AddSequenceAction
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html
+  commentId: T:TUF.Combat.Danmaku.AddSequenceAction
+  fullName: TUF.Combat.Danmaku.AddSequenceAction
+  nameWithType: AddSequenceAction
+- uid: TUF.Combat.Danmaku.AddSequenceAction.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.AddSequenceAction.DrawInspector
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.DrawInspector()
+  nameWithType: AddSequenceAction.DrawInspector()
+- uid: TUF.Combat.Danmaku.AddSequenceAction.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.AddSequenceAction.DrawInspector
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.AddRotationBPA.Process
-  nameWithType: AddRotationBPA.Process
-- uid: TUF.Combat.Bullets.AddRotationBPA.rotation
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.DrawInspector
+  nameWithType: AddSequenceAction.DrawInspector
+- uid: TUF.Combat.Danmaku.AddSequenceAction.id
+  name: id
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_id
+  commentId: F:TUF.Combat.Danmaku.AddSequenceAction.id
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.id
+  nameWithType: AddSequenceAction.id
+- uid: TUF.Combat.Danmaku.AddSequenceAction.positionOffset
+  name: positionOffset
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_positionOffset
+  commentId: F:TUF.Combat.Danmaku.AddSequenceAction.positionOffset
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.positionOffset
+  nameWithType: AddSequenceAction.positionOffset
+- uid: TUF.Combat.Danmaku.AddSequenceAction.rotationOffset
+  name: rotationOffset
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_rotationOffset
+  commentId: F:TUF.Combat.Danmaku.AddSequenceAction.rotationOffset
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.rotationOffset
+  nameWithType: AddSequenceAction.rotationOffset
+- uid: TUF.Combat.Danmaku.AddSequenceAction.sequence
+  name: sequence
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_sequence
+  commentId: F:TUF.Combat.Danmaku.AddSequenceAction.sequence
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.sequence
+  nameWithType: AddSequenceAction.sequence
+- uid: TUF.Combat.Danmaku.AddSequenceAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  name: Tick(DanmakuManager, DanmakuSequenceInfo)
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_Tick_TUF_Combat_Danmaku_DanmakuManager_TUF_Combat_Danmaku_DanmakuSequenceInfo_
+  commentId: M:TUF.Combat.Danmaku.AddSequenceAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.Tick(TUF.Combat.Danmaku.DanmakuManager, TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  nameWithType: AddSequenceAction.Tick(DanmakuManager, DanmakuSequenceInfo)
+- uid: TUF.Combat.Danmaku.AddSequenceAction.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.AddSequenceAction.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.Tick
+  nameWithType: AddSequenceAction.Tick
+- uid: TUF.Combat.Danmaku.ApplyModifierAction
+  name: ApplyModifierAction
+  href: api/TUF.Combat.Danmaku.ApplyModifierAction.html
+  commentId: T:TUF.Combat.Danmaku.ApplyModifierAction
+  fullName: TUF.Combat.Danmaku.ApplyModifierAction
+  nameWithType: ApplyModifierAction
+- uid: TUF.Combat.Danmaku.ApplyModifierAction.actionTypes
+  name: actionTypes
+  href: api/TUF.Combat.Danmaku.ApplyModifierAction.html#TUF_Combat_Danmaku_ApplyModifierAction_actionTypes
+  commentId: F:TUF.Combat.Danmaku.ApplyModifierAction.actionTypes
+  fullName: TUF.Combat.Danmaku.ApplyModifierAction.actionTypes
+  nameWithType: ApplyModifierAction.actionTypes
+- uid: TUF.Combat.Danmaku.ApplyModifierAction.bulletSets
+  name: bulletSets
+  href: api/TUF.Combat.Danmaku.ApplyModifierAction.html#TUF_Combat_Danmaku_ApplyModifierAction_bulletSets
+  commentId: F:TUF.Combat.Danmaku.ApplyModifierAction.bulletSets
+  fullName: TUF.Combat.Danmaku.ApplyModifierAction.bulletSets
+  nameWithType: ApplyModifierAction.bulletSets
+- uid: TUF.Combat.Danmaku.ApplyModifierAction.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.ApplyModifierAction.html#TUF_Combat_Danmaku_ApplyModifierAction_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.ApplyModifierAction.DrawInspector
+  fullName: TUF.Combat.Danmaku.ApplyModifierAction.DrawInspector()
+  nameWithType: ApplyModifierAction.DrawInspector()
+- uid: TUF.Combat.Danmaku.ApplyModifierAction.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.ApplyModifierAction.html#TUF_Combat_Danmaku_ApplyModifierAction_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.ApplyModifierAction.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.ApplyModifierAction.DrawInspector
+  nameWithType: ApplyModifierAction.DrawInspector
+- uid: TUF.Combat.Danmaku.ApplyModifierAction.modifier
+  name: modifier
+  href: api/TUF.Combat.Danmaku.ApplyModifierAction.html#TUF_Combat_Danmaku_ApplyModifierAction_modifier
+  commentId: F:TUF.Combat.Danmaku.ApplyModifierAction.modifier
+  fullName: TUF.Combat.Danmaku.ApplyModifierAction.modifier
+  nameWithType: ApplyModifierAction.modifier
+- uid: TUF.Combat.Danmaku.ApplyModifierAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  name: Tick(DanmakuManager, DanmakuSequenceInfo)
+  href: api/TUF.Combat.Danmaku.ApplyModifierAction.html#TUF_Combat_Danmaku_ApplyModifierAction_Tick_TUF_Combat_Danmaku_DanmakuManager_TUF_Combat_Danmaku_DanmakuSequenceInfo_
+  commentId: M:TUF.Combat.Danmaku.ApplyModifierAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  fullName: TUF.Combat.Danmaku.ApplyModifierAction.Tick(TUF.Combat.Danmaku.DanmakuManager, TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  nameWithType: ApplyModifierAction.Tick(DanmakuManager, DanmakuSequenceInfo)
+- uid: TUF.Combat.Danmaku.ApplyModifierAction.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.ApplyModifierAction.html#TUF_Combat_Danmaku_ApplyModifierAction_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.ApplyModifierAction.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.ApplyModifierAction.Tick
+  nameWithType: ApplyModifierAction.Tick
+- uid: TUF.Combat.Danmaku.BulletSet
+  name: BulletSet
+  href: api/TUF.Combat.Danmaku.BulletSet.html
+  commentId: T:TUF.Combat.Danmaku.BulletSet
+  fullName: TUF.Combat.Danmaku.BulletSet
+  nameWithType: BulletSet
+- uid: TUF.Combat.Danmaku.BulletSet.AddModifier
+  name: AddModifier()
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_AddModifier
+  commentId: M:TUF.Combat.Danmaku.BulletSet.AddModifier
+  fullName: TUF.Combat.Danmaku.BulletSet.AddModifier()
+  nameWithType: BulletSet.AddModifier()
+- uid: TUF.Combat.Danmaku.BulletSet.AddModifier*
+  name: AddModifier
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_AddModifier_
+  commentId: Overload:TUF.Combat.Danmaku.BulletSet.AddModifier
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.BulletSet.AddModifier
+  nameWithType: BulletSet.AddModifier
+- uid: TUF.Combat.Danmaku.BulletSet.bulletPrefab
+  name: bulletPrefab
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_bulletPrefab
+  commentId: F:TUF.Combat.Danmaku.BulletSet.bulletPrefab
+  fullName: TUF.Combat.Danmaku.BulletSet.bulletPrefab
+  nameWithType: BulletSet.bulletPrefab
+- uid: TUF.Combat.Danmaku.BulletSet.ClearModifiers
+  name: ClearModifiers()
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_ClearModifiers
+  commentId: M:TUF.Combat.Danmaku.BulletSet.ClearModifiers
+  fullName: TUF.Combat.Danmaku.BulletSet.ClearModifiers()
+  nameWithType: BulletSet.ClearModifiers()
+- uid: TUF.Combat.Danmaku.BulletSet.ClearModifiers*
+  name: ClearModifiers
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_ClearModifiers_
+  commentId: Overload:TUF.Combat.Danmaku.BulletSet.ClearModifiers
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.BulletSet.ClearModifiers
+  nameWithType: BulletSet.ClearModifiers
+- uid: TUF.Combat.Danmaku.BulletSet.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.BulletSet.DrawInspector
+  fullName: TUF.Combat.Danmaku.BulletSet.DrawInspector()
+  nameWithType: BulletSet.DrawInspector()
+- uid: TUF.Combat.Danmaku.BulletSet.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.BulletSet.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.BulletSet.DrawInspector
+  nameWithType: BulletSet.DrawInspector
+- uid: TUF.Combat.Danmaku.BulletSet.Fire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  name: Fire(FireableInfo, DanmakuConfig)
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_Fire_TUF_Combat_Danmaku_FireableInfo_TUF_Combat_Danmaku_DanmakuConfig_
+  commentId: M:TUF.Combat.Danmaku.BulletSet.Fire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  fullName: TUF.Combat.Danmaku.BulletSet.Fire(TUF.Combat.Danmaku.FireableInfo, TUF.Combat.Danmaku.DanmakuConfig)
+  nameWithType: BulletSet.Fire(FireableInfo, DanmakuConfig)
+- uid: TUF.Combat.Danmaku.BulletSet.Fire*
+  name: Fire
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_Fire_
+  commentId: Overload:TUF.Combat.Danmaku.BulletSet.Fire
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.BulletSet.Fire
+  nameWithType: BulletSet.Fire
+- uid: TUF.Combat.Danmaku.BulletSet.RemoveModifier
+  name: RemoveModifier()
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_RemoveModifier
+  commentId: M:TUF.Combat.Danmaku.BulletSet.RemoveModifier
+  fullName: TUF.Combat.Danmaku.BulletSet.RemoveModifier()
+  nameWithType: BulletSet.RemoveModifier()
+- uid: TUF.Combat.Danmaku.BulletSet.RemoveModifier*
+  name: RemoveModifier
+  href: api/TUF.Combat.Danmaku.BulletSet.html#TUF_Combat_Danmaku_BulletSet_RemoveModifier_
+  commentId: Overload:TUF.Combat.Danmaku.BulletSet.RemoveModifier
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.BulletSet.RemoveModifier
+  nameWithType: BulletSet.RemoveModifier
+- uid: TUF.Combat.Danmaku.DanmakuAction
+  name: DanmakuAction
+  href: api/TUF.Combat.Danmaku.DanmakuAction.html
+  commentId: T:TUF.Combat.Danmaku.DanmakuAction
+  fullName: TUF.Combat.Danmaku.DanmakuAction
+  nameWithType: DanmakuAction
+- uid: TUF.Combat.Danmaku.DanmakuAction.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.DanmakuAction.html#TUF_Combat_Danmaku_DanmakuAction_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.DanmakuAction.DrawInspector
+  fullName: TUF.Combat.Danmaku.DanmakuAction.DrawInspector()
+  nameWithType: DanmakuAction.DrawInspector()
+- uid: TUF.Combat.Danmaku.DanmakuAction.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.DanmakuAction.html#TUF_Combat_Danmaku_DanmakuAction_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuAction.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.DanmakuAction.DrawInspector
+  nameWithType: DanmakuAction.DrawInspector
+- uid: TUF.Combat.Danmaku.DanmakuAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  name: Tick(DanmakuManager, DanmakuSequenceInfo)
+  href: api/TUF.Combat.Danmaku.DanmakuAction.html#TUF_Combat_Danmaku_DanmakuAction_Tick_TUF_Combat_Danmaku_DanmakuManager_TUF_Combat_Danmaku_DanmakuSequenceInfo_
+  commentId: M:TUF.Combat.Danmaku.DanmakuAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  fullName: TUF.Combat.Danmaku.DanmakuAction.Tick(TUF.Combat.Danmaku.DanmakuManager, TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  nameWithType: DanmakuAction.Tick(DanmakuManager, DanmakuSequenceInfo)
+- uid: TUF.Combat.Danmaku.DanmakuAction.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.DanmakuAction.html#TUF_Combat_Danmaku_DanmakuAction_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuAction.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.DanmakuAction.Tick
+  nameWithType: DanmakuAction.Tick
+- uid: TUF.Combat.Danmaku.DanmakuConfig
+  name: DanmakuConfig
+  href: api/TUF.Combat.Danmaku.DanmakuConfig.html
+  commentId: T:TUF.Combat.Danmaku.DanmakuConfig
+  fullName: TUF.Combat.Danmaku.DanmakuConfig
+  nameWithType: DanmakuConfig
+- uid: TUF.Combat.Danmaku.DanmakuConfig.angularSpeed
+  name: angularSpeed
+  href: api/TUF.Combat.Danmaku.DanmakuConfig.html#TUF_Combat_Danmaku_DanmakuConfig_angularSpeed
+  commentId: F:TUF.Combat.Danmaku.DanmakuConfig.angularSpeed
+  fullName: TUF.Combat.Danmaku.DanmakuConfig.angularSpeed
+  nameWithType: DanmakuConfig.angularSpeed
+- uid: TUF.Combat.Danmaku.DanmakuConfig.CreateState
+  name: CreateState()
+  href: api/TUF.Combat.Danmaku.DanmakuConfig.html#TUF_Combat_Danmaku_DanmakuConfig_CreateState
+  commentId: M:TUF.Combat.Danmaku.DanmakuConfig.CreateState
+  fullName: TUF.Combat.Danmaku.DanmakuConfig.CreateState()
+  nameWithType: DanmakuConfig.CreateState()
+- uid: TUF.Combat.Danmaku.DanmakuConfig.CreateState*
+  name: CreateState
+  href: api/TUF.Combat.Danmaku.DanmakuConfig.html#TUF_Combat_Danmaku_DanmakuConfig_CreateState_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuConfig.CreateState
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.DanmakuConfig.CreateState
+  nameWithType: DanmakuConfig.CreateState
+- uid: TUF.Combat.Danmaku.DanmakuConfig.position
+  name: position
+  href: api/TUF.Combat.Danmaku.DanmakuConfig.html#TUF_Combat_Danmaku_DanmakuConfig_position
+  commentId: F:TUF.Combat.Danmaku.DanmakuConfig.position
+  fullName: TUF.Combat.Danmaku.DanmakuConfig.position
+  nameWithType: DanmakuConfig.position
+- uid: TUF.Combat.Danmaku.DanmakuConfig.rotation
   name: rotation
-  href: api/TUF.Combat.Bullets.AddRotationBPA.html#TUF_Combat_Bullets_AddRotationBPA_rotation
-  commentId: F:TUF.Combat.Bullets.AddRotationBPA.rotation
-  fullName: TUF.Combat.Bullets.AddRotationBPA.rotation
-  nameWithType: AddRotationBPA.rotation
-- uid: TUF.Combat.Bullets.AddSpeedBPA
-  name: AddSpeedBPA
-  href: api/TUF.Combat.Bullets.AddSpeedBPA.html
-  commentId: T:TUF.Combat.Bullets.AddSpeedBPA
-  fullName: TUF.Combat.Bullets.AddSpeedBPA
-  nameWithType: AddSpeedBPA
-- uid: TUF.Combat.Bullets.AddSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.AddSpeedBPA.html#TUF_Combat_Bullets_AddSpeedBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.AddSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.AddSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: AddSpeedBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.AddSpeedBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.AddSpeedBPA.html#TUF_Combat_Bullets_AddSpeedBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.AddSpeedBPA.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.AddSpeedBPA.Process
-  nameWithType: AddSpeedBPA.Process
-- uid: TUF.Combat.Bullets.AddSpeedBPA.speed
+  href: api/TUF.Combat.Danmaku.DanmakuConfig.html#TUF_Combat_Danmaku_DanmakuConfig_rotation
+  commentId: F:TUF.Combat.Danmaku.DanmakuConfig.rotation
+  fullName: TUF.Combat.Danmaku.DanmakuConfig.rotation
+  nameWithType: DanmakuConfig.rotation
+- uid: TUF.Combat.Danmaku.DanmakuConfig.speed
   name: speed
-  href: api/TUF.Combat.Bullets.AddSpeedBPA.html#TUF_Combat_Bullets_AddSpeedBPA_speed
-  commentId: F:TUF.Combat.Bullets.AddSpeedBPA.speed
-  fullName: TUF.Combat.Bullets.AddSpeedBPA.speed
-  nameWithType: AddSpeedBPA.speed
-- uid: TUF.Combat.Bullets.ApplySpeedBPA
-  name: ApplySpeedBPA
-  href: api/TUF.Combat.Bullets.ApplySpeedBPA.html
-  commentId: T:TUF.Combat.Bullets.ApplySpeedBPA
-  fullName: TUF.Combat.Bullets.ApplySpeedBPA
-  nameWithType: ApplySpeedBPA
-- uid: TUF.Combat.Bullets.ApplySpeedBPA.angularSpeed
-  name: angularSpeed
-  href: api/TUF.Combat.Bullets.ApplySpeedBPA.html#TUF_Combat_Bullets_ApplySpeedBPA_angularSpeed
-  commentId: F:TUF.Combat.Bullets.ApplySpeedBPA.angularSpeed
-  fullName: TUF.Combat.Bullets.ApplySpeedBPA.angularSpeed
-  nameWithType: ApplySpeedBPA.angularSpeed
-- uid: TUF.Combat.Bullets.ApplySpeedBPA.localAngularSpeed
-  name: localAngularSpeed
-  href: api/TUF.Combat.Bullets.ApplySpeedBPA.html#TUF_Combat_Bullets_ApplySpeedBPA_localAngularSpeed
-  commentId: F:TUF.Combat.Bullets.ApplySpeedBPA.localAngularSpeed
-  fullName: TUF.Combat.Bullets.ApplySpeedBPA.localAngularSpeed
-  nameWithType: ApplySpeedBPA.localAngularSpeed
-- uid: TUF.Combat.Bullets.ApplySpeedBPA.localSpeed
-  name: localSpeed
-  href: api/TUF.Combat.Bullets.ApplySpeedBPA.html#TUF_Combat_Bullets_ApplySpeedBPA_localSpeed
-  commentId: F:TUF.Combat.Bullets.ApplySpeedBPA.localSpeed
-  fullName: TUF.Combat.Bullets.ApplySpeedBPA.localSpeed
-  nameWithType: ApplySpeedBPA.localSpeed
-- uid: TUF.Combat.Bullets.ApplySpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.ApplySpeedBPA.html#TUF_Combat_Bullets_ApplySpeedBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.ApplySpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.ApplySpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: ApplySpeedBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.ApplySpeedBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.ApplySpeedBPA.html#TUF_Combat_Bullets_ApplySpeedBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.ApplySpeedBPA.Process
+  href: api/TUF.Combat.Danmaku.DanmakuConfig.html#TUF_Combat_Danmaku_DanmakuConfig_speed
+  commentId: F:TUF.Combat.Danmaku.DanmakuConfig.speed
+  fullName: TUF.Combat.Danmaku.DanmakuConfig.speed
+  nameWithType: DanmakuConfig.speed
+- uid: TUF.Combat.Danmaku.DanmakuConfig.startPoint
+  name: startPoint
+  href: api/TUF.Combat.Danmaku.DanmakuConfig.html#TUF_Combat_Danmaku_DanmakuConfig_startPoint
+  commentId: F:TUF.Combat.Danmaku.DanmakuConfig.startPoint
+  fullName: TUF.Combat.Danmaku.DanmakuConfig.startPoint
+  nameWithType: DanmakuConfig.startPoint
+- uid: TUF.Combat.Danmaku.DanmakuManager
+  name: DanmakuManager
+  href: api/TUF.Combat.Danmaku.DanmakuManager.html
+  commentId: T:TUF.Combat.Danmaku.DanmakuManager
+  fullName: TUF.Combat.Danmaku.DanmakuManager
+  nameWithType: DanmakuManager
+- uid: TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,System.String)
+  name: Fire(DanmakuSequence, DanmakuConfig, String)
+  href: api/TUF.Combat.Danmaku.DanmakuManager.html#TUF_Combat_Danmaku_DanmakuManager_Fire_TUF_Combat_Danmaku_DanmakuSequence_TUF_Combat_Danmaku_DanmakuConfig_System_String_
+  commentId: M:TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,System.String)
+  fullName: TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence, TUF.Combat.Danmaku.DanmakuConfig, System.String)
+  nameWithType: DanmakuManager.Fire(DanmakuSequence, DanmakuConfig, String)
+- uid: TUF.Combat.Danmaku.DanmakuManager.Fire*
+  name: Fire
+  href: api/TUF.Combat.Danmaku.DanmakuManager.html#TUF_Combat_Danmaku_DanmakuManager_Fire_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuManager.Fire
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.ApplySpeedBPA.Process
-  nameWithType: ApplySpeedBPA.Process
-- uid: TUF.Combat.Bullets.ApplySpeedBPA.speed
-  name: speed
-  href: api/TUF.Combat.Bullets.ApplySpeedBPA.html#TUF_Combat_Bullets_ApplySpeedBPA_speed
-  commentId: F:TUF.Combat.Bullets.ApplySpeedBPA.speed
-  fullName: TUF.Combat.Bullets.ApplySpeedBPA.speed
-  nameWithType: ApplySpeedBPA.speed
-- uid: TUF.Combat.Bullets.Bullet
-  name: Bullet
-  href: api/TUF.Combat.Bullets.Bullet.html
-  commentId: T:TUF.Combat.Bullets.Bullet
-  fullName: TUF.Combat.Bullets.Bullet
-  nameWithType: Bullet
-- uid: TUF.Combat.Bullets.Bullet.AddAngularSpeed(Vector3)
-  name: AddAngularSpeed(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_AddAngularSpeed_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.AddAngularSpeed(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.AddAngularSpeed(Vector3)
-  nameWithType: Bullet.AddAngularSpeed(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.AddAngularSpeed*
-  name: AddAngularSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_AddAngularSpeed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.AddAngularSpeed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.AddAngularSpeed
-  nameWithType: Bullet.AddAngularSpeed
-- uid: TUF.Combat.Bullets.Bullet.AddLocalAngularVelocity(Vector3)
-  name: AddLocalAngularVelocity(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_AddLocalAngularVelocity_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.AddLocalAngularVelocity(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.AddLocalAngularVelocity(Vector3)
-  nameWithType: Bullet.AddLocalAngularVelocity(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.AddLocalAngularVelocity*
-  name: AddLocalAngularVelocity
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_AddLocalAngularVelocity_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.AddLocalAngularVelocity
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.AddLocalAngularVelocity
-  nameWithType: Bullet.AddLocalAngularVelocity
-- uid: TUF.Combat.Bullets.Bullet.AddLocalSpeed(Vector3)
-  name: AddLocalSpeed(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_AddLocalSpeed_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.AddLocalSpeed(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.AddLocalSpeed(Vector3)
-  nameWithType: Bullet.AddLocalSpeed(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.AddLocalSpeed*
-  name: AddLocalSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_AddLocalSpeed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.AddLocalSpeed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.AddLocalSpeed
-  nameWithType: Bullet.AddLocalSpeed
-- uid: TUF.Combat.Bullets.Bullet.AddSpeed(Vector3)
-  name: AddSpeed(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_AddSpeed_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.AddSpeed(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.AddSpeed(Vector3)
-  nameWithType: Bullet.AddSpeed(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.AddSpeed*
-  name: AddSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_AddSpeed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.AddSpeed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.AddSpeed
-  nameWithType: Bullet.AddSpeed
-- uid: TUF.Combat.Bullets.Bullet.GetForwardBasedSpeed(Vector3)
-  name: GetForwardBasedSpeed(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_GetForwardBasedSpeed_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.GetForwardBasedSpeed(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.GetForwardBasedSpeed(Vector3)
-  nameWithType: Bullet.GetForwardBasedSpeed(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.GetForwardBasedSpeed*
-  name: GetForwardBasedSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_GetForwardBasedSpeed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.GetForwardBasedSpeed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.GetForwardBasedSpeed
-  nameWithType: Bullet.GetForwardBasedSpeed
-- uid: TUF.Combat.Bullets.Bullet.Lifetime
-  name: Lifetime
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_Lifetime
-  commentId: P:TUF.Combat.Bullets.Bullet.Lifetime
-  fullName: TUF.Combat.Bullets.Bullet.Lifetime
-  nameWithType: Bullet.Lifetime
-- uid: TUF.Combat.Bullets.Bullet.Lifetime*
-  name: Lifetime
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_Lifetime_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.Lifetime
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.Lifetime
-  nameWithType: Bullet.Lifetime
-- uid: TUF.Combat.Bullets.Bullet.LocalSpeed
-  name: LocalSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_LocalSpeed
-  commentId: P:TUF.Combat.Bullets.Bullet.LocalSpeed
-  fullName: TUF.Combat.Bullets.Bullet.LocalSpeed
-  nameWithType: Bullet.LocalSpeed
-- uid: TUF.Combat.Bullets.Bullet.LocalSpeed*
-  name: LocalSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_LocalSpeed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.LocalSpeed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.LocalSpeed
-  nameWithType: Bullet.LocalSpeed
-- uid: TUF.Combat.Bullets.Bullet.SetAngularSpeed(Vector3)
-  name: SetAngularSpeed(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetAngularSpeed_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.SetAngularSpeed(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.SetAngularSpeed(Vector3)
-  nameWithType: Bullet.SetAngularSpeed(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.SetAngularSpeed*
-  name: SetAngularSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetAngularSpeed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.SetAngularSpeed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.SetAngularSpeed
-  nameWithType: Bullet.SetAngularSpeed
-- uid: TUF.Combat.Bullets.Bullet.SetLifetime(System.Int32)
-  name: SetLifetime(Int32)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetLifetime_System_Int32_
-  commentId: M:TUF.Combat.Bullets.Bullet.SetLifetime(System.Int32)
-  fullName: TUF.Combat.Bullets.Bullet.SetLifetime(System.Int32)
-  nameWithType: Bullet.SetLifetime(Int32)
-- uid: TUF.Combat.Bullets.Bullet.SetLifetime*
-  name: SetLifetime
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetLifetime_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.SetLifetime
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.SetLifetime
-  nameWithType: Bullet.SetLifetime
-- uid: TUF.Combat.Bullets.Bullet.SetLocalAngularVelocity(Vector3)
-  name: SetLocalAngularVelocity(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetLocalAngularVelocity_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.SetLocalAngularVelocity(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.SetLocalAngularVelocity(Vector3)
-  nameWithType: Bullet.SetLocalAngularVelocity(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.SetLocalAngularVelocity*
-  name: SetLocalAngularVelocity
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetLocalAngularVelocity_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.SetLocalAngularVelocity
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.SetLocalAngularVelocity
-  nameWithType: Bullet.SetLocalAngularVelocity
-- uid: TUF.Combat.Bullets.Bullet.SetLocalSpeed(Vector3)
-  name: SetLocalSpeed(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetLocalSpeed_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.SetLocalSpeed(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.SetLocalSpeed(Vector3)
-  nameWithType: Bullet.SetLocalSpeed(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.SetLocalSpeed*
-  name: SetLocalSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetLocalSpeed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.SetLocalSpeed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.SetLocalSpeed
-  nameWithType: Bullet.SetLocalSpeed
-- uid: TUF.Combat.Bullets.Bullet.SetPosition(Vector3)
-  name: SetPosition(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetPosition_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.SetPosition(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.SetPosition(Vector3)
-  nameWithType: Bullet.SetPosition(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.SetPosition*
-  name: SetPosition
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetPosition_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.SetPosition
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.SetPosition
-  nameWithType: Bullet.SetPosition
-- uid: TUF.Combat.Bullets.Bullet.SetRotation(Vector3)
-  name: SetRotation(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetRotation_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.SetRotation(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.SetRotation(Vector3)
-  nameWithType: Bullet.SetRotation(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.SetRotation*
-  name: SetRotation
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetRotation_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.SetRotation
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.SetRotation
-  nameWithType: Bullet.SetRotation
-- uid: TUF.Combat.Bullets.Bullet.SetSpeed(Vector3)
-  name: SetSpeed(Vector3)
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetSpeed_Vector3_
-  commentId: M:TUF.Combat.Bullets.Bullet.SetSpeed(Vector3)
-  fullName: TUF.Combat.Bullets.Bullet.SetSpeed(Vector3)
-  nameWithType: Bullet.SetSpeed(Vector3)
-- uid: TUF.Combat.Bullets.Bullet.SetSpeed*
-  name: SetSpeed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_SetSpeed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.SetSpeed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.SetSpeed
-  nameWithType: Bullet.SetSpeed
-- uid: TUF.Combat.Bullets.Bullet.Speed
-  name: Speed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_Speed
-  commentId: P:TUF.Combat.Bullets.Bullet.Speed
-  fullName: TUF.Combat.Bullets.Bullet.Speed
-  nameWithType: Bullet.Speed
-- uid: TUF.Combat.Bullets.Bullet.Speed*
-  name: Speed
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_Speed_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.Speed
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.Speed
-  nameWithType: Bullet.Speed
-- uid: TUF.Combat.Bullets.Bullet.Tick
+  fullName: TUF.Combat.Danmaku.DanmakuManager.Fire
+  nameWithType: DanmakuManager.Fire
+- uid: TUF.Combat.Danmaku.DanmakuManager.sequences
+  name: sequences
+  href: api/TUF.Combat.Danmaku.DanmakuManager.html#TUF_Combat_Danmaku_DanmakuManager_sequences
+  commentId: F:TUF.Combat.Danmaku.DanmakuManager.sequences
+  fullName: TUF.Combat.Danmaku.DanmakuManager.sequences
+  nameWithType: DanmakuManager.sequences
+- uid: TUF.Combat.Danmaku.DanmakuManager.Tick
   name: Tick()
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_Tick
-  commentId: M:TUF.Combat.Bullets.Bullet.Tick
-  fullName: TUF.Combat.Bullets.Bullet.Tick()
-  nameWithType: Bullet.Tick()
-- uid: TUF.Combat.Bullets.Bullet.Tick*
+  href: api/TUF.Combat.Danmaku.DanmakuManager.html#TUF_Combat_Danmaku_DanmakuManager_Tick
+  commentId: M:TUF.Combat.Danmaku.DanmakuManager.Tick
+  fullName: TUF.Combat.Danmaku.DanmakuManager.Tick()
+  nameWithType: DanmakuManager.Tick()
+- uid: TUF.Combat.Danmaku.DanmakuManager.Tick*
   name: Tick
-  href: api/TUF.Combat.Bullets.Bullet.html#TUF_Combat_Bullets_Bullet_Tick_
-  commentId: Overload:TUF.Combat.Bullets.Bullet.Tick
+  href: api/TUF.Combat.Danmaku.DanmakuManager.html#TUF_Combat_Danmaku_DanmakuManager_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuManager.Tick
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.Bullet.Tick
-  nameWithType: Bullet.Tick
-- uid: TUF.Combat.Bullets.BulletPattern
-  name: BulletPattern
-  href: api/TUF.Combat.Bullets.BulletPattern.html
-  commentId: T:TUF.Combat.Bullets.BulletPattern
-  fullName: TUF.Combat.Bullets.BulletPattern
-  nameWithType: BulletPattern
-- uid: TUF.Combat.Bullets.BulletPattern.actions
-  name: actions
-  href: api/TUF.Combat.Bullets.BulletPattern.html#TUF_Combat_Bullets_BulletPattern_actions
-  commentId: F:TUF.Combat.Bullets.BulletPattern.actions
-  fullName: TUF.Combat.Bullets.BulletPattern.actions
-  nameWithType: BulletPattern.actions
-- uid: TUF.Combat.Bullets.BulletPatternAction
-  name: BulletPatternAction
-  href: api/TUF.Combat.Bullets.BulletPatternAction.html
-  commentId: T:TUF.Combat.Bullets.BulletPatternAction
-  fullName: TUF.Combat.Bullets.BulletPatternAction
-  nameWithType: BulletPatternAction
-- uid: TUF.Combat.Bullets.BulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.BulletPatternAction.html#TUF_Combat_Bullets_BulletPatternAction_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.BulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.BulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: BulletPatternAction.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.BulletPatternAction.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.BulletPatternAction.html#TUF_Combat_Bullets_BulletPatternAction_Process_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternAction.Process
+  fullName: TUF.Combat.Danmaku.DanmakuManager.Tick
+  nameWithType: DanmakuManager.Tick
+- uid: TUF.Combat.Danmaku.DanmakuSequence
+  name: DanmakuSequence
+  href: api/TUF.Combat.Danmaku.DanmakuSequence.html
+  commentId: T:TUF.Combat.Danmaku.DanmakuSequence
+  fullName: TUF.Combat.Danmaku.DanmakuSequence
+  nameWithType: DanmakuSequence
+- uid: TUF.Combat.Danmaku.DanmakuSequence.sequence
+  name: sequence
+  href: api/TUF.Combat.Danmaku.DanmakuSequence.html#TUF_Combat_Danmaku_DanmakuSequence_sequence
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequence.sequence
+  fullName: TUF.Combat.Danmaku.DanmakuSequence.sequence
+  nameWithType: DanmakuSequence.sequence
+- uid: TUF.Combat.Danmaku.DanmakuSequenceEditor
+  name: DanmakuSequenceEditor
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceEditor.html
+  commentId: T:TUF.Combat.Danmaku.DanmakuSequenceEditor
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceEditor
+  nameWithType: DanmakuSequenceEditor
+- uid: TUF.Combat.Danmaku.DanmakuSequenceEditor.actionTypes
+  name: actionTypes
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceEditor.html#TUF_Combat_Danmaku_DanmakuSequenceEditor_actionTypes
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceEditor.actionTypes
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceEditor.actionTypes
+  nameWithType: DanmakuSequenceEditor.actionTypes
+- uid: TUF.Combat.Danmaku.DanmakuSequenceEditor.DrawUILine(Color,System.Int32,System.Int32)
+  name: DrawUILine(Color, Int32, Int32)
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceEditor.html#TUF_Combat_Danmaku_DanmakuSequenceEditor_DrawUILine_Color_System_Int32_System_Int32_
+  commentId: M:TUF.Combat.Danmaku.DanmakuSequenceEditor.DrawUILine(Color,System.Int32,System.Int32)
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceEditor.DrawUILine(Color, System.Int32, System.Int32)
+  nameWithType: DanmakuSequenceEditor.DrawUILine(Color, Int32, Int32)
+- uid: TUF.Combat.Danmaku.DanmakuSequenceEditor.DrawUILine*
+  name: DrawUILine
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceEditor.html#TUF_Combat_Danmaku_DanmakuSequenceEditor_DrawUILine_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuSequenceEditor.DrawUILine
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternAction.Process
-  nameWithType: BulletPatternAction.Process
-- uid: TUF.Combat.Bullets.BulletPatternData
-  name: BulletPatternData
-  href: api/TUF.Combat.Bullets.BulletPatternData.html
-  commentId: T:TUF.Combat.Bullets.BulletPatternData
-  fullName: TUF.Combat.Bullets.BulletPatternData
-  nameWithType: BulletPatternData
-- uid: TUF.Combat.Bullets.BulletPatternData.#ctor(System.Int32,TUF.Combat.Bullets.BulletPattern,Transform)
-  name: BulletPatternData(Int32, BulletPattern, Transform)
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData__ctor_System_Int32_TUF_Combat_Bullets_BulletPattern_Transform_
-  commentId: M:TUF.Combat.Bullets.BulletPatternData.#ctor(System.Int32,TUF.Combat.Bullets.BulletPattern,Transform)
-  fullName: TUF.Combat.Bullets.BulletPatternData.BulletPatternData(System.Int32, TUF.Combat.Bullets.BulletPattern, Transform)
-  nameWithType: BulletPatternData.BulletPatternData(Int32, BulletPattern, Transform)
-- uid: TUF.Combat.Bullets.BulletPatternData.#ctor*
-  name: BulletPatternData
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData__ctor_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternData.#ctor
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceEditor.DrawUILine
+  nameWithType: DanmakuSequenceEditor.DrawUILine
+- uid: TUF.Combat.Danmaku.DanmakuSequenceEditor.OnEnable
+  name: OnEnable()
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceEditor.html#TUF_Combat_Danmaku_DanmakuSequenceEditor_OnEnable
+  commentId: M:TUF.Combat.Danmaku.DanmakuSequenceEditor.OnEnable
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceEditor.OnEnable()
+  nameWithType: DanmakuSequenceEditor.OnEnable()
+- uid: TUF.Combat.Danmaku.DanmakuSequenceEditor.OnEnable*
+  name: OnEnable
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceEditor.html#TUF_Combat_Danmaku_DanmakuSequenceEditor_OnEnable_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuSequenceEditor.OnEnable
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternData.BulletPatternData
-  nameWithType: BulletPatternData.BulletPatternData
-- uid: TUF.Combat.Bullets.BulletPatternData.active
-  name: active
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_active
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.active
-  fullName: TUF.Combat.Bullets.BulletPatternData.active
-  nameWithType: BulletPatternData.active
-- uid: TUF.Combat.Bullets.BulletPatternData.bulletPattern
-  name: bulletPattern
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_bulletPattern
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.bulletPattern
-  fullName: TUF.Combat.Bullets.BulletPatternData.bulletPattern
-  nameWithType: BulletPatternData.bulletPattern
-- uid: TUF.Combat.Bullets.BulletPatternData.currentAngularSpeed
-  name: currentAngularSpeed
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_currentAngularSpeed
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.currentAngularSpeed
-  fullName: TUF.Combat.Bullets.BulletPatternData.currentAngularSpeed
-  nameWithType: BulletPatternData.currentAngularSpeed
-- uid: TUF.Combat.Bullets.BulletPatternData.currentLifetime
-  name: currentLifetime
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_currentLifetime
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.currentLifetime
-  fullName: TUF.Combat.Bullets.BulletPatternData.currentLifetime
-  nameWithType: BulletPatternData.currentLifetime
-- uid: TUF.Combat.Bullets.BulletPatternData.currentLocalAngularSpeed
-  name: currentLocalAngularSpeed
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_currentLocalAngularSpeed
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.currentLocalAngularSpeed
-  fullName: TUF.Combat.Bullets.BulletPatternData.currentLocalAngularSpeed
-  nameWithType: BulletPatternData.currentLocalAngularSpeed
-- uid: TUF.Combat.Bullets.BulletPatternData.currentLocalSpeed
-  name: currentLocalSpeed
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_currentLocalSpeed
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.currentLocalSpeed
-  fullName: TUF.Combat.Bullets.BulletPatternData.currentLocalSpeed
-  nameWithType: BulletPatternData.currentLocalSpeed
-- uid: TUF.Combat.Bullets.BulletPatternData.currentPositionOffset
-  name: currentPositionOffset
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_currentPositionOffset
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.currentPositionOffset
-  fullName: TUF.Combat.Bullets.BulletPatternData.currentPositionOffset
-  nameWithType: BulletPatternData.currentPositionOffset
-- uid: TUF.Combat.Bullets.BulletPatternData.currentRotationOffset
-  name: currentRotationOffset
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_currentRotationOffset
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.currentRotationOffset
-  fullName: TUF.Combat.Bullets.BulletPatternData.currentRotationOffset
-  nameWithType: BulletPatternData.currentRotationOffset
-- uid: TUF.Combat.Bullets.BulletPatternData.currentSpeed
-  name: currentSpeed
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_currentSpeed
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.currentSpeed
-  fullName: TUF.Combat.Bullets.BulletPatternData.currentSpeed
-  nameWithType: BulletPatternData.currentSpeed
-- uid: TUF.Combat.Bullets.BulletPatternData.floatVariables
-  name: floatVariables
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_floatVariables
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.floatVariables
-  fullName: TUF.Combat.Bullets.BulletPatternData.floatVariables
-  nameWithType: BulletPatternData.floatVariables
-- uid: TUF.Combat.Bullets.BulletPatternData.ID
-  name: ID
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_ID
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.ID
-  fullName: TUF.Combat.Bullets.BulletPatternData.ID
-  nameWithType: BulletPatternData.ID
-- uid: TUF.Combat.Bullets.BulletPatternData.patternPosition
-  name: patternPosition
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_patternPosition
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.patternPosition
-  fullName: TUF.Combat.Bullets.BulletPatternData.patternPosition
-  nameWithType: BulletPatternData.patternPosition
-- uid: TUF.Combat.Bullets.BulletPatternData.relativeTo
-  name: relativeTo
-  href: api/TUF.Combat.Bullets.BulletPatternData.html#TUF_Combat_Bullets_BulletPatternData_relativeTo
-  commentId: F:TUF.Combat.Bullets.BulletPatternData.relativeTo
-  fullName: TUF.Combat.Bullets.BulletPatternData.relativeTo
-  nameWithType: BulletPatternData.relativeTo
-- uid: TUF.Combat.Bullets.BulletPatternGroup
-  name: BulletPatternGroup
-  href: api/TUF.Combat.Bullets.BulletPatternGroup.html
-  commentId: T:TUF.Combat.Bullets.BulletPatternGroup
-  fullName: TUF.Combat.Bullets.BulletPatternGroup
-  nameWithType: BulletPatternGroup
-- uid: TUF.Combat.Bullets.BulletPatternGroup.attachToEntity
-  name: attachToEntity
-  href: api/TUF.Combat.Bullets.BulletPatternGroup.html#TUF_Combat_Bullets_BulletPatternGroup_attachToEntity
-  commentId: F:TUF.Combat.Bullets.BulletPatternGroup.attachToEntity
-  fullName: TUF.Combat.Bullets.BulletPatternGroup.attachToEntity
-  nameWithType: BulletPatternGroup.attachToEntity
-- uid: TUF.Combat.Bullets.BulletPatternGroup.bulletPattern
-  name: bulletPattern
-  href: api/TUF.Combat.Bullets.BulletPatternGroup.html#TUF_Combat_Bullets_BulletPatternGroup_bulletPattern
-  commentId: F:TUF.Combat.Bullets.BulletPatternGroup.bulletPattern
-  fullName: TUF.Combat.Bullets.BulletPatternGroup.bulletPattern
-  nameWithType: BulletPatternGroup.bulletPattern
-- uid: TUF.Combat.Bullets.BulletPatternGroup.offset
-  name: offset
-  href: api/TUF.Combat.Bullets.BulletPatternGroup.html#TUF_Combat_Bullets_BulletPatternGroup_offset
-  commentId: F:TUF.Combat.Bullets.BulletPatternGroup.offset
-  fullName: TUF.Combat.Bullets.BulletPatternGroup.offset
-  nameWithType: BulletPatternGroup.offset
-- uid: TUF.Combat.Bullets.BulletPatternGroup.spawnFrame
-  name: spawnFrame
-  href: api/TUF.Combat.Bullets.BulletPatternGroup.html#TUF_Combat_Bullets_BulletPatternGroup_spawnFrame
-  commentId: F:TUF.Combat.Bullets.BulletPatternGroup.spawnFrame
-  fullName: TUF.Combat.Bullets.BulletPatternGroup.spawnFrame
-  nameWithType: BulletPatternGroup.spawnFrame
-- uid: TUF.Combat.Bullets.BulletPatternManager
-  name: BulletPatternManager
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html
-  commentId: T:TUF.Combat.Bullets.BulletPatternManager
-  fullName: TUF.Combat.Bullets.BulletPatternManager
-  nameWithType: BulletPatternManager
-- uid: TUF.Combat.Bullets.BulletPatternManager.AddChildPatternManager(System.Int32,TUF.Combat.Bullets.BulletPattern,TUF.Combat.Bullets.BulletPatternManagerSettings)
-  name: AddChildPatternManager(Int32, BulletPattern, BulletPatternManagerSettings)
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_AddChildPatternManager_System_Int32_TUF_Combat_Bullets_BulletPattern_TUF_Combat_Bullets_BulletPatternManagerSettings_
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.AddChildPatternManager(System.Int32,TUF.Combat.Bullets.BulletPattern,TUF.Combat.Bullets.BulletPatternManagerSettings)
-  fullName: TUF.Combat.Bullets.BulletPatternManager.AddChildPatternManager(System.Int32, TUF.Combat.Bullets.BulletPattern, TUF.Combat.Bullets.BulletPatternManagerSettings)
-  nameWithType: BulletPatternManager.AddChildPatternManager(Int32, BulletPattern, BulletPatternManagerSettings)
-- uid: TUF.Combat.Bullets.BulletPatternManager.AddChildPatternManager*
-  name: AddChildPatternManager
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_AddChildPatternManager_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.AddChildPatternManager
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceEditor.OnEnable
+  nameWithType: DanmakuSequenceEditor.OnEnable
+- uid: TUF.Combat.Danmaku.DanmakuSequenceEditor.OnInspectorGUI
+  name: OnInspectorGUI()
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceEditor.html#TUF_Combat_Danmaku_DanmakuSequenceEditor_OnInspectorGUI
+  commentId: M:TUF.Combat.Danmaku.DanmakuSequenceEditor.OnInspectorGUI
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceEditor.OnInspectorGUI()
+  nameWithType: DanmakuSequenceEditor.OnInspectorGUI()
+- uid: TUF.Combat.Danmaku.DanmakuSequenceEditor.OnInspectorGUI*
+  name: OnInspectorGUI
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceEditor.html#TUF_Combat_Danmaku_DanmakuSequenceEditor_OnInspectorGUI_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuSequenceEditor.OnInspectorGUI
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.AddChildPatternManager
-  nameWithType: BulletPatternManager.AddChildPatternManager
-- uid: TUF.Combat.Bullets.BulletPatternManager.AddPattern(TUF.Combat.Bullets.BulletPattern)
-  name: AddPattern(BulletPattern)
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_AddPattern_TUF_Combat_Bullets_BulletPattern_
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.AddPattern(TUF.Combat.Bullets.BulletPattern)
-  fullName: TUF.Combat.Bullets.BulletPatternManager.AddPattern(TUF.Combat.Bullets.BulletPattern)
-  nameWithType: BulletPatternManager.AddPattern(BulletPattern)
-- uid: TUF.Combat.Bullets.BulletPatternManager.AddPattern*
-  name: AddPattern
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_AddPattern_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.AddPattern
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceEditor.OnInspectorGUI
+  nameWithType: DanmakuSequenceEditor.OnInspectorGUI
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo
+  name: DanmakuSequenceInfo
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html
+  commentId: T:TUF.Combat.Danmaku.DanmakuSequenceInfo
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo
+  nameWithType: DanmakuSequenceInfo
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,System.String)
+  name: DanmakuSequenceInfo(DanmakuSequence, DanmakuConfig, String)
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo__ctor_TUF_Combat_Danmaku_DanmakuSequence_TUF_Combat_Danmaku_DanmakuConfig_System_String_
+  commentId: M:TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,System.String)
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.DanmakuSequenceInfo(TUF.Combat.Danmaku.DanmakuSequence, TUF.Combat.Danmaku.DanmakuConfig, System.String)
+  nameWithType: DanmakuSequenceInfo.DanmakuSequenceInfo(DanmakuSequence, DanmakuConfig, String)
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor*
+  name: DanmakuSequenceInfo
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo__ctor_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.AddPattern
-  nameWithType: BulletPatternManager.AddPattern
-- uid: TUF.Combat.Bullets.BulletPatternManager.bulletSpawnPosition
-  name: bulletSpawnPosition
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_bulletSpawnPosition
-  commentId: F:TUF.Combat.Bullets.BulletPatternManager.bulletSpawnPosition
-  fullName: TUF.Combat.Bullets.BulletPatternManager.bulletSpawnPosition
-  nameWithType: BulletPatternManager.bulletSpawnPosition
-- uid: TUF.Combat.Bullets.BulletPatternManager.bulletSpawnRotation
-  name: bulletSpawnRotation
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_bulletSpawnRotation
-  commentId: F:TUF.Combat.Bullets.BulletPatternManager.bulletSpawnRotation
-  fullName: TUF.Combat.Bullets.BulletPatternManager.bulletSpawnRotation
-  nameWithType: BulletPatternManager.bulletSpawnRotation
-- uid: TUF.Combat.Bullets.BulletPatternManager.CheckForDeletion
-  name: CheckForDeletion()
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_CheckForDeletion
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.CheckForDeletion
-  fullName: TUF.Combat.Bullets.BulletPatternManager.CheckForDeletion()
-  nameWithType: BulletPatternManager.CheckForDeletion()
-- uid: TUF.Combat.Bullets.BulletPatternManager.CheckForDeletion*
-  name: CheckForDeletion
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_CheckForDeletion_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.CheckForDeletion
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.DanmakuSequenceInfo
+  nameWithType: DanmakuSequenceInfo.DanmakuSequenceInfo
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.baseConfig
+  name: baseConfig
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_baseConfig
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.baseConfig
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.baseConfig
+  nameWithType: DanmakuSequenceInfo.baseConfig
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.bulletSets
+  name: bulletSets
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_bulletSets
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.bulletSets
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.bulletSets
+  nameWithType: DanmakuSequenceInfo.bulletSets
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.currentSet
+  name: currentSet
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_currentSet
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.currentSet
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.currentSet
+  nameWithType: DanmakuSequenceInfo.currentSet
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.frame
+  name: frame
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_frame
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.frame
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.frame
+  nameWithType: DanmakuSequenceInfo.frame
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.id
+  name: id
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_id
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.id
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.id
+  nameWithType: DanmakuSequenceInfo.id
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.index
+  name: index
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_index
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.index
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.index
+  nameWithType: DanmakuSequenceInfo.index
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.NextAction
+  name: NextAction()
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_NextAction
+  commentId: M:TUF.Combat.Danmaku.DanmakuSequenceInfo.NextAction
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.NextAction()
+  nameWithType: DanmakuSequenceInfo.NextAction()
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.NextAction*
+  name: NextAction
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_NextAction_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuSequenceInfo.NextAction
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.CheckForDeletion
-  nameWithType: BulletPatternManager.CheckForDeletion
-- uid: TUF.Combat.Bullets.BulletPatternManager.childManagers
-  name: childManagers
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_childManagers
-  commentId: F:TUF.Combat.Bullets.BulletPatternManager.childManagers
-  fullName: TUF.Combat.Bullets.BulletPatternManager.childManagers
-  nameWithType: BulletPatternManager.childManagers
-- uid: TUF.Combat.Bullets.BulletPatternManager.ClearAllBullets
-  name: ClearAllBullets()
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_ClearAllBullets
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.ClearAllBullets
-  fullName: TUF.Combat.Bullets.BulletPatternManager.ClearAllBullets()
-  nameWithType: BulletPatternManager.ClearAllBullets()
-- uid: TUF.Combat.Bullets.BulletPatternManager.ClearAllBullets*
-  name: ClearAllBullets
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_ClearAllBullets_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.ClearAllBullets
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.ClearAllBullets
-  nameWithType: BulletPatternManager.ClearAllBullets
-- uid: TUF.Combat.Bullets.BulletPatternManager.ClearBullets(System.Int32)
-  name: ClearBullets(Int32)
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_ClearBullets_System_Int32_
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.ClearBullets(System.Int32)
-  fullName: TUF.Combat.Bullets.BulletPatternManager.ClearBullets(System.Int32)
-  nameWithType: BulletPatternManager.ClearBullets(Int32)
-- uid: TUF.Combat.Bullets.BulletPatternManager.ClearBullets*
-  name: ClearBullets
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_ClearBullets_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.ClearBullets
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.ClearBullets
-  nameWithType: BulletPatternManager.ClearBullets
-- uid: TUF.Combat.Bullets.BulletPatternManager.CreateBullet(System.Int32,TUF.Combat.Bullets.Bullet)
-  name: CreateBullet(Int32, Bullet)
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_CreateBullet_System_Int32_TUF_Combat_Bullets_Bullet_
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.CreateBullet(System.Int32,TUF.Combat.Bullets.Bullet)
-  fullName: TUF.Combat.Bullets.BulletPatternManager.CreateBullet(System.Int32, TUF.Combat.Bullets.Bullet)
-  nameWithType: BulletPatternManager.CreateBullet(Int32, Bullet)
-- uid: TUF.Combat.Bullets.BulletPatternManager.CreateBullet*
-  name: CreateBullet
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_CreateBullet_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.CreateBullet
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.CreateBullet
-  nameWithType: BulletPatternManager.CreateBullet
-- uid: TUF.Combat.Bullets.BulletPatternManager.Initialize(TUF.Combat.Bullets.BulletPatternManagerSettings,TUF.Combat.Bullets.BulletPattern,Vector3)
-  name: Initialize(BulletPatternManagerSettings, BulletPattern, Vector3)
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_Initialize_TUF_Combat_Bullets_BulletPatternManagerSettings_TUF_Combat_Bullets_BulletPattern_Vector3_
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.Initialize(TUF.Combat.Bullets.BulletPatternManagerSettings,TUF.Combat.Bullets.BulletPattern,Vector3)
-  fullName: TUF.Combat.Bullets.BulletPatternManager.Initialize(TUF.Combat.Bullets.BulletPatternManagerSettings, TUF.Combat.Bullets.BulletPattern, Vector3)
-  nameWithType: BulletPatternManager.Initialize(BulletPatternManagerSettings, BulletPattern, Vector3)
-- uid: TUF.Combat.Bullets.BulletPatternManager.Initialize*
-  name: Initialize
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_Initialize_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.Initialize
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.Initialize
-  nameWithType: BulletPatternManager.Initialize
-- uid: TUF.Combat.Bullets.BulletPatternManager.patternBullets
-  name: patternBullets
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_patternBullets
-  commentId: F:TUF.Combat.Bullets.BulletPatternManager.patternBullets
-  fullName: TUF.Combat.Bullets.BulletPatternManager.patternBullets
-  nameWithType: BulletPatternManager.patternBullets
-- uid: TUF.Combat.Bullets.BulletPatternManager.patterns
-  name: patterns
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_patterns
-  commentId: F:TUF.Combat.Bullets.BulletPatternManager.patterns
-  fullName: TUF.Combat.Bullets.BulletPatternManager.patterns
-  nameWithType: BulletPatternManager.patterns
-- uid: TUF.Combat.Bullets.BulletPatternManager.settings
-  name: settings
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_settings
-  commentId: F:TUF.Combat.Bullets.BulletPatternManager.settings
-  fullName: TUF.Combat.Bullets.BulletPatternManager.settings
-  nameWithType: BulletPatternManager.settings
-- uid: TUF.Combat.Bullets.BulletPatternManager.SimUpdate(System.Single)
-  name: SimUpdate(Single)
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_SimUpdate_System_Single_
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.SimUpdate(System.Single)
-  fullName: TUF.Combat.Bullets.BulletPatternManager.SimUpdate(System.Single)
-  nameWithType: BulletPatternManager.SimUpdate(Single)
-- uid: TUF.Combat.Bullets.BulletPatternManager.SimUpdate*
-  name: SimUpdate
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_SimUpdate_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.SimUpdate
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.SimUpdate
-  nameWithType: BulletPatternManager.SimUpdate
-- uid: TUF.Combat.Bullets.BulletPatternManager.Tick
-  name: Tick()
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_Tick
-  commentId: M:TUF.Combat.Bullets.BulletPatternManager.Tick
-  fullName: TUF.Combat.Bullets.BulletPatternManager.Tick()
-  nameWithType: BulletPatternManager.Tick()
-- uid: TUF.Combat.Bullets.BulletPatternManager.Tick*
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.NextAction
+  nameWithType: DanmakuSequenceInfo.NextAction
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.sequence
+  name: sequence
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_sequence
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.sequence
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.sequence
+  nameWithType: DanmakuSequenceInfo.sequence
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.Tick(TUF.Combat.Danmaku.DanmakuManager)
+  name: Tick(DanmakuManager)
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_Tick_TUF_Combat_Danmaku_DanmakuManager_
+  commentId: M:TUF.Combat.Danmaku.DanmakuSequenceInfo.Tick(TUF.Combat.Danmaku.DanmakuManager)
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.Tick(TUF.Combat.Danmaku.DanmakuManager)
+  nameWithType: DanmakuSequenceInfo.Tick(DanmakuManager)
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.Tick*
   name: Tick
-  href: api/TUF.Combat.Bullets.BulletPatternManager.html#TUF_Combat_Bullets_BulletPatternManager_Tick_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManager.Tick
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuSequenceInfo.Tick
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManager.Tick
-  nameWithType: BulletPatternManager.Tick
-- uid: TUF.Combat.Bullets.BulletPatternManagerSettings
-  name: BulletPatternManagerSettings
-  href: api/TUF.Combat.Bullets.BulletPatternManagerSettings.html
-  commentId: T:TUF.Combat.Bullets.BulletPatternManagerSettings
-  fullName: TUF.Combat.Bullets.BulletPatternManagerSettings
-  nameWithType: BulletPatternManagerSettings
-- uid: TUF.Combat.Bullets.BulletPatternManagerSettings.#ctor
-  name: BulletPatternManagerSettings()
-  href: api/TUF.Combat.Bullets.BulletPatternManagerSettings.html#TUF_Combat_Bullets_BulletPatternManagerSettings__ctor
-  commentId: M:TUF.Combat.Bullets.BulletPatternManagerSettings.#ctor
-  fullName: TUF.Combat.Bullets.BulletPatternManagerSettings.BulletPatternManagerSettings()
-  nameWithType: BulletPatternManagerSettings.BulletPatternManagerSettings()
-- uid: TUF.Combat.Bullets.BulletPatternManagerSettings.#ctor*
-  name: BulletPatternManagerSettings
-  href: api/TUF.Combat.Bullets.BulletPatternManagerSettings.html#TUF_Combat_Bullets_BulletPatternManagerSettings__ctor_
-  commentId: Overload:TUF.Combat.Bullets.BulletPatternManagerSettings.#ctor
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.BulletPatternManagerSettings.BulletPatternManagerSettings
-  nameWithType: BulletPatternManagerSettings.BulletPatternManagerSettings
-- uid: TUF.Combat.Bullets.BulletPatternManagerSettings.active
-  name: active
-  href: api/TUF.Combat.Bullets.BulletPatternManagerSettings.html#TUF_Combat_Bullets_BulletPatternManagerSettings_active
-  commentId: F:TUF.Combat.Bullets.BulletPatternManagerSettings.active
-  fullName: TUF.Combat.Bullets.BulletPatternManagerSettings.active
-  nameWithType: BulletPatternManagerSettings.active
-- uid: TUF.Combat.Bullets.BulletPatternManagerSettings.autoDelete
-  name: autoDelete
-  href: api/TUF.Combat.Bullets.BulletPatternManagerSettings.html#TUF_Combat_Bullets_BulletPatternManagerSettings_autoDelete
-  commentId: F:TUF.Combat.Bullets.BulletPatternManagerSettings.autoDelete
-  fullName: TUF.Combat.Bullets.BulletPatternManagerSettings.autoDelete
-  nameWithType: BulletPatternManagerSettings.autoDelete
-- uid: TUF.Combat.Bullets.BulletPatternManagerSettings.disableLooping
-  name: disableLooping
-  href: api/TUF.Combat.Bullets.BulletPatternManagerSettings.html#TUF_Combat_Bullets_BulletPatternManagerSettings_disableLooping
-  commentId: F:TUF.Combat.Bullets.BulletPatternManagerSettings.disableLooping
-  fullName: TUF.Combat.Bullets.BulletPatternManagerSettings.disableLooping
-  nameWithType: BulletPatternManagerSettings.disableLooping
-- uid: TUF.Combat.Bullets.BulletPatternManagerSettings.tickBullets
-  name: tickBullets
-  href: api/TUF.Combat.Bullets.BulletPatternManagerSettings.html#TUF_Combat_Bullets_BulletPatternManagerSettings_tickBullets
-  commentId: F:TUF.Combat.Bullets.BulletPatternManagerSettings.tickBullets
-  fullName: TUF.Combat.Bullets.BulletPatternManagerSettings.tickBullets
-  nameWithType: BulletPatternManagerSettings.tickBullets
-- uid: TUF.Combat.Bullets.ClearBPA
-  name: ClearBPA
-  href: api/TUF.Combat.Bullets.ClearBPA.html
-  commentId: T:TUF.Combat.Bullets.ClearBPA
-  fullName: TUF.Combat.Bullets.ClearBPA
-  nameWithType: ClearBPA
-- uid: TUF.Combat.Bullets.ClearBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.ClearBPA.html#TUF_Combat_Bullets_ClearBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.ClearBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.ClearBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: ClearBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.ClearBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.ClearBPA.html#TUF_Combat_Bullets_ClearBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.ClearBPA.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.ClearBPA.Process
-  nameWithType: ClearBPA.Process
-- uid: TUF.Combat.Bullets.CreateBulletBPA
-  name: CreateBulletBPA
-  href: api/TUF.Combat.Bullets.CreateBulletBPA.html
-  commentId: T:TUF.Combat.Bullets.CreateBulletBPA
-  fullName: TUF.Combat.Bullets.CreateBulletBPA
-  nameWithType: CreateBulletBPA
-- uid: TUF.Combat.Bullets.CreateBulletBPA.bullet
-  name: bullet
-  href: api/TUF.Combat.Bullets.CreateBulletBPA.html#TUF_Combat_Bullets_CreateBulletBPA_bullet
-  commentId: F:TUF.Combat.Bullets.CreateBulletBPA.bullet
-  fullName: TUF.Combat.Bullets.CreateBulletBPA.bullet
-  nameWithType: CreateBulletBPA.bullet
-- uid: TUF.Combat.Bullets.CreateBulletBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.CreateBulletBPA.html#TUF_Combat_Bullets_CreateBulletBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.CreateBulletBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.CreateBulletBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: CreateBulletBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.CreateBulletBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.CreateBulletBPA.html#TUF_Combat_Bullets_CreateBulletBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.CreateBulletBPA.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.CreateBulletBPA.Process
-  nameWithType: CreateBulletBPA.Process
-- uid: TUF.Combat.Bullets.CreateBulletPatternBPA
-  name: CreateBulletPatternBPA
-  href: api/TUF.Combat.Bullets.CreateBulletPatternBPA.html
-  commentId: T:TUF.Combat.Bullets.CreateBulletPatternBPA
-  fullName: TUF.Combat.Bullets.CreateBulletPatternBPA
-  nameWithType: CreateBulletPatternBPA
-- uid: TUF.Combat.Bullets.CreateBulletPatternBPA.pattern
-  name: pattern
-  href: api/TUF.Combat.Bullets.CreateBulletPatternBPA.html#TUF_Combat_Bullets_CreateBulletPatternBPA_pattern
-  commentId: F:TUF.Combat.Bullets.CreateBulletPatternBPA.pattern
-  fullName: TUF.Combat.Bullets.CreateBulletPatternBPA.pattern
-  nameWithType: CreateBulletPatternBPA.pattern
-- uid: TUF.Combat.Bullets.CreateBulletPatternBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.CreateBulletPatternBPA.html#TUF_Combat_Bullets_CreateBulletPatternBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.CreateBulletPatternBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.CreateBulletPatternBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: CreateBulletPatternBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.CreateBulletPatternBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.CreateBulletPatternBPA.html#TUF_Combat_Bullets_CreateBulletPatternBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.CreateBulletPatternBPA.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.CreateBulletPatternBPA.Process
-  nameWithType: CreateBulletPatternBPA.Process
-- uid: TUF.Combat.Bullets.SetAngularSpeedBPA
-  name: SetAngularSpeedBPA
-  href: api/TUF.Combat.Bullets.SetAngularSpeedBPA.html
-  commentId: T:TUF.Combat.Bullets.SetAngularSpeedBPA
-  fullName: TUF.Combat.Bullets.SetAngularSpeedBPA
-  nameWithType: SetAngularSpeedBPA
-- uid: TUF.Combat.Bullets.SetAngularSpeedBPA.angularSpeed
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.Tick
+  nameWithType: DanmakuSequenceInfo.Tick
+- uid: TUF.Combat.Danmaku.DanmakuState
+  name: DanmakuState
+  href: api/TUF.Combat.Danmaku.DanmakuState.html
+  commentId: T:TUF.Combat.Danmaku.DanmakuState
+  fullName: TUF.Combat.Danmaku.DanmakuState
+  nameWithType: DanmakuState
+- uid: TUF.Combat.Danmaku.DanmakuState.angularSpeed
   name: angularSpeed
-  href: api/TUF.Combat.Bullets.SetAngularSpeedBPA.html#TUF_Combat_Bullets_SetAngularSpeedBPA_angularSpeed
-  commentId: F:TUF.Combat.Bullets.SetAngularSpeedBPA.angularSpeed
-  fullName: TUF.Combat.Bullets.SetAngularSpeedBPA.angularSpeed
-  nameWithType: SetAngularSpeedBPA.angularSpeed
-- uid: TUF.Combat.Bullets.SetAngularSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.SetAngularSpeedBPA.html#TUF_Combat_Bullets_SetAngularSpeedBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.SetAngularSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.SetAngularSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: SetAngularSpeedBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.SetAngularSpeedBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.SetAngularSpeedBPA.html#TUF_Combat_Bullets_SetAngularSpeedBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.SetAngularSpeedBPA.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.SetAngularSpeedBPA.Process
-  nameWithType: SetAngularSpeedBPA.Process
-- uid: TUF.Combat.Bullets.SetLifetimeBPA
-  name: SetLifetimeBPA
-  href: api/TUF.Combat.Bullets.SetLifetimeBPA.html
-  commentId: T:TUF.Combat.Bullets.SetLifetimeBPA
-  fullName: TUF.Combat.Bullets.SetLifetimeBPA
-  nameWithType: SetLifetimeBPA
-- uid: TUF.Combat.Bullets.SetLifetimeBPA.lifetime
-  name: lifetime
-  href: api/TUF.Combat.Bullets.SetLifetimeBPA.html#TUF_Combat_Bullets_SetLifetimeBPA_lifetime
-  commentId: F:TUF.Combat.Bullets.SetLifetimeBPA.lifetime
-  fullName: TUF.Combat.Bullets.SetLifetimeBPA.lifetime
-  nameWithType: SetLifetimeBPA.lifetime
-- uid: TUF.Combat.Bullets.SetLifetimeBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.SetLifetimeBPA.html#TUF_Combat_Bullets_SetLifetimeBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.SetLifetimeBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.SetLifetimeBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: SetLifetimeBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.SetLifetimeBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.SetLifetimeBPA.html#TUF_Combat_Bullets_SetLifetimeBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.SetLifetimeBPA.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.SetLifetimeBPA.Process
-  nameWithType: SetLifetimeBPA.Process
-- uid: TUF.Combat.Bullets.SetLocalAngularSpeedBPA
-  name: SetLocalAngularSpeedBPA
-  href: api/TUF.Combat.Bullets.SetLocalAngularSpeedBPA.html
-  commentId: T:TUF.Combat.Bullets.SetLocalAngularSpeedBPA
-  fullName: TUF.Combat.Bullets.SetLocalAngularSpeedBPA
-  nameWithType: SetLocalAngularSpeedBPA
-- uid: TUF.Combat.Bullets.SetLocalAngularSpeedBPA.localAngularSpeed
-  name: localAngularSpeed
-  href: api/TUF.Combat.Bullets.SetLocalAngularSpeedBPA.html#TUF_Combat_Bullets_SetLocalAngularSpeedBPA_localAngularSpeed
-  commentId: F:TUF.Combat.Bullets.SetLocalAngularSpeedBPA.localAngularSpeed
-  fullName: TUF.Combat.Bullets.SetLocalAngularSpeedBPA.localAngularSpeed
-  nameWithType: SetLocalAngularSpeedBPA.localAngularSpeed
-- uid: TUF.Combat.Bullets.SetLocalAngularSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.SetLocalAngularSpeedBPA.html#TUF_Combat_Bullets_SetLocalAngularSpeedBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.SetLocalAngularSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.SetLocalAngularSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: SetLocalAngularSpeedBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.SetLocalAngularSpeedBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.SetLocalAngularSpeedBPA.html#TUF_Combat_Bullets_SetLocalAngularSpeedBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.SetLocalAngularSpeedBPA.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.SetLocalAngularSpeedBPA.Process
-  nameWithType: SetLocalAngularSpeedBPA.Process
-- uid: TUF.Combat.Bullets.SetLocalSpeedBPA
-  name: SetLocalSpeedBPA
-  href: api/TUF.Combat.Bullets.SetLocalSpeedBPA.html
-  commentId: T:TUF.Combat.Bullets.SetLocalSpeedBPA
-  fullName: TUF.Combat.Bullets.SetLocalSpeedBPA
-  nameWithType: SetLocalSpeedBPA
-- uid: TUF.Combat.Bullets.SetLocalSpeedBPA.localSpeed
-  name: localSpeed
-  href: api/TUF.Combat.Bullets.SetLocalSpeedBPA.html#TUF_Combat_Bullets_SetLocalSpeedBPA_localSpeed
-  commentId: F:TUF.Combat.Bullets.SetLocalSpeedBPA.localSpeed
-  fullName: TUF.Combat.Bullets.SetLocalSpeedBPA.localSpeed
-  nameWithType: SetLocalSpeedBPA.localSpeed
-- uid: TUF.Combat.Bullets.SetLocalSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.SetLocalSpeedBPA.html#TUF_Combat_Bullets_SetLocalSpeedBPA_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.SetLocalSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.SetLocalSpeedBPA.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: SetLocalSpeedBPA.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.SetLocalSpeedBPA.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.SetLocalSpeedBPA.html#TUF_Combat_Bullets_SetLocalSpeedBPA_Process_
-  commentId: Overload:TUF.Combat.Bullets.SetLocalSpeedBPA.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.SetLocalSpeedBPA.Process
-  nameWithType: SetLocalSpeedBPA.Process
-- uid: TUF.Combat.Bullets.SetSpeedBulletPatternAction
-  name: SetSpeedBulletPatternAction
-  href: api/TUF.Combat.Bullets.SetSpeedBulletPatternAction.html
-  commentId: T:TUF.Combat.Bullets.SetSpeedBulletPatternAction
-  fullName: TUF.Combat.Bullets.SetSpeedBulletPatternAction
-  nameWithType: SetSpeedBulletPatternAction
-- uid: TUF.Combat.Bullets.SetSpeedBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.SetSpeedBulletPatternAction.html#TUF_Combat_Bullets_SetSpeedBulletPatternAction_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.SetSpeedBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.SetSpeedBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: SetSpeedBulletPatternAction.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.SetSpeedBulletPatternAction.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.SetSpeedBulletPatternAction.html#TUF_Combat_Bullets_SetSpeedBulletPatternAction_Process_
-  commentId: Overload:TUF.Combat.Bullets.SetSpeedBulletPatternAction.Process
-  isSpec: "True"
-  fullName: TUF.Combat.Bullets.SetSpeedBulletPatternAction.Process
-  nameWithType: SetSpeedBulletPatternAction.Process
-- uid: TUF.Combat.Bullets.SetSpeedBulletPatternAction.speed
+  href: api/TUF.Combat.Danmaku.DanmakuState.html#TUF_Combat_Danmaku_DanmakuState_angularSpeed
+  commentId: F:TUF.Combat.Danmaku.DanmakuState.angularSpeed
+  fullName: TUF.Combat.Danmaku.DanmakuState.angularSpeed
+  nameWithType: DanmakuState.angularSpeed
+- uid: TUF.Combat.Danmaku.DanmakuState.position
+  name: position
+  href: api/TUF.Combat.Danmaku.DanmakuState.html#TUF_Combat_Danmaku_DanmakuState_position
+  commentId: F:TUF.Combat.Danmaku.DanmakuState.position
+  fullName: TUF.Combat.Danmaku.DanmakuState.position
+  nameWithType: DanmakuState.position
+- uid: TUF.Combat.Danmaku.DanmakuState.rotation
+  name: rotation
+  href: api/TUF.Combat.Danmaku.DanmakuState.html#TUF_Combat_Danmaku_DanmakuState_rotation
+  commentId: F:TUF.Combat.Danmaku.DanmakuState.rotation
+  fullName: TUF.Combat.Danmaku.DanmakuState.rotation
+  nameWithType: DanmakuState.rotation
+- uid: TUF.Combat.Danmaku.DanmakuState.speed
   name: speed
-  href: api/TUF.Combat.Bullets.SetSpeedBulletPatternAction.html#TUF_Combat_Bullets_SetSpeedBulletPatternAction_speed
-  commentId: F:TUF.Combat.Bullets.SetSpeedBulletPatternAction.speed
-  fullName: TUF.Combat.Bullets.SetSpeedBulletPatternAction.speed
-  nameWithType: SetSpeedBulletPatternAction.speed
-- uid: TUF.Combat.Bullets.WaitBulletPatternAction
-  name: WaitBulletPatternAction
-  href: api/TUF.Combat.Bullets.WaitBulletPatternAction.html
-  commentId: T:TUF.Combat.Bullets.WaitBulletPatternAction
-  fullName: TUF.Combat.Bullets.WaitBulletPatternAction
-  nameWithType: WaitBulletPatternAction
-- uid: TUF.Combat.Bullets.WaitBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.Bullets.WaitBulletPatternAction.html#TUF_Combat_Bullets_WaitBulletPatternAction_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.Bullets.WaitBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.Bullets.WaitBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: WaitBulletPatternAction.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.Bullets.WaitBulletPatternAction.Process*
-  name: Process
-  href: api/TUF.Combat.Bullets.WaitBulletPatternAction.html#TUF_Combat_Bullets_WaitBulletPatternAction_Process_
-  commentId: Overload:TUF.Combat.Bullets.WaitBulletPatternAction.Process
+  href: api/TUF.Combat.Danmaku.DanmakuState.html#TUF_Combat_Danmaku_DanmakuState_speed
+  commentId: F:TUF.Combat.Danmaku.DanmakuState.speed
+  fullName: TUF.Combat.Danmaku.DanmakuState.speed
+  nameWithType: DanmakuState.speed
+- uid: TUF.Combat.Danmaku.DanmakuState.startPoint
+  name: startPoint
+  href: api/TUF.Combat.Danmaku.DanmakuState.html#TUF_Combat_Danmaku_DanmakuState_startPoint
+  commentId: F:TUF.Combat.Danmaku.DanmakuState.startPoint
+  fullName: TUF.Combat.Danmaku.DanmakuState.startPoint
+  nameWithType: DanmakuState.startPoint
+- uid: TUF.Combat.Danmaku.Fireable
+  name: Fireable
+  href: api/TUF.Combat.Danmaku.Fireable.html
+  commentId: T:TUF.Combat.Danmaku.Fireable
+  fullName: TUF.Combat.Danmaku.Fireable
+  nameWithType: Fireable
+- uid: TUF.Combat.Danmaku.Fireable.child
+  name: child
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_child
+  commentId: F:TUF.Combat.Danmaku.Fireable.child
+  fullName: TUF.Combat.Danmaku.Fireable.child
+  nameWithType: Fireable.child
+- uid: TUF.Combat.Danmaku.Fireable.Child
+  name: Child
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_Child
+  commentId: P:TUF.Combat.Danmaku.Fireable.Child
+  fullName: TUF.Combat.Danmaku.Fireable.Child
+  nameWithType: Fireable.Child
+- uid: TUF.Combat.Danmaku.Fireable.Child*
+  name: Child
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_Child_
+  commentId: Overload:TUF.Combat.Danmaku.Fireable.Child
   isSpec: "True"
-  fullName: TUF.Combat.Bullets.WaitBulletPatternAction.Process
-  nameWithType: WaitBulletPatternAction.Process
-- uid: TUF.Combat.Bullets.WaitBulletPatternAction.variableName
-  name: variableName
-  href: api/TUF.Combat.Bullets.WaitBulletPatternAction.html#TUF_Combat_Bullets_WaitBulletPatternAction_variableName
-  commentId: F:TUF.Combat.Bullets.WaitBulletPatternAction.variableName
-  fullName: TUF.Combat.Bullets.WaitBulletPatternAction.variableName
-  nameWithType: WaitBulletPatternAction.variableName
-- uid: TUF.Combat.Bullets.WaitBulletPatternAction.waitFrames
-  name: waitFrames
-  href: api/TUF.Combat.Bullets.WaitBulletPatternAction.html#TUF_Combat_Bullets_WaitBulletPatternAction_waitFrames
-  commentId: F:TUF.Combat.Bullets.WaitBulletPatternAction.waitFrames
-  fullName: TUF.Combat.Bullets.WaitBulletPatternAction.waitFrames
-  nameWithType: WaitBulletPatternAction.waitFrames
+  fullName: TUF.Combat.Danmaku.Fireable.Child
+  nameWithType: Fireable.Child
+- uid: TUF.Combat.Danmaku.Fireable.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.Fireable.DrawInspector
+  fullName: TUF.Combat.Danmaku.Fireable.DrawInspector()
+  nameWithType: Fireable.DrawInspector()
+- uid: TUF.Combat.Danmaku.Fireable.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.Fireable.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireable.DrawInspector
+  nameWithType: Fireable.DrawInspector
+- uid: TUF.Combat.Danmaku.Fireable.Fire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  name: Fire(FireableInfo, DanmakuConfig)
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_Fire_TUF_Combat_Danmaku_FireableInfo_TUF_Combat_Danmaku_DanmakuConfig_
+  commentId: M:TUF.Combat.Danmaku.Fireable.Fire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  fullName: TUF.Combat.Danmaku.Fireable.Fire(TUF.Combat.Danmaku.FireableInfo, TUF.Combat.Danmaku.DanmakuConfig)
+  nameWithType: Fireable.Fire(FireableInfo, DanmakuConfig)
+- uid: TUF.Combat.Danmaku.Fireable.Fire*
+  name: Fire
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_Fire_
+  commentId: Overload:TUF.Combat.Danmaku.Fireable.Fire
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireable.Fire
+  nameWithType: Fireable.Fire
+- uid: TUF.Combat.Danmaku.Fireable.SubFire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  name: SubFire(FireableInfo, DanmakuConfig)
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_SubFire_TUF_Combat_Danmaku_FireableInfo_TUF_Combat_Danmaku_DanmakuConfig_
+  commentId: M:TUF.Combat.Danmaku.Fireable.SubFire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  fullName: TUF.Combat.Danmaku.Fireable.SubFire(TUF.Combat.Danmaku.FireableInfo, TUF.Combat.Danmaku.DanmakuConfig)
+  nameWithType: Fireable.SubFire(FireableInfo, DanmakuConfig)
+- uid: TUF.Combat.Danmaku.Fireable.SubFire*
+  name: SubFire
+  href: api/TUF.Combat.Danmaku.Fireable.html#TUF_Combat_Danmaku_Fireable_SubFire_
+  commentId: Overload:TUF.Combat.Danmaku.Fireable.SubFire
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireable.SubFire
+  nameWithType: Fireable.SubFire
+- uid: TUF.Combat.Danmaku.FireableExtensions
+  name: FireableExtensions
+  href: api/TUF.Combat.Danmaku.FireableExtensions.html
+  commentId: T:TUF.Combat.Danmaku.FireableExtensions
+  fullName: TUF.Combat.Danmaku.FireableExtensions
+  nameWithType: FireableExtensions
+- uid: TUF.Combat.Danmaku.FireableExtensions.Of(TUF.Combat.Danmaku.Fireable,TUF.Combat.Danmaku.Fireable)
+  name: Of(Fireable, Fireable)
+  href: api/TUF.Combat.Danmaku.FireableExtensions.html#TUF_Combat_Danmaku_FireableExtensions_Of_TUF_Combat_Danmaku_Fireable_TUF_Combat_Danmaku_Fireable_
+  commentId: M:TUF.Combat.Danmaku.FireableExtensions.Of(TUF.Combat.Danmaku.Fireable,TUF.Combat.Danmaku.Fireable)
+  fullName: TUF.Combat.Danmaku.FireableExtensions.Of(TUF.Combat.Danmaku.Fireable, TUF.Combat.Danmaku.Fireable)
+  nameWithType: FireableExtensions.Of(Fireable, Fireable)
+- uid: TUF.Combat.Danmaku.FireableExtensions.Of*
+  name: Of
+  href: api/TUF.Combat.Danmaku.FireableExtensions.html#TUF_Combat_Danmaku_FireableExtensions_Of_
+  commentId: Overload:TUF.Combat.Danmaku.FireableExtensions.Of
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.FireableExtensions.Of
+  nameWithType: FireableExtensions.Of
+- uid: TUF.Combat.Danmaku.FireableInfo
+  name: FireableInfo
+  href: api/TUF.Combat.Danmaku.FireableInfo.html
+  commentId: T:TUF.Combat.Danmaku.FireableInfo
+  fullName: TUF.Combat.Danmaku.FireableInfo
+  nameWithType: FireableInfo
+- uid: TUF.Combat.Danmaku.FireableInfo.bullets
+  name: bullets
+  href: api/TUF.Combat.Danmaku.FireableInfo.html#TUF_Combat_Danmaku_FireableInfo_bullets
+  commentId: F:TUF.Combat.Danmaku.FireableInfo.bullets
+  fullName: TUF.Combat.Danmaku.FireableInfo.bullets
+  nameWithType: FireableInfo.bullets
+- uid: TUF.Combat.Danmaku.FireableInfo.bulletsConfig
+  name: bulletsConfig
+  href: api/TUF.Combat.Danmaku.FireableInfo.html#TUF_Combat_Danmaku_FireableInfo_bulletsConfig
+  commentId: F:TUF.Combat.Danmaku.FireableInfo.bulletsConfig
+  fullName: TUF.Combat.Danmaku.FireableInfo.bulletsConfig
+  nameWithType: FireableInfo.bulletsConfig
+- uid: TUF.Combat.Danmaku.FireableInfo.modifiers
+  name: modifiers
+  href: api/TUF.Combat.Danmaku.FireableInfo.html#TUF_Combat_Danmaku_FireableInfo_modifiers
+  commentId: F:TUF.Combat.Danmaku.FireableInfo.modifiers
+  fullName: TUF.Combat.Danmaku.FireableInfo.modifiers
+  nameWithType: FireableInfo.modifiers
+- uid: TUF.Combat.Danmaku.Fireables
+  name: TUF.Combat.Danmaku.Fireables
+  href: api/TUF.Combat.Danmaku.Fireables.html
+  commentId: N:TUF.Combat.Danmaku.Fireables
+  fullName: TUF.Combat.Danmaku.Fireables
+  nameWithType: TUF.Combat.Danmaku.Fireables
+- uid: TUF.Combat.Danmaku.Fireables.Circle
+  name: Circle
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html
+  commentId: T:TUF.Combat.Danmaku.Fireables.Circle
+  fullName: TUF.Combat.Danmaku.Fireables.Circle
+  nameWithType: Circle
+- uid: TUF.Combat.Danmaku.Fireables.Circle.#ctor
+  name: Circle()
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle__ctor
+  commentId: M:TUF.Combat.Danmaku.Fireables.Circle.#ctor
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.Circle()
+  nameWithType: Circle.Circle()
+- uid: TUF.Combat.Danmaku.Fireables.Circle.#ctor(Range,Range)
+  name: Circle(Range, Range)
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle__ctor_Range_Range_
+  commentId: M:TUF.Combat.Danmaku.Fireables.Circle.#ctor(Range,Range)
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.Circle(Range, Range)
+  nameWithType: Circle.Circle(Range, Range)
+- uid: TUF.Combat.Danmaku.Fireables.Circle.#ctor*
+  name: Circle
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle__ctor_
+  commentId: Overload:TUF.Combat.Danmaku.Fireables.Circle.#ctor
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.Circle
+  nameWithType: Circle.Circle
+- uid: TUF.Combat.Danmaku.Fireables.Circle.count
+  name: count
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle_count
+  commentId: F:TUF.Combat.Danmaku.Fireables.Circle.count
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.count
+  nameWithType: Circle.count
+- uid: TUF.Combat.Danmaku.Fireables.Circle.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.Fireables.Circle.DrawInspector
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.DrawInspector()
+  nameWithType: Circle.DrawInspector()
+- uid: TUF.Combat.Danmaku.Fireables.Circle.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.Fireables.Circle.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.DrawInspector
+  nameWithType: Circle.DrawInspector
+- uid: TUF.Combat.Danmaku.Fireables.Circle.Fire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  name: Fire(FireableInfo, DanmakuConfig)
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle_Fire_TUF_Combat_Danmaku_FireableInfo_TUF_Combat_Danmaku_DanmakuConfig_
+  commentId: M:TUF.Combat.Danmaku.Fireables.Circle.Fire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.Fire(TUF.Combat.Danmaku.FireableInfo, TUF.Combat.Danmaku.DanmakuConfig)
+  nameWithType: Circle.Fire(FireableInfo, DanmakuConfig)
+- uid: TUF.Combat.Danmaku.Fireables.Circle.Fire*
+  name: Fire
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle_Fire_
+  commentId: Overload:TUF.Combat.Danmaku.Fireables.Circle.Fire
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.Fire
+  nameWithType: Circle.Fire
+- uid: TUF.Combat.Danmaku.Fireables.Circle.radius
+  name: radius
+  href: api/TUF.Combat.Danmaku.Fireables.Circle.html#TUF_Combat_Danmaku_Fireables_Circle_radius
+  commentId: F:TUF.Combat.Danmaku.Fireables.Circle.radius
+  fullName: TUF.Combat.Danmaku.Fireables.Circle.radius
+  nameWithType: Circle.radius
+- uid: TUF.Combat.Danmaku.Fireables.Line
+  name: Line
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html
+  commentId: T:TUF.Combat.Danmaku.Fireables.Line
+  fullName: TUF.Combat.Danmaku.Fireables.Line
+  nameWithType: Line
+- uid: TUF.Combat.Danmaku.Fireables.Line.#ctor
+  name: Line()
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line__ctor
+  commentId: M:TUF.Combat.Danmaku.Fireables.Line.#ctor
+  fullName: TUF.Combat.Danmaku.Fireables.Line.Line()
+  nameWithType: Line.Line()
+- uid: TUF.Combat.Danmaku.Fireables.Line.#ctor(Range,TUF.Core.Range3)
+  name: Line(Range, Range3)
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line__ctor_Range_TUF_Core_Range3_
+  commentId: M:TUF.Combat.Danmaku.Fireables.Line.#ctor(Range,TUF.Core.Range3)
+  fullName: TUF.Combat.Danmaku.Fireables.Line.Line(Range, TUF.Core.Range3)
+  nameWithType: Line.Line(Range, Range3)
+- uid: TUF.Combat.Danmaku.Fireables.Line.#ctor*
+  name: Line
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line__ctor_
+  commentId: Overload:TUF.Combat.Danmaku.Fireables.Line.#ctor
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireables.Line.Line
+  nameWithType: Line.Line
+- uid: TUF.Combat.Danmaku.Fireables.Line.count
+  name: count
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line_count
+  commentId: F:TUF.Combat.Danmaku.Fireables.Line.count
+  fullName: TUF.Combat.Danmaku.Fireables.Line.count
+  nameWithType: Line.count
+- uid: TUF.Combat.Danmaku.Fireables.Line.deltaSpeed
+  name: deltaSpeed
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line_deltaSpeed
+  commentId: F:TUF.Combat.Danmaku.Fireables.Line.deltaSpeed
+  fullName: TUF.Combat.Danmaku.Fireables.Line.deltaSpeed
+  nameWithType: Line.deltaSpeed
+- uid: TUF.Combat.Danmaku.Fireables.Line.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.Fireables.Line.DrawInspector
+  fullName: TUF.Combat.Danmaku.Fireables.Line.DrawInspector()
+  nameWithType: Line.DrawInspector()
+- uid: TUF.Combat.Danmaku.Fireables.Line.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.Fireables.Line.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireables.Line.DrawInspector
+  nameWithType: Line.DrawInspector
+- uid: TUF.Combat.Danmaku.Fireables.Line.Fire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  name: Fire(FireableInfo, DanmakuConfig)
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line_Fire_TUF_Combat_Danmaku_FireableInfo_TUF_Combat_Danmaku_DanmakuConfig_
+  commentId: M:TUF.Combat.Danmaku.Fireables.Line.Fire(TUF.Combat.Danmaku.FireableInfo,TUF.Combat.Danmaku.DanmakuConfig)
+  fullName: TUF.Combat.Danmaku.Fireables.Line.Fire(TUF.Combat.Danmaku.FireableInfo, TUF.Combat.Danmaku.DanmakuConfig)
+  nameWithType: Line.Fire(FireableInfo, DanmakuConfig)
+- uid: TUF.Combat.Danmaku.Fireables.Line.Fire*
+  name: Fire
+  href: api/TUF.Combat.Danmaku.Fireables.Line.html#TUF_Combat_Danmaku_Fireables_Line_Fire_
+  commentId: Overload:TUF.Combat.Danmaku.Fireables.Line.Fire
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Fireables.Line.Fire
+  nameWithType: Line.Fire
+- uid: TUF.Combat.Danmaku.FireAction
+  name: FireAction
+  href: api/TUF.Combat.Danmaku.FireAction.html
+  commentId: T:TUF.Combat.Danmaku.FireAction
+  fullName: TUF.Combat.Danmaku.FireAction
+  nameWithType: FireAction
+- uid: TUF.Combat.Danmaku.FireAction.actionTypes
+  name: actionTypes
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_actionTypes
+  commentId: F:TUF.Combat.Danmaku.FireAction.actionTypes
+  fullName: TUF.Combat.Danmaku.FireAction.actionTypes
+  nameWithType: FireAction.actionTypes
+- uid: TUF.Combat.Danmaku.FireAction.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.FireAction.DrawInspector
+  fullName: TUF.Combat.Danmaku.FireAction.DrawInspector()
+  nameWithType: FireAction.DrawInspector()
+- uid: TUF.Combat.Danmaku.FireAction.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.FireAction.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.FireAction.DrawInspector
+  nameWithType: FireAction.DrawInspector
+- uid: TUF.Combat.Danmaku.FireAction.fireable
+  name: fireable
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_fireable
+  commentId: F:TUF.Combat.Danmaku.FireAction.fireable
+  fullName: TUF.Combat.Danmaku.FireAction.fireable
+  nameWithType: FireAction.fireable
+- uid: TUF.Combat.Danmaku.FireAction.id
+  name: id
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_id
+  commentId: F:TUF.Combat.Danmaku.FireAction.id
+  fullName: TUF.Combat.Danmaku.FireAction.id
+  nameWithType: FireAction.id
+- uid: TUF.Combat.Danmaku.FireAction.positionOffset
+  name: positionOffset
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_positionOffset
+  commentId: F:TUF.Combat.Danmaku.FireAction.positionOffset
+  fullName: TUF.Combat.Danmaku.FireAction.positionOffset
+  nameWithType: FireAction.positionOffset
+- uid: TUF.Combat.Danmaku.FireAction.rotationOffset
+  name: rotationOffset
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_rotationOffset
+  commentId: F:TUF.Combat.Danmaku.FireAction.rotationOffset
+  fullName: TUF.Combat.Danmaku.FireAction.rotationOffset
+  nameWithType: FireAction.rotationOffset
+- uid: TUF.Combat.Danmaku.FireAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  name: Tick(DanmakuManager, DanmakuSequenceInfo)
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_Tick_TUF_Combat_Danmaku_DanmakuManager_TUF_Combat_Danmaku_DanmakuSequenceInfo_
+  commentId: M:TUF.Combat.Danmaku.FireAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  fullName: TUF.Combat.Danmaku.FireAction.Tick(TUF.Combat.Danmaku.DanmakuManager, TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  nameWithType: FireAction.Tick(DanmakuManager, DanmakuSequenceInfo)
+- uid: TUF.Combat.Danmaku.FireAction.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.FireAction.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.FireAction.Tick
+  nameWithType: FireAction.Tick
+- uid: TUF.Combat.Danmaku.Modifiers
+  name: TUF.Combat.Danmaku.Modifiers
+  href: api/TUF.Combat.Danmaku.Modifiers.html
+  commentId: N:TUF.Combat.Danmaku.Modifiers
+  fullName: TUF.Combat.Danmaku.Modifiers
+  nameWithType: TUF.Combat.Danmaku.Modifiers
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration
+  name: DanmakuAcceleration
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.html
+  commentId: T:TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration
+  nameWithType: DanmakuAcceleration
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.accel
+  name: accel
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.html#TUF_Combat_Danmaku_Modifiers_DanmakuAcceleration_accel
+  commentId: F:TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.accel
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.accel
+  nameWithType: DanmakuAcceleration.accel
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Apply(TUF.Combat.Danmaku.FireableInfo)
+  name: Apply(FireableInfo)
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.html#TUF_Combat_Danmaku_Modifiers_DanmakuAcceleration_Apply_TUF_Combat_Danmaku_FireableInfo_
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Apply(TUF.Combat.Danmaku.FireableInfo)
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Apply(TUF.Combat.Danmaku.FireableInfo)
+  nameWithType: DanmakuAcceleration.Apply(FireableInfo)
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Apply*
+  name: Apply
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.html#TUF_Combat_Danmaku_Modifiers_DanmakuAcceleration_Apply_
+  commentId: Overload:TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Apply
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Apply
+  nameWithType: DanmakuAcceleration.Apply
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  name: Copy(DanmakuModifier)
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.html#TUF_Combat_Danmaku_Modifiers_DanmakuAcceleration_Copy_TUF_Combat_Danmaku_Modifiers_DanmakuModifier_
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  nameWithType: DanmakuAcceleration.Copy(DanmakuModifier)
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Copy*
+  name: Copy
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.html#TUF_Combat_Danmaku_Modifiers_DanmakuAcceleration_Copy_
+  commentId: Overload:TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Copy
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuAcceleration.Copy
+  nameWithType: DanmakuAcceleration.Copy
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuDampen
+  name: DanmakuDampen
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuDampen.html
+  commentId: T:TUF.Combat.Danmaku.Modifiers.DanmakuDampen
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuDampen
+  nameWithType: DanmakuDampen
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  name: Copy(DanmakuModifier)
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuDampen.html#TUF_Combat_Danmaku_Modifiers_DanmakuDampen_Copy_TUF_Combat_Danmaku_Modifiers_DanmakuModifier_
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  nameWithType: DanmakuDampen.Copy(DanmakuModifier)
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Copy*
+  name: Copy
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuDampen.html#TUF_Combat_Danmaku_Modifiers_DanmakuDampen_Copy_
+  commentId: Overload:TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Copy
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Copy
+  nameWithType: DanmakuDampen.Copy
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.damp
+  name: damp
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuDampen.html#TUF_Combat_Danmaku_Modifiers_DanmakuDampen_damp
+  commentId: F:TUF.Combat.Danmaku.Modifiers.DanmakuDampen.damp
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.damp
+  nameWithType: DanmakuDampen.damp
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Tick(TUF.Combat.Danmaku.FireableInfo)
+  name: Tick(FireableInfo)
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuDampen.html#TUF_Combat_Danmaku_Modifiers_DanmakuDampen_Tick_TUF_Combat_Danmaku_FireableInfo_
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Tick(TUF.Combat.Danmaku.FireableInfo)
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Tick(TUF.Combat.Danmaku.FireableInfo)
+  nameWithType: DanmakuDampen.Tick(FireableInfo)
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuDampen.html#TUF_Combat_Danmaku_Modifiers_DanmakuDampen_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuDampen.Tick
+  nameWithType: DanmakuDampen.Tick
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier
+  name: DanmakuModifier
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html
+  commentId: T:TUF.Combat.Danmaku.Modifiers.DanmakuModifier
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier
+  nameWithType: DanmakuModifier
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.#ctor
+  name: DanmakuModifier()
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier__ctor
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.#ctor
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.DanmakuModifier()
+  nameWithType: DanmakuModifier.DanmakuModifier()
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.#ctor(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  name: DanmakuModifier(DanmakuModifier)
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier__ctor_TUF_Combat_Danmaku_Modifiers_DanmakuModifier_
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.#ctor(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.DanmakuModifier(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  nameWithType: DanmakuModifier.DanmakuModifier(DanmakuModifier)
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.#ctor*
+  name: DanmakuModifier
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier__ctor_
+  commentId: Overload:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.#ctor
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.DanmakuModifier
+  nameWithType: DanmakuModifier.DanmakuModifier
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Apply(TUF.Combat.Danmaku.FireableInfo)
+  name: Apply(FireableInfo)
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier_Apply_TUF_Combat_Danmaku_FireableInfo_
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Apply(TUF.Combat.Danmaku.FireableInfo)
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Apply(TUF.Combat.Danmaku.FireableInfo)
+  nameWithType: DanmakuModifier.Apply(FireableInfo)
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Apply*
+  name: Apply
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier_Apply_
+  commentId: Overload:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Apply
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Apply
+  nameWithType: DanmakuModifier.Apply
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  name: Copy(DanmakuModifier)
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier_Copy_TUF_Combat_Danmaku_Modifiers_DanmakuModifier_
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Copy(TUF.Combat.Danmaku.Modifiers.DanmakuModifier)
+  nameWithType: DanmakuModifier.Copy(DanmakuModifier)
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Copy*
+  name: Copy
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier_Copy_
+  commentId: Overload:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Copy
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Copy
+  nameWithType: DanmakuModifier.Copy
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Tick(TUF.Combat.Danmaku.FireableInfo)
+  name: Tick(FireableInfo)
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier_Tick_TUF_Combat_Danmaku_FireableInfo_
+  commentId: M:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Tick(TUF.Combat.Danmaku.FireableInfo)
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Tick(TUF.Combat.Danmaku.FireableInfo)
+  nameWithType: DanmakuModifier.Tick(FireableInfo)
+- uid: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.Modifiers.DanmakuModifier.html#TUF_Combat_Danmaku_Modifiers_DanmakuModifier_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Modifiers.DanmakuModifier.Tick
+  nameWithType: DanmakuModifier.Tick
+- uid: TUF.Combat.Danmaku.ModifyStateAction
+  name: ModifyStateAction
+  href: api/TUF.Combat.Danmaku.ModifyStateAction.html
+  commentId: T:TUF.Combat.Danmaku.ModifyStateAction
+  fullName: TUF.Combat.Danmaku.ModifyStateAction
+  nameWithType: ModifyStateAction
+- uid: TUF.Combat.Danmaku.ModifyStateAction.bulletSets
+  name: bulletSets
+  href: api/TUF.Combat.Danmaku.ModifyStateAction.html#TUF_Combat_Danmaku_ModifyStateAction_bulletSets
+  commentId: F:TUF.Combat.Danmaku.ModifyStateAction.bulletSets
+  fullName: TUF.Combat.Danmaku.ModifyStateAction.bulletSets
+  nameWithType: ModifyStateAction.bulletSets
+- uid: TUF.Combat.Danmaku.ModifyStateAction.config
+  name: config
+  href: api/TUF.Combat.Danmaku.ModifyStateAction.html#TUF_Combat_Danmaku_ModifyStateAction_config
+  commentId: F:TUF.Combat.Danmaku.ModifyStateAction.config
+  fullName: TUF.Combat.Danmaku.ModifyStateAction.config
+  nameWithType: ModifyStateAction.config
+- uid: TUF.Combat.Danmaku.ModifyStateAction.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.ModifyStateAction.html#TUF_Combat_Danmaku_ModifyStateAction_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.ModifyStateAction.DrawInspector
+  fullName: TUF.Combat.Danmaku.ModifyStateAction.DrawInspector()
+  nameWithType: ModifyStateAction.DrawInspector()
+- uid: TUF.Combat.Danmaku.ModifyStateAction.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.ModifyStateAction.html#TUF_Combat_Danmaku_ModifyStateAction_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.ModifyStateAction.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.ModifyStateAction.DrawInspector
+  nameWithType: ModifyStateAction.DrawInspector
+- uid: TUF.Combat.Danmaku.ModifyStateAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  name: Tick(DanmakuManager, DanmakuSequenceInfo)
+  href: api/TUF.Combat.Danmaku.ModifyStateAction.html#TUF_Combat_Danmaku_ModifyStateAction_Tick_TUF_Combat_Danmaku_DanmakuManager_TUF_Combat_Danmaku_DanmakuSequenceInfo_
+  commentId: M:TUF.Combat.Danmaku.ModifyStateAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  fullName: TUF.Combat.Danmaku.ModifyStateAction.Tick(TUF.Combat.Danmaku.DanmakuManager, TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  nameWithType: ModifyStateAction.Tick(DanmakuManager, DanmakuSequenceInfo)
+- uid: TUF.Combat.Danmaku.ModifyStateAction.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.ModifyStateAction.html#TUF_Combat_Danmaku_ModifyStateAction_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.ModifyStateAction.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.ModifyStateAction.Tick
+  nameWithType: ModifyStateAction.Tick
+- uid: TUF.Combat.Danmaku.RemoveModifierAction
+  name: RemoveModifierAction
+  href: api/TUF.Combat.Danmaku.RemoveModifierAction.html
+  commentId: T:TUF.Combat.Danmaku.RemoveModifierAction
+  fullName: TUF.Combat.Danmaku.RemoveModifierAction
+  nameWithType: RemoveModifierAction
+- uid: TUF.Combat.Danmaku.RemoveModifierAction.bulletSets
+  name: bulletSets
+  href: api/TUF.Combat.Danmaku.RemoveModifierAction.html#TUF_Combat_Danmaku_RemoveModifierAction_bulletSets
+  commentId: F:TUF.Combat.Danmaku.RemoveModifierAction.bulletSets
+  fullName: TUF.Combat.Danmaku.RemoveModifierAction.bulletSets
+  nameWithType: RemoveModifierAction.bulletSets
+- uid: TUF.Combat.Danmaku.RemoveModifierAction.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.RemoveModifierAction.html#TUF_Combat_Danmaku_RemoveModifierAction_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.RemoveModifierAction.DrawInspector
+  fullName: TUF.Combat.Danmaku.RemoveModifierAction.DrawInspector()
+  nameWithType: RemoveModifierAction.DrawInspector()
+- uid: TUF.Combat.Danmaku.RemoveModifierAction.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.RemoveModifierAction.html#TUF_Combat_Danmaku_RemoveModifierAction_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.RemoveModifierAction.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.RemoveModifierAction.DrawInspector
+  nameWithType: RemoveModifierAction.DrawInspector
+- uid: TUF.Combat.Danmaku.RemoveModifierAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  name: Tick(DanmakuManager, DanmakuSequenceInfo)
+  href: api/TUF.Combat.Danmaku.RemoveModifierAction.html#TUF_Combat_Danmaku_RemoveModifierAction_Tick_TUF_Combat_Danmaku_DanmakuManager_TUF_Combat_Danmaku_DanmakuSequenceInfo_
+  commentId: M:TUF.Combat.Danmaku.RemoveModifierAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  fullName: TUF.Combat.Danmaku.RemoveModifierAction.Tick(TUF.Combat.Danmaku.DanmakuManager, TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  nameWithType: RemoveModifierAction.Tick(DanmakuManager, DanmakuSequenceInfo)
+- uid: TUF.Combat.Danmaku.RemoveModifierAction.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.RemoveModifierAction.html#TUF_Combat_Danmaku_RemoveModifierAction_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.RemoveModifierAction.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.RemoveModifierAction.Tick
+  nameWithType: RemoveModifierAction.Tick
+- uid: TUF.Combat.Danmaku.WaitAction
+  name: WaitAction
+  href: api/TUF.Combat.Danmaku.WaitAction.html
+  commentId: T:TUF.Combat.Danmaku.WaitAction
+  fullName: TUF.Combat.Danmaku.WaitAction
+  nameWithType: WaitAction
+- uid: TUF.Combat.Danmaku.WaitAction.DrawInspector
+  name: DrawInspector()
+  href: api/TUF.Combat.Danmaku.WaitAction.html#TUF_Combat_Danmaku_WaitAction_DrawInspector
+  commentId: M:TUF.Combat.Danmaku.WaitAction.DrawInspector
+  fullName: TUF.Combat.Danmaku.WaitAction.DrawInspector()
+  nameWithType: WaitAction.DrawInspector()
+- uid: TUF.Combat.Danmaku.WaitAction.DrawInspector*
+  name: DrawInspector
+  href: api/TUF.Combat.Danmaku.WaitAction.html#TUF_Combat_Danmaku_WaitAction_DrawInspector_
+  commentId: Overload:TUF.Combat.Danmaku.WaitAction.DrawInspector
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.WaitAction.DrawInspector
+  nameWithType: WaitAction.DrawInspector
+- uid: TUF.Combat.Danmaku.WaitAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  name: Tick(DanmakuManager, DanmakuSequenceInfo)
+  href: api/TUF.Combat.Danmaku.WaitAction.html#TUF_Combat_Danmaku_WaitAction_Tick_TUF_Combat_Danmaku_DanmakuManager_TUF_Combat_Danmaku_DanmakuSequenceInfo_
+  commentId: M:TUF.Combat.Danmaku.WaitAction.Tick(TUF.Combat.Danmaku.DanmakuManager,TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  fullName: TUF.Combat.Danmaku.WaitAction.Tick(TUF.Combat.Danmaku.DanmakuManager, TUF.Combat.Danmaku.DanmakuSequenceInfo)
+  nameWithType: WaitAction.Tick(DanmakuManager, DanmakuSequenceInfo)
+- uid: TUF.Combat.Danmaku.WaitAction.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.WaitAction.html#TUF_Combat_Danmaku_WaitAction_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.WaitAction.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.WaitAction.Tick
+  nameWithType: WaitAction.Tick
+- uid: TUF.Combat.Danmaku.WaitAction.waitTime
+  name: waitTime
+  href: api/TUF.Combat.Danmaku.WaitAction.html#TUF_Combat_Danmaku_WaitAction_waitTime
+  commentId: F:TUF.Combat.Danmaku.WaitAction.waitTime
+  fullName: TUF.Combat.Danmaku.WaitAction.waitTime
+  nameWithType: WaitAction.waitTime
 - uid: TUF.Combat.DetectionBox
   name: DetectionBox
   href: api/TUF.Combat.DetectionBox.html
@@ -1372,12 +1578,12 @@ references:
   commentId: F:TUF.Combat.DetectionBox.owner
   fullName: TUF.Combat.DetectionBox.owner
   nameWithType: DetectionBox.owner
-- uid: TUF.Combat.DetectionBox.SimLateUpdate(System.Single)
-  name: SimLateUpdate(Single)
-  href: api/TUF.Combat.DetectionBox.html#TUF_Combat_DetectionBox_SimLateUpdate_System_Single_
-  commentId: M:TUF.Combat.DetectionBox.SimLateUpdate(System.Single)
-  fullName: TUF.Combat.DetectionBox.SimLateUpdate(System.Single)
-  nameWithType: DetectionBox.SimLateUpdate(Single)
+- uid: TUF.Combat.DetectionBox.SimLateUpdate
+  name: SimLateUpdate()
+  href: api/TUF.Combat.DetectionBox.html#TUF_Combat_DetectionBox_SimLateUpdate
+  commentId: M:TUF.Combat.DetectionBox.SimLateUpdate
+  fullName: TUF.Combat.DetectionBox.SimLateUpdate()
+  nameWithType: DetectionBox.SimLateUpdate()
 - uid: TUF.Combat.DetectionBox.SimLateUpdate*
   name: SimLateUpdate
   href: api/TUF.Combat.DetectionBox.html#TUF_Combat_DetectionBox_SimLateUpdate_
@@ -1980,43 +2186,6 @@ references:
   commentId: F:TUF.Combat.HurtReactions.Hit
   fullName: TUF.Combat.HurtReactions.Hit
   nameWithType: HurtReactions.Hit
-- uid: TUF.Combat.LoopBulletPatternAction
-  name: LoopBulletPatternAction
-  href: api/TUF.Combat.LoopBulletPatternAction.html
-  commentId: T:TUF.Combat.LoopBulletPatternAction
-  fullName: TUF.Combat.LoopBulletPatternAction
-  nameWithType: LoopBulletPatternAction
-- uid: TUF.Combat.LoopBulletPatternAction.loopAmount
-  name: loopAmount
-  href: api/TUF.Combat.LoopBulletPatternAction.html#TUF_Combat_LoopBulletPatternAction_loopAmount
-  commentId: F:TUF.Combat.LoopBulletPatternAction.loopAmount
-  fullName: TUF.Combat.LoopBulletPatternAction.loopAmount
-  nameWithType: LoopBulletPatternAction.loopAmount
-- uid: TUF.Combat.LoopBulletPatternAction.loopToPosition
-  name: loopToPosition
-  href: api/TUF.Combat.LoopBulletPatternAction.html#TUF_Combat_LoopBulletPatternAction_loopToPosition
-  commentId: F:TUF.Combat.LoopBulletPatternAction.loopToPosition
-  fullName: TUF.Combat.LoopBulletPatternAction.loopToPosition
-  nameWithType: LoopBulletPatternAction.loopToPosition
-- uid: TUF.Combat.LoopBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  name: Process(BulletPatternManager, Int32, BulletPatternData)
-  href: api/TUF.Combat.LoopBulletPatternAction.html#TUF_Combat_LoopBulletPatternAction_Process_TUF_Combat_Bullets_BulletPatternManager_System_Int32_TUF_Combat_Bullets_BulletPatternData_
-  commentId: M:TUF.Combat.LoopBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager,System.Int32,TUF.Combat.Bullets.BulletPatternData)
-  fullName: TUF.Combat.LoopBulletPatternAction.Process(TUF.Combat.Bullets.BulletPatternManager, System.Int32, TUF.Combat.Bullets.BulletPatternData)
-  nameWithType: LoopBulletPatternAction.Process(BulletPatternManager, Int32, BulletPatternData)
-- uid: TUF.Combat.LoopBulletPatternAction.Process*
-  name: Process
-  href: api/TUF.Combat.LoopBulletPatternAction.html#TUF_Combat_LoopBulletPatternAction_Process_
-  commentId: Overload:TUF.Combat.LoopBulletPatternAction.Process
-  isSpec: "True"
-  fullName: TUF.Combat.LoopBulletPatternAction.Process
-  nameWithType: LoopBulletPatternAction.Process
-- uid: TUF.Combat.LoopBulletPatternAction.variableName
-  name: variableName
-  href: api/TUF.Combat.LoopBulletPatternAction.html#TUF_Combat_LoopBulletPatternAction_variableName
-  commentId: F:TUF.Combat.LoopBulletPatternAction.variableName
-  fullName: TUF.Combat.LoopBulletPatternAction.variableName
-  nameWithType: LoopBulletPatternAction.variableName
 - uid: TUF.Combat.MovesetAttackNode
   name: MovesetAttackNode
   href: api/TUF.Combat.MovesetAttackNode.html
@@ -2869,6 +3038,19 @@ references:
   isSpec: "True"
   fullName: TUF.Core.Helpers.RemoveAllListeners
   nameWithType: Helpers.RemoveAllListeners
+- uid: TUF.Core.Helpers.RotatePointAroundPivot(Vector3,Vector3,Vector3)
+  name: RotatePointAroundPivot(Vector3, Vector3, Vector3)
+  href: api/TUF.Core.Helpers.html#TUF_Core_Helpers_RotatePointAroundPivot_Vector3_Vector3_Vector3_
+  commentId: M:TUF.Core.Helpers.RotatePointAroundPivot(Vector3,Vector3,Vector3)
+  fullName: TUF.Core.Helpers.RotatePointAroundPivot(Vector3, Vector3, Vector3)
+  nameWithType: Helpers.RotatePointAroundPivot(Vector3, Vector3, Vector3)
+- uid: TUF.Core.Helpers.RotatePointAroundPivot*
+  name: RotatePointAroundPivot
+  href: api/TUF.Core.Helpers.html#TUF_Core_Helpers_RotatePointAroundPivot_
+  commentId: Overload:TUF.Core.Helpers.RotatePointAroundPivot
+  isSpec: "True"
+  fullName: TUF.Core.Helpers.RotatePointAroundPivot
+  nameWithType: Helpers.RotatePointAroundPivot
 - uid: TUF.Core.Helpers.RoundFloat(System.Single)
   name: RoundFloat(Single)
   href: api/TUF.Core.Helpers.html#TUF_Core_Helpers_RoundFloat_System_Single_
@@ -2926,6 +3108,12 @@ references:
   commentId: F:TUF.Core.InputConstants.movementMagnitude
   fullName: TUF.Core.InputConstants.movementMagnitude
   nameWithType: InputConstants.movementMagnitude
+- uid: TUF.Core.InputConstants.movementSigma
+  name: movementSigma
+  href: api/TUF.Core.InputConstants.html#TUF_Core_InputConstants_movementSigma
+  commentId: F:TUF.Core.InputConstants.movementSigma
+  fullName: TUF.Core.InputConstants.movementSigma
+  nameWithType: InputConstants.movementSigma
 - uid: TUF.Core.MusicManager
   name: MusicManager
   href: api/TUF.Core.MusicManager.html
@@ -3236,6 +3424,88 @@ references:
   isSpec: "True"
   fullName: TUF.Core.PlayerCamera.UpdateTarget
   nameWithType: PlayerCamera.UpdateTarget
+- uid: TUF.Core.Range3
+  name: Range3
+  href: api/TUF.Core.Range3.html
+  commentId: T:TUF.Core.Range3
+  fullName: TUF.Core.Range3
+  nameWithType: Range3
+- uid: TUF.Core.Range3.#ctor(Range,Range,Range)
+  name: Range3(Range, Range, Range)
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3__ctor_Range_Range_Range_
+  commentId: M:TUF.Core.Range3.#ctor(Range,Range,Range)
+  fullName: TUF.Core.Range3.Range3(Range, Range, Range)
+  nameWithType: Range3.Range3(Range, Range, Range)
+- uid: TUF.Core.Range3.#ctor*
+  name: Range3
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3__ctor_
+  commentId: Overload:TUF.Core.Range3.#ctor
+  isSpec: "True"
+  fullName: TUF.Core.Range3.Range3
+  nameWithType: Range3.Range3
+- uid: TUF.Core.Range3.GetValue
+  name: GetValue()
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_GetValue
+  commentId: M:TUF.Core.Range3.GetValue
+  fullName: TUF.Core.Range3.GetValue()
+  nameWithType: Range3.GetValue()
+- uid: TUF.Core.Range3.GetValue*
+  name: GetValue
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_GetValue_
+  commentId: Overload:TUF.Core.Range3.GetValue
+  isSpec: "True"
+  fullName: TUF.Core.Range3.GetValue
+  nameWithType: Range3.GetValue
+- uid: TUF.Core.Range3.op_Addition(TUF.Core.Range3,TUF.Core.Range3)
+  name: Addition(Range3, Range3)
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_op_Addition_TUF_Core_Range3_TUF_Core_Range3_
+  commentId: M:TUF.Core.Range3.op_Addition(TUF.Core.Range3,TUF.Core.Range3)
+  fullName: TUF.Core.Range3.Addition(TUF.Core.Range3, TUF.Core.Range3)
+  nameWithType: Range3.Addition(Range3, Range3)
+- uid: TUF.Core.Range3.op_Addition(TUF.Core.Range3,Vector3)
+  name: Addition(Range3, Vector3)
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_op_Addition_TUF_Core_Range3_Vector3_
+  commentId: M:TUF.Core.Range3.op_Addition(TUF.Core.Range3,Vector3)
+  fullName: TUF.Core.Range3.Addition(TUF.Core.Range3, Vector3)
+  nameWithType: Range3.Addition(Range3, Vector3)
+- uid: TUF.Core.Range3.op_Addition*
+  name: Addition
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_op_Addition_
+  commentId: Overload:TUF.Core.Range3.op_Addition
+  isSpec: "True"
+  fullName: TUF.Core.Range3.Addition
+  nameWithType: Range3.Addition
+- uid: TUF.Core.Range3.op_Multiply(TUF.Core.Range3,System.Single)
+  name: Multiply(Range3, Single)
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_op_Multiply_TUF_Core_Range3_System_Single_
+  commentId: M:TUF.Core.Range3.op_Multiply(TUF.Core.Range3,System.Single)
+  fullName: TUF.Core.Range3.Multiply(TUF.Core.Range3, System.Single)
+  nameWithType: Range3.Multiply(Range3, Single)
+- uid: TUF.Core.Range3.op_Multiply*
+  name: Multiply
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_op_Multiply_
+  commentId: Overload:TUF.Core.Range3.op_Multiply
+  isSpec: "True"
+  fullName: TUF.Core.Range3.Multiply
+  nameWithType: Range3.Multiply
+- uid: TUF.Core.Range3.x
+  name: x
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_x
+  commentId: F:TUF.Core.Range3.x
+  fullName: TUF.Core.Range3.x
+  nameWithType: Range3.x
+- uid: TUF.Core.Range3.y
+  name: y
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_y
+  commentId: F:TUF.Core.Range3.y
+  fullName: TUF.Core.Range3.y
+  nameWithType: Range3.y
+- uid: TUF.Core.Range3.z
+  name: z
+  href: api/TUF.Core.Range3.html#TUF_Core_Range3_z
+  commentId: F:TUF.Core.Range3.z
+  fullName: TUF.Core.Range3.z
+  nameWithType: Range3.z
 - uid: TUF.Core.ReadOnlyAttribute
   name: ReadOnlyAttribute
   href: api/TUF.Core.ReadOnlyAttribute.html
@@ -3248,12 +3518,12 @@ references:
   commentId: T:TUF.Core.SimObjectManager
   fullName: TUF.Core.SimObjectManager
   nameWithType: SimObjectManager
-- uid: TUF.Core.SimObjectManager.SimulatePhysics(System.Single)
-  name: SimulatePhysics(Single)
-  href: api/TUF.Core.SimObjectManager.html#TUF_Core_SimObjectManager_SimulatePhysics_System_Single_
-  commentId: M:TUF.Core.SimObjectManager.SimulatePhysics(System.Single)
-  fullName: TUF.Core.SimObjectManager.SimulatePhysics(System.Single)
-  nameWithType: SimObjectManager.SimulatePhysics(Single)
+- uid: TUF.Core.SimObjectManager.SimulatePhysics
+  name: SimulatePhysics()
+  href: api/TUF.Core.SimObjectManager.html#TUF_Core_SimObjectManager_SimulatePhysics
+  commentId: M:TUF.Core.SimObjectManager.SimulatePhysics
+  fullName: TUF.Core.SimObjectManager.SimulatePhysics()
+  nameWithType: SimObjectManager.SimulatePhysics()
 - uid: TUF.Core.SimObjectManager.SimulatePhysics*
   name: SimulatePhysics
   href: api/TUF.Core.SimObjectManager.html#TUF_Core_SimObjectManager_SimulatePhysics_
@@ -3358,6 +3628,18 @@ references:
   commentId: F:TUF.Entities.Characters.BaseCharacterStates.FLOAT_DODGE
   fullName: TUF.Entities.Characters.BaseCharacterStates.FLOAT_DODGE
   nameWithType: BaseCharacterStates.FLOAT_DODGE
+- uid: TUF.Entities.Characters.BaseCharacterStates.LEDGE_HANG
+  name: LEDGE_HANG
+  href: api/TUF.Entities.Characters.BaseCharacterStates.html#TUF_Entities_Characters_BaseCharacterStates_LEDGE_HANG
+  commentId: F:TUF.Entities.Characters.BaseCharacterStates.LEDGE_HANG
+  fullName: TUF.Entities.Characters.BaseCharacterStates.LEDGE_HANG
+  nameWithType: BaseCharacterStates.LEDGE_HANG
+- uid: TUF.Entities.Characters.BaseCharacterStates.LEDGE_JUMP
+  name: LEDGE_JUMP
+  href: api/TUF.Entities.Characters.BaseCharacterStates.html#TUF_Entities_Characters_BaseCharacterStates_LEDGE_JUMP
+  commentId: F:TUF.Entities.Characters.BaseCharacterStates.LEDGE_JUMP
+  fullName: TUF.Entities.Characters.BaseCharacterStates.LEDGE_JUMP
+  nameWithType: BaseCharacterStates.LEDGE_JUMP
 - uid: TUF.Entities.Characters.BaseCharacterStates.SLIDE
   name: SLIDE
   href: api/TUF.Entities.Characters.BaseCharacterStates.html#TUF_Entities_Characters_BaseCharacterStates_SLIDE
@@ -3438,6 +3720,12 @@ references:
   commentId: F:TUF.Entities.Characters.CharacterManager.hoverMode
   fullName: TUF.Entities.Characters.CharacterManager.hoverMode
   nameWithType: CharacterManager.hoverMode
+- uid: TUF.Entities.Characters.CharacterManager.lastLedgePosition
+  name: lastLedgePosition
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_lastLedgePosition
+  commentId: F:TUF.Entities.Characters.CharacterManager.lastLedgePosition
+  fullName: TUF.Entities.Characters.CharacterManager.lastLedgePosition
+  nameWithType: CharacterManager.lastLedgePosition
 - uid: TUF.Entities.Characters.CharacterManager.lastWall
   name: lastWall
   href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_lastWall
@@ -3450,6 +3738,30 @@ references:
   commentId: F:TUF.Entities.Characters.CharacterManager.lastWallHit
   fullName: TUF.Entities.Characters.CharacterManager.lastWallHit
   nameWithType: CharacterManager.lastWallHit
+- uid: TUF.Entities.Characters.CharacterManager.ledgeDistance
+  name: ledgeDistance
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_ledgeDistance
+  commentId: F:TUF.Entities.Characters.CharacterManager.ledgeDistance
+  fullName: TUF.Entities.Characters.CharacterManager.ledgeDistance
+  nameWithType: CharacterManager.ledgeDistance
+- uid: TUF.Entities.Characters.CharacterManager.ledgeRayDistance
+  name: ledgeRayDistance
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_ledgeRayDistance
+  commentId: F:TUF.Entities.Characters.CharacterManager.ledgeRayDistance
+  fullName: TUF.Entities.Characters.CharacterManager.ledgeRayDistance
+  nameWithType: CharacterManager.ledgeRayDistance
+- uid: TUF.Entities.Characters.CharacterManager.ledgeRayOffset
+  name: ledgeRayOffset
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_ledgeRayOffset
+  commentId: F:TUF.Entities.Characters.CharacterManager.ledgeRayOffset
+  fullName: TUF.Entities.Characters.CharacterManager.ledgeRayOffset
+  nameWithType: CharacterManager.ledgeRayOffset
+- uid: TUF.Entities.Characters.CharacterManager.ledgeSphereRadius
+  name: ledgeSphereRadius
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_ledgeSphereRadius
+  commentId: F:TUF.Entities.Characters.CharacterManager.ledgeSphereRadius
+  fullName: TUF.Entities.Characters.CharacterManager.ledgeSphereRadius
+  nameWithType: CharacterManager.ledgeSphereRadius
 - uid: TUF.Entities.Characters.CharacterManager.ResetAirActions
   name: ResetAirActions()
   href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_ResetAirActions
@@ -3495,6 +3807,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Characters.CharacterManager.TryDash
   nameWithType: CharacterManager.TryDash
+- uid: TUF.Entities.Characters.CharacterManager.TryLedgeGrab
+  name: TryLedgeGrab()
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_TryLedgeGrab
+  commentId: M:TUF.Entities.Characters.CharacterManager.TryLedgeGrab
+  fullName: TUF.Entities.Characters.CharacterManager.TryLedgeGrab()
+  nameWithType: CharacterManager.TryLedgeGrab()
+- uid: TUF.Entities.Characters.CharacterManager.TryLedgeGrab*
+  name: TryLedgeGrab
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_TryLedgeGrab_
+  commentId: Overload:TUF.Entities.Characters.CharacterManager.TryLedgeGrab
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.CharacterManager.TryLedgeGrab
+  nameWithType: CharacterManager.TryLedgeGrab
 - uid: TUF.Entities.Characters.CharacterManager.TryWallRun
   name: TryWallRun()
   href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_TryWallRun
@@ -3593,6 +3918,12 @@ references:
   commentId: F:TUF.Entities.Characters.CharacterStats.airDashVelo
   fullName: TUF.Entities.Characters.CharacterStats.airDashVelo
   nameWithType: CharacterStats.airDashVelo
+- uid: TUF.Entities.Characters.CharacterStats.crouchHeight
+  name: crouchHeight
+  href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_crouchHeight
+  commentId: F:TUF.Entities.Characters.CharacterStats.crouchHeight
+  fullName: TUF.Entities.Characters.CharacterStats.crouchHeight
+  nameWithType: CharacterStats.crouchHeight
 - uid: TUF.Entities.Characters.CharacterStats.floatDashAcceleration
   name: floatDashAcceleration
   href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_floatDashAcceleration
@@ -3635,6 +3966,30 @@ references:
   commentId: F:TUF.Entities.Characters.CharacterStats.floatDodgeVelo
   fullName: TUF.Entities.Characters.CharacterStats.floatDodgeVelo
   nameWithType: CharacterStats.floatDodgeVelo
+- uid: TUF.Entities.Characters.CharacterStats.ledgeJumpAccel
+  name: ledgeJumpAccel
+  href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_ledgeJumpAccel
+  commentId: F:TUF.Entities.Characters.CharacterStats.ledgeJumpAccel
+  fullName: TUF.Entities.Characters.CharacterStats.ledgeJumpAccel
+  nameWithType: CharacterStats.ledgeJumpAccel
+- uid: TUF.Entities.Characters.CharacterStats.ledgeJumpMaxSpeed
+  name: ledgeJumpMaxSpeed
+  href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_ledgeJumpMaxSpeed
+  commentId: F:TUF.Entities.Characters.CharacterStats.ledgeJumpMaxSpeed
+  fullName: TUF.Entities.Characters.CharacterStats.ledgeJumpMaxSpeed
+  nameWithType: CharacterStats.ledgeJumpMaxSpeed
+- uid: TUF.Entities.Characters.CharacterStats.ledgeJumpMoveForce
+  name: ledgeJumpMoveForce
+  href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_ledgeJumpMoveForce
+  commentId: F:TUF.Entities.Characters.CharacterStats.ledgeJumpMoveForce
+  fullName: TUF.Entities.Characters.CharacterStats.ledgeJumpMoveForce
+  nameWithType: CharacterStats.ledgeJumpMoveForce
+- uid: TUF.Entities.Characters.CharacterStats.ledgeJumpYForce
+  name: ledgeJumpYForce
+  href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_ledgeJumpYForce
+  commentId: F:TUF.Entities.Characters.CharacterStats.ledgeJumpYForce
+  fullName: TUF.Entities.Characters.CharacterStats.ledgeJumpYForce
+  nameWithType: CharacterStats.ledgeJumpYForce
 - uid: TUF.Entities.Characters.CharacterStats.maxAirDashes
   name: maxAirDashes
   href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_maxAirDashes
@@ -3689,6 +4044,12 @@ references:
   commentId: F:TUF.Entities.Characters.CharacterStats.wallRunHorizontalSpeed
   fullName: TUF.Entities.Characters.CharacterStats.wallRunHorizontalSpeed
   nameWithType: CharacterStats.wallRunHorizontalSpeed
+- uid: TUF.Entities.Characters.CharacterStats.wallRunTime
+  name: wallRunTime
+  href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_wallRunTime
+  commentId: F:TUF.Entities.Characters.CharacterStats.wallRunTime
+  fullName: TUF.Entities.Characters.CharacterStats.wallRunTime
+  nameWithType: CharacterStats.wallRunTime
 - uid: TUF.Entities.Characters.CharacterStats.wallRunVerticalSpeed
   name: wallRunVerticalSpeed
   href: api/TUF.Entities.Characters.CharacterStats.html#TUF_Entities_Characters_CharacterStats_wallRunVerticalSpeed
@@ -4156,6 +4517,122 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Characters.States.CJumpSquat.CheckInterrupt
   nameWithType: CJumpSquat.CheckInterrupt
+- uid: TUF.Entities.Characters.States.CLedgeHang
+  name: CLedgeHang
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html
+  commentId: T:TUF.Entities.Characters.States.CLedgeHang
+  fullName: TUF.Entities.Characters.States.CLedgeHang
+  nameWithType: CLedgeHang
+- uid: TUF.Entities.Characters.States.CLedgeHang.CheckInterrupt
+  name: CheckInterrupt()
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html#TUF_Entities_Characters_States_CLedgeHang_CheckInterrupt
+  commentId: M:TUF.Entities.Characters.States.CLedgeHang.CheckInterrupt
+  fullName: TUF.Entities.Characters.States.CLedgeHang.CheckInterrupt()
+  nameWithType: CLedgeHang.CheckInterrupt()
+- uid: TUF.Entities.Characters.States.CLedgeHang.CheckInterrupt*
+  name: CheckInterrupt
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html#TUF_Entities_Characters_States_CLedgeHang_CheckInterrupt_
+  commentId: Overload:TUF.Entities.Characters.States.CLedgeHang.CheckInterrupt
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CLedgeHang.CheckInterrupt
+  nameWithType: CLedgeHang.CheckInterrupt
+- uid: TUF.Entities.Characters.States.CLedgeHang.GetName
+  name: GetName()
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html#TUF_Entities_Characters_States_CLedgeHang_GetName
+  commentId: M:TUF.Entities.Characters.States.CLedgeHang.GetName
+  fullName: TUF.Entities.Characters.States.CLedgeHang.GetName()
+  nameWithType: CLedgeHang.GetName()
+- uid: TUF.Entities.Characters.States.CLedgeHang.GetName*
+  name: GetName
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html#TUF_Entities_Characters_States_CLedgeHang_GetName_
+  commentId: Overload:TUF.Entities.Characters.States.CLedgeHang.GetName
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CLedgeHang.GetName
+  nameWithType: CLedgeHang.GetName
+- uid: TUF.Entities.Characters.States.CLedgeHang.Initialize
+  name: Initialize()
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html#TUF_Entities_Characters_States_CLedgeHang_Initialize
+  commentId: M:TUF.Entities.Characters.States.CLedgeHang.Initialize
+  fullName: TUF.Entities.Characters.States.CLedgeHang.Initialize()
+  nameWithType: CLedgeHang.Initialize()
+- uid: TUF.Entities.Characters.States.CLedgeHang.Initialize*
+  name: Initialize
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html#TUF_Entities_Characters_States_CLedgeHang_Initialize_
+  commentId: Overload:TUF.Entities.Characters.States.CLedgeHang.Initialize
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CLedgeHang.Initialize
+  nameWithType: CLedgeHang.Initialize
+- uid: TUF.Entities.Characters.States.CLedgeHang.OnUpdate
+  name: OnUpdate()
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html#TUF_Entities_Characters_States_CLedgeHang_OnUpdate
+  commentId: M:TUF.Entities.Characters.States.CLedgeHang.OnUpdate
+  fullName: TUF.Entities.Characters.States.CLedgeHang.OnUpdate()
+  nameWithType: CLedgeHang.OnUpdate()
+- uid: TUF.Entities.Characters.States.CLedgeHang.OnUpdate*
+  name: OnUpdate
+  href: api/TUF.Entities.Characters.States.CLedgeHang.html#TUF_Entities_Characters_States_CLedgeHang_OnUpdate_
+  commentId: Overload:TUF.Entities.Characters.States.CLedgeHang.OnUpdate
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CLedgeHang.OnUpdate
+  nameWithType: CLedgeHang.OnUpdate
+- uid: TUF.Entities.Characters.States.CLedgeJump
+  name: CLedgeJump
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html
+  commentId: T:TUF.Entities.Characters.States.CLedgeJump
+  fullName: TUF.Entities.Characters.States.CLedgeJump
+  nameWithType: CLedgeJump
+- uid: TUF.Entities.Characters.States.CLedgeJump.CheckInterrupt
+  name: CheckInterrupt()
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html#TUF_Entities_Characters_States_CLedgeJump_CheckInterrupt
+  commentId: M:TUF.Entities.Characters.States.CLedgeJump.CheckInterrupt
+  fullName: TUF.Entities.Characters.States.CLedgeJump.CheckInterrupt()
+  nameWithType: CLedgeJump.CheckInterrupt()
+- uid: TUF.Entities.Characters.States.CLedgeJump.CheckInterrupt*
+  name: CheckInterrupt
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html#TUF_Entities_Characters_States_CLedgeJump_CheckInterrupt_
+  commentId: Overload:TUF.Entities.Characters.States.CLedgeJump.CheckInterrupt
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CLedgeJump.CheckInterrupt
+  nameWithType: CLedgeJump.CheckInterrupt
+- uid: TUF.Entities.Characters.States.CLedgeJump.GetName
+  name: GetName()
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html#TUF_Entities_Characters_States_CLedgeJump_GetName
+  commentId: M:TUF.Entities.Characters.States.CLedgeJump.GetName
+  fullName: TUF.Entities.Characters.States.CLedgeJump.GetName()
+  nameWithType: CLedgeJump.GetName()
+- uid: TUF.Entities.Characters.States.CLedgeJump.GetName*
+  name: GetName
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html#TUF_Entities_Characters_States_CLedgeJump_GetName_
+  commentId: Overload:TUF.Entities.Characters.States.CLedgeJump.GetName
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CLedgeJump.GetName
+  nameWithType: CLedgeJump.GetName
+- uid: TUF.Entities.Characters.States.CLedgeJump.Initialize
+  name: Initialize()
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html#TUF_Entities_Characters_States_CLedgeJump_Initialize
+  commentId: M:TUF.Entities.Characters.States.CLedgeJump.Initialize
+  fullName: TUF.Entities.Characters.States.CLedgeJump.Initialize()
+  nameWithType: CLedgeJump.Initialize()
+- uid: TUF.Entities.Characters.States.CLedgeJump.Initialize*
+  name: Initialize
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html#TUF_Entities_Characters_States_CLedgeJump_Initialize_
+  commentId: Overload:TUF.Entities.Characters.States.CLedgeJump.Initialize
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CLedgeJump.Initialize
+  nameWithType: CLedgeJump.Initialize
+- uid: TUF.Entities.Characters.States.CLedgeJump.OnUpdate
+  name: OnUpdate()
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html#TUF_Entities_Characters_States_CLedgeJump_OnUpdate
+  commentId: M:TUF.Entities.Characters.States.CLedgeJump.OnUpdate
+  fullName: TUF.Entities.Characters.States.CLedgeJump.OnUpdate()
+  nameWithType: CLedgeJump.OnUpdate()
+- uid: TUF.Entities.Characters.States.CLedgeJump.OnUpdate*
+  name: OnUpdate
+  href: api/TUF.Entities.Characters.States.CLedgeJump.html#TUF_Entities_Characters_States_CLedgeJump_OnUpdate_
+  commentId: Overload:TUF.Entities.Characters.States.CLedgeJump.OnUpdate
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CLedgeJump.OnUpdate
+  nameWithType: CLedgeJump.OnUpdate
 - uid: TUF.Entities.Characters.States.CRun
   name: CRun
   href: api/TUF.Entities.Characters.States.CRun.html
@@ -4239,6 +4716,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Characters.States.CSlide.Initialize
   nameWithType: CSlide.Initialize
+- uid: TUF.Entities.Characters.States.CSlide.OnInterrupted
+  name: OnInterrupted()
+  href: api/TUF.Entities.Characters.States.CSlide.html#TUF_Entities_Characters_States_CSlide_OnInterrupted
+  commentId: M:TUF.Entities.Characters.States.CSlide.OnInterrupted
+  fullName: TUF.Entities.Characters.States.CSlide.OnInterrupted()
+  nameWithType: CSlide.OnInterrupted()
+- uid: TUF.Entities.Characters.States.CSlide.OnInterrupted*
+  name: OnInterrupted
+  href: api/TUF.Entities.Characters.States.CSlide.html#TUF_Entities_Characters_States_CSlide_OnInterrupted_
+  commentId: Overload:TUF.Entities.Characters.States.CSlide.OnInterrupted
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CSlide.OnInterrupted
+  nameWithType: CSlide.OnInterrupted
 - uid: TUF.Entities.Characters.States.CSlide.OnUpdate
   name: OnUpdate()
   href: api/TUF.Entities.Characters.States.CSlide.html#TUF_Entities_Characters_States_CSlide_OnUpdate
@@ -4648,12 +5138,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityCombatManager.CheckStartingNodes
   nameWithType: EntityCombatManager.CheckStartingNodes
-- uid: TUF.Entities.EntityCombatManager.CheckStickDirection(Vector2,System.Single,System.Int32)
-  name: CheckStickDirection(Vector2, Single, Int32)
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_CheckStickDirection_Vector2_System_Single_System_Int32_
-  commentId: M:TUF.Entities.EntityCombatManager.CheckStickDirection(Vector2,System.Single,System.Int32)
-  fullName: TUF.Entities.EntityCombatManager.CheckStickDirection(Vector2, System.Single, System.Int32)
-  nameWithType: EntityCombatManager.CheckStickDirection(Vector2, Single, Int32)
+- uid: TUF.Entities.EntityCombatManager.CheckStickDirection(InputDefinition,System.Int32)
+  name: CheckStickDirection(InputDefinition, Int32)
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_CheckStickDirection_InputDefinition_System_Int32_
+  commentId: M:TUF.Entities.EntityCombatManager.CheckStickDirection(InputDefinition,System.Int32)
+  fullName: TUF.Entities.EntityCombatManager.CheckStickDirection(InputDefinition, System.Int32)
+  nameWithType: EntityCombatManager.CheckStickDirection(InputDefinition, Int32)
 - uid: TUF.Entities.EntityCombatManager.CheckStickDirection*
   name: CheckStickDirection
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_CheckStickDirection_
@@ -4687,12 +5177,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityCombatManager.Heal
   nameWithType: EntityCombatManager.Heal
-- uid: TUF.Entities.EntityCombatManager.Hurt(Vector3,Vector3,Vector3,HitInfoBase)
-  name: Hurt(Vector3, Vector3, Vector3, HitInfoBase)
-  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Hurt_Vector3_Vector3_Vector3_HitInfoBase_
-  commentId: M:TUF.Entities.EntityCombatManager.Hurt(Vector3,Vector3,Vector3,HitInfoBase)
-  fullName: TUF.Entities.EntityCombatManager.Hurt(Vector3, Vector3, Vector3, HitInfoBase)
-  nameWithType: EntityCombatManager.Hurt(Vector3, Vector3, Vector3, HitInfoBase)
+- uid: TUF.Entities.EntityCombatManager.Hurt(HurtInfoBase)
+  name: Hurt(HurtInfoBase)
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Hurt_HurtInfoBase_
+  commentId: M:TUF.Entities.EntityCombatManager.Hurt(HurtInfoBase)
+  fullName: TUF.Entities.EntityCombatManager.Hurt(HurtInfoBase)
+  nameWithType: EntityCombatManager.Hurt(HurtInfoBase)
 - uid: TUF.Entities.EntityCombatManager.Hurt*
   name: Hurt
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Hurt_
@@ -4770,12 +5260,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityHitboxManager.CreateHitboxGroup
   nameWithType: EntityHitboxManager.CreateHitboxGroup
-- uid: TUF.Entities.EntityHitboxManager.InstantiateHitbox(Vector3,Quaternion)
-  name: InstantiateHitbox(Vector3, Quaternion)
-  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_InstantiateHitbox_Vector3_Quaternion_
-  commentId: M:TUF.Entities.EntityHitboxManager.InstantiateHitbox(Vector3,Quaternion)
-  fullName: TUF.Entities.EntityHitboxManager.InstantiateHitbox(Vector3, Quaternion)
-  nameWithType: EntityHitboxManager.InstantiateHitbox(Vector3, Quaternion)
+- uid: TUF.Entities.EntityHitboxManager.InstantiateHitbox(BoxDefinitionBase)
+  name: InstantiateHitbox(BoxDefinitionBase)
+  href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_InstantiateHitbox_BoxDefinitionBase_
+  commentId: M:TUF.Entities.EntityHitboxManager.InstantiateHitbox(BoxDefinitionBase)
+  fullName: TUF.Entities.EntityHitboxManager.InstantiateHitbox(BoxDefinitionBase)
+  nameWithType: EntityHitboxManager.InstantiateHitbox(BoxDefinitionBase)
 - uid: TUF.Entities.EntityHitboxManager.InstantiateHitbox*
   name: InstantiateHitbox
   href: api/TUF.Entities.EntityHitboxManager.html#TUF_Entities_EntityHitboxManager_InstantiateHitbox_
@@ -4796,6 +5286,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityHitboxManager.OnHitboxHurt
   nameWithType: EntityHitboxManager.OnHitboxHurt
+- uid: TUF.Entities.EntityHurtboxManager
+  name: EntityHurtboxManager
+  href: api/TUF.Entities.EntityHurtboxManager.html
+  commentId: T:TUF.Entities.EntityHurtboxManager
+  fullName: TUF.Entities.EntityHurtboxManager
+  nameWithType: EntityHurtboxManager
 - uid: TUF.Entities.EntityInputManager
   name: EntityInputManager
   href: api/TUF.Entities.EntityInputManager.html
@@ -5298,12 +5794,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityPhysicsManager.ApplyGravityFriction
   nameWithType: EntityPhysicsManager.ApplyGravityFriction
-- uid: TUF.Entities.EntityPhysicsManager.ApplyMovement(System.Single,System.Single,System.Single)
-  name: ApplyMovement(Single, Single, Single)
-  href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_ApplyMovement_System_Single_System_Single_System_Single_
-  commentId: M:TUF.Entities.EntityPhysicsManager.ApplyMovement(System.Single,System.Single,System.Single)
-  fullName: TUF.Entities.EntityPhysicsManager.ApplyMovement(System.Single, System.Single, System.Single)
-  nameWithType: EntityPhysicsManager.ApplyMovement(Single, Single, Single)
+- uid: TUF.Entities.EntityPhysicsManager.ApplyMovement(System.Single,System.Single,System.Single,System.Boolean)
+  name: ApplyMovement(Single, Single, Single, Boolean)
+  href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_ApplyMovement_System_Single_System_Single_System_Single_System_Boolean_
+  commentId: M:TUF.Entities.EntityPhysicsManager.ApplyMovement(System.Single,System.Single,System.Single,System.Boolean)
+  fullName: TUF.Entities.EntityPhysicsManager.ApplyMovement(System.Single, System.Single, System.Single, System.Boolean)
+  nameWithType: EntityPhysicsManager.ApplyMovement(Single, Single, Single, Boolean)
 - uid: TUF.Entities.EntityPhysicsManager.ApplyMovement*
   name: ApplyMovement
   href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_ApplyMovement_
@@ -5388,12 +5884,15 @@ references:
   commentId: F:TUF.Entities.EntityPhysicsManager.currentWall
   fullName: TUF.Entities.EntityPhysicsManager.currentWall
   nameWithType: EntityPhysicsManager.currentWall
-- uid: TUF.Entities.EntityPhysicsManager.DetectWall(System.Boolean)
-  name: DetectWall(Boolean)
-  href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_DetectWall_System_Boolean_
-  commentId: M:TUF.Entities.EntityPhysicsManager.DetectWall(System.Boolean)
-  fullName: TUF.Entities.EntityPhysicsManager.DetectWall(System.Boolean)
-  nameWithType: EntityPhysicsManager.DetectWall(Boolean)
+- uid: TUF.Entities.EntityPhysicsManager.DetectWall(System.Int32@,System.Boolean)
+  name: DetectWall(out Int32, Boolean)
+  href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_DetectWall_System_Int32__System_Boolean_
+  commentId: M:TUF.Entities.EntityPhysicsManager.DetectWall(System.Int32@,System.Boolean)
+  name.vb: DetectWall(ByRef Int32, Boolean)
+  fullName: TUF.Entities.EntityPhysicsManager.DetectWall(out System.Int32, System.Boolean)
+  fullName.vb: TUF.Entities.EntityPhysicsManager.DetectWall(ByRef System.Int32, System.Boolean)
+  nameWithType: EntityPhysicsManager.DetectWall(out Int32, Boolean)
+  nameWithType.vb: EntityPhysicsManager.DetectWall(ByRef Int32, Boolean)
 - uid: TUF.Entities.EntityPhysicsManager.DetectWall*
   name: DetectWall
   href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_DetectWall_
@@ -6595,6 +7094,12 @@ references:
   commentId: F:TUF.Entities.Shared.EntityStats.groundFriction
   fullName: TUF.Entities.Shared.EntityStats.groundFriction
   nameWithType: EntityStats.groundFriction
+- uid: TUF.Entities.Shared.EntityStats.height
+  name: height
+  href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_height
+  commentId: F:TUF.Entities.Shared.EntityStats.height
+  fullName: TUF.Entities.Shared.EntityStats.height
+  nameWithType: EntityStats.height
 - uid: TUF.Entities.Shared.EntityStats.hitstunFrictionXZ
   name: hitstunFrictionXZ
   href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_hitstunFrictionXZ
@@ -6619,6 +7124,12 @@ references:
   commentId: F:TUF.Entities.Shared.EntityStats.inertiaFriction
   fullName: TUF.Entities.Shared.EntityStats.inertiaFriction
   nameWithType: EntityStats.inertiaFriction
+- uid: TUF.Entities.Shared.EntityStats.jumpHorizontalMomentum
+  name: jumpHorizontalMomentum
+  href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_jumpHorizontalMomentum
+  commentId: F:TUF.Entities.Shared.EntityStats.jumpHorizontalMomentum
+  fullName: TUF.Entities.Shared.EntityStats.jumpHorizontalMomentum
+  nameWithType: EntityStats.jumpHorizontalMomentum
 - uid: TUF.Entities.Shared.EntityStats.jumpsquat
   name: jumpsquat
   href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_jumpsquat
@@ -8021,6 +8532,31 @@ references:
   commentId: F:TUF.Inputs.Player.System
   fullName: TUF.Inputs.Player.System
   nameWithType: Player.System
+- uid: TUF.Ledge
+  name: Ledge
+  href: api/TUF.Ledge.html
+  commentId: T:TUF.Ledge
+  fullName: TUF.Ledge
+  nameWithType: Ledge
+- uid: TUF.Ledge.FindClosestLedge(Vector3)
+  name: FindClosestLedge(Vector3)
+  href: api/TUF.Ledge.html#TUF_Ledge_FindClosestLedge_Vector3_
+  commentId: M:TUF.Ledge.FindClosestLedge(Vector3)
+  fullName: TUF.Ledge.FindClosestLedge(Vector3)
+  nameWithType: Ledge.FindClosestLedge(Vector3)
+- uid: TUF.Ledge.FindClosestLedge*
+  name: FindClosestLedge
+  href: api/TUF.Ledge.html#TUF_Ledge_FindClosestLedge_
+  commentId: Overload:TUF.Ledge.FindClosestLedge
+  isSpec: "True"
+  fullName: TUF.Ledge.FindClosestLedge
+  nameWithType: Ledge.FindClosestLedge
+- uid: TUF.Ledge.ledges
+  name: ledges
+  href: api/TUF.Ledge.html#TUF_Ledge_ledges
+  commentId: F:TUF.Ledge.ledges
+  fullName: TUF.Ledge.ledges
+  nameWithType: Ledge.ledges
 - uid: TUF.Menus
   name: TUF.Menus
   href: api/TUF.Menus.html
@@ -9203,6 +9739,246 @@ references:
   commentId: F:TUF.ModdingTools.TUFModToolsWindow.listRequest
   fullName: TUF.ModdingTools.TUFModToolsWindow.listRequest
   nameWithType: TUFModToolsWindow.listRequest
+- uid: TUF.MovingPlatform
+  name: MovingPlatform
+  href: api/TUF.MovingPlatform.html
+  commentId: T:TUF.MovingPlatform
+  fullName: TUF.MovingPlatform
+  nameWithType: MovingPlatform
+- uid: TUF.MovingPlatform.autoActivate
+  name: autoActivate
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_autoActivate
+  commentId: F:TUF.MovingPlatform.autoActivate
+  fullName: TUF.MovingPlatform.autoActivate
+  nameWithType: MovingPlatform.autoActivate
+- uid: TUF.MovingPlatform.Director
+  name: Director
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_Director
+  commentId: F:TUF.MovingPlatform.Director
+  fullName: TUF.MovingPlatform.Director
+  nameWithType: MovingPlatform.Director
+- uid: TUF.MovingPlatform.EvaluateAtTime(System.Double)
+  name: EvaluateAtTime(Double)
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_EvaluateAtTime_System_Double_
+  commentId: M:TUF.MovingPlatform.EvaluateAtTime(System.Double)
+  fullName: TUF.MovingPlatform.EvaluateAtTime(System.Double)
+  nameWithType: MovingPlatform.EvaluateAtTime(Double)
+- uid: TUF.MovingPlatform.EvaluateAtTime*
+  name: EvaluateAtTime
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_EvaluateAtTime_
+  commentId: Overload:TUF.MovingPlatform.EvaluateAtTime
+  isSpec: "True"
+  fullName: TUF.MovingPlatform.EvaluateAtTime
+  nameWithType: MovingPlatform.EvaluateAtTime
+- uid: TUF.MovingPlatform.Mover
+  name: Mover
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_Mover
+  commentId: F:TUF.MovingPlatform.Mover
+  fullName: TUF.MovingPlatform.Mover
+  nameWithType: MovingPlatform.Mover
+- uid: TUF.MovingPlatform.PathFinished
+  name: PathFinished()
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_PathFinished
+  commentId: M:TUF.MovingPlatform.PathFinished
+  fullName: TUF.MovingPlatform.PathFinished()
+  nameWithType: MovingPlatform.PathFinished()
+- uid: TUF.MovingPlatform.PathFinished*
+  name: PathFinished
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_PathFinished_
+  commentId: Overload:TUF.MovingPlatform.PathFinished
+  isSpec: "True"
+  fullName: TUF.MovingPlatform.PathFinished
+  nameWithType: MovingPlatform.PathFinished
+- uid: TUF.MovingPlatform.PausePath
+  name: PausePath()
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_PausePath
+  commentId: M:TUF.MovingPlatform.PausePath
+  fullName: TUF.MovingPlatform.PausePath()
+  nameWithType: MovingPlatform.PausePath()
+- uid: TUF.MovingPlatform.PausePath*
+  name: PausePath
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_PausePath_
+  commentId: Overload:TUF.MovingPlatform.PausePath
+  isSpec: "True"
+  fullName: TUF.MovingPlatform.PausePath
+  nameWithType: MovingPlatform.PausePath
+- uid: TUF.MovingPlatform.ResumePath
+  name: ResumePath()
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_ResumePath
+  commentId: M:TUF.MovingPlatform.ResumePath
+  fullName: TUF.MovingPlatform.ResumePath()
+  nameWithType: MovingPlatform.ResumePath()
+- uid: TUF.MovingPlatform.ResumePath*
+  name: ResumePath
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_ResumePath_
+  commentId: Overload:TUF.MovingPlatform.ResumePath
+  isSpec: "True"
+  fullName: TUF.MovingPlatform.ResumePath
+  nameWithType: MovingPlatform.ResumePath
+- uid: TUF.MovingPlatform.SimUpdate
+  name: SimUpdate()
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_SimUpdate
+  commentId: M:TUF.MovingPlatform.SimUpdate
+  fullName: TUF.MovingPlatform.SimUpdate()
+  nameWithType: MovingPlatform.SimUpdate()
+- uid: TUF.MovingPlatform.SimUpdate*
+  name: SimUpdate
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_SimUpdate_
+  commentId: Overload:TUF.MovingPlatform.SimUpdate
+  isSpec: "True"
+  fullName: TUF.MovingPlatform.SimUpdate
+  nameWithType: MovingPlatform.SimUpdate
+- uid: TUF.MovingPlatform.Start
+  name: Start()
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_Start
+  commentId: M:TUF.MovingPlatform.Start
+  fullName: TUF.MovingPlatform.Start()
+  nameWithType: MovingPlatform.Start()
+- uid: TUF.MovingPlatform.Start*
+  name: Start
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_Start_
+  commentId: Overload:TUF.MovingPlatform.Start
+  isSpec: "True"
+  fullName: TUF.MovingPlatform.Start
+  nameWithType: MovingPlatform.Start
+- uid: TUF.MovingPlatform.StartPath
+  name: StartPath()
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_StartPath
+  commentId: M:TUF.MovingPlatform.StartPath
+  fullName: TUF.MovingPlatform.StartPath()
+  nameWithType: MovingPlatform.StartPath()
+- uid: TUF.MovingPlatform.StartPath*
+  name: StartPath
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_StartPath_
+  commentId: Overload:TUF.MovingPlatform.StartPath
+  isSpec: "True"
+  fullName: TUF.MovingPlatform.StartPath
+  nameWithType: MovingPlatform.StartPath
+- uid: TUF.MovingPlatform.UpdateMovement(Vector3@,Quaternion@,System.Single)
+  name: UpdateMovement(out Vector3, out Quaternion, Single)
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_UpdateMovement_Vector3__Quaternion__System_Single_
+  commentId: M:TUF.MovingPlatform.UpdateMovement(Vector3@,Quaternion@,System.Single)
+  name.vb: UpdateMovement(ByRef Vector3, ByRef Quaternion, Single)
+  fullName: TUF.MovingPlatform.UpdateMovement(out Vector3, out Quaternion, System.Single)
+  fullName.vb: TUF.MovingPlatform.UpdateMovement(ByRef Vector3, ByRef Quaternion, System.Single)
+  nameWithType: MovingPlatform.UpdateMovement(out Vector3, out Quaternion, Single)
+  nameWithType.vb: MovingPlatform.UpdateMovement(ByRef Vector3, ByRef Quaternion, Single)
+- uid: TUF.MovingPlatform.UpdateMovement*
+  name: UpdateMovement
+  href: api/TUF.MovingPlatform.html#TUF_MovingPlatform_UpdateMovement_
+  commentId: Overload:TUF.MovingPlatform.UpdateMovement
+  isSpec: "True"
+  fullName: TUF.MovingPlatform.UpdateMovement
+  nameWithType: MovingPlatform.UpdateMovement
+- uid: TUF.PushEffector
+  name: PushEffector
+  href: api/TUF.PushEffector.html
+  commentId: T:TUF.PushEffector
+  fullName: TUF.PushEffector
+  nameWithType: PushEffector
+- uid: TUF.PushEffector.CreateForce(TUF.Entities.EntityManager)
+  name: CreateForce(EntityManager)
+  href: api/TUF.PushEffector.html#TUF_PushEffector_CreateForce_TUF_Entities_EntityManager_
+  commentId: M:TUF.PushEffector.CreateForce(TUF.Entities.EntityManager)
+  fullName: TUF.PushEffector.CreateForce(TUF.Entities.EntityManager)
+  nameWithType: PushEffector.CreateForce(EntityManager)
+- uid: TUF.PushEffector.CreateForce*
+  name: CreateForce
+  href: api/TUF.PushEffector.html#TUF_PushEffector_CreateForce_
+  commentId: Overload:TUF.PushEffector.CreateForce
+  isSpec: "True"
+  fullName: TUF.PushEffector.CreateForce
+  nameWithType: PushEffector.CreateForce
+- uid: TUF.PushEffector.force
+  name: force
+  href: api/TUF.PushEffector.html#TUF_PushEffector_force
+  commentId: F:TUF.PushEffector.force
+  fullName: TUF.PushEffector.force
+  nameWithType: PushEffector.force
+- uid: TUF.PushEffector.ForceDirection
+  name: PushEffector.ForceDirection
+  href: api/TUF.PushEffector.ForceDirection.html
+  commentId: T:TUF.PushEffector.ForceDirection
+  fullName: TUF.PushEffector.ForceDirection
+  nameWithType: PushEffector.ForceDirection
+- uid: TUF.PushEffector.ForceDirection.Local
+  name: Local
+  href: api/TUF.PushEffector.ForceDirection.html#TUF_PushEffector_ForceDirection_Local
+  commentId: F:TUF.PushEffector.ForceDirection.Local
+  fullName: TUF.PushEffector.ForceDirection.Local
+  nameWithType: PushEffector.ForceDirection.Local
+- uid: TUF.PushEffector.ForceDirection.Other
+  name: Other
+  href: api/TUF.PushEffector.ForceDirection.html#TUF_PushEffector_ForceDirection_Other
+  commentId: F:TUF.PushEffector.ForceDirection.Other
+  fullName: TUF.PushEffector.ForceDirection.Other
+  nameWithType: PushEffector.ForceDirection.Other
+- uid: TUF.PushEffector.ForceDirection.World
+  name: World
+  href: api/TUF.PushEffector.ForceDirection.html#TUF_PushEffector_ForceDirection_World
+  commentId: F:TUF.PushEffector.ForceDirection.World
+  fullName: TUF.PushEffector.ForceDirection.World
+  nameWithType: PushEffector.ForceDirection.World
+- uid: TUF.PushEffector.forceRelation
+  name: forceRelation
+  href: api/TUF.PushEffector.html#TUF_PushEffector_forceRelation
+  commentId: F:TUF.PushEffector.forceRelation
+  fullName: TUF.PushEffector.forceRelation
+  nameWithType: PushEffector.forceRelation
+- uid: TUF.PushEffector.forceType
+  name: forceType
+  href: api/TUF.PushEffector.html#TUF_PushEffector_forceType
+  commentId: F:TUF.PushEffector.forceType
+  fullName: TUF.PushEffector.forceType
+  nameWithType: PushEffector.forceType
+- uid: TUF.PushEffector.ForceType
+  name: PushEffector.ForceType
+  href: api/TUF.PushEffector.ForceType.html
+  commentId: T:TUF.PushEffector.ForceType
+  fullName: TUF.PushEffector.ForceType
+  nameWithType: PushEffector.ForceType
+- uid: TUF.PushEffector.ForceType.Add
+  name: Add
+  href: api/TUF.PushEffector.ForceType.html#TUF_PushEffector_ForceType_Add
+  commentId: F:TUF.PushEffector.ForceType.Add
+  fullName: TUF.PushEffector.ForceType.Add
+  nameWithType: PushEffector.ForceType.Add
+- uid: TUF.PushEffector.ForceType.Set
+  name: Set
+  href: api/TUF.PushEffector.ForceType.html#TUF_PushEffector_ForceType_Set
+  commentId: F:TUF.PushEffector.ForceType.Set
+  fullName: TUF.PushEffector.ForceType.Set
+  nameWithType: PushEffector.ForceType.Set
+- uid: TUF.PushEffector.maxMagnitude
+  name: maxMagnitude
+  href: api/TUF.PushEffector.html#TUF_PushEffector_maxMagnitude
+  commentId: F:TUF.PushEffector.maxMagnitude
+  fullName: TUF.PushEffector.maxMagnitude
+  nameWithType: PushEffector.maxMagnitude
+- uid: TUF.PushEffector.triggerType
+  name: triggerType
+  href: api/TUF.PushEffector.html#TUF_PushEffector_triggerType
+  commentId: F:TUF.PushEffector.triggerType
+  fullName: TUF.PushEffector.triggerType
+  nameWithType: PushEffector.triggerType
+- uid: TUF.PushEffector.TriggerType
+  name: PushEffector.TriggerType
+  href: api/TUF.PushEffector.TriggerType.html
+  commentId: T:TUF.PushEffector.TriggerType
+  fullName: TUF.PushEffector.TriggerType
+  nameWithType: PushEffector.TriggerType
+- uid: TUF.PushEffector.TriggerType.OnEnter
+  name: OnEnter
+  href: api/TUF.PushEffector.TriggerType.html#TUF_PushEffector_TriggerType_OnEnter
+  commentId: F:TUF.PushEffector.TriggerType.OnEnter
+  fullName: TUF.PushEffector.TriggerType.OnEnter
+  nameWithType: PushEffector.TriggerType.OnEnter
+- uid: TUF.PushEffector.TriggerType.OnStay
+  name: OnStay
+  href: api/TUF.PushEffector.TriggerType.html#TUF_PushEffector_TriggerType_OnStay
+  commentId: F:TUF.PushEffector.TriggerType.OnStay
+  fullName: TUF.PushEffector.TriggerType.OnStay
+  nameWithType: PushEffector.TriggerType.OnStay
 - uid: TUF.SaveLoadService
   name: SaveLoadService
   href: api/TUF.SaveLoadService.html
@@ -9238,6 +10014,12 @@ references:
   isSpec: "True"
   fullName: TUF.SaveLoadService.Save
   nameWithType: SaveLoadService.Save
+- uid: TUF.SimObjectRegister
+  name: SimObjectRegister
+  href: api/TUF.SimObjectRegister.html
+  commentId: T:TUF.SimObjectRegister
+  fullName: TUF.SimObjectRegister
+  nameWithType: SimObjectRegister
 - uid: TUF.Sound
   name: TUF.Sound
   href: api/TUF.Sound.html
