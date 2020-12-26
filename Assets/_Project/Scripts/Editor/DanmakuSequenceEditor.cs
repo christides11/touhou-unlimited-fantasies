@@ -32,7 +32,37 @@ namespace TUF.Combat.Danmaku
 
             for(int i = 0; i < dSequence.sequence.Count; i++)
             {
+                GUILayout.BeginHorizontal();
+                if (GUILayout.Button("^", GUILayout.Width(20))
+                    && i != 0)
+                {
+                    DanmakuAction da = dSequence.sequence[i-1];
+                    dSequence.sequence[i - 1] = dSequence.sequence[i];
+                    dSequence.sequence[i] = da;
+                    return;
+                }
+                if (GUILayout.Button("v", GUILayout.Width(20))
+                    && i != dSequence.sequence.Count-1)
+                {
+                    DanmakuAction da = dSequence.sequence[i + 1];
+                    dSequence.sequence[i + 1] = dSequence.sequence[i];
+                    dSequence.sequence[i] = da;
+                    return;
+                }
+                if(GUILayout.Button("dup", GUILayout.Width(35)))
+                {
+                    DanmakuAction da = (DanmakuAction)Activator.CreateInstance(dSequence.sequence[i].GetType());
+                    da.Copy(dSequence.sequence[i]);
+                    dSequence.sequence.Insert(i+1, da);
+                    return;
+                }
+                if (GUILayout.Button("X", GUILayout.Width(20)))
+                {
+                    dSequence.sequence.RemoveAt(i);
+                    return;
+                }
                 GUILayout.Label(dSequence.sequence[i].GetType().Name);
+                GUILayout.EndHorizontal();
                 dSequence.sequence[i].DrawInspector();
                 GUILayout.Space(20);
                 DrawUILine(Color.white);

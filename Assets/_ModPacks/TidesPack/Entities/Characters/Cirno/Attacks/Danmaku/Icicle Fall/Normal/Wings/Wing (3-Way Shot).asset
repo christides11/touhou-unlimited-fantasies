@@ -10,7 +10,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 041a6372876de0641869bc7ca64e5f1d, type: 3}
-  m_Name: Icicle Fall (Normal)
+  m_Name: Wing (3-Way Shot)
   m_EditorClassIdentifier: 
   sequence:
   - id: 0
@@ -22,6 +22,10 @@ MonoBehaviour:
   - id: 6
   - id: 7
   - id: 8
+  - id: 9
+  - id: 10
+  - id: 11
+  - id: 12
   references:
     version: 1
     00000000:
@@ -31,6 +35,7 @@ MonoBehaviour:
         id: f-
         positionOffset: {x: 0, y: 0, z: 0}
         rotationOffset: {x: 0, y: -100, z: 0}
+        forceMultiplier: {x: 0, y: 0, z: 0}
     00000001:
       type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
@@ -42,6 +47,7 @@ MonoBehaviour:
         id: t-
         positionOffset: {x: 0, y: 0, z: 0}
         rotationOffset: {x: 0, y: -95, z: 0}
+        forceMultiplier: {x: 0, y: 0, z: 0}
     00000003:
       type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
@@ -53,6 +59,7 @@ MonoBehaviour:
         id: three-
         positionOffset: {x: 0, y: 0, z: 0}
         rotationOffset: {x: 0, y: -90, z: 0}
+        forceMultiplier: {x: 0, y: 0, z: 0}
     00000005:
       type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
@@ -64,6 +71,7 @@ MonoBehaviour:
         id: four-
         positionOffset: {x: 0, y: 0, z: 0}
         rotationOffset: {x: 0, y: -85, z: 0}
+        forceMultiplier: {x: 0, y: 0, z: 0}
     00000007:
       type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
       data:
@@ -75,3 +83,28 @@ MonoBehaviour:
         id: five-
         positionOffset: {x: 0, y: 0, z: 0}
         rotationOffset: {x: 0, y: -80, z: 0}
+        forceMultiplier: {x: 0, y: 0, z: 0}
+    00000009:
+      type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        waitTime: 28
+    0000000A:
+      type: {class: AddSequenceAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        sequence: {fileID: 11400000, guid: 4f183ec59bb3aea439bf12b45947e28c, type: 2}
+        id: 
+        positionOffset: {x: 0, y: 0, z: 0}
+        rotationOffset: {x: 0, y: -75, z: 0}
+        forceMultiplier: {x: 0, y: 0, z: 0}
+    0000000B:
+      type: {class: WaitAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        waitTime: 28
+    0000000C:
+      type: {class: AddSequenceAction, ns: TUF.Combat.Danmaku, asm: TUF_CSharp}
+      data:
+        sequence: {fileID: 11400000, guid: 4f183ec59bb3aea439bf12b45947e28c, type: 2}
+        id: 
+        positionOffset: {x: 0, y: 0, z: 0}
+        rotationOffset: {x: 0, y: -70, z: 0}
+        forceMultiplier: {x: 0, y: 0, z: 0}

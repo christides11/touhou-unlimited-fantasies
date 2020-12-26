@@ -116,6 +116,7 @@
     <Compile Include="Assets\_Project\Scripts\Combat\Events\EntityMovementForceAddEvent.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Events\EntitySetAttackEvent.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Events\PlaySoundEvent.cs" />
+    <Compile Include="Assets\_Project\Scripts\Combat\HitArea.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\HitInfo.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Moveset\MovesetAttackNode.cs" />
     <Compile Include="Assets\_Project\Scripts\Combat\Moveset\MovesetDefinition.cs" />
@@ -210,6 +211,7 @@
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityTumble.cs" />
     <Compile Include="Assets\_Project\Scripts\Entities\Shared\States\Hit Reactions\EntityWakeup.cs" />
     <Compile Include="Assets\_Project\Scripts\FoldAttribute.cs" />
+    <Compile Include="Assets\_Project\Scripts\Helpers\DetectionArea.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\Helpers.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\Range.cs" />
     <Compile Include="Assets\_Project\Scripts\Helpers\Range3.cs" />

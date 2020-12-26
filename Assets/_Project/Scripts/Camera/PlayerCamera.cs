@@ -20,7 +20,8 @@ namespace TUF.Core
         [SerializeField] private Camera cam;
         [SerializeField] private CinemachineBrain brain;
         [SerializeField] private CinemachineFreeLook thirdPersonLook;
-        [SerializeField] private CinemachineVirtualCamera lockOnCam;
+        //[SerializeField] private CinemachineVirtualCamera lockOnCam;
+        [SerializeField] private CinemachineFreeLook lockOnCam;
         [SerializeField] private CinemachineTargetGroup lockOnTargetGroup;
         [SerializeField] private CameraShake cameraShake;
 
@@ -93,6 +94,9 @@ namespace TUF.Core
 
             thirdPersonLook.m_XAxis.m_InputAxisValue = stickInput.x;
             thirdPersonLook.m_YAxis.m_InputAxisValue = stickInput.y;
+
+            lockOnCam.m_XAxis.m_InputAxisValue = stickInput.x;
+            lockOnCam.m_YAxis.m_InputAxisValue = stickInput.y;
         }
 
         public virtual void UpdateTarget(Transform newTarget)

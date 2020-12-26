@@ -64,6 +64,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\_ModPacks\TidesPack\BulletTester.cs" />
+    <Compile Include="Assets\_ModPacks\TidesPack\Enemies\Turrents\TurrentManager.cs" />
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Characters\Reimu\Scripts\ReimuManager.cs" />
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Characters\Reimu\Scripts\ReimuStateTeleport.cs" />
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Characters\Reimu\Scripts\ReimuStates.cs" />

@@ -4,9 +4,10 @@ using UnityEngine;
 
 namespace TUF.Combat
 {
+    [System.Flags]
     public enum EntityTeams
     {
-        Any = 0,
+        None = 0,
         Player = 1,
         Enemy = 2
     }

@@ -512,6 +512,7 @@ MonoBehaviour:
   entityHurtboxManager: {fileID: 655459125771947099}
   visual: {fileID: 524244243}
   entityAnimator: {fileID: -1274951725818220127}
+  healthManager: {fileID: 7358034080499074808}
   definition: {fileID: 11400000, guid: db56f4faf80d8ab4c9a20f7577243ebc, type: 2}
   cc: {fileID: 6168304025253122080}
   visualTransform: {fileID: 524244244}
@@ -552,8 +553,6 @@ MonoBehaviour:
   ledgeSphereRadius: 0
   ledgeDistance: 0.75
   lastLedgePosition: {x: 0, y: 0, z: 0}
-  bpm: {fileID: 0}
-  bulletMove: {fileID: 0}
 --- !u!114 &268217326523756411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,6 +668,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e993f333736b6b489d4387b9f617457, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sequences: []
 --- !u!1 &8781265322137494762
 GameObject:
   m_ObjectHideFlags: 0

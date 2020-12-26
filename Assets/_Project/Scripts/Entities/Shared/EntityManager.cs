@@ -29,6 +29,7 @@ namespace TUF.Entities
         #region References
         [Header("References")]
         [SerializeField] protected EntityAnimator entityAnimator;
+        public HealthManager healthManager;
         public EntityDefinition definition;
         public EntityCharacterController cc;
         public Transform visualTransform;

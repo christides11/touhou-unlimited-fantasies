@@ -60,39 +60,41 @@ namespace TUF.Entities
 
         public override HitReaction Hurt(HurtInfoBase hurtInfoBase)
         {
-            return base.Hurt(hurtInfoBase);
-        }
+            EntityPhysicsManager physicsManager = (EntityPhysicsManager)Controller.PhysicsManager;
+            HurtInfo3D hurtInfo = (HurtInfo3D)hurtInfoBase;
 
-        /*
-        public override HitReaction Hurt(Vector3 center, Vector3 forward, Vector3 right, HitInfoBase hitInfoB)
-        {
-            Debug.Log("Hurt.");
-            HitInfo hitInfo = (HitInfo)hitInfoB;
             HitReaction hitReaction = new HitReaction();
             hitReaction.reactionType = HitReactionType.Hit;
-            if(hitInfoB.groundOnly && !Controller.IsGrounded
-                || hitInfoB.airOnly && Controller.IsGrounded)
+
+            // Check if should hit grounded/aerial opponent.
+            if (hurtInfo.hitInfo.groundOnly && !Controller.IsGrounded
+                || hurtInfo.hitInfo.airOnly && Controller.IsGrounded)
             {
                 hitReaction.reactionType = HitReactionType.Avoided;
                 return hitReaction;
             }
-            LastHitBy = hitInfoB;
-            SetHitStop(hitInfoB.hitstop);
-            SetHitStun(hitInfoB.hitstun);
+
+            HitInfo hitInfo = (HitInfo)hurtInfo.hitInfo;
+
+            // Got hit.
+            LastHitBy = hurtInfo.hitInfo;
+            SetHitStop(hurtInfo.hitInfo.hitstop);
+            SetHitStun(hurtInfo.hitInfo.hitstun);
+            ((EntityManager)manager).healthManager.Hurt(hitInfo.damageOnHit);
 
             // Convert forces the attacker-based forward direction.
-            switch (hitInfoB.forceType)
+            switch (hitInfo.forceType)
             {
                 case HitboxForceType.SET:
                     Vector3 baseForce = hitInfo.opponentForceDir * hitInfo.opponentForceMagnitude;
-                    Vector3 forces = (forward * baseForce.z + right * baseForce.x);
+                    Vector3 forces = (hurtInfo.forward * baseForce.z + hurtInfo.right * baseForce.x);
                     forces.y = baseForce.y;
-                    Controller.PhysicsManager.forceGravity.y = baseForce.y;
+                    physicsManager.forceGravity.y = baseForce.y;
                     forces.y = 0;
-                    Controller.PhysicsManager.forceMovement = forces;
+                    physicsManager.forceMovement = forces;
                     break;
                 case HitboxForceType.PULL:
-                    Vector3 dir = transform.position - center;
+                    Vector3 dir = transform.position - hurtInfo.center;
                     if (!hitInfo.forceIncludeYForce)
                     {
                         dir.y = 0;
@@ -102,24 +104,23 @@ namespace TUF.Entities
                     forceDir.y = 0;
                     if (hitInfo.forceIncludeYForce)
                     {
-                        Controller.PhysicsManager.forceGravity.y = yForce;
+                        physicsManager.forceGravity.y = yForce;
                     }
-                    Controller.PhysicsManager.forceMovement = forceDir;
+                    physicsManager.forceMovement = forceDir;
                     break;
             }
 
-            if (Controller.PhysicsManager.forceGravity.y > 0)
+            if (physicsManager.forceGravity.y > 0)
             {
                 Controller.IsGrounded = false;
             }
-
-            //manager.HealthManager.Hurt(hitInfo.damageOnHit);
 
             // Change state to the correct one.
             if (Controller.IsGrounded && hitInfo.groundBounces)
             {
                 Controller.StateManager.ChangeState((int)EntityStates.GROUND_BOUNCE);
-            } else if (hitInfo.causesTumble)
+            }
+            else if (hitInfo.causesTumble)
             {
                 Controller.StateManager.ChangeState((int)EntityStates.TUMBLE);
             }
@@ -127,8 +128,9 @@ namespace TUF.Entities
             {
                 Controller.StateManager.ChangeState((int)(Controller.IsGrounded ? EntityStates.FLINCH : EntityStates.FLINCH_AIR));
             }
+
             return hitReaction;
-        }*/
+        }
 
         public override void Heal(HealInfoBase healInfo)
         {
@@ -138,6 +140,11 @@ namespace TUF.Entities
         public void SetTeam(EntityTeams team)
         {
             this.team = team;
+        }
+
+        public override int GetTeam()
+        {
+            return (int)team;
         }
     }
 }

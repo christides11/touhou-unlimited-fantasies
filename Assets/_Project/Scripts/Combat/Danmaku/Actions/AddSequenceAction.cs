@@ -16,6 +16,7 @@ namespace TUF.Combat.Danmaku
 
         public Vector3 positionOffset;
         public Vector3 rotationOffset;
+        public Vector3 forceMultiplier;
 
         public override void Tick(DanmakuManager danmakuManager, DanmakuSequenceInfo info)
         {

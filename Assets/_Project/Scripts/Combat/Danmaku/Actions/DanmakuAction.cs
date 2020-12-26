@@ -7,6 +7,11 @@ namespace TUF.Combat.Danmaku
     [System.Serializable]
     public class DanmakuAction
     {
+        public virtual void Copy(DanmakuAction other)
+        {
+
+        }
+
         public virtual void Tick(DanmakuManager danmakuManager, DanmakuSequenceInfo info)
         {
 
