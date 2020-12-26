@@ -20,6 +20,10 @@ namespace TUF.Entities.Characters.States
             {
                 return true;
             }
+            if (((CharacterManager)controller).TryWallCling())
+            {
+                return true;
+            }
             if (controller.TryEnemyStep())
             {
                 return true;

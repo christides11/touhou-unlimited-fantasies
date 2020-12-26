@@ -42,7 +42,7 @@ MonoBehaviour:
   wallClingInitFrictionY: 0.7
   wallClingInitFrictionXZ: 100
   wallClingFrictionXZ: 4
-  wallClingGravity: 0.5
+  wallClingGravity: 0.2
   wallClingMaxFallSpeed: 4
   wallJumpTime: 20
   wallJumpYVelo: 17.6

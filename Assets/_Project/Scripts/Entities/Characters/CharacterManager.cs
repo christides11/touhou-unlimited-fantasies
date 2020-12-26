@@ -59,7 +59,7 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new CFloatDash(), (int)BaseCharacterStates.FLOAT_DASH);
 
             // Walls
-            //StateManager.AddState(new CWallCling(), (int)BaseCharacterStates.WALL_CLING);
+            StateManager.AddState(new CWallCling(), (int)BaseCharacterStates.WALL_CLING);
             StateManager.AddState(new CWallJump(), (int)BaseCharacterStates.WALL_JUMP);
             StateManager.AddState(new CVertWallRun(), (int)BaseCharacterStates.WALL_RUN_VERTICAL);
             StateManager.AddState(new CHozWallRun(), (int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
@@ -128,6 +128,19 @@ namespace TUF.Entities.Characters
                         StateManager.ChangeState((int)BaseCharacterStates.WALL_RUN_HORIZONTAL);
                         return true;
                     }
+                }
+            }
+            return false;
+        }
+
+        public virtual bool TryWallCling()
+        {
+            if (InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude >= InputConstants.movementMagnitude)
+            {
+                RaycastHit rh = ((EntityPhysicsManager)PhysicsManager).DetectWall(out wallSide);
+                if (rh.collider)
+                {
+                    StateManager.ChangeState((int)BaseCharacterStates.WALL_CLING);
                 }
             }
             return false;

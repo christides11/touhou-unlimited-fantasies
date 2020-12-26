@@ -28,6 +28,10 @@ namespace TUF.Entities.Characters.States
             {
                 return true;
             }
+            if (((CharacterManager)controller).TryWallCling())
+            {
+                return true;
+            }
             if (controller.CanAirJump())
             {
                 StateManager.ChangeState((int)EntityStates.AIR_JUMP);
