@@ -25,20 +25,25 @@ namespace TUF.Entities
 
         public EntityHitboxManager(EntityCombatManager combatManager, EntityManager controller) : base(combatManager, controller)
         {
-
+            this.combatManager = combatManager;
+            this.manager = controller;
         }
 
         protected override HitboxBase InstantiateHitbox(BoxDefinitionBase hitboxDefinitionBase)
         {
-            return base.InstantiateHitbox(hitboxDefinitionBase);
-        }
+            BoxDefinition boxDefinition = (BoxDefinition)hitboxDefinitionBase;
+            GameManager gm = GameManager.current;
 
-        /*
-        protected override CAF.Combat.HitboxBase InstantiateHitbox(Vector3 position, Quaternion rotation)
-        {
-            return GameObject.Instantiate(((EntityManager)manager).GameManager.gameVariables.combat.hitbox,
-                position, rotation).GetComponent<Combat.Hitbox>();
-        }*/
+            Vector3 position = manager.transform.position
+                + manager.GetVisualBasedDirection(Vector3.forward) * boxDefinition.offset.z
+                + manager.GetVisualBasedDirection(Vector3.right) * boxDefinition.offset.x
+                + manager.GetVisualBasedDirection(Vector3.up) * boxDefinition.offset.y;
+
+            Vector3 rotation = manager.visual.transform.eulerAngles + boxDefinition.rotation;
+
+            GameObject hitbox = GameObject.Instantiate(gm.gameVariables.combat.hitbox, position, Quaternion.Euler(rotation));
+            return hitbox.GetComponent<Hitbox3D>();
+        }
 
         /// <summary>
         /// Called whenever a hitbox hits a hurtbox successfully.

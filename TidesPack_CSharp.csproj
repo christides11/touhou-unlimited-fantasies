@@ -72,6 +72,8 @@
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Enemies\Faries\Blue Fairy\Scripts\BFairyManager.cs" />
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Enemies\Faries\Shared\FairyManager.cs" />
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Enemies\Faries\Shared\FairyStats.cs" />
+    <Compile Include="Assets\_ModPacks\TidesPack\Entities\Enemies\Faries\Shared\States\FairyFall.cs" />
+    <Compile Include="Assets\_ModPacks\TidesPack\Entities\Enemies\Faries\Shared\States\FairyIdle.cs" />
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Other\Dummy\Script\DummyController.cs" />
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Other\Dummy\Script\States\DummyFall.cs" />
     <Compile Include="Assets\_ModPacks\TidesPack\Entities\Other\Dummy\Script\States\DummyIdle.cs" />

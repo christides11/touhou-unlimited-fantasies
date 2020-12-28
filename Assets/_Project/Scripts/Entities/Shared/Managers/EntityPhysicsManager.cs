@@ -20,6 +20,11 @@ namespace TUF.Entities
             forcePushbox = Vector3.zero;
         }
 
+        public override void Freeze()
+        {
+            Controller.cc.SetMovement(Vector3.zero, Vector3.zero);
+        }
+
         public void HandlePushForce(Collider other)
         {
             Vector3 dir = Controller.pushbox.transform.position - other.transform.position;

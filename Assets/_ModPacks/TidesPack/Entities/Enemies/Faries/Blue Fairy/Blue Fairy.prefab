@@ -10,7 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 418685459854212769}
   - component: {fileID: 5275329956619050909}
-  m_Layer: 9
+  - component: {fileID: 2274763299068705808}
+  - component: {fileID: 1671708871122539439}
+  m_Layer: 31
   m_Name: Pushbox
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,10 +45,114 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a5cd901a85863da489d91dabf4993893, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coll: {fileID: 0}
+  coll: {fileID: 2274763299068705808}
   layerMask:
     serializedVersion: 2
     m_Bits: 512
+--- !u!65 &2274763299068705808
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792412110875394225}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.2, y: 2, z: 1.2}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!54 &1671708871122539439
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 792412110875394225}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!1 &1121076360780791568
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 809380608661012108}
+  - component: {fileID: 8283026932094097958}
+  - component: {fileID: 2961566791767201206}
+  - component: {fileID: 7711909324625497495}
+  m_Layer: 30
+  m_Name: Hurtbox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &809380608661012108
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121076360780791568}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 6646065074715150307}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!54 &8283026932094097958
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121076360780791568}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 126
+  m_CollisionDetection: 0
+--- !u!65 &2961566791767201206
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121076360780791568}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 2, z: 1}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &7711909324625497495
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1121076360780791568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7fb41654d8c0c94297046a0f7534773, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  owner: {fileID: 6646065074715150306}
 --- !u!1 &6646065074406279049
 GameObject:
   m_ObjectHideFlags: 0
@@ -96,6 +202,7 @@ GameObject:
   - component: {fileID: 237282025410395412}
   - component: {fileID: 7491508832732184261}
   - component: {fileID: 836382071}
+  - component: {fileID: 1901789706}
   m_Layer: 9
   m_Name: Blue Fairy
   m_TagString: Untagged
@@ -116,6 +223,7 @@ Transform:
   m_Children:
   - {fileID: 6646065074406279054}
   - {fileID: 418685459854212769}
+  - {fileID: 809380608661012108}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -207,6 +315,7 @@ MonoBehaviour:
   entityHurtboxManager: {fileID: 836382071}
   visual: {fileID: 6646065074406279049}
   entityAnimator: {fileID: 0}
+  healthManager: {fileID: 1901789706}
   definition: {fileID: 11400000, guid: e02f20a75d6272a4c9b17249f23ea147, type: 2}
   cc: {fileID: 3573686667881084505}
   visualTransform: {fileID: 6646065074406279054}
@@ -298,7 +407,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   manager: {fileID: 5460020612224601745}
   moveset: {fileID: 0}
-  team: 0
+  team: 2
 --- !u!114 &836382071
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -312,6 +421,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   manager: {fileID: 5460020612224601745}
+--- !u!114 &1901789706
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646065074715150306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef9482cb2ac26234a957505e63575397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200
 --- !u!1 &6646065076231640373
 GameObject:
   m_ObjectHideFlags: 0

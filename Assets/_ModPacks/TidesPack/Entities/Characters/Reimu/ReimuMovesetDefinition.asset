@@ -42,12 +42,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   lastNode: {fileID: -1285294409386166759}
-  executeInputs:
-  - inputType: 0
-    buttonID: 3
-    stickDirection: {x: 0, y: 0}
-    directionDeviation: 0
-  inputSequence: []
+  inputSequence:
+    executeWindow: 3
+    executeInputs:
+    - inputType: 0
+      buttonID: 3
+      stickDirection: {x: 0, y: 0}
+      directionDeviation: 0
+    sequenceWindow: 8
+    sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: 6c32de5245885f841bfa8d5ee68a6354, type: 2}
   nextNode: []
 --- !u!114 &-6643447657923467853
@@ -89,16 +92,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   lastNode: {fileID: 0}
-  executeInputs:
-  - inputType: 0
-    buttonID: 3
-    stickDirection: {x: 0, y: 0}
-    directionDeviation: 0
-  - inputType: 1
-    buttonID: 0
-    stickDirection: {x: 0, y: -1}
-    directionDeviation: 0.85
-  inputSequence: []
+  inputSequence:
+    executeWindow: 3
+    executeInputs: []
+    sequenceWindow: 8
+    sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: 5a099ff0994463c45a6606d0e0738f0e, type: 2}
   nextNode: []
 --- !u!114 &-4106480912421362090
@@ -143,12 +141,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   lastNode: {fileID: -340154687094389976}
-  executeInputs:
-  - inputType: 0
-    buttonID: 3
-    stickDirection: {x: 0, y: 0}
-    directionDeviation: 0
-  inputSequence: []
+  inputSequence:
+    executeWindow: 3
+    executeInputs: []
+    sequenceWindow: 8
+    sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: ef77fc7c54e8db84380cca08d3bfd3d6, type: 2}
   nextNode: []
 --- !u!114 &-1563255693108092645
@@ -216,12 +213,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   lastNode: {fileID: 0}
-  executeInputs:
-  - inputType: 0
-    buttonID: 3
-    stickDirection: {x: 0, y: 0}
-    directionDeviation: 0
-  inputSequence: []
+  inputSequence:
+    executeWindow: 3
+    executeInputs:
+    - inputType: 0
+      buttonID: 3
+      stickDirection: {x: 0, y: 0}
+      directionDeviation: 0
+    sequenceWindow: 8
+    sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: 340c4b6fd97270743aee4e18feb0572d, type: 2}
   nextNode:
   - cancelWindow: {x: 11, y: 30}
@@ -241,7 +241,7 @@ MonoBehaviour:
   m_Name: Ground_AA
   m_EditorClassIdentifier: 
   graph: {fileID: 11400000}
-  position: {x: -56, y: -152}
+  position: {x: -40, y: -152}
   ports:
     keys:
     - lastNode
@@ -283,12 +283,15 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   lastNode: {fileID: -1563255693108092645}
-  executeInputs:
-  - inputType: 0
-    buttonID: 3
-    stickDirection: {x: 0, y: 0}
-    directionDeviation: 0
-  inputSequence: []
+  inputSequence:
+    executeWindow: 3
+    executeInputs:
+    - inputType: 0
+      buttonID: 3
+      stickDirection: {x: 0, y: 0}
+      directionDeviation: 0
+    sequenceWindow: 8
+    sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: 2e4ea75f681373d4296cd474e2991aab, type: 2}
   nextNode:
   - cancelWindow: {x: 9, y: 100}
@@ -348,12 +351,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 1
   lastNode: {fileID: -1563255693108092645}
-  executeInputs:
-  - inputType: 0
-    buttonID: 3
-    stickDirection: {x: 0, y: 0}
-    directionDeviation: 0
-  inputSequence: []
+  inputSequence:
+    executeWindow: 3
+    executeInputs: []
+    sequenceWindow: 8
+    sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: 30ad74d9bf55dd54d8a04c4072e29e3b, type: 2}
   nextNode:
   - cancelWindow: {x: 12, y: 100}
@@ -440,20 +442,11 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   lastNode: {fileID: 0}
-  executeInputs:
-  - inputType: 0
-    buttonID: 3
-    stickDirection: {x: 0, y: 0}
-    directionDeviation: 0
-  - inputType: 1
-    buttonID: 0
-    stickDirection: {x: 0, y: 1}
-    directionDeviation: 0.85
   inputSequence:
-  - inputType: 1
-    buttonID: 0
-    stickDirection: {x: 0, y: -1}
-    directionDeviation: 0.85
+    executeWindow: 3
+    executeInputs: []
+    sequenceWindow: 8
+    sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: f152c0e381b4b8d42b6a76dac1dc1014, type: 2}
   nextNode: []
 --- !u!114 &8066787484242972383
@@ -495,15 +488,10 @@ MonoBehaviour:
       _typeConstraint: 0
       _dynamic: 0
   lastNode: {fileID: 0}
-  executeInputs:
-  - inputType: 0
-    buttonID: 3
-    stickDirection: {x: 0, y: 0}
-    directionDeviation: 0
-  - inputType: 1
-    buttonID: 3
-    stickDirection: {x: 0, y: 1}
-    directionDeviation: 0.85
-  inputSequence: []
+  inputSequence:
+    executeWindow: 3
+    executeInputs: []
+    sequenceWindow: 8
+    sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: 7e82cef357587de47bad7dda0758b27f, type: 2}
   nextNode: []

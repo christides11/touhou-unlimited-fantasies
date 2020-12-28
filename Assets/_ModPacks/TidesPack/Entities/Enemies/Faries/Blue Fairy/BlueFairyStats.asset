@@ -12,7 +12,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc2b86a1b17f94a4888feb78f9d06882, type: 3}
   m_Name: BlueFairyStats
   m_EditorClassIdentifier: 
-  groundFriction: 0
+  height: 2
+  groundFriction: 1.2
   maxWalkSpeed: 0
   walkBaseAccel: 0
   walkAcceleration: 0
@@ -25,6 +26,7 @@ MonoBehaviour:
   jumpsquat: 5
   fullHopVelocity: 0
   shortHopJumpVelocity: 0
+  jumpHorizontalMomentum: 0
   maxAirJumps: 1
   airJumpVelocity: 0
   airJumpModi: 1
@@ -53,8 +55,8 @@ MonoBehaviour:
   floatAcceleration: 0
   floatRotationSpeed: 0
   floatLockOnRotationSpeed: 0
-  hitstunGravity: 0
-  hitstunMaxFallSpeed: 0
-  hitstunFrictionXZ: 0
+  hitstunGravity: 0.7
+  hitstunMaxFallSpeed: 15
+  hitstunFrictionXZ: 0.35
   inertiaFriction: 0
   weight: 1

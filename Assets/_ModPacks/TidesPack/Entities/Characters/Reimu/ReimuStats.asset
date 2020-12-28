@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   height: 2
   groundFriction: 1.2
-  maxWalkSpeed: 10
+  maxWalkSpeed: 8
   walkBaseAccel: 1
   walkAcceleration: 1
   walkRotationSpeed: 0.35

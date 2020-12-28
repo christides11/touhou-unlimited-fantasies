@@ -25,16 +25,10 @@ namespace TUF.Entities.Characters
         public int wallSide;
         public float wallRunHozMultiplier = 1.0f;
 
-        protected override void Awake()
-        {
-            base.Awake();
-            SetupDefaultStates();
-        }
-
         /// <summary>
         /// Sets up the states and starts the state machine.
         /// </summary>
-        protected virtual void SetupDefaultStates()
+        protected override void SetupDefaultStates()
         {
             // Combat
             StateManager.AddState(new CAttack(), (int)EntityStates.ATTACK);

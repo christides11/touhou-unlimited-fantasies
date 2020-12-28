@@ -41,16 +41,21 @@ namespace TUF.Combat
             }
         }
 
-        /*
-        protected override void DrawBoxGroupHitOptions(CAF.Combat.BoxGroup currentGroup)
+
+        protected override void AddBoxGroup()
         {
-            base.DrawBoxGroupHitOptions(currentGroup);
+            attack.boxGroups.Add(new TUF.Combat.BoxGroup());
+        }
+
+        protected override void DrawBoxGroup(CAF.Combat.BoxGroup currentGroup)
+        {
+            base.DrawBoxGroup(currentGroup);
 
             BoxGroup boxGroup = (BoxGroup)currentGroup;
 
             EditorGUILayout.LabelField("Sound", EditorStyles.boldLabel);
             boxGroup.hitSound = (ModObjectLink)EditorGUILayout.ObjectField("Hit Sound", boxGroup.hitSound, typeof(ModObjectLink), false);
             EditorGUILayout.Space();
-        }*/
+        }
     }
 }

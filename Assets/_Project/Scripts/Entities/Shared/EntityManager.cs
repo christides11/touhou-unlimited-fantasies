@@ -75,7 +75,12 @@ namespace TUF.Entities
             GameManager = TUF.Core.GameManager.current;
             KinematicCharacterSystem.Settings.AutoSimulation = false;
             size = coll.bounds.size;
+            SetupDefaultStates();
             //pushbox.TriggerStay += PhysicsManager.HandlePushForce;
+        }
+
+        protected virtual void SetupDefaultStates()
+        {
         }
 
         public virtual Vector3 GetSize()

@@ -60,6 +60,7 @@ namespace TUF.Entities
 
         public override HitReaction Hurt(HurtInfoBase hurtInfoBase)
         {
+            Debug.Log($"Hurt {gameObject.name}");
             EntityPhysicsManager physicsManager = (EntityPhysicsManager)Controller.PhysicsManager;
             HurtInfo3D hurtInfo = (HurtInfo3D)hurtInfoBase;
 
