@@ -1,58 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!114 &-6971814778102208417
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
-  m_Name: Ground_AAA
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 200, y: -152}
-  ports:
-    keys:
-    - lastNode
-    - nextNode
-    values:
-    - _fieldName: lastNode
-      _node: {fileID: -6971814778102208417}
-      _typeQualifiedName: CAF.Combat.MovesetAttackNode, CAF, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: nextNode 0
-        node: {fileID: -1285294409386166759}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: nextNode
-      _node: {fileID: -6971814778102208417}
-      _typeQualifiedName: System.Collections.Generic.List`1[[CAF.Combat.MovesetAttackNode+nextNodeDefinition,
-        CAF, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  lastNode: {fileID: -1285294409386166759}
-  inputSequence:
-    executeWindow: 3
-    executeInputs:
-    - inputType: 0
-      buttonID: 3
-      stickDirection: {x: 0, y: 0}
-      directionDeviation: 0
-    sequenceWindow: 8
-    sequenceInputs: []
-  attackDefinition: {fileID: 11400000, guid: 6c32de5245885f841bfa8d5ee68a6354, type: 2}
-  nextNode: []
 --- !u!114 &-6643447657923467853
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -97,56 +44,7 @@ MonoBehaviour:
     executeInputs: []
     sequenceWindow: 8
     sequenceInputs: []
-  attackDefinition: {fileID: 11400000, guid: 5a099ff0994463c45a6606d0e0738f0e, type: 2}
-  nextNode: []
---- !u!114 &-4106480912421362090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
-  m_Name: Moveset Attack
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: 200, y: 264}
-  ports:
-    keys:
-    - lastNode
-    - nextNode
-    values:
-    - _fieldName: lastNode
-      _node: {fileID: -4106480912421362090}
-      _typeQualifiedName: CAF.Combat.MovesetAttackNode, CAF, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: nextNode 0
-        node: {fileID: -340154687094389976}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: nextNode
-      _node: {fileID: -4106480912421362090}
-      _typeQualifiedName: System.Collections.Generic.List`1[[CAF.Combat.MovesetAttackNode+nextNodeDefinition,
-        CAF, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-  lastNode: {fileID: -340154687094389976}
-  inputSequence:
-    executeWindow: 3
-    executeInputs: []
-    sequenceWindow: 8
-    sequenceInputs: []
-  attackDefinition: {fileID: 11400000, guid: ef77fc7c54e8db84380cca08d3bfd3d6, type: 2}
+  attackDefinition: {fileID: 0}
   nextNode: []
 --- !u!114 &-1563255693108092645
 MonoBehaviour:
@@ -206,7 +104,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: lastNode
-        node: {fileID: -340154687094389976}
+        node: {fileID: 1136659414908643324}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -224,10 +122,10 @@ MonoBehaviour:
     sequenceInputs: []
   attackDefinition: {fileID: 11400000, guid: 340c4b6fd97270743aee4e18feb0572d, type: 2}
   nextNode:
-  - cancelWindow: {x: 11, y: 30}
+  - cancelWindow: {x: 11, y: 25}
     node: {fileID: -1285294409386166759}
-  - cancelWindow: {x: 31, y: 100}
-    node: {fileID: -340154687094389976}
+  - cancelWindow: {x: 26, y: 100}
+    node: {fileID: 1136659414908643324}
 --- !u!114 &-1285294409386166759
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -276,7 +174,7 @@ MonoBehaviour:
         Culture=neutral, PublicKeyToken=null
       connections:
       - fieldName: lastNode
-        node: {fileID: -6971814778102208417}
+        node: {fileID: 1214256516946357441}
         reroutePoints: []
       _direction: 1
       _connectionType: 0
@@ -292,74 +190,10 @@ MonoBehaviour:
       directionDeviation: 0
     sequenceWindow: 8
     sequenceInputs: []
-  attackDefinition: {fileID: 11400000, guid: 2e4ea75f681373d4296cd474e2991aab, type: 2}
+  attackDefinition: {fileID: 11400000, guid: aa3eeb72acc005a40aefc44cb433ec89, type: 2}
   nextNode:
-  - cancelWindow: {x: 9, y: 100}
-    node: {fileID: -6971814778102208417}
---- !u!114 &-340154687094389976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
-  m_Name: Ground_A*A
-  m_EditorClassIdentifier: 
-  graph: {fileID: 11400000}
-  position: {x: -56, y: 264}
-  ports:
-    keys:
-    - lastNode
-    - nextNode
-    - nextNode 0
-    values:
-    - _fieldName: lastNode
-      _node: {fileID: -340154687094389976}
-      _typeQualifiedName: CAF.Combat.MovesetAttackNode, CAF, Version=0.0.0.0, Culture=neutral,
-        PublicKeyToken=null
-      connections:
-      - fieldName: nextNode 1
-        node: {fileID: -1563255693108092645}
-        reroutePoints: []
-      _direction: 0
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: nextNode
-      _node: {fileID: -340154687094389976}
-      _typeQualifiedName: System.Collections.Generic.List`1[[CAF.Combat.MovesetAttackNode+nextNodeDefinition,
-        CAF, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
-        Culture=neutral, PublicKeyToken=b77a5c561934e089
-      connections: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 0
-    - _fieldName: nextNode 0
-      _node: {fileID: -340154687094389976}
-      _typeQualifiedName: CAF.Combat.MovesetAttackNode+nextNodeDefinition, CAF, Version=0.0.0.0,
-        Culture=neutral, PublicKeyToken=null
-      connections:
-      - fieldName: lastNode
-        node: {fileID: -4106480912421362090}
-        reroutePoints: []
-      _direction: 1
-      _connectionType: 0
-      _typeConstraint: 0
-      _dynamic: 1
-  lastNode: {fileID: -1563255693108092645}
-  inputSequence:
-    executeWindow: 3
-    executeInputs: []
-    sequenceWindow: 8
-    sequenceInputs: []
-  attackDefinition: {fileID: 11400000, guid: 30ad74d9bf55dd54d8a04c4072e29e3b, type: 2}
-  nextNode:
-  - cancelWindow: {x: 12, y: 100}
-    node: {fileID: -4106480912421362090}
+  - cancelWindow: {x: 11, y: 100}
+    node: {fileID: 1214256516946357441}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -374,13 +208,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nodes:
   - {fileID: -1563255693108092645}
-  - {fileID: -6971814778102208417}
-  - {fileID: -340154687094389976}
   - {fileID: 8066787484242972383}
   - {fileID: -6643447657923467853}
   - {fileID: 4578873955307534289}
-  - {fileID: -4106480912421362090}
   - {fileID: -1285294409386166759}
+  - {fileID: 1214256516946357441}
+  - {fileID: 1136659414908643324}
+  - {fileID: 3544275696062022672}
   groundAttackCommandNormals:
   - {fileID: 4578873955307534289}
   - {fileID: -6643447657923467853}
@@ -398,11 +232,168 @@ MonoBehaviour:
   floatingBulletCommandNormals: []
   floatingBulletStartNodes: []
   groundSpecialCommandNormals: []
-  groundSpecialStartNodes: []
+  groundSpecialStartNodes:
+  - {fileID: 3544275696062022672}
   airSpecialCommandNormals: []
   airSpecialStartNodes: []
   floatingSpecialCommandNormals: []
   floatingSpecialStartNodes: []
+--- !u!114 &1136659414908643324
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
+  m_Name: Ground_A-A
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -40, y: 360}
+  ports:
+    keys:
+    - lastNode
+    - nextNode
+    values:
+    - _fieldName: lastNode
+      _node: {fileID: 1136659414908643324}
+      _typeQualifiedName: CAF.Combat.MovesetAttackNode, CAF, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: nextNode 1
+        node: {fileID: -1563255693108092645}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: nextNode
+      _node: {fileID: 1136659414908643324}
+      _typeQualifiedName: System.Collections.Generic.List`1[[CAF.Combat.MovesetAttackNode+nextNodeDefinition,
+        CAF, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  lastNode: {fileID: -1563255693108092645}
+  inputSequence:
+    executeWindow: 3
+    executeInputs:
+    - inputType: 0
+      buttonID: 3
+      stickDirection: {x: 0, y: 0}
+      directionDeviation: 0
+    sequenceWindow: 8
+    sequenceInputs: []
+  attackDefinition: {fileID: 11400000, guid: 2e4ea75f681373d4296cd474e2991aab, type: 2}
+  nextNode: []
+--- !u!114 &1214256516946357441
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
+  m_Name: Ground_AAA
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: 248, y: -152}
+  ports:
+    keys:
+    - lastNode
+    - nextNode
+    values:
+    - _fieldName: lastNode
+      _node: {fileID: 1214256516946357441}
+      _typeQualifiedName: CAF.Combat.MovesetAttackNode, CAF, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections:
+      - fieldName: nextNode 0
+        node: {fileID: -1285294409386166759}
+        reroutePoints: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: nextNode
+      _node: {fileID: 1214256516946357441}
+      _typeQualifiedName: System.Collections.Generic.List`1[[CAF.Combat.MovesetAttackNode+nextNodeDefinition,
+        CAF, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  lastNode: {fileID: -1285294409386166759}
+  inputSequence:
+    executeWindow: 3
+    executeInputs:
+    - inputType: 0
+      buttonID: 3
+      stickDirection: {x: 0, y: 0}
+      directionDeviation: 0
+    sequenceWindow: 8
+    sequenceInputs: []
+  attackDefinition: {fileID: 11400000, guid: 755586109baa205469c0ad1dbca1ac37, type: 2}
+  nextNode: []
+--- !u!114 &3544275696062022672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114419e4e0d046842bf5ceb010583a71, type: 3}
+  m_Name: Special_Asention
+  m_EditorClassIdentifier: 
+  graph: {fileID: 11400000}
+  position: {x: -179.9214, y: 991.5205}
+  ports:
+    keys:
+    - lastNode
+    - nextNode
+    values:
+    - _fieldName: lastNode
+      _node: {fileID: 3544275696062022672}
+      _typeQualifiedName: CAF.Combat.MovesetAttackNode, CAF, Version=0.0.0.0, Culture=neutral,
+        PublicKeyToken=null
+      connections: []
+      _direction: 0
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+    - _fieldName: nextNode
+      _node: {fileID: 3544275696062022672}
+      _typeQualifiedName: System.Collections.Generic.List`1[[CAF.Combat.MovesetAttackNode+nextNodeDefinition,
+        CAF, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], mscorlib, Version=4.0.0.0,
+        Culture=neutral, PublicKeyToken=b77a5c561934e089
+      connections: []
+      _direction: 1
+      _connectionType: 0
+      _typeConstraint: 0
+      _dynamic: 0
+  lastNode: {fileID: 0}
+  inputSequence:
+    executeWindow: 3
+    executeInputs:
+    - inputType: 0
+      buttonID: 10
+      stickDirection: {x: 0, y: 0}
+      directionDeviation: 0
+    sequenceWindow: 8
+    sequenceInputs: []
+  attackDefinition: {fileID: 11400000, guid: 9b55f4684756bcd4bb5f239c51deffd3, type: 2}
+  nextNode: []
 --- !u!114 &4578873955307534289
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -447,7 +438,7 @@ MonoBehaviour:
     executeInputs: []
     sequenceWindow: 8
     sequenceInputs: []
-  attackDefinition: {fileID: 11400000, guid: f152c0e381b4b8d42b6a76dac1dc1014, type: 2}
+  attackDefinition: {fileID: 0}
   nextNode: []
 --- !u!114 &8066787484242972383
 MonoBehaviour:
@@ -493,5 +484,5 @@ MonoBehaviour:
     executeInputs: []
     sequenceWindow: 8
     sequenceInputs: []
-  attackDefinition: {fileID: 11400000, guid: 7e82cef357587de47bad7dda0758b27f, type: 2}
+  attackDefinition: {fileID: 0}
   nextNode: []

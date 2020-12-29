@@ -79,7 +79,8 @@ namespace TUF.Entities.Shared
                 return;
             }
 
-            if (TryCommandAttackCancel(currentAttack))
+            if (TrySpecialCancel(currentAttack)
+                || TryCommandAttackCancel(currentAttack))
             {
                 return;
             }
@@ -304,6 +305,30 @@ namespace TUF.Entities.Shared
                     && StateManager.CurrentStateFrame <= currentAttack.commandAttackCancelWindows[i].y)
                 {
                     MovesetAttackNode man = (MovesetAttackNode)CombatManager.TryCommandAttack();
+                    if (man != null)
+                    {
+                        CombatManager.SetAttack(man);
+                        StateManager.ChangeState((int)EntityStates.ATTACK);
+                        return true;
+                    }
+                }
+            }
+            return false;
+        }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="currentAttack"></param>
+        /// <returns></returns>
+        protected virtual bool TrySpecialCancel(AttackDefinition currentAttack)
+        {
+            for (int i = 0; i < currentAttack.specialCancelFrames.Count; i++)
+            {
+                if (StateManager.CurrentStateFrame >= currentAttack.specialCancelFrames[i].x
+                    && StateManager.CurrentStateFrame <= currentAttack.specialCancelFrames[i].y)
+                {
+                    MovesetAttackNode man = ((EntityCombatManager)CombatManager).TrySpecial();
                     if (man != null)
                     {
                         CombatManager.SetAttack(man);

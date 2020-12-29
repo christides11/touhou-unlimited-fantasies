@@ -10,19 +10,16 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc111f7afe810b2449e31c9e6dd282e4, type: 3}
-  m_Name: Reimu_Ground_B_A
+  m_Name: Reimu_Special_Ascension
   m_EditorClassIdentifier: 
-  attackName: Reimu Ground Back-A
+  attackName: Ascension
   description: 
   stateOverride: -1
-  length: 30
-  heightRestriction: 0
-  gravityScaleAdded: 0
+  length: 20
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
-  jumpCancelWindows:
-  - {x: 6, y: 60}
+  jumpCancelWindows: []
   enemyStepWindows: []
   landCancelWindows: []
   commandAttackCancelWindows: []
@@ -33,37 +30,28 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
-  - id: 4
   dashCancelableFrames: []
-  floatCancelFrames:
-  - {x: 6, y: 60}
+  floatCancelFrames: []
   bulletCancelFrames: []
   specialCancelFrames: []
-  bulletGroups: []
   faceLockonTargetWindows:
   - startFrame: 0
-    endFrame: 0
-    amount: 0
+    endFrame: 3
+    amount: 0.75
   references:
     version: 1
     00000000:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         ID: 0
-        activeFramesStart: 5
+        activeFramesStart: 3
         activeFramesEnd: 9
         hitGroupType: 0
         boxes:
-        - shape: 2
-          offset: {x: 0, y: 1, z: 0}
-          size: {x: 2, y: 2, z: 2}
-          rotation: {x: 0, y: 0, z: 0}
-          radius: 2
-          height: 2
+        - id: 4
         attachToEntity: 1
-        styleGain: 0
-        chargeLevelNeeded: 0
-        chargeLevelMax: 0
+        chargeLevelNeeded: -1
+        chargeLevelMax: 1
         hitboxHitInfo:
           id: 5
         cameraShake:
@@ -73,77 +61,96 @@ MonoBehaviour:
           fadeLength: 0
           amplitudeDecay: 0
           frequencyDecay: 0
-        hitSound: {fileID: 11400000, guid: 112a03458d3acfb4b8bdea01edecc7dc, type: 2}
+        hitSound: {fileID: 0}
     00000001:
-      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
+      type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
       data:
-        nickname: Restrict M
+        nickname: Clamp.M
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
         startFrame: 1
-        endFrame: 2
+        endFrame: 1
         attackEvent:
           id: 6
         variables:
           intVars: 
           floatVars:
-          - 1.5
+          - 0.1
           objectVars: []
           curveVars: []
+        inputCheckTiming: 0
+        inputCheckStartFrame: 1
+        inputCheckEndFrame: 1
+        input:
+          executeWindow: 3
+          executeInputs: []
+          sequenceWindow: 8
+          sequenceInputs: []
+        inputCheckProcessed: 0
     00000002:
-      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
+      type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
+      data:
+        nickname: Forward Force
+        active: 1
+        onHit: 0
+        onHitHitboxGroup: 0
+        startFrame: 1
+        endFrame: 1
+        attackEvent:
+          id: 7
+        variables:
+          intVars: 
+          floatVars:
+          - 0
+          - 4
+          - 0
+          objectVars: []
+          curveVars: []
+        inputCheckTiming: 0
+        inputCheckStartFrame: 1
+        inputCheckEndFrame: 1
+        input:
+          executeWindow: 3
+          executeInputs: []
+          sequenceWindow: 8
+          sequenceInputs: []
+        inputCheckProcessed: 0
+    00000003:
+      type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
       data:
         nickname: Friction
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
-        startFrame: 2
-        endFrame: 30
+        startFrame: 10
+        endFrame: 40
         attackEvent:
-          id: 7
+          id: 8
         variables:
           intVars: 
           floatVars:
           - 0.3
           objectVars: []
           curveVars: []
-    00000003:
-      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
-      data:
-        nickname: Up
-        active: 1
-        onHit: 0
-        onHitHitboxGroup: 0
-        startFrame: 6
-        endFrame: 6
-        attackEvent:
-          id: 8
-        variables:
-          intVars: 
-          floatVars:
-          - 0
-          - 0
-          - 25
-          objectVars: []
-          curveVars: []
+        inputCheckTiming: 0
+        inputCheckStartFrame: 1
+        inputCheckEndFrame: 1
+        input:
+          executeWindow: 3
+          executeInputs: []
+          sequenceWindow: 8
+          sequenceInputs: []
+        inputCheckProcessed: 0
     00000004:
-      type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
+      type: {class: BoxDefinition, ns: CAF.Combat, asm: CAF}
       data:
-        nickname: U.Friction
-        active: 1
-        onHit: 0
-        onHitHitboxGroup: 0
-        startFrame: 11
-        endFrame: 30
-        attackEvent:
-          id: 9
-        variables:
-          intVars: 
-          floatVars:
-          - 1.6666666
-          objectVars: []
-          curveVars: []
+        shape: 0
+        offset: {x: 0, y: 1, z: 0}
+        size: {x: 1, y: 3.5, z: 3.5}
+        rotation: {x: 0, y: 0, z: 0}
+        radius: 0
+        height: 0
     00000005:
       type: {class: HitInfo, ns: TUF.Combat, asm: TUF_CSharp}
       data:
@@ -154,9 +161,9 @@ MonoBehaviour:
         spaceBetweenHits: 0
         opponentResetXForce: 1
         opponentResetYForce: 1
-        attackerHitstop: 0
-        hitstop: 0
-        hitstun: 0
+        attackerHitstop: 6
+        hitstop: 6
+        hitstun: 60
         forceType: 0
         forceRelation: 0
         breakArmor: 0
@@ -169,8 +176,8 @@ MonoBehaviour:
         damageOnHit: 0
         damageOnBlock: 0
         causesTumble: 0
-        opponentForceMagnitude: 15
-        opponentForceDir: {x: 0, y: 1, z: 0}
+        opponentForceMagnitude: 8
+        opponentForceDir: {x: 0, y: 1, z: 0.5}
         forceIncludeYForce: 0
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1
@@ -181,17 +188,12 @@ MonoBehaviour:
       data:
         dmy: 0
     00000007:
+      type: {class: EntityMovementForceAddEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      data:
+        xzForce: 1
+        yForce: 0
+    00000008:
       type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         yFriction: 0
         xzFriction: 1
-    00000008:
-      type: {class: EntityForceSetEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
-      data:
-        xzForce: 0
-        yForce: 1
-    00000009:
-      type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
-      data:
-        yFriction: 1
-        xzFriction: 0

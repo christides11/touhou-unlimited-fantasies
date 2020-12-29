@@ -58,9 +58,30 @@ namespace TUF.Entities
             return false;
         }*/
 
+        public virtual MovesetAttackNode TrySpecial()
+        {
+            switch (manager.IsGrounded)
+            {
+                case true:
+                    MovesetAttackNode groundCommandNormal = (MovesetAttackNode)CheckAttackNodes(ref moveset.groundSpecialStartNodes);
+                    if (groundCommandNormal != null)
+                    {
+                        return groundCommandNormal;
+                    }
+                    break;
+                case false:
+                    MovesetAttackNode airCommandNormal = (MovesetAttackNode)CheckAttackNodes(ref moveset.airSpecialStartNodes);
+                    if (airCommandNormal != null)
+                    {
+                        return airCommandNormal;
+                    }
+                    break;
+            }
+            return null;
+        }
+
         public override HitReaction Hurt(HurtInfoBase hurtInfoBase)
         {
-            Debug.Log($"Hurt {gameObject.name}");
             EntityPhysicsManager physicsManager = (EntityPhysicsManager)Controller.PhysicsManager;
             HurtInfo3D hurtInfo = (HurtInfo3D)hurtInfoBase;
 

@@ -55,7 +55,7 @@ MonoBehaviour:
   floatAcceleration: 0
   floatRotationSpeed: 0
   floatLockOnRotationSpeed: 0
-  hitstunGravity: 0.7
+  hitstunGravity: 0.6
   hitstunMaxFallSpeed: 15
   hitstunFrictionXZ: 0.35
   inertiaFriction: 0
