@@ -37,6 +37,7 @@ namespace TUF.Entities.Shared
         {
             AttackDefinition currentAttack = (TUF.Combat.AttackDefinition)CombatManager.CurrentAttack.attackDefinition;
 
+            // Rotate towards target.
             for(int i = 0; i < currentAttack.faceLockonTargetWindows.Count; i++)
             {
                 if(StateManager.CurrentStateFrame >= currentAttack.faceLockonTargetWindows[i].startFrame
@@ -49,7 +50,7 @@ namespace TUF.Entities.Shared
                     {
                         forwardDir = controller.LockonForward;
                     }
-                    // Movement is neutral, so target the soft lockon target (if it exist).
+                    // Movement is neutral, so Soft Target.
                     else if (mov.magnitude < InputConstants.movementMagnitude)
                     {
                         if (controller.LockonTarget)

@@ -36,27 +36,21 @@ namespace TUF.Entities
 
         protected override bool CheckStickDirection(InputDefinition sequenceInput, int framesBack)
         {
-            return false;
-        }
-
-        /*
-        protected override bool CheckStickDirection(Vector2 wantedDirection, float deviation, int framesBack)
-        {
             Vector2 stickDir = Controller.InputManager.GetAxis2D((int)EntityInputs.Movement, framesBack);
             if (stickDir.magnitude < InputConstants.movementMagnitude)
             {
                 return false;
             }
 
-            Vector3 wantedDir = Controller.GetVisualBasedDirection(new Vector3(wantedDirection.x, 0, wantedDirection.y)).normalized;
+            Vector3 wantedDir = Controller.GetVisualBasedDirection(new Vector3(sequenceInput.stickDirection.x, 0, sequenceInput.stickDirection.y)).normalized;
             Vector3 currentDirection = Controller.GetMovementVector(stickDir.x, stickDir.y).normalized;
 
-            if(Vector3.Dot(wantedDir, currentDirection) >= deviation)
+            if (Vector3.Dot(wantedDir, currentDirection) >= sequenceInput.directionDeviation)
             {
                 return true;
             }
             return false;
-        }*/
+        }
 
         public virtual MovesetAttackNode TrySpecial()
         {

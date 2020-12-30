@@ -140,7 +140,8 @@ namespace TUF.Entities
         /// </summary>
         public void PickSoftlockTarget()
         {
-            if (LockedOn || InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude < InputConstants.movementMagnitude)
+            // If we're Hard Lockoning or looking in a specific direction, don't pick a target.
+            if (LockedOn || InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude >= InputConstants.movementMagnitude)
             {
                 return;
             }
@@ -198,7 +199,6 @@ namespace TUF.Entities
                 // Only objects with ILockonable can be locked on to.
                 if (c.TryGetComponent(out ITargetable targetLockonComponent))
                 {
-                    Debug.Log($"? {c.name}");
                     // The target can not be locked on to right now.
                     if (!targetLockonComponent.Targetable)
                     {
