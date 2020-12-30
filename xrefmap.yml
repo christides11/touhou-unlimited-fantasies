@@ -199,18 +199,144 @@ references:
   commentId: T:TidesPack.Enemies.Fairies.BFairyManager
   fullName: TidesPack.Enemies.Fairies.BFairyManager
   nameWithType: BFairyManager
+- uid: TidesPack.Enemies.Fairies.FairyFall
+  name: FairyFall
+  href: api/TidesPack.Enemies.Fairies.FairyFall.html
+  commentId: T:TidesPack.Enemies.Fairies.FairyFall
+  fullName: TidesPack.Enemies.Fairies.FairyFall
+  nameWithType: FairyFall
+- uid: TidesPack.Enemies.Fairies.FairyFall.CheckInterrupt
+  name: CheckInterrupt()
+  href: api/TidesPack.Enemies.Fairies.FairyFall.html#TidesPack_Enemies_Fairies_FairyFall_CheckInterrupt
+  commentId: M:TidesPack.Enemies.Fairies.FairyFall.CheckInterrupt
+  fullName: TidesPack.Enemies.Fairies.FairyFall.CheckInterrupt()
+  nameWithType: FairyFall.CheckInterrupt()
+- uid: TidesPack.Enemies.Fairies.FairyFall.CheckInterrupt*
+  name: CheckInterrupt
+  href: api/TidesPack.Enemies.Fairies.FairyFall.html#TidesPack_Enemies_Fairies_FairyFall_CheckInterrupt_
+  commentId: Overload:TidesPack.Enemies.Fairies.FairyFall.CheckInterrupt
+  isSpec: "True"
+  fullName: TidesPack.Enemies.Fairies.FairyFall.CheckInterrupt
+  nameWithType: FairyFall.CheckInterrupt
+- uid: TidesPack.Enemies.Fairies.FairyFall.GetName
+  name: GetName()
+  href: api/TidesPack.Enemies.Fairies.FairyFall.html#TidesPack_Enemies_Fairies_FairyFall_GetName
+  commentId: M:TidesPack.Enemies.Fairies.FairyFall.GetName
+  fullName: TidesPack.Enemies.Fairies.FairyFall.GetName()
+  nameWithType: FairyFall.GetName()
+- uid: TidesPack.Enemies.Fairies.FairyFall.GetName*
+  name: GetName
+  href: api/TidesPack.Enemies.Fairies.FairyFall.html#TidesPack_Enemies_Fairies_FairyFall_GetName_
+  commentId: Overload:TidesPack.Enemies.Fairies.FairyFall.GetName
+  isSpec: "True"
+  fullName: TidesPack.Enemies.Fairies.FairyFall.GetName
+  nameWithType: FairyFall.GetName
+- uid: TidesPack.Enemies.Fairies.FairyIdle
+  name: FairyIdle
+  href: api/TidesPack.Enemies.Fairies.FairyIdle.html
+  commentId: T:TidesPack.Enemies.Fairies.FairyIdle
+  fullName: TidesPack.Enemies.Fairies.FairyIdle
+  nameWithType: FairyIdle
+- uid: TidesPack.Enemies.Fairies.FairyIdle.GetName
+  name: GetName()
+  href: api/TidesPack.Enemies.Fairies.FairyIdle.html#TidesPack_Enemies_Fairies_FairyIdle_GetName
+  commentId: M:TidesPack.Enemies.Fairies.FairyIdle.GetName
+  fullName: TidesPack.Enemies.Fairies.FairyIdle.GetName()
+  nameWithType: FairyIdle.GetName()
+- uid: TidesPack.Enemies.Fairies.FairyIdle.GetName*
+  name: GetName
+  href: api/TidesPack.Enemies.Fairies.FairyIdle.html#TidesPack_Enemies_Fairies_FairyIdle_GetName_
+  commentId: Overload:TidesPack.Enemies.Fairies.FairyIdle.GetName
+  isSpec: "True"
+  fullName: TidesPack.Enemies.Fairies.FairyIdle.GetName
+  nameWithType: FairyIdle.GetName
 - uid: TidesPack.Enemies.Fairies.FairyManager
   name: FairyManager
   href: api/TidesPack.Enemies.Fairies.FairyManager.html
   commentId: T:TidesPack.Enemies.Fairies.FairyManager
   fullName: TidesPack.Enemies.Fairies.FairyManager
   nameWithType: FairyManager
+- uid: TidesPack.Enemies.Fairies.FairyManager.SetupDefaultStates
+  name: SetupDefaultStates()
+  href: api/TidesPack.Enemies.Fairies.FairyManager.html#TidesPack_Enemies_Fairies_FairyManager_SetupDefaultStates
+  commentId: M:TidesPack.Enemies.Fairies.FairyManager.SetupDefaultStates
+  fullName: TidesPack.Enemies.Fairies.FairyManager.SetupDefaultStates()
+  nameWithType: FairyManager.SetupDefaultStates()
+- uid: TidesPack.Enemies.Fairies.FairyManager.SetupDefaultStates*
+  name: SetupDefaultStates
+  href: api/TidesPack.Enemies.Fairies.FairyManager.html#TidesPack_Enemies_Fairies_FairyManager_SetupDefaultStates_
+  commentId: Overload:TidesPack.Enemies.Fairies.FairyManager.SetupDefaultStates
+  isSpec: "True"
+  fullName: TidesPack.Enemies.Fairies.FairyManager.SetupDefaultStates
+  nameWithType: FairyManager.SetupDefaultStates
 - uid: TidesPack.Enemies.Fairies.FairyStats
   name: FairyStats
   href: api/TidesPack.Enemies.Fairies.FairyStats.html
   commentId: T:TidesPack.Enemies.Fairies.FairyStats
   fullName: TidesPack.Enemies.Fairies.FairyStats
   nameWithType: FairyStats
+- uid: TidesPack.TurrentManager
+  name: TurrentManager
+  href: api/TidesPack.TurrentManager.html
+  commentId: T:TidesPack.TurrentManager
+  fullName: TidesPack.TurrentManager
+  nameWithType: TurrentManager
+- uid: TidesPack.TurrentManager.countdown
+  name: countdown
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_countdown
+  commentId: F:TidesPack.TurrentManager.countdown
+  fullName: TidesPack.TurrentManager.countdown
+  nameWithType: TurrentManager.countdown
+- uid: TidesPack.TurrentManager.danmaku
+  name: danmaku
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_danmaku
+  commentId: F:TidesPack.TurrentManager.danmaku
+  fullName: TidesPack.TurrentManager.danmaku
+  nameWithType: TurrentManager.danmaku
+- uid: TidesPack.TurrentManager.danmakuConfig
+  name: danmakuConfig
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_danmakuConfig
+  commentId: F:TidesPack.TurrentManager.danmakuConfig
+  fullName: TidesPack.TurrentManager.danmakuConfig
+  nameWithType: TurrentManager.danmakuConfig
+- uid: TidesPack.TurrentManager.SimStart
+  name: SimStart()
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_SimStart
+  commentId: M:TidesPack.TurrentManager.SimStart
+  fullName: TidesPack.TurrentManager.SimStart()
+  nameWithType: TurrentManager.SimStart()
+- uid: TidesPack.TurrentManager.SimStart*
+  name: SimStart
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_SimStart_
+  commentId: Overload:TidesPack.TurrentManager.SimStart
+  isSpec: "True"
+  fullName: TidesPack.TurrentManager.SimStart
+  nameWithType: TurrentManager.SimStart
+- uid: TidesPack.TurrentManager.SimUpdate
+  name: SimUpdate()
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_SimUpdate
+  commentId: M:TidesPack.TurrentManager.SimUpdate
+  fullName: TidesPack.TurrentManager.SimUpdate()
+  nameWithType: TurrentManager.SimUpdate()
+- uid: TidesPack.TurrentManager.SimUpdate*
+  name: SimUpdate
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_SimUpdate_
+  commentId: Overload:TidesPack.TurrentManager.SimUpdate
+  isSpec: "True"
+  fullName: TidesPack.TurrentManager.SimUpdate
+  nameWithType: TurrentManager.SimUpdate
+- uid: TidesPack.TurrentManager.target
+  name: target
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_target
+  commentId: F:TidesPack.TurrentManager.target
+  fullName: TidesPack.TurrentManager.target
+  nameWithType: TurrentManager.target
+- uid: TidesPack.TurrentManager.tem
+  name: tem
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_tem
+  commentId: F:TidesPack.TurrentManager.tem
+  fullName: TidesPack.TurrentManager.tem
+  nameWithType: TurrentManager.tem
 - uid: TUF
   name: TUF
   href: api/TUF.html
@@ -284,6 +410,32 @@ references:
   commentId: T:TUF.Combat.AttackDefinitionEditorWindow
   fullName: TUF.Combat.AttackDefinitionEditorWindow
   nameWithType: AttackDefinitionEditorWindow
+- uid: TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup
+  name: AddBoxGroup()
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_AddBoxGroup
+  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup()
+  nameWithType: AttackDefinitionEditorWindow.AddBoxGroup()
+- uid: TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup*
+  name: AddBoxGroup
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_AddBoxGroup_
+  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup
+  isSpec: "True"
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.AddBoxGroup
+  nameWithType: AttackDefinitionEditorWindow.AddBoxGroup
+- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup(CAF.Combat.BoxGroup)
+  name: DrawBoxGroup(CAF.Combat.BoxGroup)
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawBoxGroup_CAF_Combat_BoxGroup_
+  commentId: M:TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup(CAF.Combat.BoxGroup)
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup(CAF.Combat.BoxGroup)
+  nameWithType: AttackDefinitionEditorWindow.DrawBoxGroup(CAF.Combat.BoxGroup)
+- uid: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup*
+  name: DrawBoxGroup
+  href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawBoxGroup_
+  commentId: Overload:TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup
+  isSpec: "True"
+  fullName: TUF.Combat.AttackDefinitionEditorWindow.DrawBoxGroup
+  nameWithType: AttackDefinitionEditorWindow.DrawBoxGroup
 - uid: TUF.Combat.AttackDefinitionEditorWindow.DrawWindowsMenu
   name: DrawWindowsMenu()
   href: api/TUF.Combat.AttackDefinitionEditorWindow.html#TUF_Combat_AttackDefinitionEditorWindow_DrawWindowsMenu
@@ -408,6 +560,12 @@ references:
   isSpec: "True"
   fullName: TUF.Combat.Danmaku.AddSequenceAction.DrawInspector
   nameWithType: AddSequenceAction.DrawInspector
+- uid: TUF.Combat.Danmaku.AddSequenceAction.forceMultiplier
+  name: forceMultiplier
+  href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_forceMultiplier
+  commentId: F:TUF.Combat.Danmaku.AddSequenceAction.forceMultiplier
+  fullName: TUF.Combat.Danmaku.AddSequenceAction.forceMultiplier
+  nameWithType: AddSequenceAction.forceMultiplier
 - uid: TUF.Combat.Danmaku.AddSequenceAction.id
   name: id
   href: api/TUF.Combat.Danmaku.AddSequenceAction.html#TUF_Combat_Danmaku_AddSequenceAction_id
@@ -578,6 +736,19 @@ references:
   commentId: T:TUF.Combat.Danmaku.DanmakuAction
   fullName: TUF.Combat.Danmaku.DanmakuAction
   nameWithType: DanmakuAction
+- uid: TUF.Combat.Danmaku.DanmakuAction.Copy(TUF.Combat.Danmaku.DanmakuAction)
+  name: Copy(DanmakuAction)
+  href: api/TUF.Combat.Danmaku.DanmakuAction.html#TUF_Combat_Danmaku_DanmakuAction_Copy_TUF_Combat_Danmaku_DanmakuAction_
+  commentId: M:TUF.Combat.Danmaku.DanmakuAction.Copy(TUF.Combat.Danmaku.DanmakuAction)
+  fullName: TUF.Combat.Danmaku.DanmakuAction.Copy(TUF.Combat.Danmaku.DanmakuAction)
+  nameWithType: DanmakuAction.Copy(DanmakuAction)
+- uid: TUF.Combat.Danmaku.DanmakuAction.Copy*
+  name: Copy
+  href: api/TUF.Combat.Danmaku.DanmakuAction.html#TUF_Combat_Danmaku_DanmakuAction_Copy_
+  commentId: Overload:TUF.Combat.Danmaku.DanmakuAction.Copy
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.DanmakuAction.Copy
+  nameWithType: DanmakuAction.Copy
 - uid: TUF.Combat.Danmaku.DanmakuAction.DrawInspector
   name: DrawInspector()
   href: api/TUF.Combat.Danmaku.DanmakuAction.html#TUF_Combat_Danmaku_DanmakuAction_DrawInspector
@@ -1603,18 +1774,18 @@ references:
   commentId: T:TUF.Combat.EntityTeams
   fullName: TUF.Combat.EntityTeams
   nameWithType: EntityTeams
-- uid: TUF.Combat.EntityTeams.Any
-  name: Any
-  href: api/TUF.Combat.EntityTeams.html#TUF_Combat_EntityTeams_Any
-  commentId: F:TUF.Combat.EntityTeams.Any
-  fullName: TUF.Combat.EntityTeams.Any
-  nameWithType: EntityTeams.Any
 - uid: TUF.Combat.EntityTeams.Enemy
   name: Enemy
   href: api/TUF.Combat.EntityTeams.html#TUF_Combat_EntityTeams_Enemy
   commentId: F:TUF.Combat.EntityTeams.Enemy
   fullName: TUF.Combat.EntityTeams.Enemy
   nameWithType: EntityTeams.Enemy
+- uid: TUF.Combat.EntityTeams.None
+  name: None
+  href: api/TUF.Combat.EntityTeams.html#TUF_Combat_EntityTeams_None
+  commentId: F:TUF.Combat.EntityTeams.None
+  fullName: TUF.Combat.EntityTeams.None
+  nameWithType: EntityTeams.None
 - uid: TUF.Combat.EntityTeams.Player
   name: Player
   href: api/TUF.Combat.EntityTeams.html#TUF_Combat_EntityTeams_Player
@@ -2049,6 +2220,56 @@ references:
   isSpec: "True"
   fullName: TUF.Combat.Events.PlaySoundEvent.GetName
   nameWithType: PlaySoundEvent.GetName
+- uid: TUF.Combat.HitArea
+  name: HitArea
+  href: api/TUF.Combat.HitArea.html
+  commentId: T:TUF.Combat.HitArea
+  fullName: TUF.Combat.HitArea
+  nameWithType: HitArea
+- uid: TUF.Combat.HitArea.hitbox
+  name: hitbox
+  href: api/TUF.Combat.HitArea.html#TUF_Combat_HitArea_hitbox
+  commentId: F:TUF.Combat.HitArea.hitbox
+  fullName: TUF.Combat.HitArea.hitbox
+  nameWithType: HitArea.hitbox
+- uid: TUF.Combat.HitArea.hitInfo
+  name: hitInfo
+  href: api/TUF.Combat.HitArea.html#TUF_Combat_HitArea_hitInfo
+  commentId: F:TUF.Combat.HitArea.hitInfo
+  fullName: TUF.Combat.HitArea.hitInfo
+  nameWithType: HitArea.hitInfo
+- uid: TUF.Combat.HitArea.SimUpdate
+  name: SimUpdate()
+  href: api/TUF.Combat.HitArea.html#TUF_Combat_HitArea_SimUpdate
+  commentId: M:TUF.Combat.HitArea.SimUpdate
+  fullName: TUF.Combat.HitArea.SimUpdate()
+  nameWithType: HitArea.SimUpdate()
+- uid: TUF.Combat.HitArea.SimUpdate*
+  name: SimUpdate
+  href: api/TUF.Combat.HitArea.html#TUF_Combat_HitArea_SimUpdate_
+  commentId: Overload:TUF.Combat.HitArea.SimUpdate
+  isSpec: "True"
+  fullName: TUF.Combat.HitArea.SimUpdate
+  nameWithType: HitArea.SimUpdate
+- uid: TUF.Combat.HitArea.Start
+  name: Start()
+  href: api/TUF.Combat.HitArea.html#TUF_Combat_HitArea_Start
+  commentId: M:TUF.Combat.HitArea.Start
+  fullName: TUF.Combat.HitArea.Start()
+  nameWithType: HitArea.Start()
+- uid: TUF.Combat.HitArea.Start*
+  name: Start
+  href: api/TUF.Combat.HitArea.html#TUF_Combat_HitArea_Start_
+  commentId: Overload:TUF.Combat.HitArea.Start
+  isSpec: "True"
+  fullName: TUF.Combat.HitArea.Start
+  nameWithType: HitArea.Start
+- uid: TUF.Combat.HitArea.team
+  name: team
+  href: api/TUF.Combat.HitArea.html#TUF_Combat_HitArea_team
+  commentId: F:TUF.Combat.HitArea.team
+  fullName: TUF.Combat.HitArea.team
+  nameWithType: HitArea.team
 - uid: TUF.Combat.Hitbox
   name: Hitbox
   href: api/TUF.Combat.Hitbox.html
@@ -2598,6 +2819,12 @@ references:
   commentId: F:TUF.Core.CombatVariables.detectbox
   fullName: TUF.Core.CombatVariables.detectbox
   nameWithType: CombatVariables.detectbox
+- uid: TUF.Core.CombatVariables.groundBounceForce
+  name: groundBounceForce
+  href: api/TUF.Core.CombatVariables.html#TUF_Core_CombatVariables_groundBounceForce
+  commentId: F:TUF.Core.CombatVariables.groundBounceForce
+  fullName: TUF.Core.CombatVariables.groundBounceForce
+  nameWithType: CombatVariables.groundBounceForce
 - uid: TUF.Core.CombatVariables.hitbox
   name: hitbox
   href: api/TUF.Core.CombatVariables.html#TUF_Core_CombatVariables_hitbox
@@ -3579,6 +3806,50 @@ references:
   commentId: F:TUF.Core.StageDefinition.stageName
   fullName: TUF.Core.StageDefinition.stageName
   nameWithType: StageDefinition.stageName
+- uid: TUF.DetectionArea
+  name: DetectionArea
+  href: api/TUF.DetectionArea.html
+  commentId: T:TUF.DetectionArea
+  fullName: TUF.DetectionArea
+  nameWithType: DetectionArea
+- uid: TUF.DetectionArea.entities
+  name: entities
+  href: api/TUF.DetectionArea.html#TUF_DetectionArea_entities
+  commentId: F:TUF.DetectionArea.entities
+  fullName: TUF.DetectionArea.entities
+  nameWithType: DetectionArea.entities
+- uid: TUF.DetectionArea.OnTriggerEnter(Collider)
+  name: OnTriggerEnter(Collider)
+  href: api/TUF.DetectionArea.html#TUF_DetectionArea_OnTriggerEnter_Collider_
+  commentId: M:TUF.DetectionArea.OnTriggerEnter(Collider)
+  fullName: TUF.DetectionArea.OnTriggerEnter(Collider)
+  nameWithType: DetectionArea.OnTriggerEnter(Collider)
+- uid: TUF.DetectionArea.OnTriggerEnter*
+  name: OnTriggerEnter
+  href: api/TUF.DetectionArea.html#TUF_DetectionArea_OnTriggerEnter_
+  commentId: Overload:TUF.DetectionArea.OnTriggerEnter
+  isSpec: "True"
+  fullName: TUF.DetectionArea.OnTriggerEnter
+  nameWithType: DetectionArea.OnTriggerEnter
+- uid: TUF.DetectionArea.OnTriggerExit(Collider)
+  name: OnTriggerExit(Collider)
+  href: api/TUF.DetectionArea.html#TUF_DetectionArea_OnTriggerExit_Collider_
+  commentId: M:TUF.DetectionArea.OnTriggerExit(Collider)
+  fullName: TUF.DetectionArea.OnTriggerExit(Collider)
+  nameWithType: DetectionArea.OnTriggerExit(Collider)
+- uid: TUF.DetectionArea.OnTriggerExit*
+  name: OnTriggerExit
+  href: api/TUF.DetectionArea.html#TUF_DetectionArea_OnTriggerExit_
+  commentId: Overload:TUF.DetectionArea.OnTriggerExit
+  isSpec: "True"
+  fullName: TUF.DetectionArea.OnTriggerExit
+  nameWithType: DetectionArea.OnTriggerExit
+- uid: TUF.DetectionArea.team
+  name: team
+  href: api/TUF.DetectionArea.html#TUF_DetectionArea_team
+  commentId: F:TUF.DetectionArea.team
+  fullName: TUF.DetectionArea.team
+  nameWithType: DetectionArea.team
 - uid: TUF.Entities
   name: TUF.Entities
   href: api/TUF.Entities.html
@@ -3682,19 +3953,6 @@ references:
   commentId: T:TUF.Entities.Characters.CharacterManager
   fullName: TUF.Entities.Characters.CharacterManager
   nameWithType: CharacterManager
-- uid: TUF.Entities.Characters.CharacterManager.Awake
-  name: Awake()
-  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_Awake
-  commentId: M:TUF.Entities.Characters.CharacterManager.Awake
-  fullName: TUF.Entities.Characters.CharacterManager.Awake()
-  nameWithType: CharacterManager.Awake()
-- uid: TUF.Entities.Characters.CharacterManager.Awake*
-  name: Awake
-  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_Awake_
-  commentId: Overload:TUF.Entities.Characters.CharacterManager.Awake
-  isSpec: "True"
-  fullName: TUF.Entities.Characters.CharacterManager.Awake
-  nameWithType: CharacterManager.Awake
 - uid: TUF.Entities.Characters.CharacterManager.CheckAirDash
   name: CheckAirDash()
   href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_CheckAirDash
@@ -3820,6 +4078,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Characters.CharacterManager.TryLedgeGrab
   nameWithType: CharacterManager.TryLedgeGrab
+- uid: TUF.Entities.Characters.CharacterManager.TryWallCling
+  name: TryWallCling()
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_TryWallCling
+  commentId: M:TUF.Entities.Characters.CharacterManager.TryWallCling
+  fullName: TUF.Entities.Characters.CharacterManager.TryWallCling()
+  nameWithType: CharacterManager.TryWallCling()
+- uid: TUF.Entities.Characters.CharacterManager.TryWallCling*
+  name: TryWallCling
+  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_TryWallCling_
+  commentId: Overload:TUF.Entities.Characters.CharacterManager.TryWallCling
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.CharacterManager.TryWallCling
+  nameWithType: CharacterManager.TryWallCling
 - uid: TUF.Entities.Characters.CharacterManager.TryWallRun
   name: TryWallRun()
   href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_TryWallRun
@@ -5164,6 +5435,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityCombatManager.Controller
   nameWithType: EntityCombatManager.Controller
+- uid: TUF.Entities.EntityCombatManager.GetTeam
+  name: GetTeam()
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_GetTeam
+  commentId: M:TUF.Entities.EntityCombatManager.GetTeam
+  fullName: TUF.Entities.EntityCombatManager.GetTeam()
+  nameWithType: EntityCombatManager.GetTeam()
+- uid: TUF.Entities.EntityCombatManager.GetTeam*
+  name: GetTeam
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_GetTeam_
+  commentId: Overload:TUF.Entities.EntityCombatManager.GetTeam
+  isSpec: "True"
+  fullName: TUF.Entities.EntityCombatManager.GetTeam
+  nameWithType: EntityCombatManager.GetTeam
 - uid: TUF.Entities.EntityCombatManager.Heal(HealInfoBase)
   name: Heal(HealInfoBase)
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_Heal_HealInfoBase_
@@ -5215,6 +5499,19 @@ references:
   commentId: F:TUF.Entities.EntityCombatManager.team
   fullName: TUF.Entities.EntityCombatManager.team
   nameWithType: EntityCombatManager.team
+- uid: TUF.Entities.EntityCombatManager.TrySpecial
+  name: TrySpecial()
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_TrySpecial
+  commentId: M:TUF.Entities.EntityCombatManager.TrySpecial
+  fullName: TUF.Entities.EntityCombatManager.TrySpecial()
+  nameWithType: EntityCombatManager.TrySpecial()
+- uid: TUF.Entities.EntityCombatManager.TrySpecial*
+  name: TrySpecial
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_TrySpecial_
+  commentId: Overload:TUF.Entities.EntityCombatManager.TrySpecial
+  isSpec: "True"
+  fullName: TUF.Entities.EntityCombatManager.TrySpecial
+  nameWithType: EntityCombatManager.TrySpecial
 - uid: TUF.Entities.EntityCombatManager.WasFloating
   name: WasFloating
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_WasFloating
@@ -5538,6 +5835,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityManager.Health
   nameWithType: EntityManager.Health
+- uid: TUF.Entities.EntityManager.healthManager
+  name: healthManager
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_healthManager
+  commentId: F:TUF.Entities.EntityManager.healthManager
+  fullName: TUF.Entities.EntityManager.healthManager
+  nameWithType: EntityManager.healthManager
 - uid: TUF.Entities.EntityManager.Init(TUF.Core.GameManager,LookHandler,InputControlType)
   name: Init(GameManager, LookHandler, InputControlType)
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_Init_TUF_Core_GameManager_LookHandler_InputControlType_
@@ -5666,6 +5969,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityManager.ResetAirActions
   nameWithType: EntityManager.ResetAirActions
+- uid: TUF.Entities.EntityManager.SetupDefaultStates
+  name: SetupDefaultStates()
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_SetupDefaultStates
+  commentId: M:TUF.Entities.EntityManager.SetupDefaultStates
+  fullName: TUF.Entities.EntityManager.SetupDefaultStates()
+  nameWithType: EntityManager.SetupDefaultStates()
+- uid: TUF.Entities.EntityManager.SetupDefaultStates*
+  name: SetupDefaultStates
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_SetupDefaultStates_
+  commentId: Overload:TUF.Entities.EntityManager.SetupDefaultStates
+  isSpec: "True"
+  fullName: TUF.Entities.EntityManager.SetupDefaultStates
+  nameWithType: EntityManager.SetupDefaultStates
 - uid: TUF.Entities.EntityManager.softLockonRadius
   name: softLockonRadius
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_softLockonRadius
@@ -5900,6 +6216,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityPhysicsManager.DetectWall
   nameWithType: EntityPhysicsManager.DetectWall
+- uid: TUF.Entities.EntityPhysicsManager.Freeze
+  name: Freeze()
+  href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_Freeze
+  commentId: M:TUF.Entities.EntityPhysicsManager.Freeze
+  fullName: TUF.Entities.EntityPhysicsManager.Freeze()
+  nameWithType: EntityPhysicsManager.Freeze()
+- uid: TUF.Entities.EntityPhysicsManager.Freeze*
+  name: Freeze
+  href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_Freeze_
+  commentId: Overload:TUF.Entities.EntityPhysicsManager.Freeze
+  isSpec: "True"
+  fullName: TUF.Entities.EntityPhysicsManager.Freeze
+  nameWithType: EntityPhysicsManager.Freeze
 - uid: TUF.Entities.EntityPhysicsManager.GetOverallForce
   name: GetOverallForce()
   href: api/TUF.Entities.EntityPhysicsManager.html#TUF_Entities_EntityPhysicsManager_GetOverallForce
@@ -6520,6 +6849,19 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Shared.EntityAttack.TryCommandAttackCancel
   nameWithType: EntityAttack.TryCommandAttackCancel
+- uid: TUF.Entities.Shared.EntityAttack.TrySpecialCancel(TUF.Combat.AttackDefinition)
+  name: TrySpecialCancel(AttackDefinition)
+  href: api/TUF.Entities.Shared.EntityAttack.html#TUF_Entities_Shared_EntityAttack_TrySpecialCancel_TUF_Combat_AttackDefinition_
+  commentId: M:TUF.Entities.Shared.EntityAttack.TrySpecialCancel(TUF.Combat.AttackDefinition)
+  fullName: TUF.Entities.Shared.EntityAttack.TrySpecialCancel(TUF.Combat.AttackDefinition)
+  nameWithType: EntityAttack.TrySpecialCancel(AttackDefinition)
+- uid: TUF.Entities.Shared.EntityAttack.TrySpecialCancel*
+  name: TrySpecialCancel
+  href: api/TUF.Entities.Shared.EntityAttack.html#TUF_Entities_Shared_EntityAttack_TrySpecialCancel_
+  commentId: Overload:TUF.Entities.Shared.EntityAttack.TrySpecialCancel
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityAttack.TrySpecialCancel
+  nameWithType: EntityAttack.TrySpecialCancel
 - uid: TUF.Entities.Shared.EntityDash
   name: EntityDash
   href: api/TUF.Entities.Shared.EntityDash.html
@@ -6807,6 +7149,64 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Shared.EntityFloat.OnUpdate
   nameWithType: EntityFloat.OnUpdate
+- uid: TUF.Entities.Shared.EntityGroundBounce
+  name: EntityGroundBounce
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html
+  commentId: T:TUF.Entities.Shared.EntityGroundBounce
+  fullName: TUF.Entities.Shared.EntityGroundBounce
+  nameWithType: EntityGroundBounce
+- uid: TUF.Entities.Shared.EntityGroundBounce.CheckInterrupt
+  name: CheckInterrupt()
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html#TUF_Entities_Shared_EntityGroundBounce_CheckInterrupt
+  commentId: M:TUF.Entities.Shared.EntityGroundBounce.CheckInterrupt
+  fullName: TUF.Entities.Shared.EntityGroundBounce.CheckInterrupt()
+  nameWithType: EntityGroundBounce.CheckInterrupt()
+- uid: TUF.Entities.Shared.EntityGroundBounce.CheckInterrupt*
+  name: CheckInterrupt
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html#TUF_Entities_Shared_EntityGroundBounce_CheckInterrupt_
+  commentId: Overload:TUF.Entities.Shared.EntityGroundBounce.CheckInterrupt
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityGroundBounce.CheckInterrupt
+  nameWithType: EntityGroundBounce.CheckInterrupt
+- uid: TUF.Entities.Shared.EntityGroundBounce.GetName
+  name: GetName()
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html#TUF_Entities_Shared_EntityGroundBounce_GetName
+  commentId: M:TUF.Entities.Shared.EntityGroundBounce.GetName
+  fullName: TUF.Entities.Shared.EntityGroundBounce.GetName()
+  nameWithType: EntityGroundBounce.GetName()
+- uid: TUF.Entities.Shared.EntityGroundBounce.GetName*
+  name: GetName
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html#TUF_Entities_Shared_EntityGroundBounce_GetName_
+  commentId: Overload:TUF.Entities.Shared.EntityGroundBounce.GetName
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityGroundBounce.GetName
+  nameWithType: EntityGroundBounce.GetName
+- uid: TUF.Entities.Shared.EntityGroundBounce.Initialize
+  name: Initialize()
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html#TUF_Entities_Shared_EntityGroundBounce_Initialize
+  commentId: M:TUF.Entities.Shared.EntityGroundBounce.Initialize
+  fullName: TUF.Entities.Shared.EntityGroundBounce.Initialize()
+  nameWithType: EntityGroundBounce.Initialize()
+- uid: TUF.Entities.Shared.EntityGroundBounce.Initialize*
+  name: Initialize
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html#TUF_Entities_Shared_EntityGroundBounce_Initialize_
+  commentId: Overload:TUF.Entities.Shared.EntityGroundBounce.Initialize
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityGroundBounce.Initialize
+  nameWithType: EntityGroundBounce.Initialize
+- uid: TUF.Entities.Shared.EntityGroundBounce.OnUpdate
+  name: OnUpdate()
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html#TUF_Entities_Shared_EntityGroundBounce_OnUpdate
+  commentId: M:TUF.Entities.Shared.EntityGroundBounce.OnUpdate
+  fullName: TUF.Entities.Shared.EntityGroundBounce.OnUpdate()
+  nameWithType: EntityGroundBounce.OnUpdate()
+- uid: TUF.Entities.Shared.EntityGroundBounce.OnUpdate*
+  name: OnUpdate
+  href: api/TUF.Entities.Shared.EntityGroundBounce.html#TUF_Entities_Shared_EntityGroundBounce_OnUpdate_
+  commentId: Overload:TUF.Entities.Shared.EntityGroundBounce.OnUpdate
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityGroundBounce.OnUpdate
+  nameWithType: EntityGroundBounce.OnUpdate
 - uid: TUF.Entities.Shared.EntityIdle
   name: EntityIdle
   href: api/TUF.Entities.Shared.EntityIdle.html
