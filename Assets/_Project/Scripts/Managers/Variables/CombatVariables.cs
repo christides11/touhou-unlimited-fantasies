@@ -10,5 +10,6 @@ namespace TUF.Core
         public GameObject hitbox;
         public GameObject detectbox;
         public float tumbleMinimumMagnitude;
+        public float groundBounceForce;
     }
 }

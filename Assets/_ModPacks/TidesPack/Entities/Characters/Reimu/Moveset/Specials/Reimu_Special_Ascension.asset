@@ -30,6 +30,8 @@ MonoBehaviour:
   - id: 1
   - id: 2
   - id: 3
+  - id: 4
+  - id: 5
   dashCancelableFrames: []
   floatCancelFrames: []
   bulletCancelFrames: []
@@ -48,12 +50,12 @@ MonoBehaviour:
         activeFramesEnd: 9
         hitGroupType: 0
         boxes:
-        - id: 4
+        - id: 6
         attachToEntity: 1
         chargeLevelNeeded: -1
         chargeLevelMax: 1
         hitboxHitInfo:
-          id: 5
+          id: 7
         cameraShake:
           amplitude: 0
           frequency: 0
@@ -72,7 +74,7 @@ MonoBehaviour:
         startFrame: 1
         endFrame: 1
         attackEvent:
-          id: 6
+          id: 8
         variables:
           intVars: 
           floatVars:
@@ -98,7 +100,7 @@ MonoBehaviour:
         startFrame: 1
         endFrame: 1
         attackEvent:
-          id: 7
+          id: 9
         variables:
           intVars: 
           floatVars:
@@ -126,7 +128,7 @@ MonoBehaviour:
         startFrame: 10
         endFrame: 40
         attackEvent:
-          id: 8
+          id: 10
         variables:
           intVars: 
           floatVars:
@@ -143,6 +145,77 @@ MonoBehaviour:
           sequenceInputs: []
         inputCheckProcessed: 0
     00000004:
+      type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
+      data:
+        nickname: Up Force
+        active: 1
+        onHit: 0
+        onHitHitboxGroup: 0
+        startFrame: 2
+        endFrame: 2
+        attackEvent:
+          id: 11
+        variables:
+          intVars: 
+          floatVars:
+          - 0
+          - 0
+          - 6
+          objectVars: []
+          curveVars: []
+        inputCheckTiming: 0
+        inputCheckStartFrame: 1
+        inputCheckEndFrame: 1
+        input:
+          executeWindow: 3
+          executeInputs: []
+          sequenceWindow: 8
+          sequenceInputs: []
+        inputCheckProcessed: 0
+    00000005:
+      type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
+      data:
+        nickname: Gravity
+        active: 1
+        onHit: 0
+        onHitHitboxGroup: 0
+        startFrame: 3
+        endFrame: 20
+        attackEvent:
+          id: 12
+        variables:
+          intVars: 
+          floatVars:
+          - 0
+          - 0
+          - 0
+          objectVars: []
+          curveVars:
+          - serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          - serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+          - serializedVersion: 2
+            m_Curve: []
+            m_PreInfinity: 2
+            m_PostInfinity: 2
+            m_RotationOrder: 4
+        inputCheckTiming: 0
+        inputCheckStartFrame: 1
+        inputCheckEndFrame: 1
+        input:
+          executeWindow: 3
+          executeInputs: []
+          sequenceWindow: 8
+          sequenceInputs: []
+        inputCheckProcessed: 0
+    00000006:
       type: {class: BoxDefinition, ns: CAF.Combat, asm: CAF}
       data:
         shape: 0
@@ -151,7 +224,7 @@ MonoBehaviour:
         rotation: {x: 0, y: 0, z: 0}
         radius: 0
         height: 0
-    00000005:
+    00000007:
       type: {class: HitInfo, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         airOnly: 0
@@ -183,17 +256,28 @@ MonoBehaviour:
         opponentMinMagnitude: 1
         throwConfirm: {fileID: 0}
         dmy: 0
-    00000006:
+    00000008:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         dmy: 0
-    00000007:
+    00000009:
       type: {class: EntityMovementForceAddEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         xzForce: 1
         yForce: 0
-    00000008:
+    0000000A:
       type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         yFriction: 0
         xzFriction: 1
+    0000000B:
+      type: {class: EntityForceSetEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      data:
+        xzForce: 0
+        yForce: 1
+    0000000C:
+      type: {class: EntityApplyGravityEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      data:
+        useEntityMaxFallSpeed: 1
+        useEntityGravity: 1
+        useEntityGravityScale: 1

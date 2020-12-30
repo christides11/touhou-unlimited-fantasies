@@ -32,6 +32,7 @@ namespace TUF.Entities.Shared
                     return true;
                 }
             }
+
             if (!controller.IsGrounded)
             {
                 StateManager.ChangeState((int)EntityStates.FLINCH_AIR, StateManager.CurrentStateFrame);

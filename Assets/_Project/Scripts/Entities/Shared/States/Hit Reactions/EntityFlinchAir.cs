@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TUF.Combat;
 using UnityEngine;
 
 namespace TUF.Entities.Shared
@@ -43,9 +44,17 @@ namespace TUF.Entities.Shared
                     return true;
                 }
             }
+
             if (controller.IsGrounded)
             {
-                StateManager.ChangeState((int)EntityStates.FLINCH, StateManager.CurrentStateFrame, false);
+                if (((HitInfo)CombatManager.LastHitBy).groundBounces)
+                {
+                    StateManager.ChangeState((int)EntityStates.GROUND_BOUNCE);
+                }
+                else
+                {
+                    StateManager.ChangeState((int)EntityStates.FLINCH, StateManager.CurrentStateFrame, false);
+                }
                 return true;
             }
             return false;

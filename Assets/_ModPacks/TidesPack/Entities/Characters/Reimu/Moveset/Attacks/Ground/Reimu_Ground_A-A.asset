@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc111f7afe810b2449e31c9e6dd282e4, type: 3}
   m_Name: Reimu_Ground_A-A
   m_EditorClassIdentifier: 
-  attackName: Reimu Ground AA
+  attackName: Reimu Ground A-A
   description: 
   stateOverride: -1
   length: 50
@@ -39,7 +39,8 @@ MonoBehaviour:
   dashCancelableFrames: []
   floatCancelFrames: []
   bulletCancelFrames: []
-  specialCancelFrames: []
+  specialCancelFrames:
+  - {x: 6, y: 100}
   faceLockonTargetWindows:
   - startFrame: 0
     endFrame: 20
@@ -302,7 +303,7 @@ MonoBehaviour:
         damageOnBlock: 0
         causesTumble: 0
         opponentForceMagnitude: 5
-        opponentForceDir: {x: 0, y: 0.1, z: 1}
+        opponentForceDir: {x: 0, y: 0.5, z: 1}
         forceIncludeYForce: 0
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1
@@ -343,7 +344,7 @@ MonoBehaviour:
         damageOnBlock: 0
         causesTumble: 0
         opponentForceMagnitude: 6
-        opponentForceDir: {x: 0, y: 0.1, z: 1}
+        opponentForceDir: {x: 0, y: 0.5, z: 1}
         forceIncludeYForce: 0
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1

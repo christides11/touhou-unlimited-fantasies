@@ -18,6 +18,7 @@ namespace TidesPack.Enemies.Fairies
             StateManager.AddState(new EntityFlinch(), (int)EntityStates.FLINCH);
             StateManager.AddState(new EntityFlinchAir(), (int)EntityStates.FLINCH_AIR);
             StateManager.AddState(new EntityTumble(), (int)EntityStates.TUMBLE);
+            StateManager.AddState(new EntityGroundBounce(), (int)EntityStates.GROUND_BOUNCE);
 
             // Start State Machine
             StateManager.ChangeState((int)EntityStates.IDLE);
