@@ -46,6 +46,7 @@ namespace TUF.Combat.Danmaku
                         fi.bullets[s].transform.forward * fi.bulletsConfig[s].speed.z;
 
                     fi.bullets[s].transform.Rotate(fi.bulletsConfig[s].angularSpeed, Space.Self);
+                    fi.bullets[s].GetComponent<Bullet>().Tick();
                 }
             }
         }

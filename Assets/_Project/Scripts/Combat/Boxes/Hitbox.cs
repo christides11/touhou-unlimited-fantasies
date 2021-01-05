@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using CAF.Combat;
+using UnityEngine;
 
 namespace TUF.Combat
 {
@@ -40,6 +41,18 @@ namespace TUF.Combat
         protected override void OnTriggerStay(Collider other)
         {
             base.OnTriggerStay(other);
+        }
+
+        protected override bool ShouldHurt(IHurtable ih)
+        {
+            EntityTeams thisTeam = (EntityTeams)team;
+
+            // Entity is part of our team.
+            if (thisTeam.HasFlag((EntityTeams)ih.GetTeam()))
+            {
+                return false;
+            }
+            return true;
         }
     }
 }

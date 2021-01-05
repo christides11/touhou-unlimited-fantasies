@@ -203,6 +203,7 @@ GameObject:
   - component: {fileID: 7491508832732184261}
   - component: {fileID: 836382071}
   - component: {fileID: 1901789706}
+  - component: {fileID: 7187871433067040018}
   m_Layer: 9
   m_Name: Blue Fairy
   m_TagString: Untagged
@@ -317,6 +318,7 @@ MonoBehaviour:
   entityAnimator: {fileID: 0}
   healthManager: {fileID: 1901789706}
   definition: {fileID: 11400000, guid: e02f20a75d6272a4c9b17249f23ea147, type: 2}
+  danmakuManager: {fileID: 7187871433067040018}
   cc: {fileID: 3573686667881084505}
   visualTransform: {fileID: 6646065074406279054}
   pushbox: {fileID: 5275329956619050909}
@@ -434,6 +436,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+--- !u!114 &7187871433067040018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646065074715150306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e993f333736b6b489d4387b9f617457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sequences: []
 --- !u!1 &6646065076231640373
 GameObject:
   m_ObjectHideFlags: 0

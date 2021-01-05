@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TUF.Combat.Danmaku;
 using TUF.Core;
 using UnityEngine;
 using CharacterManager = TUF.Entities.Characters.CharacterManager;
@@ -9,44 +10,60 @@ namespace TidesPack.Characters.Reimu
     public class ReimuManager : CharacterManager
     {
 
+        bool shooting;
+        int timer;
+
+        [Header("Reimu")]
+        public Transform YinYangTransform;
+        public int bulletCooldown = 60;
+        public DanmakuSequence dd;
+        public DanmakuConfig baseConfig;
+
         public override void SimUpdate()
         {
             base.SimUpdate();
 
-            /*
-            if(InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).firstPress
+            if (InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).firstPress
                 && InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude < InputConstants.movementMagnitude)
             {
-                if(bpm == null)
+                if(CombatManager.CurrentAttack == null)
                 {
-                    GameObject go = new GameObject();
-                    go.transform.position = visualTransform.position;
-                    go.transform.rotation = visualTransform.rotation;
-                    bpm = go.AddComponent<BulletPatternManager>();
-                    BulletPatternManagerSettings settings = new BulletPatternManagerSettings();
-                    settings.active = true;
-                    bpm.Initialize(settings, bulletMove, go.transform.position + new Vector3(0, 2, 3));
-                    GameManager.GameModeHanlder.SimObjectManager.RegisterObject(bpm);
+                    shooting = true;
+                    timer = bulletCooldown;
+                }
+            }
+
+            if (shooting && InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).isDown)
+            {
+                if(LockonTarget != null)
+                {
+                    YinYangTransform.LookAt(LockonTarget.transform.position + new Vector3(0, 1f, 0));
                 }
                 else
                 {
-                    bpm.patterns[0].active = true;
-                    bpm.bulletSpawnPosition = visualTransform.position + new Vector3(0, 2, 3);
-                    bpm.bulletSpawnRotation = visualTransform.eulerAngles;
+                    YinYangTransform.localEulerAngles = Vector3.zero;
+                }
+                timer--;
+
+                if(timer <= 0)
+                {
+                    timer = bulletCooldown;
+                    baseConfig.rotation = YinYangTransform.eulerAngles;
+                    baseConfig.position = YinYangTransform.position;
+                    danmakuManager.Fire(dd, baseConfig);
                 }
             }
-            if (InputManager.GetButton((int)EntityInputs.Bullet).released)
+
+            if (InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).released)
             {
-                if (bpm)
-                {
-                    bpm.patterns[0].active = false;
-                }
-            }*/
+                shooting = false;
+            }
         }
 
         protected override void SetupDefaultStates()
         {
             StateManager.AddState(new ReimuStateTeleport(), (int)ReimuStates.SPECIAL_TELEPORT);
+            StateManager.AddState(new ReimuShoot(), (int)ReimuStates.SPECIAL_SHOOT);
             base.SetupDefaultStates();
         }
     }

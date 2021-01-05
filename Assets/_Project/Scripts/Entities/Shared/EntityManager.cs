@@ -9,6 +9,7 @@ using System;
 using CAF.Input;
 using CAF.Combat;
 using CAF.Camera;
+using TUF.Combat.Danmaku;
 
 namespace TUF.Entities
 {
@@ -31,6 +32,7 @@ namespace TUF.Entities
         [SerializeField] protected EntityAnimator entityAnimator;
         public HealthManager healthManager;
         public EntityDefinition definition;
+        public DanmakuManager danmakuManager;
         public EntityCharacterController cc;
         public Transform visualTransform;
         public TriggerDetector pushbox;
@@ -77,6 +79,12 @@ namespace TUF.Entities
             size = coll.bounds.size;
             SetupDefaultStates();
             //pushbox.TriggerStay += PhysicsManager.HandlePushForce;
+        }
+
+        public override void SimUpdate()
+        {
+            base.SimUpdate();
+            danmakuManager.Tick();
         }
 
         protected virtual void SetupDefaultStates()

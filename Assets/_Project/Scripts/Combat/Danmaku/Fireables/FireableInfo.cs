@@ -7,6 +7,10 @@ namespace TUF.Combat.Danmaku
     [System.Serializable]
     public class FireableInfo
     {
+        public GameObject hitboxOwner;
+        public int team;
+        public CAF.Combat.BoxDefinition boxDefinition;
+        public HitInfo hitInfo;
         public List<GameObject> bullets = new List<GameObject>();
         public List<DanmakuState> bulletsConfig = new List<DanmakuState>();
         public List<DanmakuModifier> modifiers = new List<DanmakuModifier>();
