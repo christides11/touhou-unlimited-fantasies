@@ -5594,6 +5594,37 @@ MonoBehaviour:
         _max: 0
   countdown: 60
   team: 2
+  hitInfo:
+    airOnly: 0
+    groundOnly: 0
+    hitKills: 1
+    continuousHit: 0
+    spaceBetweenHits: 0
+    opponentResetXForce: 1
+    opponentResetYForce: 1
+    attackerHitstop: 0
+    hitstop: 0
+    hitstun: 0
+    forceType: 0
+    forceRelation: 0
+    breakArmor: 0
+    unblockable: 0
+    knockdown: 0
+    groundBounces: 0
+    groundBounceForce: 0
+    wallBounces: 0
+    wallBounceForce: 0
+    damageOnHit: 0
+    damageOnBlock: 0
+    causesTumble: 0
+    opponentForceMagnitude: 1
+    opponentForceDir: {x: 0, y: 0, z: 1}
+    forceIncludeYForce: 0
+    opponentMaxMagnitude: 1
+    opponentMinMagnitude: 1
+    throwConfirm: {fileID: 0}
+    attackerPowerGain: 0
+    attackerPowerGainOnHit: 0
   tem: 0.2
 --- !u!114 &367043305
 MonoBehaviour:
@@ -8733,6 +8764,37 @@ MonoBehaviour:
         _min: 0
         _max: 0
   team: 2
+  hitInfo:
+    airOnly: 0
+    groundOnly: 0
+    hitKills: 1
+    continuousHit: 0
+    spaceBetweenHits: 0
+    opponentResetXForce: 1
+    opponentResetYForce: 1
+    attackerHitstop: 0
+    hitstop: 0
+    hitstun: 0
+    forceType: 0
+    forceRelation: 0
+    breakArmor: 0
+    unblockable: 0
+    knockdown: 0
+    groundBounces: 0
+    groundBounceForce: 0
+    wallBounces: 0
+    wallBounceForce: 0
+    damageOnHit: 0
+    damageOnBlock: 0
+    causesTumble: 0
+    opponentForceMagnitude: 1
+    opponentForceDir: {x: 0, y: 0, z: 1}
+    forceIncludeYForce: 0
+    opponentMaxMagnitude: 1
+    opponentMinMagnitude: 1
+    throwConfirm: {fileID: 0}
+    attackerPowerGain: 0
+    attackerPowerGainOnHit: 0
 --- !u!114 &589639893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -17328,7 +17390,7 @@ PrefabInstance:
     - target: {fileID: 6646065074715150307, guid: 3d3149c87669c3643b1b5fd84ae29c3f,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 6646065074715150307, guid: 3d3149c87669c3643b1b5fd84ae29c3f,
         type: 3}
@@ -17338,7 +17400,7 @@ PrefabInstance:
     - target: {fileID: 6646065074715150307, guid: 3d3149c87669c3643b1b5fd84ae29c3f,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 6.5
+      value: -46.5
       objectReference: {fileID: 0}
     - target: {fileID: 6646065074715150307, guid: 3d3149c87669c3643b1b5fd84ae29c3f,
         type: 3}
@@ -74091,7 +74153,8 @@ MonoBehaviour:
     opponentMaxMagnitude: 1
     opponentMinMagnitude: 1
     throwConfirm: {fileID: 0}
-    dmy: 0
+    attackerPowerGain: 0
+    attackerPowerGainOnHit: 0
 --- !u!114 &1284222965
 MonoBehaviour:
   m_ObjectHideFlags: 0

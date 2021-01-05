@@ -45,6 +45,7 @@ namespace TUF.Entities
         public Vector3 groundCheckOffset;
         public int currentAirJump = 0;
         public bool fullHop = true;
+        public int power = 0;
 
         [Header("Lock On")]
         public float softLockonRadius;
@@ -362,14 +363,21 @@ namespace TUF.Entities
 
         public virtual bool TryAttack()
         {
-            Combat.MovesetAttackNode man = (Combat.MovesetAttackNode)CombatManager.TryAttack();
-            if (man != null)
+            Combat.MovesetAttackNode man;
+
+            man = (Combat.MovesetAttackNode)((EntityCombatManager)entityCombatManager).TrySpecial();
+            if(man == null)
             {
-                CombatManager.SetAttack(man);
-                StateManager.ChangeState((int)EntityStates.ATTACK);
-                return true;
+                man = (Combat.MovesetAttackNode)CombatManager.TryAttack();
+                if (man == null)
+                {
+                    return false;
+                }
             }
-            return false;
+
+            CombatManager.SetAttack(man);
+            StateManager.ChangeState((int)EntityStates.ATTACK);
+            return true;
         }
 
         public virtual void ResetAirActions()

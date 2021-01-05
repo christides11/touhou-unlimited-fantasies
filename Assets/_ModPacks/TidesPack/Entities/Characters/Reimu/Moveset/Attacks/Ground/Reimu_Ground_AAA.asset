@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Reimu Ground AA
   description: 
   stateOverride: -1
-  length: 45
+  length: 30
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
@@ -33,7 +33,8 @@ MonoBehaviour:
   - id: 2
   - id: 3
   - id: 4
-  dashCancelableFrames: []
+  dashCancelableFrames:
+  - {x: 18, y: 100}
   floatCancelFrames: []
   bulletCancelFrames: []
   specialCancelFrames: []
@@ -228,7 +229,8 @@ MonoBehaviour:
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1
         throwConfirm: {fileID: 0}
-        dmy: 0
+        attackerPowerGain: 0
+        attackerPowerGainOnHit: 5
     00000007:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:

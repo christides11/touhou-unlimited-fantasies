@@ -57,6 +57,7 @@ namespace TUF.Entities
                 .GetSoundDefinition(
                 ((Combat.BoxGroup)combatManager.CurrentAttack.attackDefinition.boxGroups[hitboxGroup]).hitSound?.reference);
             SoundManager.Play(sd, 0, manager.transform);
+            ((EntityManager)manager).power += ((Combat.HitInfo)hitInfo).attackerPowerGainOnHit;
             base.OnHitboxHurt(hurtableHit, hitInfo, hitboxID, hitboxGroup);
         }
 

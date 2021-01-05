@@ -20,6 +20,7 @@ namespace TidesPack.Characters.Reimu
         public DanmakuSequence dd;
         public DanmakuConfig baseConfig;
         public HitInfo bulletHitInfo;
+        public int bulletPowerCost = 2;
 
         public override void SimUpdate()
         {
@@ -28,11 +29,16 @@ namespace TidesPack.Characters.Reimu
             if (InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).firstPress
                 && InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude < InputConstants.movementMagnitude)
             {
-                if(CombatManager.CurrentAttack == null)
+                if(power >= bulletPowerCost)
                 {
                     shooting = true;
-                    timer = bulletCooldown;
+                    timer = 0;
                 }
+            }
+
+            if (power < bulletPowerCost)
+            {
+                shooting = false;
             }
 
             if (shooting && InputManager.GetButton((int)TUF.Core.EntityInputs.Bullet).isDown)
@@ -49,6 +55,7 @@ namespace TidesPack.Characters.Reimu
 
                 if(timer <= 0)
                 {
+                    power -= bulletPowerCost;
                     timer = bulletCooldown;
                     baseConfig.rotation = YinYangTransform.eulerAngles;
                     baseConfig.position = YinYangTransform.position;
@@ -65,7 +72,6 @@ namespace TidesPack.Characters.Reimu
         protected override void SetupDefaultStates()
         {
             StateManager.AddState(new ReimuStateTeleport(), (int)ReimuStates.SPECIAL_TELEPORT);
-            StateManager.AddState(new ReimuShoot(), (int)ReimuStates.SPECIAL_SHOOT);
             base.SetupDefaultStates();
         }
     }

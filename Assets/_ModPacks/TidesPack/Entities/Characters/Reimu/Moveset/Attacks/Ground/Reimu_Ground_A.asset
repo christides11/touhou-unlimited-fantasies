@@ -229,7 +229,8 @@ MonoBehaviour:
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1
         throwConfirm: {fileID: 0}
-        dmy: 0
+        attackerPowerGain: 0
+        attackerPowerGainOnHit: 5
     00000007:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:

@@ -41,7 +41,6 @@ namespace TUF.Combat
             }
         }
 
-
         protected override void AddBoxGroup()
         {
             attack.boxGroups.Add(new TUF.Combat.BoxGroup());
