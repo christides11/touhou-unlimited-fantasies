@@ -5593,6 +5593,7 @@ MonoBehaviour:
         _min: 0
         _max: 0
   countdown: 60
+  team: 2
   tem: 0.2
 --- !u!114 &367043305
 MonoBehaviour:
@@ -8731,6 +8732,7 @@ MonoBehaviour:
       z:
         _min: 0
         _max: 0
+  team: 2
 --- !u!114 &589639893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -74116,6 +74118,7 @@ MonoBehaviour:
     forceType: 0
     forceRelation: 0
   hitHurtables: []
+  team: 0
   coll: {fileID: 1284222966}
   rectangleVisual: {fileID: 0}
   sphereVisual: {fileID: 0}

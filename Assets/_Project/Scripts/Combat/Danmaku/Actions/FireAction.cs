@@ -27,9 +27,7 @@ namespace TUF.Combat.Danmaku
             if(info.bulletSets.Count <= info.currentSet)
             {
                 FireableInfo fi = new FireableInfo();
-                fi.boxDefinition = new CAF.Combat.BoxDefinition();
-                fi.boxDefinition.size = new Vector3(1, 1, 1);
-                fi.team = (int)EntityTeams.Player;
+                fi.team = info.team;
                 fi.hitInfo = hitInfo;
                 fi.hitboxOwner = danmakuManager.gameObject;
                 info.bulletSets.Add(info.id + id, fi);

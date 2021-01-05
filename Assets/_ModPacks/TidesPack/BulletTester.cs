@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using TUF.Combat.Danmaku;
 using UnityEngine;
 using TUF.Core;
+using TUF.Combat;
 
 namespace TidesPack
 {
@@ -15,6 +16,10 @@ namespace TidesPack
         public DanmakuSequence sequence;
 
         public DanmakuConfig config;
+
+        public EntityTeams team;
+
+        public HitInfo hitInfo;
 
         private void Update()
         {
@@ -28,7 +33,7 @@ namespace TidesPack
         {
             if (bb)
             {
-                danmakuManager.Fire(sequence, config);
+                danmakuManager.Fire(sequence, config, team, hitInfo);
                 bb = false;
             }
 

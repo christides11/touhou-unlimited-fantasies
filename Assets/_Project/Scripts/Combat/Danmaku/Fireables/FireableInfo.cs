@@ -8,8 +8,7 @@ namespace TUF.Combat.Danmaku
     public class FireableInfo
     {
         public GameObject hitboxOwner;
-        public int team;
-        public CAF.Combat.BoxDefinition boxDefinition;
+        public EntityTeams team;
         public HitInfo hitInfo;
         public List<GameObject> bullets = new List<GameObject>();
         public List<DanmakuState> bulletsConfig = new List<DanmakuState>();

@@ -15,7 +15,7 @@ namespace TUF.Combat.Danmaku
         public override void Fire(FireableInfo fireableInfo, DanmakuConfig config)
         {
             GameObject go = GameObject.Instantiate(bulletPrefab, config.position, Quaternion.Euler(config.rotation));
-            go.GetComponent<Bullet>().CreateHitbox(fireableInfo.hitboxOwner, fireableInfo.team, fireableInfo.boxDefinition, fireableInfo.hitInfo);
+            go.GetComponent<Bullet>().CreateHitbox(fireableInfo.hitboxOwner, (int)fireableInfo.team, fireableInfo.hitInfo);
             fireableInfo.bullets.Add(go);
             fireableInfo.bulletsConfig.Add(config.CreateState());
         }

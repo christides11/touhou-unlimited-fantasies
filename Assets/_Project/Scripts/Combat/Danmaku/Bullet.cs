@@ -10,6 +10,7 @@ namespace TUF.Combat.Danmaku
     public class Bullet : MonoBehaviour
     {
         Hitbox3D hitbox;
+        public BoxDefinition boxDefinition;
 
         public void Tick()
         {
@@ -19,17 +20,17 @@ namespace TUF.Combat.Danmaku
             }
         }
 
-        public void CreateHitbox(GameObject hitboxOwner, int team, BoxDefinition boxDefinition, HitInfo hitInfo)
+        public void CreateHitbox(GameObject hitboxOwner, int team, HitInfo hitInfo)
         {
             hitbox = InstantiateHitbox(boxDefinition);
-            hitbox.Initialize(hitboxOwner, transform, team, BoxShapes.Rectangle, hitInfo, boxDefinition, new List<IHurtable>());
+            hitbox.Initialize(hitboxOwner, transform, team, boxDefinition.shape, hitInfo, boxDefinition, new List<IHurtable>());
             hitbox.OnHurt += DestroyBullet;
             hitbox.Activate();
         }
 
         private void DestroyBullet(GameObject hurtableHit, HitInfoBase hitInfo)
         {
-            Debug.Log($"{gameObject.name} Hit {hurtableHit.name}.");
+            GameObject.Destroy(gameObject);
         }
 
         protected Hitbox3D InstantiateHitbox(BoxDefinition boxDefinition)

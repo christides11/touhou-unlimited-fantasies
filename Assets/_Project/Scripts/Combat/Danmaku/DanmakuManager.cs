@@ -18,9 +18,9 @@ namespace TUF.Combat.Danmaku
             }
         }
 
-        public virtual void Fire(DanmakuSequence sequence, DanmakuConfig config, string id = "")
+        public virtual void Fire(DanmakuSequence sequence, DanmakuConfig config, EntityTeams team, HitInfo hitInfo, string id = "")
         {
-            sequences.Add(new DanmakuSequenceInfo(sequence, config, id));
+            sequences.Add(new DanmakuSequenceInfo(sequence, config, team, hitInfo, id));
         }
     }
 }

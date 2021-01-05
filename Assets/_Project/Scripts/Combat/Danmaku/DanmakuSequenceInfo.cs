@@ -17,11 +17,16 @@ namespace TUF.Combat.Danmaku
 
         public string id;
 
-        public DanmakuSequenceInfo(DanmakuSequence sequence, DanmakuConfig baseConfig, string id = "")
+        public EntityTeams team;
+        public HitInfo hitInfo;
+
+        public DanmakuSequenceInfo(DanmakuSequence sequence, DanmakuConfig baseConfig, EntityTeams team, HitInfo hitInfo, string id = "")
         {
             this.sequence = sequence;
             this.baseConfig = baseConfig;
             this.id = id;
+            this.team = team;
+            this.hitInfo = hitInfo;
         }
 
         public virtual void Tick(DanmakuManager manager)
@@ -42,6 +47,11 @@ namespace TUF.Combat.Danmaku
             {
                 for (int s = 0; s < fi.bullets.Count; s++)
                 {
+                    if (!fi.bullets[s])
+                    {
+                        fi.bullets.RemoveAt(s);
+                        continue;
+                    }
                     fi.bullets[s].transform.position +=
                         fi.bullets[s].transform.forward * fi.bulletsConfig[s].speed.z;
 

@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using TUF.Combat;
 using TUF.Combat.Danmaku;
 using TUF.Core;
 using UnityEngine;
@@ -18,6 +19,7 @@ namespace TidesPack.Characters.Reimu
         public int bulletCooldown = 60;
         public DanmakuSequence dd;
         public DanmakuConfig baseConfig;
+        public HitInfo bulletHitInfo;
 
         public override void SimUpdate()
         {
@@ -50,7 +52,7 @@ namespace TidesPack.Characters.Reimu
                     timer = bulletCooldown;
                     baseConfig.rotation = YinYangTransform.eulerAngles;
                     baseConfig.position = YinYangTransform.position;
-                    danmakuManager.Fire(dd, baseConfig);
+                    danmakuManager.Fire(dd, baseConfig, (EntityTeams)CombatManager.GetTeam(), bulletHitInfo);
                 }
             }
 
