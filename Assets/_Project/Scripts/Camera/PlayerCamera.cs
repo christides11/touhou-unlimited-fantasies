@@ -105,12 +105,12 @@ namespace TUF.Core
 
         }
 
-        public void SetTarget(Transform entityTarget)
+        public void SetLookAtTarget(Transform target)
         {
-            thirdPersonaCamera.Follow = entityTarget.transform;
+            thirdPersonaCamera.Follow = target;
         }
 
-        public void SetTarget(CAF.Entities.EntityManager entityTarget)
+        public void SetLockOnTarget(CAF.Entities.EntityManager entityTarget)
         {
 
         }

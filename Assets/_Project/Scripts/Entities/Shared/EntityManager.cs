@@ -121,7 +121,7 @@ namespace TUF.Entities
                 PickLockonTarget();
                 // No target but holding down lock on menas you lock the visuals rotation.
                 LockonForward = visual.transform.forward;
-                lookHandler.SetTarget(LockonTarget?.GetComponent<EntityManager>());
+                lookHandler.SetLockOnTarget(LockonTarget?.GetComponent<EntityManager>());
             }
 
             // No target.
@@ -134,7 +134,7 @@ namespace TUF.Entities
             if(Vector3.Distance(transform.position, LockonTarget.transform.position) > lockonRadius)
             {
                 LockonTarget = null;
-                lookHandler.SetTarget(null);
+                lookHandler.SetLockOnTarget(null);
                 return;
             }
 
