@@ -147,7 +147,7 @@ MonoBehaviour:
   lockCameraYDuringCollision: 1
   lerpCameraToDefault: 1
   yLerpSpeed: 20
-  yMinLimit: -10
+  yMinLimit: -20
   yMaxLimit: 50
   useSoftLimits: 0
   yMinSoftLimit: 20
@@ -158,7 +158,7 @@ MonoBehaviour:
   collisionMargin: 0.05
   camObstacle:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
   lockOnTargetsTag: LockOnTarget
   lockOnToggle: 1
   lockOnManualControl: 1
@@ -191,7 +191,7 @@ MonoBehaviour:
   fadeOutSpeed: 10
   fadePlayerWhenClose: 0
   playerFadeDistance: 1
-  fadeShader: {fileID: -6465566751694194690, guid: e10d569178382324b999580baed6b568,
+  fadeShader: {fileID: -6465566751694194690, guid: 320bd5af05f768b4391b22df94c4a5d2,
     type: 3}
   debugOn: 0
   debugThirdPersonMode: 0

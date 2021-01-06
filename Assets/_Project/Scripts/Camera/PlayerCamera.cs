@@ -112,7 +112,7 @@ namespace TUF.Core
 
         public void SetLockOnTarget(CAF.Entities.EntityManager entityTarget)
         {
-
+            thirdPersonaCamera.InitiateLockOn(entityTarget.gameObject);
         }
     }
 }

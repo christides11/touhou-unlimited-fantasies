@@ -562,7 +562,7 @@ MonoBehaviour:
   fullHop: 1
   power: 0
   softLockonRadius: 10
-  lockonRadius: 40
+  lockonRadius: 30
   lockonFudging: 0.1
   lockonLayerMask:
     serializedVersion: 2

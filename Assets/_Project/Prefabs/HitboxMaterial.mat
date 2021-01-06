@@ -67,7 +67,9 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     m_Floats:
+    - DitherSize_BE5D41B4: 1
     - Metallic_98D54A16: 0
+    - Opacity_EEEAF80: 1
     - Smoothness_AAABAC20: 0
     - _AlphaClip: 0
     - _Blend: 0
@@ -106,7 +108,7 @@ Material:
     - _WorkflowMode: 1
     - _ZWrite: 0
     m_Colors:
-    - Color_Ref: {r: 0, g: 1, b: 0.13757372, a: 0.33333334}
+    - Color_Ref: {r: 0, g: 1, b: 0.13757369, a: 0.3882353}
     - _BaseColor: {r: 0, g: 1, b: 0.04726875, a: 0.2509804}
     - _BaseColorAddSubDiff: {r: 0, g: 0, b: 0, a: 0}
     - _CameraFadeParams: {r: 0, g: Infinity, b: 0, a: 0}
