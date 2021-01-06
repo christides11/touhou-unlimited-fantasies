@@ -168,8 +168,8 @@ MonoBehaviour:
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
-        startFrame: 6
-        endFrame: 6
+        startFrame: 11
+        endFrame: 11
         attackEvent:
           id: 10
         variables:

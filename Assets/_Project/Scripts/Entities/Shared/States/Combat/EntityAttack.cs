@@ -183,7 +183,8 @@ namespace TUF.Entities.Shared
                     }
                 }
 
-                if (!CheckEventInputRequirement(currentEvent))
+                if (currentEvent.inputCheckTiming != AttackEventInputCheckTiming.NONE
+                    && !CheckEventInputRequirement(currentEvent))
                 {
                     return false;
                 }
@@ -217,7 +218,7 @@ namespace TUF.Entities.Shared
                 case AttackEventInputCheckTiming.CONTINUOUS:
                     for (int i = (int)currentEvent.startFrame; i < currentEvent.endFrame; i++)
                     {
-                        if (!CombatManager.CheckForInputSequence(currentEvent.input))
+                        if (!CombatManager.CheckForInputSequence(currentEvent.input, i, true, true))
                         {
                             return false;
                         }
@@ -225,7 +226,6 @@ namespace TUF.Entities.Shared
                     return true;
                     break;
             }
-
             return false;
         }
 

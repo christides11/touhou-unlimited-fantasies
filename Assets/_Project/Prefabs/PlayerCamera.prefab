@@ -131,11 +131,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   follow: {fileID: 0}
-  enableLockOn: 1
+  enableLockOn: 0
   enableCamReset: 1
   enableChangeTarget: 1
   useInputManagerInsteadOfKeyCode: 0
-  lockOnKeyCodes: 
   changeTargetKeyCodes: 
   lockOnButton: LockOn
   usingController: 0
@@ -189,7 +188,7 @@ MonoBehaviour:
   fullTransparencyDistance: 0.2
   fadeInSpeed: 10
   fadeOutSpeed: 10
-  fadePlayerWhenClose: 0
+  fadePlayerWhenClose: 1
   playerFadeDistance: 1
   fadeShader: {fileID: -6465566751694194690, guid: 320bd5af05f768b4391b22df94c4a5d2,
     type: 3}
@@ -204,6 +203,7 @@ MonoBehaviour:
   debugCameraLookingUpDown: 0
   cameraX: 0
   cameraY: 0
+  targetPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &-5858790737464609202
 MonoBehaviour:
   m_ObjectHideFlags: 0

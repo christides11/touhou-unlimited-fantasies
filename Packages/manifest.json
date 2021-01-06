@@ -1,6 +1,5 @@
 {
   "dependencies": {
-    "com.christides.character-action-framework": "https://github.com/christides11/Character-Action-Framework.git#upm/v7.0.0",
     "com.coffee.upm-git-extension": "https://github.com/mob-sakai/UpmGitExtension.git",
     "com.github.siccity.xnode": "https://github.com/siccity/xNode.git#1.8.0",
     "com.malee.reorderablelist": "https://github.com/cfoulston/Unity-Reorderable-List.git",
@@ -43,6 +42,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "com.christides.character-action-framework": "https://github.com/christides11/Character-Action-Framework.git#upm"
   }
 }

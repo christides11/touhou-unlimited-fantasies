@@ -110,6 +110,10 @@ namespace TUF.Entities
             InputRecordButton lockonButton = InputManager.GetButton((int)EntityInputs.Lockon);
 
             LockedOn = false;
+            if (lockonButton.released)
+            {
+                lookHandler.SetLockOnTarget(null);
+            }
             if (!lockonButton.isDown)
             {
                 return;

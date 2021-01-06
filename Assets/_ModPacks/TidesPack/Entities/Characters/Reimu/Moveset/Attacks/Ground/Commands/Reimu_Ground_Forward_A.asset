@@ -282,3 +282,4 @@ MonoBehaviour:
       type: {class: EntitySetAttackEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         dmy: 0
+        resetFrameCounter: 1

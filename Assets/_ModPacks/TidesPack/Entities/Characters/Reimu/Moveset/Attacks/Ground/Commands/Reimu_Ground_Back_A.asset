@@ -182,14 +182,14 @@ MonoBehaviour:
         inputCheckStartFrame: 7
         inputCheckEndFrame: 10
         input:
-          executeWindow: 0
-          executeInputs:
+          executeWindow: 3
+          executeInputs: []
+          sequenceWindow: 3
+          sequenceInputs:
           - inputType: 0
             buttonID: 3
             stickDirection: {x: 0, y: 0}
             directionDeviation: 0.9
-          sequenceWindow: 0
-          sequenceInputs: []
         inputCheckProcessed: 0
     00000005:
       type: {class: BoxDefinition, ns: CAF.Combat, asm: CAF}
@@ -252,3 +252,4 @@ MonoBehaviour:
       type: {class: EntitySetAttackEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         dmy: 0
+        resetFrameCounter: 0
