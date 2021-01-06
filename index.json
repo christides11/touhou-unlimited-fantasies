@@ -1222,7 +1222,7 @@
   "index.html": {
     "href": "index.html",
     "title": "Opening The Project | Touhou Unlimited Fantasies Documentation",
-    "keywords": "Unlimited Fantasies is a hack-and-slash Touhou fangame with a focus on modability. Opening The Project The project is currently built on Unity 2019.3.13f . If you want to edit the project, there's a few paid third party assets being used that are currently required. Required UMod - Used for modding capability. Rewired - Used for handling input. Kinematic Character Controller - Used for character movement handling. Licensing/Attribution Unlimited Fantasies is under a MIT license , check the link for more information. The Touhou Project is owned by Team Shanghai Alice, it's copyright is listed here ."
+    "keywords": "Unlimited Fantasies is a hack-and-slash Touhou fangame with a focus on modability. Opening The Project The project is currently built on Unity 2019.4.17f1 . If you want to edit the project itself, there's a few paid third party assets being used that are currently required. If you are just making mods, you can ignore this as you do not need to open this project to make them. Required UMod - Used for modding capability. Rewired - Used for handling input. Kinematic Character Controller - Used for character movement handling. Third Persona Camera With Lock On - DMC styled camera control. Licensing/Attribution Unlimited Fantasies is under a MIT license , check the link for more information. The Touhou Project is owned by Team Shanghai Alice, it's copyright is listed here ."
   },
   "modGuide/index.html": {
     "href": "modGuide/index.html",
