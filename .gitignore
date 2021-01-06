@@ -22,6 +22,7 @@ _site/
 /[Aa]ssets/UMod
 /[Aa]ssets/Rewired
 /[Aa]ssets/[Tt]hirdParty/KinematicCharacterController
+/[Aa]ssets/[Tt]hirdParty/ThirdPersonCameraWithLockOn
 
 # Asset meta data should only be ignored when the corresponding asset is also ignored
 !/[Aa]ssets/**/*.meta

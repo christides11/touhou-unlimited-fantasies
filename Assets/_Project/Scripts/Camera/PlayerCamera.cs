@@ -7,24 +7,19 @@ using TUF.Entities;
 using TUF.Combat;
 using System;
 using CAF.Simulation;
+using ThirdPersonCameraWithLockOn;
 
 namespace TUF.Core
 {
     public class PlayerCamera : SimObject, CAF.Camera.LookHandler
     {
-        public static PlayerCamera current;
-
         public Camera Cam { get { return cam; } }
 
-        private Transform lockonTarget = null;
+        [Header("References")]
         [SerializeField] private Camera cam;
-        [SerializeField] private CinemachineBrain brain;
-        [SerializeField] private CinemachineFreeLook thirdPersonLook;
-        //[SerializeField] private CinemachineVirtualCamera lockOnCam;
-        [SerializeField] private CinemachineFreeLook lockOnCam;
-        [SerializeField] private CinemachineTargetGroup lockOnTargetGroup;
-        [SerializeField] private CameraShake cameraShake;
+        [SerializeField] private ThirdPersonCamera thirdPersonaCamera;
 
+        [Header("Mouse")]
         [SerializeField] private float mouseDeadzone = 0.05f;
         [SerializeField] private float mouseXAxisSpeed = 1.0f;
         [SerializeField] private float mouseYAxisSpeed = 1.0f;
@@ -40,12 +35,6 @@ namespace TUF.Core
         public virtual void Initialize(Entities.EntityManager entity)
         {
             currentEntity = entity;
-            //currentEntity.CombatManager.hitboxManager.OnHitboxHit += CauseShake;
-        }
-
-        private void CauseShake(GameObject hurtableHit, int hitboxGroupIndex, MovesetAttackNode attack)
-        {
-            //cameraShake.Shake(attack.attackDefinition.boxGroups[hitboxGroupIndex].cameraShake);
         }
 
         public virtual void Update()
@@ -83,7 +72,7 @@ namespace TUF.Core
                     {
                         stickInput.x = 0;
                     }
-                    if(Mathf.Abs(stickInput.y) < stickAxialDeadZone)
+                    if (Mathf.Abs(stickInput.y) < stickAxialDeadZone)
                     {
                         stickInput.y = 0;
                     }
@@ -92,41 +81,8 @@ namespace TUF.Core
                     break;
             }
 
-            thirdPersonLook.m_XAxis.m_InputAxisValue = stickInput.x;
-            thirdPersonLook.m_YAxis.m_InputAxisValue = stickInput.y;
-
-            lockOnCam.m_XAxis.m_InputAxisValue = stickInput.x;
-            lockOnCam.m_YAxis.m_InputAxisValue = stickInput.y;
-        }
-
-        public virtual void UpdateTarget(Transform newTarget)
-        {
-            thirdPersonLook.LookAt = newTarget;
-            thirdPersonLook.Follow = newTarget;
-            lockOnTargetGroup.m_Targets[0].target = newTarget;
-        }
-
-        public virtual void LockOn(Transform target)
-        {
-            lockonTarget = target;
-            thirdPersonLook.gameObject.SetActive(false);
-            thirdPersonLook.m_RecenterToTargetHeading.m_enabled = true;
-            lockOnTargetGroup.m_Targets[1].target = lockonTarget;
-            lockOnCam.gameObject.SetActive(true);
-        }
-
-        public virtual void UnlockOn()
-        {
-            lockonTarget = null;
-            thirdPersonLook.gameObject.SetActive(true);
-            thirdPersonLook.m_RecenterToTargetHeading.m_enabled = false;
-            lockOnTargetGroup.m_Targets[1].target = lockonTarget;
-            lockOnCam.gameObject.SetActive(false);
-        }
-
-        public void SetLookDirection(Vector3 direction)
-        {
-
+            thirdPersonaCamera.cameraX = stickInput.x;
+            thirdPersonaCamera.cameraY = stickInput.y;
         }
 
         public void LookAt(Vector3 position)
@@ -134,37 +90,27 @@ namespace TUF.Core
 
         }
 
-        public Vector3 Forward()
-        {
-            return cam.transform.forward;
-        }
-
-        public Vector3 Right()
-        {
-            return cam.transform.right;
-        }
-
-        public Vector3 Up()
-        {
-            return cam.transform.right;
-        }
-
         public Transform LookTransform()
         {
             return cam.transform;
         }
 
-        public void SetTarget(CAF.Entities.EntityManager entityTarget)
+        public void Reset()
         {
-            if (entityTarget)
-            {
-                LockOn(entityTarget.transform);
-                return;
-            }
-            UnlockOn();
+
         }
 
-        public void Reset()
+        public void SetLookDirection(Vector3 direction)
+        {
+
+        }
+
+        public void SetTarget(Transform entityTarget)
+        {
+            thirdPersonaCamera.Follow = entityTarget.transform;
+        }
+
+        public void SetTarget(CAF.Entities.EntityManager entityTarget)
         {
 
         }

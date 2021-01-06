@@ -204,6 +204,7 @@ GameObject:
   - component: {fileID: 836382071}
   - component: {fileID: 1901789706}
   - component: {fileID: 7187871433067040018}
+  - component: {fileID: 8107776287061199686}
   m_Layer: 9
   m_Name: Blue Fairy
   m_TagString: Untagged
@@ -325,13 +326,14 @@ MonoBehaviour:
   coll: {fileID: 7374919223876827515}
   GroundedLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   attackLayerMask:
     serializedVersion: 2
     m_Bits: 512
   groundCheckOffset: {x: 0, y: 0, z: 0}
   currentAirJump: 0
   fullHop: 1
+  power: 0
   softLockonRadius: 0
   lockonRadius: 0
   lockonFudging: 0.1
@@ -449,6 +451,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sequences: []
+--- !u!114 &8107776287061199686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646065074715150306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbdb6482c06cef488ad586be8fbc551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simObject: {fileID: 5460020612224601745}
 --- !u!1 &6646065076231640373
 GameObject:
   m_ObjectHideFlags: 0

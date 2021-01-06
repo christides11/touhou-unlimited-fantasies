@@ -9,10 +9,10 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{AF8BE251-E618-4F29-42D1-26B5276D2C41}</ProjectGuid>
+    <ProjectGuid>{15A7C0E5-2585-120B-7C57-4B7FA4546C5C}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <AssemblyName>Main</AssemblyName>
+    <AssemblyName>DMCamera_CSharp</AssemblyName>
     <TargetFrameworkVersion>v4.7.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BaseDirectory>.</BaseDirectory>
@@ -63,65 +63,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\UMod\Examples\ExampleModsRaw\SpawningSphereMod\SpawningSphere.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleModsRaw\SpinningCubeMod\SpinningCube.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex01_LoadMod.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex02_LoadModProgress.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex03_UnloadMod.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex04_BatchLoadMods.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex05_LoadInstalledMods.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex06_ListMods.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex07_ListModsDetailed.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex08_ListSpecificModDetails.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex11_LoadModAsync.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex12_LoadModAsyncProgress.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex13_LoadModAssets.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex14_LoadModAssetsAsync.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex15_InstantiateModAssets.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Ex16_LoadAnyModAssets.cs" />
-    <Compile Include="Assets\UMod\Examples\ExampleScripts\Util\ExampleUtil.cs" />
-    <Compile Include="Assets\UMod\Examples\Scripts\AutoModLoaded.cs" />
-    <Compile Include="Assets\UMod\Examples\Scripts\KeepAlive.cs" />
-    <Compile Include="Assets\UMod\Examples\Scripts\SimpleRotate.cs" />
-    <Compile Include="Assets\UMod\Examples\Scripts\UIModBrowse.cs" />
-    <Compile Include="Assets\UMod\Examples\Scripts\UIModElement.cs" />
-    <Compile Include="Assets\UMod\Examples\Scripts\UIModLoad.cs" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Overlay.shader" />
-    <None Include="Assets\Plugins\dotnetzip-for-unity\License.zlib.txt" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Serialization.Config.xml" />
-    <None Include="Assets\Main.asmdef" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap.shader" />
-    <None Include="Assets\UMod\ResourcesGenerated\Referencing\AssemblyCache\active.txt" />
-    <None Include="Assets\UMod\Resources\Source\Usage.txt" />
-    <None Include="Assets\ThirdParty\ThirdPersonCameraWithLockOn\Assets\Shaders\DiffuseZWriteWithShadowCast.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface-Mobile.shader" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.xml" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Attributes.xml" />
-    <None Include="Assets\UMod\Resources\Editor\Data\Readme.txt" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.OdinInspector.Editor.xml" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Surface.shader" />
-    <None Include="Assets\TextMesh Pro\Sprites\EmojiOne Attribution.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Custom-Atlas.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Leading Characters.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Properties.cginc" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMPro_Surface.cginc" />
-    <None Include="Assets\Plugins\Sirenix\Readme.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\LineBreaking Following Characters.txt" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\Sirenix.Utilities.Editor.xml" />
-    <None Include="Assets\Modding\info.txt" />
-    <None Include="Assets\info.txt" />
-    <None Include="Assets\Plugins\Sirenix\Assemblies\link.xml" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile Masking.shader" />
-    <None Include="Assets\Plugins\dotnetzip-for-unity\Readme.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF Overlay.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Bitmap-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Fonts\LiberationSans - OFL.txt" />
-    <None Include="Assets\Plugins\dotnetzip-for-unity\License.txt" />
-    <None Include="Assets\Plugins\dotnetzip-for-unity\License.BZip2.txt" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_SDF-Mobile.shader" />
-    <None Include="Assets\TextMesh Pro\Resources\Shaders\TMP_Sprite.shader" />
+    <Compile Include="Assets\ThirdParty\ThirdPersonCameraWithLockOn\Assets\Scripts\DrawIfAttribute.cs" />
+    <Compile Include="Assets\ThirdParty\ThirdPersonCameraWithLockOn\Assets\Scripts\FadeObject.cs" />
+    <Compile Include="Assets\ThirdParty\ThirdPersonCameraWithLockOn\Assets\Scripts\LockOnThroughScriptExample.cs" />
+    <Compile Include="Assets\ThirdParty\ThirdPersonCameraWithLockOn\Assets\Scripts\SimpleCharacterController.cs" />
+    <Compile Include="Assets\ThirdParty\ThirdPersonCameraWithLockOn\Assets\Scripts\SimpleRigidbodyController.cs" />
+    <Compile Include="Assets\ThirdParty\ThirdPersonCameraWithLockOn\Assets\Scripts\ThirdPersonCamera.cs" />
+    <None Include="Assets\ThirdParty\ThirdPersonCameraWithLockOn\Assets\Scripts\DMCamera_CSharp.asmdef" />
     <Reference Include="UnityEngine">
       <HintPath>C:/Program Files/Unity/2019.4.17f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>

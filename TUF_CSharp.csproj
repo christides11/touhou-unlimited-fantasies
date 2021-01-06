@@ -934,6 +934,10 @@
       <Project>{95613852-A13C-4D37-F782-45529F730643}</Project>
       <Name>iTween_CSharp</Name>
     </ProjectReference>
+    <ProjectReference Include="DMCamera_CSharp.csproj">
+      <Project>{15A7C0E5-2585-120B-7C57-4B7FA4546C5C}</Project>
+      <Name>DMCamera_CSharp</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

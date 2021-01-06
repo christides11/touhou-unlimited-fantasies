@@ -182,11 +182,50 @@ namespace TUF.Entities.Shared
                         return false;
                     }
                 }
+
+                if (!CheckEventInputRequirement(currentEvent))
+                {
+                    return false;
+                }
+
                 return currentEvent.attackEvent.Evaluate(StateManager.CurrentStateFrame - currentEvent.startFrame, 
                     currentEvent.endFrame - currentEvent.startFrame,
                     controller,
                     currentEvent.variables);
             }
+            return false;
+        }
+
+        private bool CheckEventInputRequirement(CAF.Combat.AttackEventDefinition currentEvent)
+        {
+            if(StateManager.CurrentStateFrame != currentEvent.endFrame)
+            {
+                return false;
+            }
+
+            switch (currentEvent.inputCheckTiming)
+            {
+                case AttackEventInputCheckTiming.ONCE:
+                    for(int i = (int)currentEvent.startFrame; i < currentEvent.endFrame; i++)
+                    {
+                        if (CombatManager.CheckForInputSequence(currentEvent.input))
+                        {
+                            return true;
+                        }
+                    }
+                    break;
+                case AttackEventInputCheckTiming.CONTINUOUS:
+                    for (int i = (int)currentEvent.startFrame; i < currentEvent.endFrame; i++)
+                    {
+                        if (!CombatManager.CheckForInputSequence(currentEvent.input))
+                        {
+                            return false;
+                        }
+                    }
+                    return true;
+                    break;
+            }
+
             return false;
         }
 
