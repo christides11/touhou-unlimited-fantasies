@@ -38,9 +38,9 @@ namespace TUF.Entities.Shared
                     return true;
                 }
             }
-            if (controller.IsGrounded)
+            if (!controller.IsGrounded && controller.FindWall())
             {
-                StateManager.ChangeState((int)EntityStates.FLINCH, StateManager.CurrentStateFrame);
+                StateManager.ChangeState((int)EntityStates.WALL_BOUNCE);
                 return true;
             }
             return false;

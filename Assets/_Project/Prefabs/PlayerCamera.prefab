@@ -203,6 +203,7 @@ MonoBehaviour:
   debugCameraLookingUpDown: 0
   cameraX: 0
   cameraY: 0
+  camUpdateType: 0
   targetPositionOffset: {x: 0, y: 0, z: 0}
 --- !u!114 &-5858790737464609202
 MonoBehaviour:

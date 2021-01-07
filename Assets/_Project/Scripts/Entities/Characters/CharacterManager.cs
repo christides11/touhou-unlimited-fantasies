@@ -20,8 +20,6 @@ namespace TUF.Entities.Characters
 
         [Header("Wall Movement")]
         public float sideWallDistance;
-        public GameObject lastWall;
-        public RaycastHit lastWallHit;
         public int wallSide;
         public float wallRunHozMultiplier = 1.0f;
 
@@ -62,6 +60,7 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new EntityFlinch(), (int)EntityStates.FLINCH);
             StateManager.AddState(new EntityFlinchAir(), (int)EntityStates.FLINCH_AIR);
             StateManager.AddState(new EntityTumble(), (int)EntityStates.TUMBLE);
+            StateManager.AddState(new EntityWallBounce(), (int)EntityStates.WALL_BOUNCE);
 
             // Other
             StateManager.AddState(new CSlide(), (int)BaseCharacterStates.SLIDE);

@@ -18,11 +18,9 @@ namespace TUF.Entities.Shared
         {
 
             PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFrictionXZ);
-            //if (StateManager.CurrentStateFrame > 9)
-            //{
+
             PhysicsManager.HandleGravity(controller.definition.stats.hitstunMaxFallSpeed,
                 controller.definition.stats.hitstunGravity, 1.0f);
-            //}
 
             StateManager.IncrementFrame();
 

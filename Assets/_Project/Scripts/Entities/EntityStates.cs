@@ -21,6 +21,7 @@
         KNOCKDOWN = 15,
         WAKEUP = 16,
         GROUND_BOUNCE = 17,
-        ENEMY_STEP = 18
+        ENEMY_STEP = 18,
+        WALL_BOUNCE = 19
     }
 }

@@ -60,6 +60,12 @@ namespace TUF.Entities
 
         private Vector3 size;
 
+        [Header("Wall Detection")]
+        public GameObject lastWall;
+        public RaycastHit lastWallHit;
+        public float wallDetectRadius = 1.2f;
+        public float wallDetectDist = 1;
+
         /// <summary>
         /// Initializes the entity with the references needed.
         /// </summary>
@@ -209,6 +215,7 @@ namespace TUF.Entities
                 {
                     continue;
                 }
+
                 // Only objects with ILockonable can be locked on to.
                 if (c.TryGetComponent(out ITargetable targetLockonComponent))
                 {
@@ -219,10 +226,11 @@ namespace TUF.Entities
                     }
                     Vector3 targetDistance = targetLockonComponent.GetGameObject().GetComponent<EntityManager>().GetCenter() - GetCenter();
                     // If we can't see the target, it can not be locked on to.
-                    if(Physics.Raycast(GetCenter(), targetDistance.normalized, lockonRadius, visibilityLayerMask))
+                    if(Physics.Raycast(GetCenter(), targetDistance.normalized, out RaycastHit h, targetDistance.magnitude, visibilityLayerMask))
                     {
                         continue;
                     }
+
                     targetDistance.y = 0;
                     float currAngle = Vector3.Dot(referenceDirection, targetDistance.normalized);
                     bool withinFudging = Mathf.Abs(currAngle - closestAngle) <= lockonFudging;
@@ -388,6 +396,21 @@ namespace TUF.Entities
         {
             ((TUF.Entities.EntityPhysicsManager)PhysicsManager).GravityScale = 1.0f;
             currentAirJump = 0;
+        }
+
+        public bool FindWall()
+        {
+            RaycastHit h;
+            if(Physics.SphereCast(GetCenter(), wallDetectRadius, transform.forward, out h, wallDetectDist, GroundedLayerMask)
+                || Physics.SphereCast(GetCenter(), wallDetectRadius, -transform.forward, out h, wallDetectDist, GroundedLayerMask)
+                || Physics.SphereCast(GetCenter(), wallDetectRadius, transform.right, out h, wallDetectDist, GroundedLayerMask)
+                || Physics.SphereCast(GetCenter(), wallDetectRadius, -transform.right, out h, wallDetectDist, GroundedLayerMask))
+            {
+                lastWall = h.collider.gameObject;
+                lastWallHit = h;
+                return true;
+            }
+            return false;
         }
     }
 }

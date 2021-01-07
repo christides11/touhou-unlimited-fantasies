@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fc111f7afe810b2449e31c9e6dd282e4, type: 3}
-  m_Name: Reimu_Ground_Back_A
+  m_Name: Reimu_Ground_Back_Forward_A
   m_EditorClassIdentifier: 
-  attackName: 'Reimu Ground Launcher '
+  attackName: Reimu Yin-Yang Palm
   description: 
   stateOverride: -1
-  length: 30
+  length: 45
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
@@ -25,14 +25,16 @@ MonoBehaviour:
   landCancelWindows: []
   commandAttackCancelWindows:
   - {x: 11, y: 60}
-  chargeWindows: []
-  boxGroups:
+  chargeWindows:
   - id: 0
-  events:
+  boxGroups:
   - id: 1
+  events:
   - id: 2
   - id: 3
   - id: 4
+  - id: 5
+  - id: 6
   dashCancelableFrames: []
   floatCancelFrames: []
   bulletCancelFrames: []
@@ -45,19 +47,27 @@ MonoBehaviour:
   references:
     version: 1
     00000000:
+      type: {class: ChargeDefinition, ns: CAF.Combat, asm: CAF}
+      data:
+        frame: 4
+        releaseOnCompletion: 0
+        chargeLevels:
+        - maxChargeFrames: 15
+        - maxChargeFrames: 15
+    00000001:
       type: {class: BoxGroup, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         ID: 0
-        activeFramesStart: 5
+        activeFramesStart: 7
         activeFramesEnd: 10
         hitGroupType: 0
         boxes:
-        - id: 5
+        - id: 7
         attachToEntity: 1
         chargeLevelNeeded: -1
         chargeLevelMax: 1
         hitboxHitInfo:
-          id: 6
+          id: 8
         cameraShake:
           amplitude: 0
           frequency: 0
@@ -66,7 +76,7 @@ MonoBehaviour:
           amplitudeDecay: 0
           frequencyDecay: 0
         hitSound: {fileID: 0}
-    00000001:
+    00000002:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         nickname: Restrict M
@@ -76,11 +86,11 @@ MonoBehaviour:
         startFrame: 1
         endFrame: 1
         attackEvent:
-          id: 7
+          id: 9
         variables:
           intVars: 
           floatVars:
-          - 2
+          - 1
           objectVars: []
           curveVars: []
         inputCheckTiming: 0
@@ -91,8 +101,10 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: -1
+        chargeLevelMax: 0
         inputCheckProcessed: 0
-    00000002:
+    00000003:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         nickname: Friction
@@ -102,7 +114,7 @@ MonoBehaviour:
         startFrame: 1
         endFrame: 50
         attackEvent:
-          id: 8
+          id: 10
         variables:
           intVars: 
           floatVars:
@@ -117,8 +129,10 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: -1
+        chargeLevelMax: 0
         inputCheckProcessed: 0
-    00000003:
+    00000004:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         nickname: Gravity
@@ -126,9 +140,9 @@ MonoBehaviour:
         onHit: 0
         onHitHitboxGroup: 0
         startFrame: 1
-        endFrame: 30
+        endFrame: 50
         attackEvent:
-          id: 9
+          id: 11
         variables:
           intVars: 
           floatVars:
@@ -160,47 +174,75 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: -1
+        chargeLevelMax: 0
         inputCheckProcessed: 0
-    00000004:
+    00000005:
       type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
       data:
-        nickname: Air Transition
+        nickname: Level 1
         active: 1
         onHit: 0
         onHitHitboxGroup: 0
-        startFrame: 5
-        endFrame: 8
+        startFrame: 6
+        endFrame: 6
         attackEvent:
-          id: 10
+          id: 12
         variables:
           intVars: 
           floatVars: []
           objectVars:
-          - {fileID: 8168660164844220798, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
+          - {fileID: -4847815633349748448, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
           curveVars: []
-        inputCheckTiming: 2
-        inputCheckStartFrame: 7
-        inputCheckEndFrame: 10
+        inputCheckTiming: 0
+        inputCheckStartFrame: 1
+        inputCheckEndFrame: 1
         input:
           executeWindow: 3
           executeInputs: []
-          sequenceWindow: 3
-          sequenceInputs:
-          - inputType: 0
-            buttonID: 3
-            stickDirection: {x: 0, y: 0}
-            directionDeviation: 0.9
+          sequenceWindow: 8
+          sequenceInputs: []
+        chargeLevelMin: 1
+        chargeLevelMax: 1
         inputCheckProcessed: 0
-    00000005:
+    00000006:
+      type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
+      data:
+        nickname: Level 2
+        active: 1
+        onHit: 0
+        onHitHitboxGroup: 0
+        startFrame: 6
+        endFrame: 6
+        attackEvent:
+          id: 13
+        variables:
+          intVars: 
+          floatVars: []
+          objectVars:
+          - {fileID: -8164072312965823059, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
+          curveVars: []
+        inputCheckTiming: 0
+        inputCheckStartFrame: 1
+        inputCheckEndFrame: 1
+        input:
+          executeWindow: 3
+          executeInputs: []
+          sequenceWindow: 8
+          sequenceInputs: []
+        chargeLevelMin: 2
+        chargeLevelMax: 2
+        inputCheckProcessed: 0
+    00000007:
       type: {class: BoxDefinition, ns: CAF.Combat, asm: CAF}
       data:
         shape: 0
         offset: {x: 0, y: 1, z: 0.8}
-        size: {x: 2, y: 3, z: 3}
+        size: {x: 4.5, y: 3, z: 4.5}
         rotation: {x: 0, y: 0, z: 0}
         radius: 0
         height: 0
-    00000006:
+    00000008:
       type: {class: HitInfo, ns: TUF.Combat, asm: TUF_CSharp}
       data:
         airOnly: 0
@@ -217,38 +259,43 @@ MonoBehaviour:
         forceRelation: 0
         breakArmor: 0
         unblockable: 0
-        knockdown: 0
+        knockdown: 1
         groundBounces: 0
         groundBounceForce: 0
-        wallBounces: 0
-        wallBounceForce: 0
-        damageOnHit: 5
-        damageOnBlock: 5
-        causesTumble: 0
-        opponentForceMagnitude: 9
-        opponentForceDir: {x: 0, y: 1, z: 0}
+        wallBounces: 1
+        wallBounceForce: 15
+        damageOnHit: 7
+        damageOnBlock: 7
+        causesTumble: 1
+        opponentForceMagnitude: 30
+        opponentForceDir: {x: 0, y: 0.3, z: 0.7}
         forceIncludeYForce: 0
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1
         throwConfirm: {fileID: 0}
         attackerPowerGain: 0
         attackerPowerGainOnHit: 5
-    00000007:
+    00000009:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         dmy: 0
-    00000008:
+    0000000A:
       type: {class: EntityFrictionEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         yFriction: 0
         xzFriction: 1
-    00000009:
+    0000000B:
       type: {class: EntityApplyGravityEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         useEntityMaxFallSpeed: 1
         useEntityGravity: 1
         useEntityGravityScale: 1
-    0000000A:
+    0000000C:
+      type: {class: EntitySetAttackEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      data:
+        dmy: 0
+        resetFrameCounter: 1
+    0000000D:
       type: {class: EntitySetAttackEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         dmy: 0

@@ -18,6 +18,8 @@ namespace TUF.Entities.Shared
             return $"Attack ({CombatManager.CurrentAttack?.name}).";
         }
 
+        protected bool charging = true;
+
         public override void Initialize()
         {
             base.Initialize();
@@ -31,6 +33,7 @@ namespace TUF.Entities.Shared
                 StateManager.ChangeState(currentAttack.stateOverride);
                 return;
             }
+            charging = true;
         }
 
         public override void OnUpdate()
@@ -69,23 +72,27 @@ namespace TUF.Entities.Shared
                 }
             }
 
+            // Create hitbox grou ps.
             for(int i = 0; i < currentAttack.boxGroups.Count; i++)
             {
                 HandleBoxGroup(i, (BoxGroup)currentAttack.boxGroups[i]);
             }
 
+            // Check if this move was canceled with another action.
             if (CheckCancelWindows(currentAttack))
             {
                 CombatManager.Cleanup();
                 return;
             }
 
+            // Check if we can special or command attack cancel.
             if (TrySpecialCancel(currentAttack)
                 || TryCommandAttackCancel(currentAttack))
             {
                 return;
             }
 
+            // Execute events.
             bool eventCancel = false;
             for (int i = 0; i < currentAttack.events.Count; i++)
             {
@@ -96,7 +103,8 @@ namespace TUF.Entities.Shared
                 }
             }
 
-            if (!eventCancel)
+            // Only increment the frame if the event didn't stop it.
+            if (!eventCancel && !HandleChargeLevels((TUF.Entities.EntityManager)Manager, currentAttack))
             {
                 controller.StateManager.IncrementFrame();
             }
@@ -170,6 +178,7 @@ namespace TUF.Entities.Shared
             if(StateManager.CurrentStateFrame >= currentEvent.startFrame 
                 && StateManager.CurrentStateFrame <= currentEvent.endFrame)
             {
+                // Check the on hit requirement.
                 if (currentEvent.onHit)
                 {
                     List<IHurtable> ihList = ((EntityHitboxManager)CombatManager.hitboxManager).GetHitList(currentEvent.onHitHitboxGroup);
@@ -183,8 +192,17 @@ namespace TUF.Entities.Shared
                     }
                 }
 
+                // Check the input requirement.
                 if (currentEvent.inputCheckTiming != AttackEventInputCheckTiming.NONE
                     && !CheckEventInputRequirement(currentEvent))
+                {
+                    return false;
+                }
+
+                // Check the charge level requirement.
+                if((CombatManager.CurrentChargeLevel < currentEvent.chargeLevelMin
+                    || CombatManager.CurrentChargeLevel > currentEvent.chargeLevelMax)
+                    && (currentEvent.chargeLevelMin != -1))
                 {
                     return false;
                 }
@@ -227,6 +245,57 @@ namespace TUF.Entities.Shared
                     break;
             }
             return false;
+        }
+
+        /// <summary>
+        /// Handles processing the charge levels of the current attack.
+        /// </summary>
+        /// <param name="entityManager">The entity itself.</param>
+        /// <param name="currentAttack">The current attack the entity is doing.</param>
+        /// <returns>If the frame should be held.</returns>
+        private bool HandleChargeLevels(EntityManager entityManager, AttackDefinition currentAttack)
+        {
+            EntityCombatManager cManager = (EntityCombatManager)entityManager.CombatManager;
+            if (!charging)
+            {
+                return false;
+            }
+
+            if (!entityManager.InputManager.GetButton((int)EntityInputs.Attack).isDown)
+            {
+                charging = false;
+                return false;
+            }
+
+            bool result = false;
+            for (int i = 0; i < currentAttack.chargeWindows.Count; i++)
+            {
+                // Not on the correct frame.
+                if (entityManager.StateManager.CurrentStateFrame != currentAttack.chargeWindows[i].frame)
+                {
+                    continue;
+                }
+
+                // Still have charge levels to go through.
+                if (entityManager.CombatManager.CurrentChargeLevel < currentAttack.chargeWindows[i].chargeLevels.Count)
+                {
+                    cManager.IncrementChargeLevelCharge(currentAttack.chargeWindows[i].chargeLevels[cManager.CurrentChargeLevel].maxChargeFrames);
+                    // Charge completed, move on to the next level.
+                    if (cManager.CurrentChargeLevelCharge == currentAttack.chargeWindows[i].chargeLevels[cManager.CurrentChargeLevel].maxChargeFrames)
+                    {
+                        cManager.SetChargeLevel(cManager.CurrentChargeLevel + 1);
+                        cManager.SetChargeLevelCharge(0);
+                    }
+                }
+                else if (currentAttack.chargeWindows[i].releaseOnCompletion)
+                {
+                    charging = false;
+                }
+                result = true;
+                // Only one charge level can be handled per frame, ignore everything else.
+                break;
+            }
+            return result;
         }
 
         /// <summary>
