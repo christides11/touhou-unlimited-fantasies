@@ -34,6 +34,12 @@ namespace TUF.Entities.Shared
         public float airJumpCarriedMomentum;
         public float airJumpHorizontalVelo;
 
+        [Header("Crouch Jump")]
+        public float crouchJumpVelocity;
+        public float crouchJumpAcceleration;
+        public float crouchJumpDeceleration;
+        public float crouchJumpMaxAirSeed;
+
         [Header("Air Movement")]
         public float airRotationSpeed;
         public float airFriction;

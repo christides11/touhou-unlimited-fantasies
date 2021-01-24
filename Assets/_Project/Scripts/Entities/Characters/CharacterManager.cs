@@ -44,6 +44,7 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new CFall(), (int)EntityStates.FALL);
             StateManager.AddState(new CAirDash(), (int)EntityStates.AIR_DASH);
             StateManager.AddState(new CEnemyStep(), (int)EntityStates.ENEMY_STEP);
+            StateManager.AddState(new CCrouchJump(), (int)BaseCharacterStates.CROUCH_JUMP);
 
             // Float
             StateManager.AddState(new CFloat(), (int)EntityStates.FLOAT);

@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Reimu Ground Launcher (To Air)
   description: 
   stateOverride: -1
-  length: 30
+  length: 15
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
@@ -67,6 +67,8 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: 0
+        chargeLevelMax: 0
         inputCheckProcessed: 0
     00000001:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
@@ -110,6 +112,8 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: 0
+        chargeLevelMax: 0
         inputCheckProcessed: 0
     00000002:
       type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
@@ -138,6 +142,8 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: 0
+        chargeLevelMax: 0
         inputCheckProcessed: 0
     00000003:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}

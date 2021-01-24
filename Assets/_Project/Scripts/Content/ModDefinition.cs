@@ -60,12 +60,12 @@ namespace TUF.Modding
         /// <summary>
         /// Gets a gamemode by name.
         /// </summary>
-        /// <param name="gamemodeName"></param>
+        /// <param name="gamemodeID"></param>
         /// <returns>The GameModeDefinition with the gamemode name given. If it does not exist,
         /// returns null.</returns>
-        public virtual GameModeDefinition GetGamemodeDefinition(string gamemodeName)
+        public virtual GameModeDefinition GetGamemodeDefinition(string gamemodeID)
         {
-            return gamemodes.FirstOrDefault(x => x.gameModeName.ToLower() == gamemodeName.ToLower());
+            return gamemodes.FirstOrDefault(x => x.gameModeID.ToLower() == gamemodeID.ToLower());
         }
         #endregion
 

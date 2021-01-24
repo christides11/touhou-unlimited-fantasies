@@ -7,6 +7,7 @@ namespace TUF.GameMode
     [CreateAssetMenu(fileName = "GameModeDefiniton", menuName = "TAPI/GameModeDefinition")]
     public class GameModeDefinition : ScriptableObject
     {
+        public string gameModeID;
         public string gameModeName;
         [TextArea] public string gameModeDescription;
         public GameModeBase gameModeHandler;

@@ -11,7 +11,7 @@ namespace TUF.Entities.Shared
         {
             base.Initialize();
             controller.fullHop = true;
-            PhysicsManager.ApplyMovementFriction();
+            //PhysicsManager.ApplyMovementFriction();
             if (controller.LockedOn)
             {
                 controller.SetVisualRotation(controller.LockonForward);

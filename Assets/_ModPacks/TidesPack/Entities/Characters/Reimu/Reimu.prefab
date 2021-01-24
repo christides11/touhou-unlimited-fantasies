@@ -573,12 +573,14 @@ MonoBehaviour:
   enemyStepLayerMask:
     serializedVersion: 2
     m_Bits: 2147483648
-  enemyStepCheckRadius: 2
+  enemyStepCheckRadius: 1
+  lastWall: {fileID: 0}
+  wallDetectRadius: 1.2
+  wallDetectDist: 1
   wasRunning: 0
   hoverMode: 0
   currentAirDash: 0
   sideWallDistance: 0.7
-  lastWall: {fileID: 0}
   wallSide: 0
   wallRunHozMultiplier: 1
   wallRunVertical: -0.95

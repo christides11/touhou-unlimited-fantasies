@@ -82,10 +82,15 @@ namespace TUF.Entities
         {
             base.Awake();
             GameManager = TUF.Core.GameManager.current;
-            KinematicCharacterSystem.Settings.AutoSimulation = false;
             size = coll.bounds.size;
             SetupDefaultStates();
             //pushbox.TriggerStay += PhysicsManager.HandlePushForce;
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+            KinematicCharacterSystem.Settings.AutoSimulation = false;
         }
 
         public override void SimUpdate()

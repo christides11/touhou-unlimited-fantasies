@@ -21,7 +21,7 @@ namespace TUF.Entities.Shared
                 PhysicsManager.forceMovement *= controller.definition.stats.jumpHorizontalMomentum;
             }
 
-            // Moving platform movement.
+            // Transfer moving platform forces into actual force.
             Vector3 tempPhysicsMover = controller.cc.Motor.AttachedRigidbodyVelocity;
             PhysicsManager.forceGravity.y = tempPhysicsMover.y;
             tempPhysicsMover.y = 0;

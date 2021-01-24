@@ -6,25 +6,19 @@ using UnityEngine;
 
 namespace TUF.Entities.Characters.States
 {
-    public class CJump : EntityJump
+    public class CAirJump : EntityAirJump
     {
-
         public override bool CheckInterrupt()
         {
-            if (CombatManager.TryAttack())
-            {
-                StateManager.ChangeState((int)EntityStates.ATTACK);
-                return true;
-            }
-            if (((CharacterManager)controller).TryLedgeGrab())
-            {
-                return true;
-            }
-            if (((CharacterManager)controller).TryWallCling())
+            if (controller.TryAttack())
             {
                 return true;
             }
             if (controller.TryEnemyStep())
+            {
+                return true;
+            }
+            if (((CharacterManager)controller).TryWallCling())
             {
                 return true;
             }
@@ -33,18 +27,19 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;
             }
-            if (controller.TryFloat())
+            if (Mathf.Abs(controller.InputManager.GetAxis((int)EntityInputs.Float)) > InputConstants.floatMagnitude)
             {
+                controller.StateManager.ChangeState((int)EntityStates.FLOAT);
                 return true;
             }
             if (((CharacterManager)controller).CheckAirDash())
             {
-                StateManager.ChangeState((int)EntityStates.AIR_DASH);
+                controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;
             }
-            if(PhysicsManager.forceGravity.y <= 0)
+            if (PhysicsManager.forceGravity.y <= 0)
             {
-                StateManager.ChangeState((int)EntityStates.FALL);
+                controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
             return false;

@@ -81,7 +81,7 @@ namespace TUF.Entities.Characters.States
         {
             if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
-                controller.StateManager.ChangeState((int)EntityStates.JUMP_SQUAT);
+                controller.StateManager.ChangeState((int)BaseCharacterStates.CROUCH_JUMP);
                 return true;
             }
             if (InputManager.GetAxis((int)EntityInputs.Float, 0) >= -0.5f
