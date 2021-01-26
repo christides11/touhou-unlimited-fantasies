@@ -19,18 +19,9 @@ namespace TUF.Core
         }
 
         [SerializeField] private bool hasSpawned;
-        [SerializeField] private TriggerDetector triggerDetector;
         [SerializeField] private List<EntitySpawnInfo> entitySpawns = new List<EntitySpawnInfo>();
 
-        private void Awake()
-        {
-            if (triggerDetector)
-            {
-                triggerDetector.TriggerEnter += SpawnEntities;
-            }
-        }
-
-        private void SpawnEntities(Collider other)
+        public virtual void Spawn()
         {
             if (hasSpawned)
             {

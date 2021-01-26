@@ -33,9 +33,9 @@ MonoBehaviour:
   airJumpCarriedMomentum: 0.2
   airJumpHorizontalVelo: 12
   crouchJumpVelocity: 14.5
-  crouchJumpAcceleration: 0.2
+  crouchJumpAcceleration: 0.5
   crouchJumpDeceleration: 0.8
-  crouchJumpMaxAirSeed: 20
+  crouchJumpMaxAirSeed: 18
   airRotationSpeed: 0.25
   airFriction: 0.8
   airAcceleration: 2
