@@ -11,10 +11,10 @@
 
         }
 
-        public ModObjectReference(string modIdentifier, string objectName)
+        public ModObjectReference(string modIdentifier, string objectIdentifier)
         {
             this.modIdentifier = modIdentifier;
-            this.objectName = objectName;
+            this.objectName = objectIdentifier;
         }
 
         public override string ToString()

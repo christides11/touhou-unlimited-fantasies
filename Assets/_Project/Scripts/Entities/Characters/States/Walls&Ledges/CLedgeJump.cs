@@ -10,7 +10,7 @@ namespace TUF.Entities.Characters.States
         public override void Initialize()
         {
             base.Initialize();
-            CharacterStats cs = (CharacterStats)controller.definition.stats;
+            CharacterStats cs = (CharacterStats)controller.EntityStats;
             PhysicsManager.forceGravity.y = cs.ledgeJumpYForce;
 
             PhysicsManager.forceMovement = PhysicsManager.forceMovement.magnitude * controller.visualTransform.forward;
@@ -28,7 +28,7 @@ namespace TUF.Entities.Characters.States
 
         public override void OnUpdate()
         {
-            CharacterStats cs = (CharacterStats)controller.definition.stats;
+            CharacterStats cs = (CharacterStats)controller.EntityStats;
 
             PhysicsManager.ApplyMovement(cs.ledgeJumpAccel, cs.ledgeJumpMaxSpeed, cs.airDeceleration, false);
             PhysicsManager.HandleGravity();

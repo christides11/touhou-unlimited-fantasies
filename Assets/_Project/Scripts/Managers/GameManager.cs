@@ -34,11 +34,11 @@ namespace TUF.Core
         /// <summary>
         /// A definition of content that's included with TUF.
         /// </summary>
-        [SerializeField] private ModDefinition coreMod;
+        [SerializeField] private LocalModDefinition coreMod;
         /// <summary>
         /// A definition of a mod included with TUF.
         /// </summary>
-        [SerializeField] private ModDefinition internalMod;
+        [SerializeField] private LocalModDefinition internalMod;
 
         [Header("References")]
         [SerializeField] private ModManager modManager;
@@ -64,7 +64,6 @@ namespace TUF.Core
         {
             GlobalInputManager.instance = new GlobalInputManager();
             current = this;
-            coreMod.local = true;
             modManager.mods.Add("core", coreMod);
             modManager.mods.Add("christides11.tidespack", internalMod);
         }
@@ -100,10 +99,10 @@ namespace TUF.Core
         /// <returns></returns>
         public virtual async Task StartGameMode(ModObjectReference entity, ModObjectReference gamemode, ModObjectReference stage,
             ModObjectReference stageCollection = null, string sceneToUnload = null) {
-            EntityDefinition entityDefinition = modManager.GetEntity(entity);
-            GameModeDefinition gamemodeDefinition = modManager.GetGamemodeDefinition(gamemode);
-            StageDefinition stageDefinition = modManager.GetStageDefinition(stage);
-            StageCollection stageCollectionDefinition = stageCollection != null ? modManager.GetStageCollection(stageCollection)
+            EntityDefinition entityDefinition = await modManager.GetEntity(entity);
+            GameModeDefinition gamemodeDefinition = await modManager.GetGamemodeDefinition(gamemode);
+            StageDefinition stageDefinition = await modManager.GetStageDefinition(stage);
+            StageCollection stageCollectionDefinition = stageCollection != null ? await modManager.GetStageCollection(stageCollection)
                 : null;
 
             // Error checking.
@@ -126,8 +125,8 @@ namespace TUF.Core
             // Load everything and start gamemode.
             SetGameMode(gamemodeDefinition);
 
-            bool result = await modManager.LoadStage(stage);
-            if (!result)
+            List<string> scenesLoaded = await modManager.LoadStage(stage);
+            if (scenesLoaded.Contains(null))
             {
                 Debug.Log($"Error loading stage {stage.ToString()}.");
                 return;
@@ -137,7 +136,7 @@ namespace TUF.Core
             {
                 await SceneManager.UnloadSceneAsync(sceneToUnload);
             }
-            SceneManager.SetActiveScene(SceneManager.GetSceneByName(stageDefinition.sceneName));
+            SceneManager.SetActiveScene(SceneManager.GetSceneByName(scenesLoaded[0]));
 
             GameMode.InitGameMode(this);
             GameMode.StartGameMode(entityDefinition, stageDefinition);

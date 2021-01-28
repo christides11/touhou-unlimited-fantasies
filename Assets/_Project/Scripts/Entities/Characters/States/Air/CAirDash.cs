@@ -12,7 +12,7 @@ namespace TUF.Entities.Characters.States
         public override void Initialize()
         {
             base.Initialize();
-            CharacterStats cs = ((CharacterStats)controller.definition.stats);
+            CharacterStats cs = ((CharacterStats)controller.EntityStats);
 
             ((CharacterManager)controller).currentAirDash++;
             PhysicsManager.forceGravity *= cs.airDashGravityInitMulti;
@@ -34,7 +34,7 @@ namespace TUF.Entities.Characters.States
         {
             if (!CheckInterrupt())
             {
-                CharacterStats cs = ((CharacterStats)controller.definition.stats);
+                CharacterStats cs = ((CharacterStats)controller.EntityStats);
                 if (controller.StateManager.CurrentStateFrame > cs.airDashHoldVelo)
                 {
                     PhysicsManager.ApplyMovementFriction(cs.airDashFriction);
@@ -72,7 +72,7 @@ namespace TUF.Entities.Characters.States
                 StateManager.ChangeState((int)EntityStates.AIR_JUMP);
                 return true;
             }
-            if (StateManager.CurrentStateFrame >= ((CharacterStats)controller.definition.stats).airDashLength)
+            if (StateManager.CurrentStateFrame >= ((CharacterStats)controller.EntityStats).airDashLength)
             {
                 StateManager.ChangeState((int)EntityStates.FALL);
                 return true;

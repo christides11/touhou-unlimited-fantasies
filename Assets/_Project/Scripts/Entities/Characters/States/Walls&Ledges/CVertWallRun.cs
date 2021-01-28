@@ -23,7 +23,7 @@ namespace TUF.Entities.Characters.States
                 return;
             }
 
-            PhysicsManager.forceGravity = Vector3.up * ((CharacterStats)controller.definition.stats).wallRunVerticalSpeed;
+            PhysicsManager.forceGravity = Vector3.up * ((CharacterStats)controller.EntityStats).wallRunVerticalSpeed;
 
             StateManager.IncrementFrame();
         }

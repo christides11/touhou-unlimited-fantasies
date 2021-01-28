@@ -7985,8 +7985,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2506a0333e36c9f4a8cb6772e4978301, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coreMod: {fileID: 11400000, guid: 66ce31cc7041f9e45a8d0ffb7d2853a8, type: 2}
-  internalMod: {fileID: 11400000, guid: 481dc32644ac906449078fada60bf940, type: 2}
+  coreMod: {fileID: 11400000, guid: 9d5153666fd17c04582736692852863f, type: 2}
+  internalMod: {fileID: 11400000, guid: ee72611a0f4660c4ea065202e62b7629, type: 2}
   modManager: {fileID: 2100487050}
   consoleWindow: {fileID: 1482370770}
   musicManager: {fileID: 2100487051}

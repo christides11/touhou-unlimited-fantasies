@@ -32,7 +32,7 @@ namespace TUF.Combat.Events
             }
             float percent = (float)frame / (float)endFrame;
 
-            float gravity = ((TUF.Entities.EntityManager)controller).definition.stats.gravity;
+            float gravity = ((TUF.Entities.EntityManager)controller).EntityStats.gravity;
             if (!useEntityGravity)
             {
                 gravity = variables.curveVars[0].Evaluate(percent)
@@ -46,7 +46,7 @@ namespace TUF.Combat.Events
                     * variables.floatVars[1];
             }
 
-            float maxFallSpeed = ((TUF.Entities.EntityManager)controller).definition.stats.maxFallSpeed;
+            float maxFallSpeed = ((TUF.Entities.EntityManager)controller).EntityStats.maxFallSpeed;
             if (!useEntityMaxFallSpeed)
             {
                 maxFallSpeed = variables.curveVars[2].Evaluate(percent)

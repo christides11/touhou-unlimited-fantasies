@@ -2,10 +2,13 @@
   "dependencies": {
     "com.christides.character-action-framework": "https://github.com/christides11/Character-Action-Framework.git#upm/v8.1.0",
     "com.coffee.upm-git-extension": "https://github.com/mob-sakai/UpmGitExtension.git",
+    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
     "com.github.siccity.xnode": "https://github.com/siccity/xNode.git#1.8.0",
     "com.malee.reorderablelist": "https://github.com/cfoulston/Unity-Reorderable-List.git",
     "com.redfox-interactive.smartbutton": "https://github.com/Menyus777/RedFox-Smart-Button.git#master",
+    "com.unity.addressables": "1.16.16",
     "com.unity.cinemachine": "2.6.0",
+    "com.unity.memoryprofiler": "0.2.8-preview.2",
     "com.unity.probuilder": "4.2.3",
     "com.unity.progrids": "3.0.3-preview.5",
     "com.unity.render-pipelines.universal": "7.3.1",

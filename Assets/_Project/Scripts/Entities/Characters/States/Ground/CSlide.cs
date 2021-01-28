@@ -10,7 +10,7 @@ namespace TUF.Entities.Characters.States
     {
         public override void Initialize()
         {
-            CharacterStats cs = ((CharacterStats)controller.definition.stats);
+            CharacterStats cs = ((CharacterStats)controller.EntityStats);
 
             base.Initialize();
 
@@ -26,7 +26,7 @@ namespace TUF.Entities.Characters.States
         protected Vector3 targetSpeed;
         public override void OnUpdate()
         {
-            CharacterStats cs = ((CharacterStats)controller.definition.stats);
+            CharacterStats cs = ((CharacterStats)controller.EntityStats);
 
             GetSlopeInformation();
 
@@ -95,7 +95,7 @@ namespace TUF.Entities.Characters.States
 
         public override void OnInterrupted()
         {
-            CharacterStats cs = ((CharacterStats)controller.definition.stats);
+            CharacterStats cs = ((CharacterStats)controller.EntityStats);
 
             KinematicCharacterController.KinematicCharacterMotor kcm = controller.cc.Motor;
             kcm.SetCapsuleDimensions(kcm.Capsule.radius, cs.height, cs.height / 2.0f);

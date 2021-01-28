@@ -76,7 +76,7 @@ namespace TUF.Entities.Characters
         {
             if (InputManager.GetButton((int)EntityInputs.Dash, 0, true).firstPress)
             {
-                if (currentAirDash < ((CharacterStats)definition.stats).maxAirDashes)
+                if (currentAirDash < ((CharacterStats)EntityStats).maxAirDashes)
                 {
                     return true;
                 }
@@ -93,7 +93,7 @@ namespace TUF.Entities.Characters
             }
             else
             {
-                if (currentAirDash < ((CharacterStats)definition.stats).maxAirDashes) {
+                if (currentAirDash < ((CharacterStats)EntityStats).maxAirDashes) {
                     StateManager.ChangeState((int)EntityStates.AIR_DASH);
                     return true;
                 }

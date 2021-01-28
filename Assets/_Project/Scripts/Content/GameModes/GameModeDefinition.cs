@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TUF.GameMode
 {
-    [CreateAssetMenu(fileName = "GameModeDefiniton", menuName = "TAPI/GameModeDefinition")]
+    [CreateAssetMenu(fileName = "GameModeDefiniton", menuName = "TUF/Content/GameModes/GameModeDefinition")]
     public class GameModeDefinition : ScriptableObject
     {
         public string gameModeID;

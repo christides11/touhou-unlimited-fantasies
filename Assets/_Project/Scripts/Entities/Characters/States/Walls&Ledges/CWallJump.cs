@@ -24,7 +24,7 @@ namespace TUF.Entities.Characters.States
                 controller.StateManager.ChangeState((int)EntityStates.AIR_DASH);
                 return true;
             }
-            if (controller.StateManager.CurrentStateFrame >= controller.definition.stats.wallJumpTime)
+            if (controller.StateManager.CurrentStateFrame >= controller.EntityStats.wallJumpTime)
             {
                 controller.StateManager.ChangeState((int)EntityStates.FALL);
                 return true;

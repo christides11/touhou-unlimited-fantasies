@@ -21,7 +21,7 @@ namespace TUF.Core
         [SerializeField] private bool hasSpawned;
         [SerializeField] private List<EntitySpawnInfo> entitySpawns = new List<EntitySpawnInfo>();
 
-        public virtual void Spawn()
+        public virtual async void Spawn()
         {
             if (hasSpawned)
             {
@@ -31,7 +31,7 @@ namespace TUF.Core
             GameManager gameManager = GameManager.current;
             for(int i = 0; i < entitySpawns.Count; i++)
             {
-                EntityDefinition entityDefinition = gameManager.ModManager.GetEntity(entitySpawns[i].entity.reference);
+                EntityDefinition entityDefinition = await gameManager.ModManager.GetEntity(entitySpawns[i].entity.reference);
                 if(entityDefinition == null)
                 {
                     continue;

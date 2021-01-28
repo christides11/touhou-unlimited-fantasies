@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: TidesPack.Reimu
+  m_EditorClassIdentifier: 
+  m_GroupName: TidesPack.Reimu
+  m_Data:
+    m_SerializedData: []
+  m_GUID: 9615b02a9d9147d4d8a831f00e198ede
+  m_SerializeEntries:
+  - m_GUID: 7468837157648f742ab07e16ea628811
+    m_Address: tidespack/Reimu/Reimu.prefab
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 6981093855673240406, guid: 7468837157648f742ab07e16ea628811,
+      type: 3}
+    m_TargetAsset: {fileID: 6981093855673240406, guid: 7468837157648f742ab07e16ea628811,
+      type: 3}
+  - m_GUID: db56f4faf80d8ab4c9a20f7577243ebc
+    m_Address: tidespack/Reimu/ReimuDefinition.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 11400000, guid: db56f4faf80d8ab4c9a20f7577243ebc, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: db56f4faf80d8ab4c9a20f7577243ebc, type: 2}
+  - m_GUID: 9c4e6e8754079954185772f99b9a9473
+    m_Address: tidespack/Reimu/ReimuMovesetDefinition.asset
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    m_MainAsset: {fileID: 11400000, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
+    m_TargetAsset: {fileID: 11400000, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 7bd62e8ac6c9bcc4890a3154ccd0339d, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a41d812cb67c90843a1579d194aeee3a, type: 2}
+    - {fileID: 11400000, guid: ba6e0d82a6d75484db446acadb1057e0, type: 2}

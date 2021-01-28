@@ -5,6 +5,7 @@ using UnityEngine;
 
 namespace TidesPack.Enemies.Fairies
 {
+    [System.Serializable]
     public class FairyStats : EntityStats
     {
 

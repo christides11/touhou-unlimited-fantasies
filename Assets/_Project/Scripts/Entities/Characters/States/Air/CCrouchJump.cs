@@ -26,12 +26,12 @@ namespace TUF.Entities.Characters.States
             }
 
             // Add jump force.
-            PhysicsManager.forceGravity.y += controller.definition.stats.crouchJumpVelocity;
+            PhysicsManager.forceGravity.y += controller.EntityStats.crouchJumpVelocity;
         }
 
         public override void OnUpdate()
         {
-            EntityStats es = controller.definition.stats;
+            EntityStats es = controller.EntityStats;
             PhysicsManager.ApplyMovement(es.crouchJumpAcceleration, es.crouchJumpMaxAirSeed, es.crouchJumpDeceleration, false);
             PhysicsManager.HandleGravity();
             controller.RotateVisual(controller.GetMovementVector(0), es.airRotationSpeed);

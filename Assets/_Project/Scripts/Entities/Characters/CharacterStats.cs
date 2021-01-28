@@ -5,7 +5,7 @@ using TUF.Entities.Shared;
 
 namespace TUF.Entities.Characters
 {
-    [CreateAssetMenu(fileName = "CharacterStats", menuName = "Entities/Characters/Stats")]
+    [System.Serializable]
     public class CharacterStats : EntityStats
     {
         [Header("Air Dash")]

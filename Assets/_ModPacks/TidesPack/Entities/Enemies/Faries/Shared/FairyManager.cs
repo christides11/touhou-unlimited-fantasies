@@ -8,6 +8,9 @@ namespace TidesPack.Enemies.Fairies
 {
     public class FairyManager : EntityManager
     {
+        public override EntityStats EntityStats { get { return fairyStats; } }
+
+        public FairyStats fairyStats;
 
         protected override void SetupDefaultStates()
         {

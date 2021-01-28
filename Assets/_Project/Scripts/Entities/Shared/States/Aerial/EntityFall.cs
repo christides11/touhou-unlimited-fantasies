@@ -13,7 +13,7 @@ namespace TUF.Entities.Shared
 
         public override void OnUpdate()
         {
-            EntityStats es = controller.definition.stats;
+            EntityStats es = controller.EntityStats;
             PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration);
             PhysicsManager.HandleGravity(es.gravity);
             controller.RotateVisual(controller.GetMovementVector(0), es.airRotationSpeed);

@@ -12,7 +12,7 @@ namespace TUF.Entities.Shared
             base.Initialize();
             Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement).normalized;
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
-            translatedMovement *= controller.definition.stats.dashSpeed;
+            translatedMovement *= controller.EntityStats.dashSpeed;
 
             PhysicsManager.forceMovement = translatedMovement;
             controller.RotateVisual(translatedMovement, 100);

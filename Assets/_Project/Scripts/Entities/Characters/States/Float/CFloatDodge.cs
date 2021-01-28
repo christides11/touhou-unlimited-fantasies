@@ -8,7 +8,7 @@ namespace TUF.Entities.Characters.States
 {
     public class CFloatDodge : EntityState
     {
-        private CharacterStats Stats { get { return (CharacterStats)controller.definition.stats; } }
+        private CharacterStats Stats { get { return (CharacterStats)controller.EntityStats; } }
 
         public override void Initialize()
         {

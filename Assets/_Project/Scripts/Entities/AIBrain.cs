@@ -6,7 +6,7 @@ namespace TUF.Entities
 {
     public class AIBrain : MonoBehaviour
     {
-        public void Tick()
+        public virtual void Tick()
         {
 
         }

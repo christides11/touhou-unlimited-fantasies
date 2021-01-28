@@ -18,9 +18,9 @@ namespace TUF.Entities.Shared
                 return;
             }
 
-            PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFrictionXZ);
-            PhysicsManager.HandleGravity(controller.definition.stats.hitstunMaxFallSpeed,
-                controller.definition.stats.hitstunGravity, 1.0f);
+            PhysicsManager.ApplyMovementFriction(controller.EntityStats.hitstunFrictionXZ);
+            PhysicsManager.HandleGravity(controller.EntityStats.hitstunMaxFallSpeed,
+                controller.EntityStats.hitstunGravity, 1.0f);
         }
 
         public override bool CheckInterrupt()

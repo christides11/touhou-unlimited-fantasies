@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5bb6bfa8fcbfa454e9dc53cb66d6e720, type: 3}
   m_Name: EoSD_StageCollection
   m_EditorClassIdentifier: 
+  collectionID: EoSD
   collectionName: Embodiment of Scarlet Devil
   stages:
   - gamemode:

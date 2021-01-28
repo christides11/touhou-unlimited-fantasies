@@ -20,16 +20,16 @@ namespace TUF.Entities.Shared
 
             Vector3 translatedMovement = Vector3.zero;
             if(moveDir.magnitude >= InputConstants.movementMagnitude
-                || Vector3.Dot(wallNormalForward, moveDir.normalized) >= controller.definition.stats.wallJumpMinAngle)
+                || Vector3.Dot(wallNormalForward, moveDir.normalized) >= controller.EntityStats.wallJumpMinAngle)
             {
-                translatedMovement = moveDir * controller.definition.stats.wallJumpHVelo;
+                translatedMovement = moveDir * controller.EntityStats.wallJumpHVelo;
             }
             else
             {
-                translatedMovement = wallNormalForward * controller.definition.stats.wallJumpHVelo;
+                translatedMovement = wallNormalForward * controller.EntityStats.wallJumpHVelo;
             }
             
-            PhysicsManager.forceGravity.y = controller.definition.stats.wallJumpYVelo;
+            PhysicsManager.forceGravity.y = controller.EntityStats.wallJumpYVelo;
             PhysicsManager.forceMovement = translatedMovement;
         }
 
@@ -37,7 +37,7 @@ namespace TUF.Entities.Shared
         {
             if (!CheckInterrupt())
             {
-                EntityStats es = controller.definition.stats;
+                EntityStats es = controller.EntityStats;
                 PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration);
                 PhysicsManager.HandleGravity(es.gravity);
                 controller.RotateVisual(controller.GetMovementVector(0), es.airRotationSpeed);

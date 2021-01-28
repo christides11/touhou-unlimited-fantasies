@@ -9,10 +9,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2895a1d9eb9463c4cbb4f0b7a4eb7cbd, type: 3}
-  m_Name: EOSD_Stage1
+  m_Script: {fileID: 11500000, guid: bb298dad37aa1ef4083a5d6cdefe86bd, type: 3}
+  m_Name: EoSD_Stage1_LocalStageDefiniton
   m_EditorClassIdentifier: 
   stageIdentifier: EOSD_FNPS
   stageName: Fantastic Night Parade Scroll ~ Mystic Flier
-  sceneName: EoSD_Stage1
+  sceneNames: []
   selectableForGamemodes: 0
+  sceneRefs:
+  - m_AssetGUID: 3f09599c48299ca448a158e34b0af784
+    m_SubObjectName: 
+    m_SubObjectType: 

@@ -27,18 +27,21 @@ namespace TUF.Menus.MainMenu
         public Image gamemodeImage;
         public TextMeshProUGUI gamemodeDescription;
 
-        private void OnEnable()
+        private async void OnEnable()
         {
+            gamemodeName.text = "Gamemode Select";
+            gamemodeDescription.text = "Select a gamemode.";
+
             Cleanup();
 
             GameManager gm = GameManager.current;
 
-            List<ModObjectReference> gamemodeReferences = gm.ModManager.GetGamemodeDefinitions();
+            List<ModObjectReference> gamemodeReferences = await gm.ModManager.GetGamemodeDefinitions();
 
-            foreach(ModObjectReference gamemodeReference in gamemodeReferences)
+            for(int i = 0; i < gamemodeReferences.Count; i++)
             {
-                GameModeDefinition gamemodeDefinition = gm.ModManager.GetGamemodeDefinition(gamemodeReference);
-
+                ModObjectReference gamemodeReference = gamemodeReferences[i];
+                GameModeDefinition gamemodeDefinition = await gm.ModManager.GetGamemodeDefinition(gamemodeReference);
                 if (!gamemodeDefinition.selectable)
                 {
                     continue;
@@ -50,9 +53,6 @@ namespace TUF.Menus.MainMenu
                 item.GetComponent<EventTrigger>().AddOnSelectedListeners((data) => { GamemodeSelected(gamemodeReference); });
                 item.GetComponent<EventTrigger>().AddOnSubmitListeners((data) => { GamemodeSubmitted(gamemodeReference); });
             }
-
-            gamemodeName.text = "Gamemode Select";
-            gamemodeDescription.text = "Select a gamemode.";
         }
 
         private void Update()
@@ -78,9 +78,9 @@ namespace TUF.Menus.MainMenu
             }
         }
 
-        public void GamemodeSelected(ModObjectReference gamemode)
+        public async void GamemodeSelected(ModObjectReference gamemode)
         {
-            GameModeDefinition gm = GameManager.current.ModManager.GetGamemodeDefinition(gamemode);
+            GameModeDefinition gm = await GameManager.current.ModManager.GetGamemodeDefinition(gamemode);
             if (gm)
             {
                 gamemodeName.text = gm.gameModeName;

@@ -31,7 +31,7 @@ namespace TUF.Entities.Characters.States
                 StateManager.ChangeState((int)EntityStates.FALL);
                 return true;
             }
-            if (StateManager.CurrentStateFrame >= controller.definition.stats.dashTime)
+            if (StateManager.CurrentStateFrame >= controller.EntityStats.dashTime)
             {
                 StateManager.ChangeState((int)EntityStates.RUN);
                 return true;

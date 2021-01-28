@@ -23,7 +23,7 @@ namespace TidesPack.Characters.Reimu
 
             if(StateManager.CurrentStateFrame == 10)
             {
-                ReimuStats rStats = (ReimuStats)controller.definition.stats;
+                ReimuStats rStats = (ReimuStats)controller.EntityStats;
 
                 Vector3 forwardDir = controller.visual.transform.forward;
 

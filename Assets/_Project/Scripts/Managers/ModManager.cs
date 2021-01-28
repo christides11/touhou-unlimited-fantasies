@@ -17,7 +17,7 @@ namespace TUF.Modding
     {
         public static ModManager instance;
 
-        public Dictionary<string, ModDefinition> mods = new Dictionary<string, ModDefinition>();
+        public Dictionary<string, IModDefinition> mods = new Dictionary<string, IModDefinition>();
 
         public ModLoader ModLoader { get { return modLoader; } }
 
@@ -29,14 +29,14 @@ namespace TUF.Modding
             modLoader.Init(this, gameManager);
         }
 
-        public GameModeDefinition GetGamemodeDefinition(ModObjectReference gamemode)
+        public async Task<GameModeDefinition> GetGamemodeDefinition(ModObjectReference gamemode)
         {
             if (!mods.ContainsKey(gamemode.modIdentifier))
             {
                 return null;
             }
 
-            GameModeDefinition g = mods[gamemode.modIdentifier].GetGamemodeDefinition(gamemode.objectName);
+            GameModeDefinition g = await mods[gamemode.modIdentifier].GetGamemodeDefinition(gamemode.objectName);
 
             if(g == null)
             {
@@ -46,23 +46,23 @@ namespace TUF.Modding
             return g;
         }
 
-        public List<ModObjectReference> GetGamemodeDefinitions()
+        public async Task<List<ModObjectReference>> GetGamemodeDefinitions()
         {
             List<ModObjectReference> gamemodes = new List<ModObjectReference>();
 
             foreach (string m in mods.Keys)
             {
-                List<GameModeDefinition> gmds = mods[m].GetGamemodeDefinitions();
+                List<GameModeDefinition> gmds = await mods[m].GetGamemodeDefinitions();
                 foreach (GameModeDefinition gmd in gmds)
                 {
-                    gamemodes.Add(new ModObjectReference(m, gmd.gameModeName));
+                    gamemodes.Add(new ModObjectReference(m, gmd.gameModeID));
                 }
             }
 
             return gamemodes;
         }
 
-        public EntityDefinition GetEntity(ModObjectReference entity)
+        public async Task<EntityDefinition> GetEntity(ModObjectReference entity)
         {
             entity.modIdentifier = entity.modIdentifier.ToLower();
             if (!mods.ContainsKey(entity.modIdentifier))
@@ -70,7 +70,7 @@ namespace TUF.Modding
                 return null;
             }
 
-            EntityDefinition e = mods[entity.modIdentifier].GetEntityDefinition(entity.objectName);
+            EntityDefinition e = await mods[entity.modIdentifier].GetEntityDefinition(entity.objectName);
 
             if(e == null)
             {
@@ -80,13 +80,13 @@ namespace TUF.Modding
             return e;
         }
 
-        public List<ModObjectReference> GetEntities()
+        public async Task<List<ModObjectReference>> GetEntities()
         {
             List<ModObjectReference> entities = new List<ModObjectReference>();
 
             foreach (string m in mods.Keys)
             {
-                List<EntityDefinition> eds = mods[m].GetEntityDefinitions();
+                List<EntityDefinition> eds = await mods[m].GetEntityDefinitions();
                 foreach (EntityDefinition ed in eds)
                 {
                     entities.Add(new ModObjectReference(m, ed.entityName));
@@ -96,7 +96,7 @@ namespace TUF.Modding
             return entities;
         }
 
-        public StageDefinition GetStageDefinition(ModObjectReference stage)
+        public async Task<StageDefinition> GetStageDefinition(ModObjectReference stage)
         {
             stage.modIdentifier = stage.modIdentifier.ToLower();
             if (!mods.ContainsKey(stage.modIdentifier))
@@ -104,7 +104,7 @@ namespace TUF.Modding
                 return null;
             }
 
-            StageDefinition s = mods[stage.modIdentifier].GetStageDefinition(stage.objectName);
+            StageDefinition s = await mods[stage.modIdentifier].GetStageDefinition(stage.objectName);
 
             if(s == null)
             {
@@ -118,13 +118,13 @@ namespace TUF.Modding
         /// Get a list of all stages available.
         /// </summary>
         /// <returns>A list that can be used to get the definition of any stage.</returns>
-        public List<ModObjectReference> GetStageDefinitions()
+        public async Task<List<ModObjectReference>> GetStageDefinitions()
         {
             List<ModObjectReference> stages = new List<ModObjectReference>();
 
             foreach (string mod in mods.Keys)
             {
-                List<StageDefinition> stageDefinitions = mods[mod].GetStageDefinitions();
+                List<StageDefinition> stageDefinitions = await mods[mod].GetStageDefinitions();
                 foreach (StageDefinition stageDefinition in stageDefinitions)
                 {
                     stages.Add(new ModObjectReference(mod, stageDefinition.stageName));
@@ -134,7 +134,7 @@ namespace TUF.Modding
             return stages;
         }
 
-        public StageCollection GetStageCollection(ModObjectReference stageCollection)
+        public async Task<StageCollection> GetStageCollection(ModObjectReference stageCollection)
         {
             stageCollection.modIdentifier = stageCollection.modIdentifier.ToLower();
             if (!mods.ContainsKey(stageCollection.modIdentifier))
@@ -142,7 +142,7 @@ namespace TUF.Modding
                 return null;
             }
 
-            StageCollection c = mods[stageCollection.modIdentifier].GetStageCollection(stageCollection.objectName);
+            StageCollection c = await mods[stageCollection.modIdentifier].GetStageCollection(stageCollection.objectName);
 
             if(c == null)
             {
@@ -152,50 +152,57 @@ namespace TUF.Modding
             return c;
         }
 
-        public List<ModObjectReference> GetStageCollections()
+        public async Task<List<ModObjectReference>> GetStageCollections()
         {
             List<ModObjectReference> stageCollections = new List<ModObjectReference>();
 
             foreach(string m in mods.Keys)
             {
-                List<StageCollection> scs = mods[m].GetStageCollections();
+                List<StageCollection> scs = await mods[m].GetStageCollections();
                 foreach(StageCollection sc in scs)
                 {
-                    stageCollections.Add(new ModObjectReference(m, sc.collectionName));
+                    stageCollections.Add(new ModObjectReference(m, sc.collectionID));
                 }
             }
 
             return stageCollections;
         }
 
-        public async Task<bool> LoadStage(ModObjectReference stage)
+        public async Task<List<string>> LoadStage(ModObjectReference stage)
         {
-            if (mods.TryGetValue(stage.modIdentifier, out ModDefinition mod))
+            List<string> result = new List<string>(1);
+            if (mods.TryGetValue(stage.modIdentifier, out IModDefinition mod))
             {
-                StageDefinition sd = mod.GetStageDefinition(stage.objectName);
+                StageDefinition sd = await mod.GetStageDefinition(stage.objectName);
                 if (sd)
                 {
-                    if (mod.local)
+                    if (mod.LocalMod)
                     {
-                        await SceneManager.LoadSceneAsync(sd.sceneName, LoadSceneMode.Additive);
-                        return true;
+                        result = await mod.LoadStageAsync(sd.stageIdentifier, LoadSceneMode.Additive);
+                        return result;
                     }
                     else
                     {
                         if (modLoader.loadedMods.TryGetValue(stage.modIdentifier, out ModHost modHost))
                         {
-                            if (modHost.Scenes.Exists(sd.sceneName))
+                            for(int i = 0; i < sd.sceneNames.Length; i++)
                             {
-                                await modHost.Scenes.LoadAsync(sd.sceneName, true);
-                                return true;
+                                if (!modHost.Scenes.Exists(sd.sceneNames[i]))
+                                {
+                                    result.Add(null);
+                                    break;
+                                }
+                                await modHost.Scenes.LoadAsync(sd.sceneNames[i], true);
+                                result.Add(sd.sceneNames[i]);
                             }
                         }
                     }
                 }
             }
-            return false;
+            return result;
         }
 
+        #region Sounds
         public SoundDefinition GetSoundDefinition(ModObjectReference sound)
         {
             if (sound == null)
@@ -233,5 +240,6 @@ namespace TUF.Modding
 
             return sounds;
         }
+        #endregion
     }
 }

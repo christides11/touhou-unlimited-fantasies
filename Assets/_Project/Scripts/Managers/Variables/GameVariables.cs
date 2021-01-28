@@ -4,7 +4,7 @@ using UnityEngine;
 
 namespace TUF.Core
 {
-    [CreateAssetMenu(fileName = "GameVars", menuName = "TAPI/Core/Game Variables")]
+    [CreateAssetMenu(fileName = "GameVars", menuName = "TUF/Game Variables")]
     public class GameVariables : ScriptableObject
     {
         public PlayerCamera playerCameraPrefab;

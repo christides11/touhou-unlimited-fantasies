@@ -23,20 +23,22 @@ namespace TUF.Menus
         [SerializeField] private Transform charactersTransform;
         [SerializeField] private CharacterSelectContentItem characterContentItem;
 
-        private void OnEnable()
+        private async void OnEnable()
         {
-            List<ModObjectReference> entityReferences = GameManager.current.ModManager.GetEntities();
+            List<ModObjectReference> entityReferences = await GameManager.current.ModManager.GetEntities();
 
-            foreach(ModObjectReference entityReference in entityReferences)
+            for(int i = 0; i < entityReferences.Count; i++)
             {
-                EntityDefinition entityDefinition = GameManager.current.ModManager.GetEntity(entityReference);
+                ModObjectReference entityReference = entityReferences[i];
+                EntityDefinition entityDefinition = await GameManager.current.ModManager.GetEntity(entityReference);
 
                 if (!entityDefinition.playerSelectable)
                 {
                     continue;
                 }
 
-                GameObject go = Instantiate(characterContentItem.gameObject, charactersTransform, false);
+                CharacterSelectContentItem go = Instantiate(characterContentItem.gameObject, charactersTransform, false).GetComponent<CharacterSelectContentItem>();
+                go.SetName(entityDefinition.entityName);
                 characters.Add(entityDefinition.entityName, go.GetComponent<CharacterSelectContentItem>());
                 go.GetComponent<EventTrigger>().AddOnSubmitListeners((data) => { SelectedCharacter(entityReference); });
             }

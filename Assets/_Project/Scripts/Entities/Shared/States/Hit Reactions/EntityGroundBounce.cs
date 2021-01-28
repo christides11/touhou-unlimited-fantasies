@@ -17,10 +17,10 @@ namespace TUF.Entities.Shared
         public override void OnUpdate()
         {
 
-            PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFrictionXZ);
+            PhysicsManager.ApplyMovementFriction(controller.EntityStats.hitstunFrictionXZ);
 
-            PhysicsManager.HandleGravity(controller.definition.stats.hitstunMaxFallSpeed,
-                controller.definition.stats.hitstunGravity, 1.0f);
+            PhysicsManager.HandleGravity(controller.EntityStats.hitstunMaxFallSpeed,
+                controller.EntityStats.hitstunGravity, 1.0f);
 
             StateManager.IncrementFrame();
 

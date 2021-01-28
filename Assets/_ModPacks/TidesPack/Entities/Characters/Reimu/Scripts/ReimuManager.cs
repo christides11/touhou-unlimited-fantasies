@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TUF.Combat;
 using TUF.Combat.Danmaku;
 using TUF.Core;
+using TUF.Entities.Shared;
 using UnityEngine;
 using CharacterManager = TUF.Entities.Characters.CharacterManager;
 
@@ -10,6 +11,8 @@ namespace TidesPack.Characters.Reimu
 {
     public class ReimuManager : CharacterManager
     {
+
+        public override EntityStats EntityStats { get { return reimuStats; } }
 
         bool shooting;
         int timer;
@@ -21,6 +24,8 @@ namespace TidesPack.Characters.Reimu
         public DanmakuConfig baseConfig;
         public HitInfo bulletHitInfo;
         public int bulletPowerCost = 2;
+
+        public ReimuStats reimuStats;
 
         public override void SimUpdate()
         {

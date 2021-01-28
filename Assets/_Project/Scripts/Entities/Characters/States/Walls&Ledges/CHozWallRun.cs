@@ -32,11 +32,11 @@ namespace TUF.Entities.Characters.States
 
             PhysicsManager.forceMovement = 
                 ((controller.visual.transform.forward
-                * ((CharacterStats)controller.definition.stats).wallRunHorizontalSpeed
+                * ((CharacterStats)controller.EntityStats).wallRunHorizontalSpeed
                 * ((CharacterManager)controller).wallRunHozMultiplier))
                 + 
                 (controller.visual.transform.right * ((CharacterManager)controller).wallSide
-                * ((CharacterStats)controller.definition.stats).wallRunHorizontalSpeed
+                * ((CharacterStats)controller.EntityStats).wallRunHorizontalSpeed
                 * ((CharacterManager)controller).wallRunHozMultiplier);
 
             StateManager.IncrementFrame();
@@ -78,7 +78,7 @@ namespace TUF.Entities.Characters.States
                 return true;
             }
 
-            if (StateManager.CurrentStateFrame > ((CharacterStats)controller.definition.stats).wallRunTime
+            if (StateManager.CurrentStateFrame > ((CharacterStats)controller.EntityStats).wallRunTime
                 || PhysicsManager.DetectWall(out int v, true).collider == null)
             {
                 StateManager.ChangeState((int)EntityStates.FALL);
@@ -91,7 +91,7 @@ namespace TUF.Entities.Characters.States
         {
             base.OnInterrupted();
             ((CharacterManager)controller).wallRunHozMultiplier 
-                += ((CharacterStats)controller.definition.stats).wallRunHorizontalChainMulti;
+                += ((CharacterStats)controller.EntityStats).wallRunHorizontalChainMulti;
         }
     }
 }

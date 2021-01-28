@@ -18,6 +18,7 @@ namespace TUF.Entities
     /// </summary>
     public class EntityManager : CAF.Entities.EntityManager
     {
+        public virtual EntityStats EntityStats { get; }
         public GameManager GameManager { get; protected set; }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
         public GameObject LockonTarget { get; protected set; } = null;
@@ -295,7 +296,7 @@ namespace TUF.Entities
         {
             if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
-                if (currentAirJump < definition.stats.maxAirJumps)
+                if (currentAirJump < EntityStats.maxAirJumps)
                 {
                     return true;
                 }

@@ -18,7 +18,7 @@ namespace TUF.Entities.Shared
             if (mVector.magnitude >= InputConstants.movementMagnitude)
             {
                 PhysicsManager.forceMovement = mVector;
-                PhysicsManager.forceMovement *= controller.definition.stats.jumpHorizontalMomentum;
+                PhysicsManager.forceMovement *= controller.EntityStats.jumpHorizontalMomentum;
             }
 
             // Transfer moving platform forces into actual force.
@@ -34,13 +34,13 @@ namespace TUF.Entities.Shared
             }
 
             // Add jump force.
-            PhysicsManager.forceGravity.y += controller.fullHop ? controller.definition.stats.fullHopVelocity
-                : controller.definition.stats.shortHopJumpVelocity;
+            PhysicsManager.forceGravity.y += controller.fullHop ? controller.EntityStats.fullHopVelocity
+                : controller.EntityStats.shortHopJumpVelocity;
         }
 
         public override void OnUpdate()
         {
-            EntityStats es = controller.definition.stats;
+            EntityStats es = controller.EntityStats;
             PhysicsManager.ApplyMovement(es.airAcceleration, es.maxAirSpeed, es.airDeceleration);
             PhysicsManager.HandleGravity();
             controller.RotateVisual(controller.GetMovementVector(0), es.airRotationSpeed);
