@@ -1,5 +1,17 @@
-[![Documentation](https://github.com/christides11/touhou-unlimited-fantasies/workflows/Documentation/badge.svg)](https://christides11.github.io/touhou-unlimited-fantasies/)     
-**Unlimited Fantasies** is a hack-and-slash Touhou fangame with a focus on modability. 
+<p align="center">
+    <a href="https://christides11.github.io/touhou-unlimited-fantasies/">
+        <img src="https://github.com/christides11/touhou-unlimited-fantasies/workflows/Documentation/badge.svg">
+    </a>
+</p>
+
+**Unlimited Fantasies** is a hack-and-slash [Touhou Project](https://en.touhouwiki.net/wiki/Touhou_Project) fangame with inspiration from DMC.
+
+The game has a big focus on moddability, with support for new characters, stages, gamemodes, and more.
+
+## Download   
+Currently the game is hosted on itch.io in restricted mode until the core content is done. Currently only windows is available, but once it's stable there will be both Mac and Linux support.    
+You can find the current build [here](https://en.touhouwiki.net/wiki/Touhou_Project) (password is 9).
+
 
 ## Modding Guide
 To learn how to install and create mods, along with a reference of the available functions to you, I have created a guide [here](https://christides11.github.io/touhou-unlimited-fantasies/modGuide/index.html).
@@ -18,4 +30,3 @@ If you want to edit the project itself, there's a few paid third party assets be
 Unlimited Fantasies is under a [MIT license](https://github.com/christides11/touhou-unlimited-fantasies/blob/master/LICENSE), check the link for more information.
 
 The Touhou Project is owned by Team Shanghai Alice, it's copyright is listed [here](https://en.touhouwiki.net/wiki/Touhou_Wiki:Copyrights).
-
