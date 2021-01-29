@@ -5,13 +5,12 @@ using UnityEngine;
 
 namespace TUF.Entities.Shared
 {
-    [CreateAssetMenu(fileName = "EntityDefinition", menuName = "Entities/Definition")]
+    [CreateAssetMenu(fileName = "EntityDefinition", menuName = "TUF/Content/Entities/Definition")]
     public class EntityDefinition : ScriptableObject
     {
         public string entityName;
         public bool playerSelectable = true;
         public GameObject entity;
-        public EntityStats stats;
         public MovesetDefinition moveset;
     }
 }

@@ -23,25 +23,25 @@ namespace TUF.Entities.Shared
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
             translatedMovement.y = 0;
 
-            Vector3 velo = (translatedMovement * controller.definition.stats.walkAcceleration)
-                + (translatedMovement.normalized * controller.definition.stats.walkBaseAccel);
+            Vector3 velo = (translatedMovement * controller.EntityStats.walkAcceleration)
+                + (translatedMovement.normalized * controller.EntityStats.walkBaseAccel);
 
             PhysicsManager.forceMovement += velo;
             //Limit movement velocity.
             if(PhysicsManager.forceMovement.magnitude > 
-                controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude)
+                controller.EntityStats.maxWalkSpeed * translatedMovement.magnitude)
             {
                 PhysicsManager.forceMovement = PhysicsManager.forceMovement.normalized
-                    * controller.definition.stats.maxWalkSpeed * translatedMovement.magnitude;
+                    * controller.EntityStats.maxWalkSpeed * translatedMovement.magnitude;
             }
 
             if (controller.LockedOn)
             {
-                controller.RotateVisual(controller.LockonForward, controller.definition.stats.walkRotationSpeed);
+                controller.RotateVisual(controller.LockonForward, controller.EntityStats.walkRotationSpeed);
             }
             else
             {
-                controller.RotateVisual(translatedMovement, controller.definition.stats.walkRotationSpeed);
+                controller.RotateVisual(translatedMovement, controller.EntityStats.walkRotationSpeed);
             }
         }
 

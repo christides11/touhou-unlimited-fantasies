@@ -43,25 +43,25 @@ namespace TUF.Entities
 
         public virtual void HandleGravity()
         {
-            HandleGravity(Controller.definition.stats.maxFallSpeed, 
-                Controller.definition.stats.gravity, GravityScale);
+            HandleGravity(Controller.EntityStats.maxFallSpeed, 
+                Controller.EntityStats.gravity, GravityScale);
         }
 
         public virtual void HandleGravity(float gravity)
         {
-            HandleGravity(Controller.definition.stats.maxFallSpeed, gravity, GravityScale);
+            HandleGravity(Controller.EntityStats.maxFallSpeed, gravity, GravityScale);
         }
 
         public virtual void HandleGravity(float gravity, float gravityScale)
         {
-            HandleGravity(Controller.definition.stats.maxFallSpeed, gravity, gravityScale);
+            HandleGravity(Controller.EntityStats.maxFallSpeed, gravity, gravityScale);
         }
 
         public override void ApplyMovementFriction(float friction = -1)
         {
             if (friction == -1)
             {
-                friction = Controller.definition.stats.groundFriction;
+                friction = Controller.EntityStats.groundFriction;
             }
             Vector3 realFriction = forceMovement.normalized * friction;
             forceMovement.x = ApplyFriction(forceMovement.x, Mathf.Abs(realFriction.x));

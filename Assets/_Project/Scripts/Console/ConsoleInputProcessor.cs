@@ -50,6 +50,14 @@ namespace TUF.Console
                 {
                     consoleWindow.WriteLine("<color=green>Pong!</color>");
                 }
+                if(inputs[i].command == "+uv")
+                {
+                    consoleWindow.WriteLine($"Unity Version {Application.unityVersion}");
+                }
+                if(inputs[i].command == "+v")
+                {
+                    consoleWindow.WriteLine($"Game Version {Application.version}");
+                }
             }
 
             foreach(ConsoleCommand cc in preCommands)

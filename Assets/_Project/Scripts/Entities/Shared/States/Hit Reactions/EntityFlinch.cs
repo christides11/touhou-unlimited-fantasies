@@ -14,7 +14,7 @@ namespace TUF.Entities.Shared
                 return;
             }
 
-            PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFrictionXZ);
+            PhysicsManager.ApplyMovementFriction(controller.EntityStats.hitstunFrictionXZ);
         }
 
         public override bool CheckInterrupt()

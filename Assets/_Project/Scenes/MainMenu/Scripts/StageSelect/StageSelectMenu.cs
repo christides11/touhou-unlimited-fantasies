@@ -20,15 +20,15 @@ namespace TUF.Menus
 
         private List<ModObjectReference> stageReferences;
 
-        private void OnEnable()
+        private async void OnEnable()
         {
-            stageReferences = GameManager.current.ModManager.GetStageDefinitions();
+            stageReferences = await GameManager.current.ModManager.GetStageDefinitions();
 
             currentPage = 0;
             DisplayPage();
         }
 
-        private void DisplayPage()
+        private async void DisplayPage()
         {
             while (currentPage != 0 && stageReferences.Count < (stagesPerPage * currentPage))
             {
@@ -48,7 +48,7 @@ namespace TUF.Menus
 
                 ModObjectReference stageReference = stageReferences[i];
 
-                StageDefinition stageDefinition = GameManager.current.ModManager.GetStageDefinition(stageReferences[i]);
+                StageDefinition stageDefinition = await GameManager.current.ModManager.GetStageDefinition(stageReferences[i]);
                 if (!stageDefinition.selectableForGamemodes)
                 {
                     continue;

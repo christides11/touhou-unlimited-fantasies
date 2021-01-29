@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 060f85dbc763b244fb0a9051a2d3e63e, type: 3}
+  m_Name: TidesPack_LocalModDefinition
+  m_EditorClassIdentifier: 
+  description: 
+  entityRefs:
+  - m_AssetGUID: db56f4faf80d8ab4c9a20f7577243ebc
+    m_SubObjectName: 
+    m_SubObjectType: 
+  - m_AssetGUID: db56f4faf80d8ab4c9a20f7577243ebc
+    m_SubObjectName: 
+    m_SubObjectType: 
+  gameModeRefs: []
+  stageCollectionRefs:
+  - m_AssetGUID: 0e9d7da6e2f869c478c7a0d58c1f5155
+    m_SubObjectName: 
+    m_SubObjectType: 
+  stageRefs:
+  - m_AssetGUID: 64a095191f55b8e488eb5e11c24a76a7
+    m_SubObjectName: 
+    m_SubObjectType: 
+  sounds: []
+  songs: []
+  uis: []
+  uiOverrides: []

@@ -16,8 +16,8 @@ namespace TUF.Entities.Shared
         {
             base.Initialize();
             counter = 0;
-            PhysicsManager.forceGravity.y *= controller.definition.stats.wallClingInitFrictionY;
-            PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingInitFrictionXZ);
+            PhysicsManager.forceGravity.y *= controller.EntityStats.wallClingInitFrictionY;
+            PhysicsManager.ApplyMovementFriction(controller.EntityStats.wallClingInitFrictionXZ);
             controller.transform.position = PhysicsManager.wallRayHit.point 
                 + (PhysicsManager.wallRayHit.normal * 0.51f) + new Vector3(0, -1, 0);
         }
@@ -26,8 +26,8 @@ namespace TUF.Entities.Shared
         {
             if (!CheckInterrupt())
             {
-                PhysicsManager.ApplyMovementFriction(controller.definition.stats.wallClingFrictionXZ);
-                EntityStats es = controller.definition.stats;
+                PhysicsManager.ApplyMovementFriction(controller.EntityStats.wallClingFrictionXZ);
+                EntityStats es = controller.EntityStats;
                 PhysicsManager.HandleGravity(es.wallClingMaxFallSpeed, es.wallClingGravity, PhysicsManager.GravityScale);
             }
         }

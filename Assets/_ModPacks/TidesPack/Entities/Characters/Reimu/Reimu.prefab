@@ -150,6 +150,37 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!1 &910575788816827818
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6241399137374394810}
+  m_Layer: 9
+  m_Name: YinYang
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6241399137374394810
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 910575788816827818}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 1, z: -1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 8319367055087534762}
+  m_Father: {fileID: 1414496598879703979}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &5709059747582969660
 GameObject:
   m_ObjectHideFlags: 0
@@ -421,6 +452,7 @@ Transform:
   - {fileID: 3184808130856364879}
   - {fileID: 99679745}
   - {fileID: 1371209637227646669}
+  - {fileID: 6241399137374394810}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -514,21 +546,23 @@ MonoBehaviour:
   entityAnimator: {fileID: -1274951725818220127}
   healthManager: {fileID: 7358034080499074808}
   definition: {fileID: 11400000, guid: db56f4faf80d8ab4c9a20f7577243ebc, type: 2}
+  danmakuManager: {fileID: -7403326302637099132}
   cc: {fileID: 6168304025253122080}
   visualTransform: {fileID: 524244244}
   pushbox: {fileID: 13461346698822138}
   coll: {fileID: 8764617790503674124}
   GroundedLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   attackLayerMask:
     serializedVersion: 2
     m_Bits: 1073741824
   groundCheckOffset: {x: 0, y: -0.02, z: 0}
   currentAirJump: 0
   fullHop: 1
+  power: 0
   softLockonRadius: 10
-  lockonRadius: 40
+  lockonRadius: 30
   lockonFudging: 0.1
   lockonLayerMask:
     serializedVersion: 2
@@ -539,12 +573,14 @@ MonoBehaviour:
   enemyStepLayerMask:
     serializedVersion: 2
     m_Bits: 2147483648
-  enemyStepCheckRadius: 2
+  enemyStepCheckRadius: 1
+  lastWall: {fileID: 0}
+  wallDetectRadius: 1.2
+  wallDetectDist: 1
   wasRunning: 0
   hoverMode: 0
   currentAirDash: 0
   sideWallDistance: 0.7
-  lastWall: {fileID: 0}
   wallSide: 0
   wallRunHozMultiplier: 1
   wallRunVertical: -0.95
@@ -553,6 +589,153 @@ MonoBehaviour:
   ledgeSphereRadius: 0
   ledgeDistance: 0.75
   lastLedgePosition: {x: 0, y: 0, z: 0}
+  YinYangTransform: {fileID: 6241399137374394810}
+  bulletCooldown: 5
+  dd: {fileID: 11400000, guid: 4cf4622e3627d8c468b27a9d861132cf, type: 2}
+  baseConfig:
+    startPoint: {fileID: 0}
+    position: {x: 0, y: 0, z: 0}
+    rotation: {x: 0, y: 0, z: 0}
+    speed:
+      x:
+        _min: 0
+        _max: 0
+      y:
+        _min: 0
+        _max: 0
+      z:
+        _min: 0.75
+        _max: 0.75
+    angularSpeed:
+      x:
+        _min: 0
+        _max: 0
+      y:
+        _min: 0
+        _max: 0
+      z:
+        _min: 0
+        _max: 0
+  bulletHitInfo:
+    airOnly: 0
+    groundOnly: 0
+    hitKills: 1
+    continuousHit: 0
+    spaceBetweenHits: 0
+    opponentResetXForce: 1
+    opponentResetYForce: 1
+    attackerHitstop: 0
+    hitstop: 4
+    hitstun: 5
+    forceType: 0
+    forceRelation: 2
+    breakArmor: 0
+    unblockable: 0
+    knockdown: 0
+    groundBounces: 0
+    groundBounceForce: 0
+    wallBounces: 0
+    wallBounceForce: 0
+    damageOnHit: 0
+    damageOnBlock: 0
+    causesTumble: 0
+    opponentForceMagnitude: 1
+    opponentForceDir: {x: 0, y: 1, z: 0}
+    forceIncludeYForce: 0
+    opponentMaxMagnitude: 1
+    opponentMinMagnitude: 1
+    throwConfirm: {fileID: 0}
+    attackerPowerGain: 0
+    attackerPowerGainOnHit: 0
+  bulletPowerCost: 2
+  reimuStats:
+    height: 2
+    groundFriction: 1.2
+    maxWalkSpeed: 8
+    walkBaseAccel: 1
+    walkAcceleration: 1
+    walkRotationSpeed: 0.35
+    maxRunSpeed: 20
+    runAcceleration: 2.5
+    runRotationSpeed: 0.97
+    dashSpeed: 20
+    dashTime: 20
+    jumpsquat: 6
+    fullHopVelocity: 16
+    shortHopJumpVelocity: 13
+    jumpHorizontalMomentum: 0
+    maxAirJumps: 1
+    airJumpVelocity: 14
+    airJumpModi: 0
+    airJumpCarriedMomentum: 0.2
+    airJumpHorizontalVelo: 12
+    crouchJumpVelocity: 14.5
+    crouchJumpAcceleration: 0.5
+    crouchJumpDeceleration: 0.8
+    crouchJumpMaxAirSeed: 18
+    airRotationSpeed: 0.25
+    airFriction: 0.8
+    airAcceleration: 2
+    airDeceleration: 0.8
+    maxAirSpeed: 12
+    gravity: 0.7
+    maxFallSpeed: 19
+    wallClingInitFrictionY: 0.7
+    wallClingInitFrictionXZ: 100
+    wallClingFrictionXZ: 4
+    wallClingGravity: 0.2
+    wallClingMaxFallSpeed: 4
+    wallJumpTime: 20
+    wallJumpYVelo: 17.6
+    wallJumpHVelo: 20
+    wallJumpMinAngle: 0.2
+    floatFriction: 0.9
+    maxFloatSpeed: 10
+    floatVerticalSpeed: 11
+    floatBaseAccel: 1
+    floatAcceleration: 2
+    floatRotationSpeed: 0.35
+    floatLockOnRotationSpeed: 0
+    hitstunGravity: 0.7
+    hitstunMaxFallSpeed: 15
+    hitstunFrictionXZ: 0.35
+    inertiaFriction: 0
+    weight: 1
+    maxAirDashes: 1
+    airDashVelo: 30
+    airDashHoldVelo: 10
+    airDashLength: 15
+    airDashFriction: 4
+    airDashGravityFriction: 0.2
+    airDashGravityInitMulti: 0
+    floatDodgeVelo: 40
+    floatDodgeHoldVelo: 10
+    floatDodgeLength: 15
+    floatDodgeFriction: 9.5
+    floatDashMaxSpeed: 20
+    floatDashBaseAccel: 4
+    floatDashAcceleration: 3
+    wallRunTime: 120
+    wallRunVerticalSpeed: 16
+    wallRunHorizontalSpeed: 16
+    wallRunHorizontalChainMulti: 0.5
+    wallRunHorizontalChainMaxMulti: 4
+    slideInitialSpeed: 25
+    slideHoldFrames: 15
+    slideSlopeBaseSpeed: 10
+    slideSpeedPerAngle: 0.75
+    slideForceTransitionTime: 2
+    crouchHeight: 1
+    ledgeJumpMaxSpeed: 30
+    ledgeJumpYForce: 11
+    ledgeJumpMoveForce: 10
+    ledgeJumpAccel: 0.5
+    teleportNoTargetForwardDist: 5
+    teleportNoTargetUpDist: 5
+    teleportTargetForwardDist: 1
+    teleportTargetUpDist: 2
+    teleportUpwardForce: 4
+    teleportForwardForce: 2
 --- !u!114 &268217326523756411
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,6 +852,85 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   sequences: []
+--- !u!1 &7807869954875506664
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8319367055087534762}
+  - component: {fileID: 1114680884290058659}
+  - component: {fileID: 1369503191449608957}
+  m_Layer: 9
+  m_Name: Sphere
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8319367055087534762
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807869954875506664}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
+  m_Children: []
+  m_Father: {fileID: 6241399137374394810}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1114680884290058659
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807869954875506664}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1369503191449608957
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7807869954875506664}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
 --- !u!1 &8781265322137494762
 GameObject:
   m_ObjectHideFlags: 0

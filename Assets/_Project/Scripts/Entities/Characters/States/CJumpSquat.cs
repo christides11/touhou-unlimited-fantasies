@@ -10,7 +10,7 @@ namespace TUF.Entities.Characters.States
     {
         public override bool CheckInterrupt()
         {
-            if (controller.StateManager.CurrentStateFrame >= controller.definition.stats.jumpsquat)
+            if (controller.StateManager.CurrentStateFrame >= controller.EntityStats.jumpsquat)
             {
                 controller.StateManager.ChangeState((int)EntityStates.JUMP);
                 return true;

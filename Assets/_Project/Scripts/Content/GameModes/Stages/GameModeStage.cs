@@ -22,7 +22,7 @@ namespace TUF.GameMode
             base.StartGameMode(character, currentStage, stageCollection);
 
             playerCharacters.Add(simObjectManager.SpawnObject(character.entity, spawnPointManager.GetSpawnPoint().position, Quaternion.identity));
-            playerCamera.UpdateTarget(playerCharacters[0].transform);
+            playerCamera.SetLookAtTarget(playerCharacters[0].transform);
             playerCharacters[0].GetComponent<EntityManager>().Init(gameManager, playerCamera, CAF.Input.InputControlType.Direct);
         }
     }

@@ -12,6 +12,7 @@ namespace TUF.Combat.Events
     public class EntitySetAttackEvent : AttackEvent
     {
         public bool dmy;
+        public bool resetFrameCounter = true;
 
         public override string GetName()
         {
@@ -21,7 +22,7 @@ namespace TUF.Combat.Events
         public override bool Evaluate(uint frame, uint endFrame, CAF.Entities.EntityManager controller, AttackEventVariables variables)
         {
             controller.CombatManager.SetAttack((MovesetAttackNode)variables.objectVars[0]);
-            controller.StateManager.ChangeState((int)EntityStates.ATTACK);
+            controller.StateManager.ChangeState((int)EntityStates.ATTACK, resetFrameCounter ? 0 : controller.StateManager.CurrentStateFrame);
             return true;
         }
 
@@ -34,6 +35,8 @@ namespace TUF.Combat.Events
                 eventDefinition.variables.objectVars = new List<Object>();
                 eventDefinition.variables.objectVars.Add(null);
             }
+
+            resetFrameCounter = EditorGUILayout.Toggle("Reset Frame Counter", resetFrameCounter);
 
             eventDefinition.variables.objectVars[0] = EditorGUILayout.ObjectField("Attack", 
                 eventDefinition.variables.objectVars[0], typeof(MovesetAttackNode), false);

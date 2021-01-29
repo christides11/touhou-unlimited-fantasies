@@ -15,7 +15,7 @@ MonoBehaviour:
   attackName: Reimu Ground AA
   description: 
   stateOverride: -1
-  length: 45
+  length: 30
   animationGround: {fileID: 0}
   animationAir: {fileID: 0}
   wrapMode: 0
@@ -33,7 +33,8 @@ MonoBehaviour:
   - id: 2
   - id: 3
   - id: 4
-  dashCancelableFrames: []
+  dashCancelableFrames:
+  - {x: 18, y: 100}
   floatCancelFrames: []
   bulletCancelFrames: []
   specialCancelFrames: []
@@ -90,6 +91,8 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: 0
+        chargeLevelMax: 0
         inputCheckProcessed: 0
     00000002:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
@@ -116,6 +119,8 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: 0
+        chargeLevelMax: 0
         inputCheckProcessed: 0
     00000003:
       type: {class: AttackEventDefinition, ns: TUF.Combat, asm: TUF_CSharp}
@@ -159,6 +164,8 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: 0
+        chargeLevelMax: 0
         inputCheckProcessed: 0
     00000004:
       type: {class: AttackEventDefinition, ns: CAF.Combat, asm: CAF}
@@ -187,6 +194,8 @@ MonoBehaviour:
           executeInputs: []
           sequenceWindow: 8
           sequenceInputs: []
+        chargeLevelMin: 0
+        chargeLevelMax: 0
         inputCheckProcessed: 0
     00000005:
       type: {class: BoxDefinition, ns: CAF.Combat, asm: CAF}
@@ -222,13 +231,14 @@ MonoBehaviour:
         damageOnHit: 5
         damageOnBlock: 5
         causesTumble: 0
-        opponentForceMagnitude: 30
+        opponentForceMagnitude: 20
         opponentForceDir: {x: 0, y: 0, z: 1}
         forceIncludeYForce: 0
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1
         throwConfirm: {fileID: 0}
-        dmy: 0
+        attackerPowerGain: 0
+        attackerPowerGainOnHit: 5
     00000007:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:

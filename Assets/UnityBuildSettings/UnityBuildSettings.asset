@@ -17,10 +17,10 @@ MonoBehaviour:
     buildPath: $YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION
     openFolderPostBuild: 1
   _productParameters:
-    buildCounter: 0
-    lastGeneratedVersion: 2020.12.12.2
+    buildCounter: 2
+    lastGeneratedVersion: 2021.01.27.2
     version: $YEAR.$MONTH.$DAY.$BUILD
-    autoGenerate: 1
+    autoGenerate: 0
   _releaseTypeList:
     releaseTypes:
     - typeName: Nightly
@@ -36,7 +36,6 @@ MonoBehaviour:
         - fileGUID: 534d961075226b543b23613574121ba6
         - fileGUID: e9affd4b1ab461c42a3ca54c88810eab
         - fileGUID: 3f09599c48299ca448a158e34b0af784
-        - fileGUID: 34eeeb4fdc2c48243b153e5cb2787099
         - fileGUID: c5e566bd95e76c34bb9a75a963ce367b
   _platformList:
     platforms:
@@ -89,31 +88,7 @@ MonoBehaviour:
     buildActions:
     - {fileID: 5306991047793594157}
     - {fileID: 7787600329505294563}
-    - {fileID: 100828190524961538}
     - {fileID: 3412557289686134479}
---- !u!114 &100828190524961538
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 86e19aa5315bf4a409c07e84ca8c4248, type: 3}
-  m_Name: FileOperation
-  m_EditorClassIdentifier: 
-  actionType: 1
-  actionName: FileOperation
-  note: 
-  actionEnabled: 1
-  filter:
-    condition: 0
-    clauses: []
-  inputPath: Assets\info.txt
-  outputPath: bin/$YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION/Modding/info.txt
-  recursiveSearch: 1
-  operation: 1
 --- !u!114 &3412557289686134479
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -181,6 +156,6 @@ MonoBehaviour:
   filter:
     condition: 0
     clauses: []
-  packageFolderPath: Assets\Modding\Initializer
+  packageFolderPath: Assets\ModTools\Initializer
   outputPath: bin/$YEAR-$MONTH-$DAY/$BUILD/$RELEASE_TYPE/$PLATFORM/$ARCHITECTURE/$DISTRIBUTION/Modding
   packageName: InitializerTool

@@ -203,6 +203,8 @@ GameObject:
   - component: {fileID: 7491508832732184261}
   - component: {fileID: 836382071}
   - component: {fileID: 1901789706}
+  - component: {fileID: 7187871433067040018}
+  - component: {fileID: 8107776287061199686}
   m_Layer: 9
   m_Name: Blue Fairy
   m_TagString: Untagged
@@ -317,19 +319,21 @@ MonoBehaviour:
   entityAnimator: {fileID: 0}
   healthManager: {fileID: 1901789706}
   definition: {fileID: 11400000, guid: e02f20a75d6272a4c9b17249f23ea147, type: 2}
+  danmakuManager: {fileID: 7187871433067040018}
   cc: {fileID: 3573686667881084505}
   visualTransform: {fileID: 6646065074406279054}
   pushbox: {fileID: 5275329956619050909}
   coll: {fileID: 7374919223876827515}
   GroundedLayerMask:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
   attackLayerMask:
     serializedVersion: 2
     m_Bits: 512
   groundCheckOffset: {x: 0, y: 0, z: 0}
   currentAirJump: 0
   fullHop: 1
+  power: 0
   softLockonRadius: 0
   lockonRadius: 0
   lockonFudging: 0.1
@@ -343,6 +347,62 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   enemyStepCheckRadius: 0
+  lastWall: {fileID: 0}
+  wallDetectRadius: 1.2
+  wallDetectDist: 1
+  fairyStats:
+    height: 2
+    groundFriction: 1.2
+    maxWalkSpeed: 8
+    walkBaseAccel: 1
+    walkAcceleration: 1
+    walkRotationSpeed: 0.35
+    maxRunSpeed: 20
+    runAcceleration: 2.5
+    runRotationSpeed: 0.97
+    dashSpeed: 20
+    dashTime: 20
+    jumpsquat: 6
+    fullHopVelocity: 16
+    shortHopJumpVelocity: 13
+    jumpHorizontalMomentum: 0
+    maxAirJumps: 1
+    airJumpVelocity: 14
+    airJumpModi: 0
+    airJumpCarriedMomentum: 0.2
+    airJumpHorizontalVelo: 12
+    crouchJumpVelocity: 14.5
+    crouchJumpAcceleration: 0.5
+    crouchJumpDeceleration: 0.8
+    crouchJumpMaxAirSeed: 18
+    airRotationSpeed: 0.25
+    airFriction: 0.8
+    airAcceleration: 2
+    airDeceleration: 0.8
+    maxAirSpeed: 12
+    gravity: 0.7
+    maxFallSpeed: 19
+    wallClingInitFrictionY: 0.7
+    wallClingInitFrictionXZ: 100
+    wallClingFrictionXZ: 4
+    wallClingGravity: 0.2
+    wallClingMaxFallSpeed: 4
+    wallJumpTime: 20
+    wallJumpYVelo: 17.6
+    wallJumpHVelo: 20
+    wallJumpMinAngle: 0.2
+    floatFriction: 0.9
+    maxFloatSpeed: 10
+    floatVerticalSpeed: 11
+    floatBaseAccel: 1
+    floatAcceleration: 2
+    floatRotationSpeed: 0.35
+    floatLockOnRotationSpeed: 0
+    hitstunGravity: 0.7
+    hitstunMaxFallSpeed: 15
+    hitstunFrictionXZ: 0.35
+    inertiaFriction: 0
+    weight: 1
 --- !u!114 &2650020900968100954
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -434,6 +494,32 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 200
+--- !u!114 &7187871433067040018
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646065074715150306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e993f333736b6b489d4387b9f617457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sequences: []
+--- !u!114 &8107776287061199686
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6646065074715150306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9cbdb6482c06cef488ad586be8fbc551, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  simObject: {fileID: 5460020612224601745}
 --- !u!1 &6646065076231640373
 GameObject:
   m_ObjectHideFlags: 0

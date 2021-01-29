@@ -7,6 +7,13 @@ using System;
 
 namespace TUF.Core
 {
+    public enum ConsoleMessageType
+    {
+        Debug = 0,
+        Error = 1,
+        Warning = 2,
+        Print = 3
+    }
     public class ConsoleWindow : MonoBehaviour
     {
         public Camera consoleWindowCamera;
@@ -14,6 +21,7 @@ namespace TUF.Core
         [SerializeField] private GameObject container;
         [SerializeField] private TextMeshProUGUI consoleText;
         [SerializeField] private TMP_InputField inputField;
+        [SerializeField] private List<Color> messageColors = new List<Color>(4);
 
         private void Update()
         {
@@ -25,6 +33,7 @@ namespace TUF.Core
             {
                 string input = inputField.text;
                 inputField.text = "";
+                WriteLine($"> {input}", ConsoleMessageType.Print);
                 _ = consoleReader.Convert(input.Split(' '));
             }
         }
@@ -34,9 +43,9 @@ namespace TUF.Core
             consoleText.text += text;
         }
 
-        public void WriteLine(string text)
+        public void WriteLine(string text, ConsoleMessageType msgType = ConsoleMessageType.Debug)
         {
-            Write(text);
+            Write($"<#{ColorUtility.ToHtmlStringRGBA(messageColors[(int)msgType])}>" + text + "</color>");
             Write("\n");
         }
     }

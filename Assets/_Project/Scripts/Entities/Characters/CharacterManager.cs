@@ -20,8 +20,6 @@ namespace TUF.Entities.Characters
 
         [Header("Wall Movement")]
         public float sideWallDistance;
-        public GameObject lastWall;
-        public RaycastHit lastWallHit;
         public int wallSide;
         public float wallRunHozMultiplier = 1.0f;
 
@@ -46,6 +44,7 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new CFall(), (int)EntityStates.FALL);
             StateManager.AddState(new CAirDash(), (int)EntityStates.AIR_DASH);
             StateManager.AddState(new CEnemyStep(), (int)EntityStates.ENEMY_STEP);
+            StateManager.AddState(new CCrouchJump(), (int)BaseCharacterStates.CROUCH_JUMP);
 
             // Float
             StateManager.AddState(new CFloat(), (int)EntityStates.FLOAT);
@@ -62,6 +61,7 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new EntityFlinch(), (int)EntityStates.FLINCH);
             StateManager.AddState(new EntityFlinchAir(), (int)EntityStates.FLINCH_AIR);
             StateManager.AddState(new EntityTumble(), (int)EntityStates.TUMBLE);
+            StateManager.AddState(new EntityWallBounce(), (int)EntityStates.WALL_BOUNCE);
 
             // Other
             StateManager.AddState(new CSlide(), (int)BaseCharacterStates.SLIDE);
@@ -76,7 +76,7 @@ namespace TUF.Entities.Characters
         {
             if (InputManager.GetButton((int)EntityInputs.Dash, 0, true).firstPress)
             {
-                if (currentAirDash < ((CharacterStats)definition.stats).maxAirDashes)
+                if (currentAirDash < ((CharacterStats)EntityStats).maxAirDashes)
                 {
                     return true;
                 }
@@ -93,7 +93,7 @@ namespace TUF.Entities.Characters
             }
             else
             {
-                if (currentAirDash < ((CharacterStats)definition.stats).maxAirDashes) {
+                if (currentAirDash < ((CharacterStats)EntityStats).maxAirDashes) {
                     StateManager.ChangeState((int)EntityStates.AIR_DASH);
                     return true;
                 }

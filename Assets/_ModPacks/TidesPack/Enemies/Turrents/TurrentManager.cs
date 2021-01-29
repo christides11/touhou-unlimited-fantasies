@@ -3,6 +3,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using TUF;
+using TUF.Combat;
 using TUF.Combat.Danmaku;
 using TUF.Entities;
 using UnityEngine;
@@ -22,6 +23,9 @@ namespace TidesPack
         
         public int countdown;
         private int timer = 100;
+
+        public EntityTeams team;
+        public HitInfo hitInfo;
 
         public override void SimStart()
         {
@@ -49,7 +53,7 @@ namespace TidesPack
                 {
                     danmakuConfig.position = transform.position;
                     danmakuConfig.rotation = transform.eulerAngles;
-                    danmakuManager.Fire(danmaku, danmakuConfig);
+                    danmakuManager.Fire(danmaku, danmakuConfig, team, hitInfo);
                     timer = countdown;
                 }
             }

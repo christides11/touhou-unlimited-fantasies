@@ -19,11 +19,11 @@ namespace TUF.Entities.Shared
                 return;
             }
 
-            PhysicsManager.ApplyMovementFriction(controller.definition.stats.hitstunFrictionXZ);
+            PhysicsManager.ApplyMovementFriction(controller.EntityStats.hitstunFrictionXZ);
             if (StateManager.CurrentStateFrame > 9)
             {
-                PhysicsManager.HandleGravity(controller.definition.stats.hitstunMaxFallSpeed,
-                    controller.definition.stats.hitstunGravity, 1.0f);
+                PhysicsManager.HandleGravity(controller.EntityStats.hitstunMaxFallSpeed,
+                    controller.EntityStats.hitstunGravity, 1.0f);
             }
 
             StateManager.IncrementFrame();

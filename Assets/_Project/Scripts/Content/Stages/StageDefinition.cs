@@ -2,12 +2,12 @@
 
 namespace TUF.Core
 {
-    [CreateAssetMenu(fileName = "StageDefiniton", menuName = "TUF/StageDefinition")]
+    [CreateAssetMenu(fileName = "StageDefiniton", menuName = "TUF/Content/Stages/StageDefinition")]
     public class StageDefinition : ScriptableObject
     {
         public string stageIdentifier;
         public string stageName;
-        public string sceneName;
+        public string[] sceneNames;
         public bool selectableForGamemodes;
     }
 }

@@ -5,9 +5,10 @@ using TUF.Modding;
 
 namespace TUF.Core
 {
-    [CreateAssetMenu(fileName = "StageCollection", menuName = "TAPI/StageCollection")]
+    [CreateAssetMenu(fileName = "StageCollection", menuName = "TUF/Content/Stages/StageCollection")]
     public class StageCollection : ScriptableObject
     {
+        public string collectionID;
         public string collectionName;
         public List<GamemodeStageDefinition> stages = new List<GamemodeStageDefinition>();
     }

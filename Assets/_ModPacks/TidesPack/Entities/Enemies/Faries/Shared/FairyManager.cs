@@ -8,6 +8,9 @@ namespace TidesPack.Enemies.Fairies
 {
     public class FairyManager : EntityManager
     {
+        public override EntityStats EntityStats { get { return fairyStats; } }
+
+        public FairyStats fairyStats;
 
         protected override void SetupDefaultStates()
         {
@@ -19,6 +22,7 @@ namespace TidesPack.Enemies.Fairies
             StateManager.AddState(new EntityFlinchAir(), (int)EntityStates.FLINCH_AIR);
             StateManager.AddState(new EntityTumble(), (int)EntityStates.TUMBLE);
             StateManager.AddState(new EntityGroundBounce(), (int)EntityStates.GROUND_BOUNCE);
+            StateManager.AddState(new EntityWallBounce(), (int)EntityStates.WALL_BOUNCE);
 
             // Start State Machine
             StateManager.ChangeState((int)EntityStates.IDLE);

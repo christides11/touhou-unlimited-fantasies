@@ -31,14 +31,15 @@ namespace TUF.Menus.MainMenu
             }
         }
 
-        private void OnEnable()
+        private async void OnEnable()
         {
             GameManager gm = GameManager.current;
 
-            List<ModObjectReference> stageCollections = gm.ModManager.GetStageCollections();
-            foreach (ModObjectReference sc in stageCollections)
+            List<ModObjectReference> stageCollections = await gm.ModManager.GetStageCollections();
+            for(int i = 0; i < stageCollections.Count; i++)
             {
-                StageCollection collection = gm.ModManager.GetStageCollection(sc);
+                ModObjectReference sc = stageCollections[i];
+                StageCollection collection = await gm.ModManager.GetStageCollection(sc);
                 StageCollectionItem item = Instantiate(stageCollectionItem.gameObject, contentHolder.transform, false)
                     .GetComponent<StageCollectionItem>();
                 item.collectionName.text = collection.collectionName;
@@ -68,9 +69,9 @@ namespace TUF.Menus.MainMenu
             collectionStartButton.GetComponent<EventTrigger>().RemoveAllListeners();
         }
 
-        public void OnStageSelected(GamemodeStageDefinition stage)
+        public async void OnStageSelected(GamemodeStageDefinition stage)
         {
-            StageDefinition stageDefinition = GameManager.current.ModManager.GetStageDefinition(stage.stage);
+            StageDefinition stageDefinition = await GameManager.current.ModManager.GetStageDefinition(stage.stage);
 
             if(stageDefinition == null)
             {

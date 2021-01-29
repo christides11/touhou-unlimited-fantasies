@@ -3,6 +3,7 @@ using UnityEngine;
 
 namespace TidesPack.Characters.Reimu
 {
+    [System.Serializable]
     public class ReimuStats : CharacterStats
     {
         [Header("Teleport")]

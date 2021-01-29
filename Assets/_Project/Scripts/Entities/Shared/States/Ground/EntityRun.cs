@@ -19,17 +19,17 @@ namespace TUF.Entities.Shared
             {
                 Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
                 Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
-                translatedMovement *= controller.definition.stats.runAcceleration;
+                translatedMovement *= controller.EntityStats.runAcceleration;
 
                 PhysicsManager.forceMovement += translatedMovement;
                 //Limit movement velocity.
-                if (PhysicsManager.forceMovement.magnitude > controller.definition.stats.maxRunSpeed * movement.magnitude)
+                if (PhysicsManager.forceMovement.magnitude > controller.EntityStats.maxRunSpeed * movement.magnitude)
                 {
                     PhysicsManager.forceMovement = PhysicsManager.forceMovement.normalized
-                        * controller.definition.stats.maxRunSpeed * movement.magnitude;
+                        * controller.EntityStats.maxRunSpeed * movement.magnitude;
                 }
 
-                controller.RotateVisual(translatedMovement, controller.definition.stats.runRotationSpeed);
+                controller.RotateVisual(translatedMovement, controller.EntityStats.runRotationSpeed);
             }
         }
 

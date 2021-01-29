@@ -9,6 +9,7 @@ using System;
 using CAF.Input;
 using CAF.Combat;
 using CAF.Camera;
+using TUF.Combat.Danmaku;
 
 namespace TUF.Entities
 {
@@ -17,6 +18,7 @@ namespace TUF.Entities
     /// </summary>
     public class EntityManager : CAF.Entities.EntityManager
     {
+        public virtual EntityStats EntityStats { get; }
         public GameManager GameManager { get; protected set; }
         public EntityAnimator EntityAnimator { get { return entityAnimator; } }
         public GameObject LockonTarget { get; protected set; } = null;
@@ -31,6 +33,7 @@ namespace TUF.Entities
         [SerializeField] protected EntityAnimator entityAnimator;
         public HealthManager healthManager;
         public EntityDefinition definition;
+        public DanmakuManager danmakuManager;
         public EntityCharacterController cc;
         public Transform visualTransform;
         public TriggerDetector pushbox;
@@ -43,6 +46,7 @@ namespace TUF.Entities
         public Vector3 groundCheckOffset;
         public int currentAirJump = 0;
         public bool fullHop = true;
+        public int power = 0;
 
         [Header("Lock On")]
         public float softLockonRadius;
@@ -56,6 +60,12 @@ namespace TUF.Entities
         public float enemyStepCheckRadius;
 
         private Vector3 size;
+
+        [Header("Wall Detection")]
+        public GameObject lastWall;
+        public RaycastHit lastWallHit;
+        public float wallDetectRadius = 1.2f;
+        public float wallDetectDist = 1;
 
         /// <summary>
         /// Initializes the entity with the references needed.
@@ -73,10 +83,21 @@ namespace TUF.Entities
         {
             base.Awake();
             GameManager = TUF.Core.GameManager.current;
-            KinematicCharacterSystem.Settings.AutoSimulation = false;
             size = coll.bounds.size;
             SetupDefaultStates();
             //pushbox.TriggerStay += PhysicsManager.HandlePushForce;
+        }
+
+        protected override void Start()
+        {
+            base.Start();
+            KinematicCharacterSystem.Settings.AutoSimulation = false;
+        }
+
+        public override void SimUpdate()
+        {
+            base.SimUpdate();
+            danmakuManager.Tick();
         }
 
         protected virtual void SetupDefaultStates()
@@ -101,6 +122,10 @@ namespace TUF.Entities
             InputRecordButton lockonButton = InputManager.GetButton((int)EntityInputs.Lockon);
 
             LockedOn = false;
+            if (lockonButton.released)
+            {
+                lookHandler.SetLockOnTarget(null);
+            }
             if (!lockonButton.isDown)
             {
                 return;
@@ -112,7 +137,7 @@ namespace TUF.Entities
                 PickLockonTarget();
                 // No target but holding down lock on menas you lock the visuals rotation.
                 LockonForward = visual.transform.forward;
-                lookHandler.SetTarget(LockonTarget?.GetComponent<EntityManager>());
+                lookHandler.SetLockOnTarget(LockonTarget?.GetComponent<EntityManager>());
             }
 
             // No target.
@@ -125,7 +150,7 @@ namespace TUF.Entities
             if(Vector3.Distance(transform.position, LockonTarget.transform.position) > lockonRadius)
             {
                 LockonTarget = null;
-                lookHandler.SetTarget(null);
+                lookHandler.SetLockOnTarget(null);
                 return;
             }
 
@@ -196,6 +221,7 @@ namespace TUF.Entities
                 {
                     continue;
                 }
+
                 // Only objects with ILockonable can be locked on to.
                 if (c.TryGetComponent(out ITargetable targetLockonComponent))
                 {
@@ -206,10 +232,11 @@ namespace TUF.Entities
                     }
                     Vector3 targetDistance = targetLockonComponent.GetGameObject().GetComponent<EntityManager>().GetCenter() - GetCenter();
                     // If we can't see the target, it can not be locked on to.
-                    if(Physics.Raycast(GetCenter(), targetDistance.normalized, lockonRadius, visibilityLayerMask))
+                    if(Physics.Raycast(GetCenter(), targetDistance.normalized, out RaycastHit h, targetDistance.magnitude, visibilityLayerMask))
                     {
                         continue;
                     }
+
                     targetDistance.y = 0;
                     float currAngle = Vector3.Dot(referenceDirection, targetDistance.normalized);
                     bool withinFudging = Mathf.Abs(currAngle - closestAngle) <= lockonFudging;
@@ -269,7 +296,7 @@ namespace TUF.Entities
         {
             if (InputManager.GetButton((int)EntityInputs.Jump).firstPress)
             {
-                if (currentAirJump < definition.stats.maxAirJumps)
+                if (currentAirJump < EntityStats.maxAirJumps)
                 {
                     return true;
                 }
@@ -354,20 +381,42 @@ namespace TUF.Entities
 
         public virtual bool TryAttack()
         {
-            Combat.MovesetAttackNode man = (Combat.MovesetAttackNode)CombatManager.TryAttack();
-            if (man != null)
+            Combat.MovesetAttackNode man;
+
+            man = (Combat.MovesetAttackNode)((EntityCombatManager)entityCombatManager).TrySpecial();
+            if(man == null)
             {
-                CombatManager.SetAttack(man);
-                StateManager.ChangeState((int)EntityStates.ATTACK);
-                return true;
+                man = (Combat.MovesetAttackNode)CombatManager.TryAttack();
+                if (man == null)
+                {
+                    return false;
+                }
             }
-            return false;
+
+            CombatManager.SetAttack(man);
+            StateManager.ChangeState((int)EntityStates.ATTACK);
+            return true;
         }
 
         public virtual void ResetAirActions()
         {
             ((TUF.Entities.EntityPhysicsManager)PhysicsManager).GravityScale = 1.0f;
             currentAirJump = 0;
+        }
+
+        public bool FindWall()
+        {
+            RaycastHit h;
+            if(Physics.SphereCast(GetCenter(), wallDetectRadius, transform.forward, out h, wallDetectDist, GroundedLayerMask)
+                || Physics.SphereCast(GetCenter(), wallDetectRadius, -transform.forward, out h, wallDetectDist, GroundedLayerMask)
+                || Physics.SphereCast(GetCenter(), wallDetectRadius, transform.right, out h, wallDetectDist, GroundedLayerMask)
+                || Physics.SphereCast(GetCenter(), wallDetectRadius, -transform.right, out h, wallDetectDist, GroundedLayerMask))
+            {
+                lastWall = h.collider.gameObject;
+                lastWallHit = h;
+                return true;
+            }
+            return false;
         }
     }
 }

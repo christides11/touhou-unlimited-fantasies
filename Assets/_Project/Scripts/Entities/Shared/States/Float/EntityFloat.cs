@@ -26,11 +26,11 @@ namespace TUF.Entities.Shared
             }
 
             PhysicsManager.forceGravity.y = controller.InputManager.GetAxis((int)EntityInputs.Float)
-                * controller.definition.stats.floatVerticalSpeed;
+                * controller.EntityStats.floatVerticalSpeed;
 
             if(controller.InputManager.GetAxis2D((int)EntityInputs.Movement).magnitude <= InputConstants.movementMagnitude)
             {
-                PhysicsManager.ApplyMovementFriction(controller.definition.stats.floatFriction);
+                PhysicsManager.ApplyMovementFriction(controller.EntityStats.floatFriction);
             }
             else
             {
@@ -39,7 +39,7 @@ namespace TUF.Entities.Shared
 
             if (controller.LockedOn)
             {
-                controller.RotateVisual(controller.LockonForward, controller.definition.stats.floatLockOnRotationSpeed);
+                controller.RotateVisual(controller.LockonForward, controller.EntityStats.floatLockOnRotationSpeed);
             }
         }
 
@@ -48,25 +48,25 @@ namespace TUF.Entities.Shared
             Vector2 movement = controller.InputManager.GetAxis2D((int)EntityInputs.Movement);
             Vector3 translatedMovement = controller.GetMovementVector(movement.x, movement.y);
 
-            Vector3 velo = (translatedMovement * controller.definition.stats.floatAcceleration)
-                + (translatedMovement.normalized * controller.definition.stats.floatBaseAccel);
+            Vector3 velo = (translatedMovement * controller.EntityStats.floatAcceleration)
+                + (translatedMovement.normalized * controller.EntityStats.floatBaseAccel);
 
             PhysicsManager.forceMovement += velo;
             //Limit movement velocity.
             if (PhysicsManager.forceMovement.magnitude > 
-                controller.definition.stats.maxFloatSpeed * translatedMovement.magnitude)
+                controller.EntityStats.maxFloatSpeed * translatedMovement.magnitude)
             {
                 PhysicsManager.forceMovement = PhysicsManager.forceMovement.normalized
-                    * controller.definition.stats.maxFloatSpeed * translatedMovement.magnitude;
+                    * controller.EntityStats.maxFloatSpeed * translatedMovement.magnitude;
             }
 
             if (controller.LockedOn)
             {
-                controller.RotateVisual(controller.LockonForward, controller.definition.stats.floatRotationSpeed);
+                controller.RotateVisual(controller.LockonForward, controller.EntityStats.floatRotationSpeed);
             }
             else
             {
-                controller.RotateVisual(PhysicsManager.forceMovement, controller.definition.stats.floatRotationSpeed);
+                controller.RotateVisual(PhysicsManager.forceMovement, controller.EntityStats.floatRotationSpeed);
             }
         }
 

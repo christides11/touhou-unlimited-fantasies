@@ -19,18 +19,9 @@ namespace TUF.Core
         }
 
         [SerializeField] private bool hasSpawned;
-        [SerializeField] private TriggerDetector triggerDetector;
         [SerializeField] private List<EntitySpawnInfo> entitySpawns = new List<EntitySpawnInfo>();
 
-        private void Awake()
-        {
-            if (triggerDetector)
-            {
-                triggerDetector.TriggerEnter += SpawnEntities;
-            }
-        }
-
-        private void SpawnEntities(Collider other)
+        public virtual async void Spawn()
         {
             if (hasSpawned)
             {
@@ -40,7 +31,7 @@ namespace TUF.Core
             GameManager gameManager = GameManager.current;
             for(int i = 0; i < entitySpawns.Count; i++)
             {
-                EntityDefinition entityDefinition = gameManager.ModManager.GetEntity(entitySpawns[i].entity.reference);
+                EntityDefinition entityDefinition = await gameManager.ModManager.GetEntity(entitySpawns[i].entity.reference);
                 if(entityDefinition == null)
                 {
                     continue;

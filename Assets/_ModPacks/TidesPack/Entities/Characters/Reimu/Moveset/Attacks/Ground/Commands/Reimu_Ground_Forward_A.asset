@@ -204,7 +204,8 @@ MonoBehaviour:
         variables:
           intVars: 00000000
           floatVars: []
-          objectVars: []
+          objectVars:
+          - {fileID: -6402609675369098503, guid: 9c4e6e8754079954185772f99b9a9473, type: 2}
           curveVars: []
         inputCheckTiming: 0
         inputCheckStartFrame: 1
@@ -234,8 +235,8 @@ MonoBehaviour:
         spaceBetweenHits: 0
         opponentResetXForce: 1
         opponentResetYForce: 1
-        attackerHitstop: 6
-        hitstop: 6
+        attackerHitstop: 10
+        hitstop: 10
         hitstun: 60
         forceType: 0
         forceRelation: 0
@@ -249,13 +250,14 @@ MonoBehaviour:
         damageOnHit: 5
         damageOnBlock: 5
         causesTumble: 0
-        opponentForceMagnitude: 15
-        opponentForceDir: {x: 0, y: 0.5, z: 1}
+        opponentForceMagnitude: 30
+        opponentForceDir: {x: 0, y: 0, z: 1}
         forceIncludeYForce: 0
         opponentMaxMagnitude: 1
         opponentMinMagnitude: 1
         throwConfirm: {fileID: 0}
-        dmy: 0
+        attackerPowerGain: 0
+        attackerPowerGainOnHit: 0
     00000008:
       type: {class: ClampMovementEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
@@ -277,6 +279,7 @@ MonoBehaviour:
         xzForce: 1
         yForce: 0
     0000000C:
-      type: {class: EntityChangeStateEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
+      type: {class: EntitySetAttackEvent, ns: TUF.Combat.Events, asm: TUF_CSharp}
       data:
         dmy: 0
+        resetFrameCounter: 1

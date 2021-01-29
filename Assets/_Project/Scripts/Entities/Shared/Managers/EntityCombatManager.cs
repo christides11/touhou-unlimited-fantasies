@@ -52,6 +52,19 @@ namespace TUF.Entities
             return false;
         }
 
+        public override CAF.Combat.MovesetAttackNode TryAttack()
+        {
+            if (CurrentMoveset == null)
+            {
+                return null;
+            }
+            if (CurrentAttack == null)
+            {
+                return CheckStartingNodes();
+            }
+            return CheckCurrentAttackCancelWindows();
+        }
+
         public virtual MovesetAttackNode TrySpecial()
         {
             switch (manager.IsGrounded)

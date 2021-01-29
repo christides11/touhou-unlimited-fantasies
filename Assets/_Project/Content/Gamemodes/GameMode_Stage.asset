@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 96b9f217424906c4f91262b85db978b0, type: 3}
   m_Name: GameMode_Stage
   m_EditorClassIdentifier: 
-  gameModeName: stage
-  gameModeDescription: 
+  gameModeID: stage
+  gameModeName: Stage
+  gameModeDescription: The standard gamemode for stages. Players have to activate
+    the end condition, which can be anything.
   gameModeHandler: {fileID: 4315833933845352629, guid: fa86360382e4e914ea6995cb274603e6,
     type: 3}
   selectable: 0

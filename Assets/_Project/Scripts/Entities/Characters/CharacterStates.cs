@@ -10,6 +10,7 @@
         WALL_RUN_VERTICAL = 25,
         SLIDE = 26,
         LEDGE_HANG = 28,
-        LEDGE_JUMP = 29
+        LEDGE_JUMP = 29,
+        CROUCH_JUMP = 30
     }
 }

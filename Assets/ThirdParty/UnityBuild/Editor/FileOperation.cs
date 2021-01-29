@@ -24,6 +24,11 @@ public class FileOperation : BuildAction, IPreBuildAction, IPreBuildPerPlatformA
 
     public override void Execute()
     {
+        if (Directory.Exists(Path.GetDirectoryName(outputPath)) == false)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(outputPath));
+        }
+
         switch (operation)
         {
             case Operation.Copy:
@@ -44,6 +49,11 @@ public class FileOperation : BuildAction, IPreBuildAction, IPreBuildPerPlatformA
     {
         string resolvedInputPath = BuildProject.ResolvePath(inputPath.Replace("$BUILDPATH", buildPath), releaseType, platform, architecture, distribution, buildTime);
         string resolvedOutputPath = BuildProject.ResolvePath(outputPath.Replace("$BUILDPATH", buildPath), releaseType, platform, architecture, distribution, buildTime);
+
+        if (Directory.Exists(Path.GetDirectoryName(resolvedOutputPath)) == false)
+        {
+            Directory.CreateDirectory(Path.GetDirectoryName(resolvedOutputPath));
+        }
 
         switch (operation)
         {
@@ -137,6 +147,11 @@ public class FileOperation : BuildAction, IPreBuildAction, IPreBuildPerPlatformA
         {
             string inputDirectory = Path.GetDirectoryName(inputPath);
             string outputDirectory = Path.GetDirectoryName(outputPath);
+                
+            if (Directory.Exists(outputDirectory) == false)
+            {
+                Directory.CreateDirectory(outputDirectory);
+            }
 
             SearchOption option = recursiveSearch ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly;
             string[] fileList = Directory.GetFiles(inputDirectory, Path.GetFileName(inputPath), option);
@@ -145,7 +160,7 @@ public class FileOperation : BuildAction, IPreBuildAction, IPreBuildPerPlatformA
             {
                 string fileName = Path.GetFileName(fileList[i]);
                 string outputFile = Path.Combine(outputDirectory, fileName);
-
+                
                 if (File.Exists(outputFile))
                     FileUtil.DeleteFileOrDirectory(outputFile);
 
@@ -155,8 +170,10 @@ public class FileOperation : BuildAction, IPreBuildAction, IPreBuildPerPlatformA
         else
         {
             string p = Path.GetDirectoryName(outputPath);
-            if (!Directory.Exists(p))
+                Debug.Log(p);
+            if (Directory.Exists(p) == false)
             {
+                    Debug.Log("Creating p.");
                 Directory.CreateDirectory(p);
             }
             FileUtil.CopyFileOrDirectory(inputPath, outputPath);

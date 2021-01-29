@@ -20,11 +20,17 @@ namespace TUF.Combat.Danmaku
 
         public string id;
 
+        public HitInfo hitInfo;
+
         public override void Tick(DanmakuManager danmakuManager, DanmakuSequenceInfo info)
         {
             if(info.bulletSets.Count <= info.currentSet)
             {
-                info.bulletSets.Add(info.id + id, new FireableInfo());
+                FireableInfo fi = new FireableInfo();
+                fi.team = info.team;
+                fi.hitInfo = hitInfo;
+                fi.hitboxOwner = danmakuManager.gameObject;
+                info.bulletSets.Add(info.id + id, fi);
             }
 
             DanmakuConfig dc = info.baseConfig;
