@@ -90,29 +90,64 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ModDefinition</span></div>
   </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><a class="xref" href="TUF.Modding.IModDefinition.html">IModDefinition</a></div>
+  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="TUF.Modding.html">TUF.Modding</a></h6>
   <h6><strong>Assembly</strong>: TUF_CSharp.dll</h6>
   <h5 id="TUF_Modding_ModDefinition_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ModDefinition : ScriptableObject</code></pre>
+    <pre><code class="lang-csharp hljs">public class ModDefinition : ScriptableObject, IModDefinition</code></pre>
   </div>
-  <h3 id="fields">Fields
+  <h3 id="properties">Properties
   </h3>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_local.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.local%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_Description.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.Description%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L18">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L21">View Source</a>
   </span>
-  <h4 id="TUF_Modding_ModDefinition_local" data-uid="TUF.Modding.ModDefinition.local">local</h4>
+  <a id="TUF_Modding_ModDefinition_Description_" data-uid="TUF.Modding.ModDefinition.Description*"></a>
+  <h4 id="TUF_Modding_ModDefinition_Description" data-uid="TUF.Modding.ModDefinition.Description">Description</h4>
   <div class="markdown level1 summary"></div>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public bool local</code></pre>
+    <pre><code class="lang-csharp hljs">public string Description { get; }</code></pre>
   </div>
-  <h5 class="fieldValue">Field Value</h5>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_LocalMod.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.LocalMod%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L20">View Source</a>
+  </span>
+  <a id="TUF_Modding_ModDefinition_LocalMod_" data-uid="TUF.Modding.ModDefinition.LocalMod*"></a>
+  <h4 id="TUF_Modding_ModDefinition_LocalMod" data-uid="TUF.Modding.ModDefinition.LocalMod">LocalMod</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public bool LocalMod { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
   <table class="table table-bordered table-striped table-condensed">
     <thead>
       <tr>
@@ -134,7 +169,7 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetEntityDefinition_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetEntityDefinition(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L44">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L49">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetEntityDefinition_" data-uid="TUF.Modding.ModDefinition.GetEntityDefinition*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetEntityDefinition_System_String_" data-uid="TUF.Modding.ModDefinition.GetEntityDefinition(System.String)">GetEntityDefinition(String)</h4>
@@ -143,7 +178,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual EntityDefinition GetEntityDefinition(string entityName)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;EntityDefinition&gt; GetEntityDefinition(string entityName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -172,7 +207,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="TUF.Entities.Shared.EntityDefinition.html">EntityDefinition</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="TUF.Entities.Shared.EntityDefinition.html">EntityDefinition</a>&gt;</td>
         <td><p>The EntityDefinition with the character name given. If it does not exist,
 returns null.</p>
 </td>
@@ -184,7 +219,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetEntityDefinitions.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetEntityDefinitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L33">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L38">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetEntityDefinitions_" data-uid="TUF.Modding.ModDefinition.GetEntityDefinitions*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetEntityDefinitions" data-uid="TUF.Modding.ModDefinition.GetEntityDefinitions">GetEntityDefinitions()</h4>
@@ -193,7 +228,7 @@ returns null.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual List&lt;EntityDefinition&gt; GetEntityDefinitions()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;List&lt;EntityDefinition&gt;&gt; GetEntityDefinitions()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -205,7 +240,7 @@ returns null.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TUF.Entities.Shared.EntityDefinition.html">EntityDefinition</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TUF.Entities.Shared.EntityDefinition.html">EntityDefinition</a>&gt;&gt;</td>
         <td><p>A list of all the characters in the mod.</p>
 </td>
       </tr>
@@ -216,7 +251,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetGamemodeDefinition_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetGamemodeDefinition(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L66">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L71">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetGamemodeDefinition_" data-uid="TUF.Modding.ModDefinition.GetGamemodeDefinition*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetGamemodeDefinition_System_String_" data-uid="TUF.Modding.ModDefinition.GetGamemodeDefinition(System.String)">GetGamemodeDefinition(String)</h4>
@@ -225,7 +260,7 @@ returns null.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual GameModeDefinition GetGamemodeDefinition(string gamemodeName)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;GameModeDefinition&gt; GetGamemodeDefinition(string gamemodeID)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -239,7 +274,7 @@ returns null.</p>
     <tbody>
       <tr>
         <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
-        <td><span class="parametername">gamemodeName</span></td>
+        <td><span class="parametername">gamemodeID</span></td>
         <td></td>
       </tr>
     </tbody>
@@ -254,7 +289,7 @@ returns null.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="TUF.GameMode.GameModeDefinition.html">GameModeDefinition</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="TUF.GameMode.GameModeDefinition.html">GameModeDefinition</a>&gt;</td>
         <td><p>The GameModeDefinition with the gamemode name given. If it does not exist,
 returns null.</p>
 </td>
@@ -266,7 +301,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetGamemodeDefinitions.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetGamemodeDefinitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L55">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L60">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetGamemodeDefinitions_" data-uid="TUF.Modding.ModDefinition.GetGamemodeDefinitions*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetGamemodeDefinitions" data-uid="TUF.Modding.ModDefinition.GetGamemodeDefinitions">GetGamemodeDefinitions()</h4>
@@ -275,7 +310,7 @@ returns null.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual List&lt;GameModeDefinition&gt; GetGamemodeDefinitions()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;List&lt;GameModeDefinition&gt;&gt; GetGamemodeDefinitions()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -287,7 +322,7 @@ returns null.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TUF.GameMode.GameModeDefinition.html">GameModeDefinition</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TUF.GameMode.GameModeDefinition.html">GameModeDefinition</a>&gt;&gt;</td>
         <td><p>A list of all the gamemodes in the mod.</p>
 </td>
       </tr>
@@ -298,7 +333,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetSongDefinition_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetSongDefinition(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L154">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L164">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetSongDefinition_" data-uid="TUF.Modding.ModDefinition.GetSongDefinition*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetSongDefinition_System_String_" data-uid="TUF.Modding.ModDefinition.GetSongDefinition(System.String)">GetSongDefinition(String)</h4>
@@ -349,7 +384,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetSongDefinitions.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetSongDefinitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L143">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L153">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetSongDefinitions_" data-uid="TUF.Modding.ModDefinition.GetSongDefinitions*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetSongDefinitions" data-uid="TUF.Modding.ModDefinition.GetSongDefinitions">GetSongDefinitions()</h4>
@@ -381,7 +416,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetSoundDefinition_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetSoundDefinition(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L132">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L142">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetSoundDefinition_" data-uid="TUF.Modding.ModDefinition.GetSoundDefinition*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetSoundDefinition_System_String_" data-uid="TUF.Modding.ModDefinition.GetSoundDefinition(System.String)">GetSoundDefinition(String)</h4>
@@ -432,7 +467,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetSoundDefinitions.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetSoundDefinitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L121">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L131">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetSoundDefinitions_" data-uid="TUF.Modding.ModDefinition.GetSoundDefinitions*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetSoundDefinitions" data-uid="TUF.Modding.ModDefinition.GetSoundDefinitions">GetSoundDefinitions()</h4>
@@ -464,7 +499,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetStageCollection_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetStageCollection(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L110">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L120">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetStageCollection_" data-uid="TUF.Modding.ModDefinition.GetStageCollection*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetStageCollection_System_String_" data-uid="TUF.Modding.ModDefinition.GetStageCollection(System.String)">GetStageCollection(String)</h4>
@@ -473,7 +508,7 @@ returns null.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual StageCollection GetStageCollection(string stageCollectionName)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;StageCollection&gt; GetStageCollection(string stageCollectionName)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -503,7 +538,7 @@ returns null.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="TUF.Core.StageCollection.html">StageCollection</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="TUF.Core.StageCollection.html">StageCollection</a>&gt;</td>
         <td><p>The StageCollection with the name given. If it does not exist,
 returns null.</p>
 </td>
@@ -515,7 +550,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetStageCollections.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetStageCollections%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L99">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L109">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetStageCollections_" data-uid="TUF.Modding.ModDefinition.GetStageCollections*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetStageCollections" data-uid="TUF.Modding.ModDefinition.GetStageCollections">GetStageCollections()</h4>
@@ -524,7 +559,7 @@ returns null.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual List&lt;StageCollection&gt; GetStageCollections()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;List&lt;StageCollection&gt;&gt; GetStageCollections()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -536,7 +571,7 @@ returns null.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TUF.Core.StageCollection.html">StageCollection</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TUF.Core.StageCollection.html">StageCollection</a>&gt;&gt;</td>
         <td><p>A list of all the stage collections in the mod.</p>
 </td>
       </tr>
@@ -547,7 +582,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetStageDefinition_System_String_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetStageDefinition(System.String)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L88">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L93">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetStageDefinition_" data-uid="TUF.Modding.ModDefinition.GetStageDefinition*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetStageDefinition_System_String_" data-uid="TUF.Modding.ModDefinition.GetStageDefinition(System.String)">GetStageDefinition(String)</h4>
@@ -556,7 +591,7 @@ returns null.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual StageDefinition GetStageDefinition(string stageIdentifier)</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;StageDefinition&gt; GetStageDefinition(string stageIdentifier)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -586,7 +621,7 @@ returns null.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="TUF.Core.StageDefinition.html">StageDefinition</a></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="TUF.Core.StageDefinition.html">StageDefinition</a>&gt;</td>
         <td><p>The SceneDefinition with the scene name given. If it does not exist,
 returns null.</p>
 </td>
@@ -598,7 +633,7 @@ returns null.</p>
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_GetStageDefinitions.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.GetStageDefinitions%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L77">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L82">View Source</a>
   </span>
   <a id="TUF_Modding_ModDefinition_GetStageDefinitions_" data-uid="TUF.Modding.ModDefinition.GetStageDefinitions*"></a>
   <h4 id="TUF_Modding_ModDefinition_GetStageDefinitions" data-uid="TUF.Modding.ModDefinition.GetStageDefinitions">GetStageDefinitions()</h4>
@@ -607,7 +642,7 @@ returns null.</p>
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public virtual List&lt;StageDefinition&gt; GetStageDefinitions()</code></pre>
+    <pre><code class="lang-csharp hljs">public virtual Task&lt;List&lt;StageDefinition&gt;&gt; GetStageDefinitions()</code></pre>
   </div>
   <h5 class="returns">Returns</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -619,12 +654,68 @@ returns null.</p>
     </thead>
     <tbody>
       <tr>
-        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TUF.Core.StageDefinition.html">StageDefinition</a>&gt;</td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.tasks.task-1">Task</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="TUF.Core.StageDefinition.html">StageDefinition</a>&gt;&gt;</td>
         <td><p>A list of all the scenes in the mod.</p>
 </td>
       </tr>
     </tbody>
   </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition_LoadStageAsync_System_String_LoadSceneMode_.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition.LoadStageAsync(System.String%2CLoadSceneMode)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L98">View Source</a>
+  </span>
+  <a id="TUF_Modding_ModDefinition_LoadStageAsync_" data-uid="TUF.Modding.ModDefinition.LoadStageAsync*"></a>
+  <h4 id="TUF_Modding_ModDefinition_LoadStageAsync_System_String_LoadSceneMode_" data-uid="TUF.Modding.ModDefinition.LoadStageAsync(System.String,LoadSceneMode)">LoadStageAsync(String, LoadSceneMode)</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public UniTask&lt;List&lt;string&gt;&gt; LoadStageAsync(string stageID, LoadSceneMode loadMode)</code></pre>
+  </div>
+  <h5 class="parameters">Parameters</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a></td>
+        <td><span class="parametername">stageID</span></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td><span class="xref">LoadSceneMode</span></td>
+        <td><span class="parametername">loadMode</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="returns">Returns</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">UniTask</span>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.collections.generic.list-1">List</a>&lt;<a class="xref" href="https://docs.microsoft.com/dotnet/api/system.string">String</a>&gt;&gt;</td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <a class="xref" href="TUF.Modding.IModDefinition.html">IModDefinition</a>
+  </div>
 </article>
           </div>
           
@@ -636,7 +727,7 @@ returns null.</p>
                     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TUF_Modding_ModDefinition.md&amp;value=---%0Auid%3A%20TUF.Modding.ModDefinition%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L14" class="contribution-link">View Source</a>
+                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_Project/Scripts/Content/ModDefinition.cs/#L17" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

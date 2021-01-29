@@ -31,6 +31,12 @@ references:
   commentId: F:TidesPack.BulletTester.danmakuManager
   fullName: TidesPack.BulletTester.danmakuManager
   nameWithType: BulletTester.danmakuManager
+- uid: TidesPack.BulletTester.hitInfo
+  name: hitInfo
+  href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_hitInfo
+  commentId: F:TidesPack.BulletTester.hitInfo
+  fullName: TidesPack.BulletTester.hitInfo
+  nameWithType: BulletTester.hitInfo
 - uid: TidesPack.BulletTester.sequence
   name: sequence
   href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_sequence
@@ -50,6 +56,12 @@ references:
   isSpec: "True"
   fullName: TidesPack.BulletTester.SimUpdate
   nameWithType: BulletTester.SimUpdate
+- uid: TidesPack.BulletTester.team
+  name: team
+  href: api/TidesPack.BulletTester.html#TidesPack_BulletTester_team
+  commentId: F:TidesPack.BulletTester.team
+  fullName: TidesPack.BulletTester.team
+  nameWithType: BulletTester.team
 - uid: TidesPack.Characters.Reimu
   name: TidesPack.Characters.Reimu
   href: api/TidesPack.Characters.Reimu.html
@@ -62,6 +74,55 @@ references:
   commentId: T:TidesPack.Characters.Reimu.ReimuManager
   fullName: TidesPack.Characters.Reimu.ReimuManager
   nameWithType: ReimuManager
+- uid: TidesPack.Characters.Reimu.ReimuManager.baseConfig
+  name: baseConfig
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_baseConfig
+  commentId: F:TidesPack.Characters.Reimu.ReimuManager.baseConfig
+  fullName: TidesPack.Characters.Reimu.ReimuManager.baseConfig
+  nameWithType: ReimuManager.baseConfig
+- uid: TidesPack.Characters.Reimu.ReimuManager.bulletCooldown
+  name: bulletCooldown
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_bulletCooldown
+  commentId: F:TidesPack.Characters.Reimu.ReimuManager.bulletCooldown
+  fullName: TidesPack.Characters.Reimu.ReimuManager.bulletCooldown
+  nameWithType: ReimuManager.bulletCooldown
+- uid: TidesPack.Characters.Reimu.ReimuManager.bulletHitInfo
+  name: bulletHitInfo
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_bulletHitInfo
+  commentId: F:TidesPack.Characters.Reimu.ReimuManager.bulletHitInfo
+  fullName: TidesPack.Characters.Reimu.ReimuManager.bulletHitInfo
+  nameWithType: ReimuManager.bulletHitInfo
+- uid: TidesPack.Characters.Reimu.ReimuManager.bulletPowerCost
+  name: bulletPowerCost
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_bulletPowerCost
+  commentId: F:TidesPack.Characters.Reimu.ReimuManager.bulletPowerCost
+  fullName: TidesPack.Characters.Reimu.ReimuManager.bulletPowerCost
+  nameWithType: ReimuManager.bulletPowerCost
+- uid: TidesPack.Characters.Reimu.ReimuManager.dd
+  name: dd
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_dd
+  commentId: F:TidesPack.Characters.Reimu.ReimuManager.dd
+  fullName: TidesPack.Characters.Reimu.ReimuManager.dd
+  nameWithType: ReimuManager.dd
+- uid: TidesPack.Characters.Reimu.ReimuManager.EntityStats
+  name: EntityStats
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_EntityStats
+  commentId: P:TidesPack.Characters.Reimu.ReimuManager.EntityStats
+  fullName: TidesPack.Characters.Reimu.ReimuManager.EntityStats
+  nameWithType: ReimuManager.EntityStats
+- uid: TidesPack.Characters.Reimu.ReimuManager.EntityStats*
+  name: EntityStats
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_EntityStats_
+  commentId: Overload:TidesPack.Characters.Reimu.ReimuManager.EntityStats
+  isSpec: "True"
+  fullName: TidesPack.Characters.Reimu.ReimuManager.EntityStats
+  nameWithType: ReimuManager.EntityStats
+- uid: TidesPack.Characters.Reimu.ReimuManager.reimuStats
+  name: reimuStats
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_reimuStats
+  commentId: F:TidesPack.Characters.Reimu.ReimuManager.reimuStats
+  fullName: TidesPack.Characters.Reimu.ReimuManager.reimuStats
+  nameWithType: ReimuManager.reimuStats
 - uid: TidesPack.Characters.Reimu.ReimuManager.SetupDefaultStates
   name: SetupDefaultStates()
   href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_SetupDefaultStates
@@ -88,6 +149,12 @@ references:
   isSpec: "True"
   fullName: TidesPack.Characters.Reimu.ReimuManager.SimUpdate
   nameWithType: ReimuManager.SimUpdate
+- uid: TidesPack.Characters.Reimu.ReimuManager.YinYangTransform
+  name: YinYangTransform
+  href: api/TidesPack.Characters.Reimu.ReimuManager.html#TidesPack_Characters_Reimu_ReimuManager_YinYangTransform
+  commentId: F:TidesPack.Characters.Reimu.ReimuManager.YinYangTransform
+  fullName: TidesPack.Characters.Reimu.ReimuManager.YinYangTransform
+  nameWithType: ReimuManager.YinYangTransform
 - uid: TidesPack.Characters.Reimu.ReimuStates
   name: ReimuStates
   href: api/TidesPack.Characters.Reimu.ReimuStates.html
@@ -193,6 +260,12 @@ references:
   commentId: N:TidesPack.Enemies.Fairies
   fullName: TidesPack.Enemies.Fairies
   nameWithType: TidesPack.Enemies.Fairies
+- uid: TidesPack.Enemies.Fairies.BFairyAIBrain
+  name: BFairyAIBrain
+  href: api/TidesPack.Enemies.Fairies.BFairyAIBrain.html
+  commentId: T:TidesPack.Enemies.Fairies.BFairyAIBrain
+  fullName: TidesPack.Enemies.Fairies.BFairyAIBrain
+  nameWithType: BFairyAIBrain
 - uid: TidesPack.Enemies.Fairies.BFairyManager
   name: BFairyManager
   href: api/TidesPack.Enemies.Fairies.BFairyManager.html
@@ -256,6 +329,25 @@ references:
   commentId: T:TidesPack.Enemies.Fairies.FairyManager
   fullName: TidesPack.Enemies.Fairies.FairyManager
   nameWithType: FairyManager
+- uid: TidesPack.Enemies.Fairies.FairyManager.EntityStats
+  name: EntityStats
+  href: api/TidesPack.Enemies.Fairies.FairyManager.html#TidesPack_Enemies_Fairies_FairyManager_EntityStats
+  commentId: P:TidesPack.Enemies.Fairies.FairyManager.EntityStats
+  fullName: TidesPack.Enemies.Fairies.FairyManager.EntityStats
+  nameWithType: FairyManager.EntityStats
+- uid: TidesPack.Enemies.Fairies.FairyManager.EntityStats*
+  name: EntityStats
+  href: api/TidesPack.Enemies.Fairies.FairyManager.html#TidesPack_Enemies_Fairies_FairyManager_EntityStats_
+  commentId: Overload:TidesPack.Enemies.Fairies.FairyManager.EntityStats
+  isSpec: "True"
+  fullName: TidesPack.Enemies.Fairies.FairyManager.EntityStats
+  nameWithType: FairyManager.EntityStats
+- uid: TidesPack.Enemies.Fairies.FairyManager.fairyStats
+  name: fairyStats
+  href: api/TidesPack.Enemies.Fairies.FairyManager.html#TidesPack_Enemies_Fairies_FairyManager_fairyStats
+  commentId: F:TidesPack.Enemies.Fairies.FairyManager.fairyStats
+  fullName: TidesPack.Enemies.Fairies.FairyManager.fairyStats
+  nameWithType: FairyManager.fairyStats
 - uid: TidesPack.Enemies.Fairies.FairyManager.SetupDefaultStates
   name: SetupDefaultStates()
   href: api/TidesPack.Enemies.Fairies.FairyManager.html#TidesPack_Enemies_Fairies_FairyManager_SetupDefaultStates
@@ -299,6 +391,12 @@ references:
   commentId: F:TidesPack.TurrentManager.danmakuConfig
   fullName: TidesPack.TurrentManager.danmakuConfig
   nameWithType: TurrentManager.danmakuConfig
+- uid: TidesPack.TurrentManager.hitInfo
+  name: hitInfo
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_hitInfo
+  commentId: F:TidesPack.TurrentManager.hitInfo
+  fullName: TidesPack.TurrentManager.hitInfo
+  nameWithType: TurrentManager.hitInfo
 - uid: TidesPack.TurrentManager.SimStart
   name: SimStart()
   href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_SimStart
@@ -331,6 +429,12 @@ references:
   commentId: F:TidesPack.TurrentManager.target
   fullName: TidesPack.TurrentManager.target
   nameWithType: TurrentManager.target
+- uid: TidesPack.TurrentManager.team
+  name: team
+  href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_team
+  commentId: F:TidesPack.TurrentManager.team
+  fullName: TidesPack.TurrentManager.team
+  nameWithType: TurrentManager.team
 - uid: TidesPack.TurrentManager.tem
   name: tem
   href: api/TidesPack.TurrentManager.html#TidesPack_TurrentManager_tem
@@ -653,6 +757,57 @@ references:
   isSpec: "True"
   fullName: TUF.Combat.Danmaku.ApplyModifierAction.Tick
   nameWithType: ApplyModifierAction.Tick
+- uid: TUF.Combat.Danmaku.Bullet
+  name: Bullet
+  href: api/TUF.Combat.Danmaku.Bullet.html
+  commentId: T:TUF.Combat.Danmaku.Bullet
+  fullName: TUF.Combat.Danmaku.Bullet
+  nameWithType: Bullet
+- uid: TUF.Combat.Danmaku.Bullet.boxDefinition
+  name: boxDefinition
+  href: api/TUF.Combat.Danmaku.Bullet.html#TUF_Combat_Danmaku_Bullet_boxDefinition
+  commentId: F:TUF.Combat.Danmaku.Bullet.boxDefinition
+  fullName: TUF.Combat.Danmaku.Bullet.boxDefinition
+  nameWithType: Bullet.boxDefinition
+- uid: TUF.Combat.Danmaku.Bullet.CreateHitbox(GameObject,System.Int32,TUF.Combat.HitInfo)
+  name: CreateHitbox(GameObject, Int32, HitInfo)
+  href: api/TUF.Combat.Danmaku.Bullet.html#TUF_Combat_Danmaku_Bullet_CreateHitbox_GameObject_System_Int32_TUF_Combat_HitInfo_
+  commentId: M:TUF.Combat.Danmaku.Bullet.CreateHitbox(GameObject,System.Int32,TUF.Combat.HitInfo)
+  fullName: TUF.Combat.Danmaku.Bullet.CreateHitbox(GameObject, System.Int32, TUF.Combat.HitInfo)
+  nameWithType: Bullet.CreateHitbox(GameObject, Int32, HitInfo)
+- uid: TUF.Combat.Danmaku.Bullet.CreateHitbox*
+  name: CreateHitbox
+  href: api/TUF.Combat.Danmaku.Bullet.html#TUF_Combat_Danmaku_Bullet_CreateHitbox_
+  commentId: Overload:TUF.Combat.Danmaku.Bullet.CreateHitbox
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Bullet.CreateHitbox
+  nameWithType: Bullet.CreateHitbox
+- uid: TUF.Combat.Danmaku.Bullet.InstantiateHitbox(BoxDefinition)
+  name: InstantiateHitbox(BoxDefinition)
+  href: api/TUF.Combat.Danmaku.Bullet.html#TUF_Combat_Danmaku_Bullet_InstantiateHitbox_BoxDefinition_
+  commentId: M:TUF.Combat.Danmaku.Bullet.InstantiateHitbox(BoxDefinition)
+  fullName: TUF.Combat.Danmaku.Bullet.InstantiateHitbox(BoxDefinition)
+  nameWithType: Bullet.InstantiateHitbox(BoxDefinition)
+- uid: TUF.Combat.Danmaku.Bullet.InstantiateHitbox*
+  name: InstantiateHitbox
+  href: api/TUF.Combat.Danmaku.Bullet.html#TUF_Combat_Danmaku_Bullet_InstantiateHitbox_
+  commentId: Overload:TUF.Combat.Danmaku.Bullet.InstantiateHitbox
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Bullet.InstantiateHitbox
+  nameWithType: Bullet.InstantiateHitbox
+- uid: TUF.Combat.Danmaku.Bullet.Tick
+  name: Tick()
+  href: api/TUF.Combat.Danmaku.Bullet.html#TUF_Combat_Danmaku_Bullet_Tick
+  commentId: M:TUF.Combat.Danmaku.Bullet.Tick
+  fullName: TUF.Combat.Danmaku.Bullet.Tick()
+  nameWithType: Bullet.Tick()
+- uid: TUF.Combat.Danmaku.Bullet.Tick*
+  name: Tick
+  href: api/TUF.Combat.Danmaku.Bullet.html#TUF_Combat_Danmaku_Bullet_Tick_
+  commentId: Overload:TUF.Combat.Danmaku.Bullet.Tick
+  isSpec: "True"
+  fullName: TUF.Combat.Danmaku.Bullet.Tick
+  nameWithType: Bullet.Tick
 - uid: TUF.Combat.Danmaku.BulletSet
   name: BulletSet
   href: api/TUF.Combat.Danmaku.BulletSet.html
@@ -830,12 +985,12 @@ references:
   commentId: T:TUF.Combat.Danmaku.DanmakuManager
   fullName: TUF.Combat.Danmaku.DanmakuManager
   nameWithType: DanmakuManager
-- uid: TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,System.String)
-  name: Fire(DanmakuSequence, DanmakuConfig, String)
-  href: api/TUF.Combat.Danmaku.DanmakuManager.html#TUF_Combat_Danmaku_DanmakuManager_Fire_TUF_Combat_Danmaku_DanmakuSequence_TUF_Combat_Danmaku_DanmakuConfig_System_String_
-  commentId: M:TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,System.String)
-  fullName: TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence, TUF.Combat.Danmaku.DanmakuConfig, System.String)
-  nameWithType: DanmakuManager.Fire(DanmakuSequence, DanmakuConfig, String)
+- uid: TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,TUF.Combat.EntityTeams,TUF.Combat.HitInfo,System.String)
+  name: Fire(DanmakuSequence, DanmakuConfig, EntityTeams, HitInfo, String)
+  href: api/TUF.Combat.Danmaku.DanmakuManager.html#TUF_Combat_Danmaku_DanmakuManager_Fire_TUF_Combat_Danmaku_DanmakuSequence_TUF_Combat_Danmaku_DanmakuConfig_TUF_Combat_EntityTeams_TUF_Combat_HitInfo_System_String_
+  commentId: M:TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,TUF.Combat.EntityTeams,TUF.Combat.HitInfo,System.String)
+  fullName: TUF.Combat.Danmaku.DanmakuManager.Fire(TUF.Combat.Danmaku.DanmakuSequence, TUF.Combat.Danmaku.DanmakuConfig, TUF.Combat.EntityTeams, TUF.Combat.HitInfo, System.String)
+  nameWithType: DanmakuManager.Fire(DanmakuSequence, DanmakuConfig, EntityTeams, HitInfo, String)
 - uid: TUF.Combat.Danmaku.DanmakuManager.Fire*
   name: Fire
   href: api/TUF.Combat.Danmaku.DanmakuManager.html#TUF_Combat_Danmaku_DanmakuManager_Fire_
@@ -931,12 +1086,12 @@ references:
   commentId: T:TUF.Combat.Danmaku.DanmakuSequenceInfo
   fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo
   nameWithType: DanmakuSequenceInfo
-- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,System.String)
-  name: DanmakuSequenceInfo(DanmakuSequence, DanmakuConfig, String)
-  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo__ctor_TUF_Combat_Danmaku_DanmakuSequence_TUF_Combat_Danmaku_DanmakuConfig_System_String_
-  commentId: M:TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,System.String)
-  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.DanmakuSequenceInfo(TUF.Combat.Danmaku.DanmakuSequence, TUF.Combat.Danmaku.DanmakuConfig, System.String)
-  nameWithType: DanmakuSequenceInfo.DanmakuSequenceInfo(DanmakuSequence, DanmakuConfig, String)
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,TUF.Combat.EntityTeams,TUF.Combat.HitInfo,System.String)
+  name: DanmakuSequenceInfo(DanmakuSequence, DanmakuConfig, EntityTeams, HitInfo, String)
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo__ctor_TUF_Combat_Danmaku_DanmakuSequence_TUF_Combat_Danmaku_DanmakuConfig_TUF_Combat_EntityTeams_TUF_Combat_HitInfo_System_String_
+  commentId: M:TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor(TUF.Combat.Danmaku.DanmakuSequence,TUF.Combat.Danmaku.DanmakuConfig,TUF.Combat.EntityTeams,TUF.Combat.HitInfo,System.String)
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.DanmakuSequenceInfo(TUF.Combat.Danmaku.DanmakuSequence, TUF.Combat.Danmaku.DanmakuConfig, TUF.Combat.EntityTeams, TUF.Combat.HitInfo, System.String)
+  nameWithType: DanmakuSequenceInfo.DanmakuSequenceInfo(DanmakuSequence, DanmakuConfig, EntityTeams, HitInfo, String)
 - uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.#ctor*
   name: DanmakuSequenceInfo
   href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo__ctor_
@@ -968,6 +1123,12 @@ references:
   commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.frame
   fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.frame
   nameWithType: DanmakuSequenceInfo.frame
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.hitInfo
+  name: hitInfo
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_hitInfo
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.hitInfo
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.hitInfo
+  nameWithType: DanmakuSequenceInfo.hitInfo
 - uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.id
   name: id
   href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_id
@@ -999,6 +1160,12 @@ references:
   commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.sequence
   fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.sequence
   nameWithType: DanmakuSequenceInfo.sequence
+- uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.team
+  name: team
+  href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_team
+  commentId: F:TUF.Combat.Danmaku.DanmakuSequenceInfo.team
+  fullName: TUF.Combat.Danmaku.DanmakuSequenceInfo.team
+  nameWithType: DanmakuSequenceInfo.team
 - uid: TUF.Combat.Danmaku.DanmakuSequenceInfo.Tick(TUF.Combat.Danmaku.DanmakuManager)
   name: Tick(DanmakuManager)
   href: api/TUF.Combat.Danmaku.DanmakuSequenceInfo.html#TUF_Combat_Danmaku_DanmakuSequenceInfo_Tick_TUF_Combat_Danmaku_DanmakuManager_
@@ -1149,12 +1316,30 @@ references:
   commentId: F:TUF.Combat.Danmaku.FireableInfo.bulletsConfig
   fullName: TUF.Combat.Danmaku.FireableInfo.bulletsConfig
   nameWithType: FireableInfo.bulletsConfig
+- uid: TUF.Combat.Danmaku.FireableInfo.hitboxOwner
+  name: hitboxOwner
+  href: api/TUF.Combat.Danmaku.FireableInfo.html#TUF_Combat_Danmaku_FireableInfo_hitboxOwner
+  commentId: F:TUF.Combat.Danmaku.FireableInfo.hitboxOwner
+  fullName: TUF.Combat.Danmaku.FireableInfo.hitboxOwner
+  nameWithType: FireableInfo.hitboxOwner
+- uid: TUF.Combat.Danmaku.FireableInfo.hitInfo
+  name: hitInfo
+  href: api/TUF.Combat.Danmaku.FireableInfo.html#TUF_Combat_Danmaku_FireableInfo_hitInfo
+  commentId: F:TUF.Combat.Danmaku.FireableInfo.hitInfo
+  fullName: TUF.Combat.Danmaku.FireableInfo.hitInfo
+  nameWithType: FireableInfo.hitInfo
 - uid: TUF.Combat.Danmaku.FireableInfo.modifiers
   name: modifiers
   href: api/TUF.Combat.Danmaku.FireableInfo.html#TUF_Combat_Danmaku_FireableInfo_modifiers
   commentId: F:TUF.Combat.Danmaku.FireableInfo.modifiers
   fullName: TUF.Combat.Danmaku.FireableInfo.modifiers
   nameWithType: FireableInfo.modifiers
+- uid: TUF.Combat.Danmaku.FireableInfo.team
+  name: team
+  href: api/TUF.Combat.Danmaku.FireableInfo.html#TUF_Combat_Danmaku_FireableInfo_team
+  commentId: F:TUF.Combat.Danmaku.FireableInfo.team
+  fullName: TUF.Combat.Danmaku.FireableInfo.team
+  nameWithType: FireableInfo.team
 - uid: TUF.Combat.Danmaku.Fireables
   name: TUF.Combat.Danmaku.Fireables
   href: api/TUF.Combat.Danmaku.Fireables.html
@@ -1318,6 +1503,12 @@ references:
   commentId: F:TUF.Combat.Danmaku.FireAction.fireable
   fullName: TUF.Combat.Danmaku.FireAction.fireable
   nameWithType: FireAction.fireable
+- uid: TUF.Combat.Danmaku.FireAction.hitInfo
+  name: hitInfo
+  href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_hitInfo
+  commentId: F:TUF.Combat.Danmaku.FireAction.hitInfo
+  fullName: TUF.Combat.Danmaku.FireAction.hitInfo
+  nameWithType: FireAction.hitInfo
 - uid: TUF.Combat.Danmaku.FireAction.id
   name: id
   href: api/TUF.Combat.Danmaku.FireAction.html#TUF_Combat_Danmaku_FireAction_id
@@ -2182,6 +2373,12 @@ references:
   isSpec: "True"
   fullName: TUF.Combat.Events.EntitySetAttackEvent.GetName
   nameWithType: EntitySetAttackEvent.GetName
+- uid: TUF.Combat.Events.EntitySetAttackEvent.resetFrameCounter
+  name: resetFrameCounter
+  href: api/TUF.Combat.Events.EntitySetAttackEvent.html#TUF_Combat_Events_EntitySetAttackEvent_resetFrameCounter
+  commentId: F:TUF.Combat.Events.EntitySetAttackEvent.resetFrameCounter
+  fullName: TUF.Combat.Events.EntitySetAttackEvent.resetFrameCounter
+  nameWithType: EntitySetAttackEvent.resetFrameCounter
 - uid: TUF.Combat.Events.PlaySoundEvent
   name: PlaySoundEvent
   href: api/TUF.Combat.Events.PlaySoundEvent.html
@@ -2353,6 +2550,19 @@ references:
   commentId: F:TUF.Combat.Hitbox.rectangleVisual
   fullName: TUF.Combat.Hitbox.rectangleVisual
   nameWithType: Hitbox.rectangleVisual
+- uid: TUF.Combat.Hitbox.ShouldHurt(IHurtable)
+  name: ShouldHurt(IHurtable)
+  href: api/TUF.Combat.Hitbox.html#TUF_Combat_Hitbox_ShouldHurt_IHurtable_
+  commentId: M:TUF.Combat.Hitbox.ShouldHurt(IHurtable)
+  fullName: TUF.Combat.Hitbox.ShouldHurt(IHurtable)
+  nameWithType: Hitbox.ShouldHurt(IHurtable)
+- uid: TUF.Combat.Hitbox.ShouldHurt*
+  name: ShouldHurt
+  href: api/TUF.Combat.Hitbox.html#TUF_Combat_Hitbox_ShouldHurt_
+  commentId: Overload:TUF.Combat.Hitbox.ShouldHurt
+  isSpec: "True"
+  fullName: TUF.Combat.Hitbox.ShouldHurt
+  nameWithType: Hitbox.ShouldHurt
 - uid: TUF.Combat.Hitbox.sphereVisual
   name: sphereVisual
   href: api/TUF.Combat.Hitbox.html#TUF_Combat_Hitbox_sphereVisual
@@ -2365,12 +2575,31 @@ references:
   commentId: T:TUF.Combat.HitInfo
   fullName: TUF.Combat.HitInfo
   nameWithType: HitInfo
-- uid: TUF.Combat.HitInfo.dmy
-  name: dmy
-  href: api/TUF.Combat.HitInfo.html#TUF_Combat_HitInfo_dmy
-  commentId: F:TUF.Combat.HitInfo.dmy
-  fullName: TUF.Combat.HitInfo.dmy
-  nameWithType: HitInfo.dmy
+- uid: TUF.Combat.HitInfo.attackerPowerGain
+  name: attackerPowerGain
+  href: api/TUF.Combat.HitInfo.html#TUF_Combat_HitInfo_attackerPowerGain
+  commentId: F:TUF.Combat.HitInfo.attackerPowerGain
+  fullName: TUF.Combat.HitInfo.attackerPowerGain
+  nameWithType: HitInfo.attackerPowerGain
+- uid: TUF.Combat.HitInfo.attackerPowerGainOnHit
+  name: attackerPowerGainOnHit
+  href: api/TUF.Combat.HitInfo.html#TUF_Combat_HitInfo_attackerPowerGainOnHit
+  commentId: F:TUF.Combat.HitInfo.attackerPowerGainOnHit
+  fullName: TUF.Combat.HitInfo.attackerPowerGainOnHit
+  nameWithType: HitInfo.attackerPowerGainOnHit
+- uid: TUF.Combat.HitInfo.DrawInspectorHitInfo
+  name: DrawInspectorHitInfo()
+  href: api/TUF.Combat.HitInfo.html#TUF_Combat_HitInfo_DrawInspectorHitInfo
+  commentId: M:TUF.Combat.HitInfo.DrawInspectorHitInfo
+  fullName: TUF.Combat.HitInfo.DrawInspectorHitInfo()
+  nameWithType: HitInfo.DrawInspectorHitInfo()
+- uid: TUF.Combat.HitInfo.DrawInspectorHitInfo*
+  name: DrawInspectorHitInfo
+  href: api/TUF.Combat.HitInfo.html#TUF_Combat_HitInfo_DrawInspectorHitInfo_
+  commentId: Overload:TUF.Combat.HitInfo.DrawInspectorHitInfo
+  isSpec: "True"
+  fullName: TUF.Combat.HitInfo.DrawInspectorHitInfo
+  nameWithType: HitInfo.DrawInspectorHitInfo
 - uid: TUF.Combat.Hurtbox
   name: Hurtbox
   href: api/TUF.Combat.Hurtbox.html
@@ -2837,6 +3066,36 @@ references:
   commentId: F:TUF.Core.CombatVariables.tumbleMinimumMagnitude
   fullName: TUF.Core.CombatVariables.tumbleMinimumMagnitude
   nameWithType: CombatVariables.tumbleMinimumMagnitude
+- uid: TUF.Core.ConsoleMessageType
+  name: ConsoleMessageType
+  href: api/TUF.Core.ConsoleMessageType.html
+  commentId: T:TUF.Core.ConsoleMessageType
+  fullName: TUF.Core.ConsoleMessageType
+  nameWithType: ConsoleMessageType
+- uid: TUF.Core.ConsoleMessageType.Debug
+  name: Debug
+  href: api/TUF.Core.ConsoleMessageType.html#TUF_Core_ConsoleMessageType_Debug
+  commentId: F:TUF.Core.ConsoleMessageType.Debug
+  fullName: TUF.Core.ConsoleMessageType.Debug
+  nameWithType: ConsoleMessageType.Debug
+- uid: TUF.Core.ConsoleMessageType.Error
+  name: Error
+  href: api/TUF.Core.ConsoleMessageType.html#TUF_Core_ConsoleMessageType_Error
+  commentId: F:TUF.Core.ConsoleMessageType.Error
+  fullName: TUF.Core.ConsoleMessageType.Error
+  nameWithType: ConsoleMessageType.Error
+- uid: TUF.Core.ConsoleMessageType.Print
+  name: Print
+  href: api/TUF.Core.ConsoleMessageType.html#TUF_Core_ConsoleMessageType_Print
+  commentId: F:TUF.Core.ConsoleMessageType.Print
+  fullName: TUF.Core.ConsoleMessageType.Print
+  nameWithType: ConsoleMessageType.Print
+- uid: TUF.Core.ConsoleMessageType.Warning
+  name: Warning
+  href: api/TUF.Core.ConsoleMessageType.html#TUF_Core_ConsoleMessageType_Warning
+  commentId: F:TUF.Core.ConsoleMessageType.Warning
+  fullName: TUF.Core.ConsoleMessageType.Warning
+  nameWithType: ConsoleMessageType.Warning
 - uid: TUF.Core.ConsoleWindow
   name: ConsoleWindow
   href: api/TUF.Core.ConsoleWindow.html
@@ -2862,12 +3121,12 @@ references:
   isSpec: "True"
   fullName: TUF.Core.ConsoleWindow.Write
   nameWithType: ConsoleWindow.Write
-- uid: TUF.Core.ConsoleWindow.WriteLine(System.String)
-  name: WriteLine(String)
-  href: api/TUF.Core.ConsoleWindow.html#TUF_Core_ConsoleWindow_WriteLine_System_String_
-  commentId: M:TUF.Core.ConsoleWindow.WriteLine(System.String)
-  fullName: TUF.Core.ConsoleWindow.WriteLine(System.String)
-  nameWithType: ConsoleWindow.WriteLine(String)
+- uid: TUF.Core.ConsoleWindow.WriteLine(System.String,TUF.Core.ConsoleMessageType)
+  name: WriteLine(String, ConsoleMessageType)
+  href: api/TUF.Core.ConsoleWindow.html#TUF_Core_ConsoleWindow_WriteLine_System_String_TUF_Core_ConsoleMessageType_
+  commentId: M:TUF.Core.ConsoleWindow.WriteLine(System.String,TUF.Core.ConsoleMessageType)
+  fullName: TUF.Core.ConsoleWindow.WriteLine(System.String, TUF.Core.ConsoleMessageType)
+  nameWithType: ConsoleWindow.WriteLine(String, ConsoleMessageType)
 - uid: TUF.Core.ConsoleWindow.WriteLine*
   name: WriteLine
   href: api/TUF.Core.ConsoleWindow.html#TUF_Core_ConsoleWindow_WriteLine_
@@ -2977,6 +3236,19 @@ references:
   commentId: F:TUF.Core.EntitySpawner.EntitySpawnInfo.team
   fullName: TUF.Core.EntitySpawner.EntitySpawnInfo.team
   nameWithType: EntitySpawner.EntitySpawnInfo.team
+- uid: TUF.Core.EntitySpawner.Spawn
+  name: Spawn()
+  href: api/TUF.Core.EntitySpawner.html#TUF_Core_EntitySpawner_Spawn
+  commentId: M:TUF.Core.EntitySpawner.Spawn
+  fullName: TUF.Core.EntitySpawner.Spawn()
+  nameWithType: EntitySpawner.Spawn()
+- uid: TUF.Core.EntitySpawner.Spawn*
+  name: Spawn
+  href: api/TUF.Core.EntitySpawner.html#TUF_Core_EntitySpawner_Spawn_
+  commentId: Overload:TUF.Core.EntitySpawner.Spawn
+  isSpec: "True"
+  fullName: TUF.Core.EntitySpawner.Spawn
+  nameWithType: EntitySpawner.Spawn
 - uid: TUF.Core.GameManager
   name: GameManager
   href: api/TUF.Core.GameManager.html
@@ -3226,6 +3498,19 @@ references:
   isSpec: "True"
   fullName: TUF.Core.Helpers.ChangeHue
   nameWithType: Helpers.ChangeHue
+- uid: TUF.Core.Helpers.Contains(LayerMask,System.Int32)
+  name: Contains(LayerMask, Int32)
+  href: api/TUF.Core.Helpers.html#TUF_Core_Helpers_Contains_LayerMask_System_Int32_
+  commentId: M:TUF.Core.Helpers.Contains(LayerMask,System.Int32)
+  fullName: TUF.Core.Helpers.Contains(LayerMask, System.Int32)
+  nameWithType: Helpers.Contains(LayerMask, Int32)
+- uid: TUF.Core.Helpers.Contains*
+  name: Contains
+  href: api/TUF.Core.Helpers.html#TUF_Core_Helpers_Contains_
+  commentId: Overload:TUF.Core.Helpers.Contains
+  isSpec: "True"
+  fullName: TUF.Core.Helpers.Contains
+  nameWithType: Helpers.Contains
 - uid: TUF.Core.Helpers.DegreeToVector2(System.Single)
   name: DegreeToVector2(Single)
   href: api/TUF.Core.Helpers.html#TUF_Core_Helpers_DegreeToVector2_System_Single_
@@ -3341,6 +3626,18 @@ references:
   commentId: F:TUF.Core.InputConstants.movementSigma
   fullName: TUF.Core.InputConstants.movementSigma
   nameWithType: InputConstants.movementSigma
+- uid: TUF.Core.LocalStageDefinition
+  name: LocalStageDefinition
+  href: api/TUF.Core.LocalStageDefinition.html
+  commentId: T:TUF.Core.LocalStageDefinition
+  fullName: TUF.Core.LocalStageDefinition
+  nameWithType: LocalStageDefinition
+- uid: TUF.Core.LocalStageDefinition.sceneRefs
+  name: sceneRefs
+  href: api/TUF.Core.LocalStageDefinition.html#TUF_Core_LocalStageDefinition_sceneRefs
+  commentId: F:TUF.Core.LocalStageDefinition.sceneRefs
+  fullName: TUF.Core.LocalStageDefinition.sceneRefs
+  nameWithType: LocalStageDefinition.sceneRefs
 - uid: TUF.Core.MusicManager
   name: MusicManager
   href: api/TUF.Core.MusicManager.html
@@ -3476,25 +3773,6 @@ references:
   isSpec: "True"
   fullName: TUF.Core.PlayerCamera.Cam
   nameWithType: PlayerCamera.Cam
-- uid: TUF.Core.PlayerCamera.current
-  name: current
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_current
-  commentId: F:TUF.Core.PlayerCamera.current
-  fullName: TUF.Core.PlayerCamera.current
-  nameWithType: PlayerCamera.current
-- uid: TUF.Core.PlayerCamera.Forward
-  name: Forward()
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Forward
-  commentId: M:TUF.Core.PlayerCamera.Forward
-  fullName: TUF.Core.PlayerCamera.Forward()
-  nameWithType: PlayerCamera.Forward()
-- uid: TUF.Core.PlayerCamera.Forward*
-  name: Forward
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Forward_
-  commentId: Overload:TUF.Core.PlayerCamera.Forward
-  isSpec: "True"
-  fullName: TUF.Core.PlayerCamera.Forward
-  nameWithType: PlayerCamera.Forward
 - uid: TUF.Core.PlayerCamera.Initialize(TUF.Entities.EntityManager)
   name: Initialize(EntityManager)
   href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Initialize_TUF_Entities_EntityManager_
@@ -3508,19 +3786,6 @@ references:
   isSpec: "True"
   fullName: TUF.Core.PlayerCamera.Initialize
   nameWithType: PlayerCamera.Initialize
-- uid: TUF.Core.PlayerCamera.LockOn(Transform)
-  name: LockOn(Transform)
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_LockOn_Transform_
-  commentId: M:TUF.Core.PlayerCamera.LockOn(Transform)
-  fullName: TUF.Core.PlayerCamera.LockOn(Transform)
-  nameWithType: PlayerCamera.LockOn(Transform)
-- uid: TUF.Core.PlayerCamera.LockOn*
-  name: LockOn
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_LockOn_
-  commentId: Overload:TUF.Core.PlayerCamera.LockOn
-  isSpec: "True"
-  fullName: TUF.Core.PlayerCamera.LockOn
-  nameWithType: PlayerCamera.LockOn
 - uid: TUF.Core.PlayerCamera.LookAt(Vector3)
   name: LookAt(Vector3)
   href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_LookAt_Vector3_
@@ -3560,19 +3825,32 @@ references:
   isSpec: "True"
   fullName: TUF.Core.PlayerCamera.Reset
   nameWithType: PlayerCamera.Reset
-- uid: TUF.Core.PlayerCamera.Right
-  name: Right()
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Right
-  commentId: M:TUF.Core.PlayerCamera.Right
-  fullName: TUF.Core.PlayerCamera.Right()
-  nameWithType: PlayerCamera.Right()
-- uid: TUF.Core.PlayerCamera.Right*
-  name: Right
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Right_
-  commentId: Overload:TUF.Core.PlayerCamera.Right
+- uid: TUF.Core.PlayerCamera.SetLockOnTarget(CAF.Entities.EntityManager)
+  name: SetLockOnTarget(CAF.Entities.EntityManager)
+  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_SetLockOnTarget_CAF_Entities_EntityManager_
+  commentId: M:TUF.Core.PlayerCamera.SetLockOnTarget(CAF.Entities.EntityManager)
+  fullName: TUF.Core.PlayerCamera.SetLockOnTarget(CAF.Entities.EntityManager)
+  nameWithType: PlayerCamera.SetLockOnTarget(CAF.Entities.EntityManager)
+- uid: TUF.Core.PlayerCamera.SetLockOnTarget*
+  name: SetLockOnTarget
+  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_SetLockOnTarget_
+  commentId: Overload:TUF.Core.PlayerCamera.SetLockOnTarget
   isSpec: "True"
-  fullName: TUF.Core.PlayerCamera.Right
-  nameWithType: PlayerCamera.Right
+  fullName: TUF.Core.PlayerCamera.SetLockOnTarget
+  nameWithType: PlayerCamera.SetLockOnTarget
+- uid: TUF.Core.PlayerCamera.SetLookAtTarget(Transform)
+  name: SetLookAtTarget(Transform)
+  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_SetLookAtTarget_Transform_
+  commentId: M:TUF.Core.PlayerCamera.SetLookAtTarget(Transform)
+  fullName: TUF.Core.PlayerCamera.SetLookAtTarget(Transform)
+  nameWithType: PlayerCamera.SetLookAtTarget(Transform)
+- uid: TUF.Core.PlayerCamera.SetLookAtTarget*
+  name: SetLookAtTarget
+  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_SetLookAtTarget_
+  commentId: Overload:TUF.Core.PlayerCamera.SetLookAtTarget
+  isSpec: "True"
+  fullName: TUF.Core.PlayerCamera.SetLookAtTarget
+  nameWithType: PlayerCamera.SetLookAtTarget
 - uid: TUF.Core.PlayerCamera.SetLookDirection(Vector3)
   name: SetLookDirection(Vector3)
   href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_SetLookDirection_Vector3_
@@ -3586,45 +3864,6 @@ references:
   isSpec: "True"
   fullName: TUF.Core.PlayerCamera.SetLookDirection
   nameWithType: PlayerCamera.SetLookDirection
-- uid: TUF.Core.PlayerCamera.SetTarget(CAF.Entities.EntityManager)
-  name: SetTarget(CAF.Entities.EntityManager)
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_SetTarget_CAF_Entities_EntityManager_
-  commentId: M:TUF.Core.PlayerCamera.SetTarget(CAF.Entities.EntityManager)
-  fullName: TUF.Core.PlayerCamera.SetTarget(CAF.Entities.EntityManager)
-  nameWithType: PlayerCamera.SetTarget(CAF.Entities.EntityManager)
-- uid: TUF.Core.PlayerCamera.SetTarget*
-  name: SetTarget
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_SetTarget_
-  commentId: Overload:TUF.Core.PlayerCamera.SetTarget
-  isSpec: "True"
-  fullName: TUF.Core.PlayerCamera.SetTarget
-  nameWithType: PlayerCamera.SetTarget
-- uid: TUF.Core.PlayerCamera.UnlockOn
-  name: UnlockOn()
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_UnlockOn
-  commentId: M:TUF.Core.PlayerCamera.UnlockOn
-  fullName: TUF.Core.PlayerCamera.UnlockOn()
-  nameWithType: PlayerCamera.UnlockOn()
-- uid: TUF.Core.PlayerCamera.UnlockOn*
-  name: UnlockOn
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_UnlockOn_
-  commentId: Overload:TUF.Core.PlayerCamera.UnlockOn
-  isSpec: "True"
-  fullName: TUF.Core.PlayerCamera.UnlockOn
-  nameWithType: PlayerCamera.UnlockOn
-- uid: TUF.Core.PlayerCamera.Up
-  name: Up()
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Up
-  commentId: M:TUF.Core.PlayerCamera.Up
-  fullName: TUF.Core.PlayerCamera.Up()
-  nameWithType: PlayerCamera.Up()
-- uid: TUF.Core.PlayerCamera.Up*
-  name: Up
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Up_
-  commentId: Overload:TUF.Core.PlayerCamera.Up
-  isSpec: "True"
-  fullName: TUF.Core.PlayerCamera.Up
-  nameWithType: PlayerCamera.Up
 - uid: TUF.Core.PlayerCamera.Update
   name: Update()
   href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_Update
@@ -3638,19 +3877,6 @@ references:
   isSpec: "True"
   fullName: TUF.Core.PlayerCamera.Update
   nameWithType: PlayerCamera.Update
-- uid: TUF.Core.PlayerCamera.UpdateTarget(Transform)
-  name: UpdateTarget(Transform)
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_UpdateTarget_Transform_
-  commentId: M:TUF.Core.PlayerCamera.UpdateTarget(Transform)
-  fullName: TUF.Core.PlayerCamera.UpdateTarget(Transform)
-  nameWithType: PlayerCamera.UpdateTarget(Transform)
-- uid: TUF.Core.PlayerCamera.UpdateTarget*
-  name: UpdateTarget
-  href: api/TUF.Core.PlayerCamera.html#TUF_Core_PlayerCamera_UpdateTarget_
-  commentId: Overload:TUF.Core.PlayerCamera.UpdateTarget
-  isSpec: "True"
-  fullName: TUF.Core.PlayerCamera.UpdateTarget
-  nameWithType: PlayerCamera.UpdateTarget
 - uid: TUF.Core.Range3
   name: Range3
   href: api/TUF.Core.Range3.html
@@ -3764,6 +3990,12 @@ references:
   commentId: T:TUF.Core.StageCollection
   fullName: TUF.Core.StageCollection
   nameWithType: StageCollection
+- uid: TUF.Core.StageCollection.collectionID
+  name: collectionID
+  href: api/TUF.Core.StageCollection.html#TUF_Core_StageCollection_collectionID
+  commentId: F:TUF.Core.StageCollection.collectionID
+  fullName: TUF.Core.StageCollection.collectionID
+  nameWithType: StageCollection.collectionID
 - uid: TUF.Core.StageCollection.collectionName
   name: collectionName
   href: api/TUF.Core.StageCollection.html#TUF_Core_StageCollection_collectionName
@@ -3782,12 +4014,12 @@ references:
   commentId: T:TUF.Core.StageDefinition
   fullName: TUF.Core.StageDefinition
   nameWithType: StageDefinition
-- uid: TUF.Core.StageDefinition.sceneName
-  name: sceneName
-  href: api/TUF.Core.StageDefinition.html#TUF_Core_StageDefinition_sceneName
-  commentId: F:TUF.Core.StageDefinition.sceneName
-  fullName: TUF.Core.StageDefinition.sceneName
-  nameWithType: StageDefinition.sceneName
+- uid: TUF.Core.StageDefinition.sceneNames
+  name: sceneNames
+  href: api/TUF.Core.StageDefinition.html#TUF_Core_StageDefinition_sceneNames
+  commentId: F:TUF.Core.StageDefinition.sceneNames
+  fullName: TUF.Core.StageDefinition.sceneNames
+  nameWithType: StageDefinition.sceneNames
 - uid: TUF.Core.StageDefinition.selectableForGamemodes
   name: selectableForGamemodes
   href: api/TUF.Core.StageDefinition.html#TUF_Core_StageDefinition_selectableForGamemodes
@@ -3887,6 +4119,12 @@ references:
   commentId: T:TUF.Entities.Characters.BaseCharacterStates
   fullName: TUF.Entities.Characters.BaseCharacterStates
   nameWithType: BaseCharacterStates
+- uid: TUF.Entities.Characters.BaseCharacterStates.CROUCH_JUMP
+  name: CROUCH_JUMP
+  href: api/TUF.Entities.Characters.BaseCharacterStates.html#TUF_Entities_Characters_BaseCharacterStates_CROUCH_JUMP
+  commentId: F:TUF.Entities.Characters.BaseCharacterStates.CROUCH_JUMP
+  fullName: TUF.Entities.Characters.BaseCharacterStates.CROUCH_JUMP
+  nameWithType: BaseCharacterStates.CROUCH_JUMP
 - uid: TUF.Entities.Characters.BaseCharacterStates.FLOAT_DASH
   name: FLOAT_DASH
   href: api/TUF.Entities.Characters.BaseCharacterStates.html#TUF_Entities_Characters_BaseCharacterStates_FLOAT_DASH
@@ -3984,18 +4222,6 @@ references:
   commentId: F:TUF.Entities.Characters.CharacterManager.lastLedgePosition
   fullName: TUF.Entities.Characters.CharacterManager.lastLedgePosition
   nameWithType: CharacterManager.lastLedgePosition
-- uid: TUF.Entities.Characters.CharacterManager.lastWall
-  name: lastWall
-  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_lastWall
-  commentId: F:TUF.Entities.Characters.CharacterManager.lastWall
-  fullName: TUF.Entities.Characters.CharacterManager.lastWall
-  nameWithType: CharacterManager.lastWall
-- uid: TUF.Entities.Characters.CharacterManager.lastWallHit
-  name: lastWallHit
-  href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_lastWallHit
-  commentId: F:TUF.Entities.Characters.CharacterManager.lastWallHit
-  fullName: TUF.Entities.Characters.CharacterManager.lastWallHit
-  nameWithType: CharacterManager.lastWallHit
 - uid: TUF.Entities.Characters.CharacterManager.ledgeDistance
   name: ledgeDistance
   href: api/TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_ledgeDistance
@@ -4429,6 +4655,64 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Characters.States.CAttack.CheckInterrupt
   nameWithType: CAttack.CheckInterrupt
+- uid: TUF.Entities.Characters.States.CCrouchJump
+  name: CCrouchJump
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html
+  commentId: T:TUF.Entities.Characters.States.CCrouchJump
+  fullName: TUF.Entities.Characters.States.CCrouchJump
+  nameWithType: CCrouchJump
+- uid: TUF.Entities.Characters.States.CCrouchJump.CheckInterrupt
+  name: CheckInterrupt()
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html#TUF_Entities_Characters_States_CCrouchJump_CheckInterrupt
+  commentId: M:TUF.Entities.Characters.States.CCrouchJump.CheckInterrupt
+  fullName: TUF.Entities.Characters.States.CCrouchJump.CheckInterrupt()
+  nameWithType: CCrouchJump.CheckInterrupt()
+- uid: TUF.Entities.Characters.States.CCrouchJump.CheckInterrupt*
+  name: CheckInterrupt
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html#TUF_Entities_Characters_States_CCrouchJump_CheckInterrupt_
+  commentId: Overload:TUF.Entities.Characters.States.CCrouchJump.CheckInterrupt
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CCrouchJump.CheckInterrupt
+  nameWithType: CCrouchJump.CheckInterrupt
+- uid: TUF.Entities.Characters.States.CCrouchJump.GetName
+  name: GetName()
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html#TUF_Entities_Characters_States_CCrouchJump_GetName
+  commentId: M:TUF.Entities.Characters.States.CCrouchJump.GetName
+  fullName: TUF.Entities.Characters.States.CCrouchJump.GetName()
+  nameWithType: CCrouchJump.GetName()
+- uid: TUF.Entities.Characters.States.CCrouchJump.GetName*
+  name: GetName
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html#TUF_Entities_Characters_States_CCrouchJump_GetName_
+  commentId: Overload:TUF.Entities.Characters.States.CCrouchJump.GetName
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CCrouchJump.GetName
+  nameWithType: CCrouchJump.GetName
+- uid: TUF.Entities.Characters.States.CCrouchJump.Initialize
+  name: Initialize()
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html#TUF_Entities_Characters_States_CCrouchJump_Initialize
+  commentId: M:TUF.Entities.Characters.States.CCrouchJump.Initialize
+  fullName: TUF.Entities.Characters.States.CCrouchJump.Initialize()
+  nameWithType: CCrouchJump.Initialize()
+- uid: TUF.Entities.Characters.States.CCrouchJump.Initialize*
+  name: Initialize
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html#TUF_Entities_Characters_States_CCrouchJump_Initialize_
+  commentId: Overload:TUF.Entities.Characters.States.CCrouchJump.Initialize
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CCrouchJump.Initialize
+  nameWithType: CCrouchJump.Initialize
+- uid: TUF.Entities.Characters.States.CCrouchJump.OnUpdate
+  name: OnUpdate()
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html#TUF_Entities_Characters_States_CCrouchJump_OnUpdate
+  commentId: M:TUF.Entities.Characters.States.CCrouchJump.OnUpdate
+  fullName: TUF.Entities.Characters.States.CCrouchJump.OnUpdate()
+  nameWithType: CCrouchJump.OnUpdate()
+- uid: TUF.Entities.Characters.States.CCrouchJump.OnUpdate*
+  name: OnUpdate
+  href: api/TUF.Entities.Characters.States.CCrouchJump.html#TUF_Entities_Characters_States_CCrouchJump_OnUpdate_
+  commentId: Overload:TUF.Entities.Characters.States.CCrouchJump.OnUpdate
+  isSpec: "True"
+  fullName: TUF.Entities.Characters.States.CCrouchJump.OnUpdate
+  nameWithType: CCrouchJump.OnUpdate
 - uid: TUF.Entities.Characters.States.CDash
   name: CDash
   href: api/TUF.Entities.Characters.States.CDash.html
@@ -5499,6 +5783,19 @@ references:
   commentId: F:TUF.Entities.EntityCombatManager.team
   fullName: TUF.Entities.EntityCombatManager.team
   nameWithType: EntityCombatManager.team
+- uid: TUF.Entities.EntityCombatManager.TryAttack
+  name: TryAttack()
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_TryAttack
+  commentId: M:TUF.Entities.EntityCombatManager.TryAttack
+  fullName: TUF.Entities.EntityCombatManager.TryAttack()
+  nameWithType: EntityCombatManager.TryAttack()
+- uid: TUF.Entities.EntityCombatManager.TryAttack*
+  name: TryAttack
+  href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_TryAttack_
+  commentId: Overload:TUF.Entities.EntityCombatManager.TryAttack
+  isSpec: "True"
+  fullName: TUF.Entities.EntityCombatManager.TryAttack
+  nameWithType: EntityCombatManager.TryAttack
 - uid: TUF.Entities.EntityCombatManager.TrySpecial
   name: TrySpecial()
   href: api/TUF.Entities.EntityCombatManager.html#TUF_Entities_EntityCombatManager_TrySpecial
@@ -5689,6 +5986,12 @@ references:
   commentId: F:TUF.Entities.EntityManager.currentAirJump
   fullName: TUF.Entities.EntityManager.currentAirJump
   nameWithType: EntityManager.currentAirJump
+- uid: TUF.Entities.EntityManager.danmakuManager
+  name: danmakuManager
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_danmakuManager
+  commentId: F:TUF.Entities.EntityManager.danmakuManager
+  fullName: TUF.Entities.EntityManager.danmakuManager
+  nameWithType: EntityManager.danmakuManager
 - uid: TUF.Entities.EntityManager.definition
   name: definition
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_definition
@@ -5726,6 +6029,32 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityManager.EntityAnimator
   nameWithType: EntityManager.EntityAnimator
+- uid: TUF.Entities.EntityManager.EntityStats
+  name: EntityStats
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_EntityStats
+  commentId: P:TUF.Entities.EntityManager.EntityStats
+  fullName: TUF.Entities.EntityManager.EntityStats
+  nameWithType: EntityManager.EntityStats
+- uid: TUF.Entities.EntityManager.EntityStats*
+  name: EntityStats
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_EntityStats_
+  commentId: Overload:TUF.Entities.EntityManager.EntityStats
+  isSpec: "True"
+  fullName: TUF.Entities.EntityManager.EntityStats
+  nameWithType: EntityManager.EntityStats
+- uid: TUF.Entities.EntityManager.FindWall
+  name: FindWall()
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_FindWall
+  commentId: M:TUF.Entities.EntityManager.FindWall
+  fullName: TUF.Entities.EntityManager.FindWall()
+  nameWithType: EntityManager.FindWall()
+- uid: TUF.Entities.EntityManager.FindWall*
+  name: FindWall
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_FindWall_
+  commentId: Overload:TUF.Entities.EntityManager.FindWall
+  isSpec: "True"
+  fullName: TUF.Entities.EntityManager.FindWall
+  nameWithType: EntityManager.FindWall
 - uid: TUF.Entities.EntityManager.fullHop
   name: fullHop
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_fullHop
@@ -5867,6 +6196,18 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityManager.IsFloating
   nameWithType: EntityManager.IsFloating
+- uid: TUF.Entities.EntityManager.lastWall
+  name: lastWall
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_lastWall
+  commentId: F:TUF.Entities.EntityManager.lastWall
+  fullName: TUF.Entities.EntityManager.lastWall
+  nameWithType: EntityManager.lastWall
+- uid: TUF.Entities.EntityManager.lastWallHit
+  name: lastWallHit
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_lastWallHit
+  commentId: F:TUF.Entities.EntityManager.lastWallHit
+  fullName: TUF.Entities.EntityManager.lastWallHit
+  nameWithType: EntityManager.lastWallHit
 - uid: TUF.Entities.EntityManager.LockedOn
   name: LockedOn
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_LockedOn
@@ -5950,6 +6291,12 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityManager.PickSoftlockTarget
   nameWithType: EntityManager.PickSoftlockTarget
+- uid: TUF.Entities.EntityManager.power
+  name: power
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_power
+  commentId: F:TUF.Entities.EntityManager.power
+  fullName: TUF.Entities.EntityManager.power
+  nameWithType: EntityManager.power
 - uid: TUF.Entities.EntityManager.pushbox
   name: pushbox
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_pushbox
@@ -5982,12 +6329,38 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.EntityManager.SetupDefaultStates
   nameWithType: EntityManager.SetupDefaultStates
+- uid: TUF.Entities.EntityManager.SimUpdate
+  name: SimUpdate()
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_SimUpdate
+  commentId: M:TUF.Entities.EntityManager.SimUpdate
+  fullName: TUF.Entities.EntityManager.SimUpdate()
+  nameWithType: EntityManager.SimUpdate()
+- uid: TUF.Entities.EntityManager.SimUpdate*
+  name: SimUpdate
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_SimUpdate_
+  commentId: Overload:TUF.Entities.EntityManager.SimUpdate
+  isSpec: "True"
+  fullName: TUF.Entities.EntityManager.SimUpdate
+  nameWithType: EntityManager.SimUpdate
 - uid: TUF.Entities.EntityManager.softLockonRadius
   name: softLockonRadius
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_softLockonRadius
   commentId: F:TUF.Entities.EntityManager.softLockonRadius
   fullName: TUF.Entities.EntityManager.softLockonRadius
   nameWithType: EntityManager.softLockonRadius
+- uid: TUF.Entities.EntityManager.Start
+  name: Start()
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_Start
+  commentId: M:TUF.Entities.EntityManager.Start
+  fullName: TUF.Entities.EntityManager.Start()
+  nameWithType: EntityManager.Start()
+- uid: TUF.Entities.EntityManager.Start*
+  name: Start
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_Start_
+  commentId: Overload:TUF.Entities.EntityManager.Start
+  isSpec: "True"
+  fullName: TUF.Entities.EntityManager.Start
+  nameWithType: EntityManager.Start
 - uid: TUF.Entities.EntityManager.TryAttack
   name: TryAttack()
   href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_TryAttack
@@ -6078,6 +6451,18 @@ references:
   commentId: F:TUF.Entities.EntityManager.visualTransform
   fullName: TUF.Entities.EntityManager.visualTransform
   nameWithType: EntityManager.visualTransform
+- uid: TUF.Entities.EntityManager.wallDetectDist
+  name: wallDetectDist
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_wallDetectDist
+  commentId: F:TUF.Entities.EntityManager.wallDetectDist
+  fullName: TUF.Entities.EntityManager.wallDetectDist
+  nameWithType: EntityManager.wallDetectDist
+- uid: TUF.Entities.EntityManager.wallDetectRadius
+  name: wallDetectRadius
+  href: api/TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_wallDetectRadius
+  commentId: F:TUF.Entities.EntityManager.wallDetectRadius
+  fullName: TUF.Entities.EntityManager.wallDetectRadius
+  nameWithType: EntityManager.wallDetectRadius
 - uid: TUF.Entities.EntityPhysicsManager
   name: EntityPhysicsManager
   href: api/TUF.Entities.EntityPhysicsManager.html
@@ -6541,6 +6926,12 @@ references:
   commentId: F:TUF.Entities.EntityStates.WALK
   fullName: TUF.Entities.EntityStates.WALK
   nameWithType: EntityStates.WALK
+- uid: TUF.Entities.EntityStates.WALL_BOUNCE
+  name: WALL_BOUNCE
+  href: api/TUF.Entities.EntityStates.html#TUF_Entities_EntityStates_WALL_BOUNCE
+  commentId: F:TUF.Entities.EntityStates.WALL_BOUNCE
+  fullName: TUF.Entities.EntityStates.WALL_BOUNCE
+  nameWithType: EntityStates.WALL_BOUNCE
 - uid: TUF.Entities.HealthManager
   name: HealthManager
   href: api/TUF.Entities.HealthManager.html
@@ -6680,6 +7071,12 @@ references:
   commentId: T:TUF.Entities.Shared.EntityAttack
   fullName: TUF.Entities.Shared.EntityAttack
   nameWithType: EntityAttack
+- uid: TUF.Entities.Shared.EntityAttack.charging
+  name: charging
+  href: api/TUF.Entities.Shared.EntityAttack.html#TUF_Entities_Shared_EntityAttack_charging
+  commentId: F:TUF.Entities.Shared.EntityAttack.charging
+  fullName: TUF.Entities.Shared.EntityAttack.charging
+  nameWithType: EntityAttack.charging
 - uid: TUF.Entities.Shared.EntityAttack.CheckCancelWindows(TUF.Combat.AttackDefinition)
   name: CheckCancelWindows(AttackDefinition)
   href: api/TUF.Entities.Shared.EntityAttack.html#TUF_Entities_Shared_EntityAttack_CheckCancelWindows_TUF_Combat_AttackDefinition_
@@ -6937,12 +7334,6 @@ references:
   commentId: F:TUF.Entities.Shared.EntityDefinition.playerSelectable
   fullName: TUF.Entities.Shared.EntityDefinition.playerSelectable
   nameWithType: EntityDefinition.playerSelectable
-- uid: TUF.Entities.Shared.EntityDefinition.stats
-  name: stats
-  href: api/TUF.Entities.Shared.EntityDefinition.html#TUF_Entities_Shared_EntityDefinition_stats
-  commentId: F:TUF.Entities.Shared.EntityDefinition.stats
-  fullName: TUF.Entities.Shared.EntityDefinition.stats
-  nameWithType: EntityDefinition.stats
 - uid: TUF.Entities.Shared.EntityFall
   name: EntityFall
   href: api/TUF.Entities.Shared.EntityFall.html
@@ -7428,6 +7819,30 @@ references:
   commentId: F:TUF.Entities.Shared.EntityStats.airRotationSpeed
   fullName: TUF.Entities.Shared.EntityStats.airRotationSpeed
   nameWithType: EntityStats.airRotationSpeed
+- uid: TUF.Entities.Shared.EntityStats.crouchJumpAcceleration
+  name: crouchJumpAcceleration
+  href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_crouchJumpAcceleration
+  commentId: F:TUF.Entities.Shared.EntityStats.crouchJumpAcceleration
+  fullName: TUF.Entities.Shared.EntityStats.crouchJumpAcceleration
+  nameWithType: EntityStats.crouchJumpAcceleration
+- uid: TUF.Entities.Shared.EntityStats.crouchJumpDeceleration
+  name: crouchJumpDeceleration
+  href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_crouchJumpDeceleration
+  commentId: F:TUF.Entities.Shared.EntityStats.crouchJumpDeceleration
+  fullName: TUF.Entities.Shared.EntityStats.crouchJumpDeceleration
+  nameWithType: EntityStats.crouchJumpDeceleration
+- uid: TUF.Entities.Shared.EntityStats.crouchJumpMaxAirSeed
+  name: crouchJumpMaxAirSeed
+  href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_crouchJumpMaxAirSeed
+  commentId: F:TUF.Entities.Shared.EntityStats.crouchJumpMaxAirSeed
+  fullName: TUF.Entities.Shared.EntityStats.crouchJumpMaxAirSeed
+  nameWithType: EntityStats.crouchJumpMaxAirSeed
+- uid: TUF.Entities.Shared.EntityStats.crouchJumpVelocity
+  name: crouchJumpVelocity
+  href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_crouchJumpVelocity
+  commentId: F:TUF.Entities.Shared.EntityStats.crouchJumpVelocity
+  fullName: TUF.Entities.Shared.EntityStats.crouchJumpVelocity
+  nameWithType: EntityStats.crouchJumpVelocity
 - uid: TUF.Entities.Shared.EntityStats.dashSpeed
   name: dashSpeed
   href: api/TUF.Entities.Shared.EntityStats.html#TUF_Entities_Shared_EntityStats_dashSpeed
@@ -7771,6 +8186,51 @@ references:
   isSpec: "True"
   fullName: TUF.Entities.Shared.EntityWalk.OnUpdate
   nameWithType: EntityWalk.OnUpdate
+- uid: TUF.Entities.Shared.EntityWallBounce
+  name: EntityWallBounce
+  href: api/TUF.Entities.Shared.EntityWallBounce.html
+  commentId: T:TUF.Entities.Shared.EntityWallBounce
+  fullName: TUF.Entities.Shared.EntityWallBounce
+  nameWithType: EntityWallBounce
+- uid: TUF.Entities.Shared.EntityWallBounce.CheckInterrupt
+  name: CheckInterrupt()
+  href: api/TUF.Entities.Shared.EntityWallBounce.html#TUF_Entities_Shared_EntityWallBounce_CheckInterrupt
+  commentId: M:TUF.Entities.Shared.EntityWallBounce.CheckInterrupt
+  fullName: TUF.Entities.Shared.EntityWallBounce.CheckInterrupt()
+  nameWithType: EntityWallBounce.CheckInterrupt()
+- uid: TUF.Entities.Shared.EntityWallBounce.CheckInterrupt*
+  name: CheckInterrupt
+  href: api/TUF.Entities.Shared.EntityWallBounce.html#TUF_Entities_Shared_EntityWallBounce_CheckInterrupt_
+  commentId: Overload:TUF.Entities.Shared.EntityWallBounce.CheckInterrupt
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityWallBounce.CheckInterrupt
+  nameWithType: EntityWallBounce.CheckInterrupt
+- uid: TUF.Entities.Shared.EntityWallBounce.Initialize
+  name: Initialize()
+  href: api/TUF.Entities.Shared.EntityWallBounce.html#TUF_Entities_Shared_EntityWallBounce_Initialize
+  commentId: M:TUF.Entities.Shared.EntityWallBounce.Initialize
+  fullName: TUF.Entities.Shared.EntityWallBounce.Initialize()
+  nameWithType: EntityWallBounce.Initialize()
+- uid: TUF.Entities.Shared.EntityWallBounce.Initialize*
+  name: Initialize
+  href: api/TUF.Entities.Shared.EntityWallBounce.html#TUF_Entities_Shared_EntityWallBounce_Initialize_
+  commentId: Overload:TUF.Entities.Shared.EntityWallBounce.Initialize
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityWallBounce.Initialize
+  nameWithType: EntityWallBounce.Initialize
+- uid: TUF.Entities.Shared.EntityWallBounce.OnUpdate
+  name: OnUpdate()
+  href: api/TUF.Entities.Shared.EntityWallBounce.html#TUF_Entities_Shared_EntityWallBounce_OnUpdate
+  commentId: M:TUF.Entities.Shared.EntityWallBounce.OnUpdate
+  fullName: TUF.Entities.Shared.EntityWallBounce.OnUpdate()
+  nameWithType: EntityWallBounce.OnUpdate()
+- uid: TUF.Entities.Shared.EntityWallBounce.OnUpdate*
+  name: OnUpdate
+  href: api/TUF.Entities.Shared.EntityWallBounce.html#TUF_Entities_Shared_EntityWallBounce_OnUpdate_
+  commentId: Overload:TUF.Entities.Shared.EntityWallBounce.OnUpdate
+  isSpec: "True"
+  fullName: TUF.Entities.Shared.EntityWallBounce.OnUpdate
+  nameWithType: EntityWallBounce.OnUpdate
 - uid: TUF.Entities.Shared.EntityWallCling
   name: EntityWallCling
   href: api/TUF.Entities.Shared.EntityWallCling.html
@@ -8467,6 +8927,12 @@ references:
   commentId: F:TUF.GameMode.GameModeDefinition.gameModeHandler
   fullName: TUF.GameMode.GameModeDefinition.gameModeHandler
   nameWithType: GameModeDefinition.gameModeHandler
+- uid: TUF.GameMode.GameModeDefinition.gameModeID
+  name: gameModeID
+  href: api/TUF.GameMode.GameModeDefinition.html#TUF_GameMode_GameModeDefinition_gameModeID
+  commentId: F:TUF.GameMode.GameModeDefinition.gameModeID
+  fullName: TUF.GameMode.GameModeDefinition.gameModeID
+  nameWithType: GameModeDefinition.gameModeID
 - uid: TUF.GameMode.GameModeDefinition.gameModeName
   name: gameModeName
   href: api/TUF.GameMode.GameModeDefinition.html#TUF_GameMode_GameModeDefinition_gameModeName
@@ -9404,83 +9870,427 @@ references:
   commentId: N:TUF.Modding
   fullName: TUF.Modding
   nameWithType: TUF.Modding
-- uid: TUF.Modding.BuildModWindow
-  name: BuildModWindow
-  href: api/TUF.Modding.BuildModWindow.html
-  commentId: T:TUF.Modding.BuildModWindow
-  fullName: TUF.Modding.BuildModWindow
-  nameWithType: BuildModWindow
-- uid: TUF.Modding.BuildModWindow.LaunchBuild(System.Boolean,System.Action)
-  name: LaunchBuild(Boolean, Action)
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_LaunchBuild_System_Boolean_System_Action_
-  commentId: M:TUF.Modding.BuildModWindow.LaunchBuild(System.Boolean,System.Action)
-  fullName: TUF.Modding.BuildModWindow.LaunchBuild(System.Boolean, System.Action)
-  nameWithType: BuildModWindow.LaunchBuild(Boolean, Action)
-- uid: TUF.Modding.BuildModWindow.LaunchBuild*
-  name: LaunchBuild
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_LaunchBuild_
-  commentId: Overload:TUF.Modding.BuildModWindow.LaunchBuild
+- uid: TUF.Modding.IModDefinition
+  name: IModDefinition
+  href: api/TUF.Modding.IModDefinition.html
+  commentId: T:TUF.Modding.IModDefinition
+  fullName: TUF.Modding.IModDefinition
+  nameWithType: IModDefinition
+- uid: TUF.Modding.IModDefinition.Description
+  name: Description
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_Description
+  commentId: P:TUF.Modding.IModDefinition.Description
+  fullName: TUF.Modding.IModDefinition.Description
+  nameWithType: IModDefinition.Description
+- uid: TUF.Modding.IModDefinition.Description*
+  name: Description
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_Description_
+  commentId: Overload:TUF.Modding.IModDefinition.Description
   isSpec: "True"
-  fullName: TUF.Modding.BuildModWindow.LaunchBuild
-  nameWithType: BuildModWindow.LaunchBuild
-- uid: TUF.Modding.BuildModWindow.OnEnable
-  name: OnEnable()
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnEnable
-  commentId: M:TUF.Modding.BuildModWindow.OnEnable
-  fullName: TUF.Modding.BuildModWindow.OnEnable()
-  nameWithType: BuildModWindow.OnEnable()
-- uid: TUF.Modding.BuildModWindow.OnEnable*
-  name: OnEnable
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnEnable_
-  commentId: Overload:TUF.Modding.BuildModWindow.OnEnable
+  fullName: TUF.Modding.IModDefinition.Description
+  nameWithType: IModDefinition.Description
+- uid: TUF.Modding.IModDefinition.GetEntityDefinition(System.String)
+  name: GetEntityDefinition(String)
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetEntityDefinition_System_String_
+  commentId: M:TUF.Modding.IModDefinition.GetEntityDefinition(System.String)
+  fullName: TUF.Modding.IModDefinition.GetEntityDefinition(System.String)
+  nameWithType: IModDefinition.GetEntityDefinition(String)
+- uid: TUF.Modding.IModDefinition.GetEntityDefinition*
+  name: GetEntityDefinition
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetEntityDefinition_
+  commentId: Overload:TUF.Modding.IModDefinition.GetEntityDefinition
   isSpec: "True"
-  fullName: TUF.Modding.BuildModWindow.OnEnable
-  nameWithType: BuildModWindow.OnEnable
-- uid: TUF.Modding.BuildModWindow.OnFocus
-  name: OnFocus()
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnFocus
-  commentId: M:TUF.Modding.BuildModWindow.OnFocus
-  fullName: TUF.Modding.BuildModWindow.OnFocus()
-  nameWithType: BuildModWindow.OnFocus()
-- uid: TUF.Modding.BuildModWindow.OnFocus*
-  name: OnFocus
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnFocus_
-  commentId: Overload:TUF.Modding.BuildModWindow.OnFocus
+  fullName: TUF.Modding.IModDefinition.GetEntityDefinition
+  nameWithType: IModDefinition.GetEntityDefinition
+- uid: TUF.Modding.IModDefinition.GetEntityDefinitions
+  name: GetEntityDefinitions()
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetEntityDefinitions
+  commentId: M:TUF.Modding.IModDefinition.GetEntityDefinitions
+  fullName: TUF.Modding.IModDefinition.GetEntityDefinitions()
+  nameWithType: IModDefinition.GetEntityDefinitions()
+- uid: TUF.Modding.IModDefinition.GetEntityDefinitions*
+  name: GetEntityDefinitions
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetEntityDefinitions_
+  commentId: Overload:TUF.Modding.IModDefinition.GetEntityDefinitions
   isSpec: "True"
-  fullName: TUF.Modding.BuildModWindow.OnFocus
-  nameWithType: BuildModWindow.OnFocus
-- uid: TUF.Modding.BuildModWindow.OnGUI
-  name: OnGUI()
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnGUI
-  commentId: M:TUF.Modding.BuildModWindow.OnGUI
-  fullName: TUF.Modding.BuildModWindow.OnGUI()
-  nameWithType: BuildModWindow.OnGUI()
-- uid: TUF.Modding.BuildModWindow.OnGUI*
-  name: OnGUI
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_OnGUI_
-  commentId: Overload:TUF.Modding.BuildModWindow.OnGUI
+  fullName: TUF.Modding.IModDefinition.GetEntityDefinitions
+  nameWithType: IModDefinition.GetEntityDefinitions
+- uid: TUF.Modding.IModDefinition.GetGamemodeDefinition(System.String)
+  name: GetGamemodeDefinition(String)
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetGamemodeDefinition_System_String_
+  commentId: M:TUF.Modding.IModDefinition.GetGamemodeDefinition(System.String)
+  fullName: TUF.Modding.IModDefinition.GetGamemodeDefinition(System.String)
+  nameWithType: IModDefinition.GetGamemodeDefinition(String)
+- uid: TUF.Modding.IModDefinition.GetGamemodeDefinition*
+  name: GetGamemodeDefinition
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetGamemodeDefinition_
+  commentId: Overload:TUF.Modding.IModDefinition.GetGamemodeDefinition
   isSpec: "True"
-  fullName: TUF.Modding.BuildModWindow.OnGUI
-  nameWithType: BuildModWindow.OnGUI
-- uid: TUF.Modding.BuildModWindow.ShowBuildTarget
-  name: ShowBuildTarget()
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_ShowBuildTarget
-  commentId: M:TUF.Modding.BuildModWindow.ShowBuildTarget
-  fullName: TUF.Modding.BuildModWindow.ShowBuildTarget()
-  nameWithType: BuildModWindow.ShowBuildTarget()
-- uid: TUF.Modding.BuildModWindow.ShowBuildTarget*
-  name: ShowBuildTarget
-  href: api/TUF.Modding.BuildModWindow.html#TUF_Modding_BuildModWindow_ShowBuildTarget_
-  commentId: Overload:TUF.Modding.BuildModWindow.ShowBuildTarget
+  fullName: TUF.Modding.IModDefinition.GetGamemodeDefinition
+  nameWithType: IModDefinition.GetGamemodeDefinition
+- uid: TUF.Modding.IModDefinition.GetGamemodeDefinitions
+  name: GetGamemodeDefinitions()
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetGamemodeDefinitions
+  commentId: M:TUF.Modding.IModDefinition.GetGamemodeDefinitions
+  fullName: TUF.Modding.IModDefinition.GetGamemodeDefinitions()
+  nameWithType: IModDefinition.GetGamemodeDefinitions()
+- uid: TUF.Modding.IModDefinition.GetGamemodeDefinitions*
+  name: GetGamemodeDefinitions
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetGamemodeDefinitions_
+  commentId: Overload:TUF.Modding.IModDefinition.GetGamemodeDefinitions
   isSpec: "True"
-  fullName: TUF.Modding.BuildModWindow.ShowBuildTarget
-  nameWithType: BuildModWindow.ShowBuildTarget
+  fullName: TUF.Modding.IModDefinition.GetGamemodeDefinitions
+  nameWithType: IModDefinition.GetGamemodeDefinitions
+- uid: TUF.Modding.IModDefinition.GetSongDefinition(System.String)
+  name: GetSongDefinition(String)
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetSongDefinition_System_String_
+  commentId: M:TUF.Modding.IModDefinition.GetSongDefinition(System.String)
+  fullName: TUF.Modding.IModDefinition.GetSongDefinition(System.String)
+  nameWithType: IModDefinition.GetSongDefinition(String)
+- uid: TUF.Modding.IModDefinition.GetSongDefinition*
+  name: GetSongDefinition
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetSongDefinition_
+  commentId: Overload:TUF.Modding.IModDefinition.GetSongDefinition
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.GetSongDefinition
+  nameWithType: IModDefinition.GetSongDefinition
+- uid: TUF.Modding.IModDefinition.GetSongDefinitions
+  name: GetSongDefinitions()
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetSongDefinitions
+  commentId: M:TUF.Modding.IModDefinition.GetSongDefinitions
+  fullName: TUF.Modding.IModDefinition.GetSongDefinitions()
+  nameWithType: IModDefinition.GetSongDefinitions()
+- uid: TUF.Modding.IModDefinition.GetSongDefinitions*
+  name: GetSongDefinitions
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetSongDefinitions_
+  commentId: Overload:TUF.Modding.IModDefinition.GetSongDefinitions
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.GetSongDefinitions
+  nameWithType: IModDefinition.GetSongDefinitions
+- uid: TUF.Modding.IModDefinition.GetSoundDefinition(System.String)
+  name: GetSoundDefinition(String)
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetSoundDefinition_System_String_
+  commentId: M:TUF.Modding.IModDefinition.GetSoundDefinition(System.String)
+  fullName: TUF.Modding.IModDefinition.GetSoundDefinition(System.String)
+  nameWithType: IModDefinition.GetSoundDefinition(String)
+- uid: TUF.Modding.IModDefinition.GetSoundDefinition*
+  name: GetSoundDefinition
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetSoundDefinition_
+  commentId: Overload:TUF.Modding.IModDefinition.GetSoundDefinition
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.GetSoundDefinition
+  nameWithType: IModDefinition.GetSoundDefinition
+- uid: TUF.Modding.IModDefinition.GetSoundDefinitions
+  name: GetSoundDefinitions()
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetSoundDefinitions
+  commentId: M:TUF.Modding.IModDefinition.GetSoundDefinitions
+  fullName: TUF.Modding.IModDefinition.GetSoundDefinitions()
+  nameWithType: IModDefinition.GetSoundDefinitions()
+- uid: TUF.Modding.IModDefinition.GetSoundDefinitions*
+  name: GetSoundDefinitions
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetSoundDefinitions_
+  commentId: Overload:TUF.Modding.IModDefinition.GetSoundDefinitions
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.GetSoundDefinitions
+  nameWithType: IModDefinition.GetSoundDefinitions
+- uid: TUF.Modding.IModDefinition.GetStageCollection(System.String)
+  name: GetStageCollection(String)
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetStageCollection_System_String_
+  commentId: M:TUF.Modding.IModDefinition.GetStageCollection(System.String)
+  fullName: TUF.Modding.IModDefinition.GetStageCollection(System.String)
+  nameWithType: IModDefinition.GetStageCollection(String)
+- uid: TUF.Modding.IModDefinition.GetStageCollection*
+  name: GetStageCollection
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetStageCollection_
+  commentId: Overload:TUF.Modding.IModDefinition.GetStageCollection
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.GetStageCollection
+  nameWithType: IModDefinition.GetStageCollection
+- uid: TUF.Modding.IModDefinition.GetStageCollections
+  name: GetStageCollections()
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetStageCollections
+  commentId: M:TUF.Modding.IModDefinition.GetStageCollections
+  fullName: TUF.Modding.IModDefinition.GetStageCollections()
+  nameWithType: IModDefinition.GetStageCollections()
+- uid: TUF.Modding.IModDefinition.GetStageCollections*
+  name: GetStageCollections
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetStageCollections_
+  commentId: Overload:TUF.Modding.IModDefinition.GetStageCollections
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.GetStageCollections
+  nameWithType: IModDefinition.GetStageCollections
+- uid: TUF.Modding.IModDefinition.GetStageDefinition(System.String)
+  name: GetStageDefinition(String)
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetStageDefinition_System_String_
+  commentId: M:TUF.Modding.IModDefinition.GetStageDefinition(System.String)
+  fullName: TUF.Modding.IModDefinition.GetStageDefinition(System.String)
+  nameWithType: IModDefinition.GetStageDefinition(String)
+- uid: TUF.Modding.IModDefinition.GetStageDefinition*
+  name: GetStageDefinition
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetStageDefinition_
+  commentId: Overload:TUF.Modding.IModDefinition.GetStageDefinition
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.GetStageDefinition
+  nameWithType: IModDefinition.GetStageDefinition
+- uid: TUF.Modding.IModDefinition.GetStageDefinitions
+  name: GetStageDefinitions()
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetStageDefinitions
+  commentId: M:TUF.Modding.IModDefinition.GetStageDefinitions
+  fullName: TUF.Modding.IModDefinition.GetStageDefinitions()
+  nameWithType: IModDefinition.GetStageDefinitions()
+- uid: TUF.Modding.IModDefinition.GetStageDefinitions*
+  name: GetStageDefinitions
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_GetStageDefinitions_
+  commentId: Overload:TUF.Modding.IModDefinition.GetStageDefinitions
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.GetStageDefinitions
+  nameWithType: IModDefinition.GetStageDefinitions
+- uid: TUF.Modding.IModDefinition.LoadStageAsync(System.String,LoadSceneMode)
+  name: LoadStageAsync(String, LoadSceneMode)
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_LoadStageAsync_System_String_LoadSceneMode_
+  commentId: M:TUF.Modding.IModDefinition.LoadStageAsync(System.String,LoadSceneMode)
+  fullName: TUF.Modding.IModDefinition.LoadStageAsync(System.String, LoadSceneMode)
+  nameWithType: IModDefinition.LoadStageAsync(String, LoadSceneMode)
+- uid: TUF.Modding.IModDefinition.LoadStageAsync*
+  name: LoadStageAsync
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_LoadStageAsync_
+  commentId: Overload:TUF.Modding.IModDefinition.LoadStageAsync
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.LoadStageAsync
+  nameWithType: IModDefinition.LoadStageAsync
+- uid: TUF.Modding.IModDefinition.LocalMod
+  name: LocalMod
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_LocalMod
+  commentId: P:TUF.Modding.IModDefinition.LocalMod
+  fullName: TUF.Modding.IModDefinition.LocalMod
+  nameWithType: IModDefinition.LocalMod
+- uid: TUF.Modding.IModDefinition.LocalMod*
+  name: LocalMod
+  href: api/TUF.Modding.IModDefinition.html#TUF_Modding_IModDefinition_LocalMod_
+  commentId: Overload:TUF.Modding.IModDefinition.LocalMod
+  isSpec: "True"
+  fullName: TUF.Modding.IModDefinition.LocalMod
+  nameWithType: IModDefinition.LocalMod
+- uid: TUF.Modding.LocalModDefinition
+  name: LocalModDefinition
+  href: api/TUF.Modding.LocalModDefinition.html
+  commentId: T:TUF.Modding.LocalModDefinition
+  fullName: TUF.Modding.LocalModDefinition
+  nameWithType: LocalModDefinition
+- uid: TUF.Modding.LocalModDefinition.Description
+  name: Description
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_Description
+  commentId: P:TUF.Modding.LocalModDefinition.Description
+  fullName: TUF.Modding.LocalModDefinition.Description
+  nameWithType: LocalModDefinition.Description
+- uid: TUF.Modding.LocalModDefinition.Description*
+  name: Description
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_Description_
+  commentId: Overload:TUF.Modding.LocalModDefinition.Description
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.Description
+  nameWithType: LocalModDefinition.Description
+- uid: TUF.Modding.LocalModDefinition.GetEntityDefinition(System.String)
+  name: GetEntityDefinition(String)
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetEntityDefinition_System_String_
+  commentId: M:TUF.Modding.LocalModDefinition.GetEntityDefinition(System.String)
+  fullName: TUF.Modding.LocalModDefinition.GetEntityDefinition(System.String)
+  nameWithType: LocalModDefinition.GetEntityDefinition(String)
+- uid: TUF.Modding.LocalModDefinition.GetEntityDefinition*
+  name: GetEntityDefinition
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetEntityDefinition_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetEntityDefinition
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetEntityDefinition
+  nameWithType: LocalModDefinition.GetEntityDefinition
+- uid: TUF.Modding.LocalModDefinition.GetEntityDefinitions
+  name: GetEntityDefinitions()
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetEntityDefinitions
+  commentId: M:TUF.Modding.LocalModDefinition.GetEntityDefinitions
+  fullName: TUF.Modding.LocalModDefinition.GetEntityDefinitions()
+  nameWithType: LocalModDefinition.GetEntityDefinitions()
+- uid: TUF.Modding.LocalModDefinition.GetEntityDefinitions*
+  name: GetEntityDefinitions
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetEntityDefinitions_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetEntityDefinitions
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetEntityDefinitions
+  nameWithType: LocalModDefinition.GetEntityDefinitions
+- uid: TUF.Modding.LocalModDefinition.GetGamemodeDefinition(System.String)
+  name: GetGamemodeDefinition(String)
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetGamemodeDefinition_System_String_
+  commentId: M:TUF.Modding.LocalModDefinition.GetGamemodeDefinition(System.String)
+  fullName: TUF.Modding.LocalModDefinition.GetGamemodeDefinition(System.String)
+  nameWithType: LocalModDefinition.GetGamemodeDefinition(String)
+- uid: TUF.Modding.LocalModDefinition.GetGamemodeDefinition*
+  name: GetGamemodeDefinition
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetGamemodeDefinition_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetGamemodeDefinition
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetGamemodeDefinition
+  nameWithType: LocalModDefinition.GetGamemodeDefinition
+- uid: TUF.Modding.LocalModDefinition.GetGamemodeDefinitions
+  name: GetGamemodeDefinitions()
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetGamemodeDefinitions
+  commentId: M:TUF.Modding.LocalModDefinition.GetGamemodeDefinitions
+  fullName: TUF.Modding.LocalModDefinition.GetGamemodeDefinitions()
+  nameWithType: LocalModDefinition.GetGamemodeDefinitions()
+- uid: TUF.Modding.LocalModDefinition.GetGamemodeDefinitions*
+  name: GetGamemodeDefinitions
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetGamemodeDefinitions_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetGamemodeDefinitions
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetGamemodeDefinitions
+  nameWithType: LocalModDefinition.GetGamemodeDefinitions
+- uid: TUF.Modding.LocalModDefinition.GetSongDefinition(System.String)
+  name: GetSongDefinition(String)
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetSongDefinition_System_String_
+  commentId: M:TUF.Modding.LocalModDefinition.GetSongDefinition(System.String)
+  fullName: TUF.Modding.LocalModDefinition.GetSongDefinition(System.String)
+  nameWithType: LocalModDefinition.GetSongDefinition(String)
+- uid: TUF.Modding.LocalModDefinition.GetSongDefinition*
+  name: GetSongDefinition
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetSongDefinition_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetSongDefinition
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetSongDefinition
+  nameWithType: LocalModDefinition.GetSongDefinition
+- uid: TUF.Modding.LocalModDefinition.GetSongDefinitions
+  name: GetSongDefinitions()
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetSongDefinitions
+  commentId: M:TUF.Modding.LocalModDefinition.GetSongDefinitions
+  fullName: TUF.Modding.LocalModDefinition.GetSongDefinitions()
+  nameWithType: LocalModDefinition.GetSongDefinitions()
+- uid: TUF.Modding.LocalModDefinition.GetSongDefinitions*
+  name: GetSongDefinitions
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetSongDefinitions_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetSongDefinitions
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetSongDefinitions
+  nameWithType: LocalModDefinition.GetSongDefinitions
+- uid: TUF.Modding.LocalModDefinition.GetSoundDefinition(System.String)
+  name: GetSoundDefinition(String)
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetSoundDefinition_System_String_
+  commentId: M:TUF.Modding.LocalModDefinition.GetSoundDefinition(System.String)
+  fullName: TUF.Modding.LocalModDefinition.GetSoundDefinition(System.String)
+  nameWithType: LocalModDefinition.GetSoundDefinition(String)
+- uid: TUF.Modding.LocalModDefinition.GetSoundDefinition*
+  name: GetSoundDefinition
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetSoundDefinition_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetSoundDefinition
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetSoundDefinition
+  nameWithType: LocalModDefinition.GetSoundDefinition
+- uid: TUF.Modding.LocalModDefinition.GetSoundDefinitions
+  name: GetSoundDefinitions()
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetSoundDefinitions
+  commentId: M:TUF.Modding.LocalModDefinition.GetSoundDefinitions
+  fullName: TUF.Modding.LocalModDefinition.GetSoundDefinitions()
+  nameWithType: LocalModDefinition.GetSoundDefinitions()
+- uid: TUF.Modding.LocalModDefinition.GetSoundDefinitions*
+  name: GetSoundDefinitions
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetSoundDefinitions_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetSoundDefinitions
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetSoundDefinitions
+  nameWithType: LocalModDefinition.GetSoundDefinitions
+- uid: TUF.Modding.LocalModDefinition.GetStageCollection(System.String)
+  name: GetStageCollection(String)
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetStageCollection_System_String_
+  commentId: M:TUF.Modding.LocalModDefinition.GetStageCollection(System.String)
+  fullName: TUF.Modding.LocalModDefinition.GetStageCollection(System.String)
+  nameWithType: LocalModDefinition.GetStageCollection(String)
+- uid: TUF.Modding.LocalModDefinition.GetStageCollection*
+  name: GetStageCollection
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetStageCollection_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetStageCollection
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetStageCollection
+  nameWithType: LocalModDefinition.GetStageCollection
+- uid: TUF.Modding.LocalModDefinition.GetStageCollections
+  name: GetStageCollections()
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetStageCollections
+  commentId: M:TUF.Modding.LocalModDefinition.GetStageCollections
+  fullName: TUF.Modding.LocalModDefinition.GetStageCollections()
+  nameWithType: LocalModDefinition.GetStageCollections()
+- uid: TUF.Modding.LocalModDefinition.GetStageCollections*
+  name: GetStageCollections
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetStageCollections_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetStageCollections
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetStageCollections
+  nameWithType: LocalModDefinition.GetStageCollections
+- uid: TUF.Modding.LocalModDefinition.GetStageDefinition(System.String)
+  name: GetStageDefinition(String)
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetStageDefinition_System_String_
+  commentId: M:TUF.Modding.LocalModDefinition.GetStageDefinition(System.String)
+  fullName: TUF.Modding.LocalModDefinition.GetStageDefinition(System.String)
+  nameWithType: LocalModDefinition.GetStageDefinition(String)
+- uid: TUF.Modding.LocalModDefinition.GetStageDefinition*
+  name: GetStageDefinition
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetStageDefinition_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetStageDefinition
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetStageDefinition
+  nameWithType: LocalModDefinition.GetStageDefinition
+- uid: TUF.Modding.LocalModDefinition.GetStageDefinitions
+  name: GetStageDefinitions()
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetStageDefinitions
+  commentId: M:TUF.Modding.LocalModDefinition.GetStageDefinitions
+  fullName: TUF.Modding.LocalModDefinition.GetStageDefinitions()
+  nameWithType: LocalModDefinition.GetStageDefinitions()
+- uid: TUF.Modding.LocalModDefinition.GetStageDefinitions*
+  name: GetStageDefinitions
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_GetStageDefinitions_
+  commentId: Overload:TUF.Modding.LocalModDefinition.GetStageDefinitions
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.GetStageDefinitions
+  nameWithType: LocalModDefinition.GetStageDefinitions
+- uid: TUF.Modding.LocalModDefinition.LoadStageAsync(System.String,LoadSceneMode)
+  name: LoadStageAsync(String, LoadSceneMode)
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_LoadStageAsync_System_String_LoadSceneMode_
+  commentId: M:TUF.Modding.LocalModDefinition.LoadStageAsync(System.String,LoadSceneMode)
+  fullName: TUF.Modding.LocalModDefinition.LoadStageAsync(System.String, LoadSceneMode)
+  nameWithType: LocalModDefinition.LoadStageAsync(String, LoadSceneMode)
+- uid: TUF.Modding.LocalModDefinition.LoadStageAsync*
+  name: LoadStageAsync
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_LoadStageAsync_
+  commentId: Overload:TUF.Modding.LocalModDefinition.LoadStageAsync
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.LoadStageAsync
+  nameWithType: LocalModDefinition.LoadStageAsync
+- uid: TUF.Modding.LocalModDefinition.LocalMod
+  name: LocalMod
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_LocalMod
+  commentId: P:TUF.Modding.LocalModDefinition.LocalMod
+  fullName: TUF.Modding.LocalModDefinition.LocalMod
+  nameWithType: LocalModDefinition.LocalMod
+- uid: TUF.Modding.LocalModDefinition.LocalMod*
+  name: LocalMod
+  href: api/TUF.Modding.LocalModDefinition.html#TUF_Modding_LocalModDefinition_LocalMod_
+  commentId: Overload:TUF.Modding.LocalModDefinition.LocalMod
+  isSpec: "True"
+  fullName: TUF.Modding.LocalModDefinition.LocalMod
+  nameWithType: LocalModDefinition.LocalMod
 - uid: TUF.Modding.ModDefinition
   name: ModDefinition
   href: api/TUF.Modding.ModDefinition.html
   commentId: T:TUF.Modding.ModDefinition
   fullName: TUF.Modding.ModDefinition
   nameWithType: ModDefinition
+- uid: TUF.Modding.ModDefinition.Description
+  name: Description
+  href: api/TUF.Modding.ModDefinition.html#TUF_Modding_ModDefinition_Description
+  commentId: P:TUF.Modding.ModDefinition.Description
+  fullName: TUF.Modding.ModDefinition.Description
+  nameWithType: ModDefinition.Description
+- uid: TUF.Modding.ModDefinition.Description*
+  name: Description
+  href: api/TUF.Modding.ModDefinition.html#TUF_Modding_ModDefinition_Description_
+  commentId: Overload:TUF.Modding.ModDefinition.Description
+  isSpec: "True"
+  fullName: TUF.Modding.ModDefinition.Description
+  nameWithType: ModDefinition.Description
 - uid: TUF.Modding.ModDefinition.GetEntityDefinition(System.String)
   name: GetEntityDefinition(String)
   href: api/TUF.Modding.ModDefinition.html#TUF_Modding_ModDefinition_GetEntityDefinition_System_String_
@@ -9637,12 +10447,32 @@ references:
   isSpec: "True"
   fullName: TUF.Modding.ModDefinition.GetStageDefinitions
   nameWithType: ModDefinition.GetStageDefinitions
-- uid: TUF.Modding.ModDefinition.local
-  name: local
-  href: api/TUF.Modding.ModDefinition.html#TUF_Modding_ModDefinition_local
-  commentId: F:TUF.Modding.ModDefinition.local
-  fullName: TUF.Modding.ModDefinition.local
-  nameWithType: ModDefinition.local
+- uid: TUF.Modding.ModDefinition.LoadStageAsync(System.String,LoadSceneMode)
+  name: LoadStageAsync(String, LoadSceneMode)
+  href: api/TUF.Modding.ModDefinition.html#TUF_Modding_ModDefinition_LoadStageAsync_System_String_LoadSceneMode_
+  commentId: M:TUF.Modding.ModDefinition.LoadStageAsync(System.String,LoadSceneMode)
+  fullName: TUF.Modding.ModDefinition.LoadStageAsync(System.String, LoadSceneMode)
+  nameWithType: ModDefinition.LoadStageAsync(String, LoadSceneMode)
+- uid: TUF.Modding.ModDefinition.LoadStageAsync*
+  name: LoadStageAsync
+  href: api/TUF.Modding.ModDefinition.html#TUF_Modding_ModDefinition_LoadStageAsync_
+  commentId: Overload:TUF.Modding.ModDefinition.LoadStageAsync
+  isSpec: "True"
+  fullName: TUF.Modding.ModDefinition.LoadStageAsync
+  nameWithType: ModDefinition.LoadStageAsync
+- uid: TUF.Modding.ModDefinition.LocalMod
+  name: LocalMod
+  href: api/TUF.Modding.ModDefinition.html#TUF_Modding_ModDefinition_LocalMod
+  commentId: P:TUF.Modding.ModDefinition.LocalMod
+  fullName: TUF.Modding.ModDefinition.LocalMod
+  nameWithType: ModDefinition.LocalMod
+- uid: TUF.Modding.ModDefinition.LocalMod*
+  name: LocalMod
+  href: api/TUF.Modding.ModDefinition.html#TUF_Modding_ModDefinition_LocalMod_
+  commentId: Overload:TUF.Modding.ModDefinition.LocalMod
+  isSpec: "True"
+  fullName: TUF.Modding.ModDefinition.LocalMod
+  nameWithType: ModDefinition.LocalMod
 - uid: TUF.Modding.ModInfo
   name: ModInfo
   href: api/TUF.Modding.ModInfo.html
@@ -10658,6 +11488,76 @@ references:
   isSpec: "True"
   fullName: TUF.Stages.StageTools.SetupStage
   nameWithType: StageTools.SetupStage
+- uid: TUF.Stages.TriggerType
+  name: TriggerType
+  href: api/TUF.Stages.TriggerType.html
+  commentId: T:TUF.Stages.TriggerType
+  fullName: TUF.Stages.TriggerType
+  nameWithType: TriggerType
+- uid: TUF.Stages.TriggerType.OnEnter
+  name: OnEnter
+  href: api/TUF.Stages.TriggerType.html#TUF_Stages_TriggerType_OnEnter
+  commentId: F:TUF.Stages.TriggerType.OnEnter
+  fullName: TUF.Stages.TriggerType.OnEnter
+  nameWithType: TriggerType.OnEnter
+- uid: TUF.Stages.TriggerType.OnExit
+  name: OnExit
+  href: api/TUF.Stages.TriggerType.html#TUF_Stages_TriggerType_OnExit
+  commentId: F:TUF.Stages.TriggerType.OnExit
+  fullName: TUF.Stages.TriggerType.OnExit
+  nameWithType: TriggerType.OnExit
+- uid: TUF.Stages.TriggerType.OnStay
+  name: OnStay
+  href: api/TUF.Stages.TriggerType.html#TUF_Stages_TriggerType_OnStay
+  commentId: F:TUF.Stages.TriggerType.OnStay
+  fullName: TUF.Stages.TriggerType.OnStay
+  nameWithType: TriggerType.OnStay
+- uid: TUF.Stages.TriggerZone
+  name: TriggerZone
+  href: api/TUF.Stages.TriggerZone.html
+  commentId: T:TUF.Stages.TriggerZone
+  fullName: TUF.Stages.TriggerZone
+  nameWithType: TriggerZone
+- uid: TUF.Stages.TriggerZone.CheckCollider(Collider,TUF.Entities.EntityManager@)
+  name: CheckCollider(Collider, out EntityManager)
+  href: api/TUF.Stages.TriggerZone.html#TUF_Stages_TriggerZone_CheckCollider_Collider_TUF_Entities_EntityManager__
+  commentId: M:TUF.Stages.TriggerZone.CheckCollider(Collider,TUF.Entities.EntityManager@)
+  name.vb: CheckCollider(Collider, ByRef EntityManager)
+  fullName: TUF.Stages.TriggerZone.CheckCollider(Collider, out TUF.Entities.EntityManager)
+  fullName.vb: TUF.Stages.TriggerZone.CheckCollider(Collider, ByRef TUF.Entities.EntityManager)
+  nameWithType: TriggerZone.CheckCollider(Collider, out EntityManager)
+  nameWithType.vb: TriggerZone.CheckCollider(Collider, ByRef EntityManager)
+- uid: TUF.Stages.TriggerZone.CheckCollider*
+  name: CheckCollider
+  href: api/TUF.Stages.TriggerZone.html#TUF_Stages_TriggerZone_CheckCollider_
+  commentId: Overload:TUF.Stages.TriggerZone.CheckCollider
+  isSpec: "True"
+  fullName: TUF.Stages.TriggerZone.CheckCollider
+  nameWithType: TriggerZone.CheckCollider
+- uid: TUF.Stages.TriggerZone.layerMask
+  name: layerMask
+  href: api/TUF.Stages.TriggerZone.html#TUF_Stages_TriggerZone_layerMask
+  commentId: F:TUF.Stages.TriggerZone.layerMask
+  fullName: TUF.Stages.TriggerZone.layerMask
+  nameWithType: TriggerZone.layerMask
+- uid: TUF.Stages.TriggerZone.onTriggered
+  name: onTriggered
+  href: api/TUF.Stages.TriggerZone.html#TUF_Stages_TriggerZone_onTriggered
+  commentId: F:TUF.Stages.TriggerZone.onTriggered
+  fullName: TUF.Stages.TriggerZone.onTriggered
+  nameWithType: TriggerZone.onTriggered
+- uid: TUF.Stages.TriggerZone.team
+  name: team
+  href: api/TUF.Stages.TriggerZone.html#TUF_Stages_TriggerZone_team
+  commentId: F:TUF.Stages.TriggerZone.team
+  fullName: TUF.Stages.TriggerZone.team
+  nameWithType: TriggerZone.team
+- uid: TUF.Stages.TriggerZone.triggerType
+  name: triggerType
+  href: api/TUF.Stages.TriggerZone.html#TUF_Stages_TriggerZone_triggerType
+  commentId: F:TUF.Stages.TriggerZone.triggerType
+  fullName: TUF.Stages.TriggerZone.triggerType
+  nameWithType: TriggerZone.triggerType
 - uid: TUF.TriggerDetector
   name: TriggerDetector
   href: api/TUF.TriggerDetector.html

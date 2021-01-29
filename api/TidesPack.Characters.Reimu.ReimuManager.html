@@ -107,12 +107,6 @@
       <a class="xref" href="TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_sideWallDistance">CharacterManager.sideWallDistance</a>
     </div>
     <div>
-      <a class="xref" href="TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_lastWall">CharacterManager.lastWall</a>
-    </div>
-    <div>
-      <a class="xref" href="TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_lastWallHit">CharacterManager.lastWallHit</a>
-    </div>
-    <div>
       <a class="xref" href="TUF.Entities.Characters.CharacterManager.html#TUF_Entities_Characters_CharacterManager_wallSide">CharacterManager.wallSide</a>
     </div>
     <div>
@@ -188,6 +182,9 @@
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_definition">EntityManager.definition</a>
     </div>
     <div>
+      <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_danmakuManager">EntityManager.danmakuManager</a>
+    </div>
+    <div>
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_cc">EntityManager.cc</a>
     </div>
     <div>
@@ -215,6 +212,9 @@
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_fullHop">EntityManager.fullHop</a>
     </div>
     <div>
+      <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_power">EntityManager.power</a>
+    </div>
+    <div>
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_softLockonRadius">EntityManager.softLockonRadius</a>
     </div>
     <div>
@@ -236,10 +236,25 @@
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_enemyStepCheckRadius">EntityManager.enemyStepCheckRadius</a>
     </div>
     <div>
+      <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_lastWall">EntityManager.lastWall</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_lastWallHit">EntityManager.lastWallHit</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_wallDetectRadius">EntityManager.wallDetectRadius</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_wallDetectDist">EntityManager.wallDetectDist</a>
+    </div>
+    <div>
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_Init_TUF_Core_GameManager_LookHandler_InputControlType_">EntityManager.Init(GameManager, LookHandler, InputControlType)</a>
     </div>
     <div>
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_Awake">EntityManager.Awake()</a>
+    </div>
+    <div>
+      <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_Start">EntityManager.Start()</a>
     </div>
     <div>
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_GetSize">EntityManager.GetSize()</a>
@@ -277,6 +292,9 @@
     <div>
       <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_TryAttack">EntityManager.TryAttack()</a>
     </div>
+    <div>
+      <a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_FindWall">EntityManager.FindWall()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="TidesPack.Characters.Reimu.html">TidesPack.Characters.Reimu</a></h6>
   <h6><strong>Assembly</strong>: TidesPack_CSharp.dll</h6>
@@ -284,6 +302,245 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public class ReimuManager : CharacterManager</code></pre>
   </div>
+  <h3 id="fields">Fields
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_baseConfig.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.baseConfig%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L24">View Source</a>
+  </span>
+  <h4 id="TidesPack_Characters_Reimu_ReimuManager_baseConfig" data-uid="TidesPack.Characters.Reimu.ReimuManager.baseConfig">baseConfig</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DanmakuConfig baseConfig</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="TUF.Combat.Danmaku.DanmakuConfig.html">DanmakuConfig</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_bulletCooldown.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.bulletCooldown%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L22">View Source</a>
+  </span>
+  <h4 id="TidesPack_Characters_Reimu_ReimuManager_bulletCooldown" data-uid="TidesPack.Characters.Reimu.ReimuManager.bulletCooldown">bulletCooldown</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int bulletCooldown</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_bulletHitInfo.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.bulletHitInfo%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L25">View Source</a>
+  </span>
+  <h4 id="TidesPack_Characters_Reimu_ReimuManager_bulletHitInfo" data-uid="TidesPack.Characters.Reimu.ReimuManager.bulletHitInfo">bulletHitInfo</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public HitInfo bulletHitInfo</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="TUF.Combat.HitInfo.html">HitInfo</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_bulletPowerCost.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.bulletPowerCost%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L26">View Source</a>
+  </span>
+  <h4 id="TidesPack_Characters_Reimu_ReimuManager_bulletPowerCost" data-uid="TidesPack.Characters.Reimu.ReimuManager.bulletPowerCost">bulletPowerCost</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public int bulletPowerCost</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.int32">Int32</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_dd.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.dd%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L23">View Source</a>
+  </span>
+  <h4 id="TidesPack_Characters_Reimu_ReimuManager_dd" data-uid="TidesPack.Characters.Reimu.ReimuManager.dd">dd</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public DanmakuSequence dd</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="TUF.Combat.Danmaku.DanmakuSequence.html">DanmakuSequence</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_reimuStats.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.reimuStats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L28">View Source</a>
+  </span>
+  <h4 id="TidesPack_Characters_Reimu_ReimuManager_reimuStats" data-uid="TidesPack.Characters.Reimu.ReimuManager.reimuStats">reimuStats</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public ReimuStats reimuStats</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="TidesPack.Characters.Reimu.ReimuStats.html">ReimuStats</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_YinYangTransform.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.YinYangTransform%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L21">View Source</a>
+  </span>
+  <h4 id="TidesPack_Characters_Reimu_ReimuManager_YinYangTransform" data-uid="TidesPack.Characters.Reimu.ReimuManager.YinYangTransform">YinYangTransform</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public Transform YinYangTransform</code></pre>
+  </div>
+  <h5 class="fieldValue">Field Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><span class="xref">Transform</span></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h3 id="properties">Properties
+  </h3>
+  <span class="small pull-right mobile-hide">
+    <span class="divider">|</span>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_EntityStats.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.EntityStats%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
+  </span>
+  <span class="small pull-right mobile-hide">
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L15">View Source</a>
+  </span>
+  <a id="TidesPack_Characters_Reimu_ReimuManager_EntityStats_" data-uid="TidesPack.Characters.Reimu.ReimuManager.EntityStats*"></a>
+  <h4 id="TidesPack_Characters_Reimu_ReimuManager_EntityStats" data-uid="TidesPack.Characters.Reimu.ReimuManager.EntityStats">EntityStats</h4>
+  <div class="markdown level1 summary"></div>
+  <div class="markdown level1 conceptual"></div>
+  <h5 class="decalaration">Declaration</h5>
+  <div class="codewrapper">
+    <pre><code class="lang-csharp hljs">public override EntityStats EntityStats { get; }</code></pre>
+  </div>
+  <h5 class="propertyValue">Property Value</h5>
+  <table class="table table-bordered table-striped table-condensed">
+    <thead>
+      <tr>
+        <th>Type</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><a class="xref" href="TUF.Entities.Shared.EntityStats.html">EntityStats</a></td>
+        <td></td>
+      </tr>
+    </tbody>
+  </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_EntityStats">EntityManager.EntityStats</a></div>
   <h3 id="methods">Methods
   </h3>
   <span class="small pull-right mobile-hide">
@@ -291,7 +548,7 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_SetupDefaultStates.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.SetupDefaultStates%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L47">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L77">View Source</a>
   </span>
   <a id="TidesPack_Characters_Reimu_ReimuManager_SetupDefaultStates_" data-uid="TidesPack.Characters.Reimu.ReimuManager.SetupDefaultStates*"></a>
   <h4 id="TidesPack_Characters_Reimu_ReimuManager_SetupDefaultStates" data-uid="TidesPack.Characters.Reimu.ReimuManager.SetupDefaultStates">SetupDefaultStates()</h4>
@@ -308,7 +565,7 @@
     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager_SimUpdate.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager.SimUpdate%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L12">View Source</a>
+    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L30">View Source</a>
   </span>
   <a id="TidesPack_Characters_Reimu_ReimuManager_SimUpdate_" data-uid="TidesPack.Characters.Reimu.ReimuManager.SimUpdate*"></a>
   <h4 id="TidesPack_Characters_Reimu_ReimuManager_SimUpdate" data-uid="TidesPack.Characters.Reimu.ReimuManager.SimUpdate">SimUpdate()</h4>
@@ -318,6 +575,8 @@
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public override void SimUpdate()</code></pre>
   </div>
+  <h5 class="overrides">Overrides</h5>
+  <div><a class="xref" href="TUF.Entities.EntityManager.html#TUF_Entities_EntityManager_SimUpdate">EntityManager.SimUpdate()</a></div>
 </article>
           </div>
           
@@ -329,7 +588,7 @@
                     <a href="https://github.com/christides11/touhou-unlimited-fantasies/new/master/apiSpec/new?filename=TidesPack_Characters_Reimu_ReimuManager.md&amp;value=---%0Auid%3A%20TidesPack.Characters.Reimu.ReimuManager%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/christides11/touhou-unlimited-fantasies/blob/master/Assets/_ModPacks/TidesPack/Entities/Characters/Reimu/Scripts/ReimuManager.cs/#L12" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
