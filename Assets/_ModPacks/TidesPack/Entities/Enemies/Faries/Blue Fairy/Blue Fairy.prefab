@@ -347,6 +347,62 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 512
   enemyStepCheckRadius: 0
+  lastWall: {fileID: 0}
+  wallDetectRadius: 1.2
+  wallDetectDist: 1
+  fairyStats:
+    height: 2
+    groundFriction: 1.2
+    maxWalkSpeed: 8
+    walkBaseAccel: 1
+    walkAcceleration: 1
+    walkRotationSpeed: 0.35
+    maxRunSpeed: 20
+    runAcceleration: 2.5
+    runRotationSpeed: 0.97
+    dashSpeed: 20
+    dashTime: 20
+    jumpsquat: 6
+    fullHopVelocity: 16
+    shortHopJumpVelocity: 13
+    jumpHorizontalMomentum: 0
+    maxAirJumps: 1
+    airJumpVelocity: 14
+    airJumpModi: 0
+    airJumpCarriedMomentum: 0.2
+    airJumpHorizontalVelo: 12
+    crouchJumpVelocity: 14.5
+    crouchJumpAcceleration: 0.5
+    crouchJumpDeceleration: 0.8
+    crouchJumpMaxAirSeed: 18
+    airRotationSpeed: 0.25
+    airFriction: 0.8
+    airAcceleration: 2
+    airDeceleration: 0.8
+    maxAirSpeed: 12
+    gravity: 0.7
+    maxFallSpeed: 19
+    wallClingInitFrictionY: 0.7
+    wallClingInitFrictionXZ: 100
+    wallClingFrictionXZ: 4
+    wallClingGravity: 0.2
+    wallClingMaxFallSpeed: 4
+    wallJumpTime: 20
+    wallJumpYVelo: 17.6
+    wallJumpHVelo: 20
+    wallJumpMinAngle: 0.2
+    floatFriction: 0.9
+    maxFloatSpeed: 10
+    floatVerticalSpeed: 11
+    floatBaseAccel: 1
+    floatAcceleration: 2
+    floatRotationSpeed: 0.35
+    floatLockOnRotationSpeed: 0
+    hitstunGravity: 0.7
+    hitstunMaxFallSpeed: 15
+    hitstunFrictionXZ: 0.35
+    inertiaFriction: 0
+    weight: 1
 --- !u!114 &2650020900968100954
 MonoBehaviour:
   m_ObjectHideFlags: 0

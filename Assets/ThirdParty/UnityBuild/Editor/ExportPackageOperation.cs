@@ -24,6 +24,11 @@ namespace SuperSystems.UnityBuild
             string resolvedInputPath = BuildProject.ResolvePath(packageFolderPath.Replace("$BUILDPATH", buildPath), releaseType, platform, architecture, distribution, buildTime);
             string resolvedOutputPath = BuildProject.ResolvePath(outputPath.Replace("$BUILDPATH", buildPath), releaseType, platform, architecture, distribution, buildTime);
 
+            if (Directory.Exists(Path.GetDirectoryName(resolvedOutputPath)) == false)
+            {
+                Directory.CreateDirectory(Path.GetDirectoryName(resolvedOutputPath));
+            }
+
             Export(resolvedInputPath, resolvedOutputPath);
         }
 

@@ -6608,6 +6608,11 @@ MonoBehaviour:
   container: {fileID: 737220125}
   consoleText: {fileID: 998661650}
   inputField: {fileID: 861085136}
+  messageColors:
+  - {r: 0, g: 1, b: 0.024693727, a: 1}
+  - {r: 1, g: 0, b: 0, a: 1}
+  - {r: 1, g: 0.5299014, b: 0, a: 1}
+  - {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1492684150
 GameObject:
   m_ObjectHideFlags: 0

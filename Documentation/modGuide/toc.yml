@@ -2,5 +2,7 @@
   href: index.md
 - name: 0 Installing Mods
   href: installMods.md
-- name: 1 Setup
-  href: setup.md
+- name: 1 Installation
+  href: 1_installation.md
+- name: 2 Mod Setup
+  href: 2_mod_setup.md
