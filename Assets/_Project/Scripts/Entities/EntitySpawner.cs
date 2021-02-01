@@ -36,7 +36,6 @@ namespace TUF.Core
                 {
                     continue;
                 }
-
                 GameObject entity = gameManager.GameMode.SimObjectManager.SpawnObject(entityDefinition.entity, entitySpawns[i].spawnPosition.position,
                     Quaternion.identity);
 

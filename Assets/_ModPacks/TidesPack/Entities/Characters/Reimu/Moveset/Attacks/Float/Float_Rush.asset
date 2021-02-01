@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc111f7afe810b2449e31c9e6dd282e4, type: 3}
+  m_Name: Float_Rush
+  m_EditorClassIdentifier: 
+  attackName: Float Rush
+  description: 
+  stateOverride: 101
+  length: 30
+  animationGround: {fileID: 0}
+  animationAir: {fileID: 0}
+  wrapMode: 0
+  jumpCancelWindows: []
+  enemyStepWindows: []
+  landCancelWindows: []
+  commandAttackCancelWindows: []
+  chargeWindows: []
+  boxGroups: []
+  events: []
+  dashCancelableFrames: []
+  floatCancelFrames: []
+  bulletCancelFrames: []
+  specialCancelFrames: []
+  faceLockonTargetWindows: []
+  references:
+    version: 1

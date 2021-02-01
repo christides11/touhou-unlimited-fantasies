@@ -16,7 +16,7 @@ namespace TUF.Combat.Danmaku
         {
             if (hitbox)
             {
-                hitbox.CheckHits();
+                hitbox.Tick();
             }
         }
 

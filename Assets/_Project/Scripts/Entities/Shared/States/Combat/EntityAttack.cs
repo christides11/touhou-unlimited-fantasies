@@ -146,14 +146,20 @@ namespace TUF.Entities.Shared
             if (controller.StateManager.CurrentStateFrame == hitboxGroup.activeFramesEnd + 1)
             {
                 CombatManager.hitboxManager.DeactivateHitboxGroup(group);
-                //((EntityHitboxManager)CombatManager.hitboxManager).DeactivateDetectboxes(group);
             }
 
-            // If we're within the lifetime of the boxes, do nothing.
+            // If we're outside the lifetime of the hitbox, ignore it.
             if (controller.StateManager.CurrentStateFrame < hitboxGroup.activeFramesStart
                 || controller.StateManager.CurrentStateFrame > hitboxGroup.activeFramesEnd)
             {
                 return;
+            }
+
+
+            if (hitboxGroup.hitboxHitInfo.continuousHit &&
+                (controller.StateManager.CurrentStateFrame-hitboxGroup.activeFramesEnd) % hitboxGroup.hitboxHitInfo.spaceBetweenHits == 0)
+            {
+                CombatManager.hitboxManager.ReactivateHitboxGroup(group);
             }
 
             // Create the correct box.

@@ -77,6 +77,7 @@ namespace TidesPack.Characters.Reimu
         protected override void SetupDefaultStates()
         {
             StateManager.AddState(new ReimuStateTeleport(), (int)ReimuStates.SPECIAL_TELEPORT);
+            StateManager.AddState(new ReimuStateFloatRush(), (int)ReimuStates.FLOAT_RUSH);
             base.SetupDefaultStates();
         }
     }

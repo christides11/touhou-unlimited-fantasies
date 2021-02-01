@@ -406,6 +406,7 @@ namespace TUF.Entities
 
         public bool FindWall()
         {
+            /*
             RaycastHit h;
             if(Physics.SphereCast(GetCenter(), wallDetectRadius, transform.forward, out h, wallDetectDist, GroundedLayerMask)
                 || Physics.SphereCast(GetCenter(), wallDetectRadius, -transform.forward, out h, wallDetectDist, GroundedLayerMask)
@@ -414,6 +415,10 @@ namespace TUF.Entities
             {
                 lastWall = h.collider.gameObject;
                 lastWallHit = h;
+                return true;
+            }*/
+            if(Physics.CheckSphere(GetCenter(), wallDetectRadius, GroundedLayerMask))
+            {
                 return true;
             }
             return false;

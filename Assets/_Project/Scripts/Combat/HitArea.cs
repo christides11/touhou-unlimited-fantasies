@@ -22,7 +22,7 @@ namespace TUF.Combat
         public override void SimUpdate()
         {
             base.SimUpdate();
-            hitbox.CheckHits();
+            hitbox.Tick();
         }
     }
 }

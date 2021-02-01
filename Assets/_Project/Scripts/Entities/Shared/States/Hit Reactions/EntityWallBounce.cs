@@ -8,9 +8,13 @@ namespace TUF.Entities.Shared
 {
     public class EntityWallBounce : EntityState
     {
+        Vector3 storedForceMovement;
+        Vector3 storedForceGravity;
         public override void Initialize()
         {
             base.Initialize();
+            storedForceMovement = PhysicsManager.forceMovement;
+            storedForceGravity = PhysicsManager.forceGravity;
             PhysicsManager.forceGravity = Vector3.zero;
             PhysicsManager.forceMovement = Vector3.zero;
         }
@@ -20,16 +24,11 @@ namespace TUF.Entities.Shared
             EntityManager em = ((EntityManager)Manager);
             if (StateManager.CurrentStateFrame == 4)
             {
-                Vector3 dir = em.lastWallHit.normal;
-                dir.y = 0;
-
-
-                PhysicsManager.forceMovement = dir * ((HitInfo)em.CombatManager.LastHitBy).wallBounceForce;
+                PhysicsManager.forceMovement = -storedForceMovement.normalized * ((HitInfo)em.CombatManager.LastHitBy).wallBounceForce;
             }
 
-            StateManager.IncrementFrame();
-
             CheckInterrupt();
+            StateManager.IncrementFrame();
         }
 
         public override bool CheckInterrupt()

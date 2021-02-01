@@ -730,6 +730,8 @@ MonoBehaviour:
     ledgeJumpYForce: 11
     ledgeJumpMoveForce: 10
     ledgeJumpAccel: 0.5
+    floatRushLength: 25
+    floatRushSpeed: 35
     teleportNoTargetForwardDist: 5
     teleportNoTargetUpDist: 5
     teleportTargetForwardDist: 1

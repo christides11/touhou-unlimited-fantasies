@@ -49,7 +49,7 @@ namespace TUF.Modding
             {
                 await GetEntityDefinitions();
             }
-            return entities.FirstOrDefault(x => x.entityName == entityName);
+            return entities.FirstOrDefault(x => x.entityName.Equals(entityName));
         }
 
         public async virtual Task<List<EntityDefinition>> GetEntityDefinitions()

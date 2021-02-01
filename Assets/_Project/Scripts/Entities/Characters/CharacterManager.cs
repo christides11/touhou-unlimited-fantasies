@@ -62,6 +62,7 @@ namespace TUF.Entities.Characters
             StateManager.AddState(new EntityFlinchAir(), (int)EntityStates.FLINCH_AIR);
             StateManager.AddState(new EntityTumble(), (int)EntityStates.TUMBLE);
             StateManager.AddState(new EntityWallBounce(), (int)EntityStates.WALL_BOUNCE);
+            StateManager.AddState(new EntityGroundBounce(), (int)EntityStates.GROUND_BOUNCE); 
 
             // Other
             StateManager.AddState(new CSlide(), (int)BaseCharacterStates.SLIDE);

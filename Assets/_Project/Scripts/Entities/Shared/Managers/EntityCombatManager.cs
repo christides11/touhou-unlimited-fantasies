@@ -29,7 +29,19 @@ namespace TUF.Entities
         {
             if (Controller.IsFloating)
             {
-
+                MovesetAttackNode floatCommandNormals 
+                    = (MovesetAttackNode)CheckAttackNodes(ref ((TUF.Combat.MovesetDefinition)CurrentMoveset).floatingAttackCommandNormals);
+                if (floatCommandNormals != null)
+                {
+                    return floatCommandNormals;
+                }
+                MovesetAttackNode floatNormals 
+                    = (MovesetAttackNode)CheckAttackNodes(ref ((TUF.Combat.MovesetDefinition)CurrentMoveset).floatingAttackStartNodes);
+                if (floatNormals != null)
+                {
+                    return floatNormals;
+                }
+                return null;
             }
             return base.CheckStartingNodes();
         }
@@ -123,7 +135,7 @@ namespace TUF.Entities
                     physicsManager.forceMovement = forces;
                     break;
                 case HitboxForceType.PULL:
-                    Vector3 dir = transform.position - hurtInfo.center;
+                    Vector3 dir = hurtInfo.center - transform.position;
                     if (!hitInfo.forceIncludeYForce)
                     {
                         dir.y = 0;
